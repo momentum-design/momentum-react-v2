@@ -1,0 +1,2813 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 150ms 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 150ms 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 150ms 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 150ms 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 150ms 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 150ms 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 200ms 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 200ms 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 200ms 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 200ms 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 200ms 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 200ms 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom level 12`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 12`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 13`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 14`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 15`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 16`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 17`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom timeout 18`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a fully custom configuration 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a fully custom configuration 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a fully custom configuration 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a fully custom configuration 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      fully custom configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a fully custom configuration 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      fully custom configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a fully custom configuration 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with default configuration 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with default configuration 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with default configuration 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with default configuration 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      default configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with default configuration 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      default configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with default configuration 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 12`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 13`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    >
+      fifth
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 14`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    >
+      fifth
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have multiple announcements 15`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      same message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      same message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      same message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity can have the same announcement multiple times 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity errors when announcing on an unregistered announcer 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity errors when registering a duplicate announcer 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 100ms 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 100ms 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 100ms 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 100ms 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 100ms 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 100ms 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 150ms 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 150ms 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 150ms 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 150ms 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 150ms 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 150ms 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 200ms 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 200ms 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 200ms 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 200ms 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 200ms 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom delay
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom delay of 200ms 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom level
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom level 12`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 12`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 13`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 14`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 15`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 16`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 17`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      custom timeout
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a custom timeout 18`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a fully custom configuration 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a fully custom configuration 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a fully custom configuration 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a fully custom configuration 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      fully custom configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a fully custom configuration 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="assertive"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      fully custom configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with a fully custom configuration 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with default configuration 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with default configuration 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with default configuration 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with default configuration 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      default configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with default configuration 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      default configuration
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces with default configuration 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      first
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      second
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 12`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      third
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 13`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-3"
+    >
+      fourth
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    >
+      fifth
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 14`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-4"
+    >
+      fifth
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have multiple announcements 15`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    />
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 7`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 8`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      same message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 9`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-1"
+    >
+      same message
+    </div>
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      same message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 10`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-2"
+    >
+      same message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined can have the same announcement multiple times 11`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined errors when announcing on an unregistered announcer 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined errors when registering a duplicate announcer 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
