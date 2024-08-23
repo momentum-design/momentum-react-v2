@@ -1,0 +1,6 @@
+The `<ScreenReaderAnnouncer />` component.
+
+Component which will cause a screen reader to announce a message when required.
+To allow for multiple announcers to exist concurrently, each announcer must have a unique identity.
+If no identity is provided, a default one is used (useful for a top level announcer).
+If an announcer with a duplicate identity is mounted, an error will occur.
