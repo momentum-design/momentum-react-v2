@@ -3,7 +3,7 @@ import { render, screen, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { AnnounceOptions } from './ScreenReaderAnnouncer.types';
 
-import ScreenReaderAnnouncer, { announce } from './';
+import ScreenReaderAnnouncer from './';
 
 type ExpectedAnnouncement = {
   'aria-live': string;
@@ -15,7 +15,6 @@ type ExpectedAnnouncementNodes = Record<string, Element>;
 describe('<ScreenReaderAnnouncer />', () => {
   let container;
   beforeAll(() => {
-    jest.clearAllTimers();
     jest.useFakeTimers();
   });
 
@@ -60,7 +59,7 @@ describe('<ScreenReaderAnnouncer />', () => {
 
     const makeAnnouncement = (announceOptions: AnnounceOptions) => {
       act(() => {
-        announce(announceOptions, announcerIdentity);
+        ScreenReaderAnnouncer.announce(announceOptions, announcerIdentity);
       });
     };
 
@@ -322,7 +321,7 @@ describe('<ScreenReaderAnnouncer />', () => {
       setup();
 
       expect(() => {
-        announce({ body: 'announcement' }, 'unknown');
+        ScreenReaderAnnouncer.announce({ body: 'announcement' }, 'unknown');
       }).toThrow(`ScreenReaderAnnouncer with identity unknown is not registered`);
     });
 

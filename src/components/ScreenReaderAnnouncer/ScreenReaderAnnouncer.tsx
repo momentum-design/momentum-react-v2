@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback, ReactElement } from 'react';
+import React, { useEffect, useState, useRef, useCallback, ReactElement, FC } from 'react';
 
 import { STYLE, DEFAULTS } from './ScreenReaderAnnouncer.constants';
 import {
@@ -9,6 +9,8 @@ import {
   Message,
   AnnouncementProps,
   AnnouncerProps,
+  CompoundProps,
+  ScreenReaderAnnouncerAnnounce,
 } from './ScreenReaderAnnouncer.types';
 
 const registry: Record<string, { announce: Announce }> = {};
@@ -43,7 +45,10 @@ const deregister = (identity: string) => {
  * In this case, everything outside of the modal is hidden from the accessibility tree.
  * If an unregistered announcer identity is used, this will error.
  */
-export const announce = (options: AnnounceOptions, announcerIdentity = DEFAULTS.IDENTITY): void => {
+const announce: ScreenReaderAnnouncerAnnounce = (
+  options,
+  announcerIdentity = DEFAULTS.IDENTITY
+) => {
   if (registry[announcerIdentity]) {
     return registry[announcerIdentity].announce(options);
   }
@@ -87,7 +92,9 @@ const ScreenReaderAnnouncement = ({
  * If no identity is provided, a default one is used (useful for a top level announcer).
  * If an announcer with a duplicate identity is mounted, an error will occur.
  */
-const ScreenReaderAnnouncer = ({ identity = DEFAULTS.IDENTITY }: AnnouncerProps): ReactElement => {
+const ScreenReaderAnnouncer: FC<AnnouncerProps> & CompoundProps = ({
+  identity = DEFAULTS.IDENTITY,
+}: AnnouncerProps) => {
   const messageIndex = useRef(0);
   const [messages, setMessages] = useState<Message[]>([]);
 
@@ -137,3 +144,5 @@ const ScreenReaderAnnouncer = ({ identity = DEFAULTS.IDENTITY }: AnnouncerProps)
 };
 
 export default ScreenReaderAnnouncer;
+
+ScreenReaderAnnouncer.announce = announce;

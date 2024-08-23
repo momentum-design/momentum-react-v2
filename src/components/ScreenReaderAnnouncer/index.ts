@@ -1,12 +1,10 @@
-import { default as ScreenReaderAnnouncer, announce } from './ScreenReaderAnnouncer';
-
+import { default as ScreenReaderAnnouncer } from './ScreenReaderAnnouncer';
 import * as CONSTANTS from './ScreenReaderAnnouncer.constants';
-import { AnnouncerProps } from './ScreenReaderAnnouncer.types';
+import { AnnouncerProps, AnnounceOptions } from './ScreenReaderAnnouncer.types';
 
 export { CONSTANTS as SCREEN_READER_ANNOUNCER_CONSTANTS };
 
 export type ScreenReaderAnnouncerProps = AnnouncerProps;
-
-export { announce };
+export type ScreenReaderAnnounceOptions = AnnounceOptions;
 
 export default ScreenReaderAnnouncer;
