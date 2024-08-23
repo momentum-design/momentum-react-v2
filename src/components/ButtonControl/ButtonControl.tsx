@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
@@ -11,7 +11,7 @@ import './ButtonControl.style.scss';
 /**
  * `<ControlButtons />` are used to control [close, maximize, minimize, etc] components [usually panels] they are assigned to.
  */
-const ButtonControl: FC<Props> = (props: Props) => {
+const ButtonControl = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, control, isCircular, ...otherProps } = props;
 
   const iconName = ICONS[control] || 'not-found';
@@ -33,6 +33,7 @@ const ButtonControl: FC<Props> = (props: Props) => {
 
   return (
     <ButtonSimple
+      ref={providedRef}
       className={classnames(STYLE.wrapper, className)}
       data-circular={isCircular}
       data-disabled={props.isDisabled}
@@ -41,6 +42,8 @@ const ButtonControl: FC<Props> = (props: Props) => {
       <Icon {...iconProps} />
     </ButtonSimple>
   );
-};
+});
+
+ButtonControl.displayName = 'ButtonControl';
 
 export default ButtonControl;
