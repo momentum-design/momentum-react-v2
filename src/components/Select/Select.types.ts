@@ -5,6 +5,10 @@ export type SelectDirection = 'top' | 'bottom';
 
 export interface Props<T> extends AriaSelectProps<T> {
   /**
+   * Aria labelled by for the button component.
+   */
+  ariaLabelledBy?: string;
+  /**
    * Custom class for overriding this component's CSS.
    */
   className?: string;

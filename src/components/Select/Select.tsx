@@ -25,6 +25,7 @@ import Text from '../Text';
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
   const {
+    ariaLabelledBy,
     className,
     style,
     id,
@@ -48,7 +49,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
-  const { buttonProps } = useButton({ ...triggerProps, isDisabled }, selectRef);
+  const { buttonProps } = useButton({ ...triggerProps, isDisabled, ...(ariaLabelledBy === '' ? {'aria-labelledby': null} : ariaLabelledBy ? { 'aria-labelledby': ariaLabelledBy } : {})}, selectRef);
   const ariaActivedesecendant =
     menuProps?.id &&
     state?.selectionManager?.focusedKey &&
