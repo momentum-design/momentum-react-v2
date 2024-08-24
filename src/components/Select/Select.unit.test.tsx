@@ -399,6 +399,38 @@ describe('Select', () => {
       expect(button.getAttribute('title')).toBe(title);
     });
 
+    it('should have provided aria-labelledby when ariaLabelledBy is provided', async () => {
+      expect.assertions(1);
+
+      const ariaLabelledBy = 'test';
+
+      const wrapper = await mountAndWait(
+        <Select ariaLabelledBy={ariaLabelledBy} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const button = wrapper.find('.md-select-dropdown-input').getDOMNode();
+
+      expect(button.getAttribute('aria-labelledby')).toBe(ariaLabelledBy);
+    });
+
+    it('should have removed aria-labelledby when ariaLabelledBy is provided as an empty string', async () => {
+      expect.assertions(1);
+
+      const ariaLabelledBy = '';
+
+      const wrapper = await mountAndWait(
+        <Select ariaLabelledBy={ariaLabelledBy} label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+      const button = wrapper.find('.md-select-dropdown-input').getDOMNode();
+
+      expect(button.getAttribute('aria-labelledby')).toBeFalsy();
+    });
+
     it('should have expected props on Popover', async () => {
       expect.assertions(1);
 
