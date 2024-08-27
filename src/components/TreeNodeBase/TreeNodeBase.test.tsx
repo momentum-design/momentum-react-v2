@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react';
 import ListItemBaseSection from '../ListItemBaseSection';
 import ButtonPill from '../ButtonPill';
 import TreeNodeBase from '.';
-import { STYLE } from './TreeNodeBase.constants';
+import { NODE_ID_ATTRIBUTE_NAME, NODE_ID_DATA_NAME, STYLE } from './TreeNodeBase.constants';
 import * as treeUtils from '../Tree/Tree.utils';
 import userEvent from '@testing-library/user-event';
 import Tree, { TreeContextValue, TreeNode } from '../Tree';
@@ -229,8 +229,9 @@ describe('TreeNodeBase', () => {
       container = mount(<TreeNodeBase nodeId="42">Test</TreeNodeBase>);
 
       const element = container.find(TreeNodeBase).getDOMNode();
-
       expect(element.classList.contains(STYLE.wrapper));
+
+      expect(container.exists(`[${NODE_ID_ATTRIBUTE_NAME}="42"]`)).toEqual(true);
     });
 
     it('should have provided class when className is provided', () => {
