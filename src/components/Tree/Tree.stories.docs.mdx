@@ -151,7 +151,7 @@ const treeWalker = function*() {/*...*/}
 
 <AutoSizer style={{height: '100%', width: '100%'}}>
   <Tree
-      isRenderedFlat
+      isRenderedFlat {/*required for virtual tree*/}
       style={{height, width}}
       treeStructure={getTreeStructure()}
       virtualTreeConnector={virtualTreeConnector}

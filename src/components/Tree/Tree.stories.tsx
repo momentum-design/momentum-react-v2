@@ -84,7 +84,7 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
         {isLeaf && (
           <MenuTrigger
             triggerComponent={
-              <ButtonCircle size={20} ghost>
+              <ButtonCircle size={20} ghost aria-label="More menu">
                 <Icon name="more" weight="bold" autoScale={100} />
               </ButtonCircle>
             }
