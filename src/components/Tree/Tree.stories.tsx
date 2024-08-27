@@ -79,7 +79,7 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
           {!isLeaf && <Icon name={isOpen ? 'arrow-down' : 'arrow-right'} scale={12} />}
-          <Text>Level {node.id}</Text>
+          <Text>Node {node.id}</Text>
         </div>
         {isLeaf && (
           <MenuTrigger
