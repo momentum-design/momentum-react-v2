@@ -119,18 +119,25 @@ const Tree: FC<Props> = (props: Props) => {
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
       const key = evt.key as TreeNavKeyCodes;
-      if (TREE_NAVIGATION_KEYS.includes(key)) {
-        evt.preventDefault();
-        const nextActiveNode = getNextActiveNode(
-          tree,
-          activeNodeId,
-          key,
-          excludeTreeRoot,
-          toggleTreeNode
-        );
-        setActiveNodeId(nextActiveNode);
-      } else {
-        evt.continuePropagation();
+      switch (key) {
+        case 'ArrowUp':
+        case 'ArrowDown':
+        case 'ArrowRight':
+        case 'ArrowLeft': {
+          evt.preventDefault();
+          const nextActiveNode = getNextActiveNode(
+            tree,
+            activeNodeId,
+            key,
+            excludeTreeRoot,
+            toggleTreeNode
+          );
+          setActiveNodeId(nextActiveNode);
+          break;
+        }
+        default:
+          evt.continuePropagation();
+          break;
       }
     },
   });
