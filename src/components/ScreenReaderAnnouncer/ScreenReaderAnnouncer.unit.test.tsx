@@ -14,7 +14,8 @@ type ExpectedAnnouncementNodes = Record<string, Element>;
 
 describe('<ScreenReaderAnnouncer />', () => {
   let container;
-  beforeAll(() => {
+
+  beforeEach(() => {
     jest.useFakeTimers();
   });
 

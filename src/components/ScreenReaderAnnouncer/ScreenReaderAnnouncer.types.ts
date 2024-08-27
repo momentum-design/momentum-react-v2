@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 type Level = 'assertive' | 'polite';
-type Body = string | ReactNode;
 export interface CompoundProps {
   announce: ScreenReaderAnnouncerAnnounce;
 }
@@ -10,7 +9,7 @@ type AnnounceOptions = {
   /**
    * A message to announce with a screen reader
    */
-  body: Body;
+  body: ReactNode;
   /**
    * The aria-live value for the announcement
    * Defaults to "polite"
@@ -34,14 +33,14 @@ type Announce = (options: AnnounceOptions) => void;
 type Clear = (options: { messageIdentity: string }) => void;
 type Message = {
   messageIdentity: string;
-  body: Body;
+  body: ReactNode;
   level: Level;
   delay: number;
   timeout: number;
 };
 type AnnouncementProps = {
   identity: string;
-  body: Body;
+  body: ReactNode;
   level: Level;
   delay: number;
   timeout: number;
