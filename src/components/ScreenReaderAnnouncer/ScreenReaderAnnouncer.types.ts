@@ -7,7 +7,7 @@ export interface CompoundProps {
 
 type AnnounceOptions = {
   /**
-   * A message to announce with a screen reader
+   * A message to announce with a screen reader. It should not contain any element with an aria-live set to it.
    */
   body: ReactNode;
   /**
