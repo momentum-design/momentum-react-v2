@@ -1,5 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces react node with default configuration 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces react node with default configuration 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces react node with default configuration 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces react node with default configuration 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      <h1>
+        Oh no
+      </h1>
+      <p>
+        This is the body of the error message.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces react node with default configuration 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      <h1>
+        Oh no
+      </h1>
+      <p>
+        This is the body of the error message.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces react node with default configuration 6`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
 exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity announces with a custom delay of 100ms 1`] = `
 <div>
   <div
@@ -1397,6 +1491,100 @@ exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity errors wh
 `;
 
 exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity errors when registering a duplicate announcer 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 2`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 3`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 4`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      <h1>
+        Oh no
+      </h1>
+      <p>
+        This is the body of the error message.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 5`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <div
+      aria-live="polite"
+      data-testid="screen-reader-announcement-message-0"
+    >
+      <h1>
+        Oh no
+      </h1>
+      <p>
+        This is the body of the error message.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 6`] = `
 <div>
   <div
     class="md-screen-reader-announcer-wrapper"

@@ -73,7 +73,10 @@ describe('<ScreenReaderAnnouncer />', () => {
       });
     };
 
-    const checkSingle = (announceOptions: AnnounceOptions) => {
+    const checkSingle = (
+      announceOptions: AnnounceOptions,
+      expectedPostAnnouncementBody?: string
+    ) => {
       const expectedPreAnnouncement = {
         'aria-live': announceOptions.level ?? 'polite',
         children: '',
@@ -81,7 +84,7 @@ describe('<ScreenReaderAnnouncer />', () => {
       };
       const expectedPostAnnouncement = {
         ...expectedPreAnnouncement,
-        children: announceOptions.body,
+        children: expectedPostAnnouncementBody || announceOptions.body,
       };
 
       // Mount the announcer
@@ -115,6 +118,20 @@ describe('<ScreenReaderAnnouncer />', () => {
 
     it('announces with default configuration', () => {
       checkSingle({ body: 'default configuration' });
+    });
+
+    it('announces react node with default configuration', () => {
+      checkSingle(
+        {
+          body: (
+            <>
+              <h1>Oh no</h1>
+              <p>This is the body of the error message.</p>
+            </>
+          ),
+        },
+        'Oh noThis is the body of the error message.'
+      );
     });
 
     it.each(['assertive', 'polite'])(
