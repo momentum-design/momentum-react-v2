@@ -5,6 +5,7 @@
     > :first-child {
       width: 100%;
       margin-bottom: -0.5rem;
+      min-height: 2rem;
 
       > :last-child {
         display: flex;
