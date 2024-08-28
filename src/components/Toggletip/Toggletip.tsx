@@ -34,7 +34,7 @@ const Toggletip = forwardRef(
   ) => {
     const tippyRef = useRef<PopoverInstance>(null);
     const triggerComponentRef = useRef<HTMLElement>(null);
-    const [announcerId] = useState<string>(uuidV4());
+    const [announcerId] = useState<string>(uuidV4);
     const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
 
     // SR should announce the content of the toggletip everytime it displays tooltip content
@@ -50,7 +50,7 @@ const Toggletip = forwardRef(
       if (isTooltipOpen) {
         ScreenReaderAnnouncer.announce({ body: children }, announcerId);
       }
-    }, [isTooltipOpen]);
+    }, [isTooltipOpen, children]);
 
     // Update aria props manually, because "The `aria` attribute is reserved for future use in React."
     // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
