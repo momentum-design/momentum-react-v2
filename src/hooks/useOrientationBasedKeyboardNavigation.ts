@@ -1,4 +1,4 @@
-import { Dispatch, HTMLAttributes, SetStateAction, useCallback, useState, useRef } from 'react';
+import { Dispatch, HTMLAttributes, SetStateAction, useCallback, useState } from 'react';
 import { useKeyboard } from '@react-aria/interactions';
 import { setNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
