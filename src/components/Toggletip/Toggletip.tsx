@@ -34,23 +34,23 @@ const Toggletip = forwardRef(
   ) => {
     const tippyRef = useRef<PopoverInstance>(null);
     const triggerComponentRef = useRef<HTMLElement>(null);
-    const announcerId = useRef(uuidV4());
-    const [displayedTooltip, setDisplayedTooltip] = useState<React.ReactNode>(null);
+    const [announcerId] = useState<string>(uuidV4());
+    const [isTooltipOpen, setIsTooltipOpen] = useState<React.ReactNode>(false);
 
     // SR should announce the content of the toggletip everytime it displays tooltip content
     const handleShow = () => {
-      setDisplayedTooltip(children);
+      setIsTooltipOpen(true);
     };
 
     const handleHide = () => {
-      setDisplayedTooltip(null);
+      setIsTooltipOpen(false);
     };
 
     useEffect(() => {
-      if (displayedTooltip) {
-        ScreenReaderAnnouncer.announce({ body: displayedTooltip }, announcerId.current);
+      if (isTooltipOpen) {
+        ScreenReaderAnnouncer.announce({ body: children }, announcerId);
       }
-    }, [displayedTooltip]);
+    }, [isTooltipOpen]);
 
     // Update aria props manually, because "The `aria` attribute is reserved for future use in React."
     // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
@@ -94,14 +94,14 @@ const Toggletip = forwardRef(
           placement={placement}
           strategy={strategy}
           variant={variant}
+          {...otherProps}
           onShow={handleShow}
           onHide={handleHide}
-          {...otherProps}
           setInstance={setInstance}
         >
           {children}
         </Popover>
-        <ScreenReaderAnnouncer identity={announcerId.current} />
+        <ScreenReaderAnnouncer identity={announcerId} />
       </>
     );
   }

@@ -9,6 +9,7 @@ import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import Toggletip from './';
 import { PositioningStrategy } from '../Popover/Popover.types';
 import * as uuid from 'uuid';
+import * as screenReaderAnnouncer from '../ScreenReaderAnnouncer';
 
 jest.mock('uuid');
 
@@ -361,17 +362,8 @@ describe('<Toggletip />', () => {
     });
   });
 
-  it('should render ScreenReaderAnnouncer with unique identity', () => {
-    render(
-      <Toggletip triggerComponent={<button>Click Me!</button>}>
-        <p>Content</p>
-      </Toggletip>
-    );
-
-    expect(screen.getByTestId('screen-reader-announcer')).toBeInTheDocument();
-  });
-
   it('should show/hide Toggletip on click', async () => {
+    const announceSpy = jest.spyOn(screenReaderAnnouncer.default, 'announce');
     const user = userEvent.setup();
 
     const props = {
@@ -395,6 +387,9 @@ describe('<Toggletip />', () => {
       </Toggletip>
     );
 
+    expect(screen.getByTestId('screen-reader-announcer')).toBeInTheDocument();
+    expect(announceSpy).not.toBeCalled();
+
     expect(props.onCreate).toBeCalled();
 
     expect(props.onShow).not.toBeCalled();
@@ -409,8 +404,11 @@ describe('<Toggletip />', () => {
     await openToggletipByClickingOnTriggerAndCheckContent(user);
 
     expect(props.onMount).toBeCalled();
-    expect(props.onShow).toBeCalled();
+    expect(props.onShow).not.toBeCalled(); // internal handleShow should triggered
     expect(props.onTrigger).toBeCalled();
+
+    expect(announceSpy).toBeCalledWith({ body: expect.any(Object) }, '1');
+    expect(announceSpy).toBeCalledTimes(1);
 
     expect(props.onHide).not.toBeCalled();
     expect(props.onHidden).not.toBeCalled();
@@ -423,7 +421,10 @@ describe('<Toggletip />', () => {
       expect(screen.queryByText('Content')).not.toBeInTheDocument();
     });
 
-    expect(props.onHide).toBeCalled();
+    // no extra call to announce when the toggletip closes
+    expect(announceSpy).toBeCalledTimes(1);
+
+    expect(props.onHide).not.toBeCalled(); // internal handleHide should triggered
     expect(props.onHidden).toBeCalled();
     expect(props.onUntrigger).toBeCalled();
 
