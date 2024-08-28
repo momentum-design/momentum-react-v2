@@ -159,7 +159,19 @@ describe('<Tree />', () => {
     });
   });
 
-  describe('tree focus', () => {
+  describe('tree navigation', () => {
+    it.each(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'])(
+      'should do nothing when tree structure is empty and user presses %s',
+      (key) => {
+        render(<Tree treeStructure={{}} excludeTreeRoot={false} />);
+        const focusedElement = document.activeElement;
+
+        userEvent.keyboard(`{${key}}`);
+
+        expect(document.activeElement).toBe(focusedElement);
+      }
+    );
+
     it('should handle escape being pressed', async () => {
       const keyDownHandler = jest.fn();
 

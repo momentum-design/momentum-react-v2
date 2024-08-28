@@ -22,9 +22,14 @@ export type TreeNodeId = string;
 export type ToggleTreeNode = (id: TreeNodeId, isOpen?: boolean) => void;
 
 /**
+ * Empty tree type
+ */
+export type EmptyTree = Record<string, never>;
+
+/**
  * The root node of the tree.
  */
-export type TreeRoot = TreeNode;
+export type TreeRoot = TreeNode | EmptyTree;
 
 /**
  * A node in the tree.

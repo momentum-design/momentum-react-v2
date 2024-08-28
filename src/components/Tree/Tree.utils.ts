@@ -7,6 +7,7 @@ import {
   TreeNavKeyCodes,
   TreeNode,
   TreeNodeId,
+  TreeRoot,
 } from './Tree.types';
 
 export const TreeContext = React.createContext<TreeContextValue>(null);
@@ -30,6 +31,21 @@ export const useTreeContext = (): TreeContextValue => {
  */
 export const getTreeRootId = (tree: TreeIdNodeMap): TreeNodeId | undefined => {
   return Array.from(tree.values()).find((node) => !node.parent)?.id;
+};
+
+/**
+ * Check if the tree is empty.
+ *
+ * Works with both Map and recursive Object tree representation.
+ *
+ * @param tree
+ */
+export const isEmptyTree = (tree: unknown): boolean => {
+  if (!tree) return true;
+  if (tree instanceof Map && tree.size !== 0) return false;
+  if (tree instanceof Object && tree['id']) return false;
+
+  return true;
 };
 
 /**
@@ -185,8 +201,13 @@ const closeNextNode = (
  *
  * @param tree
  */
-export const convertNestedTree2MappedTree = (tree: TreeNode): TreeIdNodeMap => {
+export const convertNestedTree2MappedTree = (tree: TreeRoot): TreeIdNodeMap => {
   const map: TreeIdNodeMap = new Map();
+
+  if (isEmptyTree(tree)) {
+    return map;
+  }
+
   const idSet = new Set<TreeNodeId>();
   const rootNode = {
     node: tree as TreeNode,

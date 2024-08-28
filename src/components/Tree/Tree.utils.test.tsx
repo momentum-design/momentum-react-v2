@@ -2,6 +2,8 @@ import React from 'react';
 import {
   convertNestedTree2MappedTree,
   getNextActiveNode,
+  getTreeRootId,
+  isEmptyTree,
   mapTree,
   toggleTreeNodeRecord,
   TreeContext,
@@ -71,6 +73,43 @@ describe('Tree utils', () => {
     it('should throw an error when the tree context is not available', () => {
       const { result } = renderHook(() => useTreeContext());
       expect(result.error).toEqual(Error('useTreeContext hook used without TreeContext!'));
+    });
+  });
+
+  describe('getTreeRootId', () => {
+    it('should return with root id for not empty tree', () => {
+      const rootId = getTreeRootId(createTree());
+
+      expect(rootId).toEqual('<root>');
+    });
+
+    it('should return with undefined when the tree is empty', () => {
+      const rootId = getTreeRootId(new Map());
+
+      expect(rootId).toEqual(undefined);
+    });
+
+    it('should return with undefined when there is no root in the tree', () => {
+      const tree = createTree();
+      tree.get('<root>').parent = '1';
+      const rootId = getTreeRootId(tree);
+
+      expect(rootId).toEqual(undefined);
+    });
+  });
+
+  describe('isEmptyTree', () => {
+    it('should return true when the tree is empty', () => {
+      expect(isEmptyTree(null)).toBe(true);
+      expect(isEmptyTree(undefined)).toBe(true);
+      expect(isEmptyTree({})).toBe(true);
+      expect(isEmptyTree({ children: [] })).toBe(true);
+      expect(isEmptyTree(new Map())).toBe(true);
+    });
+
+    it('should return false when the tree is not empty', () => {
+      expect(isEmptyTree({ id: 'root' })).toBe(false);
+      expect(isEmptyTree(new Map([['root', { id: 'root' }]]))).toBe(false);
     });
   });
 

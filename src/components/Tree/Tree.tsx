@@ -1,7 +1,7 @@
 import React, { FC, useRef, useState, useCallback, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 
-import { STYLE, DEFAULTS, TREE_NAVIGATION_KEYS } from './Tree.constants';
+import { STYLE, DEFAULTS } from './Tree.constants';
 import { TreeIdNodeMap, Props, TreeContextValue, TreeNavKeyCodes, TreeNodeId } from './Tree.types';
 import './Tree.style.scss';
 import {
@@ -27,15 +27,11 @@ const Tree: FC<Props> = (props: Props) => {
     ...rest
   } = props;
 
-  if (excludeTreeRoot && !treeStructure.children.length) {
-    throw new Error('Tree must have at least one child when excludeTreeRoot is true');
-  }
-
   const ref = useRef<HTMLDivElement>();
 
   const [tree, setTree] = useState<TreeIdNodeMap>(convertNestedTree2MappedTree(treeStructure));
-  const [activeNodeId, setActiveNodeId] = useState<TreeNodeId>(
-    excludeTreeRoot ? treeStructure.children[0].id : treeStructure.id
+  const [activeNodeId, setActiveNodeId] = useState<TreeNodeId | undefined>(
+    excludeTreeRoot ? treeStructure?.children?.[0]?.id : treeStructure?.id
   );
 
   const isVirtualTree = virtualTreeConnector !== undefined;
@@ -125,14 +121,16 @@ const Tree: FC<Props> = (props: Props) => {
         case 'ArrowRight':
         case 'ArrowLeft': {
           evt.preventDefault();
-          const nextActiveNode = getNextActiveNode(
-            tree,
-            activeNodeId,
-            key,
-            excludeTreeRoot,
-            toggleTreeNode
-          );
-          setActiveNodeId(nextActiveNode);
+          if (activeNodeId) {
+            const nextActiveNode = getNextActiveNode(
+              tree,
+              activeNodeId,
+              key,
+              excludeTreeRoot,
+              toggleTreeNode
+            );
+            setActiveNodeId(nextActiveNode);
+          }
           break;
         }
         default:
