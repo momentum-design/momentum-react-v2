@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -28,6 +28,7 @@ import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { MenuTrigger, SearchInput } from '..';
 import { omit } from 'lodash';
+import { ListRefObject } from './List.types';
 
 const TEST_LIST_SIZE = 30;
 
@@ -299,4 +300,31 @@ const DynamicListWrapper = () => {
 const DynamicList = Template<unknown>(DynamicListWrapper).bind({});
 const Search = Template<unknown>(ListSearchWrapper).bind({});
 
-export { Example, Common, HorizontalList, CalendarList, DynamicList, Search };
+const ProgramaticFocus = Template<ListProps>((args) => {
+  const ref = useRef<ListRefObject>();
+  const handleOnPress = (i) => {
+    ref.current.focusOnIndex(i);
+  };
+
+  return (
+    <>
+      <Flex xgap="0.5rem">
+        {Array.from(Array(10).keys()).map((index) => (
+          <ButtonPill outline size={20} key={index} onPress={() => handleOnPress(index)}>
+            Focus on {index}
+          </ButtonPill>
+        ))}
+      </Flex>
+
+      <List {...args} listSize={10} ref={ref} shouldFocusOnPress>
+        {Array.from(Array(10).keys()).map((index) => (
+          <ListItemBase itemIndex={index} key={index} isPadded>
+            {`Item ${index}`}
+          </ListItemBase>
+        ))}
+      </List>
+    </>
+  );
+}).bind({});
+
+export { Example, Common, HorizontalList, CalendarList, DynamicList, Search, ProgramaticFocus };

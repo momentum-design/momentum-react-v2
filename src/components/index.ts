@@ -43,6 +43,7 @@ export { default as MeetingListItem, MeetingMarker } from './MeetingListItem';
 export { default as TextInput } from './TextInput';
 export { default as SpaceListItem } from './SpaceListItem';
 export { default as List } from './List';
+export type { ListRefObject } from './List';
 export * from './Reaction';
 export { default as Reaction } from './Reaction';
 export { default as ReactionBadge } from './ReactionBadge';

@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
 
 export type ListOrientation = 'horizontal' | 'vertical';
 
@@ -66,6 +66,11 @@ export interface ListContextValue {
   currentFocus?: number;
   shouldFocusOnPress?: boolean;
   shouldItemFocusBeInset?: boolean;
-  setContext?: (newFocus: number) => void;
+  setCurrentFocus?: Dispatch<SetStateAction<number>>;
   listSize?: number;
+}
+export interface ListRefObject {
+  listRef: React.RefObject<HTMLUListElement>;
+  focusOnIndex: (index: number) => void;
+  getCurrentFocusIndex: () => number;
 }

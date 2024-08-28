@@ -149,9 +149,14 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
-    if (listContext?.setContext && isPressed && shouldFocusOnPress && itemIndex !== undefined) {
+    if (
+      listContext?.setCurrentFocus &&
+      isPressed &&
+      shouldFocusOnPress &&
+      itemIndex !== undefined
+    ) {
       ref.current.focus();
-      listContext.setContext(itemIndex);
+      listContext.setCurrentFocus(itemIndex);
     }
   }, [isPressed]);
 
@@ -177,7 +182,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   useEffect(() => {
     if (!!listContext?.listSize && listContext?.currentFocus >= listContext?.listSize) {
       // set focus to first item
-      listContext.setContext(0);
+      listContext.setCurrentFocus(0);
       updateTabIndexes();
     }
   }, [listContext?.currentFocus, listContext?.listSize]);

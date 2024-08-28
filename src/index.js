@@ -151,6 +151,7 @@ export {
   AvatarMeetingsListItem,
   SpaceListItem as SpaceListItemNext,
   List as ListNext,
+  ListRefObject,
   Popover as PopoverNext,
   Reaction,
   OnVideoReactionName,
