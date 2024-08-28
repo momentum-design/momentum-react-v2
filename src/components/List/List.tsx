@@ -1,13 +1,13 @@
-import React, { FC, useRef } from 'react';
+import React, { RefObject, useImperativeHandle, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './List.constants';
-import { Props } from './List.types';
+import { ListRefObject, Props } from './List.types';
 import './List.style.scss';
 import { ListContext } from './List.utils';
 import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 
-const List: FC<Props> = (props: Props) => {
+const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   const {
     className,
     id,
@@ -22,15 +22,27 @@ const List: FC<Props> = (props: Props) => {
     ...rest
   } = props;
 
-  const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation, noLoop, contextProps: {shouldFocusOnPress, shouldItemFocusBeInset}});
+  const { keyboardProps, getContext } = useOrientationBasedKeyboardNavigation({
+    listSize,
+    orientation,
+    noLoop,
+    contextProps: { shouldFocusOnPress, shouldItemFocusBeInset },
+  });
 
-  const ref = useRef<HTMLUListElement>();
+  const listRef = useRef<HTMLUListElement>();
+
+  // Expose imperative methods
+  useImperativeHandle(ref, () => ({
+    listRef,
+    focusOnIndex: (index: number) => getContext()?.setCurrentFocus(index),
+    getCurrentFocusIndex: () => getContext()?.currentFocus,
+  }));
 
   return (
     <ListContext.Provider value={getContext()}>
       <ul
         className={classnames(className, STYLE.wrapper)}
-        ref={ref}
+        ref={listRef}
         style={style}
         id={id}
         role={role}
@@ -41,6 +53,6 @@ const List: FC<Props> = (props: Props) => {
       </ul>
     </ListContext.Provider>
   );
-};
+});
 
 export default List;

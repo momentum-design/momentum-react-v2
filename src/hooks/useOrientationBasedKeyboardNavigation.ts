@@ -1,42 +1,37 @@
-import { HTMLAttributes, useCallback, useState } from 'react';
+import { Dispatch, HTMLAttributes, SetStateAction, useCallback, useState, useRef } from 'react';
 import { useKeyboard } from '@react-aria/interactions';
 import { setNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
-  keyboardProps: HTMLAttributes<HTMLElement>,
+  keyboardProps: HTMLAttributes<HTMLElement>;
   getContext: () => {
     listSize: number;
     currentFocus: number;
-    setContext: (newFocus: number) => void;
+    setCurrentFocus: Dispatch<SetStateAction<number>>;
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
-  }
-}
+  };
+};
 
 export type IUseOrientationBasedKeyboardNavigationProps = {
   listSize: number;
   orientation: ListOrientation;
-  noLoop?: boolean; 
+  noLoop?: boolean;
   contextProps?: {
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
-  } 
-}
+  };
+};
 
-const useOrientationBasedKeyboardNavigation = (props: IUseOrientationBasedKeyboardNavigationProps): IUseOrientationBasedKeyboardNavigationReturn => {
-  const {listSize, orientation, noLoop, contextProps} = props;
+const useOrientationBasedKeyboardNavigation = (
+  props: IUseOrientationBasedKeyboardNavigationProps
+): IUseOrientationBasedKeyboardNavigationReturn => {
+  const { listSize, orientation, noLoop, contextProps } = props;
   const [currentFocus, setCurrentFocus] = useState<number>(0);
 
   const getContext = useCallback(
-    () => ({ listSize, currentFocus, setContext, ...contextProps }),
-    [currentFocus, setCurrentFocus, listSize]
-  );
-
-  const setContext = useCallback(
-    (newFocus) => {
-      setCurrentFocus(newFocus);
-    },
+    () => ({ listSize, currentFocus, setCurrentFocus, ...contextProps }),
     [currentFocus, setCurrentFocus, listSize]
   );
 
@@ -67,7 +62,7 @@ const useOrientationBasedKeyboardNavigation = (props: IUseOrientationBasedKeyboa
 
   return {
     keyboardProps,
-    getContext, 
+    getContext,
   };
 };
 

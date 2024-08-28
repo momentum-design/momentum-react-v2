@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { mount } from 'enzyme';
 
 import List, { LIST_CONSTANTS as CONSTANTS } from './';
@@ -10,6 +10,7 @@ import { ListItemBaseSection, MenuTrigger } from '@momentum-ui/react-collaborati
 import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
+import { ListRefObject } from './List.types';
 
 describe('<List />', () => {
   const commonProps = {
@@ -553,6 +554,76 @@ describe('<List />', () => {
       await user.tab();
       expect(updatedButton[0]).not.toHaveFocus();
       expect(document.body).toHaveFocus();
+    });
+
+    it('should focus programmatically on the specified index', async () => {
+      expect.assertions(4);
+      const user = userEvent.setup();
+
+      const ProgrammaticList = () => {
+        const listRef = useRef<ListRefObject>(null);
+
+        return (
+          <>
+            <button
+              onClick={() => {
+                listRef.current.focusOnIndex(0);
+              }}
+            >
+              focus on 0
+            </button>
+            <button
+              onClick={() => {
+                listRef.current.focusOnIndex(1);
+              }}
+            >
+              focus on 1
+            </button>
+            <button
+              onClick={() => {
+                listRef.current.focusOnIndex(2);
+              }}
+            >
+              focus on 2
+            </button>
+            <List listSize={3} ref={listRef}>
+              <ListItemBase key="0" itemIndex={0}>
+                <p>list item 1</p>
+              </ListItemBase>
+              <ListItemBase key="1" itemIndex={1}>
+                <p>list item 2</p>
+              </ListItemBase>
+              <ListItemBase key="2" itemIndex={2}>
+                <p>list item 3</p>
+              </ListItemBase>
+            </List>
+          </>
+        );
+      };
+
+      const { getAllByRole } = render(<ProgrammaticList />);
+
+      const listItems = getAllByRole('listitem');
+      const buttons = getAllByRole('button');
+
+      // tab past the buttons
+      await user.tab();
+      await user.tab();
+      await user.tab();
+      await user.tab();
+
+      expect(listItems[0]).toHaveFocus();
+
+      await user.click(buttons[1]);
+      expect(listItems[1]).toHaveFocus();
+
+      await user.click(buttons[2]);
+
+      expect(listItems[2]).toHaveFocus();
+
+      await user.click(buttons[0]);
+
+      expect(listItems[0]).toHaveFocus();
     });
   });
 });
