@@ -8,14 +8,16 @@ import ButtonSimple from '../ButtonSimple';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import Toggletip from './';
 import { PositioningStrategy } from '../Popover/Popover.types';
+import * as uuid from 'uuid';
 
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
+jest.mock('uuid');
 
 describe('<Toggletip />', () => {
+  beforeEach(() => {
+    // first call returns 1, second returns 2, +3rd returns 3
+    jest.spyOn(uuid, 'v4').mockReturnValue('3').mockReturnValueOnce('1').mockReturnValueOnce('2');
+  });
+
   /**
    * Opens the toggletip by click on the trigger component, waits until
    * content gets displayed, expects it to be visible and returns the content.
@@ -267,7 +269,8 @@ describe('<Toggletip />', () => {
       expect(content.parentElement.getAttribute('style')).toBe(styleString);
       expect(content.parentElement.getAttribute('data-color')).toBe(COLORS.TERTIARY);
       expect(content.parentElement.id).toBe(id);
-      expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
+      // aria-labelledby is using the second call of uuid, which returns 2
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe('2');
     });
 
     it('checks triggerComponent props when id is not defined', async () => {
@@ -349,13 +352,23 @@ describe('<Toggletip />', () => {
       // at this point toggletip 2 is still open and we click on another button
       await user.click(screen.getByRole('button', { name: /Other button/i }));
 
-      const content1AfterClickingOuterButton = screen.queryByText('Content 1');
+      const content1AfterClickingOuterButton = screen.queryByRole('dialog');
       expect(content1AfterClickingOuterButton).not.toBeInTheDocument();
 
       // assert that first toggletip has closed, and only second one is open
       const content2AfterClickingOuterButton = screen.queryByText('Content 2');
       expect(content2AfterClickingOuterButton).not.toBeInTheDocument();
     });
+  });
+
+  it('should render ScreenReaderAnnouncer with unique identity', () => {
+    render(
+      <Toggletip triggerComponent={<button>Click Me!</button>}>
+        <p>Content</p>
+      </Toggletip>
+    );
+
+    expect(screen.getByTestId('screen-reader-announcer')).toBeInTheDocument();
   });
 
   it('should show/hide Toggletip on click', async () => {
