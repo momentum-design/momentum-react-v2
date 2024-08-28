@@ -35,7 +35,7 @@ const Toggletip = forwardRef(
     const tippyRef = useRef<PopoverInstance>(null);
     const triggerComponentRef = useRef<HTMLElement>(null);
     const [announcerId] = useState<string>(uuidV4());
-    const [isTooltipOpen, setIsTooltipOpen] = useState<React.ReactNode>(false);
+    const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
 
     // SR should announce the content of the toggletip everytime it displays tooltip content
     const handleShow = () => {
