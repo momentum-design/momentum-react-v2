@@ -514,7 +514,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         await openMenu(user, screen);
         expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
 
-        await user.tab();
+        await user.keyboard('{Tab}');
         expect(await screen.findByRole('menuitemcheckbox', { name: 'Four' })).toHaveFocus();
 
         await user.tab();

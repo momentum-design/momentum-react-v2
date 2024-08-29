@@ -39,6 +39,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     isGroupRole,
     ariaLabelledby,
     orientation = LIST_DEFAULTS.ORIENTATION,
+    tabIndex,
   } = props;
 
   const contextProps = useMenuContext();
@@ -101,7 +102,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           role={isGroupRole ? GROUP : menuProps.role}
           aria-labelledby={ariaLabelledby}
           {...keyboardProps}
-          tabIndex={-1}
+          tabIndex={tabIndex || menuProps.tabIndex}
         >
           {itemArray.map((key, index) => {
             const item = state.collection.getItem(key) as Node<T>;
