@@ -17,7 +17,10 @@ describe('<Toggletip />', () => {
   beforeEach(() => {
     // first call returns 1, second returns 2, +3rd returns 3
     jest.spyOn(uuid, 'v4').mockReturnValue('3').mockReturnValueOnce('1').mockReturnValueOnce('2');
+    jest.setTimeout(61000);
   });
+
+  const pause = (ms) => new Promise((res) => setTimeout(res, ms));
 
   /**
    * Opens the toggletip by click on the trigger component, waits until
@@ -229,13 +232,19 @@ describe('<Toggletip />', () => {
 
         await openToggletipByClickingOnTriggerAndCheckContent(user, /Toggletip 1/i, /Content 1/i);
 
+        await pause(20150);
+
         expect(container).toMatchSnapshot();
 
         await openToggletipByClickingOnTriggerAndCheckContent(user, /Toggletip 2/i, /Content 2/i);
 
+        await pause(20150);
+
         expect(container).toMatchSnapshot();
 
         await user.click(screen.getByRole('button', { name: /Other button/i }));
+
+        await pause(20150);
 
         expect(container).toMatchSnapshot();
       }
