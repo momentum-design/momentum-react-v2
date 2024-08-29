@@ -140,4 +140,20 @@ MultiplePopovers.args = {
   children: 'Popover content on click',
 };
 
-export { Example, Common, Offset, MultiplePopovers };
+const Algo = Template<ToggletipProps>((args: ToggletipProps) => {
+  return (
+    <>
+      <Toggletip
+        placement={PLACEMENTS.BOTTOM}
+        triggerComponent={
+          <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonSimple>
+        }
+      >
+        Description toggletip on click
+      </Toggletip>
+      <ButtonPill>Other button</ButtonPill>
+    </>
+  );
+}).bind({});
+
+export { Example, Common, Offset, MultiplePopovers, Algo };
