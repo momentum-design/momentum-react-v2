@@ -319,7 +319,7 @@ describe('<Toggletip />', () => {
     });
 
     it('should display only one toggletip at all time', async () => {
-      expect.assertions(7);
+      expect.assertions(6);
       const user = userEvent.setup();
 
       render(
@@ -335,30 +335,27 @@ describe('<Toggletip />', () => {
       );
 
       // assert no toggletip on screen
-      const contentBeforeClickToggletip1 = screen.queryByText('Content 1');
-      expect(contentBeforeClickToggletip1).not.toBeInTheDocument();
-
-      // assert no toggletip on screen
-      const contentBeforeClickToggletip2 = screen.queryByText('Content 2');
-      expect(contentBeforeClickToggletip2).not.toBeInTheDocument();
+      const dialogsBeforeClickToggletips = screen.queryAllByRole('dialog');
+      expect(dialogsBeforeClickToggletips.length).toEqual(0);
 
       await openToggletipByClickingOnTriggerAndCheckContent(user, /Toggletip 1/i, /Content 1/i);
+
+      // assert 1 toggletip on screen
+      const dialogsAfterClickToggletip1 = screen.queryAllByRole('dialog');
+      expect(dialogsAfterClickToggletip1.length).toEqual(1);
 
       await openToggletipByClickingOnTriggerAndCheckContent(user, /Toggletip 2/i, /Content 2/i);
 
       // assert that first toggletip has closed, and only second one is open
-      const contentAfterClickingBoth = screen.queryByText('Content 1');
-      expect(contentAfterClickingBoth).not.toBeInTheDocument();
+      const dialogsAfterClickingBoth = screen.queryAllByRole('dialog');
+      expect(dialogsAfterClickingBoth.length).toEqual(1);
 
       // at this point toggletip 2 is still open and we click on another button
       await user.click(screen.getByRole('button', { name: /Other button/i }));
 
-      const content1AfterClickingOuterButton = screen.queryByText('Content 1');
-      expect(content1AfterClickingOuterButton).not.toBeInTheDocument();
-
-      // assert that first toggletip has closed, and only second one is open
-      const content2AfterClickingOuterButton = screen.queryByText('Content 2');
-      expect(content2AfterClickingOuterButton).not.toBeInTheDocument();
+      // assert that both toggletips are closed
+      const dialogsAfterClickingOuterButton = screen.queryAllByRole('dialog');
+      expect(dialogsAfterClickingOuterButton.length).toEqual(0);
     });
   });
 
