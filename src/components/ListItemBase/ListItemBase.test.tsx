@@ -412,7 +412,7 @@ describe('ListItemBase', () => {
           shouldFocusOnPress: false,
           shouldItemFocusBeInset: false,
           currentFocus: 0,
-          setContext: jest.fn(),
+          setCurrentFocus: jest.fn(),
         }}
       />
     );
