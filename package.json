@@ -175,7 +175,7 @@
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.23",
     "@types/uuid": "^9.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^4.28.3",
     "autoprefixer": "^7.2.4",
     "babel-core": "^7.0.0-bridge.0",
