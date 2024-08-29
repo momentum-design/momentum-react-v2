@@ -353,7 +353,7 @@ describe('<Toggletip />', () => {
       // at this point toggletip 2 is still open and we click on another button
       await user.click(screen.getByRole('button', { name: /Other button/i }));
 
-      const content1AfterClickingOuterButton = screen.queryByRole('dialog');
+      const content1AfterClickingOuterButton = screen.queryByText('Content 1');
       expect(content1AfterClickingOuterButton).not.toBeInTheDocument();
 
       // assert that first toggletip has closed, and only second one is open
