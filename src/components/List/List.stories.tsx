@@ -327,4 +327,39 @@ const ProgramaticFocus = Template<ListProps>((args) => {
   );
 }).bind({});
 
-export { Example, Common, HorizontalList, CalendarList, DynamicList, Search, ProgramaticFocus };
+const ListWithNullElementsWrapper = () => {
+  return (
+    <>
+      <List noLoop listSize={7}>
+        <ListItemBase itemIndex={0} key={0} />
+        <ListItemBase itemIndex={1} key={1} />
+        <ListItemBase itemIndex={2} key={2} isPadded>
+          2
+        </ListItemBase>
+        <ListItemBase itemIndex={3} key={3} />
+        <ListItemBase itemIndex={4} key={4} />
+        <ListItemBase itemIndex={5} key={5} isPadded>
+          5
+        </ListItemBase>
+        <ListItemBase itemIndex={6} key={6} isPadded>
+          6
+        </ListItemBase>
+        <ListItemBase itemIndex={7} key={7} />
+        <ListItemBase itemIndex={8} key={8} />
+      </List>
+    </>
+  );
+};
+
+const ListWithNullElements = Template<unknown>(ListWithNullElementsWrapper).bind({});
+
+export {
+  Example,
+  Common,
+  HorizontalList,
+  CalendarList,
+  DynamicList,
+  Search,
+  ListWithNullElements,
+  ProgramaticFocus,
+};

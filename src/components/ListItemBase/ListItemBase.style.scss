@@ -10,6 +10,20 @@
   box-sizing: border-box;
   outline: none;
 
+  & > div {
+    overflow: visible;
+  }
+
+  &:empty {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
   &[data-interactive='true'] {
     cursor: pointer;
 
@@ -74,7 +88,6 @@
     width: 100%;
 
     // trim any type of text inside
-    &,
     p,
     span {
       overflow: hidden;

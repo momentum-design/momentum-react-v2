@@ -271,6 +271,24 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!ref.current.childNodes.length && focus) {
+      if (lastCurrentFocus > itemIndex) {
+        if (itemIndex <= 0) {
+          listContext.setCurrentFocus(itemIndex + 1);
+        } else {
+          listContext.setCurrentFocus(itemIndex - 1);
+        }
+      } else {
+        if (itemIndex >= listContext.listSize - 1) {
+          listContext.setCurrentFocus(itemIndex - 1);
+        } else {
+          listContext.setCurrentFocus(itemIndex + 1);
+        }
+      }
+    }
+  }, [focus, lastCurrentFocus, listContext.listSize]);
+
   return (
     <FocusRing isInset={shouldItemFocusBeInset}>
       <li
