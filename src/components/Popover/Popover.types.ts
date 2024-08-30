@@ -74,6 +74,10 @@ export type PopoverCommonStyleProps = {
    */
   hideOnEsc?: boolean;
 
+  hideOnBlur?: boolean;
+
+  isChildPopoverOpen?: boolean;
+
   /**
    * Whether or not an invisible backdrop is added behind the popover. A backdrop, when added, will hide the
    * popover when you click outside of it, preventing multiple popovers from opening at once.
