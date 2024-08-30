@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, useRef, RefObject, forwardRef, useLayoutEffect } from 'react';
+import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
@@ -20,6 +20,7 @@ import { useFocusState } from '../../hooks/useFocusState';
 
 import Icon from '../Icon';
 import LoadingSpinner from '../LoadingSpinner';
+import { useProvidedRef } from '../../utils/useProvidedRef';
 
 
 type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputElement) => void);
@@ -53,22 +54,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
 
   const state = useSearchFieldState(props);
 
-  const internalRef = useRef<HTMLInputElement>();
-
-  let ref = internalRef;
-
-  if (providedRef && typeof providedRef !== 'function') {
-    ref = providedRef;
-  }
-  const inputRef = ref;
-
-  useLayoutEffect(() => {
-    if (providedRef) {
-      if (typeof providedRef === 'function') {
-        providedRef(ref.current);
-      }
-    }
-  });
+  const inputRef = useProvidedRef<HTMLInputElement>(providedRef, null);
   const { focusProps, isFocused } = useFocusState(props);
 
   const containerRef = useRef(null);

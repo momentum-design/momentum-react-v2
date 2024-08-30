@@ -398,6 +398,16 @@ describe('<SearchInput />', () => {
       expect(ref.current.value).toEqual('test');
     });
 
+    it('should forward a callback ref if provided', async () => {
+      const callbackRef = jest.fn();
+      const inputElement = (await mountAndWait(
+        <SearchInput ref={callbackRef} aria-label="search" value="test" clearButtonAriaLabel="Clear" />
+      )).find('input').getDOMNode();
+     
+      expect(callbackRef).toBeCalledTimes(1);
+      expect(callbackRef).toHaveBeenLastCalledWith(inputElement);
+    });
+
     it('should work with autofocus', async () => {
       await mountAndWait(
         // eslint-disable-next-line jsx-a11y/no-autofocus
