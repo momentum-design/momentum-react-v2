@@ -650,12 +650,7 @@ exports[`<Toggletip /> snapshot should match snapshot 2`] = `
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-1"
@@ -754,12 +749,7 @@ exports[`<Toggletip /> snapshot should match snapshot with className 2`] = `
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-2"
@@ -858,12 +848,7 @@ exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-5"
@@ -962,12 +947,7 @@ exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-3"
@@ -1067,12 +1047,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 2`] = 
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-8"
@@ -1171,12 +1146,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 2`] = 
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-7"
@@ -1275,12 +1245,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and of
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-9"
@@ -1379,12 +1344,7 @@ exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 2`] 
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-6"
@@ -1483,12 +1443,7 @@ exports[`<Toggletip /> snapshot should match snapshot with style 2`] = `
     class="md-screen-reader-announcer-wrapper"
     data-testid="screen-reader-announcer"
     style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
-  >
-    <div
-      aria-live="polite"
-      data-testid="screen-reader-announcement-message-0"
-    />
-  </div>
+  />
   <div
     data-tippy-root=""
     id="tippy-4"

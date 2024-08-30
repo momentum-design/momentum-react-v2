@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
@@ -14,13 +14,21 @@ import * as screenReaderAnnouncer from '../ScreenReaderAnnouncer';
 jest.mock('uuid');
 
 describe('<Toggletip />', () => {
+  beforeAll(() => {
+    jest.clearAllTimers();
+    jest.useFakeTimers();
+  });
+
   beforeEach(() => {
     // first call returns 1, second returns 2, +3rd returns 3
     jest.spyOn(uuid, 'v4').mockReturnValue('3').mockReturnValueOnce('1').mockReturnValueOnce('2');
-    jest.setTimeout(61000);
   });
 
-  const pause = (ms) => new Promise((res) => setTimeout(res, ms));
+  // Running all pending timers and switching to real timers using Jest
+  afterAll(() => {
+    jest.runOnlyPendingTimers();
+    jest.useRealTimers();
+  });
 
   /**
    * Opens the toggletip by click on the trigger component, waits until
@@ -34,7 +42,14 @@ describe('<Toggletip />', () => {
     buttonName = /Click me!/i,
     contentName = /Content/i
   ) => {
-    await user.click(screen.getByRole('button', { name: buttonName }));
+    await act(async () => {
+      await user.click(screen.getByRole('button', { name: buttonName }));
+    });
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
     const content = await screen.findByText(contentName);
     expect(content).toBeVisible();
     return content;
@@ -43,7 +58,7 @@ describe('<Toggletip />', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const { container } = render(
         <Toggletip triggerComponent={<button>Click Me!</button>}>
@@ -60,7 +75,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with className', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const className = 'example-class';
 
@@ -79,7 +94,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with id', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const id = 'example-id';
 
@@ -98,7 +113,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with style', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const style = { color: 'pink' };
 
@@ -117,7 +132,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with color', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const { container } = render(
         <Toggletip triggerComponent={<button>Click Me!</button>} color={COLORS.TERTIARY}>
@@ -134,7 +149,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with strategy = fixed', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const { container } = render(
         <Toggletip triggerComponent={<button>Click Me!</button>} strategy="fixed">
@@ -151,7 +166,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with offsetSkidding', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const { container } = render(
         <Toggletip offsetSkidding={2} triggerComponent={<button>Click Me!</button>}>
@@ -168,7 +183,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with offsetDistance', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const { container } = render(
         <Toggletip offsetDistance={3} triggerComponent={<button>Click Me!</button>}>
@@ -185,7 +200,7 @@ describe('<Toggletip />', () => {
 
     it('should match snapshot with offsetSkidding and offsetDistance', async () => {
       expect.assertions(3);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const { container } = render(
         <Toggletip
@@ -208,7 +223,7 @@ describe('<Toggletip />', () => {
       'should display only one toggletip at all time',
       async (strategy) => {
         expect.assertions(6);
-        const user = userEvent.setup();
+        const user = userEvent.setup({ delay: null });
 
         const { container } = render(
           <>
@@ -232,19 +247,15 @@ describe('<Toggletip />', () => {
 
         await openToggletipByClickingOnTriggerAndCheckContent(user, /Toggletip 1/i, /Content 1/i);
 
-        await pause(20150);
-
         expect(container).toMatchSnapshot();
 
         await openToggletipByClickingOnTriggerAndCheckContent(user, /Toggletip 2/i, /Content 2/i);
 
-        await pause(20150);
-
         expect(container).toMatchSnapshot();
 
-        await user.click(screen.getByRole('button', { name: /Other button/i }));
-
-        await pause(20150);
+        await act(async () => {
+          await user.click(screen.getByRole('button', { name: /Other button/i }));
+        });
 
         expect(container).toMatchSnapshot();
       }
@@ -254,7 +265,7 @@ describe('<Toggletip />', () => {
   describe('attributes', () => {
     it('should have provided attributes when attributes are provided', async () => {
       expect.assertions(7);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       const className = 'example-class';
       const style = { color: 'pink' };
@@ -329,7 +340,7 @@ describe('<Toggletip />', () => {
 
     it('should display only one toggletip at all time', async () => {
       expect.assertions(6);
-      const user = userEvent.setup();
+      const user = userEvent.setup({ delay: null });
 
       render(
         <>
@@ -360,7 +371,9 @@ describe('<Toggletip />', () => {
       expect(dialogsAfterClickingBoth.length).toEqual(1);
 
       // at this point toggletip 2 is still open and we click on another button
-      await user.click(screen.getByRole('button', { name: /Other button/i }));
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: /Other button/i }));
+      });
 
       // assert that both toggletips are closed
       const dialogsAfterClickingOuterButton = screen.queryAllByRole('dialog');
@@ -370,7 +383,7 @@ describe('<Toggletip />', () => {
 
   it('should show/hide Toggletip on click', async () => {
     const announceSpy = jest.spyOn(screenReaderAnnouncer.default, 'announce');
-    const user = userEvent.setup();
+    const user = userEvent.setup({ delay: null });
 
     const props = {
       onCreate: jest.fn(),
@@ -421,11 +434,19 @@ describe('<Toggletip />', () => {
     expect(props.onUntrigger).not.toBeCalled();
     expect(props.onDestroy).not.toBeCalled();
 
-    // after click second time, toggletip should be hidden again
-    await user.click(screen.getByRole('button', { name: /Click me!/i }));
+    // using real timers because we're suspecting tippy is doing something shady with timeout stuff
+    jest.useRealTimers();
+
+    await act(async () => {
+      await user.click(screen.getByRole('button', { name: /Click me!/i }));
+    });
+
     await waitFor(() => {
       expect(screen.queryByText('Content')).not.toBeInTheDocument();
     });
+
+    // go back to fake timers...
+    jest.useFakeTimers();
 
     // no extra call to announce when the toggletip closes
     expect(announceSpy).toBeCalledTimes(1);
@@ -441,7 +462,7 @@ describe('<Toggletip />', () => {
 
   it('should hide Toggletip on focus out', async () => {
     expect.assertions(3);
-    const user = userEvent.setup();
+    const user = userEvent.setup({ delay: null });
 
     render(
       <Toggletip triggerComponent={<button>Click Me!</button>}>
@@ -456,7 +477,10 @@ describe('<Toggletip />', () => {
     await openToggletipByClickingOnTriggerAndCheckContent(user);
 
     // after tabbing away, toggletip should close
-    await user.tab();
+    await act(async () => {
+      await user.tab();
+    });
+
     await waitFor(() => {
       expect(screen.queryByText('Content')).not.toBeInTheDocument();
     });
@@ -464,7 +488,7 @@ describe('<Toggletip />', () => {
 
   it('should hide Toggletip after pressing Esc by default', async () => {
     expect.assertions(3);
-    const user = userEvent.setup();
+    const user = userEvent.setup({ delay: null });
 
     render(
       <Toggletip triggerComponent={<button>Click Me!</button>}>
@@ -479,7 +503,9 @@ describe('<Toggletip />', () => {
     // after click, toggletip should be shown
     await openToggletipByClickingOnTriggerAndCheckContent(user);
 
-    await user.keyboard('{Escape}');
+    await act(async () => {
+      await user.keyboard('{Escape}');
+    });
 
     // content should be hidden
     await waitFor(() => {
