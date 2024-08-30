@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
+import React, { ReactElement, useRef, RefObject, forwardRef, useLayoutEffect } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
@@ -21,10 +21,12 @@ import { useFocusState } from '../../hooks/useFocusState';
 import Icon from '../Icon';
 import LoadingSpinner from '../LoadingSpinner';
 
+
+type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputElement) => void);
 /**
  *  Search input
  */
-const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
+const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement => {
   const {
     className,
     id,
@@ -50,8 +52,23 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   }
 
   const state = useSearchFieldState(props);
-  const componentRef = useRef(null);
-  const inputRef = ref || componentRef;
+
+  const internalRef = useRef<HTMLInputElement>();
+
+  let ref = internalRef;
+
+  if (providedRef && typeof providedRef !== 'function') {
+    ref = providedRef;
+  }
+  const inputRef = ref;
+
+  useLayoutEffect(() => {
+    if (providedRef) {
+      if (typeof providedRef === 'function') {
+        providedRef(ref.current);
+      }
+    }
+  });
   const { focusProps, isFocused } = useFocusState(props);
 
   const containerRef = useRef(null);
@@ -67,7 +84,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   const internalOnKeyDown = (e) => {
     // When the input is empty, pressing escape should be
     // propagated to the parent so that popovers can close
-    if (e.key === 'Escape' && !state.value) {
+    if ((e.key === 'Escape' && !state.value) || (e.key === 'Enter' && state.value) ) {
       containerRef.current.dispatchEvent(new KeyboardEvent('keydown', e));
     }
 
