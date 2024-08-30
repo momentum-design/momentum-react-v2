@@ -50,10 +50,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   }
 
   const state = useSearchFieldState(props);
-
   const componentRef = useRef(null);
   const inputRef = ref || componentRef;
-
   const { focusProps, isFocused } = useFocusState(props);
 
   const containerRef = useRef(null);
