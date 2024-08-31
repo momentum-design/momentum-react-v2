@@ -74,8 +74,20 @@ export type PopoverCommonStyleProps = {
    */
   hideOnEsc?: boolean;
 
+  /**
+   * Whether the popover should hide when focus leaves from within the Popover
+   *
+   * @default false
+   */
   hideOnBlur?: boolean;
 
+  /**
+   * Manual control of if the Popover contains child elements that may be open, and not nested within the
+   * Popover. it's possible the focus may shift to something that in the DOM is not actually within the Popover,
+   * but appears to be and therefore, do not blur it.
+   *
+   * @default false
+   */
   isChildPopoverOpen?: boolean;
 
   /**
