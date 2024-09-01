@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 
 import ButtonSimple from '../ButtonSimple';
 import {
@@ -56,18 +57,21 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
 
   const containerRef = useRef(null);
 
+  const inputId = `input-id-${uuidv4()}`;
+
   const {
     inputProps: ariaInputProps,
     clearButtonProps,
-    labelProps,
+    labelProps: ariaLabelProps,
   } = useSearchField(props, state, inputRef);
 
   const { onKeyDown, ...otherAriaInputProps } = ariaInputProps;
+  const { htmlFor, ...otherAriaLabelProps} = ariaLabelProps;
 
   const internalOnKeyDown = (e) => {
     // When the input is empty, pressing escape should be
     // propagated to the parent so that popovers can close
-    if ((e.key === 'Escape' && !state.value) || (e.key === 'Enter' && state.value) ) {
+    if ((e.key === 'Escape' && !state.value) || (e.key === 'Enter' && state.value)) {
       containerRef.current.dispatchEvent(new KeyboardEvent('keydown', e));
     }
 
@@ -77,6 +81,12 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   const inputProps = {
     ...otherAriaInputProps,
     onKeyDown: internalOnKeyDown,
+    id: inputId,
+  };
+
+  const labelProps = {
+    ...otherAriaLabelProps,
+    htmlFor: inputId,
   };
 
   const handleClick = () => {
@@ -110,7 +120,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
       ref={containerRef}
     >
       {label && (
-        <label htmlFor={labelProps.htmlFor} {...labelProps}>
+        <label htmlFor={inputId} {...labelProps}>
           {label}
         </label>
       )}
