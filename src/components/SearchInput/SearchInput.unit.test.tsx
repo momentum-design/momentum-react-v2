@@ -16,6 +16,13 @@ const testTranslations = {
   text: 'text',
 };
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => 'mock-input-id',
+  };
+});
+
+
 describe('<SearchInput />', () => {
   describe('snapshot', () => {
     const mountComponent = async (component) => {
@@ -532,5 +539,19 @@ describe('<SearchInput />', () => {
     expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
 
     dispatchEventSpy.mockRestore();
+  });
+
+  it('wrapper id should be the same as the input id when id is passed', async () => {
+    expect.assertions(2);
+
+    const wrapper = await mountAndWait(
+      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" id="mock-wrapper-id"/>
+    );
+
+    const inputElement = wrapper.find('input');
+    const parentElement = wrapper.getDOMNode();
+
+    expect(parentElement.id).toBe('mock-wrapper-id');
+    expect(inputElement.getDOMNode().id).toBe('input-id-mock-input-id');
   });
 });

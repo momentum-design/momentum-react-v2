@@ -45,7 +45,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
         <input
           aria-label="search"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -153,7 +153,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
         <input
           aria-label="search"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -295,7 +295,7 @@ exports[`<SearchInput /> snapshot should match snapshot when isCombobox is true 
         <input
           aria-expanded={false}
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -411,7 +411,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
         <input
           aria-label="search"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -461,7 +461,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
       onClick={[Function]}
     >
       <label
-        htmlFor="test-ID"
+        htmlFor="input-id-mock-input-id"
         id="test-ID"
       >
         search
@@ -500,7 +500,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
           aria-label="search"
           aria-labelledby="test-ID"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -582,7 +582,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
         <input
           aria-label="search"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -664,7 +664,7 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
         <input
           aria-label="search"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -747,7 +747,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
         <input
           aria-label="search"
           disabled={false}
-          id="example-id"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -838,7 +838,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
         <input
           aria-label="search"
           disabled={false}
-          id="test-ID"
+          id="input-id-mock-input-id"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
