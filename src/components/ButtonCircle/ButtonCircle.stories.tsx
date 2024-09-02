@@ -242,44 +242,6 @@ Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.children;
 delete Sizes.argTypes.size;
 
-const WithoutAction: Story = () => {
-  return (
-    <div>
-      <div style={{ marginBottom: '2rem' }}>
-        For accessibility reasons, informative icons (icons that do not trigger any action on click
-        but convey a meaning to the user) should have a visible label next to them or in a tooltip.
-        If a tooltip is used, the Icon needs to wrapped in a ButtonCircle onlyTriggersTooltip = true
-        to get no change in color on hover and pressed
-      </div>
-
-      <Flex direction="column" ygap="2rem">
-        <div>
-          <b>A. Icon with visible label next to it</b>
-          <Flex xgap="0.5rem">
-            <Icon name="recurring" scale={20} />
-            <div>Icon label </div>
-          </Flex>
-        </div>
-        <div>
-          <b>B. Icon with visible label in a tooltip</b>
-          <Tooltip
-            type="label"
-            triggerComponent={
-              <ButtonCircle onlyTriggersTooltip={true}>
-                <Icon name="recurring" scale={20} />
-              </ButtonCircle>
-            }
-          >
-            Icon label
-          </Tooltip>
-        </div>
-      </Flex>
-    </div>
-  );
-};
-
-WithoutAction.argTypes = {};
-
 const Common = MultiTemplate<ButtonCircleProps>(ButtonCircle).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -349,6 +311,5 @@ export {
   GhostOutlineNotInverted,
   NotGhostOutlineInverted,
   Sizes,
-  WithoutAction,
   Common,
 };

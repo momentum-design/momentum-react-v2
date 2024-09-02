@@ -115,18 +115,16 @@
     background-color: var(--mds-color-theme-button-secondary-normal);
     color: var(--mds-color-theme-text-primary-normal);
 
-    &[data-only-triggers-tooltip='false'] {
-      &:hover,
-      &.hover {
-        background-color: var(--mds-color-theme-button-secondary-hover);
-        color: var(--mds-color-theme-text-primary-normal);
-      }
+    &:hover,
+    &.hover {
+      background-color: var(--mds-color-theme-button-secondary-hover);
+      color: var(--mds-color-theme-text-primary-normal);
+    }
 
-      &:active,
-      &.active {
-        background-color: var(--mds-color-theme-button-secondary-pressed);
-        color: var(--mds-color-theme-text-primary-normal);
-      }
+    &:active,
+    &.active {
+      background-color: var(--mds-color-theme-button-secondary-pressed);
+      color: var(--mds-color-theme-text-primary-normal);
     }
 
     &[data-disabled='true'],
