@@ -26,7 +26,7 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import { MenuTrigger, SearchInput } from '..';
+import { AriaToolbar, AriaToolbarItem, MenuTrigger, SearchInput } from '..';
 import { omit } from 'lodash';
 import { ListRefObject } from './List.types';
 
@@ -330,7 +330,27 @@ const ProgramaticFocus = Template<ListProps>((args) => {
 const ListWithNullElementsWrapper = () => {
   return (
     <>
-      <List noLoop listSize={7}>
+      <Text type="header-primary">Looping</Text>
+      <List listSize={9}>
+        <ListItemBase itemIndex={0} key={0} />
+        <ListItemBase itemIndex={1} key={1} />
+        <ListItemBase itemIndex={2} key={2} isPadded>
+          2
+        </ListItemBase>
+        <ListItemBase itemIndex={3} key={3} />
+        <ListItemBase itemIndex={4} key={4} />
+        <ListItemBase itemIndex={5} key={5} isPadded>
+          5
+        </ListItemBase>
+        <ListItemBase itemIndex={6} key={6} isPadded>
+          6
+        </ListItemBase>
+        <ListItemBase itemIndex={7} key={7} />
+        <ListItemBase itemIndex={8} key={8} />
+      </List>
+
+      <Text type="header-primary">NoLoop</Text>
+      <List noLoop listSize={9}>
         <ListItemBase itemIndex={0} key={0} />
         <ListItemBase itemIndex={1} key={1} />
         <ListItemBase itemIndex={2} key={2} isPadded>
@@ -353,6 +373,31 @@ const ListWithNullElementsWrapper = () => {
 
 const ListWithNullElements = Template<unknown>(ListWithNullElementsWrapper).bind({});
 
+const ListWithAriaToolbarWrapper = () => {
+  return (
+    <>
+      <ButtonPill>Button 0</ButtonPill>
+      <List listSize={2}>
+        <ListItemBase size="auto" itemIndex={0} key={0}>
+          <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+            <AriaToolbarItem itemIndex={0}>
+              <ButtonPill>Button 1</ButtonPill>
+            </AriaToolbarItem>
+            <AriaToolbarItem itemIndex={1}>
+              <ButtonPill>Button 2</ButtonPill>
+            </AriaToolbarItem>
+          </AriaToolbar>
+        </ListItemBase>
+        <ListItemBase itemIndex={1} key={1}>
+          2
+        </ListItemBase>
+      </List>
+      <ButtonPill>Button 0</ButtonPill>
+    </>
+  );
+};
+const ListWithAriaToolbar = Template<unknown>(ListWithAriaToolbarWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -362,4 +407,5 @@ export {
   Search,
   ListWithNullElements,
   ProgramaticFocus,
+  ListWithAriaToolbar,
 };

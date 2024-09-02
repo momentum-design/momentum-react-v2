@@ -11,6 +11,9 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     setCurrentFocus: Dispatch<SetStateAction<number>>;
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
+    noLoop?: boolean;
+    setDirection: Dispatch<SetStateAction<'forward' | 'backward'>>;
+    direction: 'forward' | 'backward';
   };
 };
 
@@ -29,9 +32,18 @@ const useOrientationBasedKeyboardNavigation = (
 ): IUseOrientationBasedKeyboardNavigationReturn => {
   const { listSize, orientation, noLoop, contextProps } = props;
   const [currentFocus, setCurrentFocus] = useState<number>(0);
+  const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
 
   const getContext = useCallback(
-    () => ({ listSize, currentFocus, setCurrentFocus, ...contextProps }),
+    () => ({
+      listSize,
+      currentFocus,
+      noLoop,
+      setCurrentFocus,
+      setDirection,
+      direction,
+      ...contextProps,
+    }),
     [currentFocus, setCurrentFocus, listSize]
   );
 
@@ -45,11 +57,13 @@ const useOrientationBasedKeyboardNavigation = (
           evt.continuePropagation();
           break;
         case backwardKey:
+          setDirection('backward');
           evt.preventDefault();
           setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus);
           break;
 
         case forwardKey:
+          setDirection('forward');
           evt.preventDefault();
           setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus);
           break;

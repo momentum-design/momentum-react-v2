@@ -5,6 +5,7 @@ import { DEFAULTS, STYLE } from './AriaToolbar.constants';
 import { Props } from './AriaToolbar.types';
 import ButtonGroup from '../ButtonGroup';
 import { AriaToolbarContext } from './AriaToolbar.utils';
+import { getKeyboardFocusableElements } from '../../utils/navigation';
 
 /**
  * The AriaToolbar component. A style-less by default or button-group styled component implementing the Aria Toolbar pattern
@@ -29,6 +30,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   const [currentFocus, setCurrentFocus] = useState(undefined);
 
   const buttonRefs = useRef({});
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     buttonRefs.current[currentFocus]?.focus();
@@ -59,14 +61,27 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   const renderBody = () => {
     if (shouldRenderAsButtonGroup) {
       return (
-        <ButtonGroup {...buttonGroupProps} {...commonProps} orientation={orientation}>
+        <ButtonGroup ref={ref} {...buttonGroupProps} {...commonProps} orientation={orientation}>
           {children}
         </ButtonGroup>
       );
     } else {
-      return <div {...commonProps}>{children}</div>;
+      return (
+        <div ref={ref} {...commonProps}>
+          {children}
+        </div>
+      );
     }
   };
+
+  useEffect(() => {
+    getKeyboardFocusableElements(ref.current, false).forEach((el, index) => {
+      if (index === 0) {
+        return;
+      }
+      el.setAttribute('data-exclude-focus', 'true');
+    });
+  }, [ref]);
 
   return (
     <AriaToolbarContext.Provider value={getContext()}>{renderBody()}</AriaToolbarContext.Provider>

@@ -18,3 +18,54 @@ export const getListItemBaseTabIndex = ({
     return 0;
   }
 };
+
+export const handleEmptyListItem = ({
+  direction,
+  itemIndex,
+  setDirection,
+  setCurrentFocus,
+  listSize,
+  noLoop,
+}: {
+  direction: string;
+  itemIndex: number;
+  setCurrentFocus: (index: number) => void;
+  setDirection: (direction: 'forward' | 'backward') => void;
+  listSize: number;
+  noLoop: boolean;
+}): void => {
+  let newFocus;
+  let newDirection;
+
+  if (direction === 'backward') {
+    if (itemIndex <= 0) {
+      if (noLoop) {
+        newDirection = 'forward';
+        newFocus = itemIndex + 1;
+      } else {
+        newFocus = listSize - 1;
+      }
+    } else {
+      newFocus = itemIndex - 1;
+    }
+  } else {
+    if (itemIndex >= listSize - 1) {
+      if (noLoop) {
+        newDirection = 'backward';
+        newFocus = itemIndex - 1;
+      } else {
+        newFocus = 0;
+      }
+    } else {
+      newFocus = itemIndex + 1;
+    }
+  }
+
+  if (setCurrentFocus) {
+    if (setDirection && newDirection) {
+      setDirection(newDirection);
+    }
+
+    setCurrentFocus(newFocus);
+  }
+};

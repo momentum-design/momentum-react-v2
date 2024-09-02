@@ -68,6 +68,9 @@ export interface ListContextValue {
   shouldItemFocusBeInset?: boolean;
   setCurrentFocus?: Dispatch<SetStateAction<number>>;
   listSize?: number;
+  noLoop?: boolean;
+  direction?: 'forward' | 'backward';
+  setDirection?: Dispatch<SetStateAction<'forward' | 'backward'>>;
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;

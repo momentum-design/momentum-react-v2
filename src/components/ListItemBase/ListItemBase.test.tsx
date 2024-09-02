@@ -9,6 +9,7 @@ import * as listUtils from '../List/List.utils';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import List from '../List/List';
+import * as listItemBaseUtils from './ListItemBase.utils';
 import { ListContextValue } from '../List/List.types';
 
 describe('ListItemBase', () => {
@@ -417,6 +418,83 @@ describe('ListItemBase', () => {
       />
     );
     expect(getByTestId('list-item-1')).not.toHaveFocus();
+  });
+
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('should call handleEmptyListItem when the item is empty and it has focus', async () => {
+    const handleEmptyListItemSpy = jest.spyOn(listItemBaseUtils, 'handleEmptyListItem');
+
+    const context = {
+      listSize: 1,
+      shouldFocusOnPress: false,
+      shouldItemFocusBeInset: false,
+      currentFocus: 0,
+      setCurrentFocus: jest.fn(),
+      setDirection: jest.fn(),
+    };
+
+    render(
+      <listUtils.ListContext.Provider value={context}>
+        <ListItemBase itemIndex={0} key="0" />
+      </listUtils.ListContext.Provider>
+    );
+
+    expect(handleEmptyListItemSpy).toBeCalledWith({
+      direction: 'forward',
+      itemIndex: 0,
+      listSize: 1,
+      noLoop: false,
+      setCurrentFocus: context.setCurrentFocus,
+      setDirection: context.setDirection,
+    });
+  });
+
+  it('should not call handleEmptyListItem if the node is not empty', async () => {
+    const handleEmptyListItemSpy = jest.spyOn(listItemBaseUtils, 'handleEmptyListItem');
+
+    const context = {
+      listSize: 1,
+      shouldFocusOnPress: false,
+      shouldItemFocusBeInset: false,
+      currentFocus: 0,
+      setCurrentFocus: jest.fn(),
+    };
+
+    render(
+      <listUtils.ListContext.Provider value={context}>
+        <ListItemBase itemIndex={0} key="0">
+          1
+        </ListItemBase>
+      </listUtils.ListContext.Provider>
+    );
+
+    expect(handleEmptyListItemSpy).not.toBeCalled();
+  });
+
+  it('should not call handleEmptyListItem if the empty list item does not have focus', async () => {
+    const handleEmptyListItemSpy = jest.spyOn(listItemBaseUtils, 'handleEmptyListItem');
+
+    const context = {
+      listSize: 1,
+      shouldFocusOnPress: false,
+      shouldItemFocusBeInset: false,
+      currentFocus: 0,
+      setCurrentFocus: jest.fn(),
+    };
+
+    render(
+      <listUtils.ListContext.Provider value={context}>
+        <ListItemBase itemIndex={0} key="0">
+          1
+        </ListItemBase>
+        <ListItemBase itemIndex={1} key="1" />
+      </listUtils.ListContext.Provider>
+    );
+
+    expect(handleEmptyListItemSpy).not.toBeCalled();
   });
 
   it('onPress should work when Enter key is pressed', async () => {

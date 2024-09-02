@@ -85,5 +85,29 @@ describe('navigation', () => {
 
       expect(ids).toEqual(['1']);
     });
+
+    it('should exclude data-exclude-focus when allowExclusions is false', () => {
+      const ids = getKeyboardFocusableElements(
+        createRootNodeRef(`
+        <button id="1" tabindex='0' />
+        <button id="2" data-exclude-focus />
+    `)
+      ).map((n) => n.id);
+
+      expect(ids).toEqual(['1']);
+    });
+
+    it('should not exclude data-exclude-focus when allowExclusions is true', () => {
+      const ids = getKeyboardFocusableElements(
+        createRootNodeRef(`
+        <button id="1" tabindex='0' />
+        <button id="2" data-exclude-focus />
+    `),
+        true,
+        true
+      ).map((n) => n.id);
+
+      expect(ids).toEqual(['1', '2']);
+    });
   });
 });

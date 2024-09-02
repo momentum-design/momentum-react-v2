@@ -19,10 +19,10 @@ import FocusRing from '../FocusRing';
 import { usePress } from '@react-aria/interactions';
 import ModalContainer from '../ModalContainer';
 import { useOverlay } from '@react-aria/overlays';
-import { useListContext } from '../List/List.utils';
+import { setNextFocus, useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
-import { getListItemBaseTabIndex } from './ListItemBase.utils';
+import { getListItemBaseTabIndex, handleEmptyListItem } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
@@ -141,6 +141,11 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * Focus management
    */
   const focus = listContext?.currentFocus === itemIndex;
+  const listSize = listContext?.listSize || 0;
+  const noLoop = listContext?.noLoop || false;
+  const direction = listContext?.direction || 'forward';
+  const setCurrentFocus = listContext?.setCurrentFocus;
+  const setDirection = listContext?.setDirection;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
@@ -273,21 +278,16 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   useEffect(() => {
     if (!ref.current.childNodes.length && focus) {
-      if (lastCurrentFocus > itemIndex) {
-        if (itemIndex <= 0) {
-          listContext.setCurrentFocus(itemIndex + 1);
-        } else {
-          listContext.setCurrentFocus(itemIndex - 1);
-        }
-      } else {
-        if (itemIndex >= listContext.listSize - 1) {
-          listContext.setCurrentFocus(itemIndex - 1);
-        } else {
-          listContext.setCurrentFocus(itemIndex + 1);
-        }
-      }
+      handleEmptyListItem({
+        direction,
+        itemIndex,
+        setCurrentFocus,
+        setDirection,
+        listSize,
+        noLoop,
+      });
     }
-  }, [focus, lastCurrentFocus, listContext.listSize]);
+  }, [direction, focus, setCurrentFocus, listSize, noLoop]);
 
   return (
     <FocusRing isInset={shouldItemFocusBeInset}>

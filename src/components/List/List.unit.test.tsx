@@ -625,5 +625,34 @@ describe('<List />', () => {
 
       expect(listItems[0]).toHaveFocus();
     });
+
+    it('should move the current focus on if there are no child nodes', async () => {
+      const Wrapper = () => {
+        return (
+          <List listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={0} />
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+              2
+            </ListItemBase>
+          </List>
+        );
+      };
+
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(<Wrapper />);
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      // now element 1 has focus, we need to check going back the other way
+      // press shift + tab
+      await user.keyboard('{ArrowUp}');
+
+      // element 0 should have been skipped and element 2 should have focus
+      expect(getByTestId('list-item-2')).toHaveFocus();
+    });
   });
 });
