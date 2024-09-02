@@ -1,11 +1,7 @@
 import { waitFor } from '@testing-library/react';
-import { Props } from '../Popover.types';
-import { PopoverInstance } from '..';
 
-interface ExtendedProps extends Props {
-  hideOnPopperBlur?: boolean;
-  isChildPopoverOpen?: boolean;
-}
+import { PopoverInstance } from '..';
+import { PopperBlurPluginProps } from './hideOnPopperBlurPlugin';
 
 const createPopoverInstance = () => {
   return {
@@ -14,8 +10,8 @@ const createPopoverInstance = () => {
     props: {
       hideOnPopperBlur: true,
       isChildPopoverOpen: false,
-    } as ExtendedProps,
-  } as unknown as PopoverInstance & { props: ExtendedProps };
+    } as PopperBlurPluginProps,
+  } as unknown as PopoverInstance & { props: PopperBlurPluginProps };
 };
 
 describe('hideOnPopperBlurPlugin', () => {
@@ -51,9 +47,7 @@ describe('hideOnPopperBlurPlugin', () => {
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
 
-    await waitFor(() => {
-      expect(popoverInstance.hide).toHaveBeenCalled();
-    });
+    expect(popoverInstance.hide).toHaveBeenCalled();
   });
 
   it('should not hide popover if hideOnPopperBlur is false', async () => {
@@ -69,9 +63,7 @@ describe('hideOnPopperBlurPlugin', () => {
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
 
-    await waitFor(() => {
-      expect(popoverInstance.hide).not.toHaveBeenCalled();
-    });
+    expect(popoverInstance.hide).not.toHaveBeenCalled();
   });
 
   it('should not hide popover if isChildPopoverOpen is true', async () => {
@@ -87,9 +79,7 @@ describe('hideOnPopperBlurPlugin', () => {
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
 
-    await waitFor(() => {
-      expect(popoverInstance.hide).not.toHaveBeenCalled();
-    });
+    expect(popoverInstance.hide).not.toHaveBeenCalled();
   });
 
   it('should not hide popover if relatedTarget is inside popper', async () => {
@@ -107,9 +97,7 @@ describe('hideOnPopperBlurPlugin', () => {
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
 
-    await waitFor(() => {
-      expect(popoverInstance.hide).not.toHaveBeenCalled();
-    });
+    expect(popoverInstance.hide).not.toHaveBeenCalled();
   });
 
   it('should not hide popover if relatedTarget is null', async () => {
@@ -124,8 +112,6 @@ describe('hideOnPopperBlurPlugin', () => {
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
 
-    await waitFor(() => {
-      expect(popoverInstance.hide).not.toHaveBeenCalled();
-    });
+    expect(popoverInstance.hide).not.toHaveBeenCalled();
   });
 });
