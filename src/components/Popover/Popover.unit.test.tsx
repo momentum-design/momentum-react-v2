@@ -1115,6 +1115,49 @@ describe('<Popover />', () => {
         expect(contentAfterEsc).toBeVisible();
       });
 
+      it('should hide Popover after pressing tab when hideOnTab is true', async () => {
+        expect.assertions(5);
+        const user = userEvent.setup();
+
+        render(
+          <>
+            <div>
+              <Popover
+                ref={ref}
+                triggerComponent={<button>Click Me!</button>}
+                trigger="click"
+                interactive
+                hideOnBlur={true}
+                disableFocusLock
+              >
+                <button>Content</button>
+              </Popover>
+            </div>
+          <button>Next focus button</button>
+          </>
+        );
+
+        checkRef(screen.getByRole('button', { name: 'Click Me!' }));
+
+        // assert no popover on screen
+        const contentBeforeClick = screen.queryByText('Content');
+        expect(contentBeforeClick).not.toBeInTheDocument();
+
+        // after click, popover should be shown
+        await openPopoverByClickingOnTriggerAndCheckContent(user);
+
+        await user.keyboard('{Tab}');
+
+        // content should still be visible
+        // tab should have moved focus into the popover
+        const contentAfterTab = await screen.findByText('Content');
+        expect(contentAfterTab).toBeVisible();
+
+        await user.keyboard('{Tab}');
+        const contentAfterSecondTab = screen.queryByText('Content');
+        expect(contentAfterSecondTab).not.toBeInTheDocument();
+      });
+
       it('it should close the Popover if closeButtonPlacement is not none', async () => {
         expect.assertions(4);
         const user = userEvent.setup();
