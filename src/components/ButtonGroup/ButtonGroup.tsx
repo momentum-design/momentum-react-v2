@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, RefObject } from 'react';
+import React, { forwardRef, RefObject } from 'react';
 import classNames from 'classnames';
 
 import { DEFAULTS, STYLE, CHILD_OF } from './ButtonGroup.constants';

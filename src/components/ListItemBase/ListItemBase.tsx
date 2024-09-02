@@ -19,7 +19,7 @@ import FocusRing from '../FocusRing';
 import { usePress } from '@react-aria/interactions';
 import ModalContainer from '../ModalContainer';
 import { useOverlay } from '@react-aria/overlays';
-import { setNextFocus, useListContext } from '../List/List.utils';
+import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
 import { getListItemBaseTabIndex, handleEmptyListItem } from './ListItemBase.utils';
@@ -146,6 +146,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const direction = listContext?.direction || 'forward';
   const setCurrentFocus = listContext?.setCurrentFocus;
   const setDirection = listContext?.setDirection;
+  const isInitiallyRoving = listContext?.isInitiallyRoving;
+  const setIsInitlallyRoving = listContext?.setIsInitiallyRoving;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
@@ -173,7 +175,12 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   const lastCurrentFocus = usePrevious(listContext?.currentFocus);
   useDidUpdateEffect(() => {
-    if (lastCurrentFocus !== undefined && lastCurrentFocus !== listContext?.currentFocus && focus) {
+    if (
+      lastCurrentFocus !== undefined &&
+      lastCurrentFocus !== listContext?.currentFocus &&
+      focus &&
+      !isInitiallyRoving
+    ) {
       ref.current.focus();
     }
   }, [listContext?.currentFocus]);
@@ -286,6 +293,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         listSize,
         noLoop,
       });
+    } else if (focus) {
+      setIsInitlallyRoving?.(false);
     }
   }, [direction, focus, setCurrentFocus, listSize, noLoop]);
 

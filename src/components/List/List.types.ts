@@ -71,6 +71,8 @@ export interface ListContextValue {
   noLoop?: boolean;
   direction?: 'forward' | 'backward';
   setDirection?: Dispatch<SetStateAction<'forward' | 'backward'>>;
+  isInitiallyRoving?: boolean;
+  setIsInitiallyRoving?: Dispatch<SetStateAction<boolean>>;
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;

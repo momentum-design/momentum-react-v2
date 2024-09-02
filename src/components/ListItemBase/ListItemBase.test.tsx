@@ -434,6 +434,7 @@ describe('ListItemBase', () => {
       currentFocus: 0,
       setCurrentFocus: jest.fn(),
       setDirection: jest.fn(),
+      setIsInitiallyRoving: jest.fn(),
     };
 
     render(
@@ -450,6 +451,7 @@ describe('ListItemBase', () => {
       setCurrentFocus: context.setCurrentFocus,
       setDirection: context.setDirection,
     });
+    expect(context.setIsInitiallyRoving).not.toBeCalled();
   });
 
   it('should not call handleEmptyListItem if the node is not empty', async () => {
@@ -461,6 +463,7 @@ describe('ListItemBase', () => {
       shouldItemFocusBeInset: false,
       currentFocus: 0,
       setCurrentFocus: jest.fn(),
+      setIsInitiallyRoving: jest.fn(),
     };
 
     render(
@@ -472,6 +475,7 @@ describe('ListItemBase', () => {
     );
 
     expect(handleEmptyListItemSpy).not.toBeCalled();
+    expect(context.setIsInitiallyRoving).toBeCalledWith(false);
   });
 
   it('should not call handleEmptyListItem if the empty list item does not have focus', async () => {
@@ -483,6 +487,7 @@ describe('ListItemBase', () => {
       shouldItemFocusBeInset: false,
       currentFocus: 0,
       setCurrentFocus: jest.fn(),
+      setIsInitiallyRoving: jest.fn(),
     };
 
     render(
@@ -495,6 +500,7 @@ describe('ListItemBase', () => {
     );
 
     expect(handleEmptyListItemSpy).not.toBeCalled();
+    expect(context.setIsInitiallyRoving).toBeCalledWith(false);
   });
 
   it('onPress should work when Enter key is pressed', async () => {

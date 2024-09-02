@@ -14,6 +14,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     noLoop?: boolean;
     setDirection: Dispatch<SetStateAction<'forward' | 'backward'>>;
     direction: 'forward' | 'backward';
+    isInitiallyRoving?: boolean;
   };
 };
 
@@ -33,6 +34,7 @@ const useOrientationBasedKeyboardNavigation = (
   const { listSize, orientation, noLoop, contextProps } = props;
   const [currentFocus, setCurrentFocus] = useState<number>(0);
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
+  const [isInitiallyRoving, setIsInitiallyRoving] = useState<boolean>(true);
 
   const getContext = useCallback(
     () => ({
@@ -42,6 +44,8 @@ const useOrientationBasedKeyboardNavigation = (
       setCurrentFocus,
       setDirection,
       direction,
+      setIsInitiallyRoving,
+      isInitiallyRoving,
       ...contextProps,
     }),
     [currentFocus, setCurrentFocus, listSize]
