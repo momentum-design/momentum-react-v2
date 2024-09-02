@@ -1,7 +1,7 @@
-import React, { FC, useRef, useState, useCallback, HTMLAttributes } from 'react';
+import React, { FC, useRef, useState, useCallback, HTMLAttributes, useEffect } from 'react';
 import classnames from 'classnames';
 
-import { STYLE, DEFAULTS, TREE_NAVIGATION_KEYS } from './Tree.constants';
+import { STYLE, DEFAULTS } from './Tree.constants';
 import { TreeIdNodeMap, Props, TreeContextValue, TreeNavKeyCodes, TreeNodeId } from './Tree.types';
 import './Tree.style.scss';
 import {
@@ -38,6 +38,12 @@ const Tree: FC<Props> = (props: Props) => {
     excludeTreeRoot ? treeStructure.children[0].id : treeStructure.id
   );
 
+  useEffect(() => {
+    console.log('this should get triggered just after adding new nodes to the tree');
+    setTree(convertNestedTree2MappedTree(treeStructure));
+    setActiveNodeId(excludeTreeRoot ? treeStructure.children[0].id : treeStructure.id);
+  }, [treeStructure]);
+
   const isVirtualTree = virtualTreeConnector !== undefined;
 
   // Handle DOM changes for virtual tree
@@ -58,7 +64,13 @@ const Tree: FC<Props> = (props: Props) => {
     [tree, isVirtualTree]
   );
 
-  const getNodeDetails = useCallback((id: TreeNodeId) => tree.get(id), [tree]);
+  const getNodeDetails = useCallback(
+    (id: TreeNodeId) => {
+      console.log('tree before getting node details for id', id, tree);
+      return tree.get(id);
+    },
+    [tree]
+  );
 
   const getNodeProps = useCallback(
     (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {

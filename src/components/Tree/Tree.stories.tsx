@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Text from '../Text';
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -15,6 +15,7 @@ import { Item } from '@react-stately/collections';
 import MenuTrigger from '../MenuTrigger';
 import ButtonCircle from '../ButtonCircle';
 import { TreeNodeRecord } from './Tree.types';
+import ButtonPill from '../ButtonPill';
 
 // prettier-ignore
 const exampleTree =
@@ -59,6 +60,10 @@ interface ExampleTreeNodeProps {
 
 const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
   const treeContext = useTreeContext();
+
+  console.log('BUT this gets rendered before the useEffect in the Tree component... and the new node is not yet in the Tree context', { node });
+
+  console.log(node.id, 'context', { treeContext, details: treeContext.getNodeDetails(node.id) });
   const { level, isOpen, isLeaf } = treeContext.getNodeDetails(node.id);
 
   if (node.id === '<root>') {
@@ -146,4 +151,52 @@ TreeWithScroll.args = {
   ),
 };
 
-export { Example, WithRoot, TreeWithScroll };
+const DynamicTree = Template(() => {
+  const exampleTree = tNode('<root>', true, [tNode('1', false)]);
+
+  const [tree, setTree] = useState(exampleTree);
+  const [count, setCount] = useState(99);
+
+  useEffect(() => {
+    console.log('tree', tree);
+    console.log('converted mapped', convertNestedTree2MappedTree(tree));
+  }, [tree]);
+
+  const mappedTree = useMemo(() => convertNestedTree2MappedTree(tree), [tree]);
+
+  return (
+    <>
+      <ButtonPill
+        onPress={() => {
+          setTree((prev) => {
+            // const newTree =;
+
+            // console.log('is the tree really the same?', prev === newTree);
+            return Object.create(tNode('root', true, [...prev.children, tNode(`${count}`, false)]));
+          });
+          setCount((prev) => prev + 1);
+        }}
+      >
+        Add 1 more node
+      </ButtonPill>
+      <Tree
+        treeStructure={tree}
+        isRenderedFlat={true}
+        shouldNodeFocusBeInset={true}
+        excludeTreeRoot={true}
+      >
+        {mapTree(
+          mappedTree,
+          (node) => {
+            console.log('node', { node });
+            // return <p>{node?.id}</p>;
+            return <ExampleTreeNode key={node.id.toString()} node={node} />;
+          },
+          { excludeRootNode: true }
+        )}
+      </Tree>
+    </>
+  );
+}).bind({});
+
+export { Example, WithRoot, TreeWithScroll, DynamicTree };
