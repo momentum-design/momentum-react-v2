@@ -148,7 +148,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-ghost={false}
             data-grown={false}
             data-inverted={false}
-            data-only-triggers-tooltip={false}
             data-outline={false}
             data-shallow-disabled={false}
             data-size={28}
@@ -165,7 +164,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-ghost={false}
                   data-grown={false}
                   data-inverted={false}
-                  data-only-triggers-tooltip={false}
                   data-outline={false}
                   data-shallow-disabled={false}
                   data-size={28}
@@ -205,7 +203,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
             data-ghost={false}
             data-grown={false}
             data-inverted={false}
-            data-only-triggers-tooltip={false}
             data-outline={true}
             data-shallow-disabled={false}
             data-size={28}
@@ -222,7 +219,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
                   data-ghost={false}
                   data-grown={false}
                   data-inverted={false}
-                  data-only-triggers-tooltip={false}
                   data-outline={true}
                   data-shallow-disabled={false}
                   data-size={28}
@@ -509,7 +505,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
               data-ghost={true}
               data-inverted={false}
               data-multiple-children={false}
-              data-only-triggers-tooltip={false}
               data-outline={false}
               data-shallow-disabled={false}
               data-size={20}
@@ -528,7 +523,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
                     data-ghost={true}
                     data-inverted={false}
                     data-multiple-children={false}
-                    data-only-triggers-tooltip={false}
                     data-outline={false}
                     data-shallow-disabled={false}
                     data-size={20}

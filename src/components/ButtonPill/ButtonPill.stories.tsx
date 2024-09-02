@@ -375,39 +375,6 @@ NotGhostOutlineInverted.parameters = {
   ],
 };
 
-const WithoutAction: Story = () => {
-  return (
-    <div>
-      <div style={{ marginBottom: '2rem' }}>
-        For accessibility reasons, additional explanation to text in the UI should be placed
-        next/below to the text or using a Tooltip. If a tooltip is used, the Icon needs to wrapper
-        in a ButtonCircle onlyTriggersTooltip = true to get no change in color on hover and pressed
-      </div>
-
-      <Flex direction="column" ygap="1.5rem">
-        <div>
-          <b>A. Text with additional explanation next to it</b>
-          <Flex ygap="0.25rem" direction="column">
-            <Text>Some text</Text>
-            <Text type="body-secondary">Additional explanation of that text</Text>
-          </Flex>
-        </div>
-        <div>
-          <b>B. Text with additional explanation on a tooltip</b>
-          <Tooltip
-            type="description"
-            triggerComponent={<ButtonPill onlyTriggersTooltip={true}>Some text</ButtonPill>}
-          >
-            Additional explanation of that text
-          </Tooltip>
-        </div>
-      </Flex>
-    </div>
-  );
-};
-
-WithoutAction.argTypes = {};
-
 const Common = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -447,6 +414,5 @@ export {
   NotGhostNotOutlineInverted,
   GhostOutlineNotInverted,
   NotGhostOutlineInverted,
-  WithoutAction,
   Common,
 };

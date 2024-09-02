@@ -41,9 +41,4 @@ export interface Props extends ButtonSimpleProps {
    * Size index of this ButtonCircle.
    */
   size?: Size;
-
-  /**
-   * Whether the ButtonCircle is only a tooltip trigger and, thus, triggers no action on click/press
-   */
-  onlyTriggersTooltip?: boolean;
 }
