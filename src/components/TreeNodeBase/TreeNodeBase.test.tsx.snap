@@ -424,6 +424,7 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
             </div>
             <div
               aria-owns="1 2"
+              className="md-tree-node-base-group"
               role="group"
             />
           </div>
@@ -439,6 +440,53 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
       data-testid="node-2"
       key="2"
       nodeId="2"
+    />
+  </div>
+</Tree>
+`;
+
+exports[`TreeNodeBase snapshot should not render the content when the node details are not available 1`] = `
+<Tree
+  excludeTreeRoot={false}
+  isRenderedFlat={true}
+  treeStructure={
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
+          "id": "1",
+          "isOpenByDefault": undefined,
+        },
+        Object {
+          "children": Array [],
+          "id": "2",
+          "isOpenByDefault": undefined,
+        },
+      ],
+      "id": "root",
+      "isOpenByDefault": false,
+    }
+  }
+>
+  <div
+    className="md-tree-wrapper"
+    onKeyDown={[Function]}
+    role="tree"
+  >
+    <TreeNodeBase
+      data-testid="node-root"
+      key="root"
+      nodeId="wrong-id-root"
+    />
+    <TreeNodeBase
+      data-testid="node-1"
+      key="1"
+      nodeId="wrong-id-1"
+    />
+    <TreeNodeBase
+      data-testid="node-2"
+      key="2"
+      nodeId="wrong-id-2"
     />
   </div>
 </Tree>
@@ -517,6 +565,7 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             root
             <div
               aria-owns="1 2"
+              className="md-tree-node-base-group"
               role="group"
             />
           </div>

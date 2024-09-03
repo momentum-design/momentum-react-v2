@@ -48,13 +48,14 @@ const Example = Template((args) => (
       {
         ...args,
         nodeId: 'root',
-        children: (
-          <>
-            <ListItemBaseSection position="start">Start</ListItemBaseSection>
-            <ListItemBaseSection position="middle">Middle</ListItemBaseSection>
-            <ListItemBaseSection position="end">end</ListItemBaseSection>
-          </>
-        ),
+        children: () => () =>
+          (
+            <>
+              <ListItemBaseSection position="start">Start</ListItemBaseSection>
+              <ListItemBaseSection position="middle">Middle</ListItemBaseSection>
+              <ListItemBaseSection position="end">end</ListItemBaseSection>
+            </>
+          ),
         onPress: action('onPress'),
       },
       {},
@@ -74,55 +75,59 @@ Common.parameters = {
     {
       label: 'Simple',
       nodeId: 'root',
-      children: (
-        <>
-          <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-        </>
-      ),
+      children: () => () =>
+        (
+          <>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+          </>
+        ),
       Wrapper: TreeWrapper,
     },
     {
       label: 'With Icon',
       nodeId: 'root',
-      children: (
-        <>
-          <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-          <ListItemBaseSection position="end">
-            <Icon name="placeholder" scale={16} />
-          </ListItemBaseSection>
-        </>
-      ),
+      children: () => () =>
+        (
+          <>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+            <ListItemBaseSection position="end">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+          </>
+        ),
       Wrapper: TreeWrapper,
     },
     {
       label: 'With Button',
       nodeId: 'root',
-      children: (state) => (
-        <>
-          <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-          <ListItemBaseSection position="end">
-            <ButtonPill disabled={state === 'Disable'} color="join" size={24}>
-              Join
-            </ButtonPill>
-          </ListItemBaseSection>
-        </>
-      ),
+      children: () => () => (state) =>
+        (
+          <>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+            <ListItemBaseSection position="end">
+              <ButtonPill disabled={state === 'Disable'} color="join" size={24}>
+                Join
+              </ButtonPill>
+            </ListItemBaseSection>
+          </>
+        ),
       Wrapper: TreeWrapper,
     },
     {
       label: 'With 2 Icons',
       nodeId: 'root',
-      children: (
-        <>
-          <ListItemBaseSection position="start">
-            <Icon name="placeholder" scale={16} />
-          </ListItemBaseSection>
-          <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-          <ListItemBaseSection position="end">
-            <Icon name="placeholder" scale={16} />
-          </ListItemBaseSection>
-        </>
-      ),
+      children: () => () =>
+        (
+          <>
+            <ListItemBaseSection position="start">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+            <ListItemBaseSection position="end">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+          </>
+        ),
       Wrapper: TreeWrapper,
     },
   ],
@@ -140,17 +145,18 @@ Sizes.parameters = {
       size,
       label: `Size: ${size}`,
       nodeId: 'root',
-      children: (
-        <>
-          <ListItemBaseSection position="start">
-            <Icon name="placeholder" scale={16} />
-          </ListItemBaseSection>
-          <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-          <ListItemBaseSection position="end">
-            <Icon name="placeholder" scale={16} />
-          </ListItemBaseSection>
-        </>
-      ),
+      children: () => () =>
+        (
+          <>
+            <ListItemBaseSection position="start">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+            <ListItemBaseSection position="end">
+              <Icon name="placeholder" scale={16} />
+            </ListItemBaseSection>
+          </>
+        ),
       Wrapper: TreeWrapper,
     })),
   ],
@@ -169,21 +175,22 @@ Shapes.parameters = {
         shape,
         label: `Default Size List Item + Shape ${shape}`,
         nodeId: 'root',
-        children: (
-          <>
-            <ListItemBaseSection position="start">
-              {shape === SHAPES.isPilled ? (
-                <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
-              ) : (
+        children: () => () =>
+          (
+            <>
+              <ListItemBaseSection position="start">
+                {shape === SHAPES.isPilled ? (
+                  <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
+                ) : (
+                  <Icon name="placeholder" scale={16} />
+                )}
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+              <ListItemBaseSection position="end">
                 <Icon name="placeholder" scale={16} />
-              )}
-            </ListItemBaseSection>
-            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-            <ListItemBaseSection position="end">
-              <Icon name="placeholder" scale={16} />
-            </ListItemBaseSection>
-          </>
-        ),
+              </ListItemBaseSection>
+            </>
+          ),
 
         Wrapper: TreeWrapper,
       };
@@ -194,21 +201,22 @@ Shapes.parameters = {
         size: 32,
         label: `Compact List Item + Shape ${shape}`,
         nodeId: 'root',
-        children: (
-          <>
-            <ListItemBaseSection position="start">
-              {shape === SHAPES.isPilled ? (
-                <Avatar title="John Adams" size={24} presence={PresenceType.Active} />
-              ) : (
+        children: () => () =>
+          (
+            <>
+              <ListItemBaseSection position="start">
+                {shape === SHAPES.isPilled ? (
+                  <Avatar title="John Adams" size={24} presence={PresenceType.Active} />
+                ) : (
+                  <Icon name="placeholder" scale={16} />
+                )}
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+              <ListItemBaseSection position="end">
                 <Icon name="placeholder" scale={16} />
-              )}
-            </ListItemBaseSection>
-            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-            <ListItemBaseSection position="end">
-              <Icon name="placeholder" scale={16} />
-            </ListItemBaseSection>
-          </>
-        ),
+              </ListItemBaseSection>
+            </>
+          ),
         Wrapper: TreeWrapper,
       };
     }),
@@ -218,21 +226,22 @@ Shapes.parameters = {
         shape,
         label: `Padded Default Size List Item + Shape ${shape}`,
         nodeId: 'root',
-        children: (
-          <>
-            <ListItemBaseSection position="start">
-              {shape === SHAPES.isPilled ? (
-                <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
-              ) : (
+        children: () => () =>
+          (
+            <>
+              <ListItemBaseSection position="start">
+                {shape === SHAPES.isPilled ? (
+                  <Avatar title="John Adams" size={32} presence={PresenceType.Active} />
+                ) : (
+                  <Icon name="placeholder" scale={16} />
+                )}
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+              <ListItemBaseSection position="end">
                 <Icon name="placeholder" scale={16} />
-              )}
-            </ListItemBaseSection>
-            <ListItemBaseSection position="fill">Text</ListItemBaseSection>
-            <ListItemBaseSection position="end">
-              <Icon name="placeholder" scale={16} />
-            </ListItemBaseSection>
-          </>
-        ),
+              </ListItemBaseSection>
+            </>
+          ),
         Wrapper: TreeWrapper,
       };
     }),

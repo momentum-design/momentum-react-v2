@@ -43,6 +43,21 @@ exports[`Avatar snapshot should match snapshot with aria-label 1`] = `
 </Avatar>
 `;
 
+exports[`Avatar snapshot should match snapshot with buttonClassName 1`] = `
+<Avatar
+  buttonClassName="button classname test"
+>
+  <div
+    aria-hidden="false"
+    aria-label=""
+    className="md-avatar-wrapper"
+    data-color="default"
+    data-size={24}
+    role="img"
+  />
+</Avatar>
+`;
+
 exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
 <Avatar
   failureBadge={true}

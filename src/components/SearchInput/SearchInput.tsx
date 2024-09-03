@@ -20,14 +20,16 @@ import { useFocusState } from '../../hooks/useFocusState';
 
 import Icon from '../Icon';
 import LoadingSpinner from '../LoadingSpinner';
+import { useProvidedRef } from '../../utils/useProvidedRef';
 
+
+type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputElement) => void);
 /**
  *  Search input
  */
-const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
+const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement => {
   const {
     className,
-    id,
     style,
     searching,
     clearButtonAriaLabel,
@@ -50,8 +52,8 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   }
 
   const state = useSearchFieldState(props);
-  const componentRef = useRef(null);
-  const inputRef = ref || componentRef;
+
+  const inputRef = useProvidedRef<HTMLInputElement>(providedRef, null);
   const { focusProps, isFocused } = useFocusState(props);
 
   const containerRef = useRef(null);
@@ -67,7 +69,7 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   const internalOnKeyDown = (e) => {
     // When the input is empty, pressing escape should be
     // propagated to the parent so that popovers can close
-    if (e.key === 'Escape' && !state.value) {
+    if ((e.key === 'Escape' && !state.value) || (e.key === 'Enter' && state.value)) {
       containerRef.current.dispatchEvent(new KeyboardEvent('keydown', e));
     }
 
@@ -101,7 +103,6 @@ const SearchInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactEleme
   return (
     <div
       className={classnames(className, STYLE.wrapper)}
-      id={id}
       onClick={handleClick}
       style={style}
       data-disabled={isDisabled}

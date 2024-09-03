@@ -164,18 +164,19 @@ describe('<SearchInput />', () => {
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should have provided id when id is provided', async () => {
-      expect.assertions(1);
+    it('wrapper id should not be the same as the input id', async () => {
+      expect.assertions(3);
 
-      const id = 'example-id-2';
+      const wrapper = await mountAndWait(
+        <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+      );
 
-      const element = (
-        await mountAndWait(<SearchInput aria-label="search" id={id} clearButtonAriaLabel="Clear" />)
-      )
-        .find(SearchInput)
-        .getDOMNode();
+      const inputElement = wrapper.find('input');
+      const parentElement = wrapper.getDOMNode();
 
-      expect(element.id).toBe(id);
+      expect(parentElement.id).toBe('');
+      expect(inputElement.getDOMNode().id).toBe('test-ID');
+      expect(parentElement.id).not.toEqual(inputElement.getDOMNode().id);
     });
 
     it('should have provided style when style is provided', async () => {
@@ -398,6 +399,16 @@ describe('<SearchInput />', () => {
       expect(ref.current.value).toEqual('test');
     });
 
+    it('should forward a callback ref if provided', async () => {
+      const callbackRef = jest.fn();
+      const inputElement = (await mountAndWait(
+        <SearchInput ref={callbackRef} aria-label="search" value="test" clearButtonAriaLabel="Clear" />
+      )).find('input').getDOMNode();
+     
+      expect(callbackRef).toBeCalledTimes(1);
+      expect(callbackRef).toHaveBeenLastCalledWith(inputElement);
+    });
+
     it('should work with autofocus', async () => {
       await mountAndWait(
         // eslint-disable-next-line jsx-a11y/no-autofocus
@@ -477,5 +488,50 @@ describe('<SearchInput />', () => {
 
       expect(focusSpy).toBeCalledWith();
     });
+  });
+
+  it('keyDown event should be propagated to the parent when triggered by Enter key', async () => {
+    expect.assertions(3);
+
+    const wrapper = await mountAndWait(
+      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+    );
+
+    const inputElement = wrapper.find('input');
+    const domNode = inputElement.getDOMNode() as HTMLInputElement;
+    const parentElement = wrapper.getDOMNode();
+    const dispatchEventSpy = jest.spyOn(parentElement, 'dispatchEvent');
+
+    inputElement.simulate('keydown', { key: 'Enter' });
+
+    expect(dispatchEventSpy).toHaveBeenCalledTimes(0);
+
+    inputElement.simulate('change', { target: { value: 'test' } });
+
+    expect(domNode.value).toEqual('test');
+
+    inputElement.simulate('keydown', { key: 'Enter' });
+
+    expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
+
+    dispatchEventSpy.mockRestore();
+  });
+
+  it('keyDown event should be propagated to the parent when triggered by Escape key', async () => {
+    expect.assertions(1);
+
+    const wrapper = await mountAndWait(
+      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+    );
+
+    const inputElement = wrapper.find('input');
+    const parentElement = wrapper.getDOMNode();
+    const dispatchEventSpy = jest.spyOn(parentElement, 'dispatchEvent');
+
+    inputElement.simulate('keydown', { key: 'Escape' });
+
+    expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
+
+    dispatchEventSpy.mockRestore();
   });
 });

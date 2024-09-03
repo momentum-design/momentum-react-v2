@@ -48,6 +48,7 @@ export interface Props<T> extends AriaMenuProps<T> {
    * aria-labelledby attribute to associate with the menu items
    */
   ariaLabelledby?: string;
+  
   /**
    * Determines the orientation of the list
    *
@@ -59,6 +60,11 @@ export interface Props<T> extends AriaMenuProps<T> {
    * @default 'vertical'
    */
   orientation?: ListOrientation
+
+  /**
+   * accepts tabIndex to override default provided by useMenu
+   */
+  tabIndex?: number;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {

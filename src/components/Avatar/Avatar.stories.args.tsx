@@ -17,6 +17,20 @@ export default {
       },
     },
   },
+  buttonClassName: {
+    defaultValue: undefined,
+    description:
+      'If present, the class name will be added to the button component (if onPress set). Used to override styles by consumers.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
   size: {
     defaultValue: DEFAULTS.SIZE,
     description: 'Size represents the size of the avatar.',

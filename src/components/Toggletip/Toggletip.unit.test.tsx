@@ -8,14 +8,24 @@ import ButtonSimple from '../ButtonSimple';
 import { COLORS, STYLE } from '../ModalContainer/ModalContainer.constants';
 import Toggletip from './';
 import { PositioningStrategy } from '../Popover/Popover.types';
+import * as uuid from 'uuid';
+import * as screenReaderAnnouncer from '../ScreenReaderAnnouncer';
 
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
+jest.mock('uuid');
 
 describe('<Toggletip />', () => {
+  let announceSpy;
+
+  beforeEach(() => {
+    // first call returns 1, second returns 2, +3rd returns 3
+    jest.spyOn(uuid, 'v4').mockReturnValue('3').mockReturnValueOnce('1').mockReturnValueOnce('2');
+    announceSpy = jest.spyOn(screenReaderAnnouncer.default, 'announce').mockReturnValue();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   /**
    * Opens the toggletip by click on the trigger component, waits until
    * content gets displayed, expects it to be visible and returns the content.
@@ -267,7 +277,8 @@ describe('<Toggletip />', () => {
       expect(content.parentElement.getAttribute('style')).toBe(styleString);
       expect(content.parentElement.getAttribute('data-color')).toBe(COLORS.TERTIARY);
       expect(content.parentElement.id).toBe(id);
-      expect(content.parentElement.getAttribute('aria-labelledby')).toBe('1');
+      // aria-labelledby is using the second call of uuid, which returns 2
+      expect(content.parentElement.getAttribute('aria-labelledby')).toBe('2');
     });
 
     it('checks triggerComponent props when id is not defined', async () => {
@@ -382,6 +393,9 @@ describe('<Toggletip />', () => {
       </Toggletip>
     );
 
+    expect(screen.getByTestId('screen-reader-announcer')).toBeInTheDocument();
+    expect(announceSpy).not.toBeCalled();
+
     expect(props.onCreate).toBeCalled();
 
     expect(props.onShow).not.toBeCalled();
@@ -396,8 +410,11 @@ describe('<Toggletip />', () => {
     await openToggletipByClickingOnTriggerAndCheckContent(user);
 
     expect(props.onMount).toBeCalled();
-    expect(props.onShow).toBeCalled();
+    expect(props.onShow).not.toBeCalled(); // internal handleShow should triggered
     expect(props.onTrigger).toBeCalled();
+
+    expect(announceSpy).toBeCalledWith({ body: expect.any(Object) }, '1');
+    expect(announceSpy).toBeCalledTimes(1);
 
     expect(props.onHide).not.toBeCalled();
     expect(props.onHidden).not.toBeCalled();
@@ -410,7 +427,10 @@ describe('<Toggletip />', () => {
       expect(screen.queryByText('Content')).not.toBeInTheDocument();
     });
 
-    expect(props.onHide).toBeCalled();
+    // no extra call to announce when the toggletip closes
+    expect(announceSpy).toBeCalledTimes(1);
+
+    expect(props.onHide).not.toBeCalled(); // internal handleHide should triggered
     expect(props.onHidden).toBeCalled();
     expect(props.onUntrigger).toBeCalled();
 

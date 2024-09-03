@@ -6,24 +6,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 1`
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -41,24 +51,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 2`
     aria-expanded="true"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -77,7 +97,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 2`
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -94,7 +114,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 2`
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -141,24 +161,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 3`
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -177,7 +207,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 3`
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="3"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -194,7 +224,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 3`
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -241,24 +271,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 4`
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -276,24 +316,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 5`
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -311,24 +361,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 6`
     aria-expanded="true"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -347,7 +407,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 6`
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -364,7 +424,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 6`
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -411,24 +471,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 7`
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -447,7 +517,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 7`
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="3"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -464,7 +534,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 7`
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -511,24 +581,34 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 8`
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="2"
     type="button"
   >
     <span>
       Toggletip 1
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
     class="md-button-simple-wrapper"
-    id="1"
+    id="3"
     type="button"
   >
     <span>
       Toggletip 2
     </span>
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <button
     class="md-button-simple-wrapper"
     type="button"
@@ -545,10 +625,15 @@ exports[`<Toggletip /> snapshot should match snapshot 1`] = `
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -557,10 +642,15 @@ exports[`<Toggletip /> snapshot should match snapshot 2`] = `
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-1"
@@ -571,7 +661,7 @@ exports[`<Toggletip /> snapshot should match snapshot 2`] = `
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -588,7 +678,7 @@ exports[`<Toggletip /> snapshot should match snapshot 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -634,10 +724,15 @@ exports[`<Toggletip /> snapshot should match snapshot with className 1`] = `
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -646,10 +741,15 @@ exports[`<Toggletip /> snapshot should match snapshot with className 2`] = `
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-2"
@@ -660,7 +760,7 @@ exports[`<Toggletip /> snapshot should match snapshot with className 2`] = `
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper example-class md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -677,7 +777,7 @@ exports[`<Toggletip /> snapshot should match snapshot with className 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -723,10 +823,15 @@ exports[`<Toggletip /> snapshot should match snapshot with color 1`] = `
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -735,10 +840,15 @@ exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-5"
@@ -749,7 +859,7 @@ exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -766,7 +876,7 @@ exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -812,10 +922,15 @@ exports[`<Toggletip /> snapshot should match snapshot with id 1`] = `
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -824,10 +939,15 @@ exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-3"
@@ -838,7 +958,7 @@ exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -856,7 +976,7 @@ exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -902,10 +1022,15 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 1`] = 
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -914,10 +1039,15 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 2`] = 
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-8"
@@ -928,7 +1058,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 2`] = 
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -945,7 +1075,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 2`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -991,10 +1121,15 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 1`] = 
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1003,10 +1138,15 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 2`] = 
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-7"
@@ -1017,7 +1157,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 2`] = 
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -1034,7 +1174,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 2`] = 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -1080,10 +1220,15 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and of
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1092,10 +1237,15 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and of
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-9"
@@ -1106,7 +1256,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and of
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -1123,7 +1273,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and of
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -1169,10 +1319,15 @@ exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 1`] 
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1181,10 +1336,15 @@ exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 2`] 
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-6"
@@ -1195,7 +1355,7 @@ exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 2`] 
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -1212,7 +1372,7 @@ exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 2`] 
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg
@@ -1258,10 +1418,15 @@ exports[`<Toggletip /> snapshot should match snapshot with style 1`] = `
   <button
     aria-expanded="false"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1270,10 +1435,15 @@ exports[`<Toggletip /> snapshot should match snapshot with style 2`] = `
   <button
     aria-expanded="true"
     aria-haspopup="dialog"
-    id="1"
+    id="2"
   >
     Click Me!
   </button>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
   <div
     data-tippy-root=""
     id="tippy-4"
@@ -1284,7 +1454,7 @@ exports[`<Toggletip /> snapshot should match snapshot with style 2`] = `
       hidden=""
     />
     <div
-      aria-labelledby="1"
+      aria-labelledby="2"
       aria-modal="true"
       class="md-toggletip-wrapper md-modal-container-wrapper"
       data-arrow-orientation="vertical"
@@ -1302,7 +1472,7 @@ exports[`<Toggletip /> snapshot should match snapshot with style 2`] = `
       <div
         class="md-modal-container-arrow-wrapper"
         data-popper-arrow="true"
-        id="arrow1"
+        id="arrow3"
         style="position: absolute; left: 0px; transform: translate(5px, 0px);"
       >
         <svg

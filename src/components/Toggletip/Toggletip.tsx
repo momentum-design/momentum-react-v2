@@ -1,10 +1,11 @@
-import React, { ForwardedRef, forwardRef, useCallback, useEffect, useRef } from 'react';
+import React, { ForwardedRef, forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 import Popover, { PopoverInstance } from '../Popover';
 import { Props } from './Toggletip.types';
 import { DEFAULTS, STYLE } from './Toggletip.constants';
 import { BoundaryType, PlacementType } from '../Popover/Popover.types';
 import classNames from 'classnames';
-
+import { v4 as uuidV4 } from 'uuid';
+import ScreenReaderAnnouncer from '../ScreenReaderAnnouncer';
 /**
  * Toggletip component
  *
@@ -33,6 +34,23 @@ const Toggletip = forwardRef(
   ) => {
     const tippyRef = useRef<PopoverInstance>(null);
     const triggerComponentRef = useRef<HTMLElement>(null);
+    const [announcerId] = useState<string>(uuidV4);
+    const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
+
+    // SR should announce the content of the toggletip everytime it displays tooltip content
+    const handleShow = () => {
+      setIsTooltipOpen(true);
+    };
+
+    const handleHide = () => {
+      setIsTooltipOpen(false);
+    };
+
+    useEffect(() => {
+      if (isTooltipOpen) {
+        ScreenReaderAnnouncer.announce({ body: children }, announcerId);
+      }
+    }, [isTooltipOpen, children]);
 
     // Update aria props manually, because "The `aria` attribute is reserved for future use in React."
     // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
@@ -59,27 +77,32 @@ const Toggletip = forwardRef(
      * Toggletip's popover is interactive to make the content selectable and VoiceOver reads the whole content.
      */
     return (
-      <Popover
-        ref={ref}
-        className={classNames(STYLE.wrapper, className)}
-        trigger="click"
-        triggerComponent={React.cloneElement(triggerComponent, { ref: triggerComponentRef })}
-        showArrow
-        interactive={true}
-        addBackdrop={true}
-        role="dialog"
-        boundary={boundary}
-        color={color}
-        offsetDistance={offsetDistance}
-        offsetSkidding={offsetSkidding}
-        placement={placement}
-        strategy={strategy}
-        variant={variant}
-        {...otherProps}
-        setInstance={setInstance}
-      >
-        {children}
-      </Popover>
+      <>
+        <Popover
+          ref={ref}
+          className={classNames(STYLE.wrapper, className)}
+          trigger="click"
+          triggerComponent={React.cloneElement(triggerComponent, { ref: triggerComponentRef })}
+          showArrow
+          interactive={true}
+          addBackdrop={true}
+          role="dialog"
+          boundary={boundary}
+          color={color}
+          offsetDistance={offsetDistance}
+          offsetSkidding={offsetSkidding}
+          placement={placement}
+          strategy={strategy}
+          variant={variant}
+          {...otherProps}
+          onShow={handleShow}
+          onHide={handleHide}
+          setInstance={setInstance}
+        >
+          {children}
+        </Popover>
+        <ScreenReaderAnnouncer identity={announcerId} />
+      </>
     );
   }
 );

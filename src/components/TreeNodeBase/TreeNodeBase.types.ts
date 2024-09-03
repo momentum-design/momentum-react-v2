@@ -1,6 +1,7 @@
 import { CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactNode, RefObject } from 'react';
 import { PressEvents } from '@react-types/shared';
 import { TreeNodeId } from '../Tree';
+import { TreeNodeRecord } from '../Tree/Tree.types';
 
 /**
  * TreeNodeBase size options
@@ -28,7 +29,7 @@ export interface Props
   /**
    * Content of the tree node
    */
-  children?: ReactNode;
+  children?: (nodeDetails: TreeNodeRecord) => ReactNode;
 
   /**
    * Custom class for overriding this component's CSS.

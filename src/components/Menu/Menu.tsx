@@ -39,6 +39,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     isGroupRole,
     ariaLabelledby,
     orientation = LIST_DEFAULTS.ORIENTATION,
+    tabIndex,
   } = props;
 
   const contextProps = useMenuContext();
@@ -55,7 +56,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   const { menuProps } = useMenu(_props, state, ref);
   const itemArray = Array.from(state.collection.getKeys());
   const listSize = itemArray.length;
-
   const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation});
 
   const renderItem = useCallback(
@@ -102,6 +102,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           role={isGroupRole ? GROUP : menuProps.role}
           aria-labelledby={ariaLabelledby}
           {...keyboardProps}
+          tabIndex={tabIndex || menuProps.tabIndex}
         >
           {itemArray.map((key, index) => {
             const item = state.collection.getItem(key) as Node<T>;
