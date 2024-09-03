@@ -23,7 +23,9 @@ export function getKeyboardFocusableElements<T extends HTMLElement>(
     (el) =>
       !el.hasAttribute('disabled') &&
       el.getAttribute('aria-hidden') !== 'true' &&
-      (allowExclusions ? true : !el.hasAttribute('data-exclude-focus'))
+      (allowExclusions
+        ? true
+        : !el.hasAttribute('data-exclude-focus') && !el.closest('[data-exclude-focus-children]'))
   ) as Array<HTMLElement>;
 }
 

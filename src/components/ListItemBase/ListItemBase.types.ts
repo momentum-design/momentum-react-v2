@@ -91,4 +91,9 @@ export interface Props extends PressEvents, ContextMenu {
    * lang attribute if necessary.
    */
   lang?: string;
+
+  /**
+   * Whether the item should focus on the first child instead of itself
+   */
+  focusChild?: boolean;
 }

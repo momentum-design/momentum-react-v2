@@ -7,7 +7,7 @@ import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
 import * as listUtils from '../List/List.utils';
 import userEvent from '@testing-library/user-event';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import List from '../List/List';
 import * as listItemBaseUtils from './ListItemBase.utils';
 import { ListContextValue } from '../List/List.types';
@@ -138,6 +138,18 @@ describe('ListItemBase', () => {
       expect.assertions(1);
 
       container = mount(<ListItemBase />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with focusChild', () => {
+      expect.assertions(1);
+
+      container = mount(
+        <ListItemBase focusChild>
+          <ButtonPill>Test</ButtonPill>
+        </ListItemBase>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -531,5 +543,73 @@ describe('ListItemBase', () => {
 
     expect(mockCallback).toBeCalledTimes(1);
     expect(mockClick).toBeCalledTimes(1);
+  });
+
+  const simulateOnPress = (getByTestId, testId) => {
+    // All these are necessary to simulate a press event in react-aria
+    fireEvent.mouseDown(getByTestId(testId));
+    fireEvent.mouseUp(getByTestId(testId));
+    fireEvent.click(getByTestId(testId));
+  };
+
+  it('should focus on press when shouldFocusOnPress is set', async () => {
+    const { getByTestId } = render(
+      <List shouldFocusOnPress listSize={1}>
+        <ListItemBase data-testid="list-item-1" itemIndex={0}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+      </List>
+    );
+
+    simulateOnPress(getByTestId, 'list-item-1');
+
+    expect(getByTestId('list-item-1')).toHaveFocus();
+  });
+
+  it('should not focus on press with focusChild even if shouldFocusOnPress is set', async () => {
+    const { getByTestId } = render(
+      <List shouldFocusOnPress listSize={1}>
+        <ListItemBase focusChild data-testid="list-item-1" itemIndex={0}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+      </List>
+    );
+
+    simulateOnPress(getByTestId, 'list-item-1');
+
+    expect(getByTestId('list-item-1')).not.toHaveFocus();
+  });
+
+  it('should focus on the first focusable child after arrow key nav when focusChild is set', async () => {
+    const user = userEvent.setup();
+
+    const { getByTestId } = render(
+      <List shouldFocusOnPress listSize={2}>
+        <ListItemBase data-testid="list-item-0" itemIndex={0}>
+          <ListItemBaseSection position="fill">
+            <ButtonPill>0</ButtonPill>
+            <ButtonPill>1</ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+        <ListItemBase focusChild data-testid="list-item-1" itemIndex={1}>
+          <ListItemBaseSection position="fill">
+            <ButtonPill data-testId="button-1">2</ButtonPill>
+            <ButtonPill>3</ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+      </List>
+    );
+
+    await user.tab();
+
+    expect(getByTestId('list-item-0')).toHaveFocus();
+
+    await user.keyboard('{ArrowDown}');
+
+    expect(getByTestId('button-1')).toHaveFocus();
+
+    await user.keyboard('{ArrowUp}');
+
+    expect(getByTestId('list-item-0')).toHaveFocus();
   });
 });

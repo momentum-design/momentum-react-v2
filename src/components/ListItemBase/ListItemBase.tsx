@@ -40,6 +40,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     isDisabled = DEFAULTS.IS_DISABLED,
     isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
+    focusChild = DEFAULTS.FOCUS_CHILD,
     isSelected,
     style,
     itemIndex,
@@ -162,11 +163,17 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
-    if (setCurrentFocus && isPressed && shouldFocusOnPress && itemIndex !== undefined) {
+    if (
+      setCurrentFocus &&
+      isPressed &&
+      shouldFocusOnPress &&
+      itemIndex !== undefined &&
+      !focusChild
+    ) {
       ref.current.focus();
       setCurrentFocus(itemIndex);
     }
-  }, [isPressed, itemIndex, listContext, ref, setCurrentFocus, shouldFocusOnPress]);
+  }, [focusChild, isPressed, itemIndex, listContext, ref, setCurrentFocus, shouldFocusOnPress]);
 
   const updateTabIndexes = useCallback(() => {
     getKeyboardFocusableElements(ref.current, false)
@@ -182,7 +189,15 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       focus &&
       !isInitiallyRoving
     ) {
-      ref.current.focus();
+      const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
+        (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
+      )[0];
+
+      if (focusChild) {
+        firstFocusable?.focus();
+      } else {
+        ref.current.focus();
+      }
     }
   }, [currentFocus]);
 
@@ -314,28 +329,33 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     ref,
   ]);
 
-  return (
-    <FocusRing isInset={shouldItemFocusBeInset}>
-      <li
-        tabIndex={listItemTabIndex}
-        style={style}
-        ref={ref}
-        data-size={size}
-        aria-hidden={isAriaHidden}
-        data-disabled={isDisabled}
-        data-padded={isPadded}
-        data-shape={shape}
-        data-interactive={interactive}
-        className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
-        role={role}
-        lang={lang}
-        {...listItemPressProps}
-      >
-        {content}
-        {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
-      </li>
-    </FocusRing>
+  const listElement = (
+    <li
+      tabIndex={focusChild ? -1 : listItemTabIndex}
+      style={style}
+      ref={ref}
+      data-size={size}
+      aria-hidden={isAriaHidden}
+      data-disabled={isDisabled}
+      data-padded={isPadded}
+      data-shape={shape}
+      data-interactive={interactive && !focusChild}
+      className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
+      role={role}
+      lang={lang}
+      {...listItemPressProps}
+      {...rest}
+    >
+      {content}
+      {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
+    </li>
   );
+
+  if (focusChild) {
+    return listElement;
+  }
+
+  return <FocusRing isInset={shouldItemFocusBeInset}>{listElement}</FocusRing>;
 };
 
 /**

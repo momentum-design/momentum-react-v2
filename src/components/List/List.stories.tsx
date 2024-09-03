@@ -26,7 +26,14 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import { AriaToolbar, AriaToolbarItem, MenuTrigger, SearchInput } from '..';
+import {
+  AriaToolbar,
+  AriaToolbarItem,
+  ButtonSimple,
+  ListItemBaseSection,
+  MenuTrigger,
+  SearchInput,
+} from '..';
 import { omit } from 'lodash';
 import { ListRefObject } from './List.types';
 
@@ -398,6 +405,48 @@ const ListWithAriaToolbarWrapper = () => {
 };
 const ListWithAriaToolbar = Template<unknown>(ListWithAriaToolbarWrapper).bind({});
 
+const ListWithButtonsWrapper = () => {
+  return (
+    <>
+      <List shouldFocusOnPress listSize={3}>
+        <ListItemBase itemIndex={0} key={0}>
+          <ButtonPill>0</ButtonPill>
+        </ListItemBase>
+        <ListItemBase focusChild size="auto" itemIndex={1} key={1}>
+          <ListItemBaseSection position="fill">
+            <ButtonPill>1</ButtonPill>
+            <ButtonPill>1a</ButtonPill>
+            <ButtonPill>1b</ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+        <ListItemBase itemIndex={2} key={2}>
+          <ButtonPill>2</ButtonPill>
+        </ListItemBase>
+      </List>
+      <ButtonPill>after</ButtonPill>
+    </>
+  );
+};
+const ListWithButtons = Template<unknown>(ListWithButtonsWrapper).bind({});
+
+const ListWithNonFocusableChildrenWrapper = () => {
+  return (
+    <>
+      <List shouldFocusOnPress listSize={2}>
+        <ListItemBase data-exclude-focus-children size="auto" itemIndex={0} key={0}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+        <ListItemBase itemIndex={1} key={1}>
+          <ButtonPill>2</ButtonPill>
+        </ListItemBase>
+      </List>
+    </>
+  );
+};
+const ListWithNonFocusableChildren = Template<unknown>(ListWithNonFocusableChildrenWrapper).bind(
+  {}
+);
+
 export {
   Example,
   Common,
@@ -408,4 +457,6 @@ export {
   ListWithNullElements,
   ProgramaticFocus,
   ListWithAriaToolbar,
+  ListWithButtons,
+  ListWithNonFocusableChildren,
 };
