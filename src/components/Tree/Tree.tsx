@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState, useCallback, HTMLAttributes } from 'react';
+import React, { FC, useRef, useState, useCallback, HTMLAttributes, useEffect } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Tree.constants';
@@ -33,6 +33,10 @@ const Tree: FC<Props> = (props: Props) => {
   const [activeNodeId, setActiveNodeId] = useState<TreeNodeId | undefined>(
     excludeTreeRoot ? treeStructure?.children?.[0]?.id : treeStructure?.id
   );
+
+  useEffect(() => {
+    setTree(convertNestedTree2MappedTree(treeStructure));
+  }, [treeStructure]);
 
   const isVirtualTree = virtualTreeConnector !== undefined;
 
