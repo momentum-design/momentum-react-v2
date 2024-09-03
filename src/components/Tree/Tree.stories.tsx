@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import Text from '../Text';
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -15,6 +15,7 @@ import { Item } from '@react-stately/collections';
 import MenuTrigger from '../MenuTrigger';
 import ButtonCircle from '../ButtonCircle';
 import { TreeNodeRecord } from './Tree.types';
+import ButtonPill from '../ButtonPill';
 
 // prettier-ignore
 const exampleTree =
@@ -59,7 +60,7 @@ interface ExampleTreeNodeProps {
 
 const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
   const treeContext = useTreeContext();
-  const { level, isOpen, isLeaf } = treeContext.getNodeDetails(node.id);
+  const nodeDetails = treeContext.getNodeDetails(node.id);
 
   if (node.id === '<root>') {
     return null;
@@ -67,36 +68,40 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
 
   return (
     <TreeNodeBase nodeId={node.id} style={{ width: '20rem' }}>
-      <div
-        style={{
-          marginLeft: `${level}rem`,
-          marginRight: `1rem`,
-          display: 'flex',
-          alignItems: 'center',
-          width: '100%',
-          justifyContent: 'space-between',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-          {!isLeaf && <Icon name={isOpen ? 'arrow-down' : 'arrow-right'} scale={12} />}
-          <Text>Node {node.id}</Text>
+      {() => (
+        <div
+          style={{
+            marginLeft: `${nodeDetails.level}rem`,
+            marginRight: `1rem`,
+            display: 'flex',
+            alignItems: 'center',
+            width: '100%',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+            {!nodeDetails.isLeaf && (
+              <Icon name={nodeDetails.isOpen ? 'arrow-down' : 'arrow-right'} scale={12} />
+            )}
+            <Text>Node {node.id}</Text>
+          </div>
+          {nodeDetails.isLeaf && (
+            <MenuTrigger
+              triggerComponent={
+                <ButtonCircle size={20} ghost aria-label="More menu">
+                  <Icon name="more" weight="bold" autoScale={100} />
+                </ButtonCircle>
+              }
+            >
+              <Menu selectionMode="single" key="2">
+                <Item key="one">One</Item>
+                <Item key="two">Two</Item>
+                <Item key="three">Three</Item>
+              </Menu>
+            </MenuTrigger>
+          )}
         </div>
-        {isLeaf && (
-          <MenuTrigger
-            triggerComponent={
-              <ButtonCircle size={20} ghost aria-label="More menu">
-                <Icon name="more" weight="bold" autoScale={100} />
-              </ButtonCircle>
-            }
-          >
-            <Menu selectionMode="single" key="2">
-              <Item key="one">One</Item>
-              <Item key="two">Two</Item>
-              <Item key="three">Three</Item>
-            </Menu>
-          </MenuTrigger>
-        )}
-      </div>
+      )}
     </TreeNodeBase>
   );
 };
@@ -146,4 +151,42 @@ TreeWithScroll.args = {
   ),
 };
 
-export { Example, WithRoot, TreeWithScroll };
+const DynamicTree = Template(() => {
+  const exampleTree = tNode('<root>', true, [tNode('0', false)]);
+
+  const [tree, setTree] = useState(exampleTree);
+  const [count, setCount] = useState(1);
+
+  const mappedTree = useMemo(() => convertNestedTree2MappedTree(tree), [tree]);
+
+  return (
+    <>
+      <ButtonPill
+        onPress={() => {
+          setTree((prev) => {
+            return Object.create(tNode('root', true, [...prev.children, tNode(`${count}`, false)]));
+          });
+          setCount((prev) => prev + 1);
+        }}
+      >
+        Add 1 more node
+      </ButtonPill>
+      <Tree
+        treeStructure={tree}
+        isRenderedFlat={true}
+        shouldNodeFocusBeInset={true}
+        excludeTreeRoot={true}
+      >
+        {mapTree(
+          mappedTree,
+          (node) => (
+            <ExampleTreeNode key={node.id.toString()} node={node} />
+          ),
+          { excludeRootNode: true }
+        )}
+      </Tree>
+    </>
+  );
+}).bind({});
+
+export { Example, WithRoot, TreeWithScroll, DynamicTree };

@@ -67,7 +67,7 @@ describe('TreeNodeBase', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      container = mount(<TreeNodeBase nodeId="42">Test</TreeNodeBase>);
+      container = mount(<TreeNodeBase nodeId="42">{() => 'Test'}</TreeNodeBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -79,7 +79,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" className={className}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -93,7 +93,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" id={id}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -107,7 +107,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" style={style}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -121,7 +121,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" lang={lang}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -135,7 +135,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" size={size}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -149,7 +149,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" shape={shape}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -163,11 +163,72 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" isSelected={isSelected}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
       expect(container).toMatchSnapshot();
+    });
+
+    it('should pass node details to the children render function', () => {
+      useTreeContextSpy.mockRestore();
+      expect.assertions(1);
+      const childrenFn = jest.fn();
+
+      const tree: TreeNode = tNode('root', true, [tNode('1'), tNode('2')]);
+
+      container = mount(
+        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+          {mapTree(
+            convertNestedTree2MappedTree(tree),
+            (node) => (
+              <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>
+                {childrenFn}
+              </TreeNodeBase>
+            ),
+            { excludeRootNode: false }
+          )}
+        </Tree>
+      );
+
+      //
+      expect(childrenFn.mock.calls).toEqual([
+        [
+          {
+            children: ['1', '2'],
+            id: 'root',
+            index: 0,
+            isHidden: false,
+            isLeaf: false,
+            isOpen: true,
+            level: 0,
+          },
+        ],
+        [
+          {
+            children: [],
+            id: '1',
+            index: 0,
+            isHidden: false,
+            isLeaf: true,
+            isOpen: false,
+            level: 1,
+            parent: 'root',
+          },
+        ],
+        [
+          {
+            children: [],
+            id: '2',
+            index: 1,
+            isHidden: false,
+            isLeaf: true,
+            isOpen: false,
+            level: 1,
+            parent: 'root',
+          },
+        ],
+      ]);
     });
 
     it('should render grouping element when the tree is flat', () => {
@@ -175,22 +236,53 @@ describe('TreeNodeBase', () => {
       expect.assertions(3);
 
       const tree: TreeNode = tNode('root', true, [tNode('1'), tNode('2')]);
-      // prettier-ignore
-      container = mount((
-          <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
-            {mapTree(convertNestedTree2MappedTree(tree), (node) => (
-              <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>{node.id}
+
+      container = mount(
+        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+          {mapTree(
+            convertNestedTree2MappedTree(tree),
+            (node) => (
+              <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>
+                {() => node.id}
               </TreeNodeBase>
-            ), {excludeRootNode: false})}
-          </Tree>
-        ));
+            ),
+            { excludeRootNode: false }
+          )}
+        </Tree>
+      );
 
       expect(container).toMatchSnapshot();
       expect(container.find('div[role="group"]').length).toBe(1);
       expect(container.find('div[role="group"]').props()).toEqual({
         'aria-owns': '1 2',
+        className: 'md-tree-node-base-group',
         role: 'group',
       });
+    });
+
+    it('should not render the content when the node details are not available', () => {
+      useTreeContextSpy.mockRestore();
+      expect.assertions(2);
+
+      const tree: TreeNode = tNode('root', false, [tNode('1'), tNode('2')]);
+      // prettier-ignore
+      container = mount(
+        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+          {mapTree(
+            convertNestedTree2MappedTree(tree),
+            (node) => (
+              <TreeNodeBase key={node.id} nodeId={`wrong-id-${node.id}`} data-testid={`node-${node.id}`}>
+                {() => <div className="node-content">{node.id}</div>}
+              </TreeNodeBase>
+            ),
+            { excludeRootNode: false }
+          )}
+        </Tree>
+      );
+
+      expect(container).toMatchSnapshot();
+      // 0 node rendered
+      expect(container.find('.node-content').length).toBe(0);
     });
 
     it('should not render the content of the hidden nodes', () => {
@@ -199,14 +291,19 @@ describe('TreeNodeBase', () => {
 
       const tree: TreeNode = tNode('root', false, [tNode('1'), tNode('2')]);
       // prettier-ignore
-      container = mount((
-          <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
-            {mapTree(convertNestedTree2MappedTree(tree), (node) => (
-              <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}><div className="node-content">{node.id}</div>
+      container = mount(
+        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+          {mapTree(
+            convertNestedTree2MappedTree(tree),
+            (node) => (
+              <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>
+                {() => <div className="node-content">{node.id}</div>}
               </TreeNodeBase>
-            ), {excludeRootNode: false})}
-          </Tree>
-        ));
+            ),
+            { excludeRootNode: false }
+          )}
+        </Tree>
+      );
 
       expect(container).toMatchSnapshot();
       expect(container.find('.node-content').length).toBe(1);
@@ -226,7 +323,7 @@ describe('TreeNodeBase', () => {
     });
 
     it('should have its wrapper class', () => {
-      container = mount(<TreeNodeBase nodeId="42">Test</TreeNodeBase>);
+      container = mount(<TreeNodeBase nodeId="42">{() => 'Test'}</TreeNodeBase>);
 
       const element = container.find(TreeNodeBase).getDOMNode();
       expect(element.classList.contains(STYLE.wrapper));
@@ -241,7 +338,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" className={className}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -257,7 +354,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" id={id}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -274,7 +371,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" style={style}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -290,7 +387,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" lang={lang}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -306,7 +403,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" isPadded={isPadded}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -322,7 +419,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" size={size}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -338,7 +435,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" size={size}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -354,7 +451,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" shape={shape}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -370,7 +467,7 @@ describe('TreeNodeBase', () => {
 
       container = mount(
         <TreeNodeBase nodeId="42" isSelected={isSelected}>
-          Test
+          {() => 'Test'}
         </TreeNodeBase>
       );
 
@@ -424,14 +521,14 @@ describe('TreeNodeBase', () => {
         <Tree treeStructure={tree}>
           {mapTree(convertNestedTree2MappedTree(tree), (node) => (
             <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>
-              <ListItemBaseSection position="end">
+              {() =>(<ListItemBaseSection position="end">
                 {numOfButtons > 0 ?
                   (<ButtonPill data-testid={`first-button-${node.id}`} color="join" size={24}>Join 1</ButtonPill>) :
                   (<span>Empty</span>)}
                 {numOfButtons > 1 ?
                   (<ButtonPill data-testid={`second-button-${node.id}`} color="join" size={24}>Join 2</ButtonPill>) :
                   (<span>Empty</span>)}
-              </ListItemBaseSection>
+              </ListItemBaseSection>)}
             </TreeNodeBase>
           ))}
         </Tree>

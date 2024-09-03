@@ -118,8 +118,8 @@ export interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
   style?: CSSProperties;
 
   /**
-   * Determines whether the focus around tree nodes should be inset or outset
-   * This is needed for virtualized tree
+   * Determines whether the focus ring around tree nodes should be inset or outset
+   * It has only visual effect.
    */
   shouldNodeFocusBeInset?: boolean;
 
@@ -199,7 +199,7 @@ export interface TreeContextValue extends Pick<Props, 'shouldNodeFocusBeInset' |
    * Get the details of the tree node.
    * @param id unique identifier of the tree node
    */
-  getNodeDetails: (id: TreeNodeId) => TreeNodeRecord;
+  getNodeDetails: (id: TreeNodeId) => undefined | TreeNodeRecord;
   /**
    * Set the active node id in the tree.
    * @param id unique identifier of the tree node
