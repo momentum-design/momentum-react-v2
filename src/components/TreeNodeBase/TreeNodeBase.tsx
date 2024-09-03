@@ -6,6 +6,7 @@ import React, {
   useLayoutEffect,
   ReactElement,
   useEffect,
+  useMemo,
 } from 'react';
 import { usePress } from '@react-aria/interactions';
 import classnames from 'classnames';
@@ -50,13 +51,12 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     console.warn('TreeNodeBase: nodeId prop is required.');
   }
 
-  let content: ReactNode = null;
-
   const treeContext = useTreeContext();
-  const { isHidden, isLeaf } = treeContext.getNodeDetails(nodeId);
+  const nodeDetails = treeContext.getNodeDetails(nodeId);
 
   const internalRef = useRef<HTMLDivElement>();
   const ref = providedRef && typeof providedRef !== 'function' ? providedRef : internalRef;
+  const isHidden = !nodeDetails || nodeDetails.isHidden;
 
   // When used in a popover, the ref will be a callback.
   // We need to update this callback ref, so the popover
@@ -76,30 +76,36 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     );
   }
 
-  if (Array.isArray(children)) {
-    if (children.length > 3) {
-      console.warn('TreeNodeBase: This component can only have at most 3 sections inside.');
-    } else {
-      if (verifyTypes(children, ListItemBaseSection)) {
-        const [start, middle, end] = children;
-        content = (
-          <>
-            {start}
-            {middle}
-            {end}
-          </>
-        );
-      } else if (verifyTypes(children, Text)) {
-        content = children;
+  const content: ReactNode = useMemo(() => {
+    if (!isHidden && children) {
+      const childrenContent = children(nodeDetails);
+      if (Array.isArray(childrenContent)) {
+        if (childrenContent.length > 3) {
+          console.warn('TreeNodeBase: This component can only have at most 3 sections inside.');
+        } else {
+          if (verifyTypes(childrenContent, ListItemBaseSection)) {
+            const [start, middle, end] = childrenContent;
+            return (
+              <>
+                {start}
+                {middle}
+                {end}
+              </>
+            );
+          } else if (verifyTypes(childrenContent, Text)) {
+            return childrenContent;
+          } else {
+            console.warn(
+              'TreeNodeBase: When there is more then one child component then use React.Fragment, ListItemBaseSection or Text components.'
+            );
+          }
+        }
       } else {
-        console.warn(
-          'TreeNodeBase: When there is more then one child component then use React.Fragment, ListItemBaseSection or Text components.'
-        );
+        return childrenContent;
       }
     }
-  } else {
-    content = children;
-  }
+    return null;
+  }, [children, isHidden, nodeDetails]);
 
   // The keyboard press events are not propagated
   const internalOnPress = useCallback((event) => {
@@ -194,8 +200,8 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         {...rest}
       >
         {content}
-        {treeContext.isRenderedFlat && !isLeaf && (
-          <div {...treeContext.getNodeGroupProps(nodeId)} />
+        {treeContext.isRenderedFlat && !nodeDetails.isLeaf && (
+          <div className={STYLE.group} {...treeContext.getNodeGroupProps(nodeId)} />
         )}
       </div>
     </FocusRing>

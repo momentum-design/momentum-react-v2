@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState, useCallback, HTMLAttributes } from 'react';
+import React, { FC, useRef, useState, useCallback, HTMLAttributes, useEffect } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Tree.constants';
@@ -12,6 +12,7 @@ import {
 } from './Tree.utils';
 import { useKeyboard } from '@react-aria/interactions';
 import { useVirtualTreeNavigation } from './Tree.hooks';
+import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
 
 const Tree: FC<Props> = (props: Props) => {
   const {
@@ -34,6 +35,11 @@ const Tree: FC<Props> = (props: Props) => {
     excludeTreeRoot ? treeStructure?.children?.[0]?.id : treeStructure?.id
   );
 
+  useDidUpdateEffect(() => {
+    setTree(convertNestedTree2MappedTree(treeStructure));
+    setActiveNodeId(excludeTreeRoot ? treeStructure.children[0].id : treeStructure.id);
+  }, [treeStructure]);
+
   const isVirtualTree = virtualTreeConnector !== undefined;
 
   // Handle DOM changes for virtual tree
@@ -54,11 +60,22 @@ const Tree: FC<Props> = (props: Props) => {
     [tree, isVirtualTree]
   );
 
-  const getNodeDetails = useCallback((id: TreeNodeId) => tree.get(id), [tree]);
+  const getNodeDetails = useCallback(
+    (id: TreeNodeId) => {
+      const node = tree.get(id);
+      if (!node) {
+        console.warn(`Tree node not found for id: "${id}".`);
+      }
+      return node;
+    },
+    [tree]
+  );
 
   const getNodeProps = useCallback(
     (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {
       const node = tree.get(id);
+      if (!node) return {};
+
       const parent = node.parent && tree.get(node.parent);
       const isRoot = parent === undefined;
 
@@ -81,6 +98,7 @@ const Tree: FC<Props> = (props: Props) => {
   const getNodeGroupProps = useCallback(
     (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {
       const node = tree.get(id);
+      if (!node) return {};
 
       return {
         role: 'group',

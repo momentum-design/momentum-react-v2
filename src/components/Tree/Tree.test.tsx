@@ -180,7 +180,7 @@ describe('<Tree />', () => {
         <div onKeyDown={keyDownHandler}>
           <Tree treeStructure={getSampleTree()} excludeTreeRoot={false}>
             <TreeNodeBase key="0" nodeId="root">
-              TreeNodeBase 1
+              {() => 'TreeNodeBase 1'}
             </TreeNodeBase>
           </Tree>
         </div>
@@ -210,7 +210,7 @@ describe('<Tree />', () => {
                 nodeId={node.id}
                 data-testid={`node-${node.id}`}
               >
-                {node.id}
+                {() => node.id}
               </TreeNodeBase>
             ),
             { excludeRootNode: false }
@@ -282,7 +282,7 @@ describe('<Tree />', () => {
             convertNestedTree2MappedTree(tree),
             (node) => (
               <TreeNodeBase key={node.id.toString()} nodeId={node.id} data-testid={node.id}>
-                {node.id}
+                {() => node.id}
               </TreeNodeBase>
             ),
             { excludeRootNode: false }
@@ -343,10 +343,12 @@ describe('<Tree />', () => {
             convertNestedTree2MappedTree(tree),
             (node) => (
               <TreeNodeBase key={node.id.toString()} nodeId={node.id} data-testid={node.id}>
-                <>
-                  {node.id}
-                  <button data-testid={`button-${node.id}`}>btn</button>
-                </>
+                {() => (
+                  <>
+                    {node.id}
+                    <button data-testid={`button-${node.id}`}>btn</button>
+                  </>
+                )}
               </TreeNodeBase>
             ),
             { excludeRootNode: false }
@@ -532,5 +534,66 @@ describe('<Tree />', () => {
         });
       }
     );
+  });
+
+  describe('dynamically changing tree', () => {
+    const getTreeComponent = (tree) => {
+      return (
+        <Tree treeStructure={tree} excludeTreeRoot={false}>
+          {mapTree(
+            convertNestedTree2MappedTree(tree),
+            (node) => (
+              <TreeNodeBase key={node.id.toString()} nodeId={node.id} data-testid={node.id}>
+                {() => node.id}
+              </TreeNodeBase>
+            ),
+            { excludeRootNode: false }
+          )}
+        </Tree>
+      );
+    };
+
+    it('should re-rendered without errors', () => {
+      const tree = getSampleTree();
+      const { rerender } = render(getTreeComponent(tree));
+
+      expect(() => rerender(getTreeComponent(tNode('root', true, [])))).not.toThrow();
+    });
+
+    it('should activate the first node in the tree after re-render', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(getTreeComponent(tree));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.1')).toHaveFocus();
+
+      const newTree = tNode('new-root', true, [tNode('new-1'), tNode('new-2')]);
+      rerender(getTreeComponent(newTree));
+
+      expect(getByTestId('new-root')).toHaveFocus();
+    });
+
+    it('should be possible to a new node after re-render', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(getTreeComponent(tree));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.1')).toHaveFocus();
+
+      const newTree = tNode('new-root', true, [tNode('new-1'), tNode('new-2')]);
+
+      rerender(getTreeComponent(newTree));
+
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+
+      expect(getByTestId('new-2')).toHaveFocus();
+    });
   });
 });
