@@ -133,6 +133,14 @@ describe('ListItemBase', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with empty list item', () => {
+      expect.assertions(1);
+
+      container = mount(<ListItemBase />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {

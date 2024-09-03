@@ -48,7 +48,7 @@ const useOrientationBasedKeyboardNavigation = (
       isInitiallyRoving,
       ...contextProps,
     }),
-    [currentFocus, setCurrentFocus, listSize]
+    [listSize, currentFocus, noLoop, direction, isInitiallyRoving, contextProps]
   );
 
   const { keyboardProps } = useKeyboard({

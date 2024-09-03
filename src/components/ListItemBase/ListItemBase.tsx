@@ -56,6 +56,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   const internalRef = useRef<HTMLLIElement>();
 
+  const [isAriaHidden, setIsAriaHidden] = useState(false);
+
   let ref = internalRef;
 
   if (providedRef && typeof providedRef !== 'function') {
@@ -111,14 +113,17 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   // The keyboard press events are not propagated
   // To make popovers work with click, we manually call the click event
-  const internalOnPress = useCallback((event) => {
-    if (event.pointerType === 'keyboard') {
-      ref.current.click();
-    }
-    if (onPress) {
-      onPress(event);
-    }
-  }, []);
+  const internalOnPress = useCallback(
+    (event) => {
+      if (event.pointerType === 'keyboard') {
+        ref.current.click();
+      }
+      if (onPress) {
+        onPress(event);
+      }
+    },
+    [onPress, ref]
+  );
 
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
@@ -140,7 +145,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   /**
    * Focus management
    */
-  const focus = listContext?.currentFocus === itemIndex;
+  const currentFocus = listContext?.currentFocus;
+  const focus = currentFocus === itemIndex;
   const listSize = listContext?.listSize || 0;
   const noLoop = listContext?.noLoop || false;
   const direction = listContext?.direction || 'forward';
@@ -156,16 +162,11 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
-    if (
-      listContext?.setCurrentFocus &&
-      isPressed &&
-      shouldFocusOnPress &&
-      itemIndex !== undefined
-    ) {
+    if (setCurrentFocus && isPressed && shouldFocusOnPress && itemIndex !== undefined) {
       ref.current.focus();
-      listContext.setCurrentFocus(itemIndex);
+      setCurrentFocus(itemIndex);
     }
-  }, [isPressed]);
+  }, [isPressed, itemIndex, listContext, ref, setCurrentFocus, shouldFocusOnPress]);
 
   const updateTabIndexes = useCallback(() => {
     getKeyboardFocusableElements(ref.current, false)
@@ -173,17 +174,17 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       .forEach((el) => el.setAttribute('tabindex', listItemTabIndex.toString()));
   }, [ref, listItemTabIndex]);
 
-  const lastCurrentFocus = usePrevious(listContext?.currentFocus);
+  const lastCurrentFocus = usePrevious(currentFocus);
   useDidUpdateEffect(() => {
     if (
       lastCurrentFocus !== undefined &&
-      lastCurrentFocus !== listContext?.currentFocus &&
+      lastCurrentFocus !== currentFocus &&
       focus &&
       !isInitiallyRoving
     ) {
       ref.current.focus();
     }
-  }, [listContext?.currentFocus]);
+  }, [currentFocus]);
 
   /**
    * When the items inside the list context gets smaller (search/filter applied)
@@ -192,19 +193,19 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * the size of the new list size (shrinked size)
    */
   useEffect(() => {
-    if (!!listContext?.listSize && listContext?.currentFocus >= listContext?.listSize) {
+    if (!!listSize && currentFocus >= listSize) {
       // set focus to first item
       listContext.setCurrentFocus(0);
       updateTabIndexes();
     }
-  }, [listContext?.currentFocus, listContext?.listSize]);
+  }, [currentFocus, listContext, listSize, updateTabIndexes]);
 
   useEffect(() => {
-    if (listContext?.currentFocus === undefined) {
+    if (currentFocus === undefined) {
       return;
     }
     updateTabIndexes();
-  }, [listContext?.currentFocus]);
+  }, [currentFocus, updateTabIndexes]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
@@ -263,16 +264,19 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     );
   };
 
-  const handleOnContextMenu = (event: MouseEvent) => {
-    event.preventDefault();
-    // Don't allow to open more context-menus at the same time
-    if (document.getElementById('list-item-context-menu')) {
-      return;
-    }
+  const handleOnContextMenu = useCallback(
+    (event: MouseEvent) => {
+      event.preventDefault();
+      // Don't allow to open more context-menus at the same time
+      if (document.getElementById('list-item-context-menu')) {
+        return;
+      }
 
-    const { pageX, pageY } = event;
-    setContextMenuState({ x: pageX, y: pageY, isOpen: !contextMenuState.isOpen });
-  };
+      const { pageX, pageY } = event;
+      setContextMenuState({ x: pageX, y: pageY, isOpen: !contextMenuState.isOpen });
+    },
+    [contextMenuState.isOpen]
+  );
 
   useEffect(() => {
     if (contextMenuActions) {
@@ -281,9 +285,11 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     return () => {
       ref.current?.removeEventListener('contextmenu', handleOnContextMenu);
     };
-  }, []);
+  }, [contextMenuActions, handleOnContextMenu, ref]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    setIsAriaHidden(!ref.current.childNodes.length);
+
     if (!ref.current.childNodes.length && focus) {
       handleEmptyListItem({
         direction,
@@ -305,6 +311,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     listSize,
     noLoop,
     setIsInitlallyRoving,
+    ref,
   ]);
 
   return (
@@ -314,6 +321,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         style={style}
         ref={ref}
         data-size={size}
+        aria-hidden={isAriaHidden}
         data-disabled={isDisabled}
         data-padded={isPadded}
         data-shape={shape}
