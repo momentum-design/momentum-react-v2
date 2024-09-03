@@ -1,7 +1,7 @@
 import type { Plugin } from 'tippy.js';
 import { hideOnEscPlugin } from './tippy-plugins/hideOnEscPlugin';
 import { addBackdropPlugin } from './tippy-plugins/backdropPlugin';
-import { hideOnPopperBlurPlugin } from './tippy-plugins/hideOnPopperBlurPlugin';
+import { hideOnBlurPlugin } from './tippy-plugins/hideOnBlurPlugin';
 
 export const addTippyPlugins = (
   hideOnEsc: boolean,
@@ -16,7 +16,7 @@ export const addTippyPlugins = (
     plugins.push(addBackdropPlugin);
   }
   if (hideOnBlur) {
-    plugins.push(hideOnPopperBlurPlugin);
+    plugins.push(hideOnBlurPlugin);
   }
   return plugins;
 };

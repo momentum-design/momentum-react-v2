@@ -338,8 +338,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                             <LazyTippy
                               animation={false}
                               appendTo="parent"
+                              hideOnBlur={false}
                               hideOnClick={true}
                               interactive={false}
+                              isChildPopoverOpen={false}
                               offset={
                                 Array [
                                   0,
@@ -387,8 +389,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                               <ForwardRef(TippyWrapper)
                                 animation={false}
                                 appendTo="parent"
+                                hideOnBlur={false}
                                 hideOnClick={true}
                                 interactive={false}
+                                isChildPopoverOpen={false}
                                 offset={
                                   Array [
                                     0,
@@ -444,8 +448,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 <Tippy
                                   animation={false}
                                   appendTo="parent"
+                                  hideOnBlur={false}
                                   hideOnClick={true}
                                   interactive={false}
+                                  isChildPopoverOpen={false}
                                   offset={
                                     Array [
                                       0,
@@ -666,8 +672,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 <LazyTippy
                                   animation={false}
                                   appendTo="parent"
+                                  hideOnBlur={false}
                                   hideOnClick={true}
                                   interactive={false}
+                                  isChildPopoverOpen={false}
                                   offset={
                                     Array [
                                       0,
@@ -715,8 +723,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   <ForwardRef(TippyWrapper)
                                     animation={false}
                                     appendTo="parent"
+                                    hideOnBlur={false}
                                     hideOnClick={true}
                                     interactive={false}
+                                    isChildPopoverOpen={false}
                                     offset={
                                       Array [
                                         0,
@@ -772,8 +782,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     <Tippy
                                       animation={false}
                                       appendTo="parent"
+                                      hideOnBlur={false}
                                       hideOnClick={true}
                                       interactive={false}
+                                      isChildPopoverOpen={false}
                                       offset={
                                         Array [
                                           0,
@@ -946,8 +958,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 <LazyTippy
                                   animation={false}
                                   appendTo="parent"
+                                  hideOnBlur={false}
                                   hideOnClick={true}
                                   interactive={false}
+                                  isChildPopoverOpen={false}
                                   offset={
                                     Array [
                                       0,
@@ -995,8 +1009,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   <ForwardRef(TippyWrapper)
                                     animation={false}
                                     appendTo="parent"
+                                    hideOnBlur={false}
                                     hideOnClick={true}
                                     interactive={false}
+                                    isChildPopoverOpen={false}
                                     offset={
                                       Array [
                                         0,
@@ -1052,8 +1068,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     <Tippy
                                       animation={false}
                                       appendTo="parent"
+                                      hideOnBlur={false}
                                       hideOnClick={true}
                                       interactive={false}
+                                      isChildPopoverOpen={false}
                                       offset={
                                         Array [
                                           0,
@@ -1229,8 +1247,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                               <LazyTippy
                                 animation={false}
                                 appendTo="parent"
+                                hideOnBlur={false}
                                 hideOnClick={true}
                                 interactive={false}
+                                isChildPopoverOpen={false}
                                 offset={
                                   Array [
                                     0,
@@ -1278,8 +1298,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 <ForwardRef(TippyWrapper)
                                   animation={false}
                                   appendTo="parent"
+                                  hideOnBlur={false}
                                   hideOnClick={true}
                                   interactive={false}
+                                  isChildPopoverOpen={false}
                                   offset={
                                     Array [
                                       0,
@@ -1335,8 +1357,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   <Tippy
                                     animation={false}
                                     appendTo="parent"
+                                    hideOnBlur={false}
                                     hideOnClick={true}
                                     interactive={false}
+                                    isChildPopoverOpen={false}
                                     offset={
                                       Array [
                                         0,
