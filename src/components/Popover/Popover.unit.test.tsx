@@ -1115,7 +1115,7 @@ describe('<Popover />', () => {
         expect(contentAfterEsc).toBeVisible();
       });
 
-      it('should hide Popover after pressing tab when hideOnTab is true', async () => {
+      it('should hide Popover after pressing tab when hideOnBlur is true', async () => {
         expect.assertions(5);
         const user = userEvent.setup();
 

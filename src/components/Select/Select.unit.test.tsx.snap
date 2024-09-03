@@ -324,10 +324,8 @@ exports[`Select snapshot should match snapshot 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -376,10 +374,8 @@ exports[`Select snapshot should match snapshot 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -436,10 +432,8 @@ exports[`Select snapshot should match snapshot 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -895,10 +889,8 @@ exports[`Select snapshot should match snapshot before and after opening select d
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -947,10 +939,8 @@ exports[`Select snapshot should match snapshot before and after opening select d
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -1007,10 +997,8 @@ exports[`Select snapshot should match snapshot before and after opening select d
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -1467,10 +1455,8 @@ exports[`Select snapshot should match snapshot before and after opening select d
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -1519,10 +1505,8 @@ exports[`Select snapshot should match snapshot before and after opening select d
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -1579,10 +1563,8 @@ exports[`Select snapshot should match snapshot before and after opening select d
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -2566,10 +2548,8 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -2618,10 +2598,8 @@ exports[`Select snapshot should match snapshot with border 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -2678,10 +2656,8 @@ exports[`Select snapshot should match snapshot with border 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -3138,10 +3114,8 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -3190,10 +3164,8 @@ exports[`Select snapshot should match snapshot with className 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -3250,10 +3222,8 @@ exports[`Select snapshot should match snapshot with className 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -3710,10 +3680,8 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -3762,10 +3730,8 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -3822,10 +3788,8 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -4292,10 +4256,8 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -4344,10 +4306,8 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -4404,10 +4364,8 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -5394,10 +5352,8 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -5446,10 +5402,8 @@ exports[`Select snapshot should match snapshot with id 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -5506,10 +5460,8 @@ exports[`Select snapshot should match snapshot with id 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -5730,10 +5682,8 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -5782,10 +5732,8 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -5842,10 +5790,8 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -6302,10 +6248,8 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -6354,10 +6298,8 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -6414,10 +6356,8 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -7399,10 +7339,8 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -7451,10 +7389,8 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -7511,10 +7447,8 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -8495,10 +8429,8 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -8547,10 +8479,8 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -8607,10 +8537,8 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -9597,10 +9525,8 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -9649,10 +9575,8 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -9709,10 +9633,8 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -10200,10 +10122,8 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -10252,10 +10172,8 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -10312,10 +10230,8 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -10806,10 +10722,8 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -10858,10 +10772,8 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -10918,10 +10830,8 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -11991,10 +11901,8 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -12043,10 +11951,8 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -12103,10 +12009,8 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -12569,10 +12473,8 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -12621,10 +12523,8 @@ exports[`Select snapshot should match snapshot with style 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -12681,10 +12581,8 @@ exports[`Select snapshot should match snapshot with style 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
@@ -13139,10 +13037,8 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       <LazyTippy
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={false}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -13191,10 +13087,8 @@ exports[`Select snapshot should match snapshot with title 1`] = `
         <ForwardRef(TippyWrapper)
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={false}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -13251,10 +13145,8 @@ exports[`Select snapshot should match snapshot with title 1`] = `
           <Tippy
             animation={false}
             appendTo="parent"
-            hideOnBlur={false}
             hideOnClick={false}
             interactive={true}
-            isChildPopoverOpen={false}
             offset={
               Array [
                 0,
