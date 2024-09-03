@@ -16,6 +16,7 @@ import { useAvatarImage } from './Avatar.hooks';
 const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
   const {
     className,
+    buttonClassName,
     src,
     title,
     initials,
@@ -141,7 +142,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
         aria-label={containerAriaLabel}
         useNativeKeyDown
         ref={ref}
-        className={STYLE.buttonWrapper}
+        className={classnames(STYLE.buttonWrapper, buttonClassName)}
         onPress={onPress}
         {...rest}
       >
