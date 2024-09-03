@@ -39,8 +39,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -88,8 +90,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -145,8 +149,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -2239,8 +2245,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -2288,8 +2296,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -2345,8 +2355,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -4439,8 +4451,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -4488,8 +4502,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -4545,8 +4561,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -6640,8 +6658,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -6689,8 +6709,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -6746,8 +6768,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -8843,8 +8867,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -8892,8 +8918,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -8949,8 +8977,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -11043,8 +11073,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -11092,8 +11124,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -11149,8 +11183,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -13318,8 +13354,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -13367,8 +13405,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -13424,8 +13464,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -15529,8 +15571,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -15578,8 +15622,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -15635,8 +15681,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -17730,8 +17778,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
     <LazyTippy
       animation={false}
       appendTo="parent"
+      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
+      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -17780,8 +17830,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
+        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
+        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -17838,8 +17890,10 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
         <Tippy
           animation={false}
           appendTo="parent"
+          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
+          isChildPopoverOpen={false}
           offset={
             Array [
               0,

@@ -1,44 +1,42 @@
-import { waitFor } from '@testing-library/react';
-
 import { PopoverInstance } from '..';
-import { PopperBlurPluginProps } from './hideOnPopperBlurPlugin';
+import { PopperBlurPluginProps } from './hideOnBlurPlugin';
 
 const createPopoverInstance = () => {
   return {
     hide: jest.fn(),
     popper: document.createElement('div'),
     props: {
-      hideOnPopperBlur: true,
+      hideOnBlur: true,
       isChildPopoverOpen: false,
     } as PopperBlurPluginProps,
   } as unknown as PopoverInstance & { props: PopperBlurPluginProps };
 };
 
-describe('hideOnPopperBlurPlugin', () => {
+describe('hideOnBlurPlugin', () => {
   it('should return plugin correctly', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
-    expect(hideOnPopperBlurPlugin).toStrictEqual({
-      name: 'hideOnPopperBlur',
-      defaultValue: true,
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
+    expect(hideOnBlurPlugin).toStrictEqual({
+      name: 'hideOnBlur',
+      defaultValue: false,
       fn: expect.any(Function),
     });
   });
 
   it('should add focusout event listener on create', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
     const addEventListenerSpy = jest.spyOn(popoverInstance.popper, 'addEventListener');
 
-    const plugin = hideOnPopperBlurPlugin.fn(popoverInstance);
+    const plugin = hideOnBlurPlugin.fn(popoverInstance);
     plugin.onCreate(popoverInstance);
 
     expect(addEventListenerSpy).toHaveBeenCalledWith('focusout', expect.any(Function));
   });
 
   it('should hide popover on focusout when conditions are met', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
-    const plugin = hideOnPopperBlurPlugin.fn(popoverInstance);
+    const plugin = hideOnBlurPlugin.fn(popoverInstance);
     plugin.onCreate(popoverInstance);
 
     const focusOutEvent = new FocusEvent('focusout', {
@@ -50,11 +48,11 @@ describe('hideOnPopperBlurPlugin', () => {
     expect(popoverInstance.hide).toHaveBeenCalled();
   });
 
-  it('should not hide popover if hideOnPopperBlur is false', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
+  it('should not hide popover if hideOnBlur is false', async () => {
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
-    popoverInstance.props.hideOnPopperBlur = false;
-    const plugin = hideOnPopperBlurPlugin.fn(popoverInstance);
+    popoverInstance.props.hideOnBlur = false;
+    const plugin = hideOnBlurPlugin.fn(popoverInstance);
     plugin.onCreate(popoverInstance);
 
     const focusOutEvent = new FocusEvent('focusout', {
@@ -67,10 +65,10 @@ describe('hideOnPopperBlurPlugin', () => {
   });
 
   it('should not hide popover if isChildPopoverOpen is true', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
     popoverInstance.props.isChildPopoverOpen = true;
-    const plugin = hideOnPopperBlurPlugin.fn(popoverInstance);
+    const plugin = hideOnBlurPlugin.fn(popoverInstance);
     plugin.onCreate(popoverInstance);
 
     const focusOutEvent = new FocusEvent('focusout', {
@@ -83,9 +81,9 @@ describe('hideOnPopperBlurPlugin', () => {
   });
 
   it('should not hide popover if relatedTarget is inside popper', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
-    const plugin = hideOnPopperBlurPlugin.fn(popoverInstance);
+    const plugin = hideOnBlurPlugin.fn(popoverInstance);
     plugin.onCreate(popoverInstance);
 
     const relatedTarget = document.createElement('div');
@@ -101,9 +99,9 @@ describe('hideOnPopperBlurPlugin', () => {
   });
 
   it('should not hide popover if relatedTarget is null', async () => {
-    const { hideOnPopperBlurPlugin } = await import('./hideOnPopperBlurPlugin');
+    const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
-    const plugin = hideOnPopperBlurPlugin.fn(popoverInstance);
+    const plugin = hideOnBlurPlugin.fn(popoverInstance);
     plugin.onCreate(popoverInstance);
 
     const focusOutEvent = new FocusEvent('focusout', {
