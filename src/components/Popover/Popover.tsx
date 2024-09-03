@@ -74,7 +74,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     ...rest
   } = props;
 
-  if (hideOnBlur && !disableFocusLock) {
+  if ((hideOnBlur && !disableFocusLock) || (hideOnBlur && !interactive)) {
     console.warn('MRV2 Popover: This component cannot hideOnBlur when focus locked. disableFocusLock must be true if hideOnBlur is true. Additionally, hideOnBlur will only have an effect if the popover has interactive={true}');
   }
 
@@ -241,8 +241,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onTrigger,
         onUntrigger,
         onClickOutside,
-        isChildPopoverOpen,
-        hideOnBlur,
+        ...(hideOnBlur && {isChildPopoverOpen}),
       }}
       onHidden={(instance) => {
         handleOnPopoverHidden();

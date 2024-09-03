@@ -46,10 +46,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
-      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -103,10 +101,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -168,10 +164,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -272,10 +266,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               <LazyTippy
                 animation={false}
                 appendTo="parent"
-                hideOnBlur={false}
                 hideOnClick={true}
                 interactive={false}
-                isChildPopoverOpen={false}
                 offset={
                   Array [
                     0,
@@ -325,10 +317,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 <ForwardRef(TippyWrapper)
                   animation={false}
                   appendTo="parent"
-                  hideOnBlur={false}
                   hideOnClick={true}
                   interactive={false}
-                  isChildPopoverOpen={false}
                   offset={
                     Array [
                       0,
@@ -386,10 +376,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   <Tippy
                     animation={false}
                     appendTo="parent"
-                    hideOnBlur={false}
                     hideOnClick={true}
                     interactive={false}
-                    isChildPopoverOpen={false}
                     offset={
                       Array [
                         0,
@@ -549,10 +537,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
-      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -606,10 +592,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -671,10 +655,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -776,10 +758,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               <LazyTippy
                 animation={false}
                 appendTo="parent"
-                hideOnBlur={false}
                 hideOnClick={true}
                 interactive={false}
-                isChildPopoverOpen={false}
                 offset={
                   Array [
                     0,
@@ -829,10 +809,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 <ForwardRef(TippyWrapper)
                   animation={false}
                   appendTo="parent"
-                  hideOnBlur={false}
                   hideOnClick={true}
                   interactive={false}
-                  isChildPopoverOpen={false}
                   offset={
                     Array [
                       0,
@@ -890,10 +868,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   <Tippy
                     animation={false}
                     appendTo="parent"
-                    hideOnBlur={false}
                     hideOnClick={true}
                     interactive={false}
-                    isChildPopoverOpen={false}
                     offset={
                       Array [
                         0,
@@ -1053,10 +1029,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnBlur={false}
       hideOnClick={true}
       interactive={true}
-      isChildPopoverOpen={false}
       offset={
         Array [
           0,
@@ -1110,10 +1084,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnBlur={false}
         hideOnClick={true}
         interactive={true}
-        isChildPopoverOpen={false}
         offset={
           Array [
             0,
@@ -1175,10 +1147,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnBlur={false}
           hideOnClick={true}
           interactive={true}
-          isChildPopoverOpen={false}
           offset={
             Array [
               0,
@@ -1280,10 +1250,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               <LazyTippy
                 animation={false}
                 appendTo="parent"
-                hideOnBlur={false}
                 hideOnClick={true}
                 interactive={false}
-                isChildPopoverOpen={false}
                 offset={
                   Array [
                     0,
@@ -1333,10 +1301,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 <ForwardRef(TippyWrapper)
                   animation={false}
                   appendTo="parent"
-                  hideOnBlur={false}
                   hideOnClick={true}
                   interactive={false}
-                  isChildPopoverOpen={false}
                   offset={
                     Array [
                       0,
@@ -1394,10 +1360,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   <Tippy
                     animation={false}
                     appendTo="parent"
-                    hideOnBlur={false}
                     hideOnClick={true}
                     interactive={false}
-                    isChildPopoverOpen={false}
                     offset={
                       Array [
                         0,
