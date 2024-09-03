@@ -201,7 +201,7 @@ describe('<Menu />', () => {
       expect(element.getAttribute('data-shape')).toBe(itemShape);
     });
 
-    it.only('should have provided tabindex when tabIndex is provided', () => {
+    it('should have provided tabindex when tabIndex is provided', () => {
       expect.assertions(1);
 
       const element = mount(<Menu {...defaultProps} itemSize={50} tabIndex={-1} />)
