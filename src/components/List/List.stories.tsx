@@ -26,14 +26,7 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import {
-  AriaToolbar,
-  AriaToolbarItem,
-  ButtonSimple,
-  ListItemBaseSection,
-  MenuTrigger,
-  SearchInput,
-} from '..';
+import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, MenuTrigger, SearchInput } from '..';
 import { omit } from 'lodash';
 import { ListRefObject } from './List.types';
 
