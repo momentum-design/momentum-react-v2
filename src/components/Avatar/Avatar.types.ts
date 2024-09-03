@@ -31,6 +31,11 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   className?: string;
 
   /**
+   * className prop for the button, in case onPress is passed in
+   */
+  buttonClassName?: string;
+
+  /**
    * Size of the avatar
    * @default 32
    */
@@ -73,7 +78,7 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   iconOnHover?: string;
 
   /**
-   * The main description of the Avatar, which will be the first part of its aria-label. 
+   * The main description of the Avatar, which will be the first part of its aria-label.
    * e.g 'Avatar of Bob'
    */
   mainLabel?: string;

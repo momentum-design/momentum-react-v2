@@ -4,7 +4,6 @@ import React, { createRef } from 'react';
 import { MAX_INITIALS_SPACE, SIZES, STYLE, AVATAR_COLORS } from './Avatar.constants';
 import { AvatarColor, AvatarSize, PresenceType } from './Avatar.types';
 import { mountAndWait } from '../../../test/utils';
-import Icon from '../Icon';
 
 describe('Avatar', () => {
   const sampleProps = {
@@ -187,6 +186,16 @@ describe('Avatar', () => {
       const container = await mountAndWait(
         <Avatar isTyping={isTyping} typingLabel={typingLabel} title="Cisco Webex" />
       );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with buttonClassName', async () => {
+      expect.assertions(1);
+
+      const buttonClassName = 'button classname test';
+
+      const container = await mountAndWait(<Avatar buttonClassName={buttonClassName} />);
 
       expect(container).toMatchSnapshot();
     });
