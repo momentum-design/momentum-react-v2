@@ -296,7 +296,16 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     } else if (focus) {
       setIsInitlallyRoving?.(false);
     }
-  }, [direction, focus, setCurrentFocus, listSize, noLoop]);
+  }, [
+    itemIndex,
+    direction,
+    focus,
+    setCurrentFocus,
+    setDirection,
+    listSize,
+    noLoop,
+    setIsInitlallyRoving,
+  ]);
 
   return (
     <FocusRing isInset={shouldItemFocusBeInset}>
