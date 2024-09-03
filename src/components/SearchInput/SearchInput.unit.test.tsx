@@ -16,13 +16,6 @@ const testTranslations = {
   text: 'text',
 };
 
-jest.mock('uuid', () => {
-  return {
-    v4: () => 'mock-input-id',
-  };
-});
-
-
 describe('<SearchInput />', () => {
   describe('snapshot', () => {
     const mountComponent = async (component) => {
@@ -171,18 +164,19 @@ describe('<SearchInput />', () => {
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should have provided id when id is provided', async () => {
-      expect.assertions(1);
+    it('wrapper id should not be the same as the input id', async () => {
+      expect.assertions(3);
 
-      const id = 'example-id-2';
+      const wrapper = await mountAndWait(
+        <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+      );
 
-      const element = (
-        await mountAndWait(<SearchInput aria-label="search" id={id} clearButtonAriaLabel="Clear" />)
-      )
-        .find(SearchInput)
-        .getDOMNode();
+      const inputElement = wrapper.find('input');
+      const parentElement = wrapper.getDOMNode();
 
-      expect(element.id).toBe(id);
+      expect(parentElement.id).toBe('');
+      expect(inputElement.getDOMNode().id).toBe('test-ID');
+      expect(parentElement.id).not.toEqual(inputElement.getDOMNode().id);
     });
 
     it('should have provided style when style is provided', async () => {
@@ -539,19 +533,5 @@ describe('<SearchInput />', () => {
     expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
 
     dispatchEventSpy.mockRestore();
-  });
-
-  it('wrapper id should be the same as the input id when id is passed', async () => {
-    expect.assertions(2);
-
-    const wrapper = await mountAndWait(
-      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" id="mock-wrapper-id"/>
-    );
-
-    const inputElement = wrapper.find('input');
-    const parentElement = wrapper.getDOMNode();
-
-    expect(parentElement.id).toBe('mock-wrapper-id');
-    expect(inputElement.getDOMNode().id).toBe('input-id-mock-input-id');
   });
 });

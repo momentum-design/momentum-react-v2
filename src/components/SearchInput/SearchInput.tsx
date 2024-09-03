@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
-import { v4 as uuidv4 } from 'uuid';
 
 import ButtonSimple from '../ButtonSimple';
 import {
@@ -31,7 +30,6 @@ type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputEleme
 const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement => {
   const {
     className,
-    id,
     style,
     searching,
     clearButtonAriaLabel,
@@ -60,16 +58,13 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
 
   const containerRef = useRef(null);
 
-  const inputId = `input-id-${uuidv4()}`;
-
   const {
     inputProps: ariaInputProps,
     clearButtonProps,
-    labelProps: ariaLabelProps,
+    labelProps,
   } = useSearchField(props, state, inputRef);
 
   const { onKeyDown, ...otherAriaInputProps } = ariaInputProps;
-  const { htmlFor, ...otherAriaLabelProps} = ariaLabelProps;
 
   const internalOnKeyDown = (e) => {
     // When the input is empty, pressing escape should be
@@ -84,12 +79,6 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
   const inputProps = {
     ...otherAriaInputProps,
     onKeyDown: internalOnKeyDown,
-    id: inputId,
-  };
-
-  const labelProps = {
-    ...otherAriaLabelProps,
-    htmlFor: inputId,
   };
 
   const handleClick = () => {
@@ -114,7 +103,6 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
   return (
     <div
       className={classnames(className, STYLE.wrapper)}
-      id={id}
       onClick={handleClick}
       style={style}
       data-disabled={isDisabled}
@@ -123,7 +111,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
       ref={containerRef}
     >
       {label && (
-        <label htmlFor={inputId} {...labelProps}>
+        <label htmlFor={labelProps.htmlFor} {...labelProps}>
           {label}
         </label>
       )}
