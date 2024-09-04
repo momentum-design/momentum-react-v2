@@ -21,7 +21,7 @@ describe('hideOnBlurPlugin', () => {
     });
   });
 
-  it('should add focusout event listener on create', async () => {
+  it('should add focusout event listener onCreate', async () => {
     const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
     const addEventListenerSpy = jest.spyOn(popoverInstance.popper, 'addEventListener');
@@ -32,13 +32,13 @@ describe('hideOnBlurPlugin', () => {
     expect(addEventListenerSpy).toHaveBeenCalledWith('focusout', expect.any(Function));
   });
 
-  it('should remove focusout event listener on hidden', async () => {
+  it('should remove focusout event listener onDestroy', async () => {
     const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
     const removeEventListenerSpy = jest.spyOn(popoverInstance.popper, 'removeEventListener');
 
     const plugin = hideOnBlurPlugin.fn(popoverInstance);
-    plugin.onHidden(popoverInstance);
+    plugin.onDestroy(popoverInstance);
 
     expect(removeEventListenerSpy).toHaveBeenCalledWith('focusout', expect.any(Function));
   });
