@@ -23,7 +23,7 @@ export const hideOnBlurPlugin: Plugin = {
       onCreate() {
         instance.popper.addEventListener('focusout', focusOutHandler);
       },
-      onHidden() {
+      onDestroy() {
         instance.popper.removeEventListener('focusout', focusOutHandler);
       },
     };
