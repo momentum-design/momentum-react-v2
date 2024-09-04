@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, useRef, RefObject, forwardRef } from 'react';
+import React, { ReactElement, useRef, RefObject, forwardRef, useImperativeHandle } from 'react';
 import classnames from 'classnames';
 
 import ButtonSimple from '../ButtonSimple';
@@ -11,7 +11,7 @@ import {
   ARIA_ROLES,
   WARNINGS,
 } from './SearchInput.constants';
-import { Props } from './SearchInput.types';
+import { Props, SearchInputRefObject } from './SearchInput.types';
 import './SearchInput.style.scss';
 import { useSearchField } from '@react-aria/searchfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
@@ -23,11 +23,10 @@ import LoadingSpinner from '../LoadingSpinner';
 import { useProvidedRef } from '../../utils/useProvidedRef';
 
 
-type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputElement) => void);
 /**
  *  Search input
  */
-const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement => {
+const SearchInput = (props: Props, ref: RefObject<SearchInputRefObject>): ReactElement => {
   const {
     className,
     style,
@@ -54,7 +53,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
 
   const state = useSearchFieldState(props);
 
-  const inputRef = useProvidedRef<HTMLInputElement>(providedRef, null);
+  const inputRef = useProvidedRef<HTMLInputElement>(ref?.current?.inputRef, null);
   const { focusProps, isFocused } = useFocusState(props);
 
   const containerRef = useRef(null);
@@ -77,6 +76,12 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     onKeyDown(e);
     providedKeydown && providedKeydown(e);
   };
+
+    // Expose imperative methods
+    useImperativeHandle(ref, () => ({
+      inputRef,
+      containerRef
+    }));
 
   const inputProps = {
     ...otherAriaInputProps,

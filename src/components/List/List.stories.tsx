@@ -280,13 +280,18 @@ const DynamicListWrapper = () => {
     };
   }, []);
 
+  const newRef = useRef<ListRefObject>();
+
   return (
     <>
       <Text type="body-primary">
         List will update in:
         <Badge size={18} style={{ display: 'inline' }}>{`${INTERVAL_COUNT - time}`}</Badge>
       </Text>
-      <List listSize={list.length}>
+      <List ref={(ref) => {
+        console.log('@@@ list ref', ref);
+        newRef.current = ref;
+      }} listSize={list.length}>
         {list.map((item, index) => (
           <ListItemBase itemIndex={index} key={item.key} isPadded>
             {`Item ${item.data}`}

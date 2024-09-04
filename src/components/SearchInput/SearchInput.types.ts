@@ -114,3 +114,8 @@ export interface Props extends AriaSearchFieldProps {
    */
   onKeyDown?: (event: React.KeyboardEvent) => void;
 }
+
+export interface SearchInputRefObject {
+  inputRef: React.RefObject<HTMLInputElement>;
+  containerRef: React.RefObject<HTMLDivElement>;
+}
