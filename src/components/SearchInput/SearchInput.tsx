@@ -20,7 +20,6 @@ import { useFocusState } from '../../hooks/useFocusState';
 
 import Icon from '../Icon';
 import LoadingSpinner from '../LoadingSpinner';
-import { useProvidedRef } from '../../utils/useProvidedRef';
 
 
 /**
@@ -53,7 +52,7 @@ const SearchInput = (props: Props, ref: RefObject<SearchInputRefObject>): ReactE
 
   const state = useSearchFieldState(props);
 
-  const inputRef = useProvidedRef<HTMLInputElement>(ref?.current?.inputRef, null);
+  const inputRef = useRef(null);
   const { focusProps, isFocused } = useFocusState(props);
 
   const containerRef = useRef(null);
@@ -77,11 +76,11 @@ const SearchInput = (props: Props, ref: RefObject<SearchInputRefObject>): ReactE
     providedKeydown && providedKeydown(e);
   };
 
-    // Expose imperative methods
-    useImperativeHandle(ref, () => ({
-      inputRef,
-      containerRef
-    }));
+  // Expose imperative methods
+  useImperativeHandle(ref, () => ({
+    inputRef,
+    containerRef
+  }));
 
   const inputProps = {
     ...otherAriaInputProps,

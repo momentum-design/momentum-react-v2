@@ -7,6 +7,8 @@ import argTypes from './SearchInput.stories.args';
 import Documentation from './SearchInput.stories.docs.mdx';
 import React, { useState, FC, useRef } from 'react';
 import { SearchInputRefObject } from './SearchInput.types';
+import ButtonSimple from '../ButtonSimple';
+import Popover, { PopoverProps } from '../Popover';
 
 export default {
   title: 'Momentum UI/SearchInput',
@@ -67,7 +69,7 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
   const [val, setVal] = useState(initialText);
   const [filters, setFilters] = useState(initialFilters);
   const [searching, setSearching] = useState(false);
-  const inputRef = useRef<SearchInputRefObject>();
+  const newRef = useRef<SearchInputRefObject>();
 
   const handleChange = (e: string) => {
     setSearching(true);
@@ -93,9 +95,9 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
     } else {
       setVal(e);
     }
-    if (inputRef?.current?.inputRef) {
+    if (newRef?.current?.inputRef) {
       // eslint-disable-next-line no-console
-      console.log('ref value:', inputRef?.current?.inputRef?.current?.value);
+      console.log('@@@ ref value:', newRef?.current?.inputRef?.current?.value);
     }
   };
 
@@ -104,20 +106,26 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
   };
 
   return (
-    <SearchInput
-      ref={(ref) => {
-        console.log('@@@', ref);
-        inputRef.current = ref;
-      }}
-      value={val}
-      filters={filters}
-      onFiltersChange={handleFiltersChange}
-      onChange={handleChange}
-      label={initialLabel}
-      clearButtonAriaLabel='Clear'
-      {...mutatedProps}
-      searching={searching}
-    />
+    <>
+    <Popover
+      triggerComponent={<SearchInput
+        ref={(ref) => {
+          console.log('@@@', ref);
+          newRef.current = ref;
+        }}
+        value={val}
+        filters={filters}
+        onFiltersChange={handleFiltersChange}
+        onChange={handleChange}
+        label={initialLabel}
+        clearButtonAriaLabel='Clear'
+        {...mutatedProps}
+        searching={searching}
+      />}>
+        <ButtonSimple>hi</ButtonSimple>
+    </Popover>
+        
+  </>
   );
 };
 
