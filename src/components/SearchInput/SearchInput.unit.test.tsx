@@ -490,21 +490,20 @@ describe('<SearchInput />', () => {
     });
   });
 
-  it('keyDown event should be propagated to the parent when triggered by Enter key', async () => {
-    expect.assertions(3);
+  it('onKeyDown should be called when passed from parent', async () => {
+    expect.assertions(4);
 
+    const onkeydown = jest.fn();
     const wrapper = await mountAndWait(
-      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
+      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" onKeyDown={onkeydown}/>
     );
 
     const inputElement = wrapper.find('input');
     const domNode = inputElement.getDOMNode() as HTMLInputElement;
-    const parentElement = wrapper.getDOMNode();
-    const dispatchEventSpy = jest.spyOn(parentElement, 'dispatchEvent');
 
     inputElement.simulate('keydown', { key: 'Enter' });
 
-    expect(dispatchEventSpy).toHaveBeenCalledTimes(0);
+    expect(onkeydown).toHaveBeenCalledTimes(1);
 
     inputElement.simulate('change', { target: { value: 'test' } });
 
@@ -512,27 +511,11 @@ describe('<SearchInput />', () => {
 
     inputElement.simulate('keydown', { key: 'Enter' });
 
-    expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
-
-    dispatchEventSpy.mockRestore();
-  });
-
-  it('keyDown event should be propagated to the parent when triggered by Escape key', async () => {
-    expect.assertions(1);
-
-    const wrapper = await mountAndWait(
-      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" />
-    );
-
-    const inputElement = wrapper.find('input');
-    const parentElement = wrapper.getDOMNode();
-    const dispatchEventSpy = jest.spyOn(parentElement, 'dispatchEvent');
+    expect(onkeydown).toHaveBeenCalledTimes(2);
 
     inputElement.simulate('keydown', { key: 'Escape' });
 
-    expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
-
-    dispatchEventSpy.mockRestore();
+    expect(onkeydown).toHaveBeenCalledTimes(3);
   });
 
   it('should call provided onKeyDown prop', async () => {
