@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react';
 import ListItemBaseSection from '../ListItemBaseSection';
 import ButtonPill from '../ButtonPill';
 import TreeNodeBase from '.';
-import { NODE_ID_ATTRIBUTE_NAME, NODE_ID_DATA_NAME, STYLE } from './TreeNodeBase.constants';
+import { NODE_ID_ATTRIBUTE_NAME, STYLE } from './TreeNodeBase.constants';
 import * as treeUtils from '../Tree/Tree.utils';
 import userEvent from '@testing-library/user-event';
 import Tree, { TreeContextValue, TreeNode } from '../Tree';
@@ -15,11 +15,19 @@ import { convertNestedTree2MappedTree, mapTree, TreeContext } from '../Tree/Tree
 
 const getMockedTreeContext = (activeNodeId: string): TreeContextValue => ({
   activeNodeId,
-  getNodeProps: jest.fn(),
-  getNodeGroupProps: jest.fn(),
+  selectableNodes: 'any',
+  getNodeAriaProps: jest.fn().mockReturnValue({}),
   getNodeDetails: jest.fn().mockReturnValue({ isHidden: false }),
   setActiveNodeId: jest.fn(),
   toggleTreeNode: jest.fn(),
+  itemSelection: {
+    selectedItems: [],
+    selectionMode: 'none',
+    isSelected: jest.fn(),
+    toggle: jest.fn(),
+    update: jest.fn(),
+    clear: jest.fn(),
+  },
 });
 
 const getSampleTree = () => {
@@ -159,13 +167,10 @@ describe('TreeNodeBase', () => {
     it('should match snapshot with isSelected', () => {
       expect.assertions(1);
 
-      const isSelected = true;
+      treeContextMock.itemSelection.selectionMode = 'single';
+      treeContextMock.itemSelection.isSelected = jest.fn().mockReturnValue(true);
 
-      container = mount(
-        <TreeNodeBase nodeId="42" isSelected={isSelected}>
-          {() => 'Test'}
-        </TreeNodeBase>
-      );
+      container = mount(<TreeNodeBase nodeId="42">{() => 'Test'}</TreeNodeBase>);
 
       expect(container).toMatchSnapshot();
     });
@@ -211,7 +216,7 @@ describe('TreeNodeBase', () => {
             index: 0,
             isHidden: false,
             isLeaf: true,
-            isOpen: false,
+            isOpen: true,
             level: 1,
             parent: 'root',
           },
@@ -223,7 +228,7 @@ describe('TreeNodeBase', () => {
             index: 1,
             isHidden: false,
             isLeaf: true,
-            isOpen: false,
+            isOpen: true,
             level: 1,
             parent: 'root',
           },
@@ -254,7 +259,7 @@ describe('TreeNodeBase', () => {
       expect(container).toMatchSnapshot();
       expect(container.find('div[role="group"]').length).toBe(1);
       expect(container.find('div[role="group"]').props()).toEqual({
-        'aria-owns': '1 2',
+        'aria-owns': 'md-tree-node-1 md-tree-node-2',
         className: 'md-tree-node-base-group',
         role: 'group',
       });
@@ -463,13 +468,10 @@ describe('TreeNodeBase', () => {
     it('should have provided active class when isSelected is provided', () => {
       expect.assertions(2);
 
-      const isSelected = true;
+      treeContextMock.itemSelection.selectionMode = 'single';
+      treeContextMock.itemSelection.isSelected = jest.fn().mockReturnValue(true);
 
-      container = mount(
-        <TreeNodeBase nodeId="42" isSelected={isSelected}>
-          {() => 'Test'}
-        </TreeNodeBase>
-      );
+      container = mount(<TreeNodeBase nodeId="42">{() => 'Test'}</TreeNodeBase>);
 
       const element = container.find(TreeNodeBase).getDOMNode();
 
