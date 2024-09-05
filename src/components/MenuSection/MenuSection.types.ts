@@ -18,16 +18,4 @@ export interface Props<T> {
    * Handler to be called when this element is selected
    */
   onAction?: (key: Key) => void;
-
-  /**
-   * Determines the orientation of the list
-   *
-   * The orientation of the list change the keyboard navigation in the list:
-   *
-   * - vertical: up and down arrow keys
-   * - horizontal: left and right arrow keys
-   *
-   * @default 'vertical'
-   */
-  orientation?: ListOrientation
 }

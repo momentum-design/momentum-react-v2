@@ -15,8 +15,8 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
 };
 
 export type IUseOrientationBasedKeyboardNavigationProps = {
-  listSize: number;
-  orientation: ListOrientation;
+  listSize?: number;
+  orientation?: ListOrientation;
   noLoop?: boolean;
   contextProps?: {
     shouldFocusOnPress?: boolean;
