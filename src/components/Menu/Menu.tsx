@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
+import { useKeyboard } from '@react-aria/interactions';
 import { Node } from '@react-types/shared';
 import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
 import classnames from 'classnames';
@@ -13,7 +14,6 @@ import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import { ListContext } from '../List/List.utils';
 import { DEFAULTS as LIST_DEFAULTS } from '../List/List.constants';
-import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 
 
 export const MenuContext = React.createContext<MenuContextValue>({});
@@ -55,13 +55,11 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
 
   const { menuProps } = useMenu(_props, state, ref);
   const itemArray = Array.from(state.collection.getKeys());
-  const listSize = itemArray.length;
-  const {keyboardProps, getContext} = useOrientationBasedKeyboardNavigation({listSize, orientation});
 
   const renderItem = useCallback(
-    <T extends object>(item: Node<T>, state: TreeState<T>, index: number) => {
+    <T extends object>(item: Node<T>, state: TreeState<T>) => {
       if (item.type === 'section') {
-        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} orientation={orientation} />;
+        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice
@@ -70,7 +68,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
         }
 
         let menuItem = (
-          <MenuItem itemIndex={index} key={item.key} item={item} state={state} onAction={_props.onAction} />
+          <MenuItem key={item.key} item={item} state={state} onAction={_props.onAction} />
         );
 
         if (item.wrapper) {
@@ -82,6 +80,28 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     },
     [state]
   );
+  const { keyboardProps } = useKeyboard({
+    onKeyDown: (e) => {
+      switch (e.key) {
+        case 'Escape':
+          e.continuePropagation();
+          break;
+
+        case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
+          e.preventDefault();
+          menuProps.onKeyDown({...e, key: 'ArrowUp'});
+          break;
+
+        case orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
+          e.preventDefault();
+          menuProps.onKeyDown({...e, key: 'ArrowDown'});
+          break;
+
+        default:
+          break;
+      }
+    },
+  }); 
 
   // needs to be removed because when used in Menu Trigger, it will
   // label it by the triggerComponent's id, and that doesn't really make
@@ -92,7 +112,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
   // for example when Menu is inside a list row
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
-      <ListContext.Provider value={getContext()}>
+      <ListContext.Provider value={{}}>
         <ul
           className={classnames(className, STYLE.wrapper)}
           id={id}
@@ -104,9 +124,9 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
           {...keyboardProps}
           tabIndex={tabIndex || menuProps.tabIndex}
         >
-          {itemArray.map((key, index) => {
+          {itemArray.map((key) => {
             const item = state.collection.getItem(key) as Node<T>;
-            return renderItem(item, state, index);
+            return renderItem(item, state);
           })}
         </ul>
       </ListContext.Provider>
