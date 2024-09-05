@@ -132,6 +132,16 @@ describe('ListItemBase', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with allowTextSelection=true', () => {
+      expect.assertions(1);
+
+      const allowTextSelection = true;
+
+      container = mount(<ListItemBase allowTextSelection={allowTextSelection}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -288,27 +298,51 @@ describe('ListItemBase', () => {
       expect(element.getAttribute('data-interactive')).toBe(`${interactive}`);
       expect(element.getAttribute('tabIndex')).toBe('-1');
     });
+
+    it.each([true, false])('should have provided data-allow-text-select when allowTextSelection is %s', () => {
+      expect.assertions(1);
+
+      const allowTextSelection = false;
+
+      container = mount(<ListItemBase allowTextSelection={allowTextSelection}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.getAttribute('data-allow-text-select')).toBe(`${allowTextSelection}`);
+    });
   });
 
   describe('actions', () => {
-    it('should handle mouse press events', () => {
+    it('should handle mouse press events', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
+  
+      const user = userEvent.setup();
+  
+      render(<ListItemBase data-testid="list-item-1" key="1" itemIndex={0} onPress={mockCallback} />);
+  
+      const listItemBase = await screen.findByTestId('list-item-1');
 
-      const component = mount(<ListItemBase onPress={mockCallback} />).find(ListItemBase);
-
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-        altKey: false,
-      });
+      await user.click(listItemBase);
 
       expect(mockCallback).toBeCalledTimes(1);
+    });
+
+    it('should not handle mouse press events when allowTextSelection is true', async () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+  
+      const user = userEvent.setup();
+
+      render(<ListItemBase data-testid="list-item-1" key="1" itemIndex={0} onPress={mockCallback} allowTextSelection={true} />);
+  
+      const listItemBase = await screen.findByTestId('list-item-1');
+
+      await user.click(listItemBase);
+
+      expect(mockCallback).not.toBeCalled();
     });
   });
 

@@ -43,6 +43,7 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
       >
         <li
           className="md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-disabled={false}
           data-interactive={true}
           data-padded={true}
