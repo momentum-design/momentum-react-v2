@@ -91,4 +91,9 @@ export interface Props extends PressEvents, ContextMenu {
    * lang attribute if necessary.
    */
   lang?: string;
+
+  /**
+   * Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.
+   */
+    allowTextSelection?: boolean;
 }

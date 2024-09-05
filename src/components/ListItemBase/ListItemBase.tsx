@@ -47,6 +47,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     interactive = DEFAULTS.INTERACTIVE,
     onPress,
     lang,
+    allowTextSelection = DEFAULTS.ALLOW_TEXT_SELECTION,
     ...rest
   } = props;
 
@@ -128,7 +129,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   });
 
   // Prevent list item update because it can cause state lost in the focused component e.g. Menu
-  const listItemPressProps = {
+  const listItemPressProps = allowTextSelection ? {...rest} : {
     ...pressProps,
     onKeyDown: (event) => {
       if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
@@ -282,6 +283,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         data-padded={isPadded}
         data-shape={shape}
         data-interactive={interactive}
+        data-allow-text-select={allowTextSelection}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
         role={role}
         lang={lang}

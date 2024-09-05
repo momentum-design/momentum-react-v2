@@ -10,6 +10,10 @@
   box-sizing: border-box;
   outline: none;
 
+  &[data-allow-text-select='true'] {
+    user-select: text;
+  }
+
   &[data-interactive='true'] {
     cursor: pointer;
 

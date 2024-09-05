@@ -23,6 +23,7 @@ exports[`<List /> snapshot should match snapshot 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -63,6 +64,7 @@ exports[`<List /> snapshot should match snapshot 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -118,6 +120,7 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -158,6 +161,7 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -214,6 +218,7 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -254,6 +259,7 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -310,6 +316,7 @@ exports[`<List /> snapshot should match snapshot with role 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -350,6 +357,7 @@ exports[`<List /> snapshot should match snapshot with role 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -414,6 +422,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
@@ -454,6 +463,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
         >
           <li
             className="md-list-item-base-wrapper"
+            data-allow-text-select={false}
             data-disabled={false}
             data-interactive={true}
             data-padded={false}
