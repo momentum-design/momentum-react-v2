@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { MutableRefObject, useContext } from 'react';
 import {
   TreeIdNodeMap,
   TreeNodeRecord,
@@ -9,6 +9,8 @@ import {
   TreeNodeId,
   TreeRoot,
 } from './Tree.types';
+import { NODE_ID_ATTRIBUTE_NAME } from '../TreeNodeBase/TreeNodeBase.constants';
+import { DEFAULTS } from './Tree.constants';
 
 export const TreeContext = React.createContext<TreeContextValue>(null);
 
@@ -228,10 +230,11 @@ export const convertNestedTree2MappedTree = (tree: TreeRoot): TreeIdNodeMap => {
     }
 
     const children = parentNode.children.map((n) => n.id);
+    const isOpen = parentNode.isOpenByDefault ?? true;
 
     map.set(parentNode.id, {
       id: parentNode.id,
-      isOpen: !!parentNode.isOpenByDefault,
+      isOpen,
       level,
       index,
       children,
@@ -246,7 +249,7 @@ export const convertNestedTree2MappedTree = (tree: TreeRoot): TreeIdNodeMap => {
         index,
         level: level + 1,
         parentId: parentNode.id,
-        isHidden: isHidden || !parentNode.isOpenByDefault,
+        isHidden: isHidden || !isOpen,
       })
     );
   }
@@ -375,4 +378,47 @@ export const mapTree = <T>(
   }
 
   return result;
+};
+
+/**
+ * Check if the active node is visible in the tree.
+ *
+ * @param treeRef DOM reference of the tree
+ * @param activeNodeId The id of the active node
+ */
+export const isActiveNodeInDOM = (
+  treeRef: MutableRefObject<HTMLDivElement>,
+  activeNodeId: TreeNodeId
+): boolean => {
+  return !!treeRef.current.querySelector(`[${NODE_ID_ATTRIBUTE_NAME}="${activeNodeId}"]`);
+};
+
+/**
+ * Get the first active node id in the tree.
+ *
+ * @param tree
+ * @param excludeTreeRoot
+ */
+export const getFistActiveNode = (tree: TreeIdNodeMap, excludeTreeRoot: boolean): TreeNodeId => {
+  const rootId = getTreeRootId(tree);
+  if (rootId) {
+    const treeNode = tree.get(rootId);
+    if (excludeTreeRoot && treeNode.isOpen && treeNode.children[0]) {
+      return treeNode.children[0];
+    }
+    if (!excludeTreeRoot) {
+      return rootId;
+    }
+  }
+  return undefined;
+};
+
+/**
+ * Get the DOM id of the tree node.
+ *
+ * Node id prefixed with a constant to ensure the id really used only once in the DOM
+ * @param id
+ */
+export const getNodeDOMId = (id: TreeNodeId): string => {
+  return `${DEFAULTS.NODE_ID_PREFIX}-${id}`;
 };

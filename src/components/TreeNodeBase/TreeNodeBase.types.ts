@@ -47,12 +47,6 @@ export interface Props
   style?: CSSProperties;
 
   /**
-   * Determines if this item is selected
-   * @default false
-   */
-  isSelected?: boolean;
-
-  /**
    * Determines if this item is padded
    * @default false
    */

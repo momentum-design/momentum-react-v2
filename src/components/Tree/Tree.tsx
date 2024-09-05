@@ -1,20 +1,33 @@
-import React, { FC, useRef, useState, useCallback, HTMLAttributes, useEffect } from 'react';
+import React, {
+  useRef,
+  useState,
+  useCallback,
+  useMemo,
+  useImperativeHandle,
+  forwardRef,
+  ForwardedRef,
+} from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Tree.constants';
-import { TreeIdNodeMap, Props, TreeContextValue, TreeNavKeyCodes, TreeNodeId } from './Tree.types';
+import { TreeIdNodeMap, Props, TreeContextValue, TreeNodeId, TreeRefObject } from './Tree.types';
 import './Tree.style.scss';
 import {
   convertNestedTree2MappedTree,
+  getFistActiveNode,
   getNextActiveNode,
+  getNodeDOMId,
+  isActiveNodeInDOM,
   toggleTreeNodeRecord,
   TreeContext,
 } from './Tree.utils';
 import { useKeyboard } from '@react-aria/interactions';
 import { useVirtualTreeNavigation } from './Tree.hooks';
 import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
+import { usePrevious } from '../../hooks/usePrevious';
+import { useItemSelected } from '../../hooks/useItemSelected';
 
-const Tree: FC<Props> = (props: Props) => {
+const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   const {
     className,
     id,
@@ -25,34 +38,59 @@ const Tree: FC<Props> = (props: Props) => {
     isRenderedFlat = DEFAULTS.IS_RENDERED_FLAT,
     excludeTreeRoot = DEFAULTS.EXCLUDE_TREE_ROOT,
     virtualTreeConnector,
+    selectionMode = DEFAULTS.SELECTION_MODE,
+    selectableNodes = DEFAULTS.SELECTABLE_NODES,
+    selectedByDefault,
+    onSelectionChange,
+    isRequired = DEFAULTS.IS_REQUIRED,
     ...rest
   } = props;
 
-  const ref = useRef<HTMLDivElement>();
+  const treeRef = useRef<HTMLDivElement>();
 
+  const itemSelection = useItemSelected<TreeNodeId>({
+    selectionMode,
+    selectedByDefault,
+    onSelectionChange,
+    isRequired,
+  });
   const [tree, setTree] = useState<TreeIdNodeMap>(convertNestedTree2MappedTree(treeStructure));
   const [activeNodeId, setActiveNodeId] = useState<TreeNodeId | undefined>(
-    excludeTreeRoot ? treeStructure?.children?.[0]?.id : treeStructure?.id
+    getFistActiveNode(tree, excludeTreeRoot)
   );
 
+  const previousTree = usePrevious(tree);
+
   useDidUpdateEffect(() => {
-    setTree(convertNestedTree2MappedTree(treeStructure));
-    setActiveNodeId(excludeTreeRoot ? treeStructure.children?.[0]?.id : treeStructure?.id);
+    const newTree = convertNestedTree2MappedTree(treeStructure);
+    setTree(newTree);
+    // Find the closest node to the last active node in the new tree
+    let newActiveNodeId = activeNodeId;
+    while (newActiveNodeId) {
+      if (newTree.has(newActiveNodeId) && !newTree.get(newActiveNodeId).isHidden) break;
+      newActiveNodeId = previousTree.get(newActiveNodeId)?.parent;
+    }
+    // Fallback to the first node
+    if (!newActiveNodeId) {
+      newActiveNodeId = getFistActiveNode(newTree, excludeTreeRoot);
+    }
+    setActiveNodeId(newActiveNodeId);
   }, [treeStructure]);
 
   const isVirtualTree = virtualTreeConnector !== undefined;
 
   // Handle DOM changes for virtual tree
-  useVirtualTreeNavigation({ virtualTreeConnector, treeRef: ref, activeNodeId });
+  useVirtualTreeNavigation({ virtualTreeConnector, treeRef: treeRef, activeNodeId });
 
   const toggleTreeNode = useCallback(
     async (id: TreeNodeId, isOpen?: boolean): Promise<void> => {
       const newOpenState = isOpen !== undefined ? isOpen : !tree.get(id).isOpen;
 
       if (isVirtualTree) {
+        if (!isActiveNodeInDOM(treeRef, activeNodeId)) {
+          virtualTreeConnector.scrollToNode?.(id);
+        }
         await virtualTreeConnector.setNodeOpen?.(id, newOpenState);
-        // Call scroll to every time so it scrolls to parent when the user presses left arrow in vtree
-        virtualTreeConnector.scrollToNode?.(id);
       }
 
       setTree((prevTree) => toggleTreeNodeRecord(id, prevTree, newOpenState));
@@ -60,19 +98,10 @@ const Tree: FC<Props> = (props: Props) => {
     [tree, isVirtualTree]
   );
 
-  const getNodeDetails = useCallback(
-    (id: TreeNodeId) => {
-      const node = tree.get(id);
-      if (!node) {
-        console.warn(`Tree node not found for id: "${id}".`);
-      }
-      return node;
-    },
-    [tree]
-  );
+  const getNodeDetails = useCallback((id: TreeNodeId) => tree.get(id), [tree]);
 
-  const getNodeProps = useCallback(
-    (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {
+  const getNodeAriaProps = useCallback(
+    (id: TreeNodeId): ReturnType<TreeContextValue['getNodeAriaProps']> => {
       const node = tree.get(id);
       if (!node) return {};
 
@@ -80,59 +109,74 @@ const Tree: FC<Props> = (props: Props) => {
       const isRoot = parent === undefined;
 
       // tabindex depends on the treeNodeBase params as well
-      const props = {
-        id: node.id.toString(),
+      const nodeProps = {
+        id: getNodeDOMId(node.id),
         'aria-setsize': isRoot ? 1 : parent.children.length,
-        'aria-level': node.level + 1,
+        'aria-level': node.level + (excludeTreeRoot ? 0 : 1),
         'aria-posinset': node.index + 1,
         role: 'treeitem',
       };
-      if (!node.isLeaf) {
-        props['aria-expanded'] = (!!node.isOpen).toString();
+      // Root level node(s) should not have aria-level attribute and
+      if (node.level > (excludeTreeRoot ? 1 : 0)) {
+        // level should start with 1 under the root level nodes
+        nodeProps['aria-level'] = node.level - (excludeTreeRoot ? 1 : 0);
       }
-      return props;
-    },
-    [tree]
-  );
-
-  const getNodeGroupProps = useCallback(
-    (id: TreeNodeId): Partial<HTMLAttributes<HTMLElement>> => {
-      const node = tree.get(id);
-      if (!node) return {};
+      if (!node.isLeaf) {
+        nodeProps['aria-expanded'] = (!!node.isOpen).toString();
+      }
+      const groupProps = {
+        role: 'group',
+        'aria-owns': node.children.map(getNodeDOMId).join(' '),
+      };
 
       return {
-        role: 'group',
-        'aria-owns': node.children.join(' '),
+        nodeProps,
+        groupProps,
       };
     },
     [tree]
   );
 
-  const getContext = useCallback(
+  const context = useMemo(
     (): TreeContextValue => ({
-      getNodeProps,
-      getNodeGroupProps,
+      getNodeAriaProps,
       getNodeDetails,
       isRenderedFlat,
       shouldNodeFocusBeInset,
       activeNodeId,
       setActiveNodeId,
       toggleTreeNode,
+      selectableNodes,
+      itemSelection,
     }),
     [
       activeNodeId,
-      getNodeGroupProps,
-      getNodeProps,
+      getNodeAriaProps,
       getNodeDetails,
       isRenderedFlat,
       shouldNodeFocusBeInset,
       toggleTreeNode,
+      itemSelection,
+      selectableNodes,
     ]
+  );
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      treeRef,
+      setActiveNodeId,
+      toggleTreeNode,
+      clearSelection: itemSelection.clear,
+      updateSelection: itemSelection.update,
+      toggleSelection: itemSelection.toggle,
+    }),
+    [setActiveNodeId, toggleTreeNode, itemSelection]
   );
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
-      const key = evt.key as TreeNavKeyCodes;
+      const key = evt.key;
       switch (key) {
         case 'ArrowUp':
         case 'ArrowDown':
@@ -140,17 +184,28 @@ const Tree: FC<Props> = (props: Props) => {
         case 'ArrowLeft': {
           evt.preventDefault();
           if (activeNodeId) {
-            const nextActiveNode = getNextActiveNode(
+            const next = getNextActiveNode(
               tree,
               activeNodeId,
               key,
               excludeTreeRoot,
               toggleTreeNode
             );
-            setActiveNodeId(nextActiveNode);
+            setActiveNodeId(next);
           }
           break;
         }
+        case 'Space': // Space
+          if (
+            selectionMode !== 'none' &&
+            activeNodeId &&
+            (selectableNodes === 'any' || tree.get(activeNodeId)?.isLeaf)
+          ) {
+            evt.preventDefault();
+            itemSelection.toggle(activeNodeId);
+          }
+          break;
+
         default:
           evt.continuePropagation();
           break;
@@ -159,10 +214,10 @@ const Tree: FC<Props> = (props: Props) => {
   });
 
   return (
-    <TreeContext.Provider value={getContext()}>
+    <TreeContext.Provider value={context}>
       <div
         className={classnames(className, STYLE.wrapper)}
-        ref={ref}
+        ref={treeRef}
         style={style}
         id={id}
         role="tree"
@@ -173,6 +228,6 @@ const Tree: FC<Props> = (props: Props) => {
       </div>
     </TreeContext.Provider>
   );
-};
+});
 
 export default Tree;

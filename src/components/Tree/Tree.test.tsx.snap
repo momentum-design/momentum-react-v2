@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tree /> snapshot should match snapshot 1`] = `
-<Tree
+<ForwardRef
   treeStructure={
     Object {
       "children": Array [
@@ -26,11 +26,11 @@ exports[`<Tree /> snapshot should match snapshot 1`] = `
     onKeyDown={[Function]}
     role="tree"
   />
-</Tree>
+</ForwardRef>
 `;
 
 exports[`<Tree /> snapshot should match snapshot with className 1`] = `
-<Tree
+<ForwardRef
   className="example-class"
   treeStructure={
     Object {
@@ -56,11 +56,11 @@ exports[`<Tree /> snapshot should match snapshot with className 1`] = `
     onKeyDown={[Function]}
     role="tree"
   />
-</Tree>
+</ForwardRef>
 `;
 
 exports[`<Tree /> snapshot should match snapshot with id 1`] = `
-<Tree
+<ForwardRef
   id="example-id"
   treeStructure={
     Object {
@@ -87,11 +87,11 @@ exports[`<Tree /> snapshot should match snapshot with id 1`] = `
     onKeyDown={[Function]}
     role="tree"
   />
-</Tree>
+</ForwardRef>
 `;
 
 exports[`<Tree /> snapshot should match snapshot with style 1`] = `
-<Tree
+<ForwardRef
   style={
     Object {
       "color": "pink",
@@ -126,11 +126,11 @@ exports[`<Tree /> snapshot should match snapshot with style 1`] = `
       }
     }
   />
-</Tree>
+</ForwardRef>
 `;
 
 exports[`<Tree /> snapshot should match snapshot with style 2`] = `
-<Tree
+<ForwardRef
   style={
     Object {
       "color": "pink",
@@ -165,11 +165,11 @@ exports[`<Tree /> snapshot should match snapshot with style 2`] = `
       }
     }
   />
-</Tree>
+</ForwardRef>
 `;
 
 exports[`<Tree /> snapshot should match snapshot with style 3`] = `
-<Tree
+<ForwardRef
   style={
     Object {
       "color": "pink",
@@ -204,5 +204,5 @@ exports[`<Tree /> snapshot should match snapshot with style 3`] = `
       }
     }
   />
-</Tree>
+</ForwardRef>
 `;

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import Text from '../Text';
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -14,8 +14,9 @@ import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import MenuTrigger from '../MenuTrigger';
 import ButtonCircle from '../ButtonCircle';
-import { TreeNodeRecord } from './Tree.types';
+import { TreeNodeRecord, TreeRefObject } from './Tree.types';
 import ButtonPill from '../ButtonPill';
+import Flex from '../Flex';
 
 // prettier-ignore
 const exampleTree =
@@ -189,4 +190,58 @@ const DynamicTree = Template(() => {
   );
 }).bind({});
 
-export { Example, WithRoot, TreeWithScroll, DynamicTree };
+const SelectionTemplate = (props: Partial<TreeProps>) =>
+  Template(() => {
+    const ref = useRef<TreeRefObject>();
+    const [selected, setSelected] = useState('');
+
+    const onSelectHandler = (ids: Array<string>) => setSelected(ids.join(', '));
+
+    return (
+      <>
+        <Flex alignItems={'center'} xgap={'1rem'}>
+          <ButtonPill onPress={() => ref.current.clearSelection()}>Clear Selection</ButtonPill>
+          <Text>Selected nodes: [{selected}]</Text>
+        </Flex>
+        <hr />
+        <Tree
+          ref={ref as any}
+          treeStructure={exampleTree}
+          isRenderedFlat={true}
+          shouldNodeFocusBeInset={true}
+          onSelectionChange={onSelectHandler}
+          {...props}
+        >
+          {mapTree(exampleTreeMap, (node) => (
+            <ExampleTreeNode key={node.id.toString()} node={node} />
+          ))}
+        </Tree>
+      </>
+    );
+  }).bind({});
+
+const SingleSelectLeafNodesOnly = SelectionTemplate({
+  selectionMode: 'single',
+  selectableNodes: 'leafOnly',
+});
+
+const SingleSelectAnyNodesRequired = SelectionTemplate({
+  selectionMode: 'single',
+  selectableNodes: 'any',
+  isRequired: true,
+});
+
+const MultiSelectLeafNodesOnly = SelectionTemplate({
+  selectionMode: 'multiple',
+  selectableNodes: 'leafOnly',
+});
+
+export {
+  Example,
+  WithRoot,
+  TreeWithScroll,
+  DynamicTree,
+  SingleSelectLeafNodesOnly,
+  SingleSelectAnyNodesRequired,
+  MultiSelectLeafNodesOnly,
+};
