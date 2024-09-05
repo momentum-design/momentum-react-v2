@@ -39,6 +39,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     ariaControls,
     isCombobox = DEFAULTS.ISCOMBOBOX,
     isComboboxExpanded,
+    onKeyDown: providedKeydown,
   } = props;
 
   if (isCombobox && isComboboxExpanded === undefined) {
@@ -74,6 +75,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     }
 
     onKeyDown(e);
+    providedKeydown && providedKeydown(e);
   };
 
   const inputProps = {
