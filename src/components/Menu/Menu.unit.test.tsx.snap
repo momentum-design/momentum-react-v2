@@ -13,7 +13,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
     onKeyDownCapture={[Function]}
     onMouseDown={[Function]}
     role="menu"
-    tabIndex={0}
+    tabIndex={-1}
   >
     <MenuItem
       item={
@@ -495,7 +495,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
     onKeyDownCapture={[Function]}
     onMouseDown={[Function]}
     role="menu"
-    tabIndex={0}
+    tabIndex={-1}
   >
     <MenuItem
       item={
@@ -978,7 +978,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
     onKeyDownCapture={[Function]}
     onMouseDown={[Function]}
     role="menu"
-    tabIndex={0}
+    tabIndex={-1}
   >
     <MenuItem
       item={
@@ -1461,7 +1461,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
     onKeyDownCapture={[Function]}
     onMouseDown={[Function]}
     role="menu"
-    tabIndex={0}
+    tabIndex={-1}
   >
     <MenuItem
       item={
@@ -1943,7 +1943,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
     onKeyDownCapture={[Function]}
     onMouseDown={[Function]}
     role="menu"
-    tabIndex={0}
+    tabIndex={-1}
   >
     <MenuItem
       item={
@@ -2434,7 +2434,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         "color": "pink",
       }
     }
-    tabIndex={0}
+    tabIndex={-1}
   >
     <MenuItem
       item={

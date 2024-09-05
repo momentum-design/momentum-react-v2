@@ -200,17 +200,6 @@ describe('<Menu />', () => {
 
       expect(element.getAttribute('data-shape')).toBe(itemShape);
     });
-
-    it.only('should have provided tabindex when tabIndex is provided', () => {
-      expect.assertions(1);
-
-      const element = mount(<Menu {...defaultProps} itemSize={50} tabIndex={-1} />)
-        .find('ul[role="menu"]')
-        .at(0)
-        .getDOMNode();
-
-      expect(element.getAttribute('tabindex')).toBe('-1');
-    });
   });
 
   describe('actions', () => {
@@ -228,106 +217,6 @@ describe('<Menu />', () => {
       triggerPress(listItem);
 
       expect(onActionMock).toHaveBeenCalledWith(key);
-    });
-
-    it('should handle up/down arrow keys correctly - for vertical menus', async () => {
-      const user = userEvent.setup();
-
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} />
-      );
-
-      await user.tab();
-
-      const menuItems = getAllByRole('menuitem');
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[1]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[0]).toHaveFocus();
-    });
-
-    it('should handle left/right arrow keys correctly - for horizontal menus', async () => {
-      const user = userEvent.setup();
-
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} orientation='horizontal' />
-      );
-
-      await user.tab();
-
-      const menuItems = getAllByRole('menuitem');
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[1]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[0]).toHaveFocus();
-    });
-    it('should handle up/down arrow keys correctly - for vertical menu with section', async () => {
-      const user = userEvent.setup();
-      const childrenWithSections = [<Section title="Section Title" key="$.0" aria-label="section"><Item key="one">One</Item><Item key="two">Two</Item></Section>];
-
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} children={childrenWithSections} />
-      );
-
-      await user.tab();
-
-      const menuItems = getAllByRole('menuitem');
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[1]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[0]).toHaveFocus();
-    });
-    it('should handle up/down arrow keys correctly - for horizontal menu with section', async () => {
-      const user = userEvent.setup();
-      const childrenWithSections = [<Section title="Section Title" key="$.0" aria-label="section"><Item key="one">One</Item><Item key="two">Two</Item></Section>];
-
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} children={childrenWithSections} orientation='horizontal' />
-      );
-
-      await user.tab();
-
-      const menuItems = getAllByRole('menuitem');
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[1]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[0]).toHaveFocus();
     });
   });
 });

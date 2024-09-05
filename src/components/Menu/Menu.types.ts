@@ -59,7 +59,6 @@ export interface Props<T> extends AriaMenuProps<T> {
    * @default 'vertical'
    */
   orientation?: ListOrientation
-  tabIndex?: number;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
