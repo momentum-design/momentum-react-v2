@@ -1,0 +1,38 @@
+.md-tab-group-wrapper {
+  align-items: center;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+
+  &[data-orientation='horizontal'] {
+    flex-direction: row;
+
+    &[data-spaced='true'] {
+      > * {
+        margin: 0.25em;
+  
+        &:first-child {
+          margin-left: 0.3em;
+        }
+  
+        &:last-child {
+          margin-right: 0.3em;
+        }
+      }
+    }
+  }
+
+  &[data-orientation='vertical'] {
+    flex-direction: column;
+    
+    &[data-spaced='true'] {
+      > * {
+        margin: 0 0 0.125rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
