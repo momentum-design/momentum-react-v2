@@ -43,6 +43,8 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     style,
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
+    hideOnBlur = DEFAULTS.HIDE_ON_BLUR,
+    isChildPopoverOpen = DEFAULTS.IS_CHILD_POPOVER_OPEN,
     addBackdrop = DEFAULTS.ADD_BACKDROP,
     focusBackOnTrigger: focusBackOnTriggerFromProps,
     closeButtonPlacement = DEFAULTS.CLOSE_BUTTON_PLACEMENT,
@@ -71,6 +73,12 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     'aria-label': ariaLabel,
     ...rest
   } = props;
+
+  if ((hideOnBlur && !disableFocusLock) || (hideOnBlur && !interactive)) {
+    console.warn(
+      'MRV2 Popover: This component cannot hideOnBlur when focus locked. disableFocusLock must be true if hideOnBlur is true. Additionally, hideOnBlur will only have an effect if the popover has interactive={true}'
+    );
+  }
 
   const focusBackOnTrigger =
     focusBackOnTriggerFromProps ??
@@ -220,7 +228,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       }}
       animation={false}
       delay={delay}
-      plugins={addTippyPlugins(hideOnEsc, addBackdrop)}
+      plugins={addTippyPlugins(hideOnEsc, hideOnBlur, addBackdrop)}
       // add arrow height to default offset if arrow is shown:
       offset={[offsetSkidding, showArrow ? ARROW_HEIGHT + offsetDistance : offsetDistance]}
       {...{
@@ -235,6 +243,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onTrigger,
         onUntrigger,
         onClickOutside,
+        ...(hideOnBlur && { isChildPopoverOpen }),
       }}
       onHidden={(instance) => {
         handleOnPopoverHidden();

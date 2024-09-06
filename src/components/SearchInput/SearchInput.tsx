@@ -22,7 +22,6 @@ import Icon from '../Icon';
 import LoadingSpinner from '../LoadingSpinner';
 import { useProvidedRef } from '../../utils/useProvidedRef';
 
-
 type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputElement) => void);
 /**
  *  Search input
@@ -39,6 +38,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     ariaControls,
     isCombobox = DEFAULTS.ISCOMBOBOX,
     isComboboxExpanded,
+    onKeyDown: providedKeydown,
   } = props;
 
   if (isCombobox && isComboboxExpanded === undefined) {
@@ -74,6 +74,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     }
 
     onKeyDown(e);
+    providedKeydown && providedKeydown(e);
   };
 
   const inputProps = {

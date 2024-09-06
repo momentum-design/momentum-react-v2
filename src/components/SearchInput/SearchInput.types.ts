@@ -107,4 +107,10 @@ export interface Props extends AriaSearchFieldProps {
    * used for the aria-expanded attribute
    */
   isComboboxExpanded?: boolean;
+
+  /**
+   * Callback function for to be called when keydown events happen in input
+   * @param event - React Keyboard Event
+   */
+  onKeyDown?: (event: React.KeyboardEvent) => void;
 }

@@ -24,6 +24,10 @@
     white-space: nowrap;
   }
 
+  &[data-allow-text-select='true'] {
+    user-select: text;
+  }
+
   &[data-interactive='true'] {
     cursor: pointer;
 

@@ -18,6 +18,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
@@ -91,6 +92,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
@@ -184,6 +186,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
       >
         <li
           className="example-class md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
@@ -257,6 +260,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="AcceptedActive"
           data-disabled={false}
           data-interactive={true}
@@ -331,6 +335,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
@@ -409,6 +414,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={false}
           data-interactive={true}
@@ -512,6 +518,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={true}
           data-interactive={true}
@@ -594,6 +601,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
       >
         <li
           className="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
           data-color="Transparent"
           data-disabled={false}
           data-interactive={true}

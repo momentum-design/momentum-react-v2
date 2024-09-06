@@ -96,4 +96,9 @@ export interface Props extends PressEvents, ContextMenu {
    * Whether the item should focus on the first child instead of itself
    */
   focusChild?: boolean;
+
+  /**
+   * Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.
+   */
+  allowTextSelection?: boolean;
 }

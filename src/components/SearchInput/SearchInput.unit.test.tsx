@@ -401,10 +401,19 @@ describe('<SearchInput />', () => {
 
     it('should forward a callback ref if provided', async () => {
       const callbackRef = jest.fn();
-      const inputElement = (await mountAndWait(
-        <SearchInput ref={callbackRef} aria-label="search" value="test" clearButtonAriaLabel="Clear" />
-      )).find('input').getDOMNode();
-     
+      const inputElement = (
+        await mountAndWait(
+          <SearchInput
+            ref={callbackRef}
+            aria-label="search"
+            value="test"
+            clearButtonAriaLabel="Clear"
+          />
+        )
+      )
+        .find('input')
+        .getDOMNode();
+
       expect(callbackRef).toBeCalledTimes(1);
       expect(callbackRef).toHaveBeenLastCalledWith(inputElement);
     });
@@ -533,5 +542,24 @@ describe('<SearchInput />', () => {
     expect(dispatchEventSpy).toHaveBeenCalledTimes(1);
 
     dispatchEventSpy.mockRestore();
+  });
+
+  it('should call provided onKeyDown prop', async () => {
+    expect.assertions(2);
+
+    const onKeyDown = jest.fn();
+    const wrapper = await mountAndWait(
+      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" onKeyDown={onKeyDown} />
+    );
+
+    const inputElement = wrapper.find('input');
+    const parentElement = wrapper.getDOMNode();
+    const dispatchEventSpy = jest.spyOn(parentElement, 'dispatchEvent');
+
+    inputElement.simulate('keydown', { key: 'a' });
+
+    expect(dispatchEventSpy).not.toHaveBeenCalled();
+    dispatchEventSpy.mockRestore();
+    expect(onKeyDown).toHaveBeenCalledTimes(1);
   });
 });

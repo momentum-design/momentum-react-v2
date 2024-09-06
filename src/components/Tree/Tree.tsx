@@ -37,7 +37,7 @@ const Tree: FC<Props> = (props: Props) => {
 
   useDidUpdateEffect(() => {
     setTree(convertNestedTree2MappedTree(treeStructure));
-    setActiveNodeId(excludeTreeRoot ? treeStructure.children[0].id : treeStructure.id);
+    setActiveNodeId(excludeTreeRoot ? treeStructure.children?.[0]?.id : treeStructure?.id);
   }, [treeStructure]);
 
   const isVirtualTree = virtualTreeConnector !== undefined;
@@ -57,7 +57,7 @@ const Tree: FC<Props> = (props: Props) => {
 
       setTree((prevTree) => toggleTreeNodeRecord(id, prevTree, newOpenState));
     },
-    [tree, isVirtualTree]
+    [tree, isVirtualTree, virtualTreeConnector]
   );
 
   const getNodeDetails = useCallback(

@@ -12,6 +12,7 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -41,6 +42,38 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
 </ListItemBase>
 `;
 
+exports[`ListItemBase snapshot should match snapshot with allowTextSelection=true 1`] = `
+<ListItemBase
+  allowTextSelection={true}
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-allow-text-select={true}
+        data-disabled={false}
+        data-interactive={true}
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        role="listitem"
+        tabIndex={-1}
+      >
+        Test
+      </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
 exports[`ListItemBase snapshot should match snapshot with className 1`] = `
 <ListItemBase
   className="example-class"
@@ -55,6 +88,7 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
     >
       <li
         className="example-class md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -97,6 +131,7 @@ exports[`ListItemBase snapshot should match snapshot with empty list item 1`] = 
       <li
         aria-hidden="true"
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -130,6 +165,7 @@ exports[`ListItemBase snapshot should match snapshot with focusChild 1`] = `
 >
   <li
     className="md-list-item-base-wrapper"
+    data-allow-text-select={false}
     data-disabled={false}
     data-interactive={false}
     data-padded={false}
@@ -220,6 +256,7 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -264,6 +301,7 @@ exports[`ListItemBase snapshot should match snapshot with interactive=false 1`] 
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={false}
         data-padded={false}
@@ -307,6 +345,7 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={true}
         data-interactive={true}
         data-padded={false}
@@ -350,6 +389,7 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
     >
       <li
         className="md-list-item-base-wrapper active"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -393,6 +433,7 @@ exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -437,6 +478,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -480,6 +522,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -523,6 +566,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
@@ -570,6 +614,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
     >
       <li
         className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
         data-disabled={false}
         data-interactive={true}
         data-padded={false}
