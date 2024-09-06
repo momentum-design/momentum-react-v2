@@ -242,4 +242,6 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `false`
    */
   disableFocusLock?: boolean;
+
+  hasRelatedTarget?: boolean;
 }

@@ -6,6 +6,7 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 export type LazyTippyProps = TippyProps & {
   setInstance?: (instance?: TippyInstance) => void;
   continuePropagationOnTrigger?: boolean;
+  hasRelatedTarget?: boolean;
 };
 
 /**
