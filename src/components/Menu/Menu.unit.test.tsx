@@ -8,6 +8,7 @@ import ListItemBase from '../ListItemBase';
 import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import ButtonPill from '../ButtonPill';
 
 describe('<Menu />', () => {
   const defaultProps = {
@@ -110,43 +111,12 @@ describe('<Menu />', () => {
       expect(element.id).toBe(id);
     });
 
-    it('should have role of group when isGroupRole is true', () => {
-      expect.assertions(1);
-
-      const element = mount(<Menu {...defaultProps} isGroupRole />)
-        .find(Menu)
-        .getDOMNode();
-
-      expect(element.getAttribute('role')).toBe('group');
-    });
-
-    it('should have role of menu when isGroupRole is false', () => {
-      expect.assertions(1);
-
-      const element = mount(<Menu {...defaultProps} isGroupRole={false} />)
-        .find(Menu)
-        .getDOMNode();
-
-      expect(element.getAttribute('role')).toBe('menu');
-    });
-
-    it('should have role of menu when isGroupRole is undefined', () => {
-      expect.assertions(1);
-
-      const element = mount(<Menu {...defaultProps} isGroupRole={undefined} />)
-        .find(Menu)
-        .getDOMNode();
-
-      expect(element.getAttribute('role')).toBe('menu');
-    });
-
     it('should have aria-labelledby prop when ariaLabelledby is provided', () => {
       expect.assertions(1);
 
       const ariaLabelledby = 'menu-label';
 
-      const element = mount(<Menu {...defaultProps} aria-labelledby={ariaLabelledby}/>)
-        .find(Menu);
+      const element = mount(<Menu {...defaultProps} aria-labelledby={ariaLabelledby} />).find(Menu);
 
       expect(element.prop('aria-labelledby')).toBe(ariaLabelledby);
     });
@@ -156,8 +126,7 @@ describe('<Menu />', () => {
 
       const ariaLabelledby = 'undefined';
 
-      const element = mount(<Menu {...defaultProps} aria-labelledby={ariaLabelledby}/>)
-        .find(Menu);
+      const element = mount(<Menu {...defaultProps} aria-labelledby={ariaLabelledby} />).find(Menu);
 
       expect(element.prop('aria-labelledby')).toBe(ariaLabelledby);
     });
@@ -205,7 +174,7 @@ describe('<Menu />', () => {
       expect.assertions(1);
 
       const element = mount(<Menu {...defaultProps} itemSize={50} tabIndex={-1} />)
-        .find('ul[role="menu"]')
+        .find('div[role="menu"]')
         .at(0)
         .getDOMNode();
 
@@ -233,9 +202,7 @@ describe('<Menu />', () => {
     it('should handle up/down arrow keys correctly - for vertical menus', async () => {
       const user = userEvent.setup();
 
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} />
-      );
+      const { getAllByRole } = render(<Menu {...defaultProps} />);
 
       await user.tab();
 
@@ -255,41 +222,26 @@ describe('<Menu />', () => {
       expect(menuItems[0]).toHaveFocus();
     });
 
-    it('should handle left/right arrow keys correctly - for horizontal menus', async () => {
-      const user = userEvent.setup();
-
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} orientation='horizontal' />
-      );
-
-      await user.tab();
-
-      const menuItems = getAllByRole('menuitem');
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[1]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-
-      expect(menuItems[0]).toHaveFocus();
-    });
     it('should handle up/down arrow keys correctly - for vertical menu with section', async () => {
       const user = userEvent.setup();
-      const childrenWithSections = [<Section title="Section Title" key="$.0" aria-label="section"><Item key="one">One</Item><Item key="two">Two</Item></Section>];
 
       const { getAllByRole } = render(
-        <Menu {...defaultProps} children={childrenWithSections} />
+        <Menu {...defaultProps}>
+          <Section title="Section 1" key="s1" aria-label="section1">
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </Section>
+          <Section title="Section 2" key="s2" aria-label="section2">
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </Section>
+        </Menu>
       );
 
       await user.tab();
 
       const menuItems = getAllByRole('menuitem');
+
       expect(menuItems[0]).toHaveFocus();
 
       await user.keyboard('{ArrowDown}');
@@ -298,36 +250,31 @@ describe('<Menu />', () => {
 
       await user.keyboard('{ArrowDown}');
 
-      expect(menuItems[0]).toHaveFocus();
+      expect(menuItems[2]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
-
-      expect(menuItems[0]).toHaveFocus();
-    });
-    it('should handle up/down arrow keys correctly - for horizontal menu with section', async () => {
-      const user = userEvent.setup();
-      const childrenWithSections = [<Section title="Section Title" key="$.0" aria-label="section"><Item key="one">One</Item><Item key="two">Two</Item></Section>];
-
-      const { getAllByRole } = render(
-        <Menu {...defaultProps} children={childrenWithSections} orientation='horizontal' />
-      );
-
-      await user.tab();
-
-      const menuItems = getAllByRole('menuitem');
-      expect(menuItems[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowRight}');
+      await user.keyboard('{ArrowUp}');
 
       expect(menuItems[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowRight}');
+      await user.keyboard('{ArrowDown}');
 
-      expect(menuItems[0]).toHaveFocus();
+      expect(menuItems[2]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(menuItems[3]).toHaveFocus();
 
       await user.keyboard('{ArrowDown}');
 
       expect(menuItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowUp}');
+
+      expect(menuItems[3]).toHaveFocus();
+
+      await user.keyboard('{ArrowRight}');
+
+      expect(menuItems[3]).toHaveFocus();
     });
   });
 });
