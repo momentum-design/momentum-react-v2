@@ -3,7 +3,6 @@ import {
   HTMLAttributes,
   SetStateAction,
   useCallback,
-  useEffect,
   useLayoutEffect,
   useState,
 } from 'react';
