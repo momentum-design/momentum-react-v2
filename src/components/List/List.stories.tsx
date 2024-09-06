@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -440,6 +440,47 @@ const ListWithNonFocusableChildren = Template<unknown>(ListWithNonFocusableChild
   {}
 );
 
+const ListWithInitialFocusWrapper = () => {
+  const [listOne, setListOne] = useState(true);
+
+  const onPressCallback = useCallback(() => {
+    setListOne((s) => !s);
+  }, []);
+
+  const toggleButton = <ButtonPill onPress={onPressCallback}>Toggle</ButtonPill>;
+
+  let contents;
+
+  if (listOne) {
+    contents = [0, 1].map((index) => (
+      <ListItemBase key={`list_1${index}`} id="list_1" itemIndex={index}>
+        <ButtonPill>1</ButtonPill>
+      </ListItemBase>
+    ));
+  } else {
+    contents = [0, 1, 2, 3, 4].map((index) => (
+      <ListItemBase key={`list_2${index}`} id="list_2" itemIndex={index}>
+        <ButtonPill>2</ButtonPill>
+      </ListItemBase>
+    ));
+  }
+
+  return (
+    <>
+      {toggleButton}
+      <List
+        id={'mylist 2'}
+        shouldFocusOnPress
+        initialFocus={listOne ? 1 : 4}
+        listSize={listOne ? 2 : 5}
+      >
+        {contents}
+      </List>
+    </>
+  );
+};
+const ListWithInitialFocus = Template<unknown>(ListWithInitialFocusWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -452,4 +493,5 @@ export {
   ListWithAriaToolbar,
   ListWithButtons,
   ListWithNonFocusableChildren,
+  ListWithInitialFocus,
 };

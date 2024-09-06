@@ -60,6 +60,11 @@ export interface Props {
    * @default 'vertical'
    */
   orientation?: ListOrientation;
+
+  /**
+   * The index of the item that should be focused initially
+   */
+  initialFocus?: number;
 }
 
 export interface ListContextValue {
@@ -73,6 +78,7 @@ export interface ListContextValue {
   setDirection?: Dispatch<SetStateAction<'forward' | 'backward'>>;
   isInitiallyRoving?: boolean;
   setIsInitiallyRoving?: Dispatch<SetStateAction<boolean>>;
+  suppressFocus?: boolean;
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;

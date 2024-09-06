@@ -754,5 +754,29 @@ describe('<List />', () => {
       // Noloop, so we are stuck on item 1
       expect(getByTestId('list-item-1')).toHaveFocus();
     });
+
+    it('should focus the item with initialFoucs', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={3} initialFocus={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+    });
   });
 });

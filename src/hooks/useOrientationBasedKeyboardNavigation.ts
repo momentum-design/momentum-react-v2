@@ -1,4 +1,12 @@
-import { Dispatch, HTMLAttributes, SetStateAction, useCallback, useState } from 'react';
+import {
+  Dispatch,
+  HTMLAttributes,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from 'react';
 import { useKeyboard } from '@react-aria/interactions';
 import { setNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
@@ -15,6 +23,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     setDirection: Dispatch<SetStateAction<'forward' | 'backward'>>;
     direction: 'forward' | 'backward';
     isInitiallyRoving?: boolean;
+    supressFocus?: boolean;
   };
 };
 
@@ -22,6 +31,7 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
   listSize: number;
   orientation: ListOrientation;
   noLoop?: boolean;
+  initialFocus?: number;
   contextProps?: {
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
@@ -31,10 +41,15 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
 const useOrientationBasedKeyboardNavigation = (
   props: IUseOrientationBasedKeyboardNavigationProps
 ): IUseOrientationBasedKeyboardNavigationReturn => {
-  const { listSize, orientation, noLoop, contextProps } = props;
-  const [currentFocus, setCurrentFocus] = useState<number>(0);
+  const { listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
+  const [currentFocus, setCurrentFocus] = useState<number>(-1);
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
   const [isInitiallyRoving, setIsInitiallyRoving] = useState<boolean>(true);
+
+  useLayoutEffect(() => {
+    setIsInitiallyRoving(true);
+    setCurrentFocus(initialFocus);
+  }, [initialFocus]);
 
   const getContext = useCallback(
     () => ({
@@ -56,6 +71,8 @@ const useOrientationBasedKeyboardNavigation = (
       const forwardKey = orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown';
       const backwardKey = orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp';
 
+      const context = getContext();
+
       switch (evt.key) {
         case 'Escape':
           evt.continuePropagation();
@@ -63,13 +80,25 @@ const useOrientationBasedKeyboardNavigation = (
         case backwardKey:
           setDirection('backward');
           evt.preventDefault();
-          setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus);
+          setNextFocus(
+            true,
+            context.listSize,
+            context.currentFocus,
+            context.noLoop,
+            setCurrentFocus
+          );
           break;
 
         case forwardKey:
           setDirection('forward');
           evt.preventDefault();
-          setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus);
+          setNextFocus(
+            false,
+            context.listSize,
+            context.currentFocus,
+            context.noLoop,
+            setCurrentFocus
+          );
           break;
 
         default:

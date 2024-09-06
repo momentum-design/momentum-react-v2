@@ -26,7 +26,6 @@ import { getListItemBaseTabIndex, handleEmptyListItem } from './ListItemBase.uti
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
-import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -182,7 +181,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [ref, listItemTabIndex]);
 
   const lastCurrentFocus = usePrevious(currentFocus);
-  useDidUpdateEffect(() => {
+  useLayoutEffect(() => {
     if (
       lastCurrentFocus !== undefined &&
       lastCurrentFocus !== currentFocus &&
@@ -199,7 +198,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         ref.current.focus();
       }
     }
-  }, [currentFocus]);
+  }, [currentFocus, focus, focusChild, isInitiallyRoving, itemIndex, lastCurrentFocus, ref]);
 
   /**
    * When the items inside the list context gets smaller (search/filter applied)
@@ -207,7 +206,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * case the index of the element focused before the list shrink is now outside
    * the size of the new list size (shrinked size)
    */
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!!listSize && currentFocus >= listSize) {
       // set focus to first item
       listContext.setCurrentFocus(0);
@@ -335,7 +334,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       style={style}
       ref={ref}
       data-size={size}
-      aria-hidden={isAriaHidden}
+      aria-hidden={isAriaHidden ? 'true' : undefined}
       data-disabled={isDisabled}
       data-padded={isPadded}
       data-shape={shape}
