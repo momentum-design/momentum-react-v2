@@ -198,7 +198,7 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
     }
   }
 >
-  <ul
+  <div
     role="presentation"
   >
     <span
@@ -765,6 +765,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
         </ListItemBase>
       </MenuItem>
     </ul>
-  </ul>
+  </div>
 </MenuSection>
 `;

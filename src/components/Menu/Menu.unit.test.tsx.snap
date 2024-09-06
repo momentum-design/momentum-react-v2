@@ -4,7 +4,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
 <_Menu
   aria-label="Menu component"
 >
-  <ul
+  <div
     aria-label="Menu component"
     className="md-menu-wrapper"
     onBlur={[Function]}
@@ -475,7 +475,7 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
         </FocusRing>
       </ListItemBase>
     </MenuItem>
-  </ul>
+  </div>
 </_Menu>
 `;
 
@@ -484,7 +484,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
   aria-label="Menu component"
   className="example-class"
 >
-  <ul
+  <div
     aria-label="Menu component"
     className="example-class md-menu-wrapper"
     onBlur={[Function]}
@@ -955,7 +955,7 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
         </FocusRing>
       </ListItemBase>
     </MenuItem>
-  </ul>
+  </div>
 </_Menu>
 `;
 
@@ -964,7 +964,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
   aria-label="Menu component"
   id="example-id"
 >
-  <ul
+  <div
     aria-label="Menu component"
     className="md-menu-wrapper"
     id="example-id"
@@ -1436,7 +1436,7 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
         </FocusRing>
       </ListItemBase>
     </MenuItem>
-  </ul>
+  </div>
 </_Menu>
 `;
 
@@ -1446,7 +1446,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
   itemShape="isPilled"
   itemSize={50}
 >
-  <ul
+  <div
     aria-label="Menu component"
     className="md-menu-wrapper"
     onBlur={[Function]}
@@ -1917,7 +1917,7 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
         </FocusRing>
       </ListItemBase>
     </MenuItem>
-  </ul>
+  </div>
 </_Menu>
 `;
 
@@ -1926,7 +1926,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
   aria-label="Menu component"
   itemSize={50}
 >
-  <ul
+  <div
     aria-label="Menu component"
     className="md-menu-wrapper"
     onBlur={[Function]}
@@ -2397,7 +2397,7 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
         </FocusRing>
       </ListItemBase>
     </MenuItem>
-  </ul>
+  </div>
 </_Menu>
 `;
 
@@ -2410,7 +2410,7 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <ul
+  <div
     aria-label="Menu component"
     className="md-menu-wrapper"
     onBlur={[Function]}
@@ -2886,6 +2886,6 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
         </FocusRing>
       </ListItemBase>
     </MenuItem>
-  </ul>
+  </div>
 </_Menu>
 `;

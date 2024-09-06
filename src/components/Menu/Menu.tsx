@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { useKeyboard } from '@react-aria/interactions';
 import { Node } from '@react-types/shared';
 import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 
-import { STYLE, DEFAULTS, GROUP } from './Menu.constants';
+import { STYLE, DEFAULTS } from './Menu.constants';
 import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
@@ -12,9 +11,6 @@ import { useTreeState, TreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
-import { ListContext } from '../List/List.utils';
-import { DEFAULTS as LIST_DEFAULTS } from '../List/List.constants';
-
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -28,7 +24,7 @@ export function useMenuAppearanceContext(): MenuAppearanceContextValue {
   return useContext(MenuAppearanceContext);
 }
 
-const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLUListElement>) => {
+const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivElement>) => {
   const {
     className,
     id,
@@ -36,9 +32,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     isTickOnLeftSide = DEFAULTS.IS_TICK_ON_LEFT_SIDE,
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
-    isGroupRole,
     ariaLabelledby,
-    orientation = LIST_DEFAULTS.ORIENTATION,
     tabIndex,
   } = props;
 
@@ -80,56 +74,30 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
     },
     [state]
   );
-  const { keyboardProps } = useKeyboard({
-    onKeyDown: (e) => {
-      switch (e.key) {
-        case 'Escape':
-          e.continuePropagation();
-          break;
-
-        case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
-          e.preventDefault();
-          menuProps.onKeyDown({...e, key: 'ArrowUp'});
-          break;
-
-        case orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown':
-          e.preventDefault();
-          menuProps.onKeyDown({...e, key: 'ArrowDown'});
-          break;
-
-        default:
-          break;
-      }
-    },
-  }); 
 
   // needs to be removed because when used in Menu Trigger, it will
   // label it by the triggerComponent's id, and that doesn't really make
   // sense especially when there are multiple menus inside.
   delete menuProps['aria-labelledby'];
-  
+
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
     <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
-      <ListContext.Provider value={{}}>
-        <ul
-          className={classnames(className, STYLE.wrapper)}
-          id={id}
-          style={style}
-          ref={ref}
-          {...menuProps}
-          role={isGroupRole ? GROUP : menuProps.role}
-          aria-labelledby={ariaLabelledby}
-          {...keyboardProps}
-          tabIndex={tabIndex || menuProps.tabIndex}
-        >
-          {itemArray.map((key) => {
-            const item = state.collection.getItem(key) as Node<T>;
-            return renderItem(item, state);
-          })}
-        </ul>
-      </ListContext.Provider>
+      <div
+        className={classnames(className, STYLE.wrapper)}
+        id={id}
+        style={style}
+        ref={ref}
+        aria-labelledby={ariaLabelledby}
+        {...menuProps}
+        tabIndex={tabIndex || menuProps.tabIndex}
+      >
+        {itemArray.map((key) => {
+          const item = state.collection.getItem(key) as Node<T>;
+          return renderItem(item, state);
+        })}
+      </div>
     </MenuAppearanceContext.Provider>
   );
 };
@@ -141,6 +109,4 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLULis
 const _Menu = forwardRef(Menu);
 _Menu.displayName = '_Menu';
 
-export default _Menu as <T>(
-  props: Props<T> & { ref?: RefObject<HTMLUListElement> }
-) => ReactElement;
+export default _Menu as <T>(props: Props<T> & { ref?: RefObject<HTMLDivElement> }) => ReactElement;

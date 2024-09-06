@@ -7,7 +7,6 @@ import { Props } from './MenuSection.types';
 import './MenuSection.style.scss';
 import MenuItem from '../MenuItem';
 import { useMenuSection } from '@react-aria/menu';
-import { ListContext } from '../List/List.utils';
 
 const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction } = props;
@@ -24,7 +23,7 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   }, [state]);
 
   return (
-    <ul {...itemProps}>
+    <div {...itemProps}>
       {!React.isValidElement(item.rendered) && item.rendered ? (
         <span className={STYLE.header} {...headingProps}>
           {item.rendered}
@@ -32,12 +31,10 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
       ) : (
         item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
       )}
-      <ListContext.Provider value={{}}>
-        <ul {...groupProps} className={STYLE.wrapper}>
-          {renderItems()}
-        </ul>
-      </ListContext.Provider>
-    </ul>
+      <ul {...groupProps} className={STYLE.wrapper}>
+        {renderItems()}
+      </ul>
+    </div>
   );
 };
 
