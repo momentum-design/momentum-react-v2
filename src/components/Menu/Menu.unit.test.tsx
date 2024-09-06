@@ -8,7 +8,6 @@ import ListItemBase from '../ListItemBase';
 import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ButtonPill from '../ButtonPill';
 
 describe('<Menu />', () => {
   const defaultProps = {
