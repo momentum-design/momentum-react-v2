@@ -6,20 +6,16 @@ export interface PopperBlurPluginProps extends Props {
   isChildPopoverOpen?: boolean;
 }
 
-type CustomInstance = PopoverInstance & { props: PopperBlurPluginProps } & {
-  hasRelatedTarget?: boolean;
-};
-
 export const hideOnBlurPlugin: Plugin = {
   name: 'isChildPopoverOpen',
   defaultValue: false,
-  fn(instance: CustomInstance) {
+  fn(instance: PopoverInstance & { props: PopperBlurPluginProps }) {
     const focusOutHandler = (event) => {
-      instance.hasRelatedTarget = !!event.relatedTarget;
+      // if it doesn't have a related target (ie: Esc, or click, should focus back on trigger)
+      instance.shouldFocusTrigger = !event.relatedTarget;
 
       if (
         !instance.props.isChildPopoverOpen &&
-        event.relatedTarget &&
         !instance.popper.contains(event.relatedTarget as Element)
       ) {
         instance.hide();

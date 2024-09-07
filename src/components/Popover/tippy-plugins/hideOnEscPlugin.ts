@@ -7,7 +7,6 @@ const openedTippyInstances: TippyInstance[] = [];
 // hide the last opened popover when Escape key is pressed
 function onKeyDown(event: KeyboardEvent) {
   if (event.key === 'Escape' && openedTippyInstances.length !== 0) {
-    // RS_TODO: i think the better thing to do would be set custom attri on instance here
     const lastIdx = openedTippyInstances.length - 1;
     openedTippyInstances[lastIdx].hide();
   }

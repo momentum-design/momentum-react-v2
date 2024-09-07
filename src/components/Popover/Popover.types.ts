@@ -14,10 +14,12 @@ export type TriggerType = TippyProps['trigger'];
 export type PositioningStrategy = TippyProps['popperOptions']['strategy'];
 export type AppendToType = TippyProps['appendTo'];
 
+export type CustomTippyPopoverProperties = { shouldFocusTrigger?: boolean };
+
 /**
  * Popover instance interface abstracted from Tippy.js
  */
-export type PopoverInstance = Instance;
+export type PopoverInstance = Instance & CustomTippyPopoverProperties;
 
 export type PopoverCommonStyleProps = {
   /**
@@ -242,6 +244,4 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `false`
    */
   disableFocusLock?: boolean;
-
-  hasRelatedTarget?: boolean;
 }

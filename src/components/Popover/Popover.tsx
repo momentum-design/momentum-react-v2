@@ -16,8 +16,6 @@ import { addTippyPlugins } from './Popover.utils';
 import { v4 as uuidV4 } from 'uuid';
 import { PopoverInstance } from '.';
 
-type CustomInstance = PopoverInstance & { props: Props } & {hasRelatedTarget?: boolean;};
-
 /**
  * The Popover component allows adding a Popover to whatever provided
  * `triggerComponent`. It will show the Popover after a specific event, which is
@@ -86,7 +84,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       ? DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_INTERACTIVE
       : DEFAULTS.FOCUS_BACK_ON_TRIGGER_COMPONENT_NON_INTERACTIVE);
 
-  const popoverInstance = React.useRef<CustomInstance>(undefined);
+  const popoverInstance = React.useRef<PopoverInstance>(undefined);
 
   const generatedTriggerIdRef = useRef(uuidV4());
   const generatedTriggerId = generatedTriggerIdRef.current;
@@ -107,11 +105,16 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const arrowId = React.useMemo(() => `${ARROW_ID}${uuidV4()}`, []);
 
   const popoverSetInstance = useCallback(
-    (instance?: CustomInstance) => {
+    (instance?: PopoverInstance) => {
+      if (instance) {
+        // initialize to whatever prop value is
+        // from now on, will be controlled by hideOnBlur plugin
+        instance.shouldFocusTrigger = focusBackOnTrigger;
+      }
       popoverInstance.current = instance;
       setInstance?.(instance);
     },
-    [setInstance]
+    [setInstance, focusBackOnTrigger]
   );
 
   const handleOnCloseButtonClick = useCallback(() => {
@@ -121,12 +124,15 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   // needs special handling since FocusScope doesn't work with the Popover from Tippy
   // needs to focus back to the reference item when the popover is completely hidden
   const handleOnPopoverHidden = useCallback(() => {
-    if (focusBackOnTrigger && !popoverInstance?.current?.hasRelatedTarget) {
+    // When the popover hides, the focus goes to the next focusable element by default. Except if focusBackOnTrigger popover prop is true AND shouldFocusTrigger (determined by hideOnBlurPlugin) is true.
+    // shouldFocusTrigger is true when the focusout event has no relatedTarget, that is, focusOut was triggered by Esc or Click.
+    
+    if (focusBackOnTrigger && popoverInstance?.current?.shouldFocusTrigger) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       popoverInstance.current?.reference?.focus();
     }
-  }, [focusBackOnTrigger, popoverInstance?.current?.hasRelatedTarget]);
+  }, [focusBackOnTrigger, popoverInstance?.current?.shouldFocusTrigger]);
 
   useEffect(() => {
     firstFocusElement?.focus();
@@ -251,7 +257,6 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       }}
       setInstance={popoverSetInstance}
       zIndex={zIndex}
-      hasRelatedTarget={false}
     >
       {clonedTriggerComponent}
     </LazyTippy>

@@ -491,14 +491,64 @@ Common.parameters = {
 
 const WithMeetingListItemWithAvatarWithPopover = Template<PopoverProps>((args) => {
   return (
+    <Popover
+      {...args}
+      triggerComponent={
+        <MeetingListItem style={{ margin: '10rem auto', display: 'flex' }}>
+          <Popover
+            {...args}
+            triggerComponent={
+              <Avatar
+                // eslint-disable-next-line
+                onPress={() => {}}
+                initials="AB"
+              >
+                Hover or click me!
+              </Avatar>
+            }
+          >
+            <div>
+              <ButtonPill>test 1</ButtonPill>
+              <ButtonPill>test 2</ButtonPill>
+              <ButtonPill>test 3</ButtonPill>
+            </div>
+          </Popover>
+          test
+        </MeetingListItem>
+      }
+      trigger="click"
+      interactive
+    >
+      <div>
+        <ButtonPill>test 4</ButtonPill>
+        <ButtonPill>test 5</ButtonPill>
+        <ButtonPill>test 6</ButtonPill>
+      </div>
+    </Popover>
+  );
+}).bind({});
+
+WithMeetingListItemWithAvatarWithPopover.argTypes = { ...argTypes };
+
+WithMeetingListItemWithAvatarWithPopover.args = {
+  trigger: 'mouseenter',
+  placement: PLACEMENTS.TOP,
+  showArrow: true,
+  interactive: true,
+  appendTo: () => document.querySelector('#theme-provider'),
+};
+
+const WithHideOnBlur = Template<PopoverProps>((args) => {
+  return (
     <>
-      <div id="outer">
+      <div id="container-1">
         <Popover
           {...args}
           triggerComponent={
             <ButtonPill>test 1</ButtonPill>
           }
           trigger="click"
+          focusBackOnTrigger
           interactive
           hideOnBlur
           disableFocusLock
@@ -510,13 +560,14 @@ const WithMeetingListItemWithAvatarWithPopover = Template<PopoverProps>((args) =
           </List>
         </Popover>
       </div>
-      <div id="other">
+      <div id="container-2">
         <Popover
           {...args}
           triggerComponent={
             <ButtonPill>test 2</ButtonPill>
           }
           trigger="click"
+          focusBackOnTrigger
           interactive
           hideOnBlur
           disableFocusLock
@@ -532,15 +583,6 @@ const WithMeetingListItemWithAvatarWithPopover = Template<PopoverProps>((args) =
   );
   
 }).bind({});
-
-WithMeetingListItemWithAvatarWithPopover.argTypes = { ...argTypes };
-
-WithMeetingListItemWithAvatarWithPopover.args = {
-  trigger: 'mouseenter',
-  placement: PLACEMENTS.TOP,
-  showArrow: true,
-  interactive: true,
-};
 
 export {
   Example,
@@ -558,4 +600,5 @@ export {
   WithSearchInput,
   WithMeetingListItemWithButtonsWithPopoverInList,
   WithMeetingListItemWithAvatarWithPopover,
+  WithHideOnBlur
 };

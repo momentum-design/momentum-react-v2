@@ -54,6 +54,7 @@ describe('hideOnBlurPlugin', () => {
     });
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
+    expect(popoverInstance.shouldFocusTrigger).toEqual(false);
 
     expect(popoverInstance.hide).toHaveBeenCalled();
   });
@@ -70,6 +71,7 @@ describe('hideOnBlurPlugin', () => {
     });
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
+    expect(popoverInstance.shouldFocusTrigger).toEqual(false);
 
     expect(popoverInstance.hide).not.toHaveBeenCalled();
   });
@@ -88,11 +90,12 @@ describe('hideOnBlurPlugin', () => {
     });
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
+    expect(popoverInstance.shouldFocusTrigger).toEqual(false);
 
     expect(popoverInstance.hide).not.toHaveBeenCalled();
   });
 
-  it('should not hide popover if relatedTarget is null', async () => {
+  it('should hide popover if relatedTarget is null', async () => {
     const { hideOnBlurPlugin } = await import('./hideOnBlurPlugin');
     const popoverInstance = createPopoverInstance();
     const plugin = hideOnBlurPlugin.fn(popoverInstance);
@@ -103,7 +106,8 @@ describe('hideOnBlurPlugin', () => {
     });
 
     popoverInstance.popper.dispatchEvent(focusOutEvent);
+    expect(popoverInstance.shouldFocusTrigger).toEqual(true);
 
-    expect(popoverInstance.hide).not.toHaveBeenCalled();
+    expect(popoverInstance.hide).toHaveBeenCalled();
   });
 });
