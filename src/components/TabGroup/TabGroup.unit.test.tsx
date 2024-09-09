@@ -1,7 +1,7 @@
-import { TabGroup, TabNext } from "@momentum-ui/react-collaboration"
-import { mount } from "enzyme";
-import React from "react"
-import { DEFAULTS, STYLE } from "./TabGroup.constants";
+import { TabGroup, TabNext } from '@momentum-ui/react-collaboration';
+import { mount } from 'enzyme';
+import React from 'react';
+import { DEFAULTS, STYLE } from './TabGroup.constants';
 
 
 
@@ -190,4 +190,4 @@ describe('<TabGroup/>', () => {
             expect(container).toMatchSnapshot();
         });
     });
-})
+});

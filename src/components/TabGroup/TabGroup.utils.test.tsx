@@ -71,7 +71,8 @@ describe('TabGroup utils', () => {
                     });
                     break;
             }
-        }
+        };
+
         it.each`
             triggerTabIndex | key                | expectFoucsTabIndex
             ${0}               | ${KEYCODES.ARROW_DOWN_KEY}  | ${1}
@@ -125,5 +126,4 @@ describe('TabGroup utils', () => {
             }
         );
     });
-
-})
+});

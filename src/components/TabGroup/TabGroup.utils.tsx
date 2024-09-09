@@ -49,7 +49,6 @@ export const handleTabOnKeyDown = (event:KeyboardEvent, containerRef:any) => {
     }
 };
 
-
 export const handleOnPress = (event:KeyboardEvent, containerRef:any) => {
     const currentElement = event.target as HTMLElement;
     const containerElement = containerRef?.current?.querySelectorAll ? containerRef.current : containerRef?.current?.containerNode;
@@ -58,4 +57,4 @@ export const handleOnPress = (event:KeyboardEvent, containerRef:any) => {
     tabItems.forEach((tabItem) => {
         tabItem.dataset.active = tabItem === currentElement ? 'true' : 'false';
     });
-}
+};

@@ -22,10 +22,10 @@ export default {
 };
 
 const commonChildren = [
-  <Tab>Tab1</Tab>,
-  <Tab>Tab2</Tab>,
-  <Tab>Tab3</Tab>,
-  <Tab>Tab4</Tab>,
+  <Tab key="tab1">Tab1</Tab>,
+  <Tab key="tab2">Tab2</Tab>,
+  <Tab key="tab3">Tab3</Tab>,
+  <Tab key="tab4">Tab4</Tab>,
 ];
 
 const Example = Template<TabGroupProps>(TabGroup).bind({});
@@ -37,15 +37,6 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-// const HorizontalTabGroup = Template<TabGroupProps>(TabGroup).bind({});
-
-// HorizontalTabGroup.args = {
-//   children: [...commonChildren],
-//   orientation: 'horizontal',
-//   spaced: true,
-// }
-
-// HorizontalTabGroup.argTypes = { ...argTypes };
 const HorizontalTabGroup = () => {
 
   const [activeTab, setActiveTab] = useState('');
@@ -59,9 +50,9 @@ const HorizontalTabGroup = () => {
   return (
     <>
       <TabGroup
-        orientation='horizontal'
+        orientation="horizontal"
         spaced={true}
-        ariaLabel='horizontal tab group'
+        ariaLabel="horizontal tab group"
       >
         {tabs.map((tab) => (
           <Tab
@@ -80,7 +71,7 @@ const HorizontalTabGroup = () => {
       ))}
     </>
   )
-}
+};
 
 const VerticalTabGroup = Template<TabGroupProps>(TabGroup).bind({});
 
