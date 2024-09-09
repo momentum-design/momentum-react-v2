@@ -42,4 +42,16 @@ export default {
       },
     },
   },
+  title: {
+    description: 'Show the content when hovering over the component.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
 };

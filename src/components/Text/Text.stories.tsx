@@ -25,6 +25,15 @@ export default {
 const Example = Template<TextProps>(Text).bind({});
 Example.argTypes = { ...argTypes };
 
+const Title = Template<TextProps>(Text).bind({});
+
+Title.args = {
+  type: 'title',
+  title: 'Example text'
+};
+
+Title.argTypes = { ...argTypes };
+
 const Types = MultiTemplate<TextProps>(Text).bind({});
 
 Types.argTypes = { ...argTypes };
@@ -129,4 +138,4 @@ FontsLegacy.parameters = {
   ],
 };
 
-export { Example, Types, Fonts, FontsLegacy, TypesWithTagName };
+export { Example, Title, Types, Fonts, FontsLegacy, TypesWithTagName };

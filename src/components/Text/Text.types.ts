@@ -34,6 +34,10 @@ export interface Props {
    * Override the tag used to surround the text
    */
   tagName?: AllowedTagNames;
+  /**
+   * Show the content when hovering over the component.
+   */
+  title?: string;
 }
 
 export type FontStyle =
