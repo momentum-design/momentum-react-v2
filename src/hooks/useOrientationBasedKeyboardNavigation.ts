@@ -9,9 +9,11 @@ import {
 import { useKeyboard } from '@react-aria/interactions';
 import { setNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
+import { useFocusWithinState } from './useFocusState';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
   keyboardProps: HTMLAttributes<HTMLElement>;
+  focusWithinProps: HTMLAttributes<HTMLElement>;
   getContext: () => {
     listSize: number;
     currentFocus: number;
@@ -45,9 +47,14 @@ const useOrientationBasedKeyboardNavigation = (
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
   const [isInitiallyRoving, setIsInitiallyRoving] = useState<boolean>(true);
 
+  const { isFocusedWithin, focusWithinProps } = useFocusWithinState({});
+
   useLayoutEffect(() => {
-    setIsInitiallyRoving(true);
-    setCurrentFocus(initialFocus);
+    if (!isFocusedWithin) {
+      setIsInitiallyRoving(true);
+      setCurrentFocus(initialFocus);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialFocus]);
 
   const getContext = useCallback(
@@ -108,6 +115,7 @@ const useOrientationBasedKeyboardNavigation = (
 
   return {
     keyboardProps,
+    focusWithinProps,
     getContext,
   };
 };

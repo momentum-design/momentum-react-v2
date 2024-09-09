@@ -490,7 +490,19 @@ const ListWithFocusHandlingWrapper = () => {
   return (
     <>
       <List listSize={3}>
-        <ListItemBase itemIndex={0}>
+        <ListItemBase
+          onFocusWithin={() => {
+            logMessage('on focus within');
+          }}
+          onFocus={() => {
+            logMessage('on focus');
+          }}
+          onBlur={() => logMessage('on blur')}
+          onBlurWithin={() => {
+            logMessage('on blur within');
+          }}
+          itemIndex={0}
+        >
           <ButtonPill>0</ButtonPill>
         </ListItemBase>
         <ListItemBase
@@ -523,6 +535,30 @@ const ListWithFocusHandlingWrapper = () => {
 
 const ListWithFocusHandling = Template<unknown>(ListWithFocusHandlingWrapper).bind({});
 
+const DynamicListWithInitialFocusWrapper = () => {
+  const [numItems, setNumItems] = useState(3);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      setNumItems((oldNumItems) => Math.max((oldNumItems + 1) % 10, 3));
+    }, 5000);
+
+    return () => clearInterval(handle);
+  });
+
+  return (
+    <List initialFocus={numItems - 1} listSize={numItems}>
+      {Array.from(Array(numItems).keys()).map((index) => (
+        <ListItemBase itemIndex={index} key={index}>
+          {`Item ${index}`}
+        </ListItemBase>
+      ))}
+    </List>
+  );
+};
+
+const DynamicListWithInitialFocus = Template<unknown>(DynamicListWithInitialFocusWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -537,4 +573,5 @@ export {
   ListWithNonFocusableChildren,
   ListWithInitialFocus,
   ListWithFocusHandling,
+  DynamicListWithInitialFocus,
 };

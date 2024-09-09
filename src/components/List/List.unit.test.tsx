@@ -755,10 +755,10 @@ describe('<List />', () => {
       expect(getByTestId('list-item-1')).toHaveFocus();
     });
 
-    it('should focus the item with initialFoucs', async () => {
+    it('should focus the item with initialFocus', async () => {
       const user = userEvent.setup();
 
-      const { getByTestId } = render(
+      const { getByTestId, rerender } = render(
         <List listSize={3} initialFocus={1}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
@@ -777,6 +777,75 @@ describe('<List />', () => {
       await user.tab();
 
       expect(getByTestId('list-item-1')).toHaveFocus();
+
+      // If the list is already focused, changing the initial
+      // focus should not change the current focused position
+
+      rerender(
+        <List listSize={3} initialFocus={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-3" key="3" itemIndex={3}>
+            3
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-2')).toHaveFocus();
+    });
+
+    it('should focus the item with initialFocus when updated', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3} initialFocus={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      rerender(
+        <List listSize={3} initialFocus={2}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-3" key="3" itemIndex={3}>
+            3
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-2')).toHaveFocus();
     });
   });
 });
