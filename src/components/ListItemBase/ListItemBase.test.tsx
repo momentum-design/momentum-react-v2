@@ -642,7 +642,7 @@ describe('ListItemBase', () => {
         </ListItemBase>
         <ListItemBase focusChild data-testid="list-item-1" itemIndex={1}>
           <ListItemBaseSection position="fill">
-            <ButtonPill data-testId="button-1">2</ButtonPill>
+            <ButtonPill data-testid="button-1">2</ButtonPill>
             <ButtonPill>3</ButtonPill>
           </ListItemBaseSection>
         </ListItemBase>
@@ -660,5 +660,144 @@ describe('ListItemBase', () => {
     await user.keyboard('{ArrowUp}');
 
     expect(getByTestId('list-item-0')).toHaveFocus();
+  });
+
+  it('should call focus and focus within callbacks', async () => {
+    const onFocusWithin = jest.fn();
+    const onBlurWithin = jest.fn();
+    const onFocus = jest.fn();
+    const onBlur = jest.fn();
+
+    const checkCalled = ({
+      onFocusWithinCalled,
+      onBlurWithinCalled,
+      onFocusCalled,
+      onBlurCalled,
+    }) => {
+      expect(onFocusWithin).toHaveBeenCalledTimes(onFocusWithinCalled);
+      expect(onBlurWithin).toHaveBeenCalledTimes(onBlurWithinCalled);
+      expect(onFocus).toHaveBeenCalledTimes(onFocusCalled);
+      expect(onBlur).toHaveBeenCalledTimes(onBlurCalled);
+      onFocusWithin.mockClear();
+      onBlurWithin.mockClear();
+      onFocus.mockClear();
+      onBlur.mockClear();
+    };
+
+    const user = userEvent.setup();
+
+    const { getByTestId } = render(
+      <>
+        <List listSize={2}>
+          <ListItemBase
+            onBlur={onBlur}
+            onFocus={onFocus}
+            onBlurWithin={onBlurWithin}
+            onFocusWithin={onFocusWithin}
+            data-testid="list-item-0"
+            itemIndex={0}
+          >
+            <ListItemBaseSection position="fill">
+              <ButtonPill data-testid="button-0-a">0</ButtonPill>
+              <ButtonPill data-testid="button-0-b">1</ButtonPill>
+            </ListItemBaseSection>
+          </ListItemBase>
+          <ListItemBase focusChild data-testid="list-item-1" itemIndex={1}>
+            <ListItemBaseSection position="fill">
+              <ButtonPill data-testid="button-1">2</ButtonPill>
+              <ButtonPill>3</ButtonPill>
+            </ListItemBaseSection>
+          </ListItemBase>
+        </List>
+        <ButtonPill data-testid="after">2</ButtonPill>
+      </>
+    );
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    checkCalled({
+      onFocusWithinCalled: 1,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 1,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 1,
+    });
+
+    await user.keyboard('{ArrowDown}');
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 1,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.keyboard('{ArrowUp}');
+
+    checkCalled({
+      onFocusWithinCalled: 1,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 1,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    expect(getByTestId('button-0-a')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 1,
+    });
+
+    await user.tab();
+
+    expect(getByTestId('button-0-b')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    expect(getByTestId('after')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 1,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.tab({ shift: true });
+
+    expect(getByTestId('list-item-0')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 1,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 1,
+      onBlurCalled: 0,
+    });
   });
 });

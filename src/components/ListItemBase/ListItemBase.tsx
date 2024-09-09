@@ -26,6 +26,7 @@ import { getListItemBaseTabIndex, handleEmptyListItem } from './ListItemBase.uti
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
+import { useFocusAndFocusWithinState } from '../../hooks/useFocusState';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -48,6 +49,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     onPress,
     lang,
     allowTextSelection = DEFAULTS.ALLOW_TEXT_SELECTION,
+    onFocus,
+    onBlur,
+    onBlurWithin,
+    onFocusWithin,
     ...rest
   } = props;
 
@@ -58,6 +63,13 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const internalRef = useRef<HTMLLIElement>();
 
   const [isAriaHidden, setIsAriaHidden] = useState(false);
+
+  const { focusProps, isFocusedWithin } = useFocusAndFocusWithinState({
+    onFocus,
+    onBlur,
+    onBlurWithin,
+    onFocusWithin,
+  });
 
   let ref = internalRef;
 
@@ -180,8 +192,15 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const updateTabIndexes = useCallback(() => {
     getKeyboardFocusableElements(ref.current, false)
       .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
-      .forEach((el) => el.setAttribute('tabindex', listItemTabIndex.toString()));
-  }, [ref, listItemTabIndex]);
+      .forEach((el) =>
+        el.setAttribute(
+          'tabindex',
+          isFocusedWithin || focusChild ? listItemTabIndex.toString() : '-1'
+        )
+      );
+    // Also include "focus" in the dependencies to update the tab indexes when the focus changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focus, ref, isFocusedWithin, focusChild, listItemTabIndex]);
 
   const lastCurrentFocus = usePrevious(currentFocus);
   useLayoutEffect(() => {
@@ -222,7 +241,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       return;
     }
     updateTabIndexes();
-  }, [currentFocus, updateTabIndexes]);
+  }, [currentFocus, updateTabIndexes, isFocusedWithin]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
@@ -346,6 +365,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
       role={role}
       lang={lang}
+      {...focusProps}
       {...listItemPressProps}
       {...rest}
     >

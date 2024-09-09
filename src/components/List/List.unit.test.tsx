@@ -455,12 +455,12 @@ describe('<List />', () => {
       await user.tab();
       expect(document.body).toHaveFocus();
 
-      // Move focus to the last interactable element of the last selected list item
+      // Shift tabbing into the last selects the list item itself again
       await user.tab({ shift: true });
-      expect(buttons[0]).toHaveFocus();
+      expect(listItems[0]).toHaveFocus();
 
-      // Second last interactable
-      await user.tab({ shift: true });
+      // First interactable within the list item
+      await user.tab();
       expect(inputs[0]).toHaveFocus();
 
       // Move focus to the selected list item

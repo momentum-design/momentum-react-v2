@@ -101,4 +101,23 @@ export interface Props extends PressEvents, ContextMenu {
    * Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.
    */
   allowTextSelection?: boolean;
+
+  /**
+   * event fired when any of the children or the element itself are focused
+   */
+  onFocusWithin?: (e: React.FocusEvent<Element>) => void;
+
+  /**
+   * event fired when any of the children or the element itself lose focus
+   */
+  onBlurWithin?: (e: React.FocusEvent<Element>) => void;
+  /**
+   * event fired when any of the children or the element itself are focused
+   */
+  onFocus?: (e: React.FocusEvent<Element>) => void;
+
+  /**
+   * event fired when any of the children or the element itself lose focus
+   */
+  onBlur?: (e: React.FocusEvent<Element>) => void;
 }

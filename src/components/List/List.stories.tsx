@@ -481,6 +481,48 @@ const ListWithInitialFocusWrapper = () => {
 };
 const ListWithInitialFocus = Template<unknown>(ListWithInitialFocusWrapper).bind({});
 
+const ListWithFocusHandlingWrapper = () => {
+  const logMessage = useCallback((message) => {
+    // eslint-disable-next-line no-console
+    console.log(message);
+  }, []);
+
+  return (
+    <>
+      <List listSize={3}>
+        <ListItemBase itemIndex={0}>
+          <ButtonPill>0</ButtonPill>
+        </ListItemBase>
+        <ListItemBase
+          size="auto"
+          onFocusWithin={() => {
+            logMessage('on focus within');
+          }}
+          onFocus={() => {
+            logMessage('on focus');
+          }}
+          onBlur={() => logMessage('on blur')}
+          onBlurWithin={() => {
+            logMessage('on blur within');
+          }}
+          itemIndex={1}
+        >
+          <ListItemBaseSection position="fill">
+            <ButtonPill>1</ButtonPill>
+            <ButtonPill>1a</ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+        <ListItemBase itemIndex={2}>
+          <ButtonPill>2</ButtonPill>
+        </ListItemBase>
+      </List>
+      <ButtonPill>after</ButtonPill>
+    </>
+  );
+};
+
+const ListWithFocusHandling = Template<unknown>(ListWithFocusHandlingWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -494,4 +536,5 @@ export {
   ListWithButtons,
   ListWithNonFocusableChildren,
   ListWithInitialFocus,
+  ListWithFocusHandling,
 };
