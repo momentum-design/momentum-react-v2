@@ -33,7 +33,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
     ariaLabelledby,
-    tabIndex,
   } = props;
 
   const contextProps = useMenuContext();
@@ -91,7 +90,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         ref={ref}
         aria-labelledby={ariaLabelledby}
         {...menuProps}
-        tabIndex={tabIndex || menuProps.tabIndex}
       >
         {itemArray.map((key) => {
           const item = state.collection.getItem(key) as Node<T>;
