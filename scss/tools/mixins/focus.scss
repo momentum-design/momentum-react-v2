@@ -9,7 +9,7 @@
   box-shadow: var(--md-globals-focus-ring-box-shadow);
 
   @media (forced-colors: active) {
-    outline: 2px solid var(--mds-color-theme-inverted-outline-theme-normal) !important;
+    outline: 0.125rem solid var(--mds-color-theme-inverted-outline-theme-normal) !important;
   }
 
   @if $focus-visible-only {
