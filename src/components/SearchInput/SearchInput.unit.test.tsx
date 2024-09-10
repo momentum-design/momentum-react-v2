@@ -401,10 +401,19 @@ describe('<SearchInput />', () => {
 
     it('should forward a callback ref if provided', async () => {
       const callbackRef = jest.fn();
-      const inputElement = (await mountAndWait(
-        <SearchInput ref={callbackRef} aria-label="search" value="test" clearButtonAriaLabel="Clear" />
-      )).find('input').getDOMNode();
-     
+      const inputElement = (
+        await mountAndWait(
+          <SearchInput
+            ref={callbackRef}
+            aria-label="search"
+            value="test"
+            clearButtonAriaLabel="Clear"
+          />
+        )
+      )
+        .find('input')
+        .getDOMNode();
+
       expect(callbackRef).toBeCalledTimes(1);
       expect(callbackRef).toHaveBeenLastCalledWith(inputElement);
     });
@@ -540,7 +549,7 @@ describe('<SearchInput />', () => {
 
     const onKeyDown = jest.fn();
     const wrapper = await mountAndWait(
-      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" onKeyDown={onKeyDown}/>
+      <SearchInput aria-label="search" clearButtonAriaLabel="Clear" onKeyDown={onKeyDown} />
     );
 
     const inputElement = wrapper.find('input');
@@ -552,5 +561,22 @@ describe('<SearchInput />', () => {
     expect(dispatchEventSpy).not.toHaveBeenCalled();
     dispatchEventSpy.mockRestore();
     expect(onKeyDown).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders the search icon correctly', async () => {
+    const wrapper = await mountAndWait(
+      <SearchInput
+        clearButtonAriaLabel="Clear"
+        searchIconProps={{ ariaLabel: 'search icon label' }}
+      />
+    );
+
+    expect(wrapper.find(Icon).props()).toStrictEqual({
+      weight: 'bold',
+      scale: 16,
+      className: 'md-search-input-search',
+      name: 'search',
+      ariaLabel: 'search icon label',
+    });
   });
 });
