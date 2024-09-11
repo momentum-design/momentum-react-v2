@@ -17,7 +17,7 @@
   }
 
   &:active,
-  &.active {
+  &.selected {
     color: var(--mds-color-theme-text-primary-normal);
     background-color: var(--mds-color-theme-background-primary-active);
   }

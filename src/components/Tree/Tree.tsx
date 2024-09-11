@@ -42,6 +42,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     selectableNodes = DEFAULTS.SELECTABLE_NODES,
     selectedByDefault,
     onSelectionChange,
+    selectedItems,
     isRequired = DEFAULTS.IS_REQUIRED,
     ...rest
   } = props;
@@ -51,6 +52,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   const itemSelection = useItemSelected<TreeNodeId>({
     selectionMode,
     selectedByDefault,
+    selectedItems,
     onSelectionChange,
     isRequired,
   });
