@@ -11,6 +11,7 @@ import { useTreeState, TreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
+import MenuSelectionGroup from '../MenuSelectionGroup';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -47,12 +48,24 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   const ref = providedRef || internalRef;
 
   const { menuProps } = useMenu(_props, state, ref);
+
   const itemArray = Array.from(state.collection.getKeys());
 
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
       if (item.type === 'section') {
         return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
+      }
+      if (item.type === 'selectionGroup') {
+        return (
+          <MenuSelectionGroup
+            item={item}
+            state={state}
+            onAction={_props.onAction}
+            key={item.key}
+            {...item.props}
+          />
+        );
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice

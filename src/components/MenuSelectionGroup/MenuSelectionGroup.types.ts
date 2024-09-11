@@ -1,8 +1,12 @@
 import { Key } from 'react';
-import { Node } from '@react-types/shared';
+import { Node, MultipleSelection, CollectionBase } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
 
-export interface Props<T> {
+export interface SelectionGroupProps<T>
+  extends Omit<CollectionBase<T>, 'disabledKeys'>,
+    Omit<MultipleSelection, 'disabledKeys'> {}
+
+export interface Props<T> extends SelectionGroupProps<T> {
   /**
    * The contents of this menu item section
    */
