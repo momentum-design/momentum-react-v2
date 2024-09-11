@@ -12,6 +12,7 @@ import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { ListHeader, ListItemBaseSection, Icon } from '..';
+import { SelectionGroup } from './Menu.utils';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -99,6 +100,46 @@ Sections.parameters = {
   ],
 };
 
+const SelectionGroupExample = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
+
+SelectionGroupExample.argTypes = { ...argTypes };
+delete Sections.argTypes.children;
+delete Sections.argTypes.isTickOnLeftSide;
+delete Sections.argTypes.itemSize;
+
+SelectionGroupExample.args = {
+  'aria-label': 'Menu with multiple selection modes component',
+  onAction: action('onAction'),
+  onSelectionChange: action('onSelectionChange'),
+};
+
+SelectionGroupExample.parameters = {
+  variants: [
+    {
+      selectionMode: 'single', // this is the default
+      itemSize: 32,
+      isTickOnLeftSide: true,
+      children: [
+        <SelectionGroup key="0" selectionMode="multiple" aria-label="First group">
+          <Item key="00">Use system setting (internal speakers)</Item>
+          <Item key="01">Internal speaker</Item>
+          <Item key="02">Bose Headset 100</Item>
+        </SelectionGroup>,
+        <SelectionGroup key="1" selectionMode="single">
+          <Item key="10">Use system setting (internal microphone)</Item>
+          <Item key="11">Bose Headset 100</Item>
+        </SelectionGroup>,
+        // <Section title={<ListHeader outline outlineColor="secondary" />} key="2">
+        //   <Item key="20">No title in the section</Item>
+        // </Section>,
+        // <Section title={<ListHeader outline outlineColor="secondary" />} key="3">
+        //   <Item key="30">No title in the section</Item>
+        // </Section>,
+      ],
+    },
+  ],
+};
+
 const Common = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -172,4 +213,4 @@ Common.parameters = {
 delete Common.argTypes.onAction;
 delete Common.argTypes.disabledKeys;
 
-export { Example, Sections, Common };
+export { Example, Sections, SelectionGroupExample, Common };
