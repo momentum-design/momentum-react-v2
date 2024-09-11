@@ -45,80 +45,87 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            firstLine="firstLine"
+            isCompact={true}
+            isDisabled={false}
+            secondLine="testteam"
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-row"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-row"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-row"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-row"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
+                  type="body-primary"
                 >
-                  firstLine
-                </p>
-              </Text>
-              <DividerDot
-                data-test="compact-mode-divider-dot"
-              >
-                <div
-                  className="md-divider-dot-wrapper"
-                />
-              </DividerDot>
-              <Text
-                aria-label="testteam"
-                data-test="list-item-second-line"
-                style={
-                  Object {
-                    "color": "var(--mds-color-theme-text-teamdefault-normal)",
-                  }
-                }
-                type="body-secondary"
-              >
-                <small
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  >
+                    firstLine
+                  </p>
+                </Text>
+                <DividerDot
+                  data-test="compact-mode-divider-dot"
+                >
+                  <div
+                    className="md-divider-dot-wrapper"
+                  />
+                </DividerDot>
+                <Text
                   aria-label="testteam"
-                  className="md-text-wrapper"
                   data-test="list-item-second-line"
-                  data-type="body-secondary"
                   style={
                     Object {
                       "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
+                  type="body-secondary"
                 >
-                  <SecondLineElement
-                    key="second-line-item-0"
-                    showDividerDot={false}
+                  <small
+                    aria-label="testteam"
+                    className="md-text-wrapper"
+                    data-test="list-item-second-line"
+                    data-type="body-secondary"
+                    style={
+                      Object {
+                        "color": "var(--mds-color-theme-text-teamdefault-normal)",
+                      }
+                    }
                   >
-                    testteam
-                  </SecondLineElement>
-                </small>
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                    <SecondLineElement
+                      key="second-line-item-0"
+                      showDividerDot={false}
+                    >
+                      testteam
+                    </SecondLineElement>
+                  </small>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -167,42 +174,47 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -257,46 +269,56 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
-          >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
-            >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
-              >
-                <p
-                  className="md-text-wrapper"
-                  data-disabled={false}
-                  data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
+          <SpaceRowContent
+            action={
               <p>
                 action
               </p>
-            </div>
-          </ListItemBaseSection>
+            }
+            isCompact={false}
+            isDisabled={false}
+          >
+            <ListItemBaseSection
+              position="start"
+            >
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
+              >
+                <Text
+                  data-disabled={false}
+                  data-test="list-item-first-line"
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <p>
+                  action
+                </p>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -347,42 +369,47 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -433,44 +460,50 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            firstLine="firstLine"
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
+                  type="body-primary"
                 >
-                  firstLine
-                </p>
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  >
+                    firstLine
+                  </p>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -523,42 +556,47 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -609,73 +647,79 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isAlert={true}
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-text-primary-normal)"
-                name="alert"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="alert"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-text-primary-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-text-primary-normal)"
+                  name="alert"
+                  scale={14}
+                  strokeColor="none"
+                  weight="bold"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="alert"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-text-primary-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -726,73 +770,79 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isAlertMuted={true}
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-text-primary-normal)"
-                name="alert-muted"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="alert-muted"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-text-primary-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-text-primary-normal)"
+                  name="alert-muted"
+                  scale={14}
+                  strokeColor="none"
+                  weight="bold"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="alert-muted"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-text-primary-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -843,42 +893,47 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isDisabled 1`] = 
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={true}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={true}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={true}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={true}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -929,73 +984,79 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            isEnterRoom={true}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-control-active-normal)"
-                name="enter-room"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="enter-room"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-control-active-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-control-active-normal)"
+                  name="enter-room"
+                  scale={14}
+                  strokeColor="none"
+                  weight="bold"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="enter-room"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-control-active-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1046,73 +1107,79 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            isError={true}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-text-error-normal)"
-                name="priority-circle"
-                scale={14}
-                strokeColor="none"
-                weight="filled"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="priority-circle"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-text-error-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-text-error-normal)"
+                  name="priority-circle"
+                  scale={14}
+                  strokeColor="none"
+                  weight="filled"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="priority-circle"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-text-error-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1163,73 +1230,79 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            isMention={true}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-control-active-normal)"
-                name="mention"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="mention"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-control-active-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-control-active-normal)"
+                  name="mention"
+                  scale={14}
+                  strokeColor="none"
+                  weight="bold"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="mention"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-control-active-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1280,42 +1353,47 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1367,42 +1445,48 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            isSelected={true}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1455,73 +1539,80 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            isDraft={true}
+            isSelected={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-text-primary-normal)"
-                name="draft-indicator"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="draft-indicator"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-text-primary-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-text-primary-normal)"
+                  name="draft-indicator"
+                  scale={14}
+                  strokeColor="none"
+                  weight="bold"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="draft-indicator"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-text-primary-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1572,73 +1663,79 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            isUnread={true}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            >
-              <Icon
-                fillColor="var(--mds-color-theme-control-active-normal)"
-                name="unread"
-                scale={14}
-                strokeColor="none"
-                weight="bold"
-              >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  type="body-primary"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={14}
-                    data-test="unread"
-                    height="100%"
-                    style={
-                      Object {
-                        "fill": "var(--mds-color-theme-control-active-normal)",
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
                   />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              >
+                <Icon
+                  fillColor="var(--mds-color-theme-control-active-normal)"
+                  name="unread"
+                  scale={14}
+                  strokeColor="none"
+                  weight="bold"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={14}
+                      data-test="unread"
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "var(--mds-color-theme-control-active-normal)",
+                          "stroke": "none",
+                        }
+                      }
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1695,97 +1792,109 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            secondLine={
+              Array [
+                "one",
+                "two",
+                "three",
+              ]
+            }
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-              <Text
-                aria-label="one, two, three"
-                data-test="list-item-second-line"
-                style={
-                  Object {
-                    "color": "var(--mds-color-theme-text-teamdefault-normal)",
-                  }
-                }
-                type="body-secondary"
-              >
-                <small
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+                <Text
                   aria-label="one, two, three"
-                  className="md-text-wrapper"
                   data-test="list-item-second-line"
-                  data-type="body-secondary"
                   style={
                     Object {
                       "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
+                  type="body-secondary"
                 >
-                  <SecondLineElement
-                    key="second-line-item-0"
-                    showDividerDot={false}
+                  <small
+                    aria-label="one, two, three"
+                    className="md-text-wrapper"
+                    data-test="list-item-second-line"
+                    data-type="body-secondary"
+                    style={
+                      Object {
+                        "color": "var(--mds-color-theme-text-teamdefault-normal)",
+                      }
+                    }
                   >
-                    one
-                  </SecondLineElement>
-                  <SecondLineElement
-                    key="second-line-item-1"
-                    showDividerDot={true}
-                  >
-                    <DividerDot
-                      data-test="multiple-string-second-line-divider-dot"
+                    <SecondLineElement
+                      key="second-line-item-0"
+                      showDividerDot={false}
                     >
-                      <div
-                        className="md-divider-dot-wrapper"
-                      />
-                    </DividerDot>
-                    two
-                  </SecondLineElement>
-                  <SecondLineElement
-                    key="second-line-item-2"
-                    showDividerDot={true}
-                  >
-                    <DividerDot
-                      data-test="multiple-string-second-line-divider-dot"
+                      one
+                    </SecondLineElement>
+                    <SecondLineElement
+                      key="second-line-item-1"
+                      showDividerDot={true}
                     >
-                      <div
-                        className="md-divider-dot-wrapper"
-                      />
-                    </DividerDot>
-                    three
-                  </SecondLineElement>
-                </small>
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                      <DividerDot
+                        data-test="multiple-string-second-line-divider-dot"
+                      >
+                        <div
+                          className="md-divider-dot-wrapper"
+                        />
+                      </DividerDot>
+                      two
+                    </SecondLineElement>
+                    <SecondLineElement
+                      key="second-line-item-2"
+                      showDividerDot={true}
+                    >
+                      <DividerDot
+                        data-test="multiple-string-second-line-divider-dot"
+                      >
+                        <div
+                          className="md-divider-dot-wrapper"
+                        />
+                      </DividerDot>
+                      three
+                    </SecondLineElement>
+                  </small>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1836,71 +1945,77 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            secondLine="secondLine"
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-              <Text
-                aria-label="secondLine"
-                data-test="list-item-second-line"
-                style={
-                  Object {
-                    "color": "var(--mds-color-theme-text-teamdefault-normal)",
-                  }
-                }
-                type="body-secondary"
-              >
-                <small
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+                <Text
                   aria-label="secondLine"
-                  className="md-text-wrapper"
                   data-test="list-item-second-line"
-                  data-type="body-secondary"
                   style={
                     Object {
                       "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
+                  type="body-secondary"
                 >
-                  <SecondLineElement
-                    key="second-line-item-0"
-                    showDividerDot={false}
+                  <small
+                    aria-label="secondLine"
+                    className="md-text-wrapper"
+                    data-test="list-item-second-line"
+                    data-type="body-secondary"
+                    style={
+                      Object {
+                        "color": "var(--mds-color-theme-text-teamdefault-normal)",
+                      }
+                    }
                   >
-                    secondLine
-                  </SecondLineElement>
-                </small>
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                    <SecondLineElement
+                      key="second-line-item-0"
+                      showDividerDot={false}
+                    >
+                      secondLine
+                    </SecondLineElement>
+                  </small>
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -1965,42 +2080,47 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
           }
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -2051,42 +2171,48 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
           role="listitem"
           tabIndex={-1}
         >
-          <ListItemBaseSection
-            position="start"
+          <SpaceRowContent
+            isCompact={false}
+            isDisabled={false}
+            teamColor="cobalt"
           >
-            <div
-              data-position="start"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-space-list-item-text-wrapper text-column"
-            position="middle"
-          >
-            <div
-              className="md-space-list-item-text-wrapper text-column"
-              data-position="middle"
+            <ListItemBaseSection
+              position="start"
             >
-              <Text
-                data-disabled={false}
-                data-test="list-item-first-line"
-                type="body-primary"
+              <div
+                data-position="start"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-space-row-content-text-wrapper text-column"
+              position="middle"
+            >
+              <div
+                className="md-space-row-content-text-wrapper text-column"
+                data-position="middle"
               >
-                <p
-                  className="md-text-wrapper"
+                <Text
                   data-disabled={false}
                   data-test="list-item-first-line"
-                  data-type="body-primary"
-                />
-              </Text>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            position="end"
-          >
-            <div
-              data-position="end"
-            />
-          </ListItemBaseSection>
+                  type="body-primary"
+                >
+                  <p
+                    className="md-text-wrapper"
+                    data-disabled={false}
+                    data-test="list-item-first-line"
+                    data-type="body-primary"
+                  />
+                </Text>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              position="end"
+            >
+              <div
+                data-position="end"
+              />
+            </ListItemBaseSection>
+          </SpaceRowContent>
         </li>
       </FocusRing>
     </FocusRing>

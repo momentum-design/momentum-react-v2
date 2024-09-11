@@ -3,6 +3,11 @@ import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
 export interface Props {
   /**
+   * Determines whether there is new activity in this space (text appears in bold).
+   */
+  isNewActivity?: boolean;
+
+  /**
    * Draft text inside conversation (Can be also a staged file).
    */
   isDraft?: boolean;

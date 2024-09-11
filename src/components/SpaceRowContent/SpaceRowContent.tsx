@@ -17,6 +17,7 @@ import { cleanSecondLine } from './SpaceRowContent.utils';
  */
 const SpaceRowContent: FC<Props> = (props: Props) => {
   const {
+    isNewActivity,
     isDraft,
     avatar,
     firstLine,
@@ -177,7 +178,9 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
       <ListItemBaseSection position="start">{avatar}</ListItemBaseSection>
       <ListItemBaseSection
         position="middle"
-        className={classnames(STYLE.textWrapper, isCompact ? 'text-row' : 'text-column')}
+        className={classnames(STYLE.textWrapper, isCompact ? 'text-row' : 'text-column', {
+          [STYLE.isNewActivity]: isNewActivity || isMention || isEnterRoom || isUnread,
+        })}
       >
         {renderText()}
       </ListItemBaseSection>
