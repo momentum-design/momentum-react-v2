@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import Text from '../Text';
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -17,6 +17,7 @@ import ButtonCircle from '../ButtonCircle';
 import { TreeNodeRecord, TreeRefObject } from './Tree.types';
 import ButtonPill from '../ButtonPill';
 import Flex from '../Flex';
+import { v4 as uuidV4 } from 'uuid';
 
 // prettier-ignore
 const exampleTree =
@@ -190,58 +191,119 @@ const DynamicTree = Template(() => {
   );
 }).bind({});
 
-const SelectionTemplate = (props: Partial<TreeProps>) =>
-  Template(() => {
-    const ref = useRef<TreeRefObject>();
-    const [selected, setSelected] = useState('');
+const SelectableTree = ({
+  templateTitle,
+  showSelectedItems,
+  ...props
+}: Partial<TreeProps> & { templateTitle: string; showSelectedItems?: boolean }) => {
+  const ref = useRef<TreeRefObject>();
+  const [selected, setSelected] = useState('');
+  const [id] = useState(uuidV4);
 
-    const onSelectHandler = (ids: Array<string>) => setSelected(ids.join(', '));
+  const onSelectHandler = (ids: Array<string>) => setSelected(ids.join(', '));
+  const clearAll = useCallback(() => ref.current.clearSelection(), [ref]);
+  const selectAll = useCallback(
+    () =>
+      ref.current.updateSelection(
+        Array.from(exampleTreeMap.values())
+          .filter((node) => (props.selectableNodes === 'leafOnly' ? node.isLeaf : true))
+          .map((node) => node.id)
+      ),
+    [ref, exampleTree]
+  );
 
-    return (
-      <>
-        <Flex alignItems={'center'} xgap={'1rem'}>
-          <ButtonPill onPress={() => ref.current.clearSelection()}>Clear Selection</ButtonPill>
-          <Text>Selected nodes: [{selected}]</Text>
-        </Flex>
-        <hr />
-        <Tree
-          ref={ref as any}
-          treeStructure={exampleTree}
-          isRenderedFlat={true}
-          shouldNodeFocusBeInset={true}
-          onSelectionChange={onSelectHandler}
-          {...props}
-        >
-          {mapTree(exampleTreeMap, (node) => (
-            <ExampleTreeNode key={node.id.toString()} node={node} />
-          ))}
-        </Tree>
-      </>
-    );
-  }).bind({});
-
-const SingleSelectLeafNodesOnly = SelectionTemplate({
-  selectionMode: 'single',
-  selectableNodes: 'leafOnly',
-});
-
-const SingleSelectAnyNodesRequired = SelectionTemplate({
-  selectionMode: 'single',
-  selectableNodes: 'any',
-  isRequired: true,
-});
-
-const MultiSelectLeafNodesOnly = SelectionTemplate({
-  selectionMode: 'multiple',
-  selectableNodes: 'leafOnly',
-});
-
-export {
-  Example,
-  WithRoot,
-  TreeWithScroll,
-  DynamicTree,
-  SingleSelectLeafNodesOnly,
-  SingleSelectAnyNodesRequired,
-  MultiSelectLeafNodesOnly,
+  return (
+    <div>
+      <h2 id={id}>{templateTitle}</h2>
+      <Flex alignItems={'center'} xgap={'0.5rem'}>
+        <ButtonPill size={28} ghost outline onPress={clearAll}>
+          Clear Selection
+        </ButtonPill>
+        {props.selectionMode === 'multiple' && (
+          <ButtonPill size={28} ghost outline onPress={selectAll}>
+            Select All
+          </ButtonPill>
+        )}
+      </Flex>
+      {showSelectedItems && <Text>Selected nodes: [{selected}]</Text>}
+      <hr />
+      <Tree
+        ref={ref as any}
+        aria-labelledby={id}
+        treeStructure={exampleTree}
+        isRenderedFlat={true}
+        shouldNodeFocusBeInset={true}
+        onSelectionChange={onSelectHandler}
+        {...props}
+      >
+        {mapTree(exampleTreeMap, (node) => (
+          <ExampleTreeNode key={node.id.toString()} node={node} />
+        ))}
+      </Tree>
+    </div>
+  );
 };
+
+const NodeSelection = Template(() => {
+  return (
+    <Flex justifyContent="space-around">
+      <SelectableTree
+        templateTitle="Single Selection, Leaf nodes only"
+        showSelectedItems={true}
+        selectionMode="single"
+        selectableNodes="leafOnly"
+      />
+
+      <SelectableTree
+        templateTitle="Single Selection, Any nodes"
+        showSelectedItems={true}
+        selectionMode="single"
+        selectableNodes="any"
+      />
+
+      <SelectableTree
+        templateTitle="Multi Selection, Leaf nodes only"
+        showSelectedItems={true}
+        selectionMode="multiple"
+        selectableNodes="leafOnly"
+      />
+    </Flex>
+  );
+}).bind({});
+
+const ControlledSelection = Template(() => {
+  const [selected, setSelected] = useState<Array<string>>([]);
+
+  const onSelect = useCallback(
+    (ids: Array<string>) => {
+      setSelected(ids);
+    },
+    [setSelected]
+  );
+
+  return (
+    <>
+      <h2>Sync selection between trees</h2>
+      <Text>Selected nodes: [{selected.join(', ')}]</Text>
+      <Flex justifyContent="space-around">
+        <SelectableTree
+          templateTitle="Tree A"
+          selectionMode="multiple"
+          selectableNodes="leafOnly"
+          selectedItems={selected}
+          onSelectionChange={onSelect}
+        />
+
+        <SelectableTree
+          templateTitle="Tree B"
+          selectionMode="multiple"
+          selectableNodes="leafOnly"
+          selectedItems={selected}
+          onSelectionChange={onSelect}
+        />
+      </Flex>
+    </>
+  );
+}).bind({});
+
+export { Example, WithRoot, TreeWithScroll, DynamicTree, NodeSelection, ControlledSelection };

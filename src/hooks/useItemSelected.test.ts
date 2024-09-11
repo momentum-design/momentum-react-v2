@@ -226,7 +226,7 @@ describe('useItemSelected', () => {
           hook.result.current.update(selections);
         });
         expect(hook.result.current.selectedItems).toEqual(expected);
-        expect(onSelectionChange).toHaveBeenNthCalledWith(1, selections);
+        expect(onSelectionChange).toHaveBeenNthCalledWith(1, expected);
       });
 
       it('should overwrite all selection', () => {
@@ -493,6 +493,143 @@ describe('useItemSelected', () => {
         });
         expect(onSelectionChange).not.toHaveBeenCalled();
       });
+    });
+  });
+
+  describe('controlled mode', () => {
+    it('should use selectedItems from props', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(() =>
+        useItemSelected<string>({
+          selectionMode: 'multiple',
+          selectedItems: ['1', '2'],
+          onSelectionChange,
+        })
+      );
+
+      expect(hook.result.current.selectedItems).toEqual(['1', '2']);
+      expect(onSelectionChange).not.toHaveBeenCalled();
+    });
+
+    it('should not call onSelectionChange when selection changed from props', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({ selectionMode: 'multiple', selectedItems, onSelectionChange }),
+        { initialProps: { selectedItems: ['1', '2'] } }
+      );
+      expect(onSelectionChange).not.toHaveBeenCalled();
+
+      hook.rerender({ selectedItems: ['3', '4'] });
+
+      expect(onSelectionChange).not.toHaveBeenCalled();
+    });
+
+    it('should call onSelectionChange when selection changed via toggle', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({ selectionMode: 'multiple', selectedItems, onSelectionChange }),
+        { initialProps: { selectedItems: ['1', '2'] } }
+      );
+      act(() => hook.result.current.toggle('3', true));
+
+      expect(onSelectionChange).toHaveBeenNthCalledWith(1, ['1', '2', '3']);
+    });
+
+    it('should call onSelectionChange when selection changed via update', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({ selectionMode: 'multiple', selectedItems, onSelectionChange }),
+        { initialProps: { selectedItems: ['1', '2'] } }
+      );
+      act(() => hook.result.current.update(['2', '3']));
+
+      expect(onSelectionChange).toHaveBeenNthCalledWith(1, ['2', '3']);
+    });
+    it('should call onSelectionChange when selection changed via clear', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({ selectionMode: 'multiple', selectedItems, onSelectionChange }),
+        { initialProps: { selectedItems: ['1', '2'] } }
+      );
+      act(() => hook.result.current.clear());
+
+      expect(onSelectionChange).toHaveBeenNthCalledWith(1, []);
+    });
+
+    it('should update selectedItems when selectedItems prop changed', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({
+            selectionMode: 'multiple',
+            selectedItems,
+            onSelectionChange,
+          }),
+        {
+          initialProps: { selectedItems: ['1', '2'] },
+        }
+      );
+
+      expect(hook.result.current.selectedItems).toEqual(['1', '2']);
+      expect(onSelectionChange).not.toHaveBeenCalled();
+
+      hook.rerender({ selectedItems: ['3', '4'] });
+
+      expect(hook.result.current.selectedItems).toEqual(['3', '4']);
+      expect(onSelectionChange).not.toHaveBeenCalled();
+    });
+
+    it('should not update selectedItems when selectedItems prop is not changed', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({
+            selectionMode: 'multiple',
+            selectedItems,
+            onSelectionChange,
+          }),
+        {
+          initialProps: { selectedItems: ['1', '2'] },
+        }
+      );
+
+      expect(hook.result.current.selectedItems).toEqual(['1', '2']);
+      expect(onSelectionChange).not.toHaveBeenCalled();
+
+      hook.rerender({ selectedItems: ['1', '2'] });
+
+      expect(hook.result.current.selectedItems).toEqual(['1', '2']);
+      expect(onSelectionChange).not.toHaveBeenCalled();
+    });
+
+    it('should not update selectedItems when selectedItems prop is undefined', () => {
+      const onSelectionChange = jest.fn();
+
+      const hook = renderHook(
+        ({ selectedItems }) =>
+          useItemSelected<string>({
+            selectionMode: 'multiple',
+            selectedItems,
+            onSelectionChange,
+          }),
+        {
+          initialProps: { selectedItems: ['1', '2'] },
+        }
+      );
+
+      expect(hook.result.current.selectedItems).toEqual(['1', '2']);
+      expect(onSelectionChange).not.toHaveBeenCalled();
     });
   });
 });

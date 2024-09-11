@@ -10,7 +10,7 @@ exports[`TreeNodeBase snapshot should match snapshot 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="md-tree-node-base-wrapper"
+        className="md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -49,7 +49,7 @@ exports[`TreeNodeBase snapshot should match snapshot with className 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="example-class md-tree-node-base-wrapper"
+        className="example-class md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -88,7 +88,7 @@ exports[`TreeNodeBase snapshot should match snapshot with id 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="md-tree-node-base-wrapper"
+        className="md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -128,7 +128,7 @@ exports[`TreeNodeBase snapshot should match snapshot with isSelected 1`] = `
     >
       <div
         aria-selected={true}
-        className="md-tree-node-base-wrapper active"
+        className="md-tree-node-base-wrapper selected active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -167,7 +167,7 @@ exports[`TreeNodeBase snapshot should match snapshot with lang 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="md-tree-node-base-wrapper"
+        className="md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -207,7 +207,7 @@ exports[`TreeNodeBase snapshot should match snapshot with shape 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="md-tree-node-base-wrapper"
+        className="md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="isPilled"
@@ -246,7 +246,7 @@ exports[`TreeNodeBase snapshot should match snapshot with size 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="md-tree-node-base-wrapper"
+        className="md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -289,7 +289,7 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <div
-        className="md-tree-node-base-wrapper"
+        className="md-tree-node-base-wrapper active-node"
         data-nodeid="42"
         data-padded={false}
         data-shape="rectangle"
@@ -365,7 +365,7 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
             aria-level={1}
             aria-posinset={1}
             aria-setsize={1}
-            className="md-tree-node-base-wrapper"
+            className="md-tree-node-base-wrapper active-node"
             data-nodeid="root"
             data-padded={false}
             data-shape="rectangle"
@@ -507,7 +507,7 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             aria-level={1}
             aria-posinset={1}
             aria-setsize={1}
-            className="md-tree-node-base-wrapper"
+            className="md-tree-node-base-wrapper active-node"
             data-nodeid="root"
             data-padded={false}
             data-shape="rectangle"
