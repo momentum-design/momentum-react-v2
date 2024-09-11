@@ -20,7 +20,7 @@
 
         .md-text-wrapper,
         .md-icon-wrapper {
-          color: var(--mds-color-theme-text-primary-normal);
+          color: var(--mds-color-theme-text-secondary-normal);
         }
       }
 
@@ -54,7 +54,8 @@
 
     .md-text-wrapper,
     .md-icon-wrapper {
-      color: var(--mds-color-theme-text-secondary-normal);
+      color: var(--mds-color-theme-text-primary-normal);
+      font-weight: 700;
     }
 
     &:hover {
@@ -67,7 +68,7 @@
     }
 
     &:active {
-      background-color: var(--mds-color-theme-button-secondary-pressed);
+      background-color: var(--mds-color-theme-button-secondary-active-pressed);
 
       .md-text-wrapper,
       .md-icon-wrapper {
@@ -82,7 +83,7 @@
     }
 
     &[data-disabled='true'] {
-      background-color: var(--mds-color-theme-button-secondary-normal);
+      background-color: var(--mds-color-theme-button-secondary-active-normal);
 
       .md-text-wrapper,
       .md-icon-wrapper {
