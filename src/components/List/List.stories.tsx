@@ -559,6 +559,125 @@ const DynamicListWithInitialFocusWrapper = () => {
 
 const DynamicListWithInitialFocus = Template<unknown>(DynamicListWithInitialFocusWrapper).bind({});
 
+const DynamicListWithInitialFocusWrapper2 = () => {
+  const [showBefore, setShowBefore] = useState(false);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      setShowBefore((oldShowBefore) => !oldShowBefore);
+    }, 3000);
+
+    return () => clearInterval(handle);
+  });
+
+  let offset = 0;
+  if (showBefore) {
+    offset = 1;
+  }
+
+  return (
+    <List listSize={showBefore ? 6 : 5}>
+      {/* {showBefore && (
+            <ListItemBase itemIndex={0} key={1}>
+              Item 0
+            </ListItemBase>
+        )}
+        {showBefore && (
+            <ListItemBase itemIndex={1} key={2}>
+              Item 1
+            </ListItemBase>
+        )} */}
+      {showBefore && (
+        <ListItemBase itemIndex={0} key={3}>
+          Item 2
+        </ListItemBase>
+      )}
+      <ListItemBase id="test" itemIndex={0 + offset} key={5}>
+        Item 3
+      </ListItemBase>
+      <ListItemBase itemIndex={1 + offset} key={6}>
+        Item 4
+      </ListItemBase>
+      <ListItemBase itemIndex={2 + offset} key={7}>
+        Item 5
+      </ListItemBase>
+      <ListItemBase itemIndex={3 + offset} key={8}>
+        Item 6
+      </ListItemBase>
+      <ListItemBase itemIndex={4 + offset} key={9}>
+        Item 7
+      </ListItemBase>
+    </List>
+  );
+};
+
+const DynamicListWithInitialFocus2 = Template<unknown>(DynamicListWithInitialFocusWrapper2).bind(
+  {}
+);
+
+const DynamicListWithInitialFocusWrapper3 = () => {
+  const [showBefore, setShowBefore] = useState(false);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      setShowBefore((oldShowBefore) => !oldShowBefore);
+    }, 3000);
+
+    return () => clearInterval(handle);
+  });
+
+  let offset = 0;
+  if (showBefore) {
+    offset = 1;
+  }
+
+  return (
+    <List listSize={showBefore ? 7 : 5}>
+      {showBefore && (
+        <ListItemBase itemIndex={0} key={0}>
+          Item 0
+        </ListItemBase>
+      )}
+      <ListItemBase id="test" itemIndex={offset + 0} key={1}>
+        Item 1
+      </ListItemBase>
+      <ListItemBase itemIndex={offset + 1} key={2}>
+        Item 2
+      </ListItemBase>
+      <ListItemBase itemIndex={offset + 2} key={3}>
+        Item 3
+      </ListItemBase>
+      <ListItemBase itemIndex={offset + 3} key={4}>
+        Item 4
+      </ListItemBase>
+      <ListItemBase itemIndex={offset + 4} key={5}>
+        Item 5
+      </ListItemBase>
+      {showBefore && (
+        <ListItemBase itemIndex={offset + 5} key={6}>
+          Item 6
+        </ListItemBase>
+      )}
+    </List>
+  );
+};
+
+const DynamicListWithInitialFocus3 = Template<unknown>(DynamicListWithInitialFocusWrapper3).bind(
+  {}
+);
+
+const SingleItemListWrapper = () => {
+  return (
+    <List listSize={1}>
+      <ListItemBase itemIndex={0} key={0}>
+        Item 0
+      </ListItemBase>
+    </List>
+  );
+};
+
+const SingleItemList = Template<unknown>(SingleItemListWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -574,4 +693,7 @@ export {
   ListWithInitialFocus,
   ListWithFocusHandling,
   DynamicListWithInitialFocus,
+  DynamicListWithInitialFocus2,
+  DynamicListWithInitialFocus3,
+  SingleItemList,
 };

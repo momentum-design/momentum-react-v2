@@ -79,6 +79,7 @@ export interface ListContextValue {
   isInitiallyRoving?: boolean;
   setIsInitiallyRoving?: Dispatch<SetStateAction<boolean>>;
   suppressFocus?: boolean;
+  isFocusedWithin?: boolean;
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;

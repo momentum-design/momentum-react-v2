@@ -172,8 +172,31 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
+  const listFocusedWithin = listContext?.isFocusedWithin;
 
   const listItemTabIndex = getListItemBaseTabIndex({ interactive, listContext, focus });
+
+  const previousItemIndex = usePrevious(itemIndex);
+  const lastCurrentFocus = usePrevious(currentFocus);
+
+  // When an item is added to the list, we need to reset the focus since the list size has changed
+  // and maybe the item index has changed as well
+  useLayoutEffect(() => {
+    if (
+      itemIndex !== previousItemIndex &&
+      currentFocus === previousItemIndex &&
+      listFocusedWithin
+    ) {
+      setCurrentFocus(itemIndex);
+    }
+  }, [
+    currentFocus,
+    itemIndex,
+    lastCurrentFocus,
+    listFocusedWithin,
+    previousItemIndex,
+    setCurrentFocus,
+  ]);
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
@@ -202,13 +225,12 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focus, ref, isFocusedWithin, focusChild, listItemTabIndex]);
 
-  const lastCurrentFocus = usePrevious(currentFocus);
   useLayoutEffect(() => {
     if (
-      lastCurrentFocus !== undefined &&
-      lastCurrentFocus !== currentFocus &&
-      focus &&
-      !isInitiallyRoving
+      lastCurrentFocus !== undefined && // prevents focus of new elements
+      (lastCurrentFocus !== currentFocus || (!isFocusedWithin && listFocusedWithin)) && // focuses the new element in up/down navigation
+      focus && // only focus the actually focused item
+      !isInitiallyRoving // Don't focus anything at all while the list is finding its initial focus
     ) {
       const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
         (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
@@ -220,7 +242,19 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         ref.current.focus();
       }
     }
-  }, [currentFocus, focus, focusChild, isInitiallyRoving, itemIndex, lastCurrentFocus, ref]);
+  }, [
+    currentFocus,
+    focus,
+    focusChild,
+    isFocusedWithin,
+    isInitiallyRoving,
+    itemIndex,
+    lastCurrentFocus,
+    listFocusedWithin,
+    listSize,
+    previousItemIndex,
+    ref,
+  ]);
 
   /**
    * When the items inside the list context gets smaller (search/filter applied)
@@ -229,9 +263,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * the size of the new list size (shrinked size)
    */
   useLayoutEffect(() => {
+    // if (!!listSize && currentFocus >= listSize) {
     if (!!listSize && currentFocus >= listSize) {
-      // set focus to first item
-      listContext.setCurrentFocus(0);
+      // set focus to last item
+      listContext.setCurrentFocus(listSize - 1);
       updateTabIndexes();
     }
   }, [currentFocus, listContext, listSize, updateTabIndexes]);

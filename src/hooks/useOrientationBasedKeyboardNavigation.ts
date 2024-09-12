@@ -25,6 +25,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     direction: 'forward' | 'backward';
     isInitiallyRoving?: boolean;
     supressFocus?: boolean;
+    isFocusedWithin?: boolean;
   };
 };
 
@@ -67,9 +68,10 @@ const useOrientationBasedKeyboardNavigation = (
       direction,
       setIsInitiallyRoving,
       isInitiallyRoving,
+      isFocusedWithin,
       ...contextProps,
     }),
-    [listSize, currentFocus, noLoop, direction, isInitiallyRoving, contextProps]
+    [listSize, currentFocus, noLoop, direction, isInitiallyRoving, isFocusedWithin, contextProps]
   );
 
   const { keyboardProps } = useKeyboard({
