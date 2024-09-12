@@ -19,6 +19,7 @@ import MeetingListItem from '../MeetingListItem';
 import SearchInput from '../SearchInput';
 import List from '../List';
 import AriaToolbarItem from '../AriaToolbarItem';
+import ListItemBase from '../ListItemBase';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -537,6 +538,52 @@ WithMeetingListItemWithAvatarWithPopover.args = {
   appendTo: () => document.querySelector('#theme-provider'),
 };
 
+const WithHideOnBlur = Template<PopoverProps>((args) => {
+  return (
+    <>
+      <div id="container-1">
+        <Popover
+          {...args}
+          triggerComponent={
+            <ButtonPill>test 1</ButtonPill>
+          }
+          trigger="click"
+          focusBackOnTrigger
+          interactive
+          hideOnBlur
+          disableFocusLock
+        >
+          <List listSize={3}>
+            <ListItemBase itemIndex={0}>test 4</ListItemBase>
+            <ListItemBase itemIndex={1}>test 5</ListItemBase>
+            <ListItemBase itemIndex={2}>test 6</ListItemBase>
+          </List>
+        </Popover>
+      </div>
+      <div id="container-2">
+        <Popover
+          {...args}
+          triggerComponent={
+            <ButtonPill>test 2</ButtonPill>
+          }
+          trigger="click"
+          focusBackOnTrigger
+          interactive
+          hideOnBlur
+          disableFocusLock
+        >
+          <List listSize={3}>
+            <ListItemBase itemIndex={0}>test 4</ListItemBase>
+            <ListItemBase itemIndex={1}>test 5</ListItemBase>
+            <ListItemBase itemIndex={2}>test 6</ListItemBase>
+          </List>
+        </Popover>
+      </div>
+    </>
+  );
+  
+}).bind({});
+
 export {
   Example,
   InteractiveContent,
@@ -553,4 +600,5 @@ export {
   WithSearchInput,
   WithMeetingListItemWithButtonsWithPopoverInList,
   WithMeetingListItemWithAvatarWithPopover,
+  WithHideOnBlur
 };
