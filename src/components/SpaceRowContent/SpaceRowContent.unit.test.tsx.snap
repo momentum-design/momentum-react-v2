@@ -423,11 +423,11 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isEnterRoom 1`]
     />
   </ListItemBaseSection>
   <ListItemBaseSection
-    className="md-space-row-content-text-wrapper text-column"
+    className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
     position="middle"
   >
     <div
-      className="md-space-row-content-text-wrapper text-column"
+      className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
       data-position="middle"
     >
       <Text
@@ -571,11 +571,11 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isMention 1`] =
     />
   </ListItemBaseSection>
   <ListItemBaseSection
-    className="md-space-row-content-text-wrapper text-column"
+    className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
     position="middle"
   >
     <div
-      className="md-space-row-content-text-wrapper text-column"
+      className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
       data-position="middle"
     >
       <Text
@@ -763,11 +763,11 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isUnread 1`] = 
     />
   </ListItemBaseSection>
   <ListItemBaseSection
-    className="md-space-row-content-text-wrapper text-column"
+    className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
     position="middle"
   >
     <div
-      className="md-space-row-content-text-wrapper text-column"
+      className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
       data-position="middle"
     >
       <Text

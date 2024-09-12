@@ -8,7 +8,6 @@ import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import ListItemBase from '../ListItemBase';
 import * as ListContext from '../List/List.utils';
-import { STYLE } from './SpaceListItem.constants';
 import DividerDot from '../DividerDot';
 
 describe('<SpaceListItem />', () => {
@@ -449,18 +448,6 @@ describe('<SpaceListItem />', () => {
         container.filter("[data-test='multiple-string-second-line-divider-dot']").length
       ).toEqual(0);
       expect(container.filter("[data-test='compact-mode-divider-dot']").length).toEqual(0);
-    });
-
-    it('should have provided isNewActivity class when isNewActivity is provided', async () => {
-      expect.assertions(1);
-
-      const isNewActivity = true;
-
-      const element = (await mountAndWait(<SpaceListItem isNewActivity={isNewActivity} />)).find(
-        ListItemBase
-      );
-
-      expect(element.hasClass(STYLE.isNewActivity)).toBe(true);
     });
 
     it('should have provided unread when isUnread is provided', async () => {

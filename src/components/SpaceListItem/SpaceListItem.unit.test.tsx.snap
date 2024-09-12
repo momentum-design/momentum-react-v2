@@ -946,7 +946,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
   isEnterRoom={true}
 >
   <ListItemBase
-    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper"
     isDisabled={false}
     shape="isPilled"
     size={50}
@@ -960,7 +960,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
         isInset={false}
       >
         <li
-          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
           data-interactive={true}
@@ -997,11 +997,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
               />
             </ListItemBaseSection>
             <ListItemBaseSection
-              className="md-space-row-content-text-wrapper text-column"
+              className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
               position="middle"
             >
               <div
-                className="md-space-row-content-text-wrapper text-column"
+                className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
                 data-position="middle"
               >
                 <Text
@@ -1192,7 +1192,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
   isMention={true}
 >
   <ListItemBase
-    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper"
     isDisabled={false}
     shape="isPilled"
     size={50}
@@ -1206,7 +1206,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
         isInset={false}
       >
         <li
-          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
           data-interactive={true}
@@ -1243,11 +1243,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
               />
             </ListItemBaseSection>
             <ListItemBaseSection
-              className="md-space-row-content-text-wrapper text-column"
+              className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
               position="middle"
             >
               <div
-                className="md-space-row-content-text-wrapper text-column"
+                className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
                 data-position="middle"
               >
                 <Text
@@ -1315,7 +1315,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
   isNewActivity={true}
 >
   <ListItemBase
-    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper"
     isDisabled={false}
     shape="isPilled"
     size={50}
@@ -1329,7 +1329,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
         isInset={false}
       >
         <li
-          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
           data-interactive={true}
@@ -1356,6 +1356,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
           <SpaceRowContent
             isCompact={false}
             isDisabled={false}
+            isNewActivity={true}
           >
             <ListItemBaseSection
               position="start"
@@ -1365,11 +1366,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
               />
             </ListItemBaseSection>
             <ListItemBaseSection
-              className="md-space-row-content-text-wrapper text-column"
+              className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
               position="middle"
             >
               <div
-                className="md-space-row-content-text-wrapper text-column"
+                className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
                 data-position="middle"
               >
                 <Text
@@ -1625,7 +1626,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
   isUnread={true}
 >
   <ListItemBase
-    className="md-space-list-item-wrapper md-space-list-item-is-new-activity"
+    className="md-space-list-item-wrapper"
     isDisabled={false}
     shape="isPilled"
     size={50}
@@ -1639,7 +1640,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
         isInset={false}
       >
         <li
-          className="md-space-list-item-wrapper md-space-list-item-is-new-activity md-list-item-base-wrapper"
+          className="md-space-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
           data-interactive={true}
@@ -1676,11 +1677,11 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
               />
             </ListItemBaseSection>
             <ListItemBaseSection
-              className="md-space-row-content-text-wrapper text-column"
+              className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
               position="middle"
             >
               <div
-                className="md-space-row-content-text-wrapper text-column"
+                className="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
                 data-position="middle"
               >
                 <Text
