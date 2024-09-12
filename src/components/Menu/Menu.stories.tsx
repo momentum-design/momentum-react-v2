@@ -11,7 +11,7 @@ import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon } from '..';
+import { ListHeader, ListItemBaseSection, Icon, ContentSeparator } from '..';
 import { SelectionGroup } from './Menu.utils';
 
 export default {
@@ -116,7 +116,7 @@ SelectionGroupExample.args = {
 SelectionGroupExample.parameters = {
   variants: [
     {
-      selectionMode: 'single', // this is the default
+      selectionMode: 'none',
       itemSize: 32,
       isTickOnLeftSide: true,
       children: [
@@ -129,12 +129,6 @@ SelectionGroupExample.parameters = {
           <Item key="10">Use system setting (internal microphone)</Item>
           <Item key="11">Bose Headset 100</Item>
         </SelectionGroup>,
-        // <Section title={<ListHeader outline outlineColor="secondary" />} key="2">
-        //   <Item key="20">No title in the section</Item>
-        // </Section>,
-        // <Section title={<ListHeader outline outlineColor="secondary" />} key="3">
-        //   <Item key="30">No title in the section</Item>
-        // </Section>,
       ],
     },
   ],

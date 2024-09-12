@@ -54,18 +54,18 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
       if (item.type === 'section') {
+        if (item.props?.selectionGroup) {
+          return (
+            <MenuSelectionGroup
+              item={item}
+              state={state}
+              onAction={_props.onAction}
+              key={item.key}
+              {...item.props}
+            />
+          );
+        }
         return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
-      }
-      if (item.type === 'selectionGroup') {
-        return (
-          <MenuSelectionGroup
-            item={item}
-            state={state}
-            onAction={_props.onAction}
-            key={item.key}
-            {...item.props}
-          />
-        );
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice
