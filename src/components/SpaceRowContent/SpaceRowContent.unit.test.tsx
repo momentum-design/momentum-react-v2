@@ -7,6 +7,7 @@ import Avatar from '../Avatar';
 import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import DividerDot from '../DividerDot';
+import ListItemBaseSection from '../ListItemBaseSection';
 
 describe('<SpaceRowContent />', () => {
   describe('snapshot', () => {
@@ -363,6 +364,18 @@ describe('<SpaceRowContent />', () => {
         container.filter("[data-test='multiple-string-second-line-divider-dot']").length
       ).toEqual(0);
       expect(container.filter("[data-test='compact-mode-divider-dot']").length).toEqual(0);
+    });
+
+    it('should have provided isNewActivity class when isNewActivity is provided', async () => {
+      expect.assertions(1);
+
+      const isNewActivity = true;
+
+      const element = (await mountAndWait(<SpaceRowContent isNewActivity={isNewActivity} />))
+        .find(ListItemBaseSection)
+        .find({ position: 'middle' });
+
+      expect(element.hasClass('md-space-row-content-is-new-activity')).toBe(true);
     });
 
     it('should have provided unread when isUnread is provided', async () => {
