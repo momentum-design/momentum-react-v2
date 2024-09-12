@@ -29,6 +29,10 @@
 
     > .md-checkbox-selected {
       background-color: var(--mds-color-theme-control-active-normal);
+
+      @media (forced-colors: active) {
+        background-color: FieldText;
+      }
     }
 
     > .md-checkbox-not-selected {
@@ -44,10 +48,18 @@
 
       > .md-checkbox-selected {
         background-color: var(--mds-color-theme-control-active-hover);
+
+        @media (forced-colors: active) {
+          background-color: SelectedItem;
+        }
       }
 
       > .md-checkbox-not-selected {
         background-color: var(--mds-color-theme-control-inactive-hover);
+
+        @media (forced-colors: active) {
+          border-color: SelectedItem;
+        }
       }
     }
 
@@ -66,11 +78,19 @@
 
     .md-checkbox-focus {
       box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
+
+      @media (forced-colors: active) {
+        outline: var(--md-globals-focus-ring-outline) !important;
+      }
     }
 
     &.focus {
       .checkbox {
         box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
+
+        @media (forced-colors: active) {
+          outline: var(--md-globals-focus-ring-outline) !important;
+        }
       }
     }
   }
