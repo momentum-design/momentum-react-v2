@@ -4,6 +4,6 @@ import { Props } from './MenuSelectionGroup.types';
 
 export { CONSTANTS as MENU_SELECTION_GROUP_CONSTANTS };
 
-export type MenuSelectionGroupProps = Props;
+export type MenuSelectionGroupProps<T> = Props<T>;
 
 export default MenuSelectionGroup;

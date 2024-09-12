@@ -28,6 +28,10 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
   };
 
   useEffect(() => {
+    menuSelectionManager.setFocusedKey(selectionManager.focusedKey);
+  }, [selectionManager.focusedKey]);
+
+  useEffect(() => {
     selectionManager.setFocused(menuSelectionManager.isFocused);
     selectionManager.setFocusedKey(menuSelectionManager.focusedKey);
   }, [menuSelectionManager.focusedKey, menuSelectionManager.isFocused]);
