@@ -5,12 +5,8 @@
     border-color: $border-color;
   }
 
-  outline: none !important;
+  outline: var(--md-globals-focus-ring-outline) !important;
   box-shadow: var(--md-globals-focus-ring-box-shadow);
-
-  @media (forced-colors: active) {
-    outline: 0.125rem solid var(--mds-color-theme-outline-theme-normal) !important;
-  }
 
   @if $focus-visible-only {
     &:not(:focus-visible) {
