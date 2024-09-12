@@ -53,6 +53,10 @@
   --md-globals-border-style-none: none;
   --md-globals-border-style-solid: solid;
 
+  @media (forced-colors: active) {
+    --md-globals-focus-ring-outline: 0.125rem solid var(--mds-color-theme-outline-theme-normal);
+  }
+
   // Gradient backgrounds
   --md-globals-gradient-primary: var(--mds-color-theme-background-gradient-primary-normal);
   --md-globals-gradient-secondary: var(--mds-color-theme-background-gradient-secondary-normal);
