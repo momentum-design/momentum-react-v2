@@ -1,2 +1,13 @@
 .md-menu-selection-group-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+.md-menu-selection-group-header-wrapper {
+  color: var(--mds-color-theme-text-secondary-normal);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding: 0.25rem 0.75rem;
 }

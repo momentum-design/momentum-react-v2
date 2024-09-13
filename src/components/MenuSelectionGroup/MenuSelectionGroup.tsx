@@ -43,7 +43,14 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
 
   return (
     <div {...itemProps}>
-      <ul {...groupProps}>
+      {!React.isValidElement(item.rendered) && item.rendered ? (
+        <span className={STYLE.header} {...headingProps}>
+          {item.rendered}
+        </span>
+      ) : (
+        item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
+      )}
+      <ul {...groupProps} className={STYLE.wrapper}>
         {Array.from(item.childNodes).map((node) => {
           let item = <MenuItem key={node.key} item={node} state={newState} onAction={onAction} />;
 

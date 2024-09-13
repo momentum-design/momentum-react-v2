@@ -5,6 +5,7 @@ import {
   FocusStrategy,
   MultipleSelection,
   SelectionMode,
+  SectionProps,
 } from '@react-types/shared';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
 
@@ -63,7 +64,8 @@ export interface MenuAppearanceContextValue {
 }
 
 export interface SelectionGroupProps<T>
-  extends Omit<CollectionBase<T>, 'disabledKeys'>,
+  extends Omit<SectionProps<T>, 'children' | 'items'>,
+    Omit<CollectionBase<T>, 'disabledKeys'>,
     Omit<MultipleSelection, 'disabledKeys' | 'selectionMode'> {
   onAction?: () => void;
   selectionMode: Exclude<SelectionMode, 'none'>;
