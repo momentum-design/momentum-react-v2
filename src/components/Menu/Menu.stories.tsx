@@ -12,7 +12,7 @@ import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon } from '..';
+import { ListHeader, ListItemBaseSection, Icon, ContentSeparator } from '..';
 import { SelectionGroup } from './Menu.utils';
 
 export default {
@@ -128,6 +128,14 @@ SelectionGroupExample.parameters = {
           onSelectionChange={(...rest) => {
             console.log('multipleselection', rest);
           }}
+          title={
+            <ListHeader outline={false}>
+              <ListItemBaseSection position="start">
+                <Icon scale={16} name="speaker" strokeColor="none" />
+              </ListItemBaseSection>
+              <ListItemBaseSection position="fill">Speaker</ListItemBaseSection>
+            </ListHeader>
+          }
         >
           <Item key="00">Use system setting (internal speakers)</Item>
           <Item key="01">Internal speaker</Item>
@@ -140,6 +148,16 @@ SelectionGroupExample.parameters = {
           onSelectionChange={(...rest) => {
             console.log('singleselection', rest);
           }}
+          title={
+            <>
+              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
+                <ListItemBaseSection position="start">
+                  <Icon scale={16} name="microphone" strokeColor="none" />
+                </ListItemBaseSection>
+                <ListItemBaseSection position="fill">Microphone</ListItemBaseSection>
+              </ListHeader>
+            </>
+          }
         >
           <Item key="10">Use system setting (internal microphone)</Item>
           <Item key="11">Bose Headset 100</Item>
