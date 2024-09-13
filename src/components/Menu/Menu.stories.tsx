@@ -12,7 +12,7 @@ import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon, ContentSeparator } from '..';
+import { ListHeader, ListItemBaseSection, Icon } from '..';
 import { SelectionGroup } from './Menu.utils';
 
 export default {
