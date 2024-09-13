@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 import React, { ReactElement, useEffect, useMemo } from 'react';
-import classnames from 'classnames';
 
 import { STYLE } from './MenuSelectionGroup.constants';
 import { Props } from './MenuSelectionGroup.types';
