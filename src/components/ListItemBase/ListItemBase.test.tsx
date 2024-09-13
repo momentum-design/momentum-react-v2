@@ -357,7 +357,7 @@ describe('ListItemBase', () => {
       expect(mockCallback).toBeCalledTimes(1);
     });
 
-    it('should not handle mouse press events when allowTextSelection is true', async () => {
+    it('should handle mouse press events when allowTextSelection is true', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
@@ -378,7 +378,7 @@ describe('ListItemBase', () => {
 
       await user.click(listItemBase);
 
-      expect(mockCallback).not.toBeCalled();
+      expect(mockCallback).toBeCalled();
     });
   });
 

@@ -678,6 +678,24 @@ const SingleItemListWrapper = () => {
 
 const SingleItemList = Template<unknown>(SingleItemListWrapper).bind({});
 
+const ListWithTextSelectWrapper = () => {
+  return (
+    <List shouldFocusOnPress listSize={3}>
+      <ListItemBase allowTextSelection itemIndex={0} key={0}>
+        Item 0
+      </ListItemBase>
+      <ListItemBase allowTextSelection itemIndex={1} key={1}>
+        Item 1
+      </ListItemBase>
+      <ListItemBase allowTextSelection itemIndex={2} key={2}>
+        Item 2
+      </ListItemBase>
+    </List>
+  );
+};
+
+const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -696,4 +714,5 @@ export {
   DynamicListWithInitialFocus2,
   DynamicListWithInitialFocus3,
   SingleItemList,
+  ListWithTextSelect,
 };

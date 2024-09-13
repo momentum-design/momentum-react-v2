@@ -1104,5 +1104,134 @@ describe('<List />', () => {
 
       expect(getByTestId('list-item-0')).toHaveFocus();
     });
+
+    it('should handle text selection', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={1} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            text selection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.pointer([
+        { target: getByTestId('list-item-0'), offset: 0, keys: '[MouseLeft>]' },
+        { offset: 4 },
+        { keys: '[/MouseLeft]' },
+      ]);
+
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('text');
+    });
+
+    it('should handle text selection - pointer', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={1} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            textselection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.pointer([
+        { target: getByTestId('list-item-0'), offset: 0, keys: '[TouchA]' },
+        { target: getByTestId('list-item-0'), offset: 4, keys: '[TouchB]' },
+      ]);
+
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('textselection');
+    });
+
+    it('should handle text selection of a not currently focused element', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={2} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            text selection
+          </ListItemBase>
+          <ListItemBase allowTextSelection data-testid="list-item-1" key="1" itemIndex={1}>
+            other selection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.pointer([
+        { target: getByTestId('list-item-1'), offset: 0, keys: '[MouseLeft>]' },
+        { offset: 4 },
+        { keys: '[/MouseLeft]' },
+      ]);
+
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('othe');
+    });
+
+    it('should handle text selection of a not currently focused element - pointer', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={2} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            text selection
+          </ListItemBase>
+          <ListItemBase allowTextSelection data-testid="list-item-1" key="1" itemIndex={1}>
+            other selection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      await user.pointer([
+        { target: getByTestId('list-item-1'), offset: 0, keys: '[TouchA]' },
+        { target: getByTestId('list-item-1'), offset: 4, keys: '[TouchB]' },
+      ]);
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('other');
+    });
+
+    it('should focus on press when shouldFocusOnPress is true', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={3} shouldFocusOnPress>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase
+            id="test"
+            allowTextSelection
+            data-testid="list-item-1"
+            key="1"
+            itemIndex={1}
+          >
+            1
+          </ListItemBase>
+          <ListItemBase allowTextSelection data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.click(getByTestId('list-item-1'));
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+    });
   });
 });

@@ -145,17 +145,31 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     ...rest,
   });
 
-  // Prevent list item update because it can cause state lost in the focused component e.g. Menu
-  const listItemPressProps = allowTextSelection
-    ? { ...rest }
-    : {
-        ...pressProps,
-        onKeyDown: (event) => {
-          if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
-            pressProps.onKeyDown(event);
-          }
-        },
-      };
+  // This is a workaround because react-aria is killing the mouse/pointer events
+  // It determines whether to prevent default by whether the element is draggable or not
+  // So we set it to draggable on mouse down and pointer down and then set it back to false
+  // This allows text selection to work, which requires the pointer events but still allows
+  // click to work via the usePress hook
+  // see https://github.com/adobe/react-spectrum/issues/2956
+  // If react-aria ever fix this, this workaround can be removed
+  const listItemPressProps = {
+    ...pressProps,
+    onMouseDown: (event) => {
+      event.target.draggable = true;
+      pressProps.onMouseDown?.(event);
+      event.target.draggable = false;
+    },
+    onPointerDown: (event) => {
+      event.target.draggable = true;
+      pressProps.onPointerDown?.(event);
+      event.target.draggable = false;
+    },
+    onKeyDown: (event) => {
+      if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
+        pressProps.onKeyDown(event);
+      }
+    },
+  };
 
   /**
    * Focus management
