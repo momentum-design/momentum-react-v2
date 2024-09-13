@@ -8,6 +8,8 @@ export type AllowedTagNames =
   | 'h5'
   | 'h6'
   | 'p'
+  | 'span'
+  | 'div'
   | 'small';
 export interface Props {
   /**
@@ -54,4 +56,6 @@ export type FontStyle =
   | 'hyperlink-secondary'
   | 'highlight-compact'
   | 'body-compact'
-  | 'label-compact';
+  | 'label-compact'
+  | 'button-primary'
+  | 'list-item';
