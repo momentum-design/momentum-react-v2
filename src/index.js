@@ -195,5 +195,6 @@ export {
   ButtonPillLink,
   Tree,
   useTreeContext,
+  SelectionGroup,
   TreeNodeBase,
 } from './components';

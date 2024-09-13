@@ -1,7 +1,8 @@
 import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
 import { AriaMenuProps } from '@react-types/menu';
-import { CollectionBase, FocusStrategy, MultipleSelection } from '@react-types/shared';
+import { CollectionBase, FocusStrategy, MultipleSelection, SelectionMode } from '@react-types/shared';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+
 
 export interface Props<T> extends AriaMenuProps<T> {
   /**
@@ -59,4 +60,7 @@ export interface MenuAppearanceContextValue {
 
 export interface SelectionGroupProps<T>
   extends Omit<CollectionBase<T>, 'disabledKeys'>,
-    Omit<MultipleSelection, 'disabledKeys'> {}
+    Omit<MultipleSelection, 'disabledKeys' | 'selectionMode'> {
+      onAction?: () => void;
+      selectionMode: Exclude<SelectionMode, 'none'>
+    }
