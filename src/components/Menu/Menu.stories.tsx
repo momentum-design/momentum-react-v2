@@ -109,7 +109,7 @@ delete Sections.argTypes.itemSize;
 
 SelectionGroupExample.args = {
   'aria-label': 'Menu with multiple selection modes component',
-  onAction: action('onAction'),
+  // onAction: action('onAction'),
   onSelectionChange: action('onSelectionChange'),
 };
 
@@ -120,14 +120,43 @@ SelectionGroupExample.parameters = {
       itemSize: 32,
       isTickOnLeftSide: true,
       children: [
-        <SelectionGroup key="0" selectionMode="multiple" aria-label="First group">
+        <SelectionGroup
+          key="0"
+          selectionMode="multiple"
+          aria-label="First group"
+          onSelectionChange={(...rest) => {
+            console.log('multipleselection', rest);
+          }}
+        >
           <Item key="00">Use system setting (internal speakers)</Item>
           <Item key="01">Internal speaker</Item>
           <Item key="02">Bose Headset 100</Item>
         </SelectionGroup>,
-        <SelectionGroup key="1" selectionMode="single">
+        <SelectionGroup
+          key="1"
+          selectionMode="single"
+          aria-label="Second group"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection', rest);
+          }}
+        >
           <Item key="10">Use system setting (internal microphone)</Item>
           <Item key="11">Bose Headset 100</Item>
+        </SelectionGroup>,
+        <SelectionGroup
+          key="3"
+          items={[{key: '20'}, {key: '21'}]}
+          selectionMode="single"
+          aria-label="Second group"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection', rest);
+          }}
+        >
+          {(item) => (
+            <Item textValue={item.key} key={item.key}>
+              {item.key}
+            </Item>
+          )}
         </SelectionGroup>,
       ],
     },

@@ -4,7 +4,7 @@ import { PartialNode, Section } from '@react-stately/collections';
 import { ReactElement } from 'react';
 import { SelectionGroupProps } from './Menu.types';
 
-function SelectionGroup<T extends object>(props: SelectionGroupProps<T>): ReactElement {
+function SelectionGroup(): ReactElement {
   return null;
 }
 
@@ -20,5 +20,5 @@ SelectionGroup.getCollectionNode = function* getCollectionNode<T>(
 };
 
 // We don't want getCollectionNode to show up in the type definition
-const _SelectionGroup = SelectionGroup as (props: SelectionGroupProps<object>) => JSX.Element;
+const _SelectionGroup = SelectionGroup as <T> (props: SelectionGroupProps<T>) => JSX.Element;
 export { _SelectionGroup as SelectionGroup };
