@@ -254,6 +254,28 @@ exports[`Text should match snapshot with type 1`] = `
       Example Text
     </small>
   </Text>
+  <Text
+    key="18"
+    type="button-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="19"
+    type="list-item"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </div>
+  </Text>
 </div>
 `;
 
@@ -471,6 +493,30 @@ exports[`Text should match snapshot with type and tagName override 1`] = `
     <h1
       className="md-text-wrapper"
       data-type="label-compact"
+    >
+      Example Text
+    </h1>
+  </Text>
+  <Text
+    key="18"
+    tagName="h1"
+    type="button-primary"
+  >
+    <h1
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </h1>
+  </Text>
+  <Text
+    key="19"
+    tagName="h1"
+    type="list-item"
+  >
+    <h1
+      className="md-text-wrapper"
+      data-type="list-item"
     >
       Example Text
     </h1>
@@ -696,6 +742,30 @@ exports[`Text should match snapshot with type and tagName override 2`] = `
       Example Text
     </h2>
   </Text>
+  <Text
+    key="18"
+    tagName="h2"
+    type="button-primary"
+  >
+    <h2
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </h2>
+  </Text>
+  <Text
+    key="19"
+    tagName="h2"
+    type="list-item"
+  >
+    <h2
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </h2>
+  </Text>
 </div>
 `;
 
@@ -913,6 +983,30 @@ exports[`Text should match snapshot with type and tagName override 3`] = `
     <h3
       className="md-text-wrapper"
       data-type="label-compact"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="18"
+    tagName="h3"
+    type="button-primary"
+  >
+    <h3
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </h3>
+  </Text>
+  <Text
+    key="19"
+    tagName="h3"
+    type="list-item"
+  >
+    <h3
+      className="md-text-wrapper"
+      data-type="list-item"
     >
       Example Text
     </h3>
@@ -1138,6 +1232,30 @@ exports[`Text should match snapshot with type and tagName override 4`] = `
       Example Text
     </h4>
   </Text>
+  <Text
+    key="18"
+    tagName="h4"
+    type="button-primary"
+  >
+    <h4
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </h4>
+  </Text>
+  <Text
+    key="19"
+    tagName="h4"
+    type="list-item"
+  >
+    <h4
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </h4>
+  </Text>
 </div>
 `;
 
@@ -1355,6 +1473,30 @@ exports[`Text should match snapshot with type and tagName override 5`] = `
     <h5
       className="md-text-wrapper"
       data-type="label-compact"
+    >
+      Example Text
+    </h5>
+  </Text>
+  <Text
+    key="18"
+    tagName="h5"
+    type="button-primary"
+  >
+    <h5
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </h5>
+  </Text>
+  <Text
+    key="19"
+    tagName="h5"
+    type="list-item"
+  >
+    <h5
+      className="md-text-wrapper"
+      data-type="list-item"
     >
       Example Text
     </h5>
@@ -1580,6 +1722,30 @@ exports[`Text should match snapshot with type and tagName override 6`] = `
       Example Text
     </h6>
   </Text>
+  <Text
+    key="18"
+    tagName="h6"
+    type="button-primary"
+  >
+    <h6
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </h6>
+  </Text>
+  <Text
+    key="19"
+    tagName="h6"
+    type="list-item"
+  >
+    <h6
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </h6>
+  </Text>
 </div>
 `;
 
@@ -1797,6 +1963,30 @@ exports[`Text should match snapshot with type and tagName override 7`] = `
     <p
       className="md-text-wrapper"
       data-type="label-compact"
+    >
+      Example Text
+    </p>
+  </Text>
+  <Text
+    key="18"
+    tagName="p"
+    type="button-primary"
+  >
+    <p
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </p>
+  </Text>
+  <Text
+    key="19"
+    tagName="p"
+    type="list-item"
+  >
+    <p
+      className="md-text-wrapper"
+      data-type="list-item"
     >
       Example Text
     </p>
@@ -2021,6 +2211,520 @@ exports[`Text should match snapshot with type and tagName override 8`] = `
     >
       Example Text
     </small>
+  </Text>
+  <Text
+    key="18"
+    tagName="small"
+    type="button-primary"
+  >
+    <small
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </small>
+  </Text>
+  <Text
+    key="19"
+    tagName="small"
+    type="list-item"
+  >
+    <small
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </small>
+  </Text>
+</div>
+`;
+
+exports[`Text should match snapshot with type and tagName override 9`] = `
+<div>
+  <Text
+    key="0"
+    tagName="div"
+    type="display"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="display"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="1"
+    tagName="div"
+    type="banner-tertiary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="banner-tertiary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="2"
+    tagName="div"
+    type="banner-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="banner-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="3"
+    tagName="div"
+    type="banner-secondary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="banner-secondary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="4"
+    tagName="div"
+    type="title"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="title"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="5"
+    tagName="div"
+    type="header-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="header-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="6"
+    tagName="div"
+    type="highlight-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="highlight-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="7"
+    tagName="div"
+    type="subheader-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="subheader-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="8"
+    tagName="div"
+    type="body-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="body-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="9"
+    tagName="div"
+    type="hyperlink-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="hyperlink-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="10"
+    tagName="div"
+    type="subheader-secondary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="subheader-secondary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="11"
+    tagName="div"
+    type="highlight-secondary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="highlight-secondary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="12"
+    tagName="div"
+    type="header-secondary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="header-secondary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="13"
+    tagName="div"
+    type="body-secondary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="body-secondary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="14"
+    tagName="div"
+    type="hyperlink-secondary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="hyperlink-secondary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="15"
+    tagName="div"
+    type="highlight-compact"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="highlight-compact"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="16"
+    tagName="div"
+    type="body-compact"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="body-compact"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="17"
+    tagName="div"
+    type="label-compact"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="label-compact"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="18"
+    tagName="div"
+    type="button-primary"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </div>
+  </Text>
+  <Text
+    key="19"
+    tagName="div"
+    type="list-item"
+  >
+    <div
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </div>
+  </Text>
+</div>
+`;
+
+exports[`Text should match snapshot with type and tagName override 10`] = `
+<div>
+  <Text
+    key="0"
+    tagName="span"
+    type="display"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="display"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="1"
+    tagName="span"
+    type="banner-tertiary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="banner-tertiary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="2"
+    tagName="span"
+    type="banner-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="banner-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="3"
+    tagName="span"
+    type="banner-secondary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="banner-secondary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="4"
+    tagName="span"
+    type="title"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="title"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="5"
+    tagName="span"
+    type="header-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="header-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="6"
+    tagName="span"
+    type="highlight-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="highlight-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="7"
+    tagName="span"
+    type="subheader-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="subheader-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="8"
+    tagName="span"
+    type="body-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="body-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="9"
+    tagName="span"
+    type="hyperlink-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="hyperlink-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="10"
+    tagName="span"
+    type="subheader-secondary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="subheader-secondary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="11"
+    tagName="span"
+    type="highlight-secondary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="highlight-secondary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="12"
+    tagName="span"
+    type="header-secondary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="header-secondary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="13"
+    tagName="span"
+    type="body-secondary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="body-secondary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="14"
+    tagName="span"
+    type="hyperlink-secondary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="hyperlink-secondary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="15"
+    tagName="span"
+    type="highlight-compact"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="highlight-compact"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="16"
+    tagName="span"
+    type="body-compact"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="body-compact"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="17"
+    tagName="span"
+    type="label-compact"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="label-compact"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="18"
+    tagName="span"
+    type="button-primary"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="button-primary"
+    >
+      Example Text
+    </span>
+  </Text>
+  <Text
+    key="19"
+    tagName="span"
+    type="list-item"
+  >
+    <span
+      className="md-text-wrapper"
+      data-type="list-item"
+    >
+      Example Text
+    </span>
   </Text>
 </div>
 `;
