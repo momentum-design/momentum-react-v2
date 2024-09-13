@@ -25,6 +25,8 @@ const TYPES: Record<string, FontStyle> = {
   HIGHLIGHT_COMPACT: 'highlight-compact',
   BODY_COMPACT: 'body-compact',
   LABEL_COMPACT: 'label-compact',
+  BUTTON_PRIMARY: 'button-primary',
+  LIST_ITEM: 'list-item',
 };
 
 const STYLE = {
