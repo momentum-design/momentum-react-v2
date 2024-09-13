@@ -14,11 +14,22 @@ SelectionGroup.getCollectionNode = function* getCollectionNode<T>(
   props: SelectionGroupProps<T>
 ): Generator<PartialNode<T>> {
   // @ts-ignore
-  for (const node of Section.getCollectionNode(props)) {
-    yield { ...node, props: { ...props, selectionGroup: true } };
+  const nodeIterator = Section.getCollectionNode(props);
+  let nodeIteratorResult = nodeIterator.next();
+
+  while (!nodeIteratorResult.done) {
+    yield { ...nodeIteratorResult.value, props: { ...props, selectionGroup: true } };
+    nodeIteratorResult = nodeIterator.next();
   }
+
+  /*
+  The following _should_ have worked, but for some reason when transpiled it doesn't work nicely
+  */
+  // for (const node of Section.getCollectionNode(props)) {
+  //   yield { ...node, props: { ...props, selectionGroup: true } };
+  // }
 };
 
 // We don't want getCollectionNode to show up in the type definition
-const _SelectionGroup = SelectionGroup as <T> (props: SelectionGroupProps<T>) => JSX.Element;
+const _SelectionGroup = SelectionGroup as <T>(props: SelectionGroupProps<T>) => JSX.Element;
 export { _SelectionGroup as SelectionGroup };

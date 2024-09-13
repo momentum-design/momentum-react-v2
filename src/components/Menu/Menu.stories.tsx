@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -11,7 +12,7 @@ import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon, ContentSeparator } from '..';
+import { ListHeader, ListItemBaseSection, Icon } from '..';
 import { SelectionGroup } from './Menu.utils';
 
 export default {
@@ -145,7 +146,7 @@ SelectionGroupExample.parameters = {
         </SelectionGroup>,
         <SelectionGroup
           key="3"
-          items={[{key: '20'}, {key: '21'}]}
+          items={[{ key: '20' }, { key: '21' }]}
           selectionMode="single"
           aria-label="Second group"
           onSelectionChange={(...rest) => {
