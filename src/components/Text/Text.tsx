@@ -31,10 +31,10 @@ const Text: FC<Props> = (props: Props) => {
       case TYPES.HYPERLINK_PRIMARY:
         return 'p';
 
-      case TYPES.BUTTON_PRIMARY:
+      case TYPES.SPAN:
         return 'span';
 
-      case TYPES.LIST_ITEM:
+      case TYPES.DIV:
         return 'div';
 
       case TYPES.BODY_SECONDARY:

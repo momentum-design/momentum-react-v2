@@ -256,22 +256,22 @@ exports[`Text should match snapshot with type 1`] = `
   </Text>
   <Text
     key="18"
-    type="button-primary"
+    type="span"
   >
     <span
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </span>
   </Text>
   <Text
     key="19"
-    type="list-item"
+    type="div"
   >
     <div
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </div>
@@ -500,11 +500,11 @@ exports[`Text should match snapshot with type and tagName override 1`] = `
   <Text
     key="18"
     tagName="h1"
-    type="button-primary"
+    type="span"
   >
     <h1
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </h1>
@@ -512,11 +512,11 @@ exports[`Text should match snapshot with type and tagName override 1`] = `
   <Text
     key="19"
     tagName="h1"
-    type="list-item"
+    type="div"
   >
     <h1
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </h1>
@@ -745,11 +745,11 @@ exports[`Text should match snapshot with type and tagName override 2`] = `
   <Text
     key="18"
     tagName="h2"
-    type="button-primary"
+    type="span"
   >
     <h2
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </h2>
@@ -757,11 +757,11 @@ exports[`Text should match snapshot with type and tagName override 2`] = `
   <Text
     key="19"
     tagName="h2"
-    type="list-item"
+    type="div"
   >
     <h2
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </h2>
@@ -990,11 +990,11 @@ exports[`Text should match snapshot with type and tagName override 3`] = `
   <Text
     key="18"
     tagName="h3"
-    type="button-primary"
+    type="span"
   >
     <h3
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </h3>
@@ -1002,11 +1002,11 @@ exports[`Text should match snapshot with type and tagName override 3`] = `
   <Text
     key="19"
     tagName="h3"
-    type="list-item"
+    type="div"
   >
     <h3
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </h3>
@@ -1235,11 +1235,11 @@ exports[`Text should match snapshot with type and tagName override 4`] = `
   <Text
     key="18"
     tagName="h4"
-    type="button-primary"
+    type="span"
   >
     <h4
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </h4>
@@ -1247,11 +1247,11 @@ exports[`Text should match snapshot with type and tagName override 4`] = `
   <Text
     key="19"
     tagName="h4"
-    type="list-item"
+    type="div"
   >
     <h4
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </h4>
@@ -1480,11 +1480,11 @@ exports[`Text should match snapshot with type and tagName override 5`] = `
   <Text
     key="18"
     tagName="h5"
-    type="button-primary"
+    type="span"
   >
     <h5
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </h5>
@@ -1492,11 +1492,11 @@ exports[`Text should match snapshot with type and tagName override 5`] = `
   <Text
     key="19"
     tagName="h5"
-    type="list-item"
+    type="div"
   >
     <h5
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </h5>
@@ -1725,11 +1725,11 @@ exports[`Text should match snapshot with type and tagName override 6`] = `
   <Text
     key="18"
     tagName="h6"
-    type="button-primary"
+    type="span"
   >
     <h6
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </h6>
@@ -1737,11 +1737,11 @@ exports[`Text should match snapshot with type and tagName override 6`] = `
   <Text
     key="19"
     tagName="h6"
-    type="list-item"
+    type="div"
   >
     <h6
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </h6>
@@ -1970,11 +1970,11 @@ exports[`Text should match snapshot with type and tagName override 7`] = `
   <Text
     key="18"
     tagName="p"
-    type="button-primary"
+    type="span"
   >
     <p
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </p>
@@ -1982,11 +1982,11 @@ exports[`Text should match snapshot with type and tagName override 7`] = `
   <Text
     key="19"
     tagName="p"
-    type="list-item"
+    type="div"
   >
     <p
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </p>
@@ -2215,11 +2215,11 @@ exports[`Text should match snapshot with type and tagName override 8`] = `
   <Text
     key="18"
     tagName="small"
-    type="button-primary"
+    type="span"
   >
     <small
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </small>
@@ -2227,11 +2227,11 @@ exports[`Text should match snapshot with type and tagName override 8`] = `
   <Text
     key="19"
     tagName="small"
-    type="list-item"
+    type="div"
   >
     <small
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </small>
@@ -2460,11 +2460,11 @@ exports[`Text should match snapshot with type and tagName override 9`] = `
   <Text
     key="18"
     tagName="div"
-    type="button-primary"
+    type="span"
   >
     <div
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </div>
@@ -2472,11 +2472,11 @@ exports[`Text should match snapshot with type and tagName override 9`] = `
   <Text
     key="19"
     tagName="div"
-    type="list-item"
+    type="div"
   >
     <div
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </div>
@@ -2705,11 +2705,11 @@ exports[`Text should match snapshot with type and tagName override 10`] = `
   <Text
     key="18"
     tagName="span"
-    type="button-primary"
+    type="span"
   >
     <span
       className="md-text-wrapper"
-      data-type="button-primary"
+      data-type="span"
     >
       Example Text
     </span>
@@ -2717,11 +2717,11 @@ exports[`Text should match snapshot with type and tagName override 10`] = `
   <Text
     key="19"
     tagName="span"
-    type="list-item"
+    type="div"
   >
     <span
       className="md-text-wrapper"
-      data-type="list-item"
+      data-type="div"
     >
       Example Text
     </span>
