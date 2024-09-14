@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import '@testing-library/jest-dom';
 import { render, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { act } from 'react-test-renderer';
 
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
@@ -698,19 +699,9 @@ describe('<Tree />', () => {
   });
 
   describe('selection', () => {
-    const getTreeComponent = (
-      tree,
-      { isRequired, selectionMode, selectableNodes, onSelectionChange }: Partial<TreeProps> = {}
-    ) => {
+    const getTreeComponent = (tree, { ref, ...props }: Partial<TreeProps> = {}) => {
       return (
-        <Tree
-          treeStructure={tree}
-          excludeTreeRoot={false}
-          selectableNodes={selectableNodes}
-          onSelectionChange={onSelectionChange}
-          selectionMode={selectionMode}
-          isRequired={isRequired}
-        >
+        <Tree treeStructure={tree} excludeTreeRoot={false} {...props} ref={ref as any}>
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (
@@ -808,6 +799,43 @@ describe('<Tree />', () => {
           expect(onSelectionChange.mock.calls).toEqual(onChangeCalls);
         }
       );
+    });
+
+    it('should update selected items based on the selectionMode', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(
+        getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['1', '2.2'] })
+      );
+
+      expect(getByTestId('1')).toHaveAttribute('aria-selected', 'true');
+      expect(getByTestId('2.2')).toHaveAttribute('aria-selected', 'true');
+
+      rerender(getTreeComponent(tree, { selectionMode: 'none', selectedItems: ['2.1', '4'] }));
+
+      expect(getByTestId('1')).not.toHaveAttribute('aria-selected', 'true');
+      expect(getByTestId('2.2')).not.toHaveAttribute('aria-selected', 'true');
+    });
+
+    describe('controlled tree selection', () => {
+      it('should change selection based on the selectedItems prop', async () => {
+        const tree = getSampleTree();
+        const { rerender, getByTestId } = render(
+          getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['1', '2.2'] })
+        );
+
+        expect(getByTestId('1')).toHaveAttribute('aria-selected', 'true');
+        expect(getByTestId('2.2')).toHaveAttribute('aria-selected', 'true');
+
+        rerender(
+          getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['2.1', '4'] })
+        );
+
+        expect(getByTestId('1')).not.toHaveAttribute('aria-selected', 'true');
+        expect(getByTestId('2.2')).not.toHaveAttribute('aria-selected', 'true');
+
+        expect(getByTestId('2.1')).toHaveAttribute('aria-selected', 'true');
+        expect(getByTestId('4')).toHaveAttribute('aria-selected', 'true');
+      });
     });
   });
 });

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { usePrevious } from './usePrevious';
 
 export type SelectionMode = 'none' | 'single' | 'multiple';
 
@@ -20,6 +21,15 @@ export interface UseItemSelectedProps<TItemId extends string | number> {
    * @default false
    */
   isRequired?: boolean;
+  /**
+   * List of selected items
+   *
+   * If it is provided, the selection will be controlled.
+   * @default undefined
+   *
+   * @see {@link https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable Controlling an input with a state variable}
+   */
+  selectedItems?: Array<TItemId>;
 }
 
 export interface ItemSelection<TItemId extends string | number> {
@@ -69,7 +79,10 @@ export interface ItemSelection<TItemId extends string | number> {
   clear: () => void;
 }
 
-const getSelection = <T extends Array<unknown>>(mode: SelectionMode, selectedByDefault?: T): T => {
+const getSelection = <T extends Array<unknown>>(
+  mode: SelectionMode,
+  selectedByDefault: T = [] as T
+): T => {
   if (mode === 'none' || !selectedByDefault) {
     console.warn(
       '"None" selection mode does not support any selection, selected items will be ignored'
@@ -87,15 +100,68 @@ const getSelection = <T extends Array<unknown>>(mode: SelectionMode, selectedByD
 
 /**
  * Hook to manage selected items
+ *
+ * This hook support controlled and uncontrolled selection, and it works the same way as input components in React.
+ *
+ * Uncontrolled is the default state, when `selectedItems` is `undefined`.
+ * In this case, the hook will manage the selection state internally.
+ *
+ * @example
+ * ```tsx
+ * const {selectedItems, isSelected, toggle, update, clear } = useItemSelected({
+ *  selectionMode: 'multiple'
+ * })
+ * ```
+ *
+ * Controlled selection is when `selectedItems` is provided, and it isn't `undefined`.
+ * This way the consumer of the hook can change the selection from outside.
+ * Order to update this outside state, the `onSelectionChange` callback should be passed as well
+ *
+ * @example
+ * ```tsx
+ * const [selection, setSelection] = useState<Array<string>>([]);
+ *
+ * const {isSelected, toggle, update, clear } = useItemSelected({
+ *  selectionMode: 'multiple',
+ *  selectedItems: selection,
+ *  onSelectionChange: setSelection,
+ *  isRequired: true,
+ * })
+ * ```
+ *
+ * @param param Hook options
  */
 export const useItemSelected = <TItemId extends string | number>({
   selectionMode,
   selectedByDefault,
   onSelectionChange,
-  isRequired,
+  selectedItems: selectedItemsFromProps = undefined,
+  isRequired = false,
 }: UseItemSelectedProps<TItemId>): ItemSelection<TItemId> => {
-  const [selectedItems, setSelectedItems] = useState<Set<TItemId>>(
+  const isControlled = selectedItemsFromProps !== undefined;
+
+  const prevIsControlled = usePrevious(isControlled);
+
+  // Check if the selection mode is changed from controlled to uncontrolled
+  // see "Controlling an input with a state variable" in rect docs
+  // https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable
+  if (prevIsControlled === true && prevIsControlled !== isControlled) {
+    console.warn(
+      'A component is changing an uncontrolled input to be controlled.' +
+        'selectedItems should not alter between array and undefined value.'
+    );
+  }
+
+  const [internalSelectedItems, setInternalSelectedItems] = useState<Set<TItemId>>(
     new Set(getSelection(selectionMode, selectedByDefault))
+  );
+
+  const selectedItems = useMemo(
+    () =>
+      isControlled
+        ? new Set(getSelection(selectionMode, selectedItemsFromProps))
+        : internalSelectedItems,
+    [isControlled, selectedItemsFromProps, internalSelectedItems]
   );
 
   return useMemo(
@@ -105,7 +171,8 @@ export const useItemSelected = <TItemId extends string | number>({
       isSelected: (itemId: TItemId) => selectedItems.has(itemId),
       toggle(itemId: TItemId, value?: boolean) {
         if (selectionMode === 'none') return;
-        setSelectedItems((prev) => {
+
+        const toggleInternal = (prev: Set<TItemId>): Set<TItemId> => {
           const isSelected = prev.has(itemId);
           const select = value !== undefined ? value : !isSelected;
           const needToRemove =
@@ -126,9 +193,14 @@ export const useItemSelected = <TItemId extends string | number>({
           if (result !== prev) {
             onSelectionChange?.(Array.from(result));
           }
-
           return result;
-        });
+        };
+
+        if (!isControlled) {
+          setInternalSelectedItems(toggleInternal);
+        } else {
+          toggleInternal(selectedItems);
+        }
       },
       update: (allSelectedItems: Array<TItemId>) => {
         if (
@@ -136,14 +208,19 @@ export const useItemSelected = <TItemId extends string | number>({
           (allSelectedItems.length !== selectedItems.size ||
             !allSelectedItems.every((i) => selectedItems.has(i)))
         ) {
-          onSelectionChange?.(allSelectedItems);
-          setSelectedItems(new Set(getSelection(selectionMode, allSelectedItems)));
+          const newSelection = getSelection(selectionMode, allSelectedItems);
+          onSelectionChange?.(newSelection);
+          if (!isControlled) {
+            setInternalSelectedItems(new Set(newSelection));
+          }
         }
       },
       clear: () => {
         if (selectionMode !== 'none' && selectedItems.size > 0) {
           onSelectionChange?.([]);
-          setSelectedItems(new Set());
+          if (!isControlled) {
+            setInternalSelectedItems(new Set());
+          }
         }
       },
     }),

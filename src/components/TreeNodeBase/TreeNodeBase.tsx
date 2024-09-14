@@ -107,22 +107,23 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   }, [children, isHidden, nodeDetails]);
 
   // The keyboard press events are not propagated
-  const internalOnPress = useCallback((event) => {
-    if (event.pointerType === 'keyboard') {
-      ref.current.click();
-    }
-    if (
-      treeContext &&
-      treeContext.itemSelection.selectionMode !== 'none' &&
-      (treeContext.selectableNodes === 'any' || nodeDetails.isLeaf)
-    ) {
-      treeContext.itemSelection.toggle(nodeId);
-    }
+  const internalOnPress = useCallback(
+    (event) => {
+      if (event.pointerType === 'keyboard') {
+        ref.current.click();
+      }
+      if (
+        treeContext &&
+        treeContext.itemSelection.selectionMode !== 'none' &&
+        (treeContext.selectableNodes === 'any' || nodeDetails?.isLeaf)
+      ) {
+        treeContext.itemSelection.toggle(nodeId);
+      }
 
-    if (onPress) {
-      onPress(event);
-    }
-  }, []);
+      onPress?.(event);
+    },
+    [treeContext, nodeDetails, nodeId, onPress]
+  );
 
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
@@ -203,7 +204,10 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         data-size={size}
         data-padded={isPadded}
         data-shape={shape}
-        className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
+        className={classnames(className, STYLE.wrapper, {
+          selected: isPressed || isSelected,
+          'active-node': nodeId === treeContext.activeNodeId,
+        })}
         lang={lang}
         {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
         {...treeNodePressProps}

@@ -465,7 +465,7 @@ describe('TreeNodeBase', () => {
       expect(element.getAttribute('data-shape')).toBe(shape);
     });
 
-    it('should have provided active class when isSelected is provided', () => {
+    it('should have provided selected class when isSelected is provided', () => {
       expect.assertions(2);
 
       treeContextMock.itemSelection.selectionMode = 'single';
@@ -475,8 +475,22 @@ describe('TreeNodeBase', () => {
 
       const element = container.find(TreeNodeBase).getDOMNode();
 
-      expect(element.classList.contains('active')).toBe(true);
+      expect(element.classList.contains('selected')).toBe(true);
       expect(element.getAttribute('aria-selected')).toBe('true');
+    });
+
+    it('should have provided active-node class the tree node is active in the tree', () => {
+      expect.assertions(1);
+
+      container = mount(
+        <TreeContext.Provider value={{ activeNodeId: 42 } as any}>
+          <TreeNodeBase nodeId="42">{() => 'Test'}</TreeNodeBase>
+        </TreeContext.Provider>
+      );
+
+      const element = container.find(TreeNodeBase).getDOMNode();
+
+      expect(element.classList.contains('active-node')).toBe(true);
     });
   });
 

@@ -60,4 +60,4 @@ export const TEAM_COLORS = {
   violet: 'violet',
   purple: 'purple',
   pink: 'pink',
-};
+} as const;
