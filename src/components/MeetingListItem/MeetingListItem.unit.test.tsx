@@ -8,6 +8,12 @@ import Avatar from '../Avatar';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 import { mountAndWait } from '../../../test/utils';
+import { render } from '@testing-library/react';
+import Text from '../Text';
+import ButtonHyperlink from '../ButtonHyperlink';
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
+import List from '../List';
 
 describe('<MeetingListItem />', () => {
   describe('snapshot', () => {
@@ -225,6 +231,58 @@ describe('<MeetingListItem />', () => {
       expect(element.getElementsByTagName('svg')[0].getAttribute('data-scale')).toBe('12');
       expect(element.getElementsByTagName('svg')[1].getAttribute('data-scale')).toBe('12');
       expect(element.getElementsByClassName('avatar')[0].getAttribute('data-size')).toBe('32');
+    });
+  });
+
+  describe('keyboard navigation', () => {
+    it('should work as expected', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={1}>
+          <MeetingListItem
+            itemIndex={0}
+            data-testid="meeting-list-item"
+            buttonGroup={
+              <ButtonGroup spaced>
+                <ButtonHyperlink data-testid="buttonlink" key="link">
+                  Link
+                </ButtonHyperlink>
+                <div key="participants-list" style={{ paddingRight: 0 }}>
+                  17
+                </div>
+                <Icon key="participants-icon" name="participant-list" scale={16} />
+                <ButtonPill key="join-button" color="join">
+                  Join
+                </ButtonPill>
+              </ButtonGroup>
+            }
+            color={MeetingMarker.AcceptedActive}
+            image={<Avatar initials="TU" />}
+          >
+            <Text type="body-primary" key="child1">
+              Date
+            </Text>
+            <Text type="body-secondary" key="child2">
+              Normal
+            </Text>
+          </MeetingListItem>
+        </List>
+      );
+
+      expect(document.activeElement).toBe(document.body);
+
+      await user.tab();
+
+      const listItem = getByTestId('meeting-list-item');
+
+      expect(listItem).toHaveFocus();
+
+      await user.tab();
+
+      const buttonLink = getByTestId('buttonlink');
+
+      expect(buttonLink).toHaveFocus();
     });
   });
 });
