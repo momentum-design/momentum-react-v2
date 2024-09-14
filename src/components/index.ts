@@ -42,6 +42,7 @@ export { default as Text } from './Text';
 export { default as MeetingListItem, MeetingMarker } from './MeetingListItem';
 export { default as TextInput } from './TextInput';
 export { default as SpaceListItem } from './SpaceListItem';
+export { default as SpaceTreeNode } from './SpaceTreeNode';
 export { default as List } from './List';
 export type { ListRefObject } from './List';
 export * from './Reaction';
