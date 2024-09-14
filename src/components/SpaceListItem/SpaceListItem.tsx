@@ -7,7 +7,6 @@ import './SpaceListItem.style.scss';
 import ListItemBase from '../ListItemBase';
 import SpaceRowContent from '../SpaceRowContent';
 
-//TODO: support 2-line labels for right/position-end section.
 /**
  * The SpaceListItem component.
  */

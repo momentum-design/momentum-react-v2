@@ -1,0 +1,12 @@
+.md-space-tree-node-wrapper {
+  color: var(--mds-color-theme-text-secondary-normal);
+
+  &[data-size='32'] {
+    // All immediate children and any deep .md-text-wrapper child
+    & > *,
+    .md-text-wrapper {
+      font-weight: 550;
+      font-size: 0.75rem;
+    }
+  }
+}

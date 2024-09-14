@@ -83,7 +83,7 @@ export interface Props {
   rightIconTooltip?: string;
 
   /**
-   * Whether or not this SpaceListItem should look disabled, but allowing actions like onPress to be passed.
+   * Whether or not this SpaceRowContent should look disabled, but allowing actions like onPress to be passed.
    */
   isDisabled?: boolean;
 }
