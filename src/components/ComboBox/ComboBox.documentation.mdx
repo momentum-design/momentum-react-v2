@@ -43,28 +43,18 @@ and the items within the section accept an iterable list of options.
 import { Item } from '@react-stately/collections';
 
 const comboBoxGroups = [
-  { 
-    items: [ 
-      { key: 'key1', label: 'item1' },
-      { key: 'key2', label: 'item2' },
-      { key: 'key3', label: 'item3' },
-      { key: 'key4', label: 'item4' },
-    ]
-  },
+  { key: 'key1', label: 'item1' },
+  { key: 'key2', label: 'item2' },
+  { key: 'key3', label: 'item3' },
+  { key: 'key4', label: 'item4' },
 ]
 
-<ComboBox onSelectionChange={(item) => console.log} comboBoxGroups={comboBoxGroups}>
- {(sectionGroup) => {
+<ComboBox onSelectionChange={(item) => console.log} defaultItems={comboBoxGroups}>
+ {(menuItem) => {
     return (
-      <Section key="noSection">
-        {sectionGroup.items.map((menuItem) => {
-          return (
-            <Item key={menuItem.key} textValue={menuItem.key}>
-              <div>{menuItem.label}</div>
-            </Item>
-          );
-        })}
-      </Section>
+       <Item key={menuItem.key} textValue={menuItem.label}>
+            <div key={menuItem.key + '-label'}>{menuItem.label}</div>
+         </Item>
     );
   }}
 </ComboBox>
@@ -120,7 +110,7 @@ const comboBoxGroups = [
       <Section title={group.section} key={group.section}>
         {group.items.map((menuItem: IItem) => {
           return (
-            <Item key={menuItem.key} textValue={menuItem.key}>
+            <Item key={menuItem.key} textValue={menuItem.label}>
               <div>{menuItem.label}</div>
             </Item>
           );

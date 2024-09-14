@@ -2,175 +2,426 @@
 
 exports[`ComboBox snapshot should match snapshot label 1`] = `
 <ComboBox
-  comboBoxGroups={
+  defaultItems={
     Array [
       Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
+        "key": "key1",
+        "label": "item1",
+      },
+      Object {
+        "key": "key2",
+        "label": "item2",
+      },
+      Object {
+        "key": "key3",
+        "label": "item3",
+      },
+      Object {
+        "key": "key4",
+        "label": "listbox1",
+      },
+      Object {
+        "key": "key5",
+        "label": "listbox2",
+      },
+      Object {
+        "key": "key6",
+        "label": "listbox3",
       },
     ]
   }
   label="comboBox_label"
 >
   <div
-    className="md-combo-box-label"
-  >
-    comboBox_label
-  </div>
-  <div
     className="md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
     style={
       Object {
-        "--local-width": "16.25rem",
+        "--local-width": "100%",
       }
     }
   >
-    <div
-      className="md-combo-box-input-section"
+    <label
+      htmlFor="test-ID"
+      id="test-ID"
     >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder=""
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
+      <Text>
+        <p
+          className="md-text-wrapper"
+          data-type="body-primary"
         >
-          <div
-            className="md-text-input-container"
+          comboBox_label
+        </p>
+      </Text>
+    </label>
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="absolute"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
+      }
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            aria-labelledby="test-ID"
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            aria-labelledby="test-ID"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
           >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder=""
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+            <span
+              aria-hidden="true"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                aria-labelledby="test-ID"
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
                 onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
+                onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
                 onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-labelledby="test-ID"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
               >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      aria-labelledby="test-ID"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-1"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
   </div>
 </ComboBox>
 `;
@@ -178,374 +429,1254 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
 exports[`ComboBox snapshot should match snapshot with className 1`] = `
 <ComboBox
   className="example-class"
-  comboBoxGroups={
+  defaultItems={
     Array [
       Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
+        "key": "key1",
+        "label": "item1",
+      },
+      Object {
+        "key": "key2",
+        "label": "item2",
+      },
+      Object {
+        "key": "key3",
+        "label": "item3",
+      },
+      Object {
+        "key": "key4",
+        "label": "listbox1",
+      },
+      Object {
+        "key": "key5",
+        "label": "listbox2",
+      },
+      Object {
+        "key": "key6",
+        "label": "listbox3",
       },
     ]
   }
 >
   <div
     className="example-class md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
     style={
       Object {
-        "--local-width": "16.25rem",
+        "--local-width": "100%",
       }
     }
   >
-    <div
-      className="md-combo-box-input-section"
-    >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder=""
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="absolute"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
+      }
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
         >
-          <div
-            className="md-text-input-container"
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
           >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder=""
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+            <span
+              aria-hidden="true"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
                 onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
+                onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
                 onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
               >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-3"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
   </div>
 </ComboBox>
 `;
 
-exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
+exports[`ComboBox snapshot should match snapshot with listboxWidth 1`] = `
 <ComboBox
-  comboBoxGroups={
+  defaultItems={
     Array [
       Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
+        "key": "key1",
+        "label": "item1",
+      },
+      Object {
+        "key": "key2",
+        "label": "item2",
+      },
+      Object {
+        "key": "key3",
+        "label": "item3",
+      },
+      Object {
+        "key": "key4",
+        "label": "listbox1",
+      },
+      Object {
+        "key": "key5",
+        "label": "listbox2",
+      },
+      Object {
+        "key": "key6",
+        "label": "listbox3",
       },
     ]
   }
-  noResultText="No result"
+  listboxWidth="16rem"
 >
   <div
     className="md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
     style={
       Object {
-        "--local-width": "16.25rem",
+        "--local-width": "16rem",
       }
     }
   >
-    <div
-      className="md-combo-box-input-section"
-    >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder=""
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="fixed"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
+      }
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
         >
-          <div
-            className="md-text-input-container"
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
           >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder=""
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+            <span
+              aria-hidden="true"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "fixed",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "fixed",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "fixed",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
                 onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
+                onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
                 onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
               >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-7"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+  </div>
+</ComboBox>
+`;
+
+exports[`ComboBox snapshot should match snapshot with noResultLabel 1`] = `
+<ComboBox
+  defaultItems={
+    Array [
+      Object {
+        "key": "key1",
+        "label": "item1",
+      },
+      Object {
+        "key": "key2",
+        "label": "item2",
+      },
+      Object {
+        "key": "key3",
+        "label": "item3",
+      },
+      Object {
+        "key": "key4",
+        "label": "listbox1",
+      },
+      Object {
+        "key": "key5",
+        "label": "listbox2",
+      },
+      Object {
+        "key": "key6",
+        "label": "listbox3",
+      },
+    ]
+  }
+  noResultLabel="No result"
+>
+  <div
+    className="md-combo-box-wrapper"
+    style={
+      Object {
+        "--local-width": "100%",
+      }
+    }
+  >
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="absolute"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
+      }
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
+          >
+            <span
+              aria-hidden="true"
+            >
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onTouchEnd={[Function]}
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
+                  >
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-6"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
   </div>
 </ComboBox>
 `;
 
 exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
 <ComboBox
-  comboBoxGroups={
+  defaultItems={
     Array [
       Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
+        "key": "key1",
+        "label": "item1",
+      },
+      Object {
+        "key": "key2",
+        "label": "item2",
+      },
+      Object {
+        "key": "key3",
+        "label": "item3",
+      },
+      Object {
+        "key": "key4",
+        "label": "listbox1",
+      },
+      Object {
+        "key": "key5",
+        "label": "listbox2",
+      },
+      Object {
+        "key": "key6",
+        "label": "listbox3",
       },
     ]
   }
@@ -553,169 +1684,409 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
 >
   <div
     className="md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
     style={
       Object {
-        "--local-width": "16.25rem",
+        "--local-width": "100%",
       }
     }
   >
-    <div
-      className="md-combo-box-input-section"
-    >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder="ComboBox"
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="absolute"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
+      }
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
         >
-          <div
-            className="md-text-input-container"
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            placeholder="ComboBox"
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
           >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder="ComboBox"
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+            <span
+              aria-hidden="true"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
                 onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
+                onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
                 onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+                placeholder="ComboBox"
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
               >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-5"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
   </div>
 </ComboBox>
 `;
 
 exports[`ComboBox snapshot should match snapshot with style 1`] = `
 <ComboBox
-  comboBoxGroups={
+  defaultItems={
     Array [
       Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
+        "key": "key1",
+        "label": "item1",
+      },
+      Object {
+        "key": "key2",
+        "label": "item2",
+      },
+      Object {
+        "key": "key3",
+        "label": "item3",
+      },
+      Object {
+        "key": "key4",
+        "label": "listbox1",
+      },
+      Object {
+        "key": "key5",
+        "label": "listbox2",
+      },
+      Object {
+        "key": "key6",
+        "label": "listbox3",
       },
     ]
   }
@@ -727,312 +2098,384 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
     style={
       Object {
-        "--local-width": "16.25rem",
+        "--local-width": "100%",
         "color": "pink",
       }
     }
   >
-    <div
-      className="md-combo-box-input-section"
-    >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder=""
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
-        >
-          <div
-            className="md-text-input-container"
-          >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder=""
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
-            >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
-              >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
-  </div>
-</ComboBox>
-`;
-
-exports[`ComboBox snapshot should match snapshot with width 1`] = `
-<ComboBox
-  comboBoxGroups={
-    Array [
-      Object {
-        "items": Array [
-          Object {
-            "key": "key1",
-            "label": "item1",
-          },
-          Object {
-            "key": "key2",
-            "label": "item2",
-          },
-          Object {
-            "key": "key3",
-            "label": "item3",
-          },
-          Object {
-            "key": "key4",
-            "label": "menu1",
-          },
-          Object {
-            "key": "key5",
-            "label": "menu2",
-          },
-          Object {
-            "key": "key6",
-            "label": "menu3",
-          },
-        ],
-      },
-    ]
-  }
-  width="16rem"
->
-  <div
-    className="md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
-    style={
-      Object {
-        "--local-width": "16rem",
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="absolute"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
       }
-    }
-  >
-    <div
-      className="md-combo-box-input-section"
-    >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder=""
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
         >
-          <div
-            className="md-text-input-container"
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
           >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder=""
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+            <span
+              aria-hidden="true"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
                 onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
+                onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
                 onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
               >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-4"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
   </div>
 </ComboBox>
 `;
 
 exports[`ComboBox snapshot should match snapshot withSection 1`] = `
 <ComboBox
-  comboBoxGroups={
+  defaultItems={
     Array [
       Object {
         "items": Array [
@@ -1081,134 +2524,376 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
 >
   <div
     className="md-combo-box-wrapper"
-    data-error={false}
-    data-input-have-value={false}
     style={
       Object {
-        "--local-width": "16.25rem",
+        "--local-width": "100%",
       }
     }
   >
-    <div
-      className="md-combo-box-input-section"
-    >
-      <TextInput
-        aria-label="md-combo-box-input"
-        autoComplete="off"
-        className="md-combo-box-input"
-        onInput={[Function]}
-        placeholder=""
-        value=""
-      >
-        <div
-          className="md-text-input-wrapper md-combo-box-input"
-          data-focus={false}
-          data-level="none"
-          onClick={[Function]}
+    <Popover
+      adaptive={false}
+      className="md-combo-box-popover"
+      disableFocusLock={true}
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onHide={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom"
+      removeTippyAriaHidden={true}
+      role={null}
+      setInstance={[Function]}
+      showArrow={false}
+      strategy="absolute"
+      style={
+        Object {
+          "display": "none",
+          "maxHeight": "none",
+        }
+      }
+      trigger="manual"
+      triggerComponent={
+        <span
+          className="md-combo-box-trigger"
         >
-          <div
-            className="md-text-input-container"
+          <input
+            aria-autocomplete="list"
+            aria-expanded={false}
+            autoComplete="off"
+            autoCorrect="off"
+            className="md-combo-box-input"
+            disabled={false}
+            id="test-ID"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onTouchEnd={[Function]}
+            readOnly={false}
+            role="combobox"
+            spellCheck="false"
+            type="text"
+            value=""
+          />
+          <ButtonSimple
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            className="md-combo-box-button"
+            excludeFromTabOrder={true}
+            id="test-ID"
+            onKeyDown={[Function]}
+            onPress={[Function]}
+            onPressStart={[Function]}
+            tabIndex={-1}
           >
-            <input
-              aria-label="md-combo-box-input"
-              autoComplete="off"
-              disabled={false}
-              id="test-ID"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              placeholder=""
-              readOnly={false}
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </TextInput>
-      <div
-        className="md-combo-box-divider"
-      />
-      <ButtonPill
-        className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
-      >
-        <ButtonSimple
-          aria-disabled={false}
-          className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
-        >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+            <span
+              aria-hidden="true"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
+              <Icon
+                name="arrow-down"
+                scale={16}
+                weight="bold"
+              />
+            </span>
+          </ButtonSimple>
+        </span>
+      }
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        onHide={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        removeTippyAriaHidden={true}
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          onHide={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            onHide={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <span
+              aria-haspopup="dialog"
+              className="md-combo-box-trigger"
+              id="1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                autoCorrect="off"
+                className="md-combo-box-input"
+                disabled={false}
+                id="test-ID"
                 onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
+                onChange={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
                 onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+                readOnly={false}
+                role="combobox"
+                spellCheck="false"
+                type="text"
+                value=""
+              />
+              <ButtonSimple
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="md-combo-box-button"
+                excludeFromTabOrder={true}
+                id="test-ID"
+                onKeyDown={[Function]}
+                onPress={[Function]}
+                onPressStart={[Function]}
+                tabIndex={-1}
               >
-                <Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
-                      style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
-                    />
-                  </div>
-                </Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
-      </ButtonPill>
-    </div>
+                    <button
+                      aria-expanded={false}
+                      aria-haspopup="listbox"
+                      className="md-combo-box-button md-button-simple-wrapper"
+                      id="test-ID"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        <Icon
+                          name="arrow-down"
+                          scale={16}
+                          weight="bold"
+                        >
+                          <div
+                            aria-hidden="true"
+                            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                            role="img"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className=""
+                              data-autoscale={false}
+                              data-scale={16}
+                              data-test="arrow-down"
+                              fill="currentColor"
+                              height="100%"
+                              style={Object {}}
+                              viewBox="0, 0, 32, 32"
+                              width="100%"
+                            />
+                          </div>
+                        </Icon>
+                      </span>
+                    </button>
+                  </FocusRing>
+                </FocusRing>
+              </ButtonSimple>
+            </span>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-2"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
   </div>
 </ComboBox>
 `;

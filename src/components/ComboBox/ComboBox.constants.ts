@@ -1,50 +1,46 @@
-const CLASS_PREFIX = 'md-combo-box';
+import { FocusStrategy } from '@react-types/shared';
+import { Direction } from './ComboBox.types';
 
-const DEFAULTS = {
-  WIDTH:'16.25rem',
-  PLACEHOLDER:'',
-  NO_RESULT_TEXT:'No results found',
-  SHOULD_FILTER_ON_ARROW_BUTTON:true,
-  ERROR:false,
-  SELECTEDKEY:'',
-  DISABLEDKEYS:[],
-};
+const CLASS_PREFIX = 'md-combo-box';
 
 const STYLE = {
   description: `${CLASS_PREFIX}-description`,
   label: `${CLASS_PREFIX}-label`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
-  inputSection: `${CLASS_PREFIX}-input-section`,
+  trigger: `${CLASS_PREFIX}-trigger`,
   input: `${CLASS_PREFIX}-input`,
-  divider: `${CLASS_PREFIX}-divider`,
   button: `${CLASS_PREFIX}-button`,
-  arrowIcon: `${CLASS_PREFIX}-arrow-icon`,
-  selectionPosition: `${CLASS_PREFIX}-selection-position`,
-  selectionContainer: `${CLASS_PREFIX}-selection-container`,
-  selection: `${CLASS_PREFIX}-selection`,
-  noResultText: `${CLASS_PREFIX}-no-result-text`,
+  listBox: `${CLASS_PREFIX}-listbox`,
+  popover: `${CLASS_PREFIX}-popover`,
 };
 
 const KEYS = {
-  INPUT_SEARCH_NO_RESULT: 'input_search_no_result',
+  NO_RESULT: 'no_result',
 };
 
-const ELEMENT = {
-  PROPS: {
-    SELECTION_CONTAINER_MAX_HEIGHT:244,
-  },
+const ICON = {
+  ARROW_UP: 'arrow-up',
+  ARROW_DOWN: 'arrow-down',
+};
+
+const DIRECTIONS: Record<string, Direction> = {
+  bottom: 'bottom',
+  top: 'top',
+};
+
+const DEFAULTS = {
+  DIRECTION: DIRECTIONS.bottom,
+  FOCUS_STRATEGY: 'first' as FocusStrategy,
 };
 
 const EVENT = {
-  KEY:{
-    KEYCODE:{
-      ESCAPE: 'Escape',
-      ENTER: 'Enter',
-      TAB: 'Tab',
-      ARROW_DOWN: 'ArrowDown',
-      ARROW_UP: 'ArrowUp',
-    }
-  }
+  KEY: {
+    ESCAPE: 'Escape',
+    ENTER: 'Enter',
+    TAB: 'Tab',
+    ARROW_DOWN: 'ArrowDown',
+    ARROW_UP: 'ArrowUp',
+  },
 };
 
-export{STYLE,DEFAULTS,KEYS,ELEMENT,EVENT};
+export { STYLE, KEYS, EVENT, ICON, DEFAULTS };

@@ -1,108 +1,56 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { ComboBox_CONSTANTS as CONSTANTS } from '.';
-
 
 export default {
   ...commonStyles,
-  width: {
+  listboxWidth: {
+    defaultValue: undefined,
     description:
-      'To override the ComboBox container and selection list width.',
+      'To override the list box width. NOTE: if set, the popover strategy will be set to "fixed". To style the list box without applying fixed popover strategy, pass in className instead',
     control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.WIDTH,
-      },
-    },
-  },
-  error: {
-    description: 'Sets whether the ComboBox is in error state.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: false,
+        summary: undefined,
       },
     },
   },
   placeholder: {
-    description: 'Text to display inside the input when there is no inputValue or item selected.',
+    description:
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). Temporary text that occupies the text input when it is empty.',
     control: { type: 'text' },
     table: {
-      category: 'React Aria - Input',
       type: {
         summary: 'string',
       },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.PLACEHOLDER,
-      },
     },
-  },
-  onInputChange: {
-    defaultValue: undefined,
-    description:
-      'Handler that is called when the InputValue changes.',
-    control: { type: 'function' },
-    table: {
-      category: 'React Aria - Input',
-      type: {
-        summary: '(event: InputEvent) => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  onArrowButtonPress: {
-    defaultValue: undefined,
-    description:
-      'Handler that is called when the press is released over the arrowButton.',
-    control: { type: 'function' },
-    table: {
-      category: 'React Aria - Button',
-      type: {
-        summary: '(event: PressEvent) => void',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },  
-  },
-  shouldFilterOnArrowButton: {
-    description:
-      'This property represents whether to filter based on the input value when click the arrowButton.',
-    control: { type: 'boolean' },
-    table: {
-      category: 'React Aria - Button',
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHOULD_FILTER_ON_ARROW_BUTTON,
-      },
-    },  
   },
   selectedKey: {
     description:
-      'It also affects the value of the input (displayed as the label of the corresponding item.',
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). The currently selected key in the collection (controlled).',
     control: { type: 'text' },
     table: {
       category: 'React Aria - Select',
       type: {
         summary: 'React.Key',
       },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SELECTEDKEY,
+    },
+  },
+  defaultSelectedKey: {
+    description:
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). The currently selected key in the collection (uncontrolled).',
+    control: { type: 'text' },
+    table: {
+      category: 'React Aria - Select',
+      type: {
+        summary: 'React.Key',
       },
     },
   },
   disabledKeys: {
     description:
-      'List with disabled keys. (They must be exact type as the key)',
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). The item keys that are disabled. These items cannot be selected, focused, or otherwise interacted with.',
     control: { type: 'array' },
     table: {
       category: 'React Aria - Select',
@@ -114,36 +62,74 @@ export default {
       },
     },
   },
-  comboBoxGroups: {
+  items: {
     description:
-      'The options for this selection list element.',
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). The list of ComboBox items (controlled).',
     control: { type: 'array' },
     table: {
       category: 'React Aria - Select',
       type: {
-        summary: 'IComboBoxGroup[]',
+        summary: 'Array<IComboBoxItem | IComboBoxGroup>',
       },
       defaultValue: {
         summary: 'undefined',
       },
     },
   },
-  noResultText: {
-    description: 'Text to display inside the dropdown when there is no results.',
-    control: { type: 'text' },
+  defaultItems: {
+    description:
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). The list of ComboBox items (uncontrolled).',
+    control: { type: 'array' },
     table: {
       category: 'React Aria - Select',
+      type: {
+        summary: 'Array<IComboBoxItem | IComboBoxGroup>',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  noResultLabel: {
+    description: 'Text to display inside the list when there is no results.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  label: {
+    defaultValue: undefined,
+    description:
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). Text displayed on top of the element.',
+    control: { type: 'text' },
+    table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.NO_RESULT_TEXT,
+        summary: undefined,
+      },
+    },
+  },
+  description: {
+    defaultValue: undefined,
+    description:
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). Description associated with this component. Appears below the title.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
       },
     },
   },
   onSelectionChange: {
     description:
-      'Handler that is called when an item is selected. (if the selected item matches the selectedKey, the parameter is undefined)',
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). Handler that is called when the selection changes.',
     control: { type: 'function' },
     table: {
       category: 'React Aria - Select',
@@ -155,12 +141,11 @@ export default {
       },
     },
   },
-  openStateChange: {
+  onOpenChange: {
     description:
-      'Handler that is called when the selection list is expanded or collapsed.',
+      'From [AriaComboBoxOptions](https://react-spectrum.adobe.com/react-aria/useComboBox.html). Method that is called when the open state of the menu changes. Returns the new open state and the action that caused the opening of the menu.',
     control: { type: 'function' },
     table: {
-      category: 'React Aria - Select',
       type: {
         summary: '(isOpen: boolean) => void',
       },
@@ -172,9 +157,8 @@ export default {
   children: {
     description: 'Provides the items nodes for this selection list element.',
     table: {
-      category: 'React Aria - Select',
       type: {
-        summary: 'CollectionChildren<any>',
+        summary: 'Iterable<IComboBoxItem | IComboBoxGroup>',
       },
       defaultValue: {
         summary: 'undefined',

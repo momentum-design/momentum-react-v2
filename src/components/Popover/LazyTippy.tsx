@@ -1,11 +1,11 @@
 import React, { FC, useMemo } from 'react';
 import type { Instance as TippyInstance } from 'tippy.js';
-
 import Tippy, { TippyProps } from '@tippyjs/react';
 
 export type LazyTippyProps = TippyProps & {
   setInstance?: (instance?: TippyInstance) => void;
   continuePropagationOnTrigger?: boolean;
+  removeTippyAriaHidden?: boolean;
 };
 
 /**
@@ -15,7 +15,10 @@ export type LazyTippyProps = TippyProps & {
  * lazified so that it will only be mounted to the DOM, whenever it is triggered to do so.
  */
 export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
-  ({ setInstance, continuePropagationOnTrigger, ...props }: LazyTippyProps, ref) => {
+  (
+    { setInstance, continuePropagationOnTrigger, removeTippyAriaHidden, ...props }: LazyTippyProps,
+    ref
+  ) => {
     const [mounted, setMounted] = React.useState(false);
 
     const stopPropagationPlugin = {
@@ -30,7 +33,12 @@ export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
 
     const lazyPlugin = {
       fn: () => ({
-        onMount: () => setMounted(true),
+        onMount: (instance: TippyInstance) => {
+          if (removeTippyAriaHidden) {
+            instance.popper.removeAttribute('aria-hidden');
+          }
+          setMounted(true);
+        },
         onHidden: () => setMounted(false),
       }),
     };

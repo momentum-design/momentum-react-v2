@@ -47,6 +47,12 @@ export interface Props extends PressEvents, ContextMenu {
   isDisabled?: boolean;
 
   /**
+   * Determines if this item is focused
+   * @default false
+   */
+  isFocused?: boolean;
+
+  /**
    * Determines if this item is selected
    * @default false
    */
@@ -95,5 +101,5 @@ export interface Props extends PressEvents, ContextMenu {
   /**
    * Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.
    */
-    allowTextSelection?: boolean;
+  allowTextSelection?: boolean;
 }

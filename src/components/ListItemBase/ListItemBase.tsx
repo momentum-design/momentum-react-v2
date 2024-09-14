@@ -38,6 +38,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     shape = DEFAULTS.SHAPE,
     size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isDisabled = DEFAULTS.IS_DISABLED,
+    isFocused = DEFAULTS.IS_FOCUSED,
     isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
     isSelected,
@@ -50,7 +51,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     allowTextSelection = DEFAULTS.ALLOW_TEXT_SELECTION,
     ...rest
   } = props;
-
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
   const listContext = useListContext();
@@ -129,14 +129,16 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   });
 
   // Prevent list item update because it can cause state lost in the focused component e.g. Menu
-  const listItemPressProps = allowTextSelection ? {...rest} : {
-    ...pressProps,
-    onKeyDown: (event) => {
-      if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
-        pressProps.onKeyDown(event);
-      }
-    },
-  };
+  const listItemPressProps = allowTextSelection
+    ? { ...rest }
+    : {
+        ...pressProps,
+        onKeyDown: (event) => {
+          if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
+            pressProps.onKeyDown(event);
+          }
+        },
+      };
 
   /**
    * Focus management
@@ -282,6 +284,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         data-disabled={isDisabled}
         data-padded={isPadded}
         data-shape={shape}
+        data-focused={isFocused}
         data-interactive={interactive}
         data-allow-text-select={allowTextSelection}
         className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}

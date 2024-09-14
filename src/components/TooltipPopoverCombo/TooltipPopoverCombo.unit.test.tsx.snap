@@ -90,10 +90,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -152,6 +159,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -215,6 +228,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -306,10 +325,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                           "padding": 8,
                         },
                       },
+                      Object {
+                        "name": "computeStyles",
+                        "options": Object {
+                          "adaptive": false,
+                        },
+                      },
                     ],
                     "strategy": "absolute",
                   }
                 }
+                removeTippyAriaHidden={false}
                 render={[Function]}
                 setInstance={[Function]}
                 trigger="mouseenter focus"
@@ -364,6 +390,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                             "altAxis": true,
                             "boundariesElement": "scrollParent",
                             "padding": 8,
+                          },
+                        },
+                        Object {
+                          "name": "computeStyles",
+                          "options": Object {
+                            "adaptive": false,
                           },
                         },
                       ],
@@ -423,6 +455,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                               "altAxis": true,
                               "boundariesElement": "scrollParent",
                               "padding": 8,
+                            },
+                          },
+                          Object {
+                            "name": "computeStyles",
+                            "options": Object {
+                              "adaptive": false,
                             },
                           },
                         ],
@@ -581,10 +619,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -643,6 +688,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -706,6 +757,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -798,10 +855,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                           "padding": 8,
                         },
                       },
+                      Object {
+                        "name": "computeStyles",
+                        "options": Object {
+                          "adaptive": false,
+                        },
+                      },
                     ],
                     "strategy": "absolute",
                   }
                 }
+                removeTippyAriaHidden={false}
                 render={[Function]}
                 setInstance={[Function]}
                 trigger="mouseenter focus"
@@ -856,6 +920,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                             "altAxis": true,
                             "boundariesElement": "scrollParent",
                             "padding": 8,
+                          },
+                        },
+                        Object {
+                          "name": "computeStyles",
+                          "options": Object {
+                            "adaptive": false,
                           },
                         },
                       ],
@@ -915,6 +985,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                               "altAxis": true,
                               "boundariesElement": "scrollParent",
                               "padding": 8,
+                            },
+                          },
+                          Object {
+                            "name": "computeStyles",
+                            "options": Object {
+                              "adaptive": false,
                             },
                           },
                         ],
@@ -1073,10 +1149,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -1135,6 +1218,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -1198,6 +1287,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -1290,10 +1385,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                           "padding": 8,
                         },
                       },
+                      Object {
+                        "name": "computeStyles",
+                        "options": Object {
+                          "adaptive": false,
+                        },
+                      },
                     ],
                     "strategy": "absolute",
                   }
                 }
+                removeTippyAriaHidden={false}
                 render={[Function]}
                 setInstance={[Function]}
                 trigger="mouseenter focus"
@@ -1348,6 +1450,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                             "altAxis": true,
                             "boundariesElement": "scrollParent",
                             "padding": 8,
+                          },
+                        },
+                        Object {
+                          "name": "computeStyles",
+                          "options": Object {
+                            "adaptive": false,
                           },
                         },
                       ],
@@ -1407,6 +1515,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                               "altAxis": true,
                               "boundariesElement": "scrollParent",
                               "padding": 8,
+                            },
+                          },
+                          Object {
+                            "name": "computeStyles",
+                            "options": Object {
+                              "adaptive": false,
                             },
                           },
                         ],

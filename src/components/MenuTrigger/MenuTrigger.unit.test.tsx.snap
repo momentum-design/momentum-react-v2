@@ -77,10 +77,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -133,6 +140,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -190,6 +203,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -304,6 +323,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -325,6 +345,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -346,6 +367,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -378,6 +400,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -399,6 +422,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -420,6 +444,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -739,6 +764,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -1015,6 +1041,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -1291,6 +1318,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -1592,6 +1620,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -1868,6 +1897,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -2144,6 +2174,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -2277,10 +2308,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -2333,6 +2371,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -2390,6 +2434,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -2504,6 +2554,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -2525,6 +2576,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -2546,6 +2598,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -2578,6 +2631,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -2599,6 +2653,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -2620,6 +2675,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -2939,6 +2995,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -3215,6 +3272,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -3491,6 +3549,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -3792,6 +3851,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -4068,6 +4128,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -4344,6 +4405,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -4477,10 +4539,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -4533,6 +4602,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -4590,6 +4665,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -4704,6 +4785,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -4725,6 +4807,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -4746,6 +4829,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -4778,6 +4862,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -4799,6 +4884,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -4820,6 +4906,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -5139,6 +5226,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -5415,6 +5503,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -5691,6 +5780,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -5992,6 +6082,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -6268,6 +6359,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -6544,6 +6636,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -6678,10 +6771,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -6734,6 +6834,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -6791,6 +6897,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -6906,6 +7018,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -6927,6 +7040,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -6948,6 +7062,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -6980,6 +7095,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -7001,6 +7117,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -7022,6 +7139,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -7343,6 +7461,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -7619,6 +7738,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -7895,6 +8015,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -8196,6 +8317,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -8472,6 +8594,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -8748,6 +8871,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -8881,10 +9005,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -8937,6 +9068,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -8994,6 +9131,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -9078,7 +9221,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               <div
                 data-tippy-root=""
                 id="tippy-8"
-                style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+                style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
               >
                 <span
                   data-focus-scope-start="true"
@@ -9108,6 +9251,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -9129,6 +9273,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -9150,6 +9295,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -9182,6 +9328,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -9203,6 +9350,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -9224,6 +9372,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -9543,6 +9692,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -9819,6 +9969,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -10095,6 +10246,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -10396,6 +10548,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -10672,6 +10825,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -10948,6 +11102,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -11081,10 +11236,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -11137,6 +11299,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -11194,6 +11362,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -11308,6 +11482,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -11329,6 +11504,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -11350,6 +11526,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -11382,6 +11559,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -11403,6 +11581,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -11424,6 +11603,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -11774,6 +11954,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -12050,6 +12231,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -12326,6 +12508,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -12627,6 +12810,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -12903,6 +13087,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -13179,6 +13364,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -13356,10 +13542,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -13412,6 +13605,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -13469,6 +13668,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -13584,6 +13789,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -13605,6 +13811,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -13626,6 +13833,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -13658,6 +13866,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -13679,6 +13888,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -13700,6 +13910,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -14029,6 +14240,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -14305,6 +14517,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -14581,6 +14794,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -14882,6 +15096,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -15158,6 +15373,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -15434,6 +15650,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -15567,10 +15784,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -15623,6 +15847,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -15680,6 +15910,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -15794,6 +16030,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -15815,6 +16052,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -15836,6 +16074,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -15868,6 +16107,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -15889,6 +16129,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -15910,6 +16151,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -16229,6 +16471,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -16505,6 +16748,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -16781,6 +17025,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -17082,6 +17327,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -17358,6 +17604,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -17634,6 +17881,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
@@ -17768,10 +18016,17 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                 "padding": 8,
               },
             },
+            Object {
+              "name": "computeStyles",
+              "options": Object {
+                "adaptive": false,
+              },
+            },
           ],
           "strategy": "absolute",
         }
       }
+      removeTippyAriaHidden={false}
       render={[Function]}
       setInstance={[Function]}
       trigger="click"
@@ -17825,6 +18080,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
+                },
+              },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
                 },
               },
             ],
@@ -17883,6 +18144,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -17998,6 +18265,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="one"
                       data-padded="true"
@@ -18019,6 +18287,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="two"
                       data-padded="true"
@@ -18040,6 +18309,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="three"
                       data-padded="true"
@@ -18072,6 +18342,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="asd"
                       data-padded="true"
@@ -18093,6 +18364,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="ff"
                       data-padded="true"
@@ -18114,6 +18386,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       class="md-menu-item-wrapper md-list-item-base-wrapper"
                       data-allow-text-select="false"
                       data-disabled="false"
+                      data-focused="false"
                       data-interactive="true"
                       data-key="d"
                       data-padded="true"
@@ -18433,6 +18706,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="one"
                                 data-padded={true}
@@ -18709,6 +18983,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="two"
                                 data-padded={true}
@@ -18985,6 +19260,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="three"
                                 data-padded={true}
@@ -19286,6 +19562,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="asd"
                                 data-padded={true}
@@ -19562,6 +19839,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="ff"
                                 data-padded={true}
@@ -19838,6 +20116,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 className="md-menu-item-wrapper md-list-item-base-wrapper"
                                 data-allow-text-select={false}
                                 data-disabled={false}
+                                data-focused={false}
                                 data-interactive={true}
                                 data-key="d"
                                 data-padded={true}
