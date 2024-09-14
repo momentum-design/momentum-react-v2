@@ -24,10 +24,6 @@
     white-space: nowrap;
   }
 
-  &[data-allow-text-select='true'] {
-    user-select: text;
-  }
-
   &[data-interactive='true'] {
     cursor: pointer;
 
@@ -60,6 +56,11 @@
         fill: var(--mds-color-theme-text-primary-disabled);
       }
     }
+  }
+
+  &[data-allow-text-select='true'] {
+    user-select: text;
+    cursor: auto !important;
   }
 
   &[data-disabled='true'],
