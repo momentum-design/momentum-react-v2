@@ -1,4 +1,4 @@
-import { cleanSecondLine } from './SpaceListItem.utils';
+import { cleanSecondLine } from './SpaceRowContent.utils';
 
 describe('cleanSecondLine', () => {
   it.each([

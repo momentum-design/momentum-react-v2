@@ -57,5 +57,5 @@ export type FontStyle =
   | 'highlight-compact'
   | 'body-compact'
   | 'label-compact'
-  | 'button-primary'
-  | 'list-item';
+  | 'span'
+  | 'div';

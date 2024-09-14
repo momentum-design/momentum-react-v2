@@ -1,57 +1,20 @@
 import React from 'react';
 
-import SpaceListItem from './';
+import SpaceRowContent from './';
 import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
-import ListItemBase from '../ListItemBase';
-import * as ListContext from '../List/List.utils';
 import DividerDot from '../DividerDot';
+import ListItemBaseSection from '../ListItemBaseSection';
 
-describe('<SpaceListItem />', () => {
-  beforeEach(() => {
-    jest
-      .spyOn(ListContext, 'useListContext')
-      .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
-  });
-
+describe('<SpaceRowContent />', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<SpaceListItem />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with className', async () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const container = await mountAndWait(<SpaceListItem className={className} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with id', async () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = await mountAndWait(<SpaceListItem id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with style', async () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-
-      const container = await mountAndWait(<SpaceListItem style={style} />);
+      const container = await mountAndWait(<SpaceRowContent />);
 
       expect(container).toMatchSnapshot();
     });
@@ -61,7 +24,7 @@ describe('<SpaceListItem />', () => {
 
       const firstLine = 'firstLine';
 
-      const container = await mountAndWait(<SpaceListItem firstLine={firstLine} />);
+      const container = await mountAndWait(<SpaceRowContent firstLine={firstLine} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -71,7 +34,7 @@ describe('<SpaceListItem />', () => {
 
       const secondLine = 'secondLine';
 
-      const container = await mountAndWait(<SpaceListItem secondLine={secondLine} />);
+      const container = await mountAndWait(<SpaceRowContent secondLine={secondLine} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -81,17 +44,7 @@ describe('<SpaceListItem />', () => {
 
       const secondLine = ['one', 'two', 'three'];
 
-      const container = await mountAndWait(<SpaceListItem secondLine={secondLine} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with isNewActivity', async () => {
-      expect.assertions(1);
-
-      const isNewActivity = true;
-
-      const container = await mountAndWait(<SpaceListItem isNewActivity={isNewActivity} />);
+      const container = await mountAndWait(<SpaceRowContent secondLine={secondLine} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -101,7 +54,7 @@ describe('<SpaceListItem />', () => {
 
       const isUnread = true;
 
-      const container = await mountAndWait(<SpaceListItem isUnread={isUnread} />);
+      const container = await mountAndWait(<SpaceRowContent isUnread={isUnread} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -111,7 +64,7 @@ describe('<SpaceListItem />', () => {
 
       const teamColor = TEAM_COLORS.cobalt;
 
-      const container = await mountAndWait(<SpaceListItem teamColor={teamColor as TeamColor} />);
+      const container = await mountAndWait(<SpaceRowContent teamColor={teamColor as TeamColor} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -121,7 +74,7 @@ describe('<SpaceListItem />', () => {
 
       const isMention = true;
 
-      const container = await mountAndWait(<SpaceListItem isMention={isMention} />);
+      const container = await mountAndWait(<SpaceRowContent isMention={isMention} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -131,7 +84,7 @@ describe('<SpaceListItem />', () => {
 
       const isEnterRoom = true;
 
-      const container = await mountAndWait(<SpaceListItem isEnterRoom={isEnterRoom} />);
+      const container = await mountAndWait(<SpaceRowContent isEnterRoom={isEnterRoom} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -141,7 +94,7 @@ describe('<SpaceListItem />', () => {
 
       const isAlertMuted = true;
 
-      const container = await mountAndWait(<SpaceListItem isAlertMuted={isAlertMuted} />);
+      const container = await mountAndWait(<SpaceRowContent isAlertMuted={isAlertMuted} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -151,7 +104,7 @@ describe('<SpaceListItem />', () => {
 
       const isAlert = true;
 
-      const container = await mountAndWait(<SpaceListItem isAlert={isAlert} />);
+      const container = await mountAndWait(<SpaceRowContent isAlert={isAlert} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -163,7 +116,7 @@ describe('<SpaceListItem />', () => {
       const isDraft = true;
 
       const container = await mountAndWait(
-        <SpaceListItem isDraft={isDraft} isSelected={isSelected} />
+        <SpaceRowContent isDraft={isDraft} isSelected={isSelected} />
       );
 
       expect(container).toMatchSnapshot();
@@ -174,7 +127,7 @@ describe('<SpaceListItem />', () => {
 
       const isError = true;
 
-      const container = await mountAndWait(<SpaceListItem isError={isError} />);
+      const container = await mountAndWait(<SpaceRowContent isError={isError} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -184,7 +137,7 @@ describe('<SpaceListItem />', () => {
 
       const action = <p>action</p>;
 
-      const container = await mountAndWait(<SpaceListItem action={action} />);
+      const container = await mountAndWait(<SpaceRowContent action={action} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -194,7 +147,7 @@ describe('<SpaceListItem />', () => {
 
       const isSelected = true;
 
-      const container = await mountAndWait(<SpaceListItem isSelected={isSelected} />);
+      const container = await mountAndWait(<SpaceRowContent isSelected={isSelected} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -205,7 +158,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = 'testteam';
 
       const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+        <SpaceRowContent firstLine="firstLine" secondLine={secondLine} isCompact={true} />
       );
 
       expect(container).toMatchSnapshot();
@@ -216,56 +169,19 @@ describe('<SpaceListItem />', () => {
 
       const isDisabled = true;
 
-      const container = await mountAndWait(<SpaceListItem isDisabled={isDisabled} />);
+      const container = await mountAndWait(<SpaceRowContent isDisabled={isDisabled} />);
 
       expect(container).toMatchSnapshot();
     });
   });
 
   describe('attributes', () => {
-    it('should have provided class when className is provided', async () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const element = (await mountAndWait(<SpaceListItem className={className} />))
-        .find(SpaceListItem)
-        .getDOMNode();
-
-      expect(element.classList.contains(className)).toBe(true);
-    });
-
-    it('should have provided id when id is provided', async () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const element = (await mountAndWait(<SpaceListItem id={id} />))
-        .find(SpaceListItem)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
-    });
-
-    it('should have provided style when style is provided', async () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-      const styleString = 'color: pink;';
-
-      const element = (await mountAndWait(<SpaceListItem style={style} />))
-        .find(SpaceListItem)
-        .getDOMNode();
-
-      expect(element.getAttribute('style')).toBe(styleString);
-    });
-
     it('should have provided avatar when id is avatar', async () => {
       expect.assertions(1);
 
       const avatar = <Avatar title="C" />;
 
-      const element = (await mountAndWait(<SpaceListItem avatar={avatar} />))
+      const element = (await mountAndWait(<SpaceRowContent avatar={avatar} />))
         .find(Avatar)
         .find('span')
         .getDOMNode();
@@ -278,7 +194,7 @@ describe('<SpaceListItem />', () => {
 
       const firstLine = 'firstLine';
 
-      const element = (await mountAndWait(<SpaceListItem firstLine={firstLine} />))
+      const element = (await mountAndWait(<SpaceRowContent firstLine={firstLine} />))
         .find(`[data-type="body-primary"]`)
         .getDOMNode();
 
@@ -292,7 +208,7 @@ describe('<SpaceListItem />', () => {
       const ariaLabel = 'one, two';
 
       const element = (
-        await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
+        await mountAndWait(<SpaceRowContent firstLine="firstLine" secondLine={secondLine} />)
       )
         .find(`[data-type="body-secondary"]`)
         .getDOMNode();
@@ -307,7 +223,7 @@ describe('<SpaceListItem />', () => {
       const ariaLabel = 'two, four, five';
 
       const element = (
-        await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
+        await mountAndWait(<SpaceRowContent firstLine="firstLine" secondLine={secondLine} />)
       )
         .find(`[data-type="body-secondary"]`)
         .getDOMNode();
@@ -321,7 +237,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = null;
 
       const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+        <SpaceRowContent firstLine="firstLine" secondLine={secondLine} />
       );
 
       expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
@@ -333,7 +249,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = undefined;
 
       const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+        <SpaceRowContent firstLine="firstLine" secondLine={secondLine} />
       );
 
       expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
@@ -345,7 +261,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = 'testteam';
 
       const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+        <SpaceRowContent firstLine="firstLine" secondLine={secondLine} isCompact={true} />
       );
 
       expect(
@@ -359,7 +275,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = ['one', 'two'];
 
       const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+        <SpaceRowContent firstLine="firstLine" secondLine={secondLine} />
       );
 
       expect(
@@ -376,7 +292,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = ['one', 'two', 'three', 'four', 'five'];
 
       const container = await mountAndWait(
-        <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
+        <SpaceRowContent firstLine="firstLine" secondLine={secondLine} />
       );
 
       expect(
@@ -392,7 +308,7 @@ describe('<SpaceListItem />', () => {
 
       const container = (
         await mountAndWait(
-          <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+          <SpaceRowContent firstLine="firstLine" secondLine={secondLine} isCompact={true} />
         )
       ).find(DividerDot);
 
@@ -409,7 +325,7 @@ describe('<SpaceListItem />', () => {
 
       const container = (
         await mountAndWait(
-          <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+          <SpaceRowContent firstLine="firstLine" secondLine={secondLine} isCompact={true} />
         )
       ).find(DividerDot);
 
@@ -425,7 +341,7 @@ describe('<SpaceListItem />', () => {
       const secondLine = [];
 
       const container = (
-        await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
+        await mountAndWait(<SpaceRowContent firstLine="firstLine" secondLine={secondLine} />)
       ).find(DividerDot);
 
       expect(
@@ -440,7 +356,7 @@ describe('<SpaceListItem />', () => {
 
       const container = (
         await mountAndWait(
-          <SpaceListItem firstLine="firstLine" secondLine={secondLine} isCompact={true} />
+          <SpaceRowContent firstLine="firstLine" secondLine={secondLine} isCompact={true} />
         )
       ).find(DividerDot);
 
@@ -450,12 +366,24 @@ describe('<SpaceListItem />', () => {
       expect(container.filter("[data-test='compact-mode-divider-dot']").length).toEqual(0);
     });
 
+    it('should have provided isNewActivity class when isNewActivity is provided', async () => {
+      expect.assertions(1);
+
+      const isNewActivity = true;
+
+      const element = (await mountAndWait(<SpaceRowContent isNewActivity={isNewActivity} />))
+        .find(ListItemBaseSection)
+        .find({ position: 'middle' });
+
+      expect(element.hasClass('md-space-row-content-is-new-activity')).toBe(true);
+    });
+
     it('should have provided unread when isUnread is provided', async () => {
       expect.assertions(1);
 
       const isUnread = true;
 
-      const element = (await mountAndWait(<SpaceListItem isUnread={isUnread} />))
+      const element = (await mountAndWait(<SpaceRowContent isUnread={isUnread} />))
         .find(Icon)
         .getDOMNode();
 
@@ -467,7 +395,7 @@ describe('<SpaceListItem />', () => {
 
       const isMention = true;
 
-      const element = (await mountAndWait(<SpaceListItem isMention={isMention} />))
+      const element = (await mountAndWait(<SpaceRowContent isMention={isMention} />))
         .find(Icon)
         .getDOMNode();
 
@@ -479,7 +407,7 @@ describe('<SpaceListItem />', () => {
 
       const isEnterRoom = true;
 
-      const element = (await mountAndWait(<SpaceListItem isEnterRoom={isEnterRoom} />))
+      const element = (await mountAndWait(<SpaceRowContent isEnterRoom={isEnterRoom} />))
         .find(Icon)
         .getDOMNode();
 
@@ -491,7 +419,7 @@ describe('<SpaceListItem />', () => {
 
       const isAlertMuted = true;
 
-      const element = (await mountAndWait(<SpaceListItem isAlertMuted={isAlertMuted} />))
+      const element = (await mountAndWait(<SpaceRowContent isAlertMuted={isAlertMuted} />))
         .find(Icon)
         .getDOMNode();
 
@@ -503,7 +431,7 @@ describe('<SpaceListItem />', () => {
 
       const isAlert = true;
 
-      const element = (await mountAndWait(<SpaceListItem isAlert={isAlert} />))
+      const element = (await mountAndWait(<SpaceRowContent isAlert={isAlert} />))
         .find(Icon)
         .getDOMNode();
 
@@ -517,7 +445,7 @@ describe('<SpaceListItem />', () => {
       const isDraft = true;
 
       const element = (
-        await mountAndWait(<SpaceListItem isDraft={isDraft} isSelected={isSelected} />)
+        await mountAndWait(<SpaceRowContent isDraft={isDraft} isSelected={isSelected} />)
       )
         .find(Icon)
         .find('svg[data-test="draft-indicator"]')
@@ -531,7 +459,7 @@ describe('<SpaceListItem />', () => {
 
       const isError = true;
 
-      const element = (await mountAndWait(<SpaceListItem isError={isError} />))
+      const element = (await mountAndWait(<SpaceRowContent isError={isError} />))
         .find(Icon)
         .getDOMNode();
 
@@ -543,47 +471,30 @@ describe('<SpaceListItem />', () => {
 
       const action = <p>action</p>;
 
-      const element = (await mountAndWait(<SpaceListItem action={action} />))
+      const element = (await mountAndWait(<SpaceRowContent action={action} />))
         .find(`[data-position="end"]`)
         .getDOMNode();
 
       expect(element.textContent).toBe('action');
     });
 
-    it('should have provided active class when isSelected is provided', async () => {
-      expect.assertions(1);
-
-      const isSelected = true;
-
-      const element = (
-        await mountAndWait(<SpaceListItem isSelected={isSelected}>Test</SpaceListItem>)
-      )
-        .find(ListItemBase)
-        .getDOMNode();
-
-      expect(element.classList.contains('active')).toBe(true);
-    });
-
     it('should have provided disabled colours when isDisabled is provided', async () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
       const isDisabled = true;
       const firstLine = 'firstLine';
       const isMention = true;
 
       const element = await mountAndWait(
-        <SpaceListItem firstLine={firstLine} isMention={isMention} isDisabled={isDisabled} />
+        <SpaceRowContent firstLine={firstLine} isMention={isMention} isDisabled={isDisabled} />
       );
 
       const firstLineElement = element.find(`[data-test="list-item-first-line"]`).at(0);
 
       const mentionIcon = element.find(Icon);
 
-      const listItemBaseIcon = element.find(ListItemBase);
-
       expect(firstLineElement.props()['data-disabled']).toBe(isDisabled);
       expect(mentionIcon.props().fillColor).toBe('var(--mds-color-theme-text-primary-disabled)');
-      expect(listItemBaseIcon.props().isDisabled).toBe(isDisabled);
     });
   });
 });
