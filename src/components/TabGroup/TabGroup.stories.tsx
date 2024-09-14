@@ -32,7 +32,6 @@ const Example = Template<TabGroupProps>(TabGroup).bind({});
 
 Example.args = {
   children: [...commonChildren],
-  spaced: false,
 };
 
 Example.argTypes = { ...argTypes };
@@ -41,10 +40,10 @@ const HorizontalTabGroup = () => {
 
   const [activeTab, setActiveTab] = useState('');
   const tabs = [
-    { id: 'tab1', label: 'TabA', content: 'contentA' },
-    { id: 'tab2', label: 'TabB', content: 'contentB' },
-    { id: 'tab3', label: 'TabC', content: 'contentC' },
-    { id: 'tab4', label: 'TabD', content: 'contentD' },
+    { id: 'tab1', label: 'TabA', content: 'content of TabA' },
+    { id: 'tab2', label: 'TabB', content: 'content of TabB' },
+    { id: 'tab3', label: 'TabC', content: 'content of TabC' },
+    { id: 'tab4', label: 'TabD', content: 'content of TabD' },
   ];
 
   return (
@@ -66,8 +65,13 @@ const HorizontalTabGroup = () => {
           </Tab>
           ))}
       </TabGroup>
-      {tabs.map((tab) => (
-        activeTab === tab.id && <div key={tab.id}>{tab.content}</div>
+      {tabs.map((tab) => (activeTab === tab.id && 
+        <div
+          key={tab.id}
+          style={{border: '1px solid blue', margin:'8px', width:'200px'}}
+        >
+          {tab.content}
+        </div>
       ))}
     </>
   )

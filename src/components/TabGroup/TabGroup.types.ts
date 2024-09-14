@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 
 import { TabProps } from '../Tab';
 
@@ -22,14 +22,9 @@ export interface Props {
   ariaDescribedby?: string;
 
   /**
-   * aria-details attribute for the tabGrup;
-   */
-  ariaDetails?: string;
-
-  /**
    * Child components of this TabGroup.
    */
-  children?: ReactNode;
+  children?: ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>;
 
   /**
    * Custom class for overriding this component's CSS.
@@ -46,7 +41,7 @@ export interface Props {
    * horizontal -> left/right keys to navigate
    * vertical -> up/down keys to navigate
    */
-  orientation?: TabGroupOrientation;
+  orientation: TabGroupOrientation;
 
   /**
    * Role for adding accessibility
@@ -62,4 +57,4 @@ export interface Props {
    * Whether to include spacing around child components.
    */
   spaced?: boolean;
-}
+};

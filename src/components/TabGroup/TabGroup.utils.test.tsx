@@ -1,7 +1,6 @@
 import { act } from '@testing-library/react-hooks';
 import { KEYCODES } from './TabGroup.constants';
-import { handleTabOnKeyDown, handleOnPress } from './TabGroup.utils';
-
+import { handleOnKeyDown } from './TabGroup.utils';
 
 describe('TabGroup utils', () => {
     let container: HTMLDivElement | null;
@@ -34,7 +33,7 @@ describe('TabGroup utils', () => {
     });
 
     describe('handleTabOnKeyDown', () => {
-        const checkKeyDown = ({ expectFoucsTabIndex, key, triggerTabIndex }) => {
+        const checkKeyDown = ({ expectFoucsTabIndex, key, orientation, triggerTabIndex }) => {
             const ref = { current: container };
             if (tabItems?.length) {
                 tabItems[triggerTabIndex].focus();
@@ -42,10 +41,12 @@ describe('TabGroup utils', () => {
             }
             const event = new KeyboardEvent('keydown', { key });
             document.activeElement?.dispatchEvent(event);
-            act(() => handleTabOnKeyDown(event, ref));
+            act(() => handleOnKeyDown(event, ref, orientation));
             jest.runAllTimers();
 
-            
+            const forwardKey = orientation === 'horizontal' ? KEYCODES.ARROW_LEFT_KEY : KEYCODES.ARROW_UP_KEY;
+            const backwardKey = orientation === 'horizontal' ? KEYCODES.ARROW_RIGHT_KEY : KEYCODES.ARROW_DOWN_KEY;
+
             switch (key) {
                 case KEYCODES.TAB_KEY:
                     tabItems.forEach((item, index) => {
@@ -56,10 +57,8 @@ describe('TabGroup utils', () => {
                         }
                     });
                     break;
-                case KEYCODES.ARROW_DOWN_KEY:
-                case KEYCODES.ARROW_LEFT_KEY:
-                case KEYCODES.ARROW_UP_KEY:
-                case KEYCODES.ARROW_RIGHT_KEY:
+                case forwardKey:
+                case backwardKey:
                     expect(document.activeElement).toBe(tabItems[expectFoucsTabIndex]);
                     expect(tabItems[expectFoucsTabIndex].tabIndex).toEqual(0);
                     tabItems.forEach((item, index) => {
@@ -70,59 +69,30 @@ describe('TabGroup utils', () => {
                         }
                     });
                     break;
-            }
+            };
         };
 
         it.each`
-            triggerTabIndex | key                | expectFoucsTabIndex
-            ${0}               | ${KEYCODES.ARROW_DOWN_KEY}  | ${1}
-            ${0}               | ${KEYCODES.ARROW_LEFT_KEY}  | ${2}
-            ${0}               | ${KEYCODES.ARROW_RIGHT_KEY} | ${1}
-            ${0}               | ${KEYCODES.TAB_KEY}         | ${0}
-            ${1}               | ${KEYCODES.ARROW_UP_KEY}    | ${0}
-            ${0}               | ${KEYCODES.ARROW_UP_KEY}    | ${2}
-            ${1}               | ${KEYCODES.ARROW_DOWN_KEY}  | ${2}
-            ${1}               | ${KEYCODES.ARROW_LEFT_KEY}  | ${0}
-            ${1}               | ${KEYCODES.ARROW_RIGHT_KEY} | ${2}
-            ${1}               | ${KEYCODES.TAB_KEY}         | ${1}
-            ${2}               | ${KEYCODES.ARROW_UP_KEY}    | ${1}
-            ${2}               | ${KEYCODES.ARROW_DOWN_KEY}  | ${0}
-            ${2}               | ${KEYCODES.ARROW_LEFT_KEY}  | ${1}
-            ${2}               | ${KEYCODES.ARROW_RIGHT_KEY} | ${0}
-            ${2}               | ${KEYCODES.TAB_KEY}         | ${2}
+            triggerTabIndex  | key                           |orientation         | expectFoucsTabIndex
+            ${0}             | ${KEYCODES.ARROW_DOWN_KEY}    | ${'vertical'}      | ${1}
+            ${0}             | ${KEYCODES.ARROW_LEFT_KEY}    | ${'horizontal'}    | ${2}
+            ${0}             | ${KEYCODES.ARROW_RIGHT_KEY}   | ${'horizontal'}    | ${1}
+            ${0}             | ${KEYCODES.ARROW_UP_KEY}      | ${'vertical'}      | ${2}
+            ${0}             | ${KEYCODES.TAB_KEY}           | ${'horizontal'}    | ${0}
+            ${1}             | ${KEYCODES.ARROW_UP_KEY}      | ${'vertical'}      | ${0}
+            ${1}             | ${KEYCODES.ARROW_DOWN_KEY}    | ${'horizontal'}    | ${2}
+            ${1}             | ${KEYCODES.ARROW_LEFT_KEY}    | ${'horizontal'}    | ${0}
+            ${1}             | ${KEYCODES.ARROW_RIGHT_KEY}   | ${'horizontal'}    | ${2}
+            ${1}             | ${KEYCODES.TAB_KEY}           | ${'vertical'}      | ${1}
+            ${2}             | ${KEYCODES.ARROW_UP_KEY}      | ${'vertical'}      | ${1}
+            ${2}             | ${KEYCODES.ARROW_DOWN_KEY}    | ${'vertical'}      | ${0}
+            ${2}             | ${KEYCODES.ARROW_LEFT_KEY}    | ${'horizontal'}    | ${1}
+            ${2}             | ${KEYCODES.ARROW_RIGHT_KEY}   | ${'horizontal'}    | ${0}
+            ${2}             | ${KEYCODES.TAB_KEY}           | ${'horizontal'}    | ${2}
         `(
-            'trigger tab $triggerTabIndex with key $key, tab $expectFoucsTabIndex should be focus',
-            ({ expectFoucsTabIndex, key, triggerTabIndex }) => {
-                checkKeyDown({ triggerTabIndex, key, expectFoucsTabIndex });
-            }
-        );
-    });
-
-    describe('handleTabOnPress', ()=>{
-        const checkOnPress = ({ triggerTabIndex }) => {
-            const ref = { current: container };
-            tabItems[triggerTabIndex].focus();
-            expect(document.activeElement).toBe(tabItems[triggerTabIndex]);
-
-            const event = new KeyboardEvent('keydown', { key: 'Enter' || 'Space' });
-            document.activeElement.dispatchEvent(event);
-
-            act(() => handleOnPress(event, ref));
-            jest.runAllTimers();
-            
-            tabItems.forEach((tabItem, index) => {
-                if (index === triggerTabIndex) {
-                    expect(tabItem.dataset.active).toBe('true');
-                } else {
-                    expect(tabItem.dataset.active).toBe('false');
-                }
-            });
-        };
-
-        it.each`triggerTabIndex ${0} ${1} ${2}`(
-            'trigger tab $triggerTabIndex should be active',
-            ({ triggerTabIndex }) => {
-                checkOnPress({ triggerTabIndex });
+            'trigger tab $triggerTabIndex with key $key when orientation is $orientation, tab $expectFoucsTabIndex should be focus',
+            ({ expectFoucsTabIndex, key, orientation, triggerTabIndex }) => {
+                checkKeyDown({ triggerTabIndex, key, orientation, expectFoucsTabIndex });
             }
         );
     });

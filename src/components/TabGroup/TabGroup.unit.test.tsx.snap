@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TabGroup/> snapshot should match snapshot 1`] = `
-<TabGroup>
+<TabGroup
+  orientation="horizontal"
+>
   <div
+    aria-orientation="horizontal"
     className="md-tab-group-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
@@ -11,7 +14,6 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
     <Tab
       key=".$0"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -19,7 +21,6 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -70,7 +71,6 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
     <Tab
       key=".$1"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -78,7 +78,6 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -129,7 +128,6 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
     <Tab
       key=".$2"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -137,7 +135,6 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -191,9 +188,11 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
 
 exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
 <TabGroup
+  orientation="horizontal"
   spaced={false}
 >
   <div
+    aria-orientation="horizontal"
     className="md-tab-group-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
@@ -202,7 +201,6 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
     <Tab
       key=".$0"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -210,7 +208,6 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -261,7 +258,6 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
     <Tab
       key=".$1"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -269,7 +265,6 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -320,7 +315,6 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
     <Tab
       key=".$2"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -328,7 +322,6 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -383,9 +376,11 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
 exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
 <TabGroup
   aria-label="my aria label"
+  orientation="horizontal"
 >
   <div
     aria-label="my aria label"
+    aria-orientation="horizontal"
     className="md-tab-group-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
@@ -394,7 +389,6 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
     <Tab
       key=".$0"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -402,7 +396,6 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -453,7 +446,6 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
     <Tab
       key=".$1"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -461,7 +453,6 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -512,7 +503,6 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
     <Tab
       key=".$2"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -520,7 +510,6 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -659,6 +648,7 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
   orientation="vertical"
 >
   <div
+    aria-orientation="vertical"
     className="md-tab-group-wrapper"
     data-orientation="vertical"
     data-spaced="false"
@@ -667,7 +657,6 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
     <Tab
       key=".$0"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -675,7 +664,6 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -726,7 +714,6 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
     <Tab
       key=".$1"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -734,7 +721,6 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -785,7 +771,6 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
     <Tab
       key=".$2"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -793,7 +778,6 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -847,9 +831,11 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
 
 exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
 <TabGroup
+  orientation="horizontal"
   role="tablist"
 >
   <div
+    aria-orientation="horizontal"
     className="md-tab-group-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
@@ -858,7 +844,6 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
     <Tab
       key=".$0"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -866,7 +851,6 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -917,7 +901,6 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
     <Tab
       key=".$1"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -925,7 +908,6 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>
@@ -976,7 +958,6 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
     <Tab
       key=".$2"
       onKeyDown={[Function]}
-      onPress={[Function]}
       role="tab"
     >
       <ButtonSimple
@@ -984,7 +965,6 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
         data-active={false}
         data-disabled={false}
         onKeyDown={[Function]}
-        onPress={[Function]}
         role="tab"
       >
         <FocusRing>

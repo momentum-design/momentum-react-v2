@@ -39,7 +39,7 @@ const tabGroupArgTypes = {
     },
     table: {
       type: {
-        summary:'ReactNode',
+        summary:'ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>',
       },
       defaultValue: {
         summary: 'undefined',

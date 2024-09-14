@@ -1,9 +1,9 @@
-import React, { FC, Children, cloneElement,isValidElement,useRef } from 'react';
+import React, { FC, Children, cloneElement, isValidElement, useRef } from 'react';
 import classNames from 'classnames';
 
 import { DEFAULTS, STYLE } from './TabGroup.constants';
 import { Props } from './TabGroup.types';
-import { handleTabOnKeyDown,handleOnPress } from './TabGroup.utils';
+import { handleOnKeyDown } from './TabGroup.utils';
 
 import './TabGroup.style.scss';
 
@@ -12,7 +12,6 @@ const TabGroup: FC<Props> = (props: Props) => {
     ariaLabel,
     ariaLabelledby,
     ariaDescribedby,
-    ariaDetails,
     children,
     className,
     id,
@@ -25,28 +24,16 @@ const TabGroup: FC<Props> = (props: Props) => {
 
   const containerRef = useRef(null);
 
-  //Handle onKeyDown and onPress events for tab child elements
-  const tabsChildren =  Children.map(children, (child) => {
+  //Handle onKeyDown events and set default attribute for tab child elements
+  const tabsChildren = Children.map(children, (child) => {
     if (isValidElement(child)) {
-      const existingOnKeyDown = child.props.onKeyDown;
-      const existingOnPress = child.props.onPress;
       return cloneElement(child as React.ReactElement<any>, {
-        onKeyDown: (event:KeyboardEvent) => {
-          handleTabOnKeyDown(event, containerRef);
-          if (existingOnKeyDown) {
-            existingOnKeyDown(event);
-          }
+        onKeyDown: (event: KeyboardEvent) => {
+          handleOnKeyDown(event, containerRef, orientation);
         },
-        onPress: (event:KeyboardEvent) => {
-          if (existingOnPress) {
-            existingOnPress(event);
-          }else{
-            handleOnPress(event, containerRef);
-          }
-        },
-        role:'tab',
+        role: 'tab',
       });
-    }
+    };
     return child;
   });
 
@@ -58,7 +45,7 @@ const TabGroup: FC<Props> = (props: Props) => {
       aria-label={ariaLabel}
       aria-labelledby={ariaLabelledby}
       aria-describedby={ariaDescribedby}
-      aria-details={ariaDetails}
+      aria-orientation={orientation}
       className={classNames(STYLE.wrapper, className)}
       data-orientation={orientation || DEFAULTS.ORIENTATION}
       data-spaced={spaced || DEFAULTS.SPACED}
