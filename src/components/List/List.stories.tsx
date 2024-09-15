@@ -696,6 +696,133 @@ const ListWithTextSelectWrapper = () => {
 
 const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
 
+const ListWithMeetingListItemWrapper = () => {
+  return (
+    <>
+      <List key={'a'} listSize={2}>
+        <ListItemBase id="top" itemIndex={0} key={0}>
+          <List key={'b'} listSize={1}>
+            <MeetingListItem id="meeting-list-item" itemIndex={0}>
+              0
+            </MeetingListItem>
+          </List>
+        </ListItemBase>
+        <ListItemBase id="bottom" itemIndex={1} key={1}>
+          1
+        </ListItemBase>
+      </List>
+      <ButtonPill>after</ButtonPill>
+    </>
+  );
+};
+
+const ListWithMeetingListItem = Template<unknown>(ListWithMeetingListItemWrapper).bind({});
+
+const ListWithMeetingListItemWrapper2 = () => {
+  return (
+    <>
+      <ButtonPill>before</ButtonPill>
+      <List key={'a'} listSize={1}>
+        <ListItemBase id="top" itemIndex={0} key={0}>
+          <List key={'b'} listSize={1}>
+            <MeetingListItem id="meeting-list-item" itemIndex={0}>
+              0
+            </MeetingListItem>
+          </List>
+        </ListItemBase>
+      </List>
+      <ButtonPill>after</ButtonPill>
+    </>
+  );
+};
+
+const ListWithMeetingListItem2 = Template<unknown>(ListWithMeetingListItemWrapper2).bind({});
+
+const ListWithinListWrapper = () => {
+  return (
+    <>
+      <ButtonPill>before</ButtonPill>
+      <List listSize={3}>
+        <ListItemBase id="outer-0" size="auto" itemIndex={0}>
+          <ListItemBaseSection position="fill">
+            Outer 0
+            <List listSize={2}>
+              <ListItemBase id="inner-0" itemIndex={0}>
+                Inner 0
+              </ListItemBase>
+              <ListItemBase id="inner-1" itemIndex={1}>
+                Inner 1
+              </ListItemBase>
+            </List>
+          </ListItemBaseSection>
+        </ListItemBase>
+        <ListItemBase id="outer-1" itemIndex={1}>
+          Outer 1
+        </ListItemBase>
+        <ListItemBase id="outer-2" itemIndex={2}>
+          Outer 2
+        </ListItemBase>
+      </List>
+      <ButtonPill>after</ButtonPill>
+    </>
+  );
+};
+
+const ListWithinList = Template<unknown>(ListWithinListWrapper).bind({});
+
+const ListWithinListWrapper2 = () => {
+  return (
+    <>
+      <ButtonPill>before</ButtonPill>
+      <List listSize={3}>
+        <ListItemBase id="outer-0" size="auto" itemIndex={0}>
+          <ListItemBaseSection position="fill">
+            Outer 0
+            <List listSize={2}>
+              <ListItemBase id="inner-0" itemIndex={0}>
+                <ButtonPill>Inner 0</ButtonPill>
+              </ListItemBase>
+              <ListItemBase id="inner-1" itemIndex={1}>
+                <ButtonPill>Inner 0</ButtonPill>
+              </ListItemBase>
+            </List>
+          </ListItemBaseSection>
+        </ListItemBase>
+        <ListItemBase id="outer-1" itemIndex={1}>
+          Outer 1
+        </ListItemBase>
+        <ListItemBase id="outer-2" itemIndex={2}>
+          Outer 2
+        </ListItemBase>
+      </List>
+      <ButtonPill>after</ButtonPill>
+    </>
+  );
+};
+
+const ListWithinList2 = Template<unknown>(ListWithinListWrapper2).bind({});
+
+const UnitTestWrapper = () => {
+  return (
+    <List listSize={2}>
+      <ListItemBase id="item1" key="0" itemIndex={0}>
+        <ListItemBaseSection position="fill">
+          <input type="text" id="input1" />
+          <button id="button1">Button 1</button>
+        </ListItemBaseSection>
+      </ListItemBase>
+      <ListItemBase id="item2" key="1" itemIndex={1}>
+        <ListItemBaseSection position="fill">
+          <input type="text" id="input22" />
+          <button id="button2">Button 2</button>
+        </ListItemBaseSection>
+      </ListItemBase>
+    </List>
+  );
+};
+
+const UnitTestList = Template<unknown>(UnitTestWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -715,4 +842,9 @@ export {
   DynamicListWithInitialFocus3,
   SingleItemList,
   ListWithTextSelect,
+  ListWithMeetingListItem,
+  ListWithMeetingListItem2,
+  ListWithinList,
+  ListWithinList2,
+  UnitTestList,
 };

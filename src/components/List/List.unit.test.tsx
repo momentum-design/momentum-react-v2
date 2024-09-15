@@ -1233,5 +1233,177 @@ describe('<List />', () => {
 
       expect(getByTestId('list-item-1')).toHaveFocus();
     });
+
+    it('should work with a list within a list - focus lock shift-tab check 1', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <>
+          <ButtonPill data-testid="button-before">before</ButtonPill>
+          <List listSize={3}>
+            <ListItemBase data-testid="outer-0" size="auto" itemIndex={0}>
+              <ListItemBaseSection position="fill">
+                Outer 0
+                <List listSize={2}>
+                  <ListItemBase data-testid="inner-0" itemIndex={0}>
+                    Inner 0
+                  </ListItemBase>
+                  <ListItemBase data-testid="inner-1" itemIndex={1}>
+                    Inner 1
+                  </ListItemBase>
+                </List>
+              </ListItemBaseSection>
+            </ListItemBase>
+            <ListItemBase data-testid="outer-1" itemIndex={1}>
+              Outer 1
+            </ListItemBase>
+            <ListItemBase data-testid="outer-2" itemIndex={2}>
+              Outer 2
+            </ListItemBase>
+          </List>
+          <ButtonPill data-testid="button-after">after</ButtonPill>
+        </>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-before')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('outer-0')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('inner-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('inner-1')).toHaveFocus();
+
+      await user.tab({ shift: true });
+
+      expect(getByTestId('outer-0')).toHaveFocus();
+
+      await user.tab({ shift: true });
+
+      expect(getByTestId('button-before')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('outer-0')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('inner-1')).toHaveFocus();
+
+      await user.tab({ shift: true });
+
+      expect(getByTestId('outer-0')).toHaveFocus();
+    });
+
+    it('should work with a list within a list - focus lock shift-tab check 2', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <>
+          <ButtonPill data-testid="button-before">before</ButtonPill>
+          <List listSize={3}>
+            <ListItemBase data-testid="outer-0" size="auto" itemIndex={0}>
+              <ListItemBaseSection position="fill">
+                Outer 0
+                <List listSize={2}>
+                  <ListItemBase data-testid="inner-0" itemIndex={0}>
+                    Inner 0
+                  </ListItemBase>
+                  <ListItemBase data-testid="inner-1" itemIndex={1}>
+                    Inner 1
+                  </ListItemBase>
+                </List>
+              </ListItemBaseSection>
+            </ListItemBase>
+            <ListItemBase data-testid="outer-1" itemIndex={1}>
+              Outer 1
+            </ListItemBase>
+            <ListItemBase data-testid="outer-2" itemIndex={2}>
+              Outer 2
+            </ListItemBase>
+          </List>
+          <ButtonPill data-testid="button-after">after</ButtonPill>
+        </>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-before')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('outer-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('outer-1')).toHaveFocus();
+
+      await user.tab({ shift: true });
+
+      expect(getByTestId('button-before')).toHaveFocus();
+    });
+
+    it('should work with a list within a list - focus lock shift-tab check 3', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <>
+          <ButtonPill data-testid="button-before">before</ButtonPill>
+          <List listSize={3}>
+            <ListItemBase id="outer-0" data-testid="outer-0" size="auto" itemIndex={0}>
+              <ListItemBaseSection position="fill">
+                Outer 0
+                <List listSize={2}>
+                  <ListItemBase id="inner-0" data-testid="inner-0" itemIndex={0}>
+                    Inner 0
+                  </ListItemBase>
+                  <ListItemBase id="inner-1" data-testid="inner-1" itemIndex={1}>
+                    Inner 1
+                  </ListItemBase>
+                </List>
+              </ListItemBaseSection>
+            </ListItemBase>
+            <ListItemBase id="outer-1" data-testid="outer-1" itemIndex={1}>
+              Outer 1
+            </ListItemBase>
+            <ListItemBase id="outer-2" data-testid="outer-2" itemIndex={2}>
+              Outer 2
+            </ListItemBase>
+          </List>
+          <ButtonPill data-testid="button-after">after</ButtonPill>
+        </>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-before')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('outer-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('outer-1')).toHaveFocus();
+
+      await user.keyboard('{ArrowUp}');
+
+      await user.tab();
+
+      expect(getByTestId('inner-0')).toHaveFocus();
+    });
   });
 });

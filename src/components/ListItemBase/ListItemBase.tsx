@@ -64,7 +64,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   const [isAriaHidden, setIsAriaHidden] = useState(false);
 
-  const { focusProps, isFocusedWithin } = useFocusAndFocusWithinState({
+  const { focusProps, isFocusedWithin, isFocused } = useFocusAndFocusWithinState({
     onFocus,
     onBlur,
     onBlurWithin,
@@ -227,17 +227,66 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [focusChild, isPressed, itemIndex, listContext, ref, setCurrentFocus, shouldFocusOnPress]);
 
   const updateTabIndexes = useCallback(() => {
+    // if (rest.id === 'top' || rest.id === 'meeting-list-item') {
+    //   console.log('updating tab indexes', rest.id, getKeyboardFocusableElements(ref.current, false));
+    //   // debugger;
+    // }
+
+    /**
+     * when should the list item change the focus of its children and which children?
+     *
+     * when the top list item is focused, immediate children i.e. not under the next list should have tabIndex set
+     * test 1: !(focused within, but not focused)
+     *
+     */
+
     getKeyboardFocusableElements(ref.current, false)
-      .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
-      .forEach((el) =>
-        el.setAttribute(
-          'tabindex',
-          isFocusedWithin || focusChild ? listItemTabIndex.toString() : '-1'
-        )
-      );
+      .filter((el) => {
+        const closestListItemBase = (el.parentNode as Element).closest(`.${STYLE.wrapper}`);
+        // const closestListItemBase = el.closest(`.${STYLE.wrapper}`);
+
+        // console.log(closestListItemBase, closestListItemBase.getAttribute('data-is-current-focus'));
+
+        // console.log(
+        //   'closest list item base',
+        //   closestListItemBase.id,
+        //   el.id,
+        //   closestListItemBase.getAttribute('data-isfocused'),
+        //   closestListItemBase.getAttribute('data-isfocusedwithin'),
+        //   el.getAttribute('data-isfocused'),
+        //   el.getAttribute('data-isfocusedwithin'),
+        //   'isFocusedWithin', isFocusedWithin,
+        //   'setting to', isFocusedWithin || focusChild ? listItemTabIndex.toString() : '-1'
+        // );
+
+        return closestListItemBase === ref.current; // && (
+        //!(closestListItemBase.getAttribute('data-isfocused') === 'false' && closestListItemBase.getAttribute('data-isfocusedwithin') === 'true')
+        // (closestListItemBase.getAttribute('data-isfocused') === 'true' && closestListItemBase.getAttribute('data-isfocusedwithin') === 'true')
+        //);
+      }) // TODO: work out if this breaks things
+      .forEach((el) => {
+        const closestParentListItemBase = (el.parentNode as Element).closest(`.${STYLE.wrapper}`);
+        let newFocusValue = isFocusedWithin || focusChild ? listItemTabIndex.toString() : '-1';
+
+        // if (el.id.includes('inner')) {
+        //   console.log('inner', el.classList.contains(STYLE.wrapper), el.classList, `.${STYLE.wrapper}`);
+        //   // console.log('parent of inner 0', closestParentListItemBase.getAttribute('data-isfocused'));
+        // }
+
+        if (
+          el.classList.contains(STYLE.wrapper) &&
+          closestParentListItemBase &&
+          closestParentListItemBase.getAttribute('data-isfocused') === 'false'
+        ) {
+          // console.log('parent is not focused, setting to -1', closestParentListItemBase.id, el.id);
+          newFocusValue = '-1';
+        }
+
+        el.setAttribute('tabindex', newFocusValue);
+      });
     // Also include "focus" in the dependencies to update the tab indexes when the focus changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [focus, ref, isFocusedWithin, focusChild, listItemTabIndex]);
+  }, [focus, ref, isFocused, isFocusedWithin, focusChild, listItemTabIndex]);
 
   useLayoutEffect(() => {
     if (
@@ -260,6 +309,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     currentFocus,
     focus,
     focusChild,
+    isFocused,
     isFocusedWithin,
     isInitiallyRoving,
     itemIndex,
@@ -409,6 +459,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       data-disabled={isDisabled}
       data-padded={isPadded}
       data-shape={shape}
+      data-is-current-focus={focus}
+      data-isfocused={isFocused}
+      data-isfocusedwithin={isFocusedWithin}
       data-interactive={interactive && !focusChild}
       data-allow-text-select={allowTextSelection}
       className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
