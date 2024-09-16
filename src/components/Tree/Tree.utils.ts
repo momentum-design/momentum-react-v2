@@ -422,3 +422,32 @@ export const getFistActiveNode = (tree: TreeIdNodeMap, excludeTreeRoot: boolean)
 export const getNodeDOMId = (id: TreeNodeId): string => {
   return `${DEFAULTS.NODE_ID_PREFIX}-${id}`;
 };
+
+/**
+ * Migrate states between old and new trees
+ *
+ * `isOpen` state used from the old tree if the node available otherwise falls back to the new tree's node value.
+ * `isHidden` also updated based on the merged `isOpen` state.
+ *
+ * @remarks
+ * This function modify the `newTree` parameter
+ *
+ * @param oldTree
+ * @param newTree
+ */
+export const migrateTreeState = (oldTree: TreeIdNodeMap, newTree: TreeIdNodeMap): void => {
+  const rootId = getTreeRootId(newTree);
+
+  if (!rootId) return;
+
+  const nodeStack = [{ id: rootId, isHidden: false }];
+  while (nodeStack.length) {
+    const { id, isHidden } = nodeStack.pop();
+    const node = newTree.get(id);
+
+    const isOpen = oldTree.get(id)?.isOpen ?? node.isOpen;
+    newTree.set(node.id, { ...node, isOpen, isHidden });
+
+    nodeStack.push(...node.children.map((id) => ({ id, isHidden: node.isHidden || !isOpen })));
+  }
+};
