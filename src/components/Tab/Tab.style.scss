@@ -47,6 +47,11 @@
   &[data-active='true'] {
     background-color: var(--mds-color-theme-button-secondary-active-normal);
 
+    @media (forced-colors: active) {
+      background-color: SelectedItem;
+      color: SelectedItemText;
+    }
+
     .md-text-wrapper,
     .md-icon-wrapper {
       color: var(--mds-color-theme-text-secondary-normal);
