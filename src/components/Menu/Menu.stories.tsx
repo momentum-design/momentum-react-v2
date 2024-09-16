@@ -41,6 +41,21 @@ Example.args = {
   ],
 };
 
+const ActionMenu = Template<MenuProps<unknown>>(Menu).bind({});
+
+ActionMenu.argTypes = { ...argTypes };
+
+ActionMenu.args = {
+  'aria-label': 'Menu component',
+  onAction: action('onAction'),
+  selectionMode: 'none',
+  children: [
+    <Item key="Copy">Copy</Item>,
+    <Item key="Cut">Cut</Item>,
+    <Item key="Paste">Paste</Item>,
+  ],
+};
+
 const Sections = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Sections.argTypes = { ...argTypes };
@@ -49,53 +64,54 @@ delete Sections.argTypes.isTickOnLeftSide;
 delete Sections.argTypes.itemSize;
 
 Sections.args = {
-  'aria-label': 'Menu component',
-  onAction: action('onAction'),
-  onSelectionChange: action('onSelectionChange'),
+  'aria-label': 'Where would you like to live',
+  selectionMode: 'multiple',
 };
 
 Sections.parameters = {
   variants: [
     {
-      selectionMode: 'single',
       itemSize: 32,
       isTickOnLeftSide: true,
+      label: 'Where would you like to live?', 
+      onSelectionChange: action('onSelectionChange'),
       children: [
         <Section
           key="0"
           title={
             <ListHeader outline={false}>
-              <ListItemBaseSection position="start">
-                <Icon scale={16} name="speaker" strokeColor="none" />
-              </ListItemBaseSection>
-              <ListItemBaseSection position="fill">Speaker</ListItemBaseSection>
+              <ListItemBaseSection position="fill">Europe</ListItemBaseSection>
             </ListHeader>
           }
         >
-          <Item key="00">Use system setting (internal speakers)</Item>
-          <Item key="01">Internal speaker</Item>
-          <Item key="02">Bose Headset 100</Item>
+          <Item key="00">Spain</Item>
+          <Item key="01">France</Item>
+          <Item key="02">Italy</Item>
         </Section>,
         <Section
           key="1"
           title={
             <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-              <ListItemBaseSection position="start">
-                <Icon scale={16} name="microphone" strokeColor="none" />
-              </ListItemBaseSection>
-              <ListItemBaseSection position="fill">Microphone</ListItemBaseSection>
+              <ListItemBaseSection position="fill">Asia</ListItemBaseSection>
             </ListHeader>
           }
         >
-          <Item key="10">Use system setting (internal microphone)</Item>
-          <Item key="11">Bose Headset 100</Item>
+          <Item key="10">India</Item>
+          <Item key="11">China</Item>
+          <Item key="12">Japan</Item>
         </Section>,
-        <Section title={<ListHeader outline outlineColor="secondary" />} key="2">
-          <Item key="20">No title in the section</Item>
-        </Section>,
-        <Section title={<ListHeader outline outlineColor="secondary" />} key="3">
-          <Item key="30">No title in the section</Item>
-        </Section>,
+        <Section
+        key="2"
+        title={
+          <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
+            <ListItemBaseSection position="fill">America</ListItemBaseSection>
+          </ListHeader>
+        }
+      >
+        <Item key="13">USA</Item>
+        <Item key="14">Mexico</Item>
+        <Item key="15">Canada</Item>
+      </Section>,
       ],
     },
   ],
@@ -110,7 +126,6 @@ delete Sections.argTypes.itemSize;
 
 SelectionGroupExample.args = {
   'aria-label': 'Menu with multiple selection modes component',
-  // onAction: action('onAction'),
   onSelectionChange: action('onSelectionChange'),
 };
 
@@ -164,16 +179,26 @@ SelectionGroupExample.parameters = {
         </SelectionGroup>,
         <SelectionGroup
           key="3"
-          items={[{ key: '20' }, { key: '21' }]}
+          items={[{ key: '20', value: 'Keyboard' }, { key: '21', value: 'Mouse' }]}
           selectionMode="single"
           aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection', rest);
           }}
+          title={
+            <>
+              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
+                <ListItemBaseSection position="start">
+                  <Icon scale={16} name="accessibility" strokeColor="none" />
+                </ListItemBaseSection>
+                <ListItemBaseSection position="fill">Devices</ListItemBaseSection>
+              </ListHeader>
+            </>
+          }
         >
           {(item) => (
-            <Item textValue={item.key} key={item.key}>
-              {item.key}
+            <Item textValue={item.value} key={item.key}>
+              {item.value}
             </Item>
           )}
         </SelectionGroup>,
@@ -255,4 +280,4 @@ Common.parameters = {
 delete Common.argTypes.onAction;
 delete Common.argTypes.disabledKeys;
 
-export { Example, Sections, SelectionGroupExample, Common };
+export { Example, ActionMenu, Sections, SelectionGroupExample, Common };
