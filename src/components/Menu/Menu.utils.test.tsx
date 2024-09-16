@@ -4,9 +4,6 @@ import { Item , Section, PartialNode } from '@react-stately/collections';
 import {  SelectionMode } from '@react-types/shared';
 import { SelectionGroupProps } from './Menu.types';
 
-
-
-// Mock the Section.getCollectionNode function
 jest.mock('@react-stately/collections', () => ({
   Section: {
     getCollectionNode: jest.fn(),
@@ -19,12 +16,8 @@ const defaultProps = {
   selectionMode: 'single' as Exclude<SelectionMode, 'none'>
 };
 
-
-
 describe('SelectionGroup', () => {
-
     it('returns null', () => {
-
         const result = SelectionGroup(defaultProps);
         expect(result).toBeNull();
     });
@@ -41,7 +34,6 @@ describe('SelectionGroup', () => {
         { key: 'two', value: 'Two' },
       ];
   
-      // Mock implementation of Section.getCollectionNode
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       (Section.getCollectionNode as jest.Mock).mockImplementation(function* () {
