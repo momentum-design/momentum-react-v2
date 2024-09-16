@@ -34,4 +34,9 @@ export interface Props extends AriaButtonProps {
    * Determines whether the tab is disabled or not.
    */
   disabled?: boolean;
+
+  /**
+   * Tabindex for accessibility
+   */
+  tabIndex?: number;
 }
