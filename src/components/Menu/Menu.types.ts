@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
+import { CSSProperties, HTMLAttributes, Key, MutableRefObject } from 'react';
 import { AriaMenuProps } from '@react-types/menu';
 import {
   CollectionBase,
@@ -67,6 +67,6 @@ export interface SelectionGroupProps<T>
   extends Omit<SectionProps<T>, 'children' | 'items'>,
     Omit<CollectionBase<T>, 'disabledKeys'>,
     Omit<MultipleSelection, 'disabledKeys' | 'selectionMode'> {
-  onAction?: () => void;
+  onAction?: (key: Key) => void;
   selectionMode: Exclude<SelectionMode, 'none'>;
 }

@@ -34,7 +34,7 @@ export default {
     table: {
       category: 'React Aria - Menu',
       type: {
-        summary: '(key: Key) => void',
+        summary: "(keys: 'all' | Set<Key>) => void",
       },
       defaultValue: {
         summary: 'undefined',
@@ -127,9 +127,8 @@ export default {
       },
     },
   },
-  'ariaLabelledby': {
-    description:
-      'The aria-labelledby for the menu wrapper',
+  ariaLabelledby: {
+    description: 'The aria-labelledby for the menu wrapper',
     control: { type: 'text' },
     table: {
       type: {
@@ -139,14 +138,15 @@ export default {
     },
   },
   selectionMode: {
-    description: 'Selection mode single, multiple or none',
+    description: 'Default selection mode for the whole menu',
+    default: undefined,
     control: { type: 'select' },
     options: ['single', 'multiple', 'none'],
     table: {
       type: {
         summary: "'single' | 'multiple' | 'none'",
       },
+      defaultValue: 'multiple',
     },
   },
 };
-

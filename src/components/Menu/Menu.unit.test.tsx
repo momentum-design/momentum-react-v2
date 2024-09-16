@@ -332,6 +332,80 @@ describe('<Menu />', () => {
       expect(checkboxItems[1]).toHaveFocus();
     });
 
+    it('should handle click - for vertical menu with SelectionGroup', async () => {
+      const user = userEvent.setup();
+
+      const { getAllByRole } = render(
+        <Menu {...defaultProps}>
+          <SelectionGroup
+            selectionMode="single"
+            title="SelectionGroup 1"
+            key="s1"
+            aria-label="selection1"
+          >
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </SelectionGroup>
+          <SelectionGroup
+            selectionMode="multiple"
+            title="SelectionGroup 2"
+            key="s2"
+            aria-label="selection2"
+          >
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </SelectionGroup>
+        </Menu>
+      );
+
+      const radioItems = getAllByRole('menuitemradio');
+      const checkboxItems = getAllByRole('menuitemcheckbox');
+
+      await user.click(radioItems[1]);
+
+      expect(radioItems[0]).not.toHaveFocus();
+      expect(radioItems[0]).not.toBeChecked();
+      expect(radioItems[1]).toHaveFocus();
+      expect(radioItems[1]).toBeChecked();
+      expect(checkboxItems[0]).not.toHaveFocus();
+      expect(checkboxItems[0]).not.toBeChecked();
+      expect(checkboxItems[1]).not.toHaveFocus();
+      expect(checkboxItems[1]).not.toBeChecked();
+
+      await user.click(checkboxItems[0]);
+
+      expect(radioItems[0]).not.toHaveFocus();
+      expect(radioItems[0]).not.toBeChecked();
+      expect(radioItems[1]).not.toHaveFocus();
+      expect(radioItems[1]).toBeChecked();
+      expect(checkboxItems[0]).toHaveFocus();
+      expect(checkboxItems[0]).toBeChecked();
+      expect(checkboxItems[1]).not.toHaveFocus();
+      expect(checkboxItems[1]).not.toBeChecked();
+
+      await user.click(checkboxItems[1]);
+
+      expect(radioItems[0]).not.toHaveFocus();
+      expect(radioItems[0]).not.toBeChecked();
+      expect(radioItems[1]).not.toHaveFocus();
+      expect(radioItems[1]).toBeChecked();
+      expect(checkboxItems[0]).not.toHaveFocus();
+      expect(checkboxItems[0]).toBeChecked();
+      expect(checkboxItems[1]).toHaveFocus();
+      expect(checkboxItems[1]).toBeChecked();
+
+      await user.click(radioItems[0]);
+
+      expect(radioItems[0]).toHaveFocus();
+      expect(radioItems[0]).toBeChecked();
+      expect(radioItems[1]).not.toHaveFocus();
+      expect(radioItems[1]).not.toBeChecked();
+      expect(checkboxItems[0]).not.toHaveFocus();
+      expect(checkboxItems[0]).toBeChecked();
+      expect(checkboxItems[1]).not.toHaveFocus();
+      expect(checkboxItems[1]).toBeChecked();
+    });
+
     it('should render MenuSelectionGroup if children has SelectionGroup', () => {
       const wrapper = mount(
         <Menu {...defaultProps}>
@@ -364,7 +438,7 @@ describe('<Menu />', () => {
         title: 'SelectionGroup 1',
         'aria-label': 'selection1',
         children: expect.any(Object),
-        selectionGroup: true
+        selectionGroup: true,
       });
       expect(wrapper.find(MenuSelectionGroup).at(1).props()).toEqual({
         item: expect.any(Object),
@@ -374,7 +448,7 @@ describe('<Menu />', () => {
         title: 'SelectionGroup 2',
         'aria-label': 'selection2',
         children: expect.any(Object),
-        selectionGroup: true
+        selectionGroup: true,
       });
     });
   });
