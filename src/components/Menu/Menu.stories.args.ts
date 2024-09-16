@@ -28,6 +28,19 @@ export default {
       },
     },
   },
+  onSelectionChange: {
+    action: 'onSelectionChange',
+    description: 'Handler that is called when an item/items is selected.',
+    table: {
+      category: 'React Aria - Menu',
+      type: {
+        summary: '(key: Key) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   items: {
     defaultValue: [],
     description:
@@ -125,4 +138,15 @@ export default {
       defaultValue: 'undefined',
     },
   },
+  selectionMode: {
+    description: 'Selection mode single, multiple or none',
+    control: { type: 'select' },
+    options: ['single', 'multiple', 'none'],
+    table: {
+      type: {
+        summary: "'single' | 'multiple' | 'none'",
+      },
+    },
+  },
 };
+
