@@ -323,7 +323,7 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
 `;
 
 exports[`TreeNodeBase snapshot should not render the content of the hidden nodes 1`] = `
-<ForwardRef
+<Tree
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
@@ -414,11 +414,11 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
       nodeId="2"
     />
   </div>
-</ForwardRef>
+</Tree>
 `;
 
 exports[`TreeNodeBase snapshot should not render the content when the node details are not available 1`] = `
-<ForwardRef
+<Tree
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
@@ -461,11 +461,11 @@ exports[`TreeNodeBase snapshot should not render the content when the node detai
       nodeId="wrong-id-2"
     />
   </div>
-</ForwardRef>
+</Tree>
 `;
 
 exports[`TreeNodeBase snapshot should render grouping element when the tree is flat 1`] = `
-<ForwardRef
+<Tree
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
@@ -628,5 +628,5 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
       </FocusRing>
     </TreeNodeBase>
   </div>
-</ForwardRef>
+</Tree>
 `;

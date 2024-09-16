@@ -3,7 +3,6 @@ import { mount } from 'enzyme';
 import '@testing-library/jest-dom';
 import { render, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { act } from 'react-test-renderer';
 
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
@@ -184,6 +183,23 @@ describe('<Tree />', () => {
 
       expect(element.getAttribute('aria-labelledby')).toBe(labelBy);
     });
+
+    it.each`
+      selectionMode          | valueOfAriaMultiselectable
+      ${'none' as const}     | ${null}
+      ${'single' as const}   | ${'false'}
+      ${'multiple' as const} | ${'true'}
+    `(
+      'should have provided style when style is provided',
+      ({ selectionMode, valueOfAriaMultiselectable }) => {
+        expect.assertions(1);
+
+        const container = mount(<Tree selectionMode={selectionMode} {...commonProps} />);
+        const element = container.find(Tree).getDOMNode();
+
+        expect(element.getAttribute('aria-multiselectable')).toBe(valueOfAriaMultiselectable);
+      }
+    );
   });
 
   describe('tree navigation', () => {
@@ -653,9 +669,14 @@ describe('<Tree />', () => {
       await userEvent.keyboard('{ArrowDown}');
       await userEvent.keyboard('{ArrowDown}');
       await userEvent.keyboard('{ArrowDown}');
-      expect(getByTestId('2.1')).toHaveFocus();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.2.1')).toHaveFocus();
 
-      const newTree = tNode('new-root', true, [tNode('new-1'), tNode('2', false, [tNode('2.1')])]);
+      const newTree = tNode('new-root', true, [
+        tNode('new-1'),
+        tNode('2', true, [tNode('new-2.2', false, [tNode('2.2.1')])]),
+      ]);
       rerender(getTreeComponent(newTree));
 
       expect(getByTestId('2')).toHaveFocus();
@@ -695,6 +716,38 @@ describe('<Tree />', () => {
       await userEvent.keyboard('{ArrowDown}');
 
       expect(getByTestId('new-2')).toHaveFocus();
+    });
+
+    it('should keep the open state of the tree between updates', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree()));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1')).toHaveFocus();
+      await userEvent.keyboard('{ArrowRight}');
+
+      rerender(getTreeComponent(getSampleTree()));
+
+      // can move to 1.1 because it was opened before update
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+    });
+
+    it('should select the next visible chhild of the root when excludeTreeRoot true', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(getTreeComponent(nextTree, true));
+
+      // Focus should move to node '2'
+      expect(getByTestId('2')).toHaveFocus();
     });
   });
 

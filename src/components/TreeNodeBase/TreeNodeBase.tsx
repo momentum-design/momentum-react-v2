@@ -166,6 +166,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   const lastActiveNode = usePrevious(treeContext?.activeNodeId);
   useDidUpdateEffect(() => {
     if (
+      ref.current &&
       lastActiveNode !== undefined &&
       lastActiveNode !== treeContext?.activeNodeId &&
       treeContext?.activeNodeId === nodeId

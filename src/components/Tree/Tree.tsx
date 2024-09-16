@@ -17,7 +17,9 @@ import {
   getFistActiveNode,
   getNextActiveNode,
   getNodeDOMId,
+  getTreeRootId,
   isActiveNodeInDOM,
+  migrateTreeState,
   toggleTreeNodeRecord,
   TreeContext,
 } from './Tree.utils';
@@ -65,6 +67,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
 
   useDidUpdateEffect(() => {
     const newTree = convertNestedTree2MappedTree(treeStructure);
+    migrateTreeState(previousTree, newTree);
     setTree(newTree);
     // Find the closest node to the last active node in the new tree
     let newActiveNodeId = activeNodeId;
@@ -73,7 +76,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       newActiveNodeId = previousTree.get(newActiveNodeId)?.parent;
     }
     // Fallback to the first node
-    if (!newActiveNodeId) {
+    if (!newActiveNodeId || newActiveNodeId === getTreeRootId(newTree)) {
       newActiveNodeId = getFistActiveNode(newTree, excludeTreeRoot);
     }
     setActiveNodeId(newActiveNodeId);
@@ -215,6 +218,14 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     },
   });
 
+  const ariaProps = {
+    role: 'tree',
+  };
+
+  if (selectionMode !== 'none') {
+    ariaProps['aria-multiselectable'] = selectionMode === 'multiple' ? 'true' : 'false';
+  }
+
   return (
     <TreeContext.Provider value={context}>
       <div
@@ -222,7 +233,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         ref={treeRef}
         style={style}
         id={id}
-        role="tree"
+        {...ariaProps}
         {...keyboardProps}
         {...rest}
       >
@@ -231,5 +242,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     </TreeContext.Provider>
   );
 });
+
+Tree.displayName = 'Tree';
 
 export default Tree;

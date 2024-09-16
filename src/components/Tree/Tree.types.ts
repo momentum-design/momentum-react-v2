@@ -131,6 +131,10 @@ export interface Props
    * The initial tree structure
    *
    * It is used to build an internal tree for navigation and follow open/close states.
+   *
+   * The tree can be updated dynamically via `treeStructure`, but `isOpen` will be migrated from the old tree:
+   * If the node exists the both old and new tree then the value used from the old tree otherwise
+   * falls back to the `isOpenByDefault ?? true`
    */
   treeStructure: TreeRoot;
 

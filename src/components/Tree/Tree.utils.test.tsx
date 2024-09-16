@@ -7,6 +7,7 @@ import {
   isActiveNodeInDOM,
   isEmptyTree,
   mapTree,
+  migrateTreeState,
   toggleTreeNodeRecord,
   TreeContext,
   useTreeContext,
@@ -20,6 +21,7 @@ import {
 } from './Tree.types';
 import { createTreeNode as tNode } from './test.utils';
 import { renderHook } from '@testing-library/react-hooks';
+import tree from './Tree';
 
 const createSingleLevelTree = () =>
   // prettier-ignore
@@ -737,5 +739,41 @@ describe('Tree utils', () => {
         expect(result).toEqual(expected);
       }
     );
+  });
+
+  describe('migrateTreeState', () => {
+    it('should handle empty old tree', () => {
+      const tree = convertNestedTree2MappedTree(sampleTree);
+      migrateTreeState(new Map(), tree);
+      expect(tree).toEqual(convertNestedTree2MappedTree(sampleTree));
+    });
+
+    it('should handle empty new tree', () => {
+      const tree = new Map();
+      migrateTreeState(convertNestedTree2MappedTree(sampleTree), tree);
+      expect(tree).toEqual(tree);
+    });
+
+    it('should migrate isOpen state', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(oldTree.get('1').isOpen).not.toEqual(newTree.get('1').isOpen);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1').isOpen).toEqual(newTree.get('1').isOpen);
+    });
+
+    it('should update isHidden correctly', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(true);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(false);
+    });
   });
 });
