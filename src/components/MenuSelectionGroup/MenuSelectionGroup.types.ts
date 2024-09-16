@@ -3,7 +3,7 @@ import { Node, MultipleSelection, CollectionBase } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
 
 export interface SelectionGroupProps<T>
-  extends Omit<CollectionBase<T>, 'disabledKeys'>,
+  extends Omit<CollectionBase<T>, 'disabledKeys' | 'children' >,
     Omit<MultipleSelection, 'disabledKeys'> {}
 
 export interface Props<T> extends SelectionGroupProps<T> {
