@@ -1,103 +1,49 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { Item } from '@react-stately/collections';
+import { SelectionGroup } from '../Menu/Menu.utils';
 
-import MenuSelectionGroup, { MENU_SELECTION_GROUP_CONSTANTS as CONSTANTS } from './';
+import MenuSelectionGroup from './';
+import { renderHook } from '@testing-library/react-hooks';
+import { useTreeState } from '@react-stately/tree';
 
 describe('<MenuSelectionGroup />', () => {
+  const { result } = renderHook(() =>
+    useTreeState({
+      children: [
+        <SelectionGroup title='x' selectionMode="single" key="$.0" aria-label="selection">
+          <Item key="$.0.0" aria-label="0">
+            Item 1
+          </Item>
+          <Item key="$.0.1" aria-label="1">
+            Item 2
+          </Item>
+        </SelectionGroup>,
+      ],
+    })
+  );
+
+  const state = result.current;
+
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      expect.assertions(1);
+      const item = state.collection.getItem('$.0');
+      const wrapper = mount(<MenuSelectionGroup state={state} key={item.key} item={item} />);
+      
 
-      const container = mount(<MenuSelectionGroup />);
-
-      expect(container).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
     });
-
-    it('should match snapshot with className', () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const container = mount(<MenuSelectionGroup className={className} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with id', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = mount(<MenuSelectionGroup id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with style', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-
-      const container = mount(<MenuSelectionGroup style={style} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
-      expect.assertions(1);
+    it('should render the items inside the SelectionGroup', () => {
+      const item = state.collection.getItem('$.0');
+      const numberOfItems = [...item.childNodes].length;
 
-      const element = mount(<MenuSelectionGroup />)
-        .find(MenuSelectionGroup)
-        .getDOMNode();
+      const wrapper = mount(<MenuSelectionGroup state={state} key={item.key} item={item} />);
 
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+      const element = wrapper.find('ListItemBase li div');
+      expect(element.length).toEqual(numberOfItems);
     });
-
-    it('should have provided class when className is provided', () => {
-      expect.assertions(1);
-
-      const className = 'example-class';
-
-      const element = mount(<MenuSelectionGroup className={className} />)
-        .find(MenuSelectionGroup)
-        .getDOMNode();
-
-      expect(element.classList.contains(className)).toBe(true);
-    });
-
-    it('should have provided id when id is provided', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const element = mount(<MenuSelectionGroup id={id} />)
-        .find(MenuSelectionGroup)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
-    });
-
-    it('should have provided style when style is provided', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-      const styleString = 'color: pink;';
-
-      const element = mount(<MenuSelectionGroup style={style} />)
-        .find(MenuSelectionGroup)
-        .getDOMNode();
-
-      expect(element.getAttribute('style')).toBe(styleString);
-    });
-
-    /* ...additional attribute tests... */
-  });
-
-  describe('actions', () => {
-    /* ...action tests... */
   });
 });
