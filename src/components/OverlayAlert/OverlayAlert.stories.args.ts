@@ -107,6 +107,30 @@ const overlayAlertArgTypes = {
       },
     },
   },
+  ariaLabelledby: {
+    description: 'Provides the ariaLabelledby within this component as a `string`.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  ariaDescribedby: {
+    description: 'Provides the ariaDescribedby within this component as a `string`.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
 
 export { overlayAlertArgTypes };
