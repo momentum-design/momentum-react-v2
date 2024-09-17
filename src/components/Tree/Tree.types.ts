@@ -188,6 +188,14 @@ export interface Props
      */
     setNodeOpen?: (id: TreeNodeId, isOpen: boolean) => void | Promise<void>;
   };
+
+  /**
+   * Called when a node's open / close state is toggled.
+   *
+   * @param id
+   * @param isOpen
+   */
+  onToggleNode?: (id: TreeNodeId, isOpen: boolean) => void;
 }
 
 /**
