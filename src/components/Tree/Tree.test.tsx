@@ -306,11 +306,12 @@ describe('<Tree />', () => {
     });
 
     it('should handle left/right arrow keys correctly', async () => {
-      expect.assertions(16);
+      expect.assertions(34);
       const user = userEvent.setup();
       const tree = getSampleTree();
       const setNodeOpen = jest.fn();
       const scrollToNode = jest.fn();
+      const onToggleNode = jest.fn();
 
       const { getByTestId } = render(
         <Tree
@@ -320,6 +321,7 @@ describe('<Tree />', () => {
             setNodeOpen,
             scrollToNode,
           }}
+          onToggleNode={onToggleNode}
         >
           {mapTree(
             convertNestedTree2MappedTree(tree),
@@ -344,13 +346,19 @@ describe('<Tree />', () => {
         { nextFocusedNode: '1.1.1', toggleNode: false },
       ];
       for (const { nextFocusedNode, toggleNode } of nodeOrder) {
+        expect(onToggleNode).not.toBeCalled();
         await user.keyboard('{ArrowRight}');
         expect(getByTestId(nextFocusedNode)).toHaveFocus();
 
         if (toggleNode) {
           expect(setNodeOpen).toHaveBeenCalledWith(nextFocusedNode, true);
           expect(scrollToNode).not.toHaveBeenNthCalledWith(1, nextFocusedNode);
+          expect(onToggleNode).toHaveBeenCalledWith(nextFocusedNode, true);
+        } else {
+          expect(onToggleNode).not.toBeCalled();
         }
+
+        onToggleNode.mockReset();
       }
 
       const reversNodeOrder = [
@@ -362,13 +370,19 @@ describe('<Tree />', () => {
       ];
 
       for (const { nextFocusedNode, toggleNode } of reversNodeOrder) {
+        expect(onToggleNode).not.toBeCalled();
         await user.keyboard('{ArrowLeft}');
         expect(getByTestId(nextFocusedNode)).toHaveFocus();
 
         if (toggleNode) {
           expect(setNodeOpen).toHaveBeenCalledWith(nextFocusedNode, false);
           expect(scrollToNode).not.toHaveBeenCalledWith(nextFocusedNode);
+          expect(onToggleNode).toHaveBeenCalledWith(nextFocusedNode, false);
+        } else {
+          expect(onToggleNode).not.toBeCalled();
         }
+
+        onToggleNode.mockReset();
       }
     });
   });
