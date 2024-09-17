@@ -143,13 +143,23 @@ describe('<OverlayAlert />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with ariaLabel', () => {
+    it('should match snapshot with aria props', () => {
       expect.assertions(1);
 
       const ariaLabel = 'test-aria-label';
+      const ariaLabelledby = 'test-aria-labelledby';
+      const ariaDescribedby = 'test-aria-describedby';
       const children = 'example-children';
 
-      const container = mount(<OverlayAlert ariaLabel={ariaLabel}>{children}</OverlayAlert>);
+      const container = mount(
+        <OverlayAlert
+          ariaLabel={ariaLabel}
+          ariaLabelledby={ariaLabelledby}
+          ariaDescribedby={ariaDescribedby}
+        >
+          {children}
+        </OverlayAlert>
+      );
 
       expect(container).toMatchSnapshot();
     });

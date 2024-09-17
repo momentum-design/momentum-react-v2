@@ -75,4 +75,14 @@ export interface Props extends OverlayProps {
    * ariaLabel for this OverlayAlert which will be passed onto ModalContainer.
    */
   ariaLabel?: string;
+
+  /**
+   * ariaLabeledby for this OverlayAlert which will be passed onto ModalContainer.
+   */
+  ariaLabelledby?: string;
+
+  /**
+   * ariaDescribedby for this OverlayAlert which will be passed onto ModalContainer.
+   */
+  ariaDescribedby?: string;
 }
