@@ -46,6 +46,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     onSelectionChange,
     selectedItems,
     isRequired = DEFAULTS.IS_REQUIRED,
+    onToggleNode,
     ...rest
   } = props;
 
@@ -98,6 +99,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         await virtualTreeConnector.setNodeOpen?.(id, newOpenState);
       }
 
+      onToggleNode?.(id, newOpenState);
       setTree((prevTree) => toggleTreeNodeRecord(id, prevTree, newOpenState));
     },
     [tree, isVirtualTree]
