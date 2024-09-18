@@ -71,6 +71,11 @@ export interface MenuAppearanceContextValue {
   classNameWhenSelected?: string;
 }
 
+export interface SelectionGroupAppearanceProps {
+  tickPosition?: TickPosition;
+  classNameWhenSelected?: string;
+}
+
 export interface SelectionGroupProps<T>
   extends Omit<SectionProps<T>, 'children' | 'items'>,
     Omit<CollectionBase<T>, 'disabledKeys'>,

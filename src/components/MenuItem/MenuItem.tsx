@@ -13,14 +13,19 @@ import classNames from 'classnames';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction, tickPosition, classNameWhenSelected} = props;
+  const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
   const { onClose, closeOnSelect } = useMenuContext();
-  const { itemShape, itemSize } = useMenuAppearanceContext();
+  const {
+    itemShape,
+    itemSize,
+    tickPosition: itemTickPosition,
+    classNameWhenSelected: itemClassNameWhenSelected,
+  } = useMenuAppearanceContext({ tickPosition, classNameWhenSelected });
 
   const { menuItemProps } = useMenuItem(
     {
@@ -49,7 +54,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   );
 
   const renderSections = () => {
-    if (tickPosition === 'left') {
+    if (itemTickPosition === 'left') {
       return (
         <>
           <ListItemBaseSection position="start">
@@ -60,22 +65,21 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
           </ListItemBaseSection>
         </>
       );
-    } else if(tickPosition === 'none') {
-      return (
-        <>
-          <ListItemBaseSection position="fill" title={item?.textValue}>
-            {item.rendered}
-          </ListItemBaseSection>
-        </>
-      );
-
-    }else {
+    } else if (itemTickPosition === 'right') {
       return (
         <>
           <ListItemBaseSection position="fill" title={item?.textValue}>
             {item.rendered}
           </ListItemBaseSection>
           {isSelected && <ListItemBaseSection position="end">{tickIcon}</ListItemBaseSection>}
+        </>
+      );
+    } else {
+      return (
+        <>
+          <ListItemBaseSection position="fill" title={item?.textValue}>
+            {item.rendered}
+          </ListItemBaseSection>
         </>
       );
     }
@@ -85,7 +89,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     <ListItemBase
       size={itemSize}
       shape={itemShape}
-      className={classNames(STYLE.wrapper, {[classNameWhenSelected]: isSelected})}
+      className={classNames(STYLE.wrapper, { [itemClassNameWhenSelected]: isSelected })}
       ref={ref}
       isDisabled={isDisabled}
       isPadded={true}

@@ -4,7 +4,12 @@ import React, { forwardRef, ReactElement, RefObject, useContext, useRef, useCall
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './Menu.constants';
-import { MenuAppearanceContextValue, MenuContextValue, Props } from './Menu.types';
+import {
+  MenuAppearanceContextValue,
+  MenuContextValue,
+  Props,
+  SelectionGroupAppearanceProps,
+} from './Menu.types';
 import './Menu.style.scss';
 import { useMenu } from '@react-aria/menu';
 import { useTreeState, TreeState } from '@react-stately/tree';
@@ -21,8 +26,17 @@ export function useMenuContext(): MenuContextValue {
 
 export const MenuAppearanceContext = React.createContext<MenuAppearanceContextValue>({});
 
-export function useMenuAppearanceContext(): MenuAppearanceContextValue {
-  return useContext(MenuAppearanceContext);
+export function useMenuAppearanceContext({
+  tickPosition,
+  classNameWhenSelected,
+}: SelectionGroupAppearanceProps): MenuAppearanceContextValue {
+  const menuAppearance = useContext(MenuAppearanceContext);
+
+  return {
+    ...menuAppearance,
+    tickPosition: tickPosition || menuAppearance.tickPosition,
+    classNameWhenSelected: classNameWhenSelected || menuAppearance.classNameWhenSelected,
+  };
 }
 
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivElement>) => {
@@ -96,7 +110,9 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
-    <MenuAppearanceContext.Provider value={{ itemShape, itemSize, tickPosition, classNameWhenSelected }}>
+    <MenuAppearanceContext.Provider
+      value={{ itemShape, itemSize, tickPosition, classNameWhenSelected }}
+    >
       <div
         className={classnames(className, STYLE.wrapper)}
         id={id}
