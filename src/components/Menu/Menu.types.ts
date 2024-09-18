@@ -1,8 +1,13 @@
-import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
+import { CSSProperties, HTMLAttributes, Key, MutableRefObject } from 'react';
 import { AriaMenuProps } from '@react-types/menu';
-import { FocusStrategy } from '@react-types/shared';
+import {
+  CollectionBase,
+  FocusStrategy,
+  MultipleSelection,
+  SelectionMode,
+  SectionProps,
+} from '@react-types/shared';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
-import { ListOrientation } from '../List/List.types';
 
 export interface Props<T> extends AriaMenuProps<T> {
   /**
@@ -39,32 +44,9 @@ export interface Props<T> extends AriaMenuProps<T> {
   isTickOnLeftSide?: boolean;
 
   /**
-   * Wether it is part of nested menu items.
-   * @default false
-   */
-  isGroupRole?: boolean;
-  
-  /**
    * aria-labelledby attribute to associate with the menu items
    */
   ariaLabelledby?: string;
-  
-  /**
-   * Determines the orientation of the list
-   *
-   * The orientation of the list change the keyboard navigation in the list:
-   *
-   * - vertical: up and down arrow keys
-   * - horizontal: left and right arrow keys
-   *
-   * @default 'vertical'
-   */
-  orientation?: ListOrientation
-
-  /**
-   * accepts tabIndex to override default provided by useMenu
-   */
-  tabIndex?: number;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
@@ -79,4 +61,12 @@ export interface MenuAppearanceContextValue {
   itemShape?: 'rectangle' | 'isPilled';
   itemSize?: ListItemBaseSize;
   isTickOnLeftSide?: boolean;
+}
+
+export interface SelectionGroupProps<T>
+  extends Omit<SectionProps<T>, 'children' | 'items'>,
+    Omit<CollectionBase<T>, 'disabledKeys'>,
+    Omit<MultipleSelection, 'disabledKeys' | 'selectionMode'> {
+  onAction?: (key: Key) => void;
+  selectionMode: Exclude<SelectionMode, 'none'>;
 }

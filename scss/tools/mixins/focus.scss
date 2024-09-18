@@ -5,12 +5,16 @@
     border-color: $border-color;
   }
 
-  outline: none !important;
+  outline: var(--md-globals-focus-ring-outline) !important;
   box-shadow: var(--md-globals-focus-ring-box-shadow);
 
   @if $focus-visible-only {
     &:not(:focus-visible) {
       box-shadow: none;
+
+      @media (forced-colors: active) {
+        outline: none !important;
+      }
     }
   }
 }

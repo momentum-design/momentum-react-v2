@@ -1,0 +1,889 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
+<MenuSelectionGroup
+  item={
+    Object {
+      "aria-label": "selection",
+      "childNodes": Object {
+        Symbol(Symbol.iterator): [Function],
+      },
+      "hasChildNodes": true,
+      "index": 0,
+      "key": "$.0",
+      "level": 0,
+      "nextKey": "$.0.0",
+      "parentKey": null,
+      "prevKey": undefined,
+      "props": Object {
+        "aria-label": "selection",
+        "children": Array [
+          <$de85adf0b38f4f13e9cffd2f21$var$Item
+            aria-label="0"
+          >
+            Item 1
+          </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+          <$de85adf0b38f4f13e9cffd2f21$var$Item
+            aria-label="1"
+          >
+            Item 2
+          </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+        ],
+        "selectionGroup": true,
+        "selectionMode": "single",
+        "title": "x",
+      },
+      "rendered": "x",
+      "shouldInvalidate": undefined,
+      "textValue": undefined,
+      "type": "section",
+      "value": undefined,
+      "wrapper": undefined,
+    }
+  }
+  state={
+    Object {
+      "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+        "firstKey": "$.0",
+        "iterable": Object {
+          Symbol(Symbol.iterator): [Function],
+        },
+        "keyMap": Map {
+          "$.0" => Object {
+            "aria-label": "selection",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": true,
+            "index": 0,
+            "key": "$.0",
+            "level": 0,
+            "nextKey": "$.0.0",
+            "parentKey": null,
+            "prevKey": undefined,
+            "props": Object {
+              "aria-label": "selection",
+              "children": Array [
+                <$de85adf0b38f4f13e9cffd2f21$var$Item
+                  aria-label="0"
+                >
+                  Item 1
+                </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                <$de85adf0b38f4f13e9cffd2f21$var$Item
+                  aria-label="1"
+                >
+                  Item 2
+                </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+              ],
+              "selectionGroup": true,
+              "selectionMode": "single",
+              "title": "x",
+            },
+            "rendered": "x",
+            "shouldInvalidate": undefined,
+            "textValue": undefined,
+            "type": "section",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+          "$.0.0" => Object {
+            "aria-label": "0",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 0,
+            "key": "$.0.0",
+            "level": 1,
+            "nextKey": "$.0.1",
+            "parentKey": "$.0",
+            "prevKey": "$.0",
+            "props": Object {
+              "aria-label": "0",
+              "children": "Item 1",
+            },
+            "rendered": "Item 1",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 1",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+          "$.0.1" => Object {
+            "aria-label": "1",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 1,
+            "key": "$.0.1",
+            "level": 1,
+            "nextKey": undefined,
+            "parentKey": "$.0",
+            "prevKey": "$.0.0",
+            "props": Object {
+              "aria-label": "1",
+              "children": "Item 2",
+            },
+            "rendered": "Item 2",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 2",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+        },
+        "lastKey": "$.0.1",
+      },
+      "disabledKeys": Set {},
+      "expandedKeys": Set {},
+      "selectionManager": SelectionManager {
+        "_isSelectAll": null,
+        "allowsCellSelection": false,
+        "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+          "firstKey": "$.0",
+          "iterable": Object {
+            Symbol(Symbol.iterator): [Function],
+          },
+          "keyMap": Map {
+            "$.0" => Object {
+              "aria-label": "selection",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": true,
+              "index": 0,
+              "key": "$.0",
+              "level": 0,
+              "nextKey": "$.0.0",
+              "parentKey": null,
+              "prevKey": undefined,
+              "props": Object {
+                "aria-label": "selection",
+                "children": Array [
+                  <$de85adf0b38f4f13e9cffd2f21$var$Item
+                    aria-label="0"
+                  >
+                    Item 1
+                  </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                  <$de85adf0b38f4f13e9cffd2f21$var$Item
+                    aria-label="1"
+                  >
+                    Item 2
+                  </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                ],
+                "selectionGroup": true,
+                "selectionMode": "single",
+                "title": "x",
+              },
+              "rendered": "x",
+              "shouldInvalidate": undefined,
+              "textValue": undefined,
+              "type": "section",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+            "$.0.0" => Object {
+              "aria-label": "0",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 0,
+              "key": "$.0.0",
+              "level": 1,
+              "nextKey": "$.0.1",
+              "parentKey": "$.0",
+              "prevKey": "$.0",
+              "props": Object {
+                "aria-label": "0",
+                "children": "Item 1",
+              },
+              "rendered": "Item 1",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 1",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+            "$.0.1" => Object {
+              "aria-label": "1",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 1,
+              "key": "$.0.1",
+              "level": 1,
+              "nextKey": undefined,
+              "parentKey": "$.0",
+              "prevKey": "$.0.0",
+              "props": Object {
+                "aria-label": "1",
+                "children": "Item 2",
+              },
+              "rendered": "Item 2",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 2",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+          },
+          "lastKey": "$.0.1",
+        },
+        "state": Object {
+          "childFocusStrategy": "first",
+          "disabledKeys": Set {},
+          "disallowEmptySelection": undefined,
+          "focusedKey": null,
+          "isFocused": false,
+          "selectedKeys": Set {},
+          "selectionMode": "none",
+          "setFocused": [Function],
+          "setFocusedKey": [Function],
+          "setSelectedKeys": [Function],
+        },
+      },
+      "toggleKey": [Function],
+    }
+  }
+>
+  <div
+    role="presentation"
+  >
+    <span
+      aria-hidden={true}
+      className="md-menu-selection-group-header-wrapper"
+      id="test-ID"
+    >
+      x
+    </span>
+    <ul
+      aria-label="selection"
+      aria-labelledby="test-ID"
+      className="md-menu-selection-group-wrapper"
+      role="group"
+    >
+      <MenuItem
+        item={
+          Object {
+            "aria-label": "0",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 0,
+            "key": "$.0.0",
+            "level": 1,
+            "nextKey": "$.0.1",
+            "parentKey": "$.0",
+            "prevKey": "$.0",
+            "props": Object {
+              "aria-label": "0",
+              "children": "Item 1",
+            },
+            "rendered": "Item 1",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 1",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          }
+        }
+        key="$.0.0"
+        state={
+          Object {
+            "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+              "firstKey": "$.0",
+              "iterable": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "keyMap": Map {
+                "$.0" => Object {
+                  "aria-label": "selection",
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": true,
+                  "index": 0,
+                  "key": "$.0",
+                  "level": 0,
+                  "nextKey": "$.0.0",
+                  "parentKey": null,
+                  "prevKey": undefined,
+                  "props": Object {
+                    "aria-label": "selection",
+                    "children": Array [
+                      <$de85adf0b38f4f13e9cffd2f21$var$Item
+                        aria-label="0"
+                      >
+                        Item 1
+                      </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                      <$de85adf0b38f4f13e9cffd2f21$var$Item
+                        aria-label="1"
+                      >
+                        Item 2
+                      </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                    ],
+                    "selectionGroup": true,
+                    "selectionMode": "single",
+                    "title": "x",
+                  },
+                  "rendered": "x",
+                  "shouldInvalidate": undefined,
+                  "textValue": undefined,
+                  "type": "section",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "$.0.0" => Object {
+                  "aria-label": "0",
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 0,
+                  "key": "$.0.0",
+                  "level": 1,
+                  "nextKey": "$.0.1",
+                  "parentKey": "$.0",
+                  "prevKey": "$.0",
+                  "props": Object {
+                    "aria-label": "0",
+                    "children": "Item 1",
+                  },
+                  "rendered": "Item 1",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Item 1",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "$.0.1" => Object {
+                  "aria-label": "1",
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 1,
+                  "key": "$.0.1",
+                  "level": 1,
+                  "nextKey": undefined,
+                  "parentKey": "$.0",
+                  "prevKey": "$.0.0",
+                  "props": Object {
+                    "aria-label": "1",
+                    "children": "Item 2",
+                  },
+                  "rendered": "Item 2",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Item 2",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+              },
+              "lastKey": "$.0.1",
+            },
+            "disabledKeys": Set {},
+            "expandedKeys": Set {},
+            "selectionManager": SelectionManager {
+              "_isSelectAll": null,
+              "allowsCellSelection": false,
+              "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+                "firstKey": "$.0",
+                "iterable": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "keyMap": Map {
+                  "$.0" => Object {
+                    "aria-label": "selection",
+                    "childNodes": Object {
+                      Symbol(Symbol.iterator): [Function],
+                    },
+                    "hasChildNodes": true,
+                    "index": 0,
+                    "key": "$.0",
+                    "level": 0,
+                    "nextKey": "$.0.0",
+                    "parentKey": null,
+                    "prevKey": undefined,
+                    "props": Object {
+                      "aria-label": "selection",
+                      "children": Array [
+                        <$de85adf0b38f4f13e9cffd2f21$var$Item
+                          aria-label="0"
+                        >
+                          Item 1
+                        </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                        <$de85adf0b38f4f13e9cffd2f21$var$Item
+                          aria-label="1"
+                        >
+                          Item 2
+                        </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                      ],
+                      "selectionGroup": true,
+                      "selectionMode": "single",
+                      "title": "x",
+                    },
+                    "rendered": "x",
+                    "shouldInvalidate": undefined,
+                    "textValue": undefined,
+                    "type": "section",
+                    "value": undefined,
+                    "wrapper": undefined,
+                  },
+                  "$.0.0" => Object {
+                    "aria-label": "0",
+                    "childNodes": Object {
+                      Symbol(Symbol.iterator): [Function],
+                    },
+                    "hasChildNodes": false,
+                    "index": 0,
+                    "key": "$.0.0",
+                    "level": 1,
+                    "nextKey": "$.0.1",
+                    "parentKey": "$.0",
+                    "prevKey": "$.0",
+                    "props": Object {
+                      "aria-label": "0",
+                      "children": "Item 1",
+                    },
+                    "rendered": "Item 1",
+                    "shouldInvalidate": undefined,
+                    "textValue": "Item 1",
+                    "type": "item",
+                    "value": undefined,
+                    "wrapper": undefined,
+                  },
+                  "$.0.1" => Object {
+                    "aria-label": "1",
+                    "childNodes": Object {
+                      Symbol(Symbol.iterator): [Function],
+                    },
+                    "hasChildNodes": false,
+                    "index": 1,
+                    "key": "$.0.1",
+                    "level": 1,
+                    "nextKey": undefined,
+                    "parentKey": "$.0",
+                    "prevKey": "$.0.0",
+                    "props": Object {
+                      "aria-label": "1",
+                      "children": "Item 2",
+                    },
+                    "rendered": "Item 2",
+                    "shouldInvalidate": undefined,
+                    "textValue": "Item 2",
+                    "type": "item",
+                    "value": undefined,
+                    "wrapper": undefined,
+                  },
+                },
+                "lastKey": "$.0.1",
+              },
+              "state": Object {
+                "childFocusStrategy": "first",
+                "disabledKeys": Set {},
+                "disallowEmptySelection": undefined,
+                "focusedKey": null,
+                "isFocused": false,
+                "selectedKeys": Set {},
+                "selectionMode": "none",
+                "setFocused": [Function],
+                "setFocusedKey": [Function],
+                "setSelectedKeys": [Function],
+              },
+            },
+            "toggleKey": [Function],
+          }
+        }
+      >
+        <ListItemBase
+          aria-disabled={false}
+          aria-label="0"
+          aria-labelledby={null}
+          className="md-menu-item-wrapper"
+          data-key="$.0.0"
+          isDisabled={false}
+          isPadded={true}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="menuitem"
+          tabIndex={-1}
+        >
+          <FocusRing
+            isInset={false}
+          >
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
+            >
+              <li
+                aria-disabled={false}
+                aria-label="0"
+                aria-labelledby={null}
+                className="md-menu-item-wrapper md-list-item-base-wrapper"
+                data-allow-text-select={false}
+                data-disabled={false}
+                data-interactive={true}
+                data-key="$.0.0"
+                data-padded={true}
+                data-shape="rectangle"
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="menuitem"
+                tabIndex={-1}
+              >
+                <ListItemBaseSection
+                  position="fill"
+                  title="Item 1"
+                >
+                  <div
+                    data-position="fill"
+                    title="Item 1"
+                  >
+                    Item 1
+                  </div>
+                </ListItemBaseSection>
+              </li>
+            </FocusRing>
+          </FocusRing>
+        </ListItemBase>
+      </MenuItem>
+      <MenuItem
+        item={
+          Object {
+            "aria-label": "1",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 1,
+            "key": "$.0.1",
+            "level": 1,
+            "nextKey": undefined,
+            "parentKey": "$.0",
+            "prevKey": "$.0.0",
+            "props": Object {
+              "aria-label": "1",
+              "children": "Item 2",
+            },
+            "rendered": "Item 2",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 2",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          }
+        }
+        key="$.0.1"
+        state={
+          Object {
+            "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+              "firstKey": "$.0",
+              "iterable": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "keyMap": Map {
+                "$.0" => Object {
+                  "aria-label": "selection",
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": true,
+                  "index": 0,
+                  "key": "$.0",
+                  "level": 0,
+                  "nextKey": "$.0.0",
+                  "parentKey": null,
+                  "prevKey": undefined,
+                  "props": Object {
+                    "aria-label": "selection",
+                    "children": Array [
+                      <$de85adf0b38f4f13e9cffd2f21$var$Item
+                        aria-label="0"
+                      >
+                        Item 1
+                      </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                      <$de85adf0b38f4f13e9cffd2f21$var$Item
+                        aria-label="1"
+                      >
+                        Item 2
+                      </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                    ],
+                    "selectionGroup": true,
+                    "selectionMode": "single",
+                    "title": "x",
+                  },
+                  "rendered": "x",
+                  "shouldInvalidate": undefined,
+                  "textValue": undefined,
+                  "type": "section",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "$.0.0" => Object {
+                  "aria-label": "0",
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 0,
+                  "key": "$.0.0",
+                  "level": 1,
+                  "nextKey": "$.0.1",
+                  "parentKey": "$.0",
+                  "prevKey": "$.0",
+                  "props": Object {
+                    "aria-label": "0",
+                    "children": "Item 1",
+                  },
+                  "rendered": "Item 1",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Item 1",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "$.0.1" => Object {
+                  "aria-label": "1",
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 1,
+                  "key": "$.0.1",
+                  "level": 1,
+                  "nextKey": undefined,
+                  "parentKey": "$.0",
+                  "prevKey": "$.0.0",
+                  "props": Object {
+                    "aria-label": "1",
+                    "children": "Item 2",
+                  },
+                  "rendered": "Item 2",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Item 2",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+              },
+              "lastKey": "$.0.1",
+            },
+            "disabledKeys": Set {},
+            "expandedKeys": Set {},
+            "selectionManager": SelectionManager {
+              "_isSelectAll": null,
+              "allowsCellSelection": false,
+              "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+                "firstKey": "$.0",
+                "iterable": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "keyMap": Map {
+                  "$.0" => Object {
+                    "aria-label": "selection",
+                    "childNodes": Object {
+                      Symbol(Symbol.iterator): [Function],
+                    },
+                    "hasChildNodes": true,
+                    "index": 0,
+                    "key": "$.0",
+                    "level": 0,
+                    "nextKey": "$.0.0",
+                    "parentKey": null,
+                    "prevKey": undefined,
+                    "props": Object {
+                      "aria-label": "selection",
+                      "children": Array [
+                        <$de85adf0b38f4f13e9cffd2f21$var$Item
+                          aria-label="0"
+                        >
+                          Item 1
+                        </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                        <$de85adf0b38f4f13e9cffd2f21$var$Item
+                          aria-label="1"
+                        >
+                          Item 2
+                        </$de85adf0b38f4f13e9cffd2f21$var$Item>,
+                      ],
+                      "selectionGroup": true,
+                      "selectionMode": "single",
+                      "title": "x",
+                    },
+                    "rendered": "x",
+                    "shouldInvalidate": undefined,
+                    "textValue": undefined,
+                    "type": "section",
+                    "value": undefined,
+                    "wrapper": undefined,
+                  },
+                  "$.0.0" => Object {
+                    "aria-label": "0",
+                    "childNodes": Object {
+                      Symbol(Symbol.iterator): [Function],
+                    },
+                    "hasChildNodes": false,
+                    "index": 0,
+                    "key": "$.0.0",
+                    "level": 1,
+                    "nextKey": "$.0.1",
+                    "parentKey": "$.0",
+                    "prevKey": "$.0",
+                    "props": Object {
+                      "aria-label": "0",
+                      "children": "Item 1",
+                    },
+                    "rendered": "Item 1",
+                    "shouldInvalidate": undefined,
+                    "textValue": "Item 1",
+                    "type": "item",
+                    "value": undefined,
+                    "wrapper": undefined,
+                  },
+                  "$.0.1" => Object {
+                    "aria-label": "1",
+                    "childNodes": Object {
+                      Symbol(Symbol.iterator): [Function],
+                    },
+                    "hasChildNodes": false,
+                    "index": 1,
+                    "key": "$.0.1",
+                    "level": 1,
+                    "nextKey": undefined,
+                    "parentKey": "$.0",
+                    "prevKey": "$.0.0",
+                    "props": Object {
+                      "aria-label": "1",
+                      "children": "Item 2",
+                    },
+                    "rendered": "Item 2",
+                    "shouldInvalidate": undefined,
+                    "textValue": "Item 2",
+                    "type": "item",
+                    "value": undefined,
+                    "wrapper": undefined,
+                  },
+                },
+                "lastKey": "$.0.1",
+              },
+              "state": Object {
+                "childFocusStrategy": "first",
+                "disabledKeys": Set {},
+                "disallowEmptySelection": undefined,
+                "focusedKey": null,
+                "isFocused": false,
+                "selectedKeys": Set {},
+                "selectionMode": "none",
+                "setFocused": [Function],
+                "setFocusedKey": [Function],
+                "setSelectedKeys": [Function],
+              },
+            },
+            "toggleKey": [Function],
+          }
+        }
+      >
+        <ListItemBase
+          aria-disabled={false}
+          aria-label="1"
+          aria-labelledby={null}
+          className="md-menu-item-wrapper"
+          data-key="$.0.1"
+          isDisabled={false}
+          isPadded={true}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="menuitem"
+          tabIndex={-1}
+        >
+          <FocusRing
+            isInset={false}
+          >
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+              isInset={false}
+            >
+              <li
+                aria-disabled={false}
+                aria-label="1"
+                aria-labelledby={null}
+                className="md-menu-item-wrapper md-list-item-base-wrapper"
+                data-allow-text-select={false}
+                data-disabled={false}
+                data-interactive={true}
+                data-key="$.0.1"
+                data-padded={true}
+                data-shape="rectangle"
+                data-size={40}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="menuitem"
+                tabIndex={-1}
+              >
+                <ListItemBaseSection
+                  position="fill"
+                  title="Item 2"
+                >
+                  <div
+                    data-position="fill"
+                    title="Item 2"
+                  >
+                    Item 2
+                  </div>
+                </ListItemBaseSection>
+              </li>
+            </FocusRing>
+          </FocusRing>
+        </ListItemBase>
+      </MenuItem>
+    </ul>
+  </div>
+</MenuSelectionGroup>
+`;

@@ -1,6 +1,6 @@
 export interface Props {
   /**
-   * Text displayed as part of the second line of SpaceListItem component.
+   * Text displayed as part of the second line of SpaceRowContent component.
    */
   children: string;
 

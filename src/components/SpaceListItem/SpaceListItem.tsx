@@ -5,14 +5,8 @@ import { DEFAULTS, STYLE } from './SpaceListItem.constants';
 import { Props } from './SpaceListItem.types';
 import './SpaceListItem.style.scss';
 import ListItemBase from '../ListItemBase';
-import ListItemBaseSection from '../ListItemBaseSection';
-import Text from '../Text';
-import Icon from '../Icon';
-import DividerDot from '../DividerDot';
-import SecondLineElement from './SecondLineElement';
-import { cleanSecondLine } from './SpaceListItem.utils';
+import SpaceRowContent from '../SpaceRowContent';
 
-//TODO: support 2-line labels for right/position-end section.
 /**
  * The SpaceListItem component.
  */
@@ -28,7 +22,7 @@ const SpaceListItem: FC<Props> = forwardRef(
       secondLine,
       isNewActivity,
       isUnread,
-      teamColor = DEFAULTS.TEAM_COLOR,
+      teamColor,
       isMention,
       isEnterRoom,
       isAlert,
@@ -43,143 +37,6 @@ const SpaceListItem: FC<Props> = forwardRef(
       ...rest
     } = props;
 
-    const renderText = () => {
-      const secondLineArrayClean = cleanSecondLine(secondLine);
-
-      // All --mds-color-theme-text-team* tokens have a dash before the color --mds-color-theme-text-team-cobalt-* --mds-color-theme-text-team-cyan-* etc
-      // except for --mds-color-theme-teamdefault-*
-      const teamColorForToken = teamColor === DEFAULTS.TEAM_COLOR ? teamColor : `-${teamColor}`;
-      const secondLineColor = isDisabled
-        ? 'var(--mds-color-theme-text-primary-disabled)'
-        : `var(--mds-color-theme-text-team${teamColorForToken}-normal)`;
-
-      if (secondLineArrayClean.length) {
-        return (
-          <>
-            <Text type="body-primary" data-test="list-item-first-line" data-disabled={isDisabled}>
-              {firstLine}
-            </Text>
-            {isCompact && <DividerDot data-test="compact-mode-divider-dot" />}
-            <Text
-              style={{ color: secondLineColor }}
-              type="body-secondary"
-              data-test="list-item-second-line"
-              aria-label={secondLineArrayClean.join(', ')}
-            >
-              {secondLineArrayClean.map((secondLineContent, i) => (
-                <SecondLineElement key={`second-line-item-${i}`} showDividerDot={i > 0}>
-                  {secondLineContent}
-                </SecondLineElement>
-              ))}
-            </Text>
-          </>
-        );
-      } else {
-        return (
-          <Text data-test="list-item-first-line" type="body-primary" data-disabled={isDisabled}>
-            {firstLine}
-          </Text>
-        );
-      }
-    };
-
-    const renderRightSection = () => {
-      const iconProps = {
-        weight: 'bold' as const,
-        scale: 14 as const,
-        strokeColor: 'none',
-        title: rightIconTooltip,
-      };
-      if (isMention) {
-        return (
-          <Icon
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-control-active-normal)'
-            }
-            name="mention"
-            {...iconProps}
-          />
-        );
-      } else if (isEnterRoom) {
-        return (
-          <Icon
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-control-active-normal)'
-            }
-            name="enter-room"
-            {...iconProps}
-          />
-        );
-      } else if (isAlertMuted) {
-        return (
-          <Icon
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-text-primary-normal)'
-            }
-            name="alert-muted"
-            {...iconProps}
-          />
-        );
-      } else if (isAlert) {
-        return (
-          <Icon
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-text-primary-normal)'
-            }
-            name="alert"
-            {...iconProps}
-          />
-        );
-      } else if (!isSelected && isDraft) {
-        return (
-          <Icon
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-text-primary-normal)'
-            }
-            name="draft-indicator"
-            {...iconProps}
-          />
-        );
-      } else if (isError) {
-        return (
-          <Icon
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-text-error-normal)'
-            }
-            name="priority-circle"
-            {...iconProps}
-            weight="filled"
-          />
-        );
-      } else if (isUnread) {
-        return (
-          <Icon
-            name="unread"
-            fillColor={
-              isDisabled
-                ? 'var(--mds-color-theme-text-primary-disabled)'
-                : 'var(--mds-color-theme-control-active-normal)'
-            }
-            {...iconProps}
-          />
-        );
-      } else if (action) {
-        return <>{action}</>;
-      } else return null;
-    };
-
     const internalRef = useRef();
     const ref = providedRef || internalRef;
 
@@ -188,9 +45,7 @@ const SpaceListItem: FC<Props> = forwardRef(
         ref={ref}
         size={isCompact ? 32 : 50}
         shape="isPilled"
-        className={classnames(className, STYLE.wrapper, {
-          [STYLE.isNewActivity]: isNewActivity || isMention || isEnterRoom || isUnread,
-        })}
+        className={classnames(className, STYLE.wrapper)}
         id={id}
         style={style}
         {...rest}
@@ -198,14 +53,27 @@ const SpaceListItem: FC<Props> = forwardRef(
         isSelected={isSelected}
         itemIndex={itemIndex}
       >
-        <ListItemBaseSection position="start">{avatar}</ListItemBaseSection>
-        <ListItemBaseSection
-          position="middle"
-          className={classnames(STYLE.textWrapper, isCompact ? 'text-row' : 'text-column')}
-        >
-          {renderText()}
-        </ListItemBaseSection>
-        <ListItemBaseSection position="end">{renderRightSection()}</ListItemBaseSection>
+        <SpaceRowContent
+          {...{
+            isNewActivity,
+            isDraft,
+            avatar,
+            firstLine,
+            secondLine,
+            isUnread,
+            teamColor,
+            isMention,
+            isEnterRoom,
+            isAlertMuted,
+            isAlert,
+            isError,
+            action,
+            isSelected,
+            isCompact,
+            rightIconTooltip,
+            isDisabled,
+          }}
+        />
       </ListItemBase>
     );
   }

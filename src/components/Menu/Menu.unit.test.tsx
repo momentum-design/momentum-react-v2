@@ -2,12 +2,13 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { Item, Section } from '@react-stately/collections';
 
-import Menu, { MENU_CONSTANTS as CONSTANTS } from './';
+import Menu, { MENU_CONSTANTS as CONSTANTS, SelectionGroup } from './';
 import { triggerPress } from '../../../test/utils';
 import ListItemBase from '../ListItemBase';
 import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import MenuSelectionGroup from '../MenuSelectionGroup';
 
 describe('<Menu />', () => {
   const defaultProps = {
@@ -168,17 +169,6 @@ describe('<Menu />', () => {
 
       expect(element.getAttribute('data-shape')).toBe(itemShape);
     });
-
-    it('should have provided tabindex when tabIndex is provided', () => {
-      expect.assertions(1);
-
-      const element = mount(<Menu {...defaultProps} itemSize={50} tabIndex={-1} />)
-        .find('div[role="menu"]')
-        .at(0)
-        .getDOMNode();
-
-      expect(element.getAttribute('tabindex')).toBe('-1');
-    });
   });
 
   describe('actions', () => {
@@ -274,6 +264,192 @@ describe('<Menu />', () => {
       await user.keyboard('{ArrowRight}');
 
       expect(menuItems[3]).toHaveFocus();
+    });
+
+    it('should handle up/down arrow keys correctly - for vertical menu with SelectionGroup', async () => {
+      const user = userEvent.setup();
+
+      const { getAllByRole } = render(
+        <Menu {...defaultProps}>
+          <SelectionGroup
+            selectionMode="single"
+            title="SelectionGroup 1"
+            key="s1"
+            aria-label="selection1"
+          >
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </SelectionGroup>
+          <SelectionGroup
+            selectionMode="multiple"
+            title="SelectionGroup 2"
+            key="s2"
+            aria-label="selection2"
+          >
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </SelectionGroup>
+        </Menu>
+      );
+
+      await user.tab();
+
+      const radioItems = getAllByRole('menuitemradio');
+      const checkboxItems = getAllByRole('menuitemcheckbox');
+
+      expect(radioItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(radioItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(checkboxItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowUp}');
+
+      expect(radioItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(checkboxItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(checkboxItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(radioItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowUp}');
+
+      expect(checkboxItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowRight}');
+
+      expect(checkboxItems[1]).toHaveFocus();
+    });
+
+    it('should handle click - for vertical menu with SelectionGroup', async () => {
+      const user = userEvent.setup();
+
+      const { getAllByRole } = render(
+        <Menu {...defaultProps}>
+          <SelectionGroup
+            selectionMode="single"
+            title="SelectionGroup 1"
+            key="s1"
+            aria-label="selection1"
+          >
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </SelectionGroup>
+          <SelectionGroup
+            selectionMode="multiple"
+            title="SelectionGroup 2"
+            key="s2"
+            aria-label="selection2"
+          >
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </SelectionGroup>
+        </Menu>
+      );
+
+      const radioItems = getAllByRole('menuitemradio');
+      const checkboxItems = getAllByRole('menuitemcheckbox');
+
+      await user.click(radioItems[1]);
+
+      expect(radioItems[0]).not.toHaveFocus();
+      expect(radioItems[0]).not.toBeChecked();
+      expect(radioItems[1]).toHaveFocus();
+      expect(radioItems[1]).toBeChecked();
+      expect(checkboxItems[0]).not.toHaveFocus();
+      expect(checkboxItems[0]).not.toBeChecked();
+      expect(checkboxItems[1]).not.toHaveFocus();
+      expect(checkboxItems[1]).not.toBeChecked();
+
+      await user.click(checkboxItems[0]);
+
+      expect(radioItems[0]).not.toHaveFocus();
+      expect(radioItems[0]).not.toBeChecked();
+      expect(radioItems[1]).not.toHaveFocus();
+      expect(radioItems[1]).toBeChecked();
+      expect(checkboxItems[0]).toHaveFocus();
+      expect(checkboxItems[0]).toBeChecked();
+      expect(checkboxItems[1]).not.toHaveFocus();
+      expect(checkboxItems[1]).not.toBeChecked();
+
+      await user.click(checkboxItems[1]);
+
+      expect(radioItems[0]).not.toHaveFocus();
+      expect(radioItems[0]).not.toBeChecked();
+      expect(radioItems[1]).not.toHaveFocus();
+      expect(radioItems[1]).toBeChecked();
+      expect(checkboxItems[0]).not.toHaveFocus();
+      expect(checkboxItems[0]).toBeChecked();
+      expect(checkboxItems[1]).toHaveFocus();
+      expect(checkboxItems[1]).toBeChecked();
+
+      await user.click(radioItems[0]);
+
+      expect(radioItems[0]).toHaveFocus();
+      expect(radioItems[0]).toBeChecked();
+      expect(radioItems[1]).not.toHaveFocus();
+      expect(radioItems[1]).not.toBeChecked();
+      expect(checkboxItems[0]).not.toHaveFocus();
+      expect(checkboxItems[0]).toBeChecked();
+      expect(checkboxItems[1]).not.toHaveFocus();
+      expect(checkboxItems[1]).toBeChecked();
+    });
+
+    it('should render MenuSelectionGroup if children has SelectionGroup', () => {
+      const wrapper = mount(
+        <Menu {...defaultProps}>
+          <SelectionGroup
+            selectionMode="single"
+            title="SelectionGroup 1"
+            key="s1"
+            aria-label="selection1"
+          >
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </SelectionGroup>
+          <SelectionGroup
+            selectionMode="multiple"
+            title="SelectionGroup 2"
+            key="s2"
+            aria-label="selection2"
+          >
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </SelectionGroup>
+        </Menu>
+      );
+
+      expect(wrapper.find(MenuSelectionGroup).at(0).props()).toEqual({
+        item: expect.any(Object),
+        state: expect.any(Object),
+        onAction: undefined,
+        selectionMode: 'single',
+        title: 'SelectionGroup 1',
+        'aria-label': 'selection1',
+        children: expect.any(Object),
+        selectionGroup: true,
+      });
+      expect(wrapper.find(MenuSelectionGroup).at(1).props()).toEqual({
+        item: expect.any(Object),
+        state: expect.any(Object),
+        onAction: undefined,
+        selectionMode: 'multiple',
+        title: 'SelectionGroup 2',
+        'aria-label': 'selection2',
+        children: expect.any(Object),
+        selectionGroup: true,
+      });
     });
   });
 });

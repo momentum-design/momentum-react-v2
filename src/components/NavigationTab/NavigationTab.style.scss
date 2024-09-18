@@ -45,6 +45,11 @@
   &[data-active='true'] {
     background-color: var(--mds-color-theme-button-secondary-pressed);
 
+    @media (forced-colors: active) {
+      background-color: SelectedItem;
+      color: SelectedItemText;
+    }
+
     > .md-navigation-tab-icon > * {
       color: var(--mds-color-theme-text-primary-normal);
     }

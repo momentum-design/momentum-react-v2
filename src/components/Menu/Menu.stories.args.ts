@@ -28,6 +28,19 @@ export default {
       },
     },
   },
+  onSelectionChange: {
+    action: 'onSelectionChange',
+    description: 'Handler that is called when an item/items is selected.',
+    table: {
+      category: 'React Aria - Menu',
+      type: {
+        summary: "(keys: 'all' | Set<Key>) => void",
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   items: {
     defaultValue: [],
     description:
@@ -114,15 +127,26 @@ export default {
       },
     },
   },
-  'ariaLabelledby': {
-    description:
-      'The aria-labelledby for the menu wrapper',
+  ariaLabelledby: {
+    description: 'The aria-labelledby for the menu wrapper',
     control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: 'undefined',
+    },
+  },
+  selectionMode: {
+    description: 'Default selection mode for the whole menu',
+    default: undefined,
+    control: { type: 'select' },
+    options: ['single', 'multiple', 'none'],
+    table: {
+      type: {
+        summary: "'single' | 'multiple' | 'none'",
+      },
+      defaultValue: 'multiple',
     },
   },
 };

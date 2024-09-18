@@ -1,10 +1,13 @@
 import React from 'react';
 import {
   convertNestedTree2MappedTree,
+  getFistActiveNode,
   getNextActiveNode,
   getTreeRootId,
+  isActiveNodeInDOM,
   isEmptyTree,
   mapTree,
+  migrateTreeState,
   toggleTreeNodeRecord,
   TreeContext,
   useTreeContext,
@@ -13,11 +16,12 @@ import {
   TreeNodeRecord,
   TreeIdNodeMap,
   ToggleTreeNode,
-  TreeNodeId,
   TreeContextValue,
+  TreeNodeId,
 } from './Tree.types';
 import { createTreeNode as tNode } from './test.utils';
 import { renderHook } from '@testing-library/react-hooks';
+import tree from './Tree';
 
 const createSingleLevelTree = () =>
   // prettier-ignore
@@ -558,7 +562,7 @@ describe('Tree utils', () => {
             children: [],
             id: '<root>',
             index: 0,
-            isOpen: false,
+            isOpen: true,
             parent: undefined,
             isHidden: false,
             isLeaf: true,
@@ -575,24 +579,24 @@ describe('Tree utils', () => {
       // prettier-ignore
       const expected: Array<[TreeNodeId, TreeNodeRecord]> = [
         ['<root>', { children: ['0', '1', '2', '3', '4'], id: '<root>', index: 0, isHidden: false, isLeaf: false, isOpen: true, level: 0, parent: undefined },],
-        ['0',        { children: [], id: '0', index: 0, isHidden: false, isLeaf: true, isOpen: false, level: 1, parent: '<root>' },],
+        ['0',        { children: [], id: '0', index: 0, isHidden: false, isLeaf: true, isOpen: true, level: 1, parent: '<root>' },],
         ['1',        { children: ['1.1', '1.2'], id: '1', index: 1, isHidden: false, isLeaf: false, isOpen: false, level: 1, parent: '<root>'}, ],
         ['1.1',      { children: ['1.1.1', '1.1.2'], id: '1.1', index: 0, isHidden: true, isLeaf: false, isOpen: true, level: 2, parent: '1', },],
-        ['1.1.1',    { children: [], id: '1.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '1.1', }, ],
-        ['1.1.2',    { children: [], id: '1.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '1.1', }, ],
-        ['1.2',      { children: [], id: '1.2', index: 1, isHidden: true, isLeaf: true, isOpen: false, level: 2, parent: '1', }, ],
+        ['1.1.1',    { children: [], id: '1.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '1.1', }, ],
+        ['1.1.2',    { children: [], id: '1.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '1.1', }, ],
+        ['1.2',      { children: [], id: '1.2', index: 1, isHidden: true, isLeaf: true, isOpen: true, level: 2, parent: '1', }, ],
         ['2',        { children: ['2.1', '2.2'], id: '2', index: 2, isHidden: false, isLeaf: false, isOpen: true, level: 1,  parent: '<root>'}, ],
-        ['2.1',      { children: [], id: '2.1', index: 0, isHidden: false, isLeaf: true, isOpen: false, level: 2, parent: '2', }, ],
+        ['2.1',      { children: [], id: '2.1', index: 0, isHidden: false, isLeaf: true, isOpen: true, level: 2, parent: '2', }, ],
         ['2.2',      { children: ['2.2.1', '2.2.2', '2.2.3'], id: '2.2', index: 1, isHidden: false, isLeaf: false, isOpen: true, level: 2, parent: '2', },],
-        ['2.2.1',    { children: [], id: '2.2.1', index: 0, isHidden: false, isLeaf: true, isOpen: false, level: 3, parent: '2.2', }, ],
-        ['2.2.2',    { children: [], id: '2.2.2', index: 1, isHidden: false, isLeaf: true, isOpen: false, level: 3, parent: '2.2', }, ],
-        ['2.2.3',    { children: [], id: '2.2.3', index: 2, isHidden: false, isLeaf: true, isOpen: false, level: 3, parent: '2.2', }, ],
-        ['3',        { children: [], id: '3', index: 3, isHidden: false, isLeaf: true, isOpen: false, level: 1,  parent: '<root>'},],
+        ['2.2.1',    { children: [], id: '2.2.1', index: 0, isHidden: false, isLeaf: true, isOpen: true, level: 3, parent: '2.2', }, ],
+        ['2.2.2',    { children: [], id: '2.2.2', index: 1, isHidden: false, isLeaf: true, isOpen: true, level: 3, parent: '2.2', }, ],
+        ['2.2.3',    { children: [], id: '2.2.3', index: 2, isHidden: false, isLeaf: true, isOpen: true, level: 3, parent: '2.2', }, ],
+        ['3',        { children: [], id: '3', index: 3, isHidden: false, isLeaf: true, isOpen: true, level: 1,  parent: '<root>'},],
         ['4',        { children: ['4.1', '4.2'], id: '4', index: 4, isHidden: false, isLeaf: false, isOpen: true, level: 1,  parent: '<root>'}, ],
         ['4.1',      { children: ['4.1.1', '4.1.2'], id: '4.1', index: 0, isHidden: false, isLeaf: false, isOpen: false, level: 2, parent: '4', },],
-        ['4.1.1',    { children: [], id: '4.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '4.1', }, ],
-        ['4.1.2',    { children: [], id: '4.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '4.1', }, ],
-        ['4.2',      { children: [], id: '4.2', index: 1, isHidden: false, isLeaf: true, isOpen: false, level: 2, parent: '4', },
+        ['4.1.1',    { children: [], id: '4.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '4.1', }, ],
+        ['4.1.2',    { children: [], id: '4.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '4.1', }, ],
+        ['4.2',      { children: [], id: '4.2', index: 1, isHidden: false, isLeaf: true, isOpen: true, level: 2, parent: '4', },
         ],
       ];
 
@@ -688,6 +692,88 @@ describe('Tree utils', () => {
       const result = mapTree(tree, (node) => node.id, { rootNodeId: '4' });
 
       expect(result).toEqual(['4.1', '4.1.1', '4.1.2', '4.2']);
+    });
+  });
+
+  describe('isActiveNodeInDOM', () => {
+    it('should return true when the active node is in the DOM', () => {
+      const ref = { current: document.createElement('div') };
+      ref.current.innerHTML = '<div data-nodeid="active-node"></div>';
+      document.body.appendChild(ref.current);
+
+      const result = isActiveNodeInDOM(ref, 'active-node');
+
+      expect(result).toBe(true);
+      document.body.removeChild(ref.current);
+    });
+
+    it('should return false when the active node is not in the DOM', () => {
+      const ref = { current: document.createElement('div') };
+      ref.current.innerHTML = '<div data-nodeid="not-active-node"></div>';
+      document.body.appendChild(ref.current);
+
+      const result = isActiveNodeInDOM(ref, 'active-node');
+
+      expect(result).toBe(false);
+      document.body.removeChild(ref.current);
+    });
+  });
+
+  describe('getFistActiveNode', () => {
+    it.each`
+      msg                         | tree                                                                                | excludeTreeRoot | expected
+      ${'empty tree'}             | ${{}}                                                                               | ${false}        | ${undefined}
+      ${'empty tree'}             | ${{}}                                                                               | ${true}         | ${undefined}
+      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${true}         | ${undefined}
+      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${false}        | ${'root'}
+      ${'only closed root tree'}  | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${true}         | ${undefined}
+      ${'only closed  root tree'} | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${false}        | ${'root'}
+      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${true}         | ${'node'}
+      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${false}        | ${'root'}
+      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
+      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
+    `(
+      'should return $expected when $msg and $excludeTreeRoot',
+      ({ tree, excludeTreeRoot, expected }) => {
+        const result = getFistActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot);
+        expect(result).toEqual(expected);
+      }
+    );
+  });
+
+  describe('migrateTreeState', () => {
+    it('should handle empty old tree', () => {
+      const tree = convertNestedTree2MappedTree(sampleTree);
+      migrateTreeState(new Map(), tree);
+      expect(tree).toEqual(convertNestedTree2MappedTree(sampleTree));
+    });
+
+    it('should handle empty new tree', () => {
+      const tree = new Map();
+      migrateTreeState(convertNestedTree2MappedTree(sampleTree), tree);
+      expect(tree).toEqual(tree);
+    });
+
+    it('should migrate isOpen state', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(oldTree.get('1').isOpen).not.toEqual(newTree.get('1').isOpen);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1').isOpen).toEqual(newTree.get('1').isOpen);
+    });
+
+    it('should update isHidden correctly', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(true);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(false);
     });
   });
 });

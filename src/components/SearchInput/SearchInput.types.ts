@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react';
 import { AriaSearchFieldProps } from '@react-types/searchfield';
 import { HEIGHTS } from './SearchInput.constants';
+import { IconProps } from '../Icon';
 
 export type SearchFieldHeight = typeof HEIGHTS[number];
 
@@ -113,4 +114,9 @@ export interface Props extends AriaSearchFieldProps {
    * @param event - React Keyboard Event
    */
   onKeyDown?: (event: React.KeyboardEvent) => void;
+
+  /**
+   * Props to be passed to the search icon
+   */
+  searchIconProps?: Partial<IconProps>;
 }

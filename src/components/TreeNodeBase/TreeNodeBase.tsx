@@ -41,7 +41,6 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     shape = DEFAULTS.SHAPE,
     size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isPadded = DEFAULTS.IS_PADDED,
-    isSelected,
     style,
     onPress,
     lang,
@@ -108,14 +107,23 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   }, [children, isHidden, nodeDetails]);
 
   // The keyboard press events are not propagated
-  const internalOnPress = useCallback((event) => {
-    if (event.pointerType === 'keyboard') {
-      ref.current.click();
-    }
-    if (onPress) {
-      onPress(event);
-    }
-  }, []);
+  const internalOnPress = useCallback(
+    (event) => {
+      if (event.pointerType === 'keyboard') {
+        ref.current.click();
+      }
+      if (
+        treeContext &&
+        treeContext.itemSelection.selectionMode !== 'none' &&
+        (treeContext.selectableNodes === 'any' || nodeDetails?.isLeaf)
+      ) {
+        treeContext.itemSelection.toggle(nodeId);
+      }
+
+      onPress?.(event);
+    },
+    [treeContext, nodeDetails, nodeId, onPress]
+  );
 
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
@@ -136,9 +144,6 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   /**
    * Focus management
    */
-  const shouldNodeFocusBeInset =
-    treeContext?.shouldNodeFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
-
   const tabIndex = nodeId === treeContext.activeNodeId ? 0 : -1;
 
   // makes sure that whenever an item is pressed, the tree focus state gets updated as well
@@ -158,11 +163,12 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     }
   }, [ref, tabIndex, isHidden]);
 
-  const lastCurrentFocus = usePrevious(treeContext?.activeNodeId);
+  const lastActiveNode = usePrevious(treeContext?.activeNodeId);
   useDidUpdateEffect(() => {
     if (
-      lastCurrentFocus !== undefined &&
-      lastCurrentFocus !== treeContext?.activeNodeId &&
+      ref.current &&
+      lastActiveNode !== undefined &&
+      lastActiveNode !== treeContext?.activeNodeId &&
       treeContext?.activeNodeId === nodeId
     ) {
       ref.current.focus();
@@ -171,8 +177,9 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
 
   // Update tab indexes of the node's element when the active node changes
   useEffect(() => {
-    if (treeContext?.activeNodeId === undefined) return;
-    updateTabIndexes();
+    if (treeContext?.activeNodeId !== undefined) {
+      updateTabIndexes();
+    }
   }, [treeContext?.activeNodeId]);
 
   useMutationObservable(ref.current, updateTabIndexes);
@@ -181,8 +188,14 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     return null;
   }
 
+  const { nodeProps, groupProps } = treeContext.getNodeAriaProps(nodeId);
+  const isSelected =
+    treeContext.itemSelection.selectionMode !== 'none'
+      ? treeContext.itemSelection.isSelected(nodeId)
+      : undefined;
+
   return (
-    <FocusRing isInset={shouldNodeFocusBeInset}>
+    <FocusRing isInset={treeContext?.shouldNodeFocusBeInset}>
       <div
         tabIndex={tabIndex}
         id={id}
@@ -192,16 +205,19 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         data-size={size}
         data-padded={isPadded}
         data-shape={shape}
-        className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
+        className={classnames(className, STYLE.wrapper, {
+          selected: isPressed || isSelected,
+          'active-node': nodeId === treeContext.activeNodeId,
+        })}
         lang={lang}
         {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
         {...treeNodePressProps}
-        {...treeContext.getNodeProps(nodeId)}
+        {...nodeProps}
         {...rest}
       >
         {content}
         {treeContext.isRenderedFlat && !nodeDetails.isLeaf && (
-          <div className={STYLE.group} {...treeContext.getNodeGroupProps(nodeId)} />
+          <div className={STYLE.group} {...groupProps} />
         )}
       </div>
     </FocusRing>

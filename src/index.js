@@ -150,6 +150,7 @@ export {
   TextInput,
   AvatarMeetingsListItem,
   SpaceListItem as SpaceListItemNext,
+  SpaceTreeNode,
   List as ListNext,
   ListRefObject,
   Popover as PopoverNext,
@@ -195,5 +196,6 @@ export {
   ButtonPillLink,
   Tree,
   useTreeContext,
+  SelectionGroup,
   TreeNodeBase,
 } from './components';

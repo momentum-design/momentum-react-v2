@@ -11,6 +11,7 @@ import { useTreeState, TreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
+import MenuSelectionGroup from '../MenuSelectionGroup';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -33,7 +34,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
     ariaLabelledby,
-    tabIndex,
   } = props;
 
   const contextProps = useMenuContext();
@@ -48,11 +48,23 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   const ref = providedRef || internalRef;
 
   const { menuProps } = useMenu(_props, state, ref);
+
   const itemArray = Array.from(state.collection.getKeys());
 
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
       if (item.type === 'section') {
+        if (item.props?.selectionGroup) {
+          return (
+            <MenuSelectionGroup
+              item={item}
+              state={state}
+              onAction={_props.onAction}
+              key={item.key}
+              {...item.props}
+            />
+          );
+        }
         return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
@@ -91,7 +103,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         ref={ref}
         aria-labelledby={ariaLabelledby}
         {...menuProps}
-        tabIndex={tabIndex || menuProps.tabIndex}
       >
         {itemArray.map((key) => {
           const item = state.collection.getItem(key) as Node<T>;
