@@ -13,6 +13,8 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -163,6 +165,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -270,6 +274,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -391,6 +397,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -499,6 +507,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -610,6 +620,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -719,6 +731,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -859,6 +873,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -999,6 +1015,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = 
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1107,6 +1125,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1247,6 +1267,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1387,6 +1409,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1527,6 +1551,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`]
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1636,6 +1662,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = 
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1745,6 +1773,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -1887,6 +1917,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -2027,6 +2059,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -2203,6 +2237,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -2341,6 +2377,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -2463,6 +2501,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with teamColor 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >

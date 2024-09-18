@@ -23,6 +23,8 @@ exports[`<Tree /> snapshot should match snapshot 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   />
@@ -53,6 +55,8 @@ exports[`<Tree /> snapshot should match snapshot with className 1`] = `
 >
   <div
     className="example-class md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   />
@@ -84,6 +88,8 @@ exports[`<Tree /> snapshot should match snapshot with id 1`] = `
   <div
     className="md-tree-wrapper"
     id="example-id"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   />
@@ -118,6 +124,8 @@ exports[`<Tree /> snapshot should match snapshot with style 1`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
     style={
@@ -157,6 +165,8 @@ exports[`<Tree /> snapshot should match snapshot with style 2`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
     style={
@@ -196,6 +206,8 @@ exports[`<Tree /> snapshot should match snapshot with style 3`] = `
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
     style={

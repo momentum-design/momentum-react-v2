@@ -169,7 +169,8 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
       ref.current &&
       lastActiveNode !== undefined &&
       lastActiveNode !== treeContext?.activeNodeId &&
-      treeContext?.activeNodeId === nodeId
+      treeContext?.activeNodeId === nodeId &&
+      treeContext.isFocusWithin
     ) {
       ref.current.focus();
     }

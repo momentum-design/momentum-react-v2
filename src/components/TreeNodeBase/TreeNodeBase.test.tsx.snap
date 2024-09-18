@@ -347,6 +347,8 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -442,6 +444,8 @@ exports[`TreeNodeBase snapshot should not render the content when the node detai
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
@@ -489,6 +493,8 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
 >
   <div
     className="md-tree-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tree"
   >
