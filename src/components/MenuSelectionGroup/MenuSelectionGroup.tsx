@@ -3,11 +3,14 @@
 import React, { ReactElement, useEffect, useMemo } from 'react';
 
 import { STYLE } from './MenuSelectionGroup.constants';
-import { Props } from './MenuSelectionGroup.types';
+import { MenuSelectionGroupAppearanceContextValue, Props } from './MenuSelectionGroup.types';
 import './MenuSelectionGroup.style.scss';
 import MenuItem from '../MenuItem';
 import { SelectionManager, useMultipleSelectionState } from '@react-stately/selection';
 import { useMenuSection } from '@react-aria/menu';
+
+export const MenuSelectionGroupAppearanceContext = React.createContext<MenuSelectionGroupAppearanceContextValue>({});
+
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
@@ -41,6 +44,7 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
   });
 
   return (
+    <MenuSelectionGroupAppearanceContext.Provider value={{ tickPosition, classNameWhenSelected }}>
     <div {...itemProps}>
       {!React.isValidElement(item.rendered) && item.rendered ? (
         <span className={STYLE.header} {...headingProps}>
@@ -51,8 +55,7 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
       )}
       <ul {...groupProps} className={STYLE.wrapper}>
         {Array.from(item.childNodes).map((node) => {
-          let item = (<MenuItem key={node.key} item={node} state={newState} tickPosition={tickPosition} classNameWhenSelected={classNameWhenSelected}
-          onAction={onAction} />);
+          let item = (<MenuItem key={node.key} item={node} state={newState} onAction={onAction} />);
 
           if (node.wrapper) {
             item = node.wrapper(item);
@@ -62,6 +65,7 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
         })}
       </ul>
     </div>
+    </MenuSelectionGroupAppearanceContext.Provider>
   );
 };
 
