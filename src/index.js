@@ -198,4 +198,5 @@ export {
   useTreeContext,
   SelectionGroup,
   TreeNodeBase,
+  MeetingRowContent,
 } from './components';
