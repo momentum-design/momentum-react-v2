@@ -11,7 +11,6 @@ import { useMenuSection } from '@react-aria/menu';
 
 export const MenuSelectionGroupAppearanceContext = React.createContext<MenuSelectionGroupAppearanceContextValue>({});
 
-
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
 
