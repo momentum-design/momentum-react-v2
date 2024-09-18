@@ -11,19 +11,22 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import Icon from '../Icon';
 import classNames from 'classnames';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
+import { useMenuSelectionGroupAppearanceContext } from '../MenuSelectionGroup/MenuSelectionGroup.hook';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction, tickPosition,  classNameWhenSelected} = props;
+  const { item, state, onAction } = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
   const { onClose, closeOnSelect } = useMenuContext();
-  const { itemShape, itemSize, tickPosition: menuTickPosition, classNameWhenSelected: menuClassNameWhenSelected } = useMenuAppearanceContext();
+  const { itemShape, itemSize } = useMenuAppearanceContext();
 
-  const itemTickPosition = tickPosition || menuTickPosition;
-  const itemClassNameWhenSelected = classNameWhenSelected || menuClassNameWhenSelected;
+  const { tickPosition, classNameWhenSelected} = useMenuSelectionGroupAppearanceContext();
+
+  // const itemTickPosition = tickPosition || menuTickPosition;
+  // const itemClassNameWhenSelected = classNameWhenSelected || menuClassNameWhenSelected;
 
   const { menuItemProps } = useMenuItem(
     {
@@ -52,7 +55,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   );
 
   const renderSections = () => {
-    if (itemTickPosition === 'left') {
+    if (tickPosition === 'left') {
       return (
         <>
           <ListItemBaseSection position="start">
@@ -63,7 +66,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
           </ListItemBaseSection>
         </>
       );
-    } else if(itemTickPosition === 'none') {
+    } else if(tickPosition === 'none') {
       return (
         <>
           <ListItemBaseSection position="fill" title={item?.textValue}>
@@ -88,7 +91,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     <ListItemBase
       size={itemSize}
       shape={itemShape}
-      className={classNames(STYLE.wrapper, {[itemClassNameWhenSelected]: isSelected})}
+      className={classNames(STYLE.wrapper, {[classNameWhenSelected]: isSelected})}
       ref={ref}
       isDisabled={isDisabled}
       isPadded={true}
