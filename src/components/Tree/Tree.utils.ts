@@ -81,7 +81,9 @@ const findNextTreeNode = (tree: TreeIdNodeMap, activeNodeId: TreeNodeId): TreeNo
       // If we are at the end of the parent's children, move up one level
       current = parent;
       if (loopCheck.has(current.id)) {
-        throw new Error('Infinite loop detected in the tree navigation.');
+        // eslint-disable-next-line no-console
+        console.error('Infinite loop detected in the tree navigation.');
+        return current.id;
       } else {
         loopCheck.add(current.id);
       }
@@ -127,7 +129,9 @@ const findPreviousTreeNode = (
     next = tree.get(next.children[next.children.length - 1]);
 
     if (loopCheck.has(next.id)) {
-      throw new Error('Infinite loop detected in the tree navigation.');
+      // eslint-disable-next-line no-console
+      console.error('Infinite loop detected in the tree navigation.');
+      return next.id;
     } else {
       loopCheck.add(next.id);
     }
@@ -224,12 +228,14 @@ export const convertNestedTree2MappedTree = (tree: TreeRoot): TreeIdNodeMap => {
     const { node: parentNode, parentId, level, index, isHidden } = nodeStack.pop();
 
     if (idSet.has(parentNode.id)) {
-      throw new Error(`Duplicate node id found: "${parentNode.id.toString()}".`);
+      // eslint-disable-next-line no-console
+      console.error(`Duplicate node id ("${parentNode.id.toString()}") found and skipped.`);
+      continue;
     } else {
       idSet.add(parentNode.id);
     }
 
-    const children = parentNode.children.map((n) => n.id);
+    const children = Array.from(new Set(parentNode.children.map((n) => n.id)));
     const isOpen = parentNode.isOpenByDefault ?? true;
 
     map.set(parentNode.id, {
@@ -360,7 +366,9 @@ export const mapTree = <T>(
   const rootNodeId = options?.rootNodeId ?? getTreeRootId(tree);
 
   if (!tree.has(rootNodeId)) {
-    throw new Error(`Tree root node is not found for id: "${rootNodeId.toString()}".`);
+    // eslint-disable-next-line no-console
+    console.error(`Tree root node is not found for id: "${rootNodeId.toString()}".`);
+    return [];
   }
 
   const excludeRoot = options?.excludeRootNode ?? true;

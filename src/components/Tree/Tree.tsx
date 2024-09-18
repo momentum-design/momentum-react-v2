@@ -23,7 +23,7 @@ import {
   toggleTreeNodeRecord,
   TreeContext,
 } from './Tree.utils';
-import { useKeyboard } from '@react-aria/interactions';
+import { useFocusWithin, useKeyboard } from '@react-aria/interactions';
 import { useVirtualTreeNavigation } from './Tree.hooks';
 import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
 import { usePrevious } from '../../hooks/usePrevious';
@@ -63,6 +63,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   const [activeNodeId, setActiveNodeId] = useState<TreeNodeId | undefined>(
     getFistActiveNode(tree, excludeTreeRoot)
   );
+  const [isFocusWithin, setIsFocusWithin] = useState(false);
 
   const previousTree = usePrevious(tree);
 
@@ -155,6 +156,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       toggleTreeNode,
       selectableNodes,
       itemSelection,
+      isFocusWithin: isFocusWithin,
     }),
     [
       activeNodeId,
@@ -165,6 +167,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       toggleTreeNode,
       itemSelection,
       selectableNodes,
+      isFocusWithin,
     ]
   );
 
@@ -180,6 +183,10 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     }),
     [setActiveNodeId, toggleTreeNode, itemSelection]
   );
+
+  const { focusWithinProps } = useFocusWithin({
+    onFocusWithinChange: setIsFocusWithin,
+  });
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
@@ -238,6 +245,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         {...ariaProps}
         {...keyboardProps}
         {...rest}
+        {...focusWithinProps}
       >
         {children}
       </div>

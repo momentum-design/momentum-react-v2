@@ -257,13 +257,13 @@ describe('Tree utils', () => {
           expect(result).toEqual('2');
         });
 
-        it('should throw error when the tree has a loop', () => {
+        it('should return with the last node id before the loop restart when the tree has a loop', () => {
           const loopTree = createTree();
           loopTree.get('2').parent = '2.2.3';
 
-          expect(() =>
-            getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)
-          ).toThrow('Infinite loop detected in the tree navigation.');
+          expect(getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)).toEqual(
+            '2.2'
+          );
         });
       });
 
@@ -304,13 +304,11 @@ describe('Tree utils', () => {
         });
       });
 
-      it('should throw error when the tree has a loop', () => {
+      it('should return with the last node id before the loop restart when the tree has a loop', () => {
         const loopTree = createTree();
         loopTree.get('2.2').children.push('3');
 
-        expect(() => getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toThrow(
-          'Infinite loop detected in the tree navigation.'
-        );
+        expect(getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toEqual('3');
       });
     });
 
@@ -606,10 +604,52 @@ describe('Tree utils', () => {
       expect(tree.size).toBe(expected.length);
     });
 
-    it('should throw error when there is a duplicated tree node id', () => {
+    it('should skip duplicated tree node id with the whole subtree', () => {
       const tree = tNode('<root>', true, [tNode('0'), tNode('0', false, [tNode('1')])]);
 
-      expect(() => convertNestedTree2MappedTree(tree)).toThrow('Duplicate node id found: "0".');
+      expect(convertNestedTree2MappedTree(tree)).toEqual(
+        new Map([
+          [
+            '<root>',
+            {
+              children: ['0'],
+              id: '<root>',
+              index: 0,
+              isHidden: false,
+              isLeaf: false,
+              isOpen: true,
+              level: 0,
+              parent: undefined,
+            },
+          ],
+          [
+            '0',
+            {
+              children: ['1'],
+              id: '0',
+              index: 1,
+              isHidden: false,
+              isLeaf: false,
+              isOpen: false,
+              level: 1,
+              parent: '<root>',
+            },
+          ],
+          [
+            '1',
+            {
+              children: [],
+              id: '1',
+              index: 0,
+              isHidden: true,
+              isLeaf: true,
+              isOpen: true,
+              level: 2,
+              parent: '0',
+            },
+          ],
+        ])
+      );
     });
   });
 
@@ -622,7 +662,7 @@ describe('Tree utils', () => {
       expect(callback).not.toHaveBeenCalled();
     });
 
-    it('should throw error when the there is no root node', () => {
+    it('should return with empty array when the there is no root node', () => {
       // Tree with circular reference -> no node with parent === undefined
       const tree: TreeIdNodeMap = new Map([
         ['root', { id: 'root', parent: '1' } as TreeNodeRecord],
@@ -630,9 +670,7 @@ describe('Tree utils', () => {
       const wrongId = 'not-a-root-id';
 
       const callback = jest.fn();
-      expect(() => mapTree(tree, callback, { rootNodeId: wrongId })).toThrow(
-        `Tree root node is not found for id: "${wrongId}".`
-      );
+      expect(mapTree(tree, callback, { rootNodeId: wrongId })).toEqual([]);
 
       expect(callback).not.toHaveBeenCalled();
     });

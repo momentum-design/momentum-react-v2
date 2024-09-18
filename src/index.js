@@ -200,3 +200,5 @@ export {
   TreeNodeBase,
   MeetingRowContent,
 } from './components';
+
+export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';

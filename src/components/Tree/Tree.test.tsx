@@ -7,7 +7,8 @@ import userEvent from '@testing-library/user-event';
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
 import TreeNodeBase from '../TreeNodeBase';
-import { convertNestedTree2MappedTree, mapTree } from './Tree.utils';
+import { convertNestedTree2MappedTree, getTreeRootId, mapTree } from './Tree.utils';
+import { act } from 'react-test-renderer';
 
 const getSampleTree = () => {
   // prettier-ignore
@@ -385,6 +386,39 @@ describe('<Tree />', () => {
         onToggleNode.mockReset();
       }
     });
+
+    it('should exclude interactable elements with preserved-tabindex form navigation ', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { getByTestId, getByText } = render(
+        <Tree treeStructure={{ id: 'root', children: [] }} excludeTreeRoot={false}>
+          <TreeNodeBase nodeId="root" data-testid="root">
+            {() => (
+              <>
+                <button tabIndex={-1}>button 1</button>
+                <button tabIndex={-1} className="md-nav-preserve-tabindex">
+                  button 2
+                </button>
+                <div className="md-nav-preserve-tabindex">
+                  <button tabIndex={-1}>button 3</button>
+                </div>
+              </>
+            )}
+          </TreeNodeBase>
+        </Tree>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('root')).toHaveFocus();
+      await user.tab();
+      // active root node change the tabindex for button 1...
+      expect(getByText('button 1')).toHaveFocus();
+      // ...but not for button 2 and 3
+      await user.tab();
+      expect(document.body).toHaveFocus();
+    });
   });
 
   describe('virtual tree connector', () => {
@@ -747,7 +781,7 @@ describe('<Tree />', () => {
       expect(getByTestId('1.1')).toHaveFocus();
     });
 
-    it('should select the next visible chhild of the root when excludeTreeRoot true', async () => {
+    it('should select the next visible child of the root when excludeTreeRoot true', async () => {
       const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
 
       await userEvent.tab();
@@ -762,6 +796,49 @@ describe('<Tree />', () => {
 
       // Focus should move to node '2'
       expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should autofocus after update when the focused element was inside of the tree', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(getTreeComponent(nextTree, true));
+
+      // Focus should move to node '2'
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should not autofocus after update when the focused element was outside of the tree', async () => {
+      const renderTreeWithButton = (tree) => (
+        <div>
+          {getTreeComponent(tree, true)}
+          <button>button</button>
+        </div>
+      );
+      const { rerender, getByTestId, getByText } = render(renderTreeWithButton(getSampleTree()));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      // move focus to the button
+      getByText('button').focus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(renderTreeWithButton(nextTree));
+
+      // Focus should remain on the button
+      expect(getByText('button')).toHaveFocus();
     });
   });
 
