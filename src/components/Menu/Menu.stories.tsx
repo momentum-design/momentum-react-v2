@@ -13,6 +13,7 @@ import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { ListHeader, ListItemBaseSection, Icon } from '..';
+import './Menu.stories.style.scss';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -67,7 +68,6 @@ const Sections = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Sections.argTypes = { ...argTypes };
 delete Sections.argTypes.children;
-delete Sections.argTypes.isTickOnLeftSide;
 delete Sections.argTypes.itemSize;
 
 Sections.args = {
@@ -79,7 +79,6 @@ Sections.parameters = {
   variants: [
     {
       itemSize: 32,
-      isTickOnLeftSide: true,
       onSelectionChange: menuOnSelectionChange,
       onAction: menuOnAction,
       children: [
@@ -127,9 +126,8 @@ Sections.parameters = {
 const SelectionGroups = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 SelectionGroups.argTypes = { ...argTypes };
-delete Sections.argTypes.children;
-delete Sections.argTypes.isTickOnLeftSide;
-delete Sections.argTypes.itemSize;
+delete SelectionGroups.argTypes.children;
+delete SelectionGroups.argTypes.itemSize;
 
 SelectionGroups.args = {
   'aria-label': 'Menu with multiple selection modes component',
@@ -141,7 +139,7 @@ SelectionGroups.parameters = {
     {
       selectionMode: 'multiple', // this is the default for all the group
       itemSize: 32,
-      isTickOnLeftSide: true,
+      tickPosition: 'left',
       onSelectionChange: menuOnSelectionChange,
       onAction: menuOnAction,
       children: [
@@ -175,6 +173,7 @@ SelectionGroups.parameters = {
         <SelectionGroup
           key="1"
           selectionMode="single"
+          tickPosition='right'
           aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection2', rest);
@@ -203,6 +202,8 @@ SelectionGroups.parameters = {
         </SelectionGroup>,
         <SelectionGroup
           key="2"
+          tickPosition='none'
+          classNameWhenSelected='selectedItem'
           items={[
             { key: '20', value: 'No optimization' },
             { key: '21', value: 'Noise removal' },

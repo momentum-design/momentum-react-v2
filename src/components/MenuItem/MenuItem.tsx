@@ -9,17 +9,21 @@ import ListItemBase from '../ListItemBase';
 import { useMenuItem } from '@react-aria/menu';
 import ListItemBaseSection from '../ListItemBaseSection';
 import Icon from '../Icon';
+import classNames from 'classnames';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction } = props;
+  const { item, state, onAction, tickPosition,  classNameWhenSelected} = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
   const { onClose, closeOnSelect } = useMenuContext();
-  const { itemShape, itemSize, isTickOnLeftSide } = useMenuAppearanceContext();
+  const { itemShape, itemSize, tickPosition: menuTickPosition, classNameWhenSelected: menuClassNameWhenSelected } = useMenuAppearanceContext();
+
+  const itemTickPosition = tickPosition || menuTickPosition;
+  const itemClassNameWhenSelected = classNameWhenSelected || menuClassNameWhenSelected;
 
   const { menuItemProps } = useMenuItem(
     {
@@ -48,7 +52,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   );
 
   const renderSections = () => {
-    if (isTickOnLeftSide) {
+    if (itemTickPosition === 'left') {
       return (
         <>
           <ListItemBaseSection position="start">
@@ -59,7 +63,16 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
           </ListItemBaseSection>
         </>
       );
-    } else {
+    } else if(itemTickPosition === 'none') {
+      return (
+        <>
+          <ListItemBaseSection position="fill" title={item?.textValue}>
+            {item.rendered}
+          </ListItemBaseSection>
+        </>
+      );
+
+    }else {
       return (
         <>
           <ListItemBaseSection position="fill" title={item?.textValue}>
@@ -75,7 +88,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     <ListItemBase
       size={itemSize}
       shape={itemShape}
-      className={STYLE.wrapper}
+      className={classNames(STYLE.wrapper, {[itemClassNameWhenSelected]: isSelected})}
       ref={ref}
       isDisabled={isDisabled}
       isPadded={true}

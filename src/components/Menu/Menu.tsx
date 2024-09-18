@@ -28,9 +28,10 @@ export function useMenuAppearanceContext(): MenuAppearanceContextValue {
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivElement>) => {
   const {
     className,
+    classNameWhenSelected,
     id,
     style,
-    isTickOnLeftSide = DEFAULTS.IS_TICK_ON_LEFT_SIDE,
+    tickPosition = DEFAULTS.TICK_POSITION,
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
     ariaLabelledby,
@@ -95,7 +96,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
-    <MenuAppearanceContext.Provider value={{ itemShape, itemSize, isTickOnLeftSide }}>
+    <MenuAppearanceContext.Provider value={{ itemShape, itemSize, tickPosition, classNameWhenSelected }}>
       <div
         className={classnames(className, STYLE.wrapper)}
         id={id}

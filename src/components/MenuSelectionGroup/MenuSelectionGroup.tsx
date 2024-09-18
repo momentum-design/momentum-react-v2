@@ -10,7 +10,7 @@ import { SelectionManager, useMultipleSelectionState } from '@react-stately/sele
 import { useMenuSection } from '@react-aria/menu';
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction } = props;
+  const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
 
   const { collection: tree, selectionManager: menuSelectionManager } = state;
 
@@ -51,7 +51,8 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
       )}
       <ul {...groupProps} className={STYLE.wrapper}>
         {Array.from(item.childNodes).map((node) => {
-          let item = <MenuItem key={node.key} item={node} state={newState} onAction={onAction} />;
+          let item = (<MenuItem key={node.key} item={node} state={newState} tickPosition={tickPosition} classNameWhenSelected={classNameWhenSelected}
+          onAction={onAction} />);
 
           if (node.wrapper) {
             item = node.wrapper(item);
