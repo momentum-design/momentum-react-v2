@@ -11,10 +11,9 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import Icon from '../Icon';
 import classNames from 'classnames';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
-import { useMenuSelectionGroupAppearanceContext } from '../MenuSelectionGroup/MenuSelectionGroup.hook';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction } = props;
+  const { item, state, onAction, tickPosition, classNameWhenSelected} = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
@@ -22,11 +21,6 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
 
   const { onClose, closeOnSelect } = useMenuContext();
   const { itemShape, itemSize } = useMenuAppearanceContext();
-
-  const { tickPosition, classNameWhenSelected} = useMenuSelectionGroupAppearanceContext();
-
-  // const itemTickPosition = tickPosition || menuTickPosition;
-  // const itemClassNameWhenSelected = classNameWhenSelected || menuClassNameWhenSelected;
 
   const { menuItemProps } = useMenuItem(
     {

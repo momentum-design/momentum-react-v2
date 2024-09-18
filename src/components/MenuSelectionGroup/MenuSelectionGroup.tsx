@@ -3,16 +3,19 @@
 import React, { ReactElement, useEffect, useMemo } from 'react';
 
 import { STYLE } from './MenuSelectionGroup.constants';
-import { MenuSelectionGroupAppearanceContextValue, Props } from './MenuSelectionGroup.types';
+import {Props } from './MenuSelectionGroup.types';
 import './MenuSelectionGroup.style.scss';
 import MenuItem from '../MenuItem';
 import { SelectionManager, useMultipleSelectionState } from '@react-stately/selection';
 import { useMenuSection } from '@react-aria/menu';
 
-export const MenuSelectionGroupAppearanceContext = React.createContext<MenuSelectionGroupAppearanceContextValue>({});
+import { useMenuSelectionGroupSelectedStyle } from './MenuSelectionGroup.hooks';
+
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
+
+  const {tickPosition: itemTickPosition, classNameWhenSelected: itemClassNameWhenSelected} = useMenuSelectionGroupSelectedStyle({selectionTickPosition: tickPosition, selectionClassNameWhenSelected: classNameWhenSelected});
 
   const { collection: tree, selectionManager: menuSelectionManager } = state;
 
@@ -43,7 +46,6 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
   });
 
   return (
-    <MenuSelectionGroupAppearanceContext.Provider value={{ tickPosition, classNameWhenSelected }}>
     <div {...itemProps}>
       {!React.isValidElement(item.rendered) && item.rendered ? (
         <span className={STYLE.header} {...headingProps}>
@@ -54,7 +56,8 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
       )}
       <ul {...groupProps} className={STYLE.wrapper}>
         {Array.from(item.childNodes).map((node) => {
-          let item = (<MenuItem key={node.key} item={node} state={newState} onAction={onAction} />);
+           let item = (<MenuItem key={node.key} item={node} state={newState} tickPosition={itemTickPosition} classNameWhenSelected={itemClassNameWhenSelected}
+            onAction={onAction} />);
 
           if (node.wrapper) {
             item = node.wrapper(item);
@@ -64,7 +67,6 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
         })}
       </ul>
     </div>
-    </MenuSelectionGroupAppearanceContext.Provider>
   );
 };
 

@@ -34,7 +34,12 @@ export interface Props<T> extends SelectionGroupProps<T> {
   classNameWhenSelected?: string;
 }
 
-export interface MenuSelectionGroupAppearanceContextValue {
+export interface MenuSelectionGroupSelectedStyle {
+  selectionTickPosition?: TickPosition;
+  selectionClassNameWhenSelected?: string;
+}
+
+export interface MenuSelectionItemSelectedStyle {
   tickPosition?: TickPosition;
   classNameWhenSelected?: string;
 }
