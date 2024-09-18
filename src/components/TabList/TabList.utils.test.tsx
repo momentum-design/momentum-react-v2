@@ -1,8 +1,8 @@
 import { act } from '@testing-library/react-hooks';
-import { KEYCODES } from './TabGroup.constants';
-import { handleOnKeyDown } from './TabGroup.utils';
+import { KEYCODES } from './TabList.constants';
+import { handleOnKeyDown } from './TabList.utils';
 
-describe('TabGroup utils', () => {
+describe('TabList utils', () => {
     let container: HTMLDivElement | null;
     let tabItems: HTMLElement[] | null;
     const activeIndex = Math.floor(Math.random() * 3);

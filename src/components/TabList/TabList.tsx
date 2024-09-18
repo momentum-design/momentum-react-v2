@@ -1,13 +1,13 @@
 import React, { FC, Children, cloneElement, isValidElement, useRef } from 'react';
 import classNames from 'classnames';
 
-import { DEFAULTS, STYLE } from './TabGroup.constants';
-import { Props } from './TabGroup.types';
-import { handleOnKeyDown } from './TabGroup.utils';
+import { DEFAULTS, STYLE } from './TabList.constants';
+import { Props } from './TabList.types';
+import { handleOnKeyDown } from './TabList.utils';
 
-import './TabGroup.style.scss';
+import './TabList.style.scss';
 
-const TabGroup: FC<Props> = (props: Props) => {
+const TabList: FC<Props> = (props: Props) => {
   const {
     ariaLabel,
     ariaLabelledby,
@@ -57,4 +57,4 @@ const TabGroup: FC<Props> = (props: Props) => {
   );
 };
 
-export default TabGroup;
+export default TabList;

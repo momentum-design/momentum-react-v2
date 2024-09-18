@@ -1,11 +1,13 @@
-import { TabGroup, TabNext } from '@momentum-ui/react-collaboration';
-import { mount } from 'enzyme';
 import React from 'react';
-import { DEFAULTS, STYLE } from './TabGroup.constants';
+import { TabNext } from '@momentum-ui/react-collaboration';
+import { mount } from 'enzyme';
+
+import TabList from './';
+import { DEFAULTS, STYLE } from './TabList.constants';
 
 
 
-describe('<TabGroup/>', () => {
+describe('<TabList/>', () => {
     const childrenTemplate = [
         <TabNext key="0">tabA</TabNext>,
         <TabNext key="1">tabB</TabNext>,
@@ -18,8 +20,8 @@ describe('<TabGroup/>', () => {
         it('should have its wrapper class', () => {
             expect.assertions(1);
 
-            const element = mount(<TabGroup orientation='horizontal'>{childrenTemplate}</TabGroup>)
-                .find(TabGroup)
+            const element = mount(<TabList orientation='horizontal'>{childrenTemplate}</TabList>)
+                .find(TabList)
                 .getDOMNode();
 
             expect(element.classList.contains(STYLE.wrapper)).toBe(true);
@@ -67,8 +69,8 @@ describe('<TabGroup/>', () => {
 
             const spaced = !DEFAULTS.SPACED;
 
-            const element = mount(<TabGroup orientation='horizontal' spaced={spaced}>{childrenTemplate}</TabGroup>)
-                .find(TabGroup)
+            const element = mount(<TabList orientation='horizontal' spaced={spaced}>{childrenTemplate}</TabList>)
+                .find(TabList)
                 .getDOMNode();
 
             expect(element.getAttribute('data-spaced')).toBe(`${spaced}`);
@@ -79,8 +81,8 @@ describe('<TabGroup/>', () => {
 
             const role = 'tablist';
 
-            const element = mount(<TabGroup orientation='horizontal' role={role}>{childrenTemplate}</TabGroup>)
-                .find(TabGroup)
+            const element = mount(<TabList orientation='horizontal' role={role}>{childrenTemplate}</TabList>)
+                .find(TabList)
                 .getDOMNode();
 
             expect(element.getAttribute('role')).toBe(role);
@@ -91,8 +93,8 @@ describe('<TabGroup/>', () => {
 
             const orientation = 'vertical';
 
-            const element = mount(<TabGroup orientation={orientation}>{childrenTemplate}</TabGroup>)
-                .find(TabGroup)
+            const element = mount(<TabList orientation={orientation}>{childrenTemplate}</TabList>)
+                .find(TabList)
                 .getDOMNode();
 
             expect(element.getAttribute('data-orientation')).toBe(`${orientation}`);
@@ -101,10 +103,10 @@ describe('<TabGroup/>', () => {
         it('should pass aria-label prop', () => {
             expect.assertions(1);
 
-            const ariaLabel = 'tabGroup aria label';
+            const ariaLabel = 'TabList aria label';
 
-            const element = mount(<TabGroup orientation='horizontal' aria-label={ariaLabel}>{childrenTemplate}</TabGroup>)
-                .find(TabGroup)
+            const element = mount(<TabList orientation='horizontal' aria-label={ariaLabel}>{childrenTemplate}</TabList>)
+                .find(TabList)
                 .getDOMNode();
 
             expect(element.getAttribute('aria-label')).toBe(`${ariaLabel}`);
@@ -115,7 +117,7 @@ describe('<TabGroup/>', () => {
         it('should match snapshot', () => {
             expect.assertions(1);
 
-            container = mount(<TabGroup orientation='horizontal'>{childrenTemplate}</TabGroup>);
+            container = mount(<TabList orientation='horizontal'>{childrenTemplate}</TabList>);
 
             expect(container).toMatchSnapshot();
         });
@@ -125,7 +127,7 @@ describe('<TabGroup/>', () => {
 
             const spaced = !DEFAULTS.SPACED;
 
-            container = mount(<TabGroup orientation='horizontal' spaced={spaced}>{childrenTemplate}</TabGroup>);
+            container = mount(<TabList orientation='horizontal' spaced={spaced}>{childrenTemplate}</TabList>);
 
             expect(container).toMatchSnapshot();
         });
@@ -165,7 +167,7 @@ describe('<TabGroup/>', () => {
 
             const role = 'tablist';
 
-            container = mount(<TabGroup orientation='horizontal' role={role}>{childrenTemplate}</TabGroup>);
+            container = mount(<TabList orientation='horizontal' role={role}>{childrenTemplate}</TabList>);
 
             expect(container).toMatchSnapshot();
         });
@@ -175,7 +177,7 @@ describe('<TabGroup/>', () => {
 
             const orientation = 'vertical';
 
-            container = mount(<TabGroup orientation={orientation}>{childrenTemplate}</TabGroup>);
+            container = mount(<TabList orientation={orientation}>{childrenTemplate}</TabList>);
 
             expect(container).toMatchSnapshot();
         });
@@ -185,7 +187,7 @@ describe('<TabGroup/>', () => {
 
             const ariaLabel = 'my aria label';
 
-            container = mount(<TabGroup orientation='horizontal' aria-label={ariaLabel}>{childrenTemplate}</TabGroup>);
+            container = mount(<TabList orientation='horizontal' aria-label={ariaLabel}>{childrenTemplate}</TabList>);
 
             expect(container).toMatchSnapshot();
         });

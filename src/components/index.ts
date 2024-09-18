@@ -19,7 +19,7 @@ export { default as FocusRing } from './FocusRing';
 export { default as Card } from './Card';
 export { default as NavigationTab } from './NavigationTab';
 export { default as Tab } from './Tab';
-export { default as TabGroup } from './TabGroup';
+export { default as TabList } from './TabList';
 export { default as ModalArrow } from './ModalArrow';
 export { default as ModalContainer } from './ModalContainer';
 export { default as Overlay } from './Overlay';

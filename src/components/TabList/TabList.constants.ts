@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-tab-group';
+const CLASS_PREFIX = 'md-tab-list';
 
 const DEFAULTS = {
   ORIENTATION: 'horizontal',

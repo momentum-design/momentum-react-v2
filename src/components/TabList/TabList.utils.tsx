@@ -1,7 +1,7 @@
-import { KEYCODES } from './TabGroup.constants';
-import { TabGroupOrientation } from './TabGroup.types';
+import { KEYCODES } from './TabList.constants';
+import { TabListOrientation } from './TabList.types';
 
-export const handleOnKeyDown = (event: KeyboardEvent, containerRef: any, orientation: TabGroupOrientation) => {
+export const handleOnKeyDown = (event: KeyboardEvent, containerRef: any, orientation: TabListOrientation) => {
     const { key, target: currentElement } = event;
     const containerElement = containerRef.current?.querySelectorAll ? containerRef.current : containerRef.current?.containerNode;
     const tabItems: HTMLElement[] = containerElement?.querySelectorAll('.md-tab-wrapper');

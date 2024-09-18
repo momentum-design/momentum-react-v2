@@ -4,15 +4,15 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { Template } from '../../storybook/helper.stories.templates';
 
-import TabGroup, { TabGroupProps } from './';
-import argTypes from './TabGroup.stories.args';
-import Documentation from './TabGroup.stories.docs.mdx';
+import TabList, { TabListProps } from './';
+import argTypes from './TabList.stories.args';
+import Documentation from './TabList.stories.docs.mdx';
 
 import Tab from '../Tab';
 
 export default {
-  title: 'Momentum UI/TabGroup',
-  component: TabGroup,
+  title: 'Momentum UI/TabList',
+  component: TabList,
   parameters: {
     expanded: true,
     docs: {
@@ -28,7 +28,7 @@ const commonChildren = [
   <Tab key="tab4">Tab4</Tab>,
 ];
 
-const Example = Template<TabGroupProps>(TabGroup).bind({});
+const Example = Template<TabListProps>(TabList).bind({});
 
 Example.args = {
   children: [...commonChildren],
@@ -36,7 +36,7 @@ Example.args = {
 
 Example.argTypes = { ...argTypes };
 
-const HorizontalTabGroup = () => {
+const HorizontalTabList = () => {
 
   const [activeTab, setActiveTab] = useState('');
   const tabs = [
@@ -48,10 +48,10 @@ const HorizontalTabGroup = () => {
 
   return (
     <>
-      <TabGroup
+      <TabList
         orientation="horizontal"
         spaced={true}
-        ariaLabel="horizontal tab group"
+        ariaLabel="horizontal tab list"
       >
         {tabs.map((tab) => (
           <Tab
@@ -64,7 +64,7 @@ const HorizontalTabGroup = () => {
             {tab.label}
           </Tab>
           ))}
-      </TabGroup>
+      </TabList>
       {tabs.map((tab) => (activeTab === tab.id && 
         <div
           key={tab.id}
@@ -77,14 +77,14 @@ const HorizontalTabGroup = () => {
   )
 };
 
-const VerticalTabGroup = Template<TabGroupProps>(TabGroup).bind({});
+const VerticalTabList = Template<TabListProps>(TabList).bind({});
 
-VerticalTabGroup.args = {
+VerticalTabList.args = {
   children: [...commonChildren],
   orientation: 'vertical',
   spaced: true,
 };
 
-VerticalTabGroup.argTypes = { ...argTypes };
+VerticalTabList.argTypes = { ...argTypes };
 
-export { Example, HorizontalTabGroup, VerticalTabGroup };
+export { Example, HorizontalTabList, VerticalTabList };

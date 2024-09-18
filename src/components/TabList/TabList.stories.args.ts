@@ -1,11 +1,11 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
-import { TAB_GROUP_CONSTANTS as CONSTANTS } from './';
+import { TAB_LIST_CONSTANTS as CONSTANTS } from './';
 
-const tabGroupArgTypes = {
+const tabListArgTypes = {
   ...commonStyles,
   ariaLabel: {
-    description: 'The aria-label for tab group',
+    description: 'The aria-label for tab list',
     control: { type: 'text' },
     table: {
       type: {
@@ -18,7 +18,7 @@ const tabGroupArgTypes = {
   },
 
   ariaLabelledby: {
-    description: 'The aria-labelledby for tab group',
+    description: 'The aria-labelledby for tab list',
     control: { type: 'text' },
     table: {
       type: {
@@ -49,7 +49,7 @@ const tabGroupArgTypes = {
 
   orientation: {
     defaultValue: CONSTANTS.DEFAULTS.ORIENTATION,
-    description: 'Orientation of the TabGroup. Defaults to horizontal',
+    description: 'Orientation of the TabList. Defaults to horizontal',
     control: { type: 'select' },
     options: ['horizontal', 'vertical'],
     table: {
@@ -78,9 +78,9 @@ const tabGroupArgTypes = {
   },
 };
 
-export { tabGroupArgTypes };
+export { tabListArgTypes };
 
 export default {
   ...commonStyles,
-  ...tabGroupArgTypes,
+  ...tabListArgTypes,
 };

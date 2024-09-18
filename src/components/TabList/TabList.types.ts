@@ -3,26 +3,26 @@ import { CSSProperties, ReactElement } from 'react';
 import { TabProps } from '../Tab';
 
 export type SupportedComponents = TabProps;
-export type TabGroupOrientation = 'horizontal' | 'vertical';
+export type TabListOrientation = 'horizontal' | 'vertical';
 
 export interface Props {
   /**
-   * aria-label attribute for the tabGrup;
+   * aria-label attribute for the tabList;
    */
   ariaLabel?: string;
 
   /**
-   * aria-labelledby attribute for the tabGrup;
+   * aria-labelledby attribute for the tabList;
    */
   ariaLabelledby?: string;
 
   /**
-   * aria-describedby attribute for the tabGrup;
+   * aria-describedby attribute for the tabList;
    */
   ariaDescribedby?: string;
 
   /**
-   * Child components of this TabGroup.
+   * Child components of this TabList.
    */
   children?: ReactElement<SupportedComponents> | Array<ReactElement<SupportedComponents>>;
 
@@ -37,11 +37,11 @@ export interface Props {
   id?: string;
 
   /**
-   * Orientation of TabGroup,  Default: `horizontal`
+   * Orientation of TabList,  Default: `horizontal`
    * horizontal -> left/right keys to navigate
    * vertical -> up/down keys to navigate
    */
-  orientation: TabGroupOrientation;
+  orientation: TabListOrientation;
 
   /**
    * Role for adding accessibility

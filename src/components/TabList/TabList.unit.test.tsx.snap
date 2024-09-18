@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TabGroup/> snapshot should match snapshot 1`] = `
-<TabGroup
+exports[`<TabList/> snapshot should match snapshot 1`] = `
+<TabList
   orientation="horizontal"
 >
   <div
     aria-orientation="horizontal"
-    className="md-tab-group-wrapper"
+    className="md-tab-list-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
     role="tablist"
@@ -183,17 +183,17 @@ exports[`<TabGroup/> snapshot should match snapshot 1`] = `
       </ButtonSimple>
     </Tab>
   </div>
-</TabGroup>
+</TabList>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
-<TabGroup
+exports[`<TabList/> snapshot should match snapshot when spaced 1`] = `
+<TabList
   orientation="horizontal"
   spaced={false}
 >
   <div
     aria-orientation="horizontal"
-    className="md-tab-group-wrapper"
+    className="md-tab-list-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
     role="tablist"
@@ -370,18 +370,18 @@ exports[`<TabGroup/> snapshot should match snapshot when spaced 1`] = `
       </ButtonSimple>
     </Tab>
   </div>
-</TabGroup>
+</TabList>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
-<TabGroup
+exports[`<TabList/> snapshot should match snapshot with aria-label 1`] = `
+<TabList
   aria-label="my aria label"
   orientation="horizontal"
 >
   <div
     aria-label="my aria label"
     aria-orientation="horizontal"
-    className="md-tab-group-wrapper"
+    className="md-tab-list-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
     role="tablist"
@@ -558,10 +558,10 @@ exports[`<TabGroup/> snapshot should match snapshot with aria-label 1`] = `
       </ButtonSimple>
     </Tab>
   </div>
-</TabGroup>
+</TabList>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot with className 1`] = `
+exports[`<TabList/> snapshot should match snapshot with className 1`] = `
 <Tab
   className="example-class"
 >
@@ -601,7 +601,7 @@ exports[`<TabGroup/> snapshot should match snapshot with className 1`] = `
 </Tab>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot with id 1`] = `
+exports[`<TabList/> snapshot should match snapshot with id 1`] = `
 <Tab
   id="example-id"
 >
@@ -643,13 +643,13 @@ exports[`<TabGroup/> snapshot should match snapshot with id 1`] = `
 </Tab>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 1`] = `
-<TabGroup
+exports[`<TabList/> snapshot should match snapshot with orientation = vertical 1`] = `
+<TabList
   orientation="vertical"
 >
   <div
     aria-orientation="vertical"
-    className="md-tab-group-wrapper"
+    className="md-tab-list-wrapper"
     data-orientation="vertical"
     data-spaced="false"
     role="tablist"
@@ -826,17 +826,17 @@ exports[`<TabGroup/> snapshot should match snapshot with orientation = vertical 
       </ButtonSimple>
     </Tab>
   </div>
-</TabGroup>
+</TabList>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
-<TabGroup
+exports[`<TabList/> snapshot should match snapshot with role 1`] = `
+<TabList
   orientation="horizontal"
   role="tablist"
 >
   <div
     aria-orientation="horizontal"
-    className="md-tab-group-wrapper"
+    className="md-tab-list-wrapper"
     data-orientation="horizontal"
     data-spaced="false"
     role="tablist"
@@ -1013,10 +1013,10 @@ exports[`<TabGroup/> snapshot should match snapshot with role 1`] = `
       </ButtonSimple>
     </Tab>
   </div>
-</TabGroup>
+</TabList>
 `;
 
-exports[`<TabGroup/> snapshot should match snapshot with style 1`] = `
+exports[`<TabList/> snapshot should match snapshot with style 1`] = `
 <Tab
   style={
     Object {
