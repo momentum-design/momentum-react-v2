@@ -11,7 +11,7 @@ import { SelectionManager, useMultipleSelectionState } from '@react-stately/sele
 import { useMenuSection } from '@react-aria/menu';
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction, tickPosition, classNameSelectedItem, className, itemSize} = props;
+  const { item, state, onAction, tickPosition, classNameSelectedItem, className, itemSize } = props;
 
   const { collection: tree, selectionManager: menuSelectionManager } = state;
 
