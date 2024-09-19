@@ -1,5 +1,4 @@
 import React from 'react';
-import * as react from 'react';
 import { mount } from 'enzyme';
 import { Item } from '@react-stately/collections';
 import { renderHook } from '@testing-library/react-hooks';
