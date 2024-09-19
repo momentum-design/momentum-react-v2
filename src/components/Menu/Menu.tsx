@@ -28,21 +28,21 @@ export const MenuAppearanceContext = React.createContext<MenuAppearanceContextVa
 
 export function useMenuAppearanceContext({
   tickPosition,
-  classNameWhenSelected,
+  classNameSelectedItem,
 }: SelectionGroupAppearanceProps): MenuAppearanceContextValue {
   const menuAppearance = useContext(MenuAppearanceContext);
 
   return {
     ...menuAppearance,
     tickPosition: tickPosition || menuAppearance.tickPosition,
-    classNameWhenSelected: classNameWhenSelected || menuAppearance.classNameWhenSelected,
+    classNameSelectedItem: classNameSelectedItem || menuAppearance.classNameSelectedItem,
   };
 }
 
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivElement>) => {
   const {
     className,
-    classNameWhenSelected,
+    classNameSelectedItem,
     id,
     style,
     tickPosition = DEFAULTS.TICK_POSITION,
@@ -111,7 +111,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   // for example when Menu is inside a list row
   return (
     <MenuAppearanceContext.Provider
-      value={{ itemShape, itemSize, tickPosition, classNameWhenSelected }}
+      value={{ itemShape, itemSize, tickPosition, classNameSelectedItem }}
     >
       <div
         className={classnames(className, STYLE.wrapper)}

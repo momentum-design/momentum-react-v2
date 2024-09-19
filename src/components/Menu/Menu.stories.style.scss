@@ -1,4 +1,9 @@
 .selectedItem {
-    color: var(--mds-color-theme-text-accent-normal);
-    background-color: var(--mds-color-theme-button-secondary-active-normal);
+  color: var(--mds-color-theme-text-accent-normal);
+  background-color: var(--mds-color-theme-button-secondary-active-normal);
+}
+
+.layoutGroup {
+  display: flex;
+  gap: 0.5;
 }

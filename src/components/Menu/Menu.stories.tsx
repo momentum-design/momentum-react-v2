@@ -173,7 +173,7 @@ SelectionGroups.parameters = {
         <SelectionGroup
           key="1"
           selectionMode="single"
-          tickPosition='right'
+          tickPosition="right"
           aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection2', rest);
@@ -202,8 +202,8 @@ SelectionGroups.parameters = {
         </SelectionGroup>,
         <SelectionGroup
           key="2"
-          tickPosition='none'
-          classNameWhenSelected='selectedItem'
+          tickPosition="none"
+          classNameSelectedItem="selectedItem"
           items={[
             { key: '20', value: 'No optimization' },
             { key: '21', value: 'Noise removal' },
@@ -226,6 +226,41 @@ SelectionGroups.parameters = {
                 <ListItemBaseSection position="fill">
                   Webex smart audio (You can choose one)
                 </ListItemBaseSection>
+              </ListHeader>
+            </>
+          }
+        >
+          {(item) => (
+            <Item textValue={item.value} key={item.key}>
+              {item.value}
+            </Item>
+          )}
+        </SelectionGroup>,
+        <SelectionGroup
+          key="3"
+          tickPosition="none"
+          classNameSelectedItem="selectedItem"
+          className="layoutGroup"
+          items={[
+            { key: '30', value: 'No optimization' },
+            { key: '31', value: 'Noise removal' },
+            { key: '32', value: 'Music mode' },
+          ]}
+          selectionMode="single"
+          aria-label="Third group"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection4', rest);
+          }}
+          onAction={(...rest) => {
+            console.log('selectionOnAction4', rest);
+          }}
+          title={
+            <>
+              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
+                <ListItemBaseSection position="start">
+                  <Icon scale={16} name="accessibility" strokeColor="none" />
+                </ListItemBaseSection>
+                <ListItemBaseSection position="fill">Layout</ListItemBaseSection>
               </ListHeader>
             </>
           }

@@ -3,7 +3,7 @@ import { Node, MultipleSelection, CollectionBase } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
 export type TickPosition = 'left' | 'right' | 'none';
 export interface SelectionGroupProps<T>
-  extends Omit<CollectionBase<T>, 'disabledKeys' | 'children' >,
+  extends Omit<CollectionBase<T>, 'disabledKeys' | 'children'>,
     Omit<MultipleSelection, 'disabledKeys'> {}
 
 export interface Props<T> extends SelectionGroupProps<T> {
@@ -23,23 +23,28 @@ export interface Props<T> extends SelectionGroupProps<T> {
   onAction?: (key: Key) => void;
 
   /**
- * Position of the tick when selected, none when no tick
- * @default right
- */
+   * Position of the tick when selected, none when no tick
+   * @default right
+   */
   tickPosition?: TickPosition;
 
   /**
-   * Custom class for overriding this component's CSS when selected.
+   * Custom class for overriding this component's items CSS when selected.
    */
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
+
+  /**
+   * Custom class for overriding this Slection Group's CSS.
+   */
+  className?: string;
 }
 
 export interface MenuSelectionGroupSelectedStyle {
   selectionTickPosition?: TickPosition;
-  selectionClassNameWhenSelected?: string;
+  selectionclassNameSelectedItem?: string;
 }
 
 export interface MenuSelectionItemSelectedStyle {
   tickPosition?: TickPosition;
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
 }
