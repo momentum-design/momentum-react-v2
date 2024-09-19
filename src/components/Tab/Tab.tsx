@@ -18,7 +18,9 @@ const Tab: FC<Props> = (props: Props) => {
       data-disabled={disabled || DEFAULTS.DISABLED}
     >
       {typeof children === 'string' ? (
-        <PrimitiveConverter fontStyle="subheader-secondary">{children}</PrimitiveConverter>
+        <PrimitiveConverter tagName="span" fontStyle="subheader-secondary">
+          {children}
+        </PrimitiveConverter>
       ) : (
         children
       )}
