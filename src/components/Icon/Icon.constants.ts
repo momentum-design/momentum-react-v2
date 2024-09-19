@@ -1,5 +1,5 @@
 import { IconScale } from '.';
-import type { IconWeight } from './Icon.types';
+import type { IconWeight, InferredIconName } from './Icon.types';
 
 const CLASS_PREFIX = 'md-icon';
 const COLOR_INHERIT = 'currentColor';
@@ -60,7 +60,7 @@ const DEFAULTS = {
   WEIGHTLESS: false,
 };
 
-const EXCEPTION_ICONS_LIST = [
+const EXCEPTION_ICONS_LIST: Array<InferredIconName> = [
   'check-circle-badge',
   'error-legacy-badge',
   'info-badge',

@@ -5,11 +5,12 @@ import TextToast, { TEXT_TOAST_CONSTANTS as CONSTANTS } from './';
 import Text from '../Text/Text';
 import { mountAndWait } from '../../../test/utils';
 import Icon from '../Icon';
+import { InferredIconName } from '../Icon/Icon.types';
 
 const textMock =
   'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.';
 const iconPropsMock = {
-  name: 'noise-removal',
+  name: 'noise-removal' as InferredIconName,
 };
 
 describe('<TextToast />', () => {

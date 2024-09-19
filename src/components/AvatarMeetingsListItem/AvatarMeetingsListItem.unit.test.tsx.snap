@@ -748,7 +748,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       >
                         <Icon
                           fillColor={false}
-                          name="audio-microphone-on-green-colored"
+                          name="microphone-on"
                           scale={16}
                           strokeColor="none"
                           weight="bold"
@@ -763,7 +763,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                               className=""
                               data-autoscale={false}
                               data-scale={16}
-                              data-test="audio-microphone-on-green-colored"
+                              data-test="microphone-on"
                               fill="currentColor"
                               height="100%"
                               style={

@@ -2444,10 +2444,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/icons@npm:0.0.163":
-  version: 0.0.163
-  resolution: "@momentum-design/icons@npm:0.0.163"
-  checksum: 505ae681e4464e8fdd3c2224acaa5f9896ea78f52357f5ef66e3044edda39bf9c6844222a2c7158acb2003938414461183e04359dc5dcd944bc20d1a7d025e44
+"@momentum-design/icons@npm:0.0.164":
+  version: 0.0.164
+  resolution: "@momentum-design/icons@npm:0.0.164"
+  checksum: 35ac73c6c7a70987b6b564e90e48edfe561a2a715e68bd28dc00bcf12a7b7d1c17a5a8781362b653582f34b196faf1a82cbed9458bcb8069e2d882698fa55343
   languageName: node
   linkType: hard
 
@@ -2495,7 +2495,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/icons": 0.0.163
+    "@momentum-design/icons": 0.0.164
     "@momentum-design/tokens": 0.0.77
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4

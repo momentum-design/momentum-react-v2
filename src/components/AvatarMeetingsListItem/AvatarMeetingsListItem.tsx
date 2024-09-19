@@ -116,7 +116,7 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
         {displayMuteAction && (
           <ButtonCircle onPress={onPressMuteAction} ghost size={28}>
             <Icon
-              name={isMuted ? 'microphone-muted' : 'audio-microphone-on-green-colored'}
+              name={isMuted ? 'microphone-muted' : 'microphone-on'}
               weight="bold"
               scale={16}
               fillColor={isMuted && 'var(--mds-color-theme-text-error-normal)'}

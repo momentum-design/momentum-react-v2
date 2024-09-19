@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { STYLE, EXCEPTION_ICONS_LIST, VIEW_BOX_SPECS } from './Icon.constants';
 
 import { mountAndWait } from '../../../test/utils';
+import { InferredIconName } from './Icon.types';
 
 describe('<Icon />', () => {
   let container;
@@ -51,7 +52,7 @@ describe('<Icon />', () => {
 
       const title = 'You have a draft message';
 
-      container = await mountAndWait(<Icon name="draft-indicator-bold" title={title} />);
+      container = await mountAndWait(<Icon name="draft-indicator" weight="bold" title={title} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -61,7 +62,7 @@ describe('<Icon />', () => {
 
       const ariaLabel = 'This participant is muted';
 
-      container = await mountAndWait(<Icon name="draft-indicator-bold" ariaLabel={ariaLabel} />);
+      container = await mountAndWait(<Icon name="draft-indicator" weight="bold" ariaLabel={ariaLabel} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -71,7 +72,7 @@ describe('<Icon />', () => {
 
       const ariaLabel = 'This participant is muted';
 
-      container = await mountAndWait(<Icon name="draft-indicator-bold" aria-label={ariaLabel} />);
+      container = await mountAndWait(<Icon name="draft-indicator" weight="bold" aria-label={ariaLabel} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -142,7 +143,7 @@ describe('<Icon />', () => {
         { virtual: true }
       );
 
-      container = await mountAndWait(<Icon name="invalid_icon_name" />);
+      container = await mountAndWait(<Icon name={`invalid_icon_name` as InferredIconName} />);
 
       expect(container).toMatchSnapshot();
       jest.dontMock('@momentum-design/icons/dist/svg/invalid_icon_name.svg?svgr');
@@ -204,7 +205,7 @@ describe('<Icon />', () => {
 
       const title = 'You have a draft message';
 
-      const wrapper = await mountAndWait(<Icon name="draft-indicator-bold" title={title} />);
+      const wrapper = await mountAndWait(<Icon name="draft-indicator" weight="bold" title={title} />);
       const element = wrapper.find(Icon).getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);
@@ -216,7 +217,7 @@ describe('<Icon />', () => {
       const ariaLabel = 'This participant is muted';
 
       const wrapper = await mountAndWait(
-        <Icon name="draft-indicator-bold" ariaLabel={ariaLabel} />
+        <Icon name="draft-indicator" weight="bold" ariaLabel={ariaLabel} />
       );
       const element = wrapper.find(Icon).getDOMNode();
 
@@ -230,7 +231,7 @@ describe('<Icon />', () => {
       const ariaLabel = 'This participant is muted';
 
       const wrapper = await mountAndWait(
-        <Icon name="draft-indicator-bold" aria-label={ariaLabel} />
+        <Icon name="draft-indicator" weight="bold" aria-label={ariaLabel} />
       );
       const element = wrapper.find(Icon).getDOMNode();
 
@@ -360,13 +361,6 @@ describe('<Icon />', () => {
       expect(icon.getAttribute('data-scale')).toBe('false');
     });
 
-    it('should pass md-icon-coloured class if name of icon contains coloured', async () => {
-      const wrapper = await mountAndWait(<Icon name={'accessibility-coloured'} />);
-      const icon = wrapper.find('svg').getDOMNode();
-
-      expect(icon.classList.contains('md-icon-coloured')).toBe(true);
-    });
-
     it('should pass color prop', async () => {
       const color = 'blue';
 
@@ -417,7 +411,7 @@ describe('<Icon />', () => {
       const fillColor = 'blue';
 
       const wrapper = await mountAndWait(
-        <Icon name={'accessibility-coloured'} fillColor={fillColor} />
+        <Icon name={'apple-business-chat-colored'} fillColor={fillColor} />
       );
       const icon = wrapper.find('svg').getDOMNode();
 
