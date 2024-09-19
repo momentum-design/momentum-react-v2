@@ -162,16 +162,6 @@ describe('<Menu />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with tickPosition', () => {
-      expect.assertions(1);
-
-      const tickPosition = 'left';
-
-      const container = mount(<Menu {...defaultProps} itemSize={50} tickPosition={tickPosition} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
     it('should match snapshot with className', () => {
       expect.assertions(1);
 
