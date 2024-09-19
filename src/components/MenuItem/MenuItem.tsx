@@ -96,7 +96,9 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     <ListItemBase
       size={itemSize}
       shape={itemShape}
-      className={classNames(STYLE.wrapper, { [itemclassNameSelectedItem]: isSelected })}
+      className={classNames(STYLE.wrapper, {
+        [itemclassNameSelectedItem]: isSelected && itemclassNameSelectedItem,
+      })}
       ref={ref}
       isDisabled={isDisabled}
       isPadded={true}
