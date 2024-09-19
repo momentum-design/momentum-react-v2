@@ -74,6 +74,7 @@ export interface MenuAppearanceContextValue {
 export interface SelectionGroupAppearanceProps {
   tickPosition?: TickPosition;
   classNameSelectedItem?: string;
+  itemSize?: ListItemBaseSize;
 }
 
 export interface SelectionGroupProps<T>
@@ -85,4 +86,5 @@ export interface SelectionGroupProps<T>
   tickPosition?: TickPosition;
   classNameSelectedItem?: string;
   className?: string;
+  itemSize?: ListItemBaseSize;
 }

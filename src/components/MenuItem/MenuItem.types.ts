@@ -1,6 +1,8 @@
 import { Key } from 'react';
 import { Node } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
+import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+
 export type TickPosition = 'left' | 'right' | 'none';
 export interface Props<T> {
   /**
@@ -28,4 +30,6 @@ export interface Props<T> {
    * Custom class for overriding this component's CSS when selected.
    */
   classNameSelectedItem?: string;
+
+  itemSize?: ListItemBaseSize;
 }

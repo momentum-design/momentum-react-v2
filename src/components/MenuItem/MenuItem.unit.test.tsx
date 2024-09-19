@@ -1,4 +1,5 @@
 import React from 'react';
+import * as react from 'react';
 import { mount } from 'enzyme';
 import { Item } from '@react-stately/collections';
 import { renderHook } from '@testing-library/react-hooks';
@@ -8,6 +9,7 @@ import { useTreeState } from '@react-stately/tree';
 import { triggerPress } from '../../../test/utils';
 import * as menu from '../Menu/Menu';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import ListItemBaseSection from '../ListItemBaseSection';
 
 describe('<MenuItem />', () => {
   const { result } = renderHook(() =>
@@ -20,6 +22,7 @@ describe('<MenuItem />', () => {
           Item 2
         </Item>,
       ],
+      selectedKeys: ['$.0'],
     })
   );
 
@@ -29,7 +32,8 @@ describe('<MenuItem />', () => {
     jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
       itemShape: 'rectangle',
       itemSize: 40 as ListItemBaseSize,
-      isTickOnLeftSide: false,
+      tickPosition: 'right',
+      classNameSelectedItem: 'some-classname',
     });
   });
 
@@ -45,7 +49,7 @@ describe('<MenuItem />', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should match snapshot with tickOnLeftSide', () => {
+    it('should match snapshot with tickPosition', () => {
       const item = state.collection.getItem('$.0');
       jest
         .spyOn(menu, 'useMenuContext')
@@ -54,7 +58,7 @@ describe('<MenuItem />', () => {
       jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
         itemShape: 'rectangle',
         itemSize: 30 as ListItemBaseSize,
-        isTickOnLeftSide: true,
+        tickPosition: 'left',
       });
 
       const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
@@ -75,6 +79,33 @@ describe('<MenuItem />', () => {
       const element = wrapper.find('li div').getDOMNode();
 
       expect(element.innerHTML).toBe(item.rendered);
+    });
+
+    it.only('should render tick and className on not-selected item correctly with tick position left', () => {
+      const item = state.collection.getItem('$.1');
+
+      jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
+        itemShape: 'rectangle',
+        itemSize: 40 as ListItemBaseSize,
+        tickPosition: 'left',
+        classNameSelectedItem: 'some-new-classname',
+      });
+
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+      const element = wrapper.find('li');
+
+      expect(
+        element
+          .find(ListItemBaseSection)
+          .filter({ position: 'start' })
+          .find('div.md-menu-item-tick-placeholder')
+          .exists()
+      ).toEqual(true);
+
+      expect(
+        element.find(ListItemBaseSection).filter({ position: 'fill' }).getDOMNode().innerHTML
+      ).toBe(item.rendered);
     });
   });
 
