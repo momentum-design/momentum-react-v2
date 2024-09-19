@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 import React, { ReactElement, useEffect, useMemo } from 'react';
+import classNames from 'classnames';
 
 import { STYLE } from './MenuSelectionGroup.constants';
 import { Props } from './MenuSelectionGroup.types';
@@ -10,7 +11,7 @@ import { SelectionManager, useMultipleSelectionState } from '@react-stately/sele
 import { useMenuSection } from '@react-aria/menu';
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
+  const { item, state, onAction, tickPosition, classNameSelectedItem, className } = props;
 
   const { collection: tree, selectionManager: menuSelectionManager } = state;
 
@@ -49,7 +50,7 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
       ) : (
         item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
       )}
-      <ul {...groupProps} className={STYLE.wrapper}>
+      <ul {...groupProps} className={classNames(STYLE.wrapper, className)}>
         {Array.from(item.childNodes).map((node) => {
           let item = (
             <MenuItem
@@ -57,7 +58,7 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
               item={node}
               state={newState}
               tickPosition={tickPosition}
-              classNameWhenSelected={classNameWhenSelected}
+              classNameSelectedItem={classNameSelectedItem}
               onAction={onAction}
             />
           );

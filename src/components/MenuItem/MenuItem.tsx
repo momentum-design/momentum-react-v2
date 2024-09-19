@@ -13,7 +13,7 @@ import classNames from 'classnames';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
-  const { item, state, onAction, tickPosition, classNameWhenSelected } = props;
+  const { item, state, onAction, tickPosition, classNameSelectedItem } = props;
 
   const ref = React.useRef();
   const isDisabled = state.disabledKeys.has(item.key);
@@ -24,8 +24,8 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     itemShape,
     itemSize,
     tickPosition: itemTickPosition,
-    classNameWhenSelected: itemClassNameWhenSelected,
-  } = useMenuAppearanceContext({ tickPosition, classNameWhenSelected });
+    classNameSelectedItem: itemclassNameSelectedItem,
+  } = useMenuAppearanceContext({ tickPosition, classNameSelectedItem });
 
   const { menuItemProps } = useMenuItem(
     {
@@ -89,7 +89,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
     <ListItemBase
       size={itemSize}
       shape={itemShape}
-      className={classNames(STYLE.wrapper, { [itemClassNameWhenSelected]: isSelected })}
+      className={classNames(STYLE.wrapper, { [itemclassNameSelectedItem]: isSelected })}
       ref={ref}
       isDisabled={isDisabled}
       isPadded={true}

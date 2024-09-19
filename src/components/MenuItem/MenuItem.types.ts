@@ -19,13 +19,13 @@ export interface Props<T> {
   onAction?: (key: Key) => void;
 
   /**
- * Position of the tick when selected, none when no tick
- * @default right
- */
+   * Position of the tick when selected, none when no tick
+   * @default right
+   */
   tickPosition?: TickPosition;
 
   /**
    * Custom class for overriding this component's CSS when selected.
    */
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
 }

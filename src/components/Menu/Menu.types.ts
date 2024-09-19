@@ -51,9 +51,9 @@ export interface Props<T> extends AriaMenuProps<T> {
   ariaLabelledby?: string;
 
   /**
-   * Custom class for overriding this component's CSS when selected.
+   * Custom class for overriding this component's items CSS when selected.
    */
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
@@ -68,12 +68,12 @@ export interface MenuAppearanceContextValue {
   itemShape?: 'rectangle' | 'isPilled';
   itemSize?: ListItemBaseSize;
   tickPosition?: TickPosition;
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
 }
 
 export interface SelectionGroupAppearanceProps {
   tickPosition?: TickPosition;
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
 }
 
 export interface SelectionGroupProps<T>
@@ -83,5 +83,6 @@ export interface SelectionGroupProps<T>
   onAction?: (key: Key) => void;
   selectionMode: Exclude<SelectionMode, 'none'>;
   tickPosition?: TickPosition;
-  classNameWhenSelected?: string;
+  classNameSelectedItem?: string;
+  className?: string;
 }
