@@ -2,6 +2,8 @@
 
 exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
 <MenuSelectionGroup
+  className="some-classname"
+  classNameSelectedItem="selected-classname"
   item={
     Object {
       "aria-label": "selection",
@@ -41,6 +43,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
       "wrapper": undefined,
     }
   }
+  itemSize={32}
   state={
     Object {
       "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
@@ -238,7 +241,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
           "disallowEmptySelection": undefined,
           "focusedKey": null,
           "isFocused": false,
-          "selectedKeys": Set {},
+          "selectedKeys": Set {
+            "$.0.0",
+          },
           "selectionMode": "none",
           "setFocused": [Function],
           "setFocusedKey": [Function],
@@ -248,6 +253,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
       "toggleKey": [Function],
     }
   }
+  tickPosition="none"
 >
   <div
     role="presentation"
@@ -262,10 +268,11 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
     <ul
       aria-label="selection"
       aria-labelledby="test-ID"
-      className="md-menu-selection-group-wrapper"
+      className="md-menu-selection-group-wrapper some-classname"
       role="group"
     >
       <MenuItem
+        classNameSelectedItem="selected-classname"
         item={
           Object {
             "aria-label": "0",
@@ -291,6 +298,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "wrapper": undefined,
           }
         }
+        itemSize={32}
         key="$.0.0"
         state={
           Object {
@@ -499,6 +507,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "toggleKey": [Function],
           }
         }
+        tickPosition="none"
       >
         <ListItemBase
           aria-disabled={false}
@@ -519,6 +528,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="menuitem"
+          size={32}
           tabIndex={-1}
         >
           <FocusRing
@@ -540,7 +550,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                 data-key="$.0.0"
                 data-padded={true}
                 data-shape="rectangle"
-                data-size={40}
+                data-size={32}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onDragStart={[Function]}
@@ -575,6 +585,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
         </ListItemBase>
       </MenuItem>
       <MenuItem
+        classNameSelectedItem="selected-classname"
         item={
           Object {
             "aria-label": "1",
@@ -600,6 +611,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "wrapper": undefined,
           }
         }
+        itemSize={32}
         key="$.0.1"
         state={
           Object {
@@ -808,6 +820,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "toggleKey": [Function],
           }
         }
+        tickPosition="none"
       >
         <ListItemBase
           aria-disabled={false}
@@ -828,6 +841,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           role="menuitem"
+          size={32}
           tabIndex={-1}
         >
           <FocusRing
@@ -849,7 +863,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                 data-key="$.0.1"
                 data-padded={true}
                 data-shape="rectangle"
-                data-size={40}
+                data-size={32}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onDragStart={[Function]}
