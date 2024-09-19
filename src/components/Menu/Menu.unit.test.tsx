@@ -18,6 +18,7 @@ describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
     tickPosition: 'left',
     classNameSelectedItem: 'selected-class',
+    itemSize: 32,
   };
 
   it('should return default context values when no props are provided', () => {
@@ -30,10 +31,11 @@ describe('useMenuAppearanceContext', () => {
 
     const { result } = renderHook(() => useMenuAppearanceContext({}), { wrapper });
 
-    expect(result.current.tickPosition).toBe(fakeMenuAppearanceContextValue.tickPosition);
-    expect(result.current.classNameSelectedItem).toBe(
-      fakeMenuAppearanceContextValue.classNameSelectedItem
-    );
+    expect(result.current).toEqual({
+      tickPosition: 'left',
+      classNameSelectedItem: 'selected-class',
+      itemSize: 32,
+    });
   });
 
   it('should override context values with provided props', () => {
@@ -49,12 +51,16 @@ describe('useMenuAppearanceContext', () => {
         useMenuAppearanceContext({
           tickPosition: 'right',
           classNameSelectedItem: 'custom-selected-class',
+          itemSize: 'auto',
         }),
       { wrapper }
     );
 
-    expect(result.current.tickPosition).toBe('right');
-    expect(result.current.classNameSelectedItem).toBe('custom-selected-class');
+    expect(result.current).toEqual({
+      tickPosition: 'right',
+      classNameSelectedItem: 'custom-selected-class',
+      itemSize: 'auto',
+    });
   });
 
   it('should use context values for props that are not provided', () => {
@@ -73,10 +79,11 @@ describe('useMenuAppearanceContext', () => {
       { wrapper }
     );
 
-    expect(result.current.tickPosition).toBe('right');
-    expect(result.current.classNameSelectedItem).toBe(
-      fakeMenuAppearanceContextValue.classNameSelectedItem
-    );
+    expect(result.current).toEqual({
+      tickPosition: 'right',
+      classNameSelectedItem: 'selected-class',
+      itemSize: 32,
+    });
   });
 });
 
