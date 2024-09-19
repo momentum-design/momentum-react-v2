@@ -4,6 +4,7 @@ import React, { createRef } from 'react';
 import { MAX_INITIALS_SPACE, SIZES, STYLE, AVATAR_COLORS } from './Avatar.constants';
 import { AvatarColor, AvatarSize, PresenceType } from './Avatar.types';
 import { mountAndWait } from '../../../test/utils';
+import { InferredIconName } from '../Icon/Icon.types';
 
 describe('Avatar', () => {
   const sampleProps = {
@@ -13,7 +14,7 @@ describe('Avatar', () => {
     presenceLabel: 'Active',
     presence: PresenceType.Active,
     src: 'src',
-    icon: 'Accessibility',
+    icon: 'accessibility' as InferredIconName,
     typingLabel: 'is typing',
   };
 
@@ -38,7 +39,7 @@ describe('Avatar', () => {
         type={isPerson ? 'person' : 'space'}
         title={sampleProps.title}
         onPress={onPress}
-        icon={avatarType === 'icon' ? sampleProps.icon : ''}
+        icon={avatarType === 'icon' ? sampleProps.icon : undefined}
         src={avatarType === 'src' ? sampleProps.src : ''}
         presence={withPresence ? sampleProps.presence : null}
         presenceLabel={withPresence ? sampleProps.presenceLabel : ''}
