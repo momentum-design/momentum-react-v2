@@ -12,6 +12,7 @@ import '@testing-library/jest-dom';
 import MenuSelectionGroup from '../MenuSelectionGroup';
 import { MenuAppearanceContextValue } from './Menu.types';
 import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
+import ListItemBaseSection from '../ListItemBaseSection';
 
 describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
@@ -271,17 +272,38 @@ describe('<Menu />', () => {
       expect(element.getAttribute('data-shape')).toBe(itemShape);
     });
 
-    it('should have provided data-shape when tickPosition is provided', () => {
+    it('should have rendered tickPlaceholder when tickPosition left is provided', () => {
       expect.assertions(1);
 
       const tickPosition = 'left';
 
-      const element = mount(<Menu {...defaultProps} tickPosition={tickPosition} />)
+      const leftTickPlaceholder = mount(<Menu {...defaultProps} tickPosition={tickPosition} />)
         .find(ListItemBase)
         .at(0)
+        .find(ListItemBaseSection)
+        .filter({ position: 'start' })
+        .find('div.md-menu-item-tick-placeholder');
+
+      expect(leftTickPlaceholder.exists()).toEqual(true);
+    });
+
+    it('should have provided classNameSelectedItem to selected item when classNameSelectedItem is provided', () => {
+      expect.assertions(1);
+
+      const classNameSelectedItem = 'some-classname';
+
+      const selectedItem = mount(
+        <Menu
+          {...defaultProps}
+          selectedKeys={['one']}
+          classNameSelectedItem={classNameSelectedItem}
+        />
+      )
+        .find(ListItemBase)
+        .filter({ 'data-key': 'one' })
         .getDOMNode();
 
-      expect(element.getAttribute('data-shape')).toBe(tickPosition);
+      expect(selectedItem.classList.contains(classNameSelectedItem)).toBe(true);
     });
   });
 

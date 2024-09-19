@@ -29,11 +29,13 @@ export const MenuAppearanceContext = React.createContext<MenuAppearanceContextVa
 export function useMenuAppearanceContext({
   tickPosition,
   classNameSelectedItem,
+  itemSize,
 }: SelectionGroupAppearanceProps): MenuAppearanceContextValue {
   const menuAppearance = useContext(MenuAppearanceContext);
 
   return {
     ...menuAppearance,
+    itemSize: itemSize || menuAppearance.itemSize,
     tickPosition: tickPosition || menuAppearance.tickPosition,
     classNameSelectedItem: classNameSelectedItem || menuAppearance.classNameSelectedItem,
   };

@@ -241,10 +241,11 @@ SelectionGroups.parameters = {
           tickPosition="none"
           classNameSelectedItem="selectedItem"
           className="layoutGroup"
+          itemSize="auto"
           items={[
-            { key: '30', value: 'No optimization' },
-            { key: '31', value: 'Noise removal' },
-            { key: '32', value: 'Music mode' },
+            { key: '30', value: 'Grid' },
+            { key: '31', value: 'Stack' },
+            { key: '32', value: 'Side by side' },
           ]}
           selectionMode="single"
           aria-label="Third group"

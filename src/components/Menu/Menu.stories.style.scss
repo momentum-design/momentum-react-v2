@@ -6,4 +6,8 @@
 .layoutGroup {
   display: flex;
   gap: 0.5;
+
+  .md-list-item-base-wrapper {
+    height: 4rem;
+  }
 }
