@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
+import { AriaRole, CSSProperties, ReactElement } from 'react';
 import { BadgeProps } from '../Badge';
 import { IconProps } from '../Icon';
 import { TextProps } from '../Text';
@@ -41,7 +41,7 @@ export interface Props extends AriaButtonProps {
   tabIndex?: number;
 
   /**
-   * Role for adding accessibility
+   * WAI-ARIA role for accessibility
    */
-  role?: string;
+  role?: AriaRole;
 }
