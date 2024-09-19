@@ -39,4 +39,9 @@ export interface Props extends AriaButtonProps {
    * Tabindex for accessibility
    */
   tabIndex?: number;
+
+  /**
+   * Role for adding accessibility
+   */
+  role?: string;
 }
