@@ -21,8 +21,6 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
     noLoop?: boolean;
-    setDirection: Dispatch<SetStateAction<'forward' | 'backward'>>;
-    direction: 'forward' | 'backward';
     isInitiallyRoving?: boolean;
     supressFocus?: boolean;
     isFocusedWithin?: boolean;
@@ -45,7 +43,6 @@ const useOrientationBasedKeyboardNavigation = (
 ): IUseOrientationBasedKeyboardNavigationReturn => {
   const { listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
   const [currentFocus, setCurrentFocus] = useState<number>(-1);
-  const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
   const [isInitiallyRoving, setIsInitiallyRoving] = useState<boolean>(true);
 
   const { isFocusedWithin, focusWithinProps } = useFocusWithinState({});
@@ -64,14 +61,12 @@ const useOrientationBasedKeyboardNavigation = (
       currentFocus,
       noLoop,
       setCurrentFocus,
-      setDirection,
-      direction,
       setIsInitiallyRoving,
       isInitiallyRoving,
       isFocusedWithin,
       ...contextProps,
     }),
-    [listSize, currentFocus, noLoop, direction, isInitiallyRoving, isFocusedWithin, contextProps]
+    [listSize, currentFocus, noLoop, isInitiallyRoving, isFocusedWithin, contextProps]
   );
 
   const { keyboardProps } = useKeyboard({
@@ -86,7 +81,6 @@ const useOrientationBasedKeyboardNavigation = (
           evt.continuePropagation();
           break;
         case backwardKey:
-          setDirection('backward');
           evt.preventDefault();
           setNextFocus(
             true,
@@ -98,7 +92,6 @@ const useOrientationBasedKeyboardNavigation = (
           break;
 
         case forwardKey:
-          setDirection('forward');
           evt.preventDefault();
           setNextFocus(
             false,

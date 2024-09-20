@@ -44,35 +44,31 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
     });
 
-    let { currentFocus, direction } = result.current.getContext();
+    let { currentFocus } = result.current.getContext();
     expect(currentFocus).toStrictEqual(1);
-    expect(direction).toStrictEqual('forward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     // no loop true so should 0
     expect(currentFocus).toStrictEqual(0);
-    expect(direction).toStrictEqual('forward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(leftArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     expect(currentFocus).toStrictEqual(0);
-    expect(direction).toStrictEqual('forward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(upArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     // no loop true should be 1
     expect(currentFocus).toStrictEqual(1);
-    expect(direction).toStrictEqual('backward');
   });
 
   it('should navigate correctly when horizontal and noLoop', () => {
@@ -88,42 +84,37 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       result.current.keyboardProps.onKeyDown(rightArrowEvent);
     });
 
-    let { currentFocus, direction } = result.current.getContext();
+    let { currentFocus } = result.current.getContext();
     expect(currentFocus).toStrictEqual(1);
-    expect(direction).toStrictEqual('forward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(rightArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     // no loop false so shouldn't wrap back to 0
     expect(currentFocus).toStrictEqual(1);
-    expect(direction).toStrictEqual('forward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(leftArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     expect(currentFocus).toStrictEqual(0);
-    expect(direction).toStrictEqual('backward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(leftArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     // no loop false so shouldn't wrap back to 1
     expect(currentFocus).toStrictEqual(0);
-    expect(direction).toStrictEqual('backward');
 
     act(() => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
     });
 
-    ({ currentFocus, direction } = result.current.getContext());
+    ({ currentFocus } = result.current.getContext());
     expect(currentFocus).toStrictEqual(0);
-    expect(direction).toStrictEqual('backward');
   });
 });

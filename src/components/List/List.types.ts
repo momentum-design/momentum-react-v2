@@ -74,8 +74,6 @@ export interface ListContextValue {
   setCurrentFocus?: Dispatch<SetStateAction<number>>;
   listSize?: number;
   noLoop?: boolean;
-  direction?: 'forward' | 'backward';
-  setDirection?: Dispatch<SetStateAction<'forward' | 'backward'>>;
   isInitiallyRoving?: boolean;
   setIsInitiallyRoving?: Dispatch<SetStateAction<boolean>>;
   suppressFocus?: boolean;

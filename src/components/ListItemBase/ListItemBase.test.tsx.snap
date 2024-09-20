@@ -144,7 +144,6 @@ exports[`ListItemBase snapshot should match snapshot with empty list item 1`] = 
       isInset={false}
     >
       <li
-        aria-hidden="true"
         className="md-list-item-base-wrapper"
         data-allow-text-select={false}
         data-disabled={false}

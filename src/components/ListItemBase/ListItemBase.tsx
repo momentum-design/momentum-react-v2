@@ -22,7 +22,7 @@ import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
 import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
-import { getListItemBaseTabIndex, handleEmptyListItem } from './ListItemBase.utils';
+import { getListItemBaseTabIndex } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
@@ -61,8 +61,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const listContext = useListContext();
 
   const internalRef = useRef<HTMLLIElement>();
-
-  const [isAriaHidden, setIsAriaHidden] = useState(false);
 
   const { focusProps, isFocusedWithin } = useFocusAndFocusWithinState({
     onFocus,
@@ -177,10 +175,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const currentFocus = listContext?.currentFocus;
   const focus = currentFocus === itemIndex;
   const listSize = listContext?.listSize || 0;
-  const noLoop = listContext?.noLoop || false;
-  const direction = listContext?.direction || 'forward';
   const setCurrentFocus = listContext?.setCurrentFocus;
-  const setDirection = listContext?.setDirection;
   const isInitiallyRoving = listContext?.isInitiallyRoving;
   const setIsInitlallyRoving = listContext?.setIsInitiallyRoving;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
@@ -373,31 +368,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [contextMenuActions, handleOnContextMenu, ref]);
 
   useLayoutEffect(() => {
-    setIsAriaHidden(!ref.current.childNodes.length);
-
-    if (!ref.current.childNodes.length && focus) {
-      handleEmptyListItem({
-        direction,
-        itemIndex,
-        setCurrentFocus,
-        setDirection,
-        listSize,
-        noLoop,
-      });
-    } else if (focus) {
+    if (focus) {
       setIsInitlallyRoving?.(false);
     }
-  }, [
-    itemIndex,
-    direction,
-    focus,
-    setCurrentFocus,
-    setDirection,
-    listSize,
-    noLoop,
-    setIsInitlallyRoving,
-    ref,
-  ]);
+  }, [focus, setIsInitlallyRoving]);
 
   const listElement = (
     <li
@@ -405,7 +379,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       style={style}
       ref={ref}
       data-size={size}
-      aria-hidden={isAriaHidden ? 'true' : undefined}
       data-disabled={isDisabled}
       data-padded={isPadded}
       data-shape={shape}
