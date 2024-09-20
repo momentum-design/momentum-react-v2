@@ -149,4 +149,17 @@ export default {
       defaultValue: 'multiple',
     },
   },
+  hasSeparators: {
+    description: 'Wheather the menu should display separator lines between menu children',
+    default: false,
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'false',
+      },
+    },
+  },
 };

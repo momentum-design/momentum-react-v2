@@ -959,6 +959,486 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
 </_Menu>
 `;
 
+exports[`<Menu /> snapshot should match snapshot with hasSeparators 1`] = `
+<_Menu
+  aria-label="Menu component"
+  hasSeparators={true}
+>
+  <div
+    aria-label="Menu component"
+    className="md-menu-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyDownCapture={[Function]}
+    onMouseDown={[Function]}
+    role="menu"
+    tabIndex={0}
+  >
+    <MenuItem
+      item={
+        Object {
+          "aria-label": undefined,
+          "childNodes": Object {
+            Symbol(Symbol.iterator): [Function],
+          },
+          "hasChildNodes": false,
+          "index": 0,
+          "key": "one",
+          "level": 0,
+          "nextKey": "two",
+          "parentKey": null,
+          "prevKey": undefined,
+          "props": Object {
+            "children": "One",
+          },
+          "rendered": "One",
+          "shouldInvalidate": undefined,
+          "textValue": "One",
+          "type": "item",
+          "value": undefined,
+          "wrapper": undefined,
+        }
+      }
+      key="one"
+      state={
+        Object {
+          "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+            "firstKey": "one",
+            "iterable": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "keyMap": Map {
+              "one" => Object {
+                "aria-label": undefined,
+                "childNodes": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "hasChildNodes": false,
+                "index": 0,
+                "key": "one",
+                "level": 0,
+                "nextKey": "two",
+                "parentKey": null,
+                "prevKey": undefined,
+                "props": Object {
+                  "children": "One",
+                },
+                "rendered": "One",
+                "shouldInvalidate": undefined,
+                "textValue": "One",
+                "type": "item",
+                "value": undefined,
+                "wrapper": undefined,
+              },
+              "two" => Object {
+                "aria-label": undefined,
+                "childNodes": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "hasChildNodes": false,
+                "index": 1,
+                "key": "two",
+                "level": 0,
+                "nextKey": undefined,
+                "parentKey": null,
+                "prevKey": "one",
+                "props": Object {
+                  "children": "Two",
+                },
+                "rendered": "Two",
+                "shouldInvalidate": undefined,
+                "textValue": "Two",
+                "type": "item",
+                "value": undefined,
+                "wrapper": undefined,
+              },
+            },
+            "lastKey": "two",
+          },
+          "disabledKeys": Set {},
+          "expandedKeys": Set {},
+          "selectionManager": SelectionManager {
+            "_isSelectAll": null,
+            "allowsCellSelection": false,
+            "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+              "firstKey": "one",
+              "iterable": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "keyMap": Map {
+                "one" => Object {
+                  "aria-label": undefined,
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 0,
+                  "key": "one",
+                  "level": 0,
+                  "nextKey": "two",
+                  "parentKey": null,
+                  "prevKey": undefined,
+                  "props": Object {
+                    "children": "One",
+                  },
+                  "rendered": "One",
+                  "shouldInvalidate": undefined,
+                  "textValue": "One",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "two" => Object {
+                  "aria-label": undefined,
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 1,
+                  "key": "two",
+                  "level": 0,
+                  "nextKey": undefined,
+                  "parentKey": null,
+                  "prevKey": "one",
+                  "props": Object {
+                    "children": "Two",
+                  },
+                  "rendered": "Two",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Two",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+              },
+              "lastKey": "two",
+            },
+            "state": Object {
+              "childFocusStrategy": null,
+              "disabledKeys": Set {},
+              "disallowEmptySelection": undefined,
+              "focusedKey": null,
+              "isFocused": false,
+              "selectedKeys": Set {},
+              "selectionMode": "none",
+              "setFocused": [Function],
+              "setFocusedKey": [Function],
+              "setSelectedKeys": [Function],
+            },
+          },
+          "toggleKey": [Function],
+        }
+      }
+    >
+      <ListItemBase
+        aria-disabled={false}
+        aria-labelledby={null}
+        className="md-menu-item-wrapper"
+        data-key="one"
+        isDisabled={false}
+        isPadded={true}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="menuitem"
+        shape="rectangle"
+        size={40}
+        tabIndex={-1}
+      >
+        <FocusRing
+          isInset={false}
+        >
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
+          >
+            <li
+              aria-disabled={false}
+              aria-labelledby={null}
+              className="md-menu-item-wrapper md-list-item-base-wrapper"
+              data-allow-text-select={false}
+              data-disabled={false}
+              data-interactive={true}
+              data-key="one"
+              data-padded={true}
+              data-shape="rectangle"
+              data-size={40}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="menuitem"
+              tabIndex={-1}
+            >
+              <ListItemBaseSection
+                position="fill"
+                title="One"
+              >
+                <div
+                  data-position="fill"
+                  title="One"
+                >
+                  One
+                </div>
+              </ListItemBaseSection>
+            </li>
+          </FocusRing>
+        </FocusRing>
+      </ListItemBase>
+    </MenuItem>
+    <MenuItem
+      item={
+        Object {
+          "aria-label": undefined,
+          "childNodes": Object {
+            Symbol(Symbol.iterator): [Function],
+          },
+          "hasChildNodes": false,
+          "index": 1,
+          "key": "two",
+          "level": 0,
+          "nextKey": undefined,
+          "parentKey": null,
+          "prevKey": "one",
+          "props": Object {
+            "children": "Two",
+          },
+          "rendered": "Two",
+          "shouldInvalidate": undefined,
+          "textValue": "Two",
+          "type": "item",
+          "value": undefined,
+          "wrapper": undefined,
+        }
+      }
+      key="two"
+      state={
+        Object {
+          "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+            "firstKey": "one",
+            "iterable": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "keyMap": Map {
+              "one" => Object {
+                "aria-label": undefined,
+                "childNodes": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "hasChildNodes": false,
+                "index": 0,
+                "key": "one",
+                "level": 0,
+                "nextKey": "two",
+                "parentKey": null,
+                "prevKey": undefined,
+                "props": Object {
+                  "children": "One",
+                },
+                "rendered": "One",
+                "shouldInvalidate": undefined,
+                "textValue": "One",
+                "type": "item",
+                "value": undefined,
+                "wrapper": undefined,
+              },
+              "two" => Object {
+                "aria-label": undefined,
+                "childNodes": Object {
+                  Symbol(Symbol.iterator): [Function],
+                },
+                "hasChildNodes": false,
+                "index": 1,
+                "key": "two",
+                "level": 0,
+                "nextKey": undefined,
+                "parentKey": null,
+                "prevKey": "one",
+                "props": Object {
+                  "children": "Two",
+                },
+                "rendered": "Two",
+                "shouldInvalidate": undefined,
+                "textValue": "Two",
+                "type": "item",
+                "value": undefined,
+                "wrapper": undefined,
+              },
+            },
+            "lastKey": "two",
+          },
+          "disabledKeys": Set {},
+          "expandedKeys": Set {},
+          "selectionManager": SelectionManager {
+            "_isSelectAll": null,
+            "allowsCellSelection": false,
+            "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+              "firstKey": "one",
+              "iterable": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "keyMap": Map {
+                "one" => Object {
+                  "aria-label": undefined,
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 0,
+                  "key": "one",
+                  "level": 0,
+                  "nextKey": "two",
+                  "parentKey": null,
+                  "prevKey": undefined,
+                  "props": Object {
+                    "children": "One",
+                  },
+                  "rendered": "One",
+                  "shouldInvalidate": undefined,
+                  "textValue": "One",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+                "two" => Object {
+                  "aria-label": undefined,
+                  "childNodes": Object {
+                    Symbol(Symbol.iterator): [Function],
+                  },
+                  "hasChildNodes": false,
+                  "index": 1,
+                  "key": "two",
+                  "level": 0,
+                  "nextKey": undefined,
+                  "parentKey": null,
+                  "prevKey": "one",
+                  "props": Object {
+                    "children": "Two",
+                  },
+                  "rendered": "Two",
+                  "shouldInvalidate": undefined,
+                  "textValue": "Two",
+                  "type": "item",
+                  "value": undefined,
+                  "wrapper": undefined,
+                },
+              },
+              "lastKey": "two",
+            },
+            "state": Object {
+              "childFocusStrategy": null,
+              "disabledKeys": Set {},
+              "disallowEmptySelection": undefined,
+              "focusedKey": null,
+              "isFocused": false,
+              "selectedKeys": Set {},
+              "selectionMode": "none",
+              "setFocused": [Function],
+              "setFocusedKey": [Function],
+              "setSelectedKeys": [Function],
+            },
+          },
+          "toggleKey": [Function],
+        }
+      }
+    >
+      <ListItemBase
+        aria-disabled={false}
+        aria-labelledby={null}
+        className="md-menu-item-wrapper"
+        data-key="two"
+        isDisabled={false}
+        isPadded={true}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="menuitem"
+        shape="rectangle"
+        size={40}
+        tabIndex={-1}
+      >
+        <FocusRing
+          isInset={false}
+        >
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+            isInset={false}
+          >
+            <li
+              aria-disabled={false}
+              aria-labelledby={null}
+              className="md-menu-item-wrapper md-list-item-base-wrapper"
+              data-allow-text-select={false}
+              data-disabled={false}
+              data-interactive={true}
+              data-key="two"
+              data-padded={true}
+              data-shape="rectangle"
+              data-size={40}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="menuitem"
+              tabIndex={-1}
+            >
+              <ListItemBaseSection
+                position="fill"
+                title="Two"
+              >
+                <div
+                  data-position="fill"
+                  title="Two"
+                >
+                  Two
+                </div>
+              </ListItemBaseSection>
+            </li>
+          </FocusRing>
+        </FocusRing>
+      </ListItemBase>
+    </MenuItem>
+  </div>
+</_Menu>
+`;
+
 exports[`<Menu /> snapshot should match snapshot with id 1`] = `
 <_Menu
   aria-label="Menu component"

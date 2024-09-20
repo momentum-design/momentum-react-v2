@@ -47,6 +47,11 @@ export interface Props<T> extends AriaMenuProps<T> {
    * aria-labelledby attribute to associate with the menu items
    */
   ariaLabelledby?: string;
+
+  /**
+   * Wheather the menu should display separator lines between menu children
+   */
+  hasSeparators?: boolean;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {

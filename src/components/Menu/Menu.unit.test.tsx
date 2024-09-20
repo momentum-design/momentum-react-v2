@@ -74,6 +74,16 @@ describe('<Menu />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with hasSeparators', () => {
+      expect.assertions(1);
+
+      const hasSeparators = true;
+
+      const container = mount(<Menu {...defaultProps} hasSeparators={hasSeparators} />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -168,6 +178,49 @@ describe('<Menu />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-shape')).toBe(itemShape);
+    });
+
+    it('should have rendered separators between sections when hasSeparators is true', () => {
+      expect.assertions(2);
+
+      const { queryAllByRole } = render(
+        <Menu {...defaultProps} hasSeparators>
+          <Section title="Section 1" key="s1" aria-label="section1">
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </Section>
+          <Section title="Section 2" key="s2" aria-label="section2">
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </Section>
+        </Menu>
+      );
+
+      const separators = queryAllByRole('separator');
+      expect(separators.length).toBe(1);
+      expect(separators[0].outerHTML).toEqual(
+        '<div role="separator" class="md-menu-separator"></div>'
+      );
+    });
+
+    it('should not have rendered separators between sections when hasSeparators is false', () => {
+      expect.assertions(1);
+
+      const { queryAllByRole } = render(
+        <Menu {...defaultProps}>
+          <Section title="Section 1" key="s1" aria-label="section1">
+            <Item key="one">One</Item>
+            <Item key="two">Two</Item>
+          </Section>
+          <Section title="Section 2" key="s2" aria-label="section2">
+            <Item key="three">Three</Item>
+            <Item key="four">Four</Item>
+          </Section>
+        </Menu>
+      );
+
+      const separators = queryAllByRole('separator');
+      expect(separators.length).toBe(0);
     });
   });
 

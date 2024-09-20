@@ -6,4 +6,12 @@
   > ul {
     margin-left: 0;
   }
+
+  .md-menu-separator {
+    border-bottom: 1px solid var(--mds-color-theme-outline-primary-normal);
+    // the separator is drawn after the list item
+    // so need to move it back up a bit
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
 }

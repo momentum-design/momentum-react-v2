@@ -33,6 +33,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     isTickOnLeftSide = DEFAULTS.IS_TICK_ON_LEFT_SIDE,
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
+    hasSeparators = DEFAULTS.HAS_SEPARATORS,
     ariaLabelledby,
   } = props;
 
@@ -51,21 +52,36 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
 
   const itemArray = Array.from(state.collection.getKeys());
 
+  const lastGroupIndex = itemArray
+    .map((key) => state.collection.getItem(key).hasChildNodes)
+    .lastIndexOf(true);
+
   const renderItem = useCallback(
-    <T extends object>(item: Node<T>, state: TreeState<T>) => {
+    <T extends object>(item: Node<T>, index: number, state: TreeState<T>) => {
+      const isLastGroup = index === lastGroupIndex;
       if (item.type === 'section') {
         if (item.props?.selectionGroup) {
           return (
-            <MenuSelectionGroup
-              item={item}
-              state={state}
-              onAction={_props.onAction}
-              key={item.key}
-              {...item.props}
-            />
+            <>
+              <MenuSelectionGroup
+                item={item}
+                state={state}
+                onAction={_props.onAction}
+                key={item.key}
+                {...item.props}
+              />
+              {hasSeparators && !isLastGroup && (
+                <div role="separator" className={STYLE.separator} />
+              )}
+            </>
           );
         }
-        return <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />;
+        return (
+          <>
+            <MenuSection key={item.key} item={item} state={state} onAction={_props.onAction} />
+            {hasSeparators && !isLastGroup && <div role="separator" className={STYLE.separator} />}
+          </>
+        );
       } else {
         // collection.getKeys() return all keys (including sub-keys of child elements)
         // and we don't want to render items twice
@@ -104,9 +120,9 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         aria-labelledby={ariaLabelledby}
         {...menuProps}
       >
-        {itemArray.map((key) => {
+        {itemArray.map((key, index) => {
           const item = state.collection.getItem(key) as Node<T>;
-          return renderItem(item, state);
+          return renderItem(item, index, state);
         })}
       </div>
     </MenuAppearanceContext.Provider>
