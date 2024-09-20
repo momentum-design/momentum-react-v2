@@ -58,6 +58,7 @@ const DEFAULTS = {
   AUTO_SCALE: false,
   VIEW_BOX_SPEC: VIEW_BOX_SPECS.NORMAL,
   WEIGHTLESS: false,
+  LIBRARY: 'icons' as const,
 };
 
 const EXCEPTION_ICONS_LIST: Array<InferredIconName> = [

@@ -66,6 +66,16 @@ Weights.parameters = {
   ],
 };
 
+const BrandVisuals = Template<IconProps>(Icon).bind({});
+
+BrandVisuals.argTypes = { ...argTypes };
+
+BrandVisuals.args = {
+  name: 'cisco-ai-assistant-color',
+  library: 'brand-visuals',
+  weightless: true,
+};
+
 const Common = MultiTemplate<IconProps>(Icon).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -88,4 +98,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Sizes, Weights, Common };
+export { Example, Sizes, Weights, BrandVisuals, Common };
