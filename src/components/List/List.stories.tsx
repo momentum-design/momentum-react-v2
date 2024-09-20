@@ -327,52 +327,6 @@ const ProgramaticFocus = Template<ListProps>((args) => {
   );
 }).bind({});
 
-const ListWithNullElementsWrapper = () => {
-  return (
-    <>
-      <Text type="header-primary">Looping</Text>
-      <List listSize={9}>
-        <ListItemBase itemIndex={0} key={0} />
-        <ListItemBase itemIndex={1} key={1} />
-        <ListItemBase itemIndex={2} key={2} isPadded>
-          2
-        </ListItemBase>
-        <ListItemBase itemIndex={3} key={3} />
-        <ListItemBase itemIndex={4} key={4} />
-        <ListItemBase itemIndex={5} key={5} isPadded>
-          5
-        </ListItemBase>
-        <ListItemBase itemIndex={6} key={6} isPadded>
-          6
-        </ListItemBase>
-        <ListItemBase itemIndex={7} key={7} />
-        <ListItemBase itemIndex={8} key={8} />
-      </List>
-
-      <Text type="header-primary">NoLoop</Text>
-      <List noLoop listSize={9}>
-        <ListItemBase itemIndex={0} key={0} />
-        <ListItemBase itemIndex={1} key={1} />
-        <ListItemBase itemIndex={2} key={2} isPadded>
-          2
-        </ListItemBase>
-        <ListItemBase itemIndex={3} key={3} />
-        <ListItemBase itemIndex={4} key={4} />
-        <ListItemBase itemIndex={5} key={5} isPadded>
-          5
-        </ListItemBase>
-        <ListItemBase itemIndex={6} key={6} isPadded>
-          6
-        </ListItemBase>
-        <ListItemBase itemIndex={7} key={7} />
-        <ListItemBase itemIndex={8} key={8} />
-      </List>
-    </>
-  );
-};
-
-const ListWithNullElements = Template<unknown>(ListWithNullElementsWrapper).bind({});
-
 const ListWithAriaToolbarWrapper = () => {
   return (
     <>
@@ -577,16 +531,6 @@ const DynamicListWithInitialFocusWrapper2 = () => {
 
   return (
     <List listSize={showBefore ? 6 : 5}>
-      {/* {showBefore && (
-            <ListItemBase itemIndex={0} key={1}>
-              Item 0
-            </ListItemBase>
-        )}
-        {showBefore && (
-            <ListItemBase itemIndex={1} key={2}>
-              Item 1
-            </ListItemBase>
-        )} */}
       {showBefore && (
         <ListItemBase itemIndex={0} key={3}>
           Item 2
@@ -703,7 +647,6 @@ export {
   CalendarList,
   DynamicList,
   Search,
-  ListWithNullElements,
   ProgramaticFocus,
   ListWithAriaToolbar,
   ListWithButtons,

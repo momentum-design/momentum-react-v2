@@ -74,8 +74,8 @@ export interface ListContextValue {
   setCurrentFocus?: Dispatch<SetStateAction<number>>;
   listSize?: number;
   noLoop?: boolean;
-  isInitiallyRoving?: boolean;
-  setIsInitiallyRoving?: Dispatch<SetStateAction<boolean>>;
+  updateFocusBlocked?: boolean;
+  setUpdateFocusBlocked?: Dispatch<SetStateAction<boolean>>;
   suppressFocus?: boolean;
   isFocusedWithin?: boolean;
 }

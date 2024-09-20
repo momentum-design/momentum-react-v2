@@ -176,8 +176,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const focus = currentFocus === itemIndex;
   const listSize = listContext?.listSize || 0;
   const setCurrentFocus = listContext?.setCurrentFocus;
-  const isInitiallyRoving = listContext?.isInitiallyRoving;
-  const setIsInitlallyRoving = listContext?.setIsInitiallyRoving;
+  const updateFocusBlocked = listContext?.updateFocusBlocked;
+  const setUpdateFocusBlocked = listContext?.setUpdateFocusBlocked;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
@@ -239,7 +239,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       lastCurrentFocus !== undefined && // prevents focus of new elements
       (lastCurrentFocus !== currentFocus || (!isFocusedWithin && listFocusedWithin)) && // focuses the new element in up/down navigation
       focus && // only focus the actually focused item
-      !isInitiallyRoving // Don't focus anything at all while the list is finding its initial focus
+      !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
     ) {
       const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
         (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
@@ -256,7 +256,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     focus,
     focusChild,
     isFocusedWithin,
-    isInitiallyRoving,
+    updateFocusBlocked,
     itemIndex,
     lastCurrentFocus,
     listFocusedWithin,
@@ -369,9 +369,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   useLayoutEffect(() => {
     if (focus) {
-      setIsInitlallyRoving?.(false);
+      setUpdateFocusBlocked?.(false);
     }
-  }, [focus, setIsInitlallyRoving]);
+  }, [focus, setUpdateFocusBlocked]);
 
   const listElement = (
     <li

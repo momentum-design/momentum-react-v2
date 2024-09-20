@@ -21,7 +21,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
     noLoop?: boolean;
-    isInitiallyRoving?: boolean;
+    updateFocusBlocked?: boolean;
     supressFocus?: boolean;
     isFocusedWithin?: boolean;
   };
@@ -43,13 +43,15 @@ const useOrientationBasedKeyboardNavigation = (
 ): IUseOrientationBasedKeyboardNavigationReturn => {
   const { listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
   const [currentFocus, setCurrentFocus] = useState<number>(-1);
-  const [isInitiallyRoving, setIsInitiallyRoving] = useState<boolean>(true);
+  const [updateFocusBlocked, setUpdateFocusBlocked] = useState<boolean>(true);
 
   const { isFocusedWithin, focusWithinProps } = useFocusWithinState({});
 
+  // When the initial focus changes, we temporarily disable the automatic focus of the currentFocus
+  // Once that new focused item has rendered, it will re-enable the automatic focus
   useLayoutEffect(() => {
     if (!isFocusedWithin) {
-      setIsInitiallyRoving(true);
+      setUpdateFocusBlocked(true);
       setCurrentFocus(initialFocus);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,12 +63,12 @@ const useOrientationBasedKeyboardNavigation = (
       currentFocus,
       noLoop,
       setCurrentFocus,
-      setIsInitiallyRoving,
-      isInitiallyRoving,
+      setUpdateFocusBlocked,
+      updateFocusBlocked,
       isFocusedWithin,
       ...contextProps,
     }),
-    [listSize, currentFocus, noLoop, isInitiallyRoving, isFocusedWithin, contextProps]
+    [listSize, currentFocus, noLoop, updateFocusBlocked, isFocusedWithin, contextProps]
   );
 
   const { keyboardProps } = useKeyboard({

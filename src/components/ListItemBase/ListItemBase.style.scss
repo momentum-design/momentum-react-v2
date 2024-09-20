@@ -14,16 +14,6 @@
     overflow: visible;
   }
 
-  &:empty {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
-  }
-
   &[data-interactive='true'] {
     cursor: pointer;
 
