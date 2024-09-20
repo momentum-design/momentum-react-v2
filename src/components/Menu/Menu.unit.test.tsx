@@ -180,8 +180,8 @@ describe('<Menu />', () => {
       expect(element.getAttribute('data-shape')).toBe(itemShape);
     });
 
-    it('should have rendered separators between sections when hasSeparators is true', () => {
-      expect.assertions(2);
+    it('should have rendered separators between groups when hasSeparators is true', () => {
+      expect.assertions(3);
 
       const { queryAllByRole } = render(
         <Menu {...defaultProps} hasSeparators>
@@ -189,21 +189,28 @@ describe('<Menu />', () => {
             <Item key="one">One</Item>
             <Item key="two">Two</Item>
           </Section>
-          <Section title="Section 2" key="s2" aria-label="section2">
+          <SelectionGroup title="Selection 2" key="s2" aria-label="section2" selectionMode="single">
             <Item key="three">Three</Item>
-            <Item key="four">Four</Item>
+            <Item key="foud">Four</Item>
+          </SelectionGroup>
+          <Section title="Section 3" key="s3" aria-label="section3">
+            <Item key="five">Five</Item>
+            <Item key="six">Six</Item>
           </Section>
         </Menu>
       );
 
       const separators = queryAllByRole('separator');
-      expect(separators.length).toBe(1);
+      expect(separators.length).toBe(2);
       expect(separators[0].outerHTML).toEqual(
+        '<div role="separator" class="md-menu-separator"></div>'
+      );
+      expect(separators[1].outerHTML).toEqual(
         '<div role="separator" class="md-menu-separator"></div>'
       );
     });
 
-    it('should not have rendered separators between sections when hasSeparators is false', () => {
+    it('should not have rendered separators between groups when hasSeparators is false', () => {
       expect.assertions(1);
 
       const { queryAllByRole } = render(
@@ -212,9 +219,13 @@ describe('<Menu />', () => {
             <Item key="one">One</Item>
             <Item key="two">Two</Item>
           </Section>
-          <Section title="Section 2" key="s2" aria-label="section2">
+          <SelectionGroup title="Selection 2" key="s2" aria-label="section2" selectionMode="single">
             <Item key="three">Three</Item>
-            <Item key="four">Four</Item>
+            <Item key="foud">Four</Item>
+          </SelectionGroup>
+          <Section title="Section 3" key="s3" aria-label="section3">
+            <Item key="five">Five</Item>
+            <Item key="six">Six</Item>
           </Section>
         </Menu>
       );
