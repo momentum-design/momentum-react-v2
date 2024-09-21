@@ -28,6 +28,19 @@ export default {
       },
     },
   },
+  onSelectionChange: {
+    action: 'onSelectionChange',
+    description: 'Handler that is called when an item/items is selected.',
+    table: {
+      category: 'React Aria - Menu',
+      type: {
+        summary: "(keys: 'all' | Set<Key>) => void",
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   items: {
     defaultValue: [],
     description:
@@ -101,28 +114,40 @@ export default {
       },
     },
   },
-  isTickOnLeftSide: {
-    defaultValue: false,
-    description: 'Wether we should display the tick on the left side.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: 'false',
-      },
-    },
-  },
-  'ariaLabelledby': {
-    description:
-      'The aria-labelledby for the menu wrapper',
+  ariaLabelledby: {
+    description: 'The aria-labelledby for the menu wrapper',
     control: { type: 'text' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: 'undefined',
+    },
+  },
+  selectionMode: {
+    description: 'Default selection mode for the whole menu',
+    default: undefined,
+    control: { type: 'select' },
+    options: ['single', 'multiple', 'none'],
+    table: {
+      type: {
+        summary: "'single' | 'multiple' | 'none'",
+      },
+      defaultValue: 'multiple',
+    },
+  },
+  tickPosition: {
+    defaultValue: DEFAULTS.TICK_POSITION,
+    description: 'Position of the tick when selected, none when no tick',
+    control: { type: 'select' },
+    options: ['left', 'right', 'none', undefined],
+    table: {
+      type: {
+        summary: "'left' | 'right' | 'none'",
+      },
+      defaultValue: {
+        summary: DEFAULTS.TICK_POSITION,
+      },
     },
   },
 };

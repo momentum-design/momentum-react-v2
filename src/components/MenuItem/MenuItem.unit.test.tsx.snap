@@ -150,7 +150,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           "disallowEmptySelection": undefined,
           "focusedKey": null,
           "isFocused": false,
-          "selectedKeys": Set {},
+          "selectedKeys": Set {
+            "$.0",
+          },
           "selectionMode": "none",
           "setFocused": [Function],
           "setFocusedKey": [Function],
@@ -165,7 +167,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
     aria-disabled={false}
     aria-label="0"
     aria-labelledby={null}
-    className="md-menu-item-wrapper"
+    className="md-menu-item-wrapper some-classname"
     data-key="$.0"
     isDisabled={false}
     isPadded={true}
@@ -196,7 +198,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           aria-disabled={false}
           aria-label="0"
           aria-labelledby={null}
-          className="md-menu-item-wrapper md-list-item-base-wrapper"
+          className="md-menu-item-wrapper some-classname md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
           data-interactive={true}
@@ -233,6 +235,21 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               Item 1
             </div>
           </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                className="md-menu-item-tick-icon"
+                name="check"
+                scale={16}
+                strokeColor="none"
+                weight="bold"
+              />
+            </div>
+          </ListItemBaseSection>
         </li>
       </FocusRing>
     </FocusRing>
@@ -240,7 +257,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
 </MenuItem>
 `;
 
-exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
+exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
 <MenuItem
   item={
     Object {
@@ -390,7 +407,9 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
           "disallowEmptySelection": undefined,
           "focusedKey": null,
           "isFocused": false,
-          "selectedKeys": Set {},
+          "selectedKeys": Set {
+            "$.0",
+          },
           "selectionMode": "none",
           "setFocused": [Function],
           "setFocusedKey": [Function],
@@ -468,8 +487,12 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
             <div
               data-position="start"
             >
-              <div
-                className="md-menu-item-tick-placeholder"
+              <Icon
+                className="md-menu-item-tick-icon"
+                name="check"
+                scale={16}
+                strokeColor="none"
+                weight="bold"
               />
             </div>
           </ListItemBaseSection>

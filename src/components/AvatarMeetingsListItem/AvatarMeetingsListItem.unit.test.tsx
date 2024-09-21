@@ -323,7 +323,7 @@ describe('<AvatarMeetingsListItem />', () => {
           <AvatarMeetingsListItem displayActions={displayActions} isMuted={isMuted} />
         )
       )
-        .find('Icon[name="audio-microphone-on-green-colored"]')
+        .find('Icon[name="microphone-on"]')
         .getDOMNode();
 
       expect(element).toBeDefined();

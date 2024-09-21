@@ -39,6 +39,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     isCombobox = DEFAULTS.ISCOMBOBOX,
     isComboboxExpanded,
     onKeyDown: providedKeydown,
+    searchIconProps,
   } = props;
 
   if (isCombobox && isComboboxExpanded === undefined) {
@@ -124,7 +125,8 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
             weight="bold"
             scale={ICON_HEIGHT_MAPPING[height]}
             className={STYLE.search}
-            name={'search'}
+            name="search"
+            {...searchIconProps}
           />
         )}
       </div>

@@ -43,29 +43,33 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            color="Transparent"
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
+                <div
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
+                />
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
               />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -118,49 +122,54 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            buttonGroup={<ButtonGroup />}
+            color="Transparent"
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
-              />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-end-section"
-            position="end"
-          >
-            <div
-              className="md-meeting-list-item-end-section"
-              data-position="end"
-            >
-              <ButtonGroup>
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
                 <div
-                  className="md-button-group-wrapper"
-                  data-compressed={false}
-                  data-orientation="horizontal"
-                  data-round={false}
-                  data-separator={false}
-                  data-spaced={false}
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
                 />
-              </ButtonGroup>
-            </div>
-          </ListItemBaseSection>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
+              />
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-end-section"
+              position="end"
+            >
+              <div
+                className="md-meeting-row-content-end-section"
+                data-position="end"
+              >
+                <ButtonGroup>
+                  <div
+                    className="md-button-group-wrapper"
+                    data-compressed={false}
+                    data-orientation="horizontal"
+                    data-round={false}
+                    data-separator={false}
+                    data-spaced={false}
+                  />
+                </ButtonGroup>
+              </div>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -213,29 +222,33 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            color="Transparent"
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
+                <div
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
+                />
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
               />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -288,29 +301,33 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            color="AcceptedActive"
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="AcceptedActive"
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
+                <div
+                  className="md-meeting-row-content-border"
+                  data-color="AcceptedActive"
+                />
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-AcceptedActive"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-AcceptedActive"
+                data-position="middle"
               />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-AcceptedActive"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-AcceptedActive"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -365,29 +382,33 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            color="Transparent"
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
+                <div
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
+                />
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
               />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -444,58 +465,67 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section"
-            position="start"
-          >
-            <div
-              className="md-meeting-list-item-start-section"
-              data-position="start"
-            >
-              <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
-              />
+          <MeetingRowContent
+            color="Transparent"
+            image={
               <Icon
                 name="placeholder"
-                scale={12}
-                strokeColor="none"
-                weight="bold"
+              />
+            }
+          >
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section"
+              position="start"
+            >
+              <div
+                className="md-meeting-row-content-start-section"
+                data-position="start"
               >
                 <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                  role="img"
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
+                />
+                <Icon
+                  name="placeholder"
+                  scale={12}
+                  strokeColor="none"
+                  weight="bold"
                 >
-                  <svg
+                  <div
                     aria-hidden="true"
-                    className=""
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="placeholder"
-                    fill="currentColor"
-                    height="100%"
-                    style={
-                      Object {
-                        "stroke": "none",
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className=""
+                      data-autoscale={false}
+                      data-scale={12}
+                      data-test="placeholder"
+                      fill="currentColor"
+                      height="100%"
+                      style={
+                        Object {
+                          "stroke": "none",
+                        }
                       }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
-                  />
-                </div>
-              </Icon>
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+                      viewBox="0, 0, 32, 32"
+                      width="100%"
+                    />
+                  </div>
+                </Icon>
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
+              />
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -549,29 +579,34 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
           role="listitem"
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            color="Transparent"
+            isDisabled={true}
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
+                <div
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
+                />
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
               />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>
@@ -638,29 +673,33 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
           }
           tabIndex={0}
         >
-          <ListItemBaseSection
-            className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-            position="start"
+          <MeetingRowContent
+            color="Transparent"
           >
-            <div
-              className="md-meeting-list-item-start-section md-meeting-list-item-start-section-no-image"
-              data-position="start"
+            <ListItemBaseSection
+              className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+              position="start"
             >
               <div
-                className="md-meeting-list-item-border"
-                data-color="Transparent"
+                className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                data-position="start"
+              >
+                <div
+                  className="md-meeting-row-content-border"
+                  data-color="Transparent"
+                />
+              </div>
+            </ListItemBaseSection>
+            <ListItemBaseSection
+              className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+              position="middle"
+            >
+              <div
+                className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                data-position="middle"
               />
-            </div>
-          </ListItemBaseSection>
-          <ListItemBaseSection
-            className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-            position="middle"
-          >
-            <div
-              className="md-meeting-list-item-middle-section md-meeting-list-item-middle-section-Transparent"
-              data-position="middle"
-            />
-          </ListItemBaseSection>
+            </ListItemBaseSection>
+          </MeetingRowContent>
         </li>
       </FocusRing>
     </FocusRing>

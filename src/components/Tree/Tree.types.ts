@@ -5,6 +5,7 @@ import {
   MutableRefObject,
   ReactNode,
 } from 'react';
+import { ItemSelection, UseItemSelectedProps } from '../../hooks/useItemSelected';
 
 /**
  * The key codes used to navigate the tree.
@@ -40,7 +41,8 @@ export interface TreeNode {
    */
   children: Array<TreeNode>;
   /**
-   * Default open state of the node.
+   * Default open state of the node
+   * @default true
    */
   isOpenByDefault?: boolean;
   /**
@@ -96,7 +98,9 @@ export type TreeIdNodeMap = Map<TreeNodeId, TreeNodeRecord>;
 /**
  * The props of the Tree component.
  */
-export interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface Props
+  extends Partial<UseItemSelectedProps<TreeNodeId>>,
+    DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -127,6 +131,10 @@ export interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
    * The initial tree structure
    *
    * It is used to build an internal tree for navigation and follow open/close states.
+   *
+   * The tree can be updated dynamically via `treeStructure`, but `isOpen` will be migrated from the old tree:
+   * If the node exists the both old and new tree then the value used from the old tree otherwise
+   * falls back to the `isOpenByDefault ?? true`
    */
   treeStructure: TreeRoot;
 
@@ -151,6 +159,16 @@ export interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
   excludeTreeRoot?: boolean;
 
   /**
+   * The selection mode of the tree nodes.
+   *
+   * Note: When user click to select a node and `selectableNodes` is `any` and the node is not a leaf node, the node will be opened/closed.
+   * WCAG Tree patter sample implementation has the same behavior.
+   *
+   * @see {@link https://www.w3.org/WAI/ARIA/apg/patterns/treeview/ WCAG Tree Pattern}
+   */
+  selectableNodes?: 'leafOnly' | 'any';
+
+  /**
    * Set of functions to communicate with virtualized tree and sync states.
    */
   virtualTreeConnector?: {
@@ -170,31 +188,68 @@ export interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
      */
     setNodeOpen?: (id: TreeNodeId, isOpen: boolean) => void | Promise<void>;
   };
+
+  /**
+   * Called when a node's open / close state is toggled.
+   *
+   * @param id
+   * @param isOpen
+   */
+  onToggleNode?: (id: TreeNodeId, isOpen: boolean) => void;
 }
 
+/**
+ * Props of the virtualized tree hook
+ * @internal
+ */
 export interface UseVirtualTreeNavigationProps extends Pick<Props, 'virtualTreeConnector'> {
+  /**
+   * The active node id in the tree.
+   */
   activeNodeId: TreeNodeId;
+  /**
+   * The reference of the tree DOM element.
+   */
   treeRef: MutableRefObject<HTMLDivElement>;
 }
+
+export interface NodeAriaProps {
+  /**
+   * Additional attributes for the tree node.
+   *
+   * It is used when the tree is rendered flat and needs to provide additional
+   * attributes to re-build the semantic structure of the tree.
+   */
+  nodeProps: Partial<HTMLAttributes<HTMLElement>>;
+  /**
+   * Additional attributes for the node connection group.
+   *
+   * It is used when the tree is rendered flat and needs to provide
+   * a group element to re-build the semantic structure of the tree.
+   */
+  groupProps: Partial<HTMLAttributes<HTMLElement>>;
+}
+
+/**
+ * Empty props object when the node is not found.
+ */
+type EmptyNodeAriaProps = Record<string, never>;
 
 /**
  * The context value of the Tree component.
  */
-export interface TreeContextValue extends Pick<Props, 'shouldNodeFocusBeInset' | 'isRenderedFlat'> {
+export interface TreeContextValue
+  extends Pick<Props, 'shouldNodeFocusBeInset' | 'isRenderedFlat' | 'selectableNodes'> {
   /**
    * The active node id in the tree.
    */
   activeNodeId: TreeNodeId;
   /**
    * Get semantic attributes of the tree node.
+   * It returns with empty object when the node is not found.
    * @param id unique identifier of the tree node
    */
-  getNodeProps: (id: TreeNodeId) => Partial<HTMLAttributes<HTMLElement>>;
-  /**
-   * Get additional attributes of the tree node group.
-   * @param id unique identifier of the tree node
-   */
-  getNodeGroupProps: (id: TreeNodeId) => Partial<HTMLAttributes<HTMLElement>>;
+  getNodeAriaProps: (id: TreeNodeId) => NodeAriaProps | EmptyNodeAriaProps;
   /**
    * Get the details of the tree node.
    * @param id unique identifier of the tree node
@@ -210,4 +265,38 @@ export interface TreeContextValue extends Pick<Props, 'shouldNodeFocusBeInset' |
    * @param id unique identifier of the tree node
    */
   toggleTreeNode: (id: TreeNodeId) => Promise<void>;
+  /**
+   * The item selection state of the tree nodes.
+   */
+  itemSelection: ItemSelection<TreeNodeId>;
+  /**
+   * True when the focus is inside the tree component before the tree structure changed,
+   * otherwise false
+   */
+  isFocusWithin: boolean;
+}
+
+/**
+ * Imperative tree component API
+ *
+ * Accessible through the ref prop of the Tree component.
+ */
+export interface TreeRefObject
+  extends Pick<TreeContextValue, 'setActiveNodeId' | 'toggleTreeNode'> {
+  /**
+   * DOM reference of the tree component.
+   */
+  treeRef: MutableRefObject<HTMLDivElement>;
+  /**
+   * Toggle a single item selection
+   */
+  toggleSelection: ItemSelection<TreeNodeId>['toggle'];
+  /**
+   * Update selection with new list of selected items
+   */
+  updateSelection: ItemSelection<TreeNodeId>['update'];
+  /**
+   * Clear all selection
+   */
+  clearSelection: ItemSelection<TreeNodeId>['clear'];
 }

@@ -18,7 +18,6 @@ const DEFAULTS = {
   IS_PADDED: false,
   SHAPE: SHAPES.rectangle,
   ROLE: 'treeitem',
-  SHOULD_ITEM_FOCUS_BE_INSET: false,
   INTERACTIVE: true,
 };
 

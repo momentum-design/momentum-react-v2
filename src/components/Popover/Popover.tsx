@@ -108,10 +108,15 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
 
   const popoverSetInstance = useCallback(
     (instance?: PopoverInstance) => {
+      if (instance) {
+        // initialize to whatever prop value is
+        // from now on, will be controlled by hideOnBlur plugin
+        instance.shouldFocusTrigger = focusBackOnTrigger;
+      }
       popoverInstance.current = instance;
       setInstance?.(instance);
     },
-    [setInstance]
+    [setInstance, focusBackOnTrigger]
   );
 
   const handleOnCloseButtonClick = useCallback(() => {
@@ -121,12 +126,15 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   // needs special handling since FocusScope doesn't work with the Popover from Tippy
   // needs to focus back to the reference item when the popover is completely hidden
   const handleOnPopoverHidden = useCallback(() => {
-    if (focusBackOnTrigger) {
+    // When the popover hides, the focus goes to the next focusable element by default. Except if focusBackOnTrigger popover prop is true AND shouldFocusTrigger (determined by hideOnBlurPlugin) is true.
+    // shouldFocusTrigger is true when the focusout event has no relatedTarget, that is, focusOut was triggered by Esc or Click.
+
+    if (focusBackOnTrigger && popoverInstance?.current?.shouldFocusTrigger) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       popoverInstance.current?.reference?.focus();
     }
-  }, [focusBackOnTrigger]);
+  }, [focusBackOnTrigger, popoverInstance?.current?.shouldFocusTrigger]);
 
   useEffect(() => {
     firstFocusElement?.focus();

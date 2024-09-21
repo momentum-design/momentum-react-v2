@@ -7,7 +7,8 @@ import userEvent from '@testing-library/user-event';
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
 import TreeNodeBase from '../TreeNodeBase';
-import { convertNestedTree2MappedTree, mapTree } from './Tree.utils';
+import { convertNestedTree2MappedTree, getTreeRootId, mapTree } from './Tree.utils';
+import { act } from 'react-test-renderer';
 
 const getSampleTree = () => {
   // prettier-ignore
@@ -37,6 +38,16 @@ describe('<Tree />', () => {
   const commonProps = {
     treeStructure: tNode('root', true, [tNode('1'), tNode('2')]),
   };
+
+  // Remove noisy console.warn
+  beforeAll(() => {
+    jest.spyOn(console, 'warn').mockImplementation(() => {
+      /**/
+    });
+  });
+  afterAll(() => {
+    jest.restoreAllMocks();
+  });
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
@@ -98,6 +109,22 @@ describe('<Tree />', () => {
   });
 
   describe('attributes', () => {
+    it('should have ref with imperative tree api', () => {
+      expect.assertions(1);
+      const ref = React.createRef<any>();
+
+      render(<Tree ref={ref} {...commonProps} />);
+
+      expect(ref.current).toEqual({
+        clearSelection: expect.any(Function),
+        toggleSelection: expect.any(Function),
+        updateSelection: expect.any(Function),
+        setActiveNodeId: expect.any(Function),
+        toggleTreeNode: expect.any(Function),
+        treeRef: expect.any(Object),
+      });
+    });
+
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
@@ -157,16 +184,33 @@ describe('<Tree />', () => {
 
       expect(element.getAttribute('aria-labelledby')).toBe(labelBy);
     });
+
+    it.each`
+      selectionMode          | valueOfAriaMultiselectable
+      ${'none' as const}     | ${null}
+      ${'single' as const}   | ${'false'}
+      ${'multiple' as const} | ${'true'}
+    `(
+      'should have provided style when style is provided',
+      ({ selectionMode, valueOfAriaMultiselectable }) => {
+        expect.assertions(1);
+
+        const container = mount(<Tree selectionMode={selectionMode} {...commonProps} />);
+        const element = container.find(Tree).getDOMNode();
+
+        expect(element.getAttribute('aria-multiselectable')).toBe(valueOfAriaMultiselectable);
+      }
+    );
   });
 
   describe('tree navigation', () => {
     it.each(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'])(
       'should do nothing when tree structure is empty and user presses %s',
-      (key) => {
+      async (key) => {
         render(<Tree treeStructure={{}} excludeTreeRoot={false} />);
         const focusedElement = document.activeElement;
 
-        userEvent.keyboard(`{${key}}`);
+        await userEvent.keyboard(`{${key}}`);
 
         expect(document.activeElement).toBe(focusedElement);
       }
@@ -263,11 +307,12 @@ describe('<Tree />', () => {
     });
 
     it('should handle left/right arrow keys correctly', async () => {
-      expect.assertions(16);
+      expect.assertions(34);
       const user = userEvent.setup();
       const tree = getSampleTree();
       const setNodeOpen = jest.fn();
       const scrollToNode = jest.fn();
+      const onToggleNode = jest.fn();
 
       const { getByTestId } = render(
         <Tree
@@ -277,6 +322,7 @@ describe('<Tree />', () => {
             setNodeOpen,
             scrollToNode,
           }}
+          onToggleNode={onToggleNode}
         >
           {mapTree(
             convertNestedTree2MappedTree(tree),
@@ -301,13 +347,19 @@ describe('<Tree />', () => {
         { nextFocusedNode: '1.1.1', toggleNode: false },
       ];
       for (const { nextFocusedNode, toggleNode } of nodeOrder) {
+        expect(onToggleNode).not.toBeCalled();
         await user.keyboard('{ArrowRight}');
         expect(getByTestId(nextFocusedNode)).toHaveFocus();
 
         if (toggleNode) {
           expect(setNodeOpen).toHaveBeenCalledWith(nextFocusedNode, true);
-          expect(scrollToNode).toHaveBeenNthCalledWith(1, nextFocusedNode);
+          expect(scrollToNode).not.toHaveBeenNthCalledWith(1, nextFocusedNode);
+          expect(onToggleNode).toHaveBeenCalledWith(nextFocusedNode, true);
+        } else {
+          expect(onToggleNode).not.toBeCalled();
         }
+
+        onToggleNode.mockReset();
       }
 
       const reversNodeOrder = [
@@ -319,14 +371,53 @@ describe('<Tree />', () => {
       ];
 
       for (const { nextFocusedNode, toggleNode } of reversNodeOrder) {
+        expect(onToggleNode).not.toBeCalled();
         await user.keyboard('{ArrowLeft}');
         expect(getByTestId(nextFocusedNode)).toHaveFocus();
 
         if (toggleNode) {
           expect(setNodeOpen).toHaveBeenCalledWith(nextFocusedNode, false);
-          expect(scrollToNode).toHaveBeenCalledWith(nextFocusedNode);
+          expect(scrollToNode).not.toHaveBeenCalledWith(nextFocusedNode);
+          expect(onToggleNode).toHaveBeenCalledWith(nextFocusedNode, false);
+        } else {
+          expect(onToggleNode).not.toBeCalled();
         }
+
+        onToggleNode.mockReset();
       }
+    });
+
+    it('should exclude interactable elements with preserved-tabindex form navigation ', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { getByTestId, getByText } = render(
+        <Tree treeStructure={{ id: 'root', children: [] }} excludeTreeRoot={false}>
+          <TreeNodeBase nodeId="root" data-testid="root">
+            {() => (
+              <>
+                <button tabIndex={-1}>button 1</button>
+                <button tabIndex={-1} className="md-nav-preserve-tabindex">
+                  button 2
+                </button>
+                <div className="md-nav-preserve-tabindex">
+                  <button tabIndex={-1}>button 3</button>
+                </div>
+              </>
+            )}
+          </TreeNodeBase>
+        </Tree>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('root')).toHaveFocus();
+      await user.tab();
+      // active root node change the tabindex for button 1...
+      expect(getByText('button 1')).toHaveFocus();
+      // ...but not for button 2 and 3
+      await user.tab();
+      expect(document.body).toHaveFocus();
     });
   });
 
@@ -537,16 +628,17 @@ describe('<Tree />', () => {
   });
 
   describe('dynamically changing tree', () => {
-    const getTreeComponent = (tree) => {
+    const getTreeComponent = (tree, excludeTreeRoot = false) => {
       return (
-        <Tree treeStructure={tree} excludeTreeRoot={false}>
+        <Tree treeStructure={tree} excludeTreeRoot={excludeTreeRoot}>
           {mapTree(
             convertNestedTree2MappedTree(tree),
-            (node) => (
-              <TreeNodeBase key={node.id.toString()} nodeId={node.id} data-testid={node.id}>
-                {() => node.id}
-              </TreeNodeBase>
-            ),
+            (node) =>
+              excludeTreeRoot && node.id === 'root' ? null : (
+                <TreeNodeBase key={node.id.toString()} nodeId={node.id} data-testid={node.id}>
+                  {() => node.id}
+                </TreeNodeBase>
+              ),
             { excludeRootNode: false }
           )}
         </Tree>
@@ -560,7 +652,14 @@ describe('<Tree />', () => {
       expect(() => rerender(getTreeComponent(tNode('root', true, [])))).not.toThrow();
     });
 
-    it('should activate the first node in the tree after re-render', async () => {
+    it('should re-rendered without errors with empty tree', () => {
+      const tree = getSampleTree();
+      const { rerender } = render(getTreeComponent(tree));
+
+      expect(() => rerender(getTreeComponent({}, true))).not.toThrow();
+    });
+
+    it('should activate the first node in the tree after re-rendered with the new tree', async () => {
       const tree = getSampleTree();
       const { rerender, getByTestId } = render(getTreeComponent(tree));
 
@@ -576,7 +675,78 @@ describe('<Tree />', () => {
       expect(getByTestId('new-root')).toHaveFocus();
     });
 
-    it('should be possible to a new node after re-render', async () => {
+    it('should remain active the last active node if it does exist in the new tree', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(getTreeComponent(tree));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.1')).toHaveFocus();
+
+      const newTree = tNode('new-root', true, [tNode('new-1'), tNode('2.1')]);
+      rerender(getTreeComponent(newTree));
+
+      expect(getByTestId('2.1')).toHaveFocus();
+    });
+
+    it('should activate the closest parent based on the old tree', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(getTreeComponent(tree));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.2.1')).toHaveFocus();
+
+      const newTree = tNode('new-root', true, [tNode('new-1'), tNode('2')]);
+      rerender(getTreeComponent(newTree));
+
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should move the focus to the parent node when the previous active node exists but hidden in the new tree', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(getTreeComponent(tree));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.2.1')).toHaveFocus();
+
+      const newTree = tNode('new-root', true, [
+        tNode('new-1'),
+        tNode('2', true, [tNode('new-2.2', false, [tNode('2.2.1')])]),
+      ]);
+      rerender(getTreeComponent(newTree));
+
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should focus on nothing when the previous active node exists but hidden in the new tree but the root excluded', async () => {
+      const tree = getSampleTree();
+      const { rerender, queryByText, getByTestId } = render(getTreeComponent(tree, true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.1')).toHaveFocus();
+
+      const newTree = tNode('new-root', false, [tNode('new-1'), tNode('2.1')]);
+      rerender(getTreeComponent(newTree));
+
+      expect(queryByText('2.1')).not.toBeInTheDocument();
+      expect(queryByText('root')).not.toBeInTheDocument();
+    });
+
+    it('navigation should work after re-render with the new tree', async () => {
       const tree = getSampleTree();
       const { rerender, getByTestId } = render(getTreeComponent(tree));
 
@@ -594,6 +764,222 @@ describe('<Tree />', () => {
       await userEvent.keyboard('{ArrowDown}');
 
       expect(getByTestId('new-2')).toHaveFocus();
+    });
+
+    it('should keep the open state of the tree between updates', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree()));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1')).toHaveFocus();
+      await userEvent.keyboard('{ArrowRight}');
+
+      rerender(getTreeComponent(getSampleTree()));
+
+      // can move to 1.1 because it was opened before update
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+    });
+
+    it('should select the next visible child of the root when excludeTreeRoot true', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(getTreeComponent(nextTree, true));
+
+      // Focus should move to node '2'
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should autofocus after update when the focused element was inside of the tree', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(getTreeComponent(nextTree, true));
+
+      // Focus should move to node '2'
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should not autofocus after update when the focused element was outside of the tree', async () => {
+      const renderTreeWithButton = (tree) => (
+        <div>
+          {getTreeComponent(tree, true)}
+          <button>button</button>
+        </div>
+      );
+      const { rerender, getByTestId, getByText } = render(renderTreeWithButton(getSampleTree()));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      // move focus to the button
+      getByText('button').focus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(renderTreeWithButton(nextTree));
+
+      // Focus should remain on the button
+      expect(getByText('button')).toHaveFocus();
+    });
+  });
+
+  describe('selection', () => {
+    const getTreeComponent = (tree, { ref, ...props }: Partial<TreeProps> = {}) => {
+      return (
+        <Tree treeStructure={tree} excludeTreeRoot={false} {...props} ref={ref as any}>
+          {mapTree(
+            convertNestedTree2MappedTree(tree),
+            (node) => (
+              <TreeNodeBase key={node.id.toString()} nodeId={node.id} data-testid={node.id}>
+                {() => node.id}
+              </TreeNodeBase>
+            ),
+            { excludeRootNode: false }
+          )}
+        </Tree>
+      );
+    };
+
+    describe('with keyboard navigation', () => {
+      it.each`
+        isRequired | selectionMode | selectableNodes | message             | onChangeCalls
+        ${false}   | ${'none'}     | ${'any'}        | ${'neve called'}    | ${[]}
+        ${false}   | ${'none'}     | ${'leafOnly'}   | ${'never called'}   | ${[]}
+        ${false}   | ${'single'}   | ${'any'}        | ${'called 4 times'} | ${[[['2']], [['2.1']], [[]], [['2']]]}
+        ${false}   | ${'single'}   | ${'leafOnly'}   | ${'called 2 times'} | ${[[['2.1']], [[]]]}
+        ${false}   | ${'multiple'} | ${'any'}        | ${'called 4 times'} | ${[[['2']], [['2', '2.1']], [['2']], [[]]]}
+        ${false}   | ${'multiple'} | ${'leafOnly'}   | ${'called 2 times'} | ${[[['2.1']], [[]]]}
+        ${true}    | ${'none'}     | ${'any'}        | ${'neve called'}    | ${[]}
+        ${true}    | ${'none'}     | ${'leafOnly'}   | ${'never called'}   | ${[]}
+        ${true}    | ${'single'}   | ${'any'}        | ${'called 4 times'} | ${[[['2']], [['2.1']], [['2']]]}
+        ${true}    | ${'single'}   | ${'leafOnly'}   | ${'called 2 times'} | ${[[['2.1']]]}
+        ${true}    | ${'multiple'} | ${'any'}        | ${'called 4 times'} | ${[[['2']], [['2', '2.1']], [['2']]]}
+        ${true}    | ${'multiple'} | ${'leafOnly'}   | ${'called 2 times'} | ${[[['2.1']]]}
+      `(
+        'should $message onChange when Space key pressed, selectionMode is $selectionMode and selectableNodes is $selectableNodes',
+        async ({ isRequired, selectionMode, selectableNodes, onChangeCalls }) => {
+          const onSelectionChange = jest.fn();
+          const tree = getSampleTree();
+
+          render(
+            getTreeComponent(tree, {
+              isRequired,
+              selectionMode,
+              selectableNodes,
+              onSelectionChange,
+            })
+          );
+
+          await userEvent.tab();
+          await userEvent.keyboard('{ArrowDown}');
+          await userEvent.keyboard('{ArrowDown}');
+          await userEvent.keyboard('{Space}'); // select 2
+          await userEvent.keyboard('{ArrowDown}');
+          await userEvent.keyboard('{Space}'); // select 2.1
+          await userEvent.keyboard('{Space}'); // de-select 2.1
+          await userEvent.keyboard('{ArrowUp}');
+          await userEvent.keyboard('{Space}'); // de-select 2
+
+          expect(onSelectionChange.mock.calls).toEqual(onChangeCalls);
+        }
+      );
+    });
+
+    describe('with mouse navigation', () => {
+      it.each`
+        isRequired | selectionMode | selectableNodes | message             | onChangeCalls
+        ${false}   | ${'none'}     | ${'any'}        | ${'neve called'}    | ${[]}
+        ${false}   | ${'none'}     | ${'leafOnly'}   | ${'never called'}   | ${[]}
+        ${false}   | ${'single'}   | ${'any'}        | ${'called 4 times'} | ${[[['2.1']], [[]], [['2']], [[]]]}
+        ${false}   | ${'single'}   | ${'leafOnly'}   | ${'called 2 times'} | ${[[['2.1']], [[]]]}
+        ${false}   | ${'multiple'} | ${'any'}        | ${'called 3 times'} | ${[[['2.1']], [[]], [['2']], [[]]]}
+        ${false}   | ${'multiple'} | ${'leafOnly'}   | ${'called 2 times'} | ${[[['2.1']], [[]]]}
+        ${true}    | ${'none'}     | ${'any'}        | ${'neve called'}    | ${[]}
+        ${true}    | ${'none'}     | ${'leafOnly'}   | ${'never called'}   | ${[]}
+        ${true}    | ${'single'}   | ${'any'}        | ${'called 2 times'} | ${[[['2.1']], [['2']]]}
+        ${true}    | ${'single'}   | ${'leafOnly'}   | ${'called once'}    | ${[[['2.1']]]}
+        ${true}    | ${'multiple'} | ${'any'}        | ${'called 3 times'} | ${[[['2.1']], [['2.1', '2']], [['2.1']]]}
+        ${true}    | ${'multiple'} | ${'leafOnly'}   | ${'called once'}    | ${[[['2.1']]]}
+      `(
+        'should $message onChange when Mouse Click pressed, selectionMode is $selectionMode and selectableNodes is $selectableNodes',
+        async ({ isRequired, selectionMode, selectableNodes, onChangeCalls }) => {
+          const onSelectionChange = jest.fn();
+          const tree = getSampleTree();
+
+          const { getByText } = render(
+            getTreeComponent(tree, {
+              isRequired,
+              selectionMode,
+              selectableNodes,
+              onSelectionChange,
+            })
+          );
+
+          // Click on the lowest level node first because parent nodes are closing when they are selected;
+          await userEvent.click(getByText('2.1'));
+          await userEvent.click(getByText('2.1'));
+          await userEvent.click(getByText('2'));
+          await userEvent.click(getByText('2'));
+
+          expect(onSelectionChange.mock.calls).toEqual(onChangeCalls);
+        }
+      );
+    });
+
+    it('should update selected items based on the selectionMode', async () => {
+      const tree = getSampleTree();
+      const { rerender, getByTestId } = render(
+        getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['1', '2.2'] })
+      );
+
+      expect(getByTestId('1')).toHaveAttribute('aria-selected', 'true');
+      expect(getByTestId('2.2')).toHaveAttribute('aria-selected', 'true');
+
+      rerender(getTreeComponent(tree, { selectionMode: 'none', selectedItems: ['2.1', '4'] }));
+
+      expect(getByTestId('1')).not.toHaveAttribute('aria-selected', 'true');
+      expect(getByTestId('2.2')).not.toHaveAttribute('aria-selected', 'true');
+    });
+
+    describe('controlled tree selection', () => {
+      it('should change selection based on the selectedItems prop', async () => {
+        const tree = getSampleTree();
+        const { rerender, getByTestId } = render(
+          getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['1', '2.2'] })
+        );
+
+        expect(getByTestId('1')).toHaveAttribute('aria-selected', 'true');
+        expect(getByTestId('2.2')).toHaveAttribute('aria-selected', 'true');
+
+        rerender(
+          getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['2.1', '4'] })
+        );
+
+        expect(getByTestId('1')).not.toHaveAttribute('aria-selected', 'true');
+        expect(getByTestId('2.2')).not.toHaveAttribute('aria-selected', 'true');
+
+        expect(getByTestId('2.1')).toHaveAttribute('aria-selected', 'true');
+        expect(getByTestId('4')).toHaveAttribute('aria-selected', 'true');
+      });
     });
   });
 });

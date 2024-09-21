@@ -198,7 +198,7 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
     }
   }
 >
-  <ul
+  <div
     role="presentation"
   >
     <span
@@ -212,7 +212,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
       aria-label="section"
       aria-labelledby="test-ID"
       className="md-menu-section-wrapper"
-      onKeyDown={[Function]}
       role="group"
     >
       <MenuItem
@@ -241,7 +240,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
             "wrapper": undefined,
           }
         }
-        itemIndex={0}
         key="$.0.0"
         state={
           Object {
@@ -425,7 +423,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
           data-key="$.0.0"
           isDisabled={false}
           isPadded={true}
-          itemIndex={0}
           onClick={[Function]}
           onDragStart={[Function]}
           onFocus={[Function]}
@@ -519,7 +516,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
             "wrapper": undefined,
           }
         }
-        itemIndex={1}
         key="$.0.1"
         state={
           Object {
@@ -703,7 +699,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
           data-key="$.0.1"
           isDisabled={false}
           isPadded={true}
-          itemIndex={1}
           onClick={[Function]}
           onDragStart={[Function]}
           onFocus={[Function]}
@@ -772,6 +767,6 @@ exports[`<MenuSection /> snapshot should match snapshot 1`] = `
         </ListItemBase>
       </MenuItem>
     </ul>
-  </ul>
+  </div>
 </MenuSection>
 `;

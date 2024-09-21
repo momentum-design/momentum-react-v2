@@ -1,7 +1,9 @@
 import { Key } from 'react';
 import { Node } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
+import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
 
+export type TickPosition = 'left' | 'right' | 'none';
 export interface Props<T> {
   /**
    * The contents of this menu item
@@ -17,9 +19,17 @@ export interface Props<T> {
    * Handler to be called when this element is selected
    */
   onAction?: (key: Key) => void;
-  
+
   /**
-   * Index for handling keyboard list navigation
+   * Position of the tick when selected, none when no tick
+   * @default right
    */
-  itemIndex?: number;
+  tickPosition?: TickPosition;
+
+  /**
+   * Custom class for overriding this component's CSS when selected.
+   */
+  classNameSelectedItem?: string;
+
+  itemSize?: ListItemBaseSize;
 }

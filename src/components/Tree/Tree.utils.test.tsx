@@ -1,10 +1,13 @@
 import React from 'react';
 import {
   convertNestedTree2MappedTree,
+  getFistActiveNode,
   getNextActiveNode,
   getTreeRootId,
+  isActiveNodeInDOM,
   isEmptyTree,
   mapTree,
+  migrateTreeState,
   toggleTreeNodeRecord,
   TreeContext,
   useTreeContext,
@@ -13,11 +16,12 @@ import {
   TreeNodeRecord,
   TreeIdNodeMap,
   ToggleTreeNode,
-  TreeNodeId,
   TreeContextValue,
+  TreeNodeId,
 } from './Tree.types';
 import { createTreeNode as tNode } from './test.utils';
 import { renderHook } from '@testing-library/react-hooks';
+import tree from './Tree';
 
 const createSingleLevelTree = () =>
   // prettier-ignore
@@ -253,13 +257,13 @@ describe('Tree utils', () => {
           expect(result).toEqual('2');
         });
 
-        it('should throw error when the tree has a loop', () => {
+        it('should return with the last node id before the loop restart when the tree has a loop', () => {
           const loopTree = createTree();
           loopTree.get('2').parent = '2.2.3';
 
-          expect(() =>
-            getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)
-          ).toThrow('Infinite loop detected in the tree navigation.');
+          expect(getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)).toEqual(
+            '2.2'
+          );
         });
       });
 
@@ -300,13 +304,11 @@ describe('Tree utils', () => {
         });
       });
 
-      it('should throw error when the tree has a loop', () => {
+      it('should return with the last node id before the loop restart when the tree has a loop', () => {
         const loopTree = createTree();
         loopTree.get('2.2').children.push('3');
 
-        expect(() => getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toThrow(
-          'Infinite loop detected in the tree navigation.'
-        );
+        expect(getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toEqual('3');
       });
     });
 
@@ -558,7 +560,7 @@ describe('Tree utils', () => {
             children: [],
             id: '<root>',
             index: 0,
-            isOpen: false,
+            isOpen: true,
             parent: undefined,
             isHidden: false,
             isLeaf: true,
@@ -575,24 +577,24 @@ describe('Tree utils', () => {
       // prettier-ignore
       const expected: Array<[TreeNodeId, TreeNodeRecord]> = [
         ['<root>', { children: ['0', '1', '2', '3', '4'], id: '<root>', index: 0, isHidden: false, isLeaf: false, isOpen: true, level: 0, parent: undefined },],
-        ['0',        { children: [], id: '0', index: 0, isHidden: false, isLeaf: true, isOpen: false, level: 1, parent: '<root>' },],
+        ['0',        { children: [], id: '0', index: 0, isHidden: false, isLeaf: true, isOpen: true, level: 1, parent: '<root>' },],
         ['1',        { children: ['1.1', '1.2'], id: '1', index: 1, isHidden: false, isLeaf: false, isOpen: false, level: 1, parent: '<root>'}, ],
         ['1.1',      { children: ['1.1.1', '1.1.2'], id: '1.1', index: 0, isHidden: true, isLeaf: false, isOpen: true, level: 2, parent: '1', },],
-        ['1.1.1',    { children: [], id: '1.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '1.1', }, ],
-        ['1.1.2',    { children: [], id: '1.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '1.1', }, ],
-        ['1.2',      { children: [], id: '1.2', index: 1, isHidden: true, isLeaf: true, isOpen: false, level: 2, parent: '1', }, ],
+        ['1.1.1',    { children: [], id: '1.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '1.1', }, ],
+        ['1.1.2',    { children: [], id: '1.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '1.1', }, ],
+        ['1.2',      { children: [], id: '1.2', index: 1, isHidden: true, isLeaf: true, isOpen: true, level: 2, parent: '1', }, ],
         ['2',        { children: ['2.1', '2.2'], id: '2', index: 2, isHidden: false, isLeaf: false, isOpen: true, level: 1,  parent: '<root>'}, ],
-        ['2.1',      { children: [], id: '2.1', index: 0, isHidden: false, isLeaf: true, isOpen: false, level: 2, parent: '2', }, ],
+        ['2.1',      { children: [], id: '2.1', index: 0, isHidden: false, isLeaf: true, isOpen: true, level: 2, parent: '2', }, ],
         ['2.2',      { children: ['2.2.1', '2.2.2', '2.2.3'], id: '2.2', index: 1, isHidden: false, isLeaf: false, isOpen: true, level: 2, parent: '2', },],
-        ['2.2.1',    { children: [], id: '2.2.1', index: 0, isHidden: false, isLeaf: true, isOpen: false, level: 3, parent: '2.2', }, ],
-        ['2.2.2',    { children: [], id: '2.2.2', index: 1, isHidden: false, isLeaf: true, isOpen: false, level: 3, parent: '2.2', }, ],
-        ['2.2.3',    { children: [], id: '2.2.3', index: 2, isHidden: false, isLeaf: true, isOpen: false, level: 3, parent: '2.2', }, ],
-        ['3',        { children: [], id: '3', index: 3, isHidden: false, isLeaf: true, isOpen: false, level: 1,  parent: '<root>'},],
+        ['2.2.1',    { children: [], id: '2.2.1', index: 0, isHidden: false, isLeaf: true, isOpen: true, level: 3, parent: '2.2', }, ],
+        ['2.2.2',    { children: [], id: '2.2.2', index: 1, isHidden: false, isLeaf: true, isOpen: true, level: 3, parent: '2.2', }, ],
+        ['2.2.3',    { children: [], id: '2.2.3', index: 2, isHidden: false, isLeaf: true, isOpen: true, level: 3, parent: '2.2', }, ],
+        ['3',        { children: [], id: '3', index: 3, isHidden: false, isLeaf: true, isOpen: true, level: 1,  parent: '<root>'},],
         ['4',        { children: ['4.1', '4.2'], id: '4', index: 4, isHidden: false, isLeaf: false, isOpen: true, level: 1,  parent: '<root>'}, ],
         ['4.1',      { children: ['4.1.1', '4.1.2'], id: '4.1', index: 0, isHidden: false, isLeaf: false, isOpen: false, level: 2, parent: '4', },],
-        ['4.1.1',    { children: [], id: '4.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '4.1', }, ],
-        ['4.1.2',    { children: [], id: '4.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: false, level: 3, parent: '4.1', }, ],
-        ['4.2',      { children: [], id: '4.2', index: 1, isHidden: false, isLeaf: true, isOpen: false, level: 2, parent: '4', },
+        ['4.1.1',    { children: [], id: '4.1.1', index: 0, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '4.1', }, ],
+        ['4.1.2',    { children: [], id: '4.1.2', index: 1, isHidden: true, isLeaf: true, isOpen: true, level: 3, parent: '4.1', }, ],
+        ['4.2',      { children: [], id: '4.2', index: 1, isHidden: false, isLeaf: true, isOpen: true, level: 2, parent: '4', },
         ],
       ];
 
@@ -602,10 +604,52 @@ describe('Tree utils', () => {
       expect(tree.size).toBe(expected.length);
     });
 
-    it('should throw error when there is a duplicated tree node id', () => {
+    it('should skip duplicated tree node id with the whole subtree', () => {
       const tree = tNode('<root>', true, [tNode('0'), tNode('0', false, [tNode('1')])]);
 
-      expect(() => convertNestedTree2MappedTree(tree)).toThrow('Duplicate node id found: "0".');
+      expect(convertNestedTree2MappedTree(tree)).toEqual(
+        new Map([
+          [
+            '<root>',
+            {
+              children: ['0'],
+              id: '<root>',
+              index: 0,
+              isHidden: false,
+              isLeaf: false,
+              isOpen: true,
+              level: 0,
+              parent: undefined,
+            },
+          ],
+          [
+            '0',
+            {
+              children: ['1'],
+              id: '0',
+              index: 1,
+              isHidden: false,
+              isLeaf: false,
+              isOpen: false,
+              level: 1,
+              parent: '<root>',
+            },
+          ],
+          [
+            '1',
+            {
+              children: [],
+              id: '1',
+              index: 0,
+              isHidden: true,
+              isLeaf: true,
+              isOpen: true,
+              level: 2,
+              parent: '0',
+            },
+          ],
+        ])
+      );
     });
   });
 
@@ -618,7 +662,7 @@ describe('Tree utils', () => {
       expect(callback).not.toHaveBeenCalled();
     });
 
-    it('should throw error when the there is no root node', () => {
+    it('should return with empty array when the there is no root node', () => {
       // Tree with circular reference -> no node with parent === undefined
       const tree: TreeIdNodeMap = new Map([
         ['root', { id: 'root', parent: '1' } as TreeNodeRecord],
@@ -626,9 +670,7 @@ describe('Tree utils', () => {
       const wrongId = 'not-a-root-id';
 
       const callback = jest.fn();
-      expect(() => mapTree(tree, callback, { rootNodeId: wrongId })).toThrow(
-        `Tree root node is not found for id: "${wrongId}".`
-      );
+      expect(mapTree(tree, callback, { rootNodeId: wrongId })).toEqual([]);
 
       expect(callback).not.toHaveBeenCalled();
     });
@@ -688,6 +730,88 @@ describe('Tree utils', () => {
       const result = mapTree(tree, (node) => node.id, { rootNodeId: '4' });
 
       expect(result).toEqual(['4.1', '4.1.1', '4.1.2', '4.2']);
+    });
+  });
+
+  describe('isActiveNodeInDOM', () => {
+    it('should return true when the active node is in the DOM', () => {
+      const ref = { current: document.createElement('div') };
+      ref.current.innerHTML = '<div data-nodeid="active-node"></div>';
+      document.body.appendChild(ref.current);
+
+      const result = isActiveNodeInDOM(ref, 'active-node');
+
+      expect(result).toBe(true);
+      document.body.removeChild(ref.current);
+    });
+
+    it('should return false when the active node is not in the DOM', () => {
+      const ref = { current: document.createElement('div') };
+      ref.current.innerHTML = '<div data-nodeid="not-active-node"></div>';
+      document.body.appendChild(ref.current);
+
+      const result = isActiveNodeInDOM(ref, 'active-node');
+
+      expect(result).toBe(false);
+      document.body.removeChild(ref.current);
+    });
+  });
+
+  describe('getFistActiveNode', () => {
+    it.each`
+      msg                         | tree                                                                                | excludeTreeRoot | expected
+      ${'empty tree'}             | ${{}}                                                                               | ${false}        | ${undefined}
+      ${'empty tree'}             | ${{}}                                                                               | ${true}         | ${undefined}
+      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${true}         | ${undefined}
+      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${false}        | ${'root'}
+      ${'only closed root tree'}  | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${true}         | ${undefined}
+      ${'only closed  root tree'} | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${false}        | ${'root'}
+      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${true}         | ${'node'}
+      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${false}        | ${'root'}
+      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
+      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
+    `(
+      'should return $expected when $msg and $excludeTreeRoot',
+      ({ tree, excludeTreeRoot, expected }) => {
+        const result = getFistActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot);
+        expect(result).toEqual(expected);
+      }
+    );
+  });
+
+  describe('migrateTreeState', () => {
+    it('should handle empty old tree', () => {
+      const tree = convertNestedTree2MappedTree(sampleTree);
+      migrateTreeState(new Map(), tree);
+      expect(tree).toEqual(convertNestedTree2MappedTree(sampleTree));
+    });
+
+    it('should handle empty new tree', () => {
+      const tree = new Map();
+      migrateTreeState(convertNestedTree2MappedTree(sampleTree), tree);
+      expect(tree).toEqual(tree);
+    });
+
+    it('should migrate isOpen state', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(oldTree.get('1').isOpen).not.toEqual(newTree.get('1').isOpen);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1').isOpen).toEqual(newTree.get('1').isOpen);
+    });
+
+    it('should update isHidden correctly', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(true);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(false);
     });
   });
 });

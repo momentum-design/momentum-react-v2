@@ -292,7 +292,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-round="75"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -361,12 +361,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -435,7 +435,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -490,7 +490,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -526,7 +526,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -710,7 +709,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -805,7 +803,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -989,7 +986,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1084,7 +1080,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -1268,7 +1263,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1338,7 +1332,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -1352,7 +1346,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -1388,7 +1382,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -1572,7 +1565,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1667,7 +1659,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -1851,7 +1842,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -1946,7 +1936,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -2130,7 +2119,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -2200,7 +2188,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -2510,7 +2498,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-round="75"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -2579,12 +2567,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -2653,7 +2641,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -2708,7 +2696,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -2744,7 +2732,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -2928,7 +2915,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3023,7 +3009,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -3207,7 +3192,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3302,7 +3286,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -3486,7 +3469,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3556,7 +3538,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -3570,7 +3552,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -3606,7 +3588,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -3790,7 +3771,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -3885,7 +3865,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -4069,7 +4048,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -4164,7 +4142,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -4348,7 +4325,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -4418,7 +4394,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -4728,7 +4704,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-round="75"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -4797,12 +4773,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -4871,7 +4847,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -4926,7 +4902,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -4962,7 +4938,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -5146,7 +5121,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -5241,7 +5215,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -5425,7 +5398,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -5520,7 +5492,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -5704,7 +5675,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -5774,7 +5744,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -5788,7 +5758,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -5824,7 +5794,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -6008,7 +5977,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -6103,7 +6071,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -6287,7 +6254,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -6382,7 +6348,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -6566,7 +6531,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -6636,7 +6600,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -6948,7 +6912,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   id="example-id"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -7017,12 +6981,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -7091,7 +7055,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -7148,7 +7112,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -7184,7 +7148,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -7368,7 +7331,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7463,7 +7425,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -7647,7 +7608,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7742,7 +7702,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -7926,7 +7885,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -7996,7 +7954,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -8010,7 +7968,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -8046,7 +8004,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -8230,7 +8187,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -8325,7 +8281,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -8509,7 +8464,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -8604,7 +8558,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -8788,7 +8741,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -8858,7 +8810,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -9168,7 +9120,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-round="75"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -9237,12 +9189,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -9311,7 +9263,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -9366,7 +9318,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -9402,7 +9354,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -9586,7 +9537,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -9681,7 +9631,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -9865,7 +9814,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -9960,7 +9908,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -10144,7 +10091,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -10214,7 +10160,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -10228,7 +10174,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -10264,7 +10210,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -10448,7 +10393,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -10543,7 +10487,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -10727,7 +10670,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -10822,7 +10764,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -11006,7 +10947,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -11076,7 +11016,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -11386,7 +11326,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-round="75"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -11455,12 +11395,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -11529,7 +11469,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <div
                     class="md-modal-container-arrow-wrapper"
                     data-popper-arrow="true"
@@ -11615,7 +11555,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -11651,7 +11591,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -11835,7 +11774,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -11930,7 +11868,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -12114,7 +12051,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12209,7 +12145,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -12393,7 +12328,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12463,7 +12397,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -12477,7 +12411,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -12513,7 +12447,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -12697,7 +12630,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -12792,7 +12724,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -12976,7 +12907,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -13071,7 +13001,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -13255,7 +13184,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -13325,7 +13253,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <div
                     className="md-modal-container-arrow-wrapper"
@@ -13680,7 +13608,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   role="dialog"
                   style="color: pink;"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -13749,12 +13677,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -13823,7 +13751,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -13888,7 +13816,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -13924,7 +13852,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -14108,7 +14035,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14203,7 +14129,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -14387,7 +14312,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14482,7 +14406,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -14666,7 +14589,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -14736,7 +14658,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -14750,7 +14672,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -14786,7 +14708,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -14970,7 +14891,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -15065,7 +14985,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -15249,7 +15168,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -15344,7 +15262,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -15528,7 +15445,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -15598,7 +15514,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -15908,7 +15824,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-round="50"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -15977,12 +15893,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -16051,7 +15967,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -16106,7 +16022,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -16142,7 +16058,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -16326,7 +16241,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -16421,7 +16335,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -16605,7 +16518,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -16700,7 +16612,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -16884,7 +16795,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -16954,7 +16864,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -16968,7 +16878,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -17004,7 +16914,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -17188,7 +17097,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -17283,7 +17191,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -17467,7 +17374,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -17562,7 +17468,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -17746,7 +17651,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -17816,7 +17720,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span
@@ -18130,7 +18034,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-round="75"
                   role="dialog"
                 >
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -18199,12 +18103,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                         Three
                       </div>
                     </li>
-                  </ul>
+                  </div>
                   <li
                     class="md-content-separator-wrapper"
                     role="separator"
                   />
-                  <ul
+                  <div
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -18273,7 +18177,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                         Six
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
                 <span
                   data-focus-scope-end="true"
@@ -18328,7 +18232,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     key=".$2"
                     selectionMode="single"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -18364,7 +18268,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="one"
                         state={
                           Object {
@@ -18548,7 +18451,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="one"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -18643,7 +18545,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="two"
                         state={
                           Object {
@@ -18827,7 +18728,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="two"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -18922,7 +18822,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="three"
                         state={
                           Object {
@@ -19106,7 +19005,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="three"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -19176,7 +19074,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                   <ContentSeparator
                     key="separator-0"
@@ -19190,7 +19088,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     key=".$4"
                     selectionMode="multiple"
                   >
-                    <ul
+                    <div
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -19226,7 +19124,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={0}
                         key="asd"
                         state={
                           Object {
@@ -19410,7 +19307,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="asd"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={0}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -19505,7 +19401,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={1}
                         key="ff"
                         state={
                           Object {
@@ -19689,7 +19584,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="ff"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={1}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -19784,7 +19678,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                             "wrapper": undefined,
                           }
                         }
-                        itemIndex={2}
                         key="d"
                         state={
                           Object {
@@ -19968,7 +19861,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           data-key="d"
                           isDisabled={false}
                           isPadded={true}
-                          itemIndex={2}
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
@@ -20038,7 +19930,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                           </FocusRing>
                         </ListItemBase>
                       </MenuItem>
-                    </ul>
+                    </div>
                   </_Menu>
                 </div>
                 <span

@@ -562,4 +562,21 @@ describe('<SearchInput />', () => {
     dispatchEventSpy.mockRestore();
     expect(onKeyDown).toHaveBeenCalledTimes(1);
   });
+
+  it('renders the search icon correctly', async () => {
+    const wrapper = await mountAndWait(
+      <SearchInput
+        clearButtonAriaLabel="Clear"
+        searchIconProps={{ ariaLabel: 'search icon label' }}
+      />
+    );
+
+    expect(wrapper.find(Icon).props()).toStrictEqual({
+      weight: 'bold',
+      scale: 16,
+      className: 'md-search-input-search',
+      name: 'search',
+      ariaLabel: 'search icon label',
+    });
+  });
 });
