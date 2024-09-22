@@ -226,6 +226,7 @@ export const useItemSelected = <TItemId extends string | number>({
         }
       },
     }),
-    [TItemId, isControlled, isRequired, onSelectionChange, selectedItems, selectionMode]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [isControlled, isRequired, onSelectionChange, selectedItems, selectionMode]
   );
 };
