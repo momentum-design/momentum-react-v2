@@ -19,15 +19,11 @@ const useFocusState = (
   const { focusProps } = useFocus({
     onFocus: (...args) => {
       setFocus(true);
-      if (props.onFocus) {
-        props.onFocus.apply(this, args);
-      }
+      props.onFocus?.(...args);
     },
     onBlur: (...args) => {
       setFocus(false);
-      if (props.onBlur) {
-        props.onBlur.apply(this, args);
-      }
+      props.onBlur?.(...args);
     },
   });
   return { isFocused, focusProps };
@@ -40,15 +36,11 @@ const useFocusWithinState = (
   const { focusWithinProps } = useFocusWithin({
     onFocusWithin: (...args) => {
       setFocusWithin(true);
-      if (props.onFocusWithin) {
-        props.onFocusWithin.apply(this, args);
-      }
+      props.onFocusWithin?.(...args);
     },
     onBlurWithin: (...args) => {
       setFocusWithin(false);
-      if (props.onBlurWithin) {
-        props.onBlurWithin.apply(this, args);
-      }
+      props.onBlurWithin?.(...args);
     },
   });
   return { isFocusedWithin, focusWithinProps };
