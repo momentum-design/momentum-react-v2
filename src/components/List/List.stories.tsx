@@ -330,23 +330,26 @@ const ProgramaticFocus = Template<ListProps>((args) => {
 const ListWithAriaToolbarWrapper = () => {
   return (
     <>
-      <ButtonPill>Button 0</ButtonPill>
+      <ButtonPill>Before</ButtonPill>
       <List listSize={2}>
         <ListItemBase size="auto" itemIndex={0} key={0}>
-          <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
-            <AriaToolbarItem itemIndex={0}>
-              <ButtonPill>Button 1</ButtonPill>
-            </AriaToolbarItem>
-            <AriaToolbarItem itemIndex={1}>
-              <ButtonPill>Button 2</ButtonPill>
-            </AriaToolbarItem>
-          </AriaToolbar>
+          <ListItemBaseSection position="fill">
+            <Text>List Item 0</Text>
+            <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+              <AriaToolbarItem itemIndex={0}>
+                <ButtonPill>Toolbar Button 1</ButtonPill>
+              </AriaToolbarItem>
+              <AriaToolbarItem itemIndex={1}>
+                <ButtonPill>Toolbar Button 2</ButtonPill>
+              </AriaToolbarItem>
+            </AriaToolbar>
+          </ListItemBaseSection>
         </ListItemBase>
         <ListItemBase itemIndex={1} key={1}>
-          2
+          <Text>List Item 1</Text>
         </ListItemBase>
       </List>
-      <ButtonPill>Button 0</ButtonPill>
+      <ButtonPill>After</ButtonPill>
     </>
   );
 };

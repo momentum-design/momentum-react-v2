@@ -6,7 +6,12 @@ import ListItemBase from '../ListItemBase';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { ListItemBaseSection, MenuTrigger } from '@momentum-ui/react-collaboration';
+import {
+  AriaToolbar,
+  AriaToolbarItem,
+  ListItemBaseSection,
+  MenuTrigger,
+} from '@momentum-ui/react-collaboration';
 import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
@@ -1103,6 +1108,66 @@ describe('<List />', () => {
       await user.click(getByTestId('list-item-1'));
 
       expect(getByTestId('list-item-1')).toHaveFocus();
+    });
+
+    it('should handle an AriaToolbar in a list correctly', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <>
+          <ButtonPill data-testid="before">Before</ButtonPill>
+          <List listSize={2}>
+            <ListItemBase data-testid="list-item-0" size="auto" itemIndex={0} key={0}>
+              <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+                <AriaToolbarItem itemIndex={0}>
+                  <ButtonPill data-testid="button-1">Button 1</ButtonPill>
+                </AriaToolbarItem>
+                <AriaToolbarItem itemIndex={1}>
+                  <ButtonPill data-testid="button-2">Button 2</ButtonPill>
+                </AriaToolbarItem>
+              </AriaToolbar>
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" itemIndex={1} key={1}>
+              1
+            </ListItemBase>
+          </List>
+          <ButtonPill data-testid="after">After</ButtonPill>
+        </>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('before')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-1')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('after')).toHaveFocus();
+
+      await user.tab({ shift: true });
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-1')).toHaveFocus();
+
+      await user.keyboard('{ArrowRight}');
+
+      expect(getByTestId('button-2')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('after')).toHaveFocus();
     });
   });
 });

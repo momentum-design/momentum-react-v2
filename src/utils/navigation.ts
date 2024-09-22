@@ -23,8 +23,7 @@ const PRESERVE_TABINDEX_SELECTORS = `[data-preserve-tabindex],.${PRESERVE_TABIND
  */
 export function getKeyboardFocusableElements<T extends HTMLElement>(
   root: T,
-  includeTabbableOnly = true,
-  allowExclusions = false
+  includeTabbableOnly = true
 ): Array<HTMLElement> {
   const tabindex = includeTabbableOnly ? '-1' : '';
   const preserveTabindexContainers = Array.from(root.querySelectorAll(PRESERVE_TABINDEX_SELECTORS));
@@ -37,6 +36,6 @@ export function getKeyboardFocusableElements<T extends HTMLElement>(
       el.getAttribute('tabindex') !== tabindex &&
       // note: container.contains(container) is true
       !preserveTabindexContainers.some((p) => p.contains(el)) &&
-      (allowExclusions ? true : !el.hasAttribute('data-exclude-focus'))
+      !el.hasAttribute('data-exclude-focus')
   ) as Array<HTMLElement>;
 }

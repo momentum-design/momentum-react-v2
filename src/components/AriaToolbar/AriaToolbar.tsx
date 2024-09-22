@@ -75,6 +75,9 @@ const AriaToolbar: FC<Props> = (props: Props) => {
   };
 
   useEffect(() => {
+    // When the toolbar is rendered inside a list, only item in the toolbar
+    // should be focusable. This is the preserve the tab order as the
+    // List uses a roving tab index.
     getKeyboardFocusableElements(ref.current, false).forEach((el, index) => {
       if (index === 0) {
         return;
