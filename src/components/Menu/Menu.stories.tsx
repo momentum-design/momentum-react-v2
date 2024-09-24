@@ -14,7 +14,7 @@ import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { Icon, Text } from '..';
 import './Menu.stories.style.scss';
-import { MenuSeperator } from './Menu.utils';
+import { MenuSeparator } from './Menu.utils';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -88,13 +88,13 @@ Sections.parameters = {
           <Item key="01">France</Item>
           <Item key="02">Italy</Item>
         </Section>,
-        <MenuSeperator key="sep-0" />,
+        <MenuSeparator key="sep-0" />,
         <Section key="1" title="Asia">
           <Item key="10">India</Item>
           <Item key="11">China</Item>
           <Item key="12">Japan</Item>
         </Section>,
-        <MenuSeperator key="sep-1" />,
+        <MenuSeparator key="sep-1" />,
         <Section key="2" title="America">
           <Item key="13">USA</Item>
           <Item key="14">Mexico</Item>
@@ -147,7 +147,7 @@ SelectionGroups.parameters = {
           <Item key="03">MacBook Pro Speakers</Item>
           <Item key="04">Webex Media Audio Device</Item>
         </SelectionGroup>,
-        <MenuSeperator key="sep-0" />,
+        <MenuSeparator key="sep-0" />,
         <SelectionGroup
           key="1"
           selectionMode="single"
@@ -171,7 +171,7 @@ SelectionGroups.parameters = {
           <Item key="13">MacBook Pro Microphone</Item>
           <Item key="14">Webex Media Audio Device</Item>
         </SelectionGroup>,
-        <MenuSeperator key="sep-1" />,
+        <MenuSeparator key="sep-1" />,
         <SelectionGroup
           key="2"
           tickPosition="none"
@@ -201,7 +201,7 @@ SelectionGroups.parameters = {
             </Item>
           )}
         </SelectionGroup>,
-        <MenuSeperator key="sep-2" />,
+        <MenuSeparator key="sep-2" />,
         <SelectionGroup
           key="3"
           tickPosition="none"
