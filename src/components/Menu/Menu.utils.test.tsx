@@ -100,10 +100,7 @@ describe('MenuSeperator', () => {
     expect(results).toHaveLength(1);
     expect(results[0]).toEqual({
       type: 'seperator',
-      props: expect.any(Object),
+      props,
     });
-
-    const result = results[0] as { type: 'seperator'; props: Record<PropertyKey, unknown> };
-    expect(result.props).toBe(props);
   });
 });
