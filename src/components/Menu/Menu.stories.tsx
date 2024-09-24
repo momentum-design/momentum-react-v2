@@ -12,8 +12,9 @@ import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon } from '..';
+import { Icon, Text } from '..';
 import './Menu.stories.style.scss';
+import { MenuSeperator } from './Menu.utils';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -82,38 +83,19 @@ Sections.parameters = {
       onSelectionChange: menuOnSelectionChange,
       onAction: menuOnAction,
       children: [
-        <Section
-          key="0"
-          title={
-            <ListHeader outline={false}>
-              <ListItemBaseSection position="fill">Europe</ListItemBaseSection>
-            </ListHeader>
-          }
-        >
+        <Section key="0" title="Europe">
           <Item key="00">Spain</Item>
           <Item key="01">France</Item>
           <Item key="02">Italy</Item>
         </Section>,
-        <Section
-          key="1"
-          title={
-            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-              <ListItemBaseSection position="fill">Asia</ListItemBaseSection>
-            </ListHeader>
-          }
-        >
+        <MenuSeperator key="sep-0" />,
+        <Section key="1" title="Asia">
           <Item key="10">India</Item>
           <Item key="11">China</Item>
           <Item key="12">Japan</Item>
         </Section>,
-        <Section
-          key="2"
-          title={
-            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-              <ListItemBaseSection position="fill">America</ListItemBaseSection>
-            </ListHeader>
-          }
-        >
+        <MenuSeperator key="sep-1" />,
+        <Section key="2" title="America">
           <Item key="13">USA</Item>
           <Item key="14">Mexico</Item>
           <Item key="15">Canada</Item>
@@ -154,14 +136,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction1', rest);
           }}
           title={
-            <ListHeader outline={false}>
-              <ListItemBaseSection position="start">
-                <Icon scale={16} name="speaker" strokeColor="none" />
-              </ListItemBaseSection>
-              <ListItemBaseSection position="fill">
-                Speaker (you can choose many)
-              </ListItemBaseSection>
-            </ListHeader>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="speaker" strokeColor="none" />
+              <Text>Speaker (you can choose many)</Text>
+            </Flex>
           }
         >
           <Item key="00">System default speaker</Item>
@@ -170,6 +148,7 @@ SelectionGroups.parameters = {
           <Item key="03">MacBook Pro Speakers</Item>
           <Item key="04">Webex Media Audio Device</Item>
         </SelectionGroup>,
+        <MenuSeperator key="sep-0" />,
         <SelectionGroup
           key="1"
           selectionMode="single"
@@ -182,16 +161,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction2', rest);
           }}
           title={
-            <>
-              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-                <ListItemBaseSection position="start">
-                  <Icon scale={16} name="microphone" strokeColor="none" />
-                </ListItemBaseSection>
-                <ListItemBaseSection position="fill">
-                  Microphone (you can choose one)
-                </ListItemBaseSection>
-              </ListHeader>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="microphone" strokeColor="none" />
+              <Text>Microphone (you can choose one)</Text>
+            </Flex>
           }
         >
           <Item key="10">No Microphone</Item>
@@ -200,6 +173,7 @@ SelectionGroups.parameters = {
           <Item key="13">MacBook Pro Microphone</Item>
           <Item key="14">Webex Media Audio Device</Item>
         </SelectionGroup>,
+        <MenuSeperator key="sep-1" />,
         <SelectionGroup
           key="2"
           tickPosition="none"
@@ -218,16 +192,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction3', rest);
           }}
           title={
-            <>
-              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-                <ListItemBaseSection position="start">
-                  <Icon scale={16} name="adjust-microphone" strokeColor="none" />
-                </ListItemBaseSection>
-                <ListItemBaseSection position="fill">
-                  Webex smart audio (You can choose one)
-                </ListItemBaseSection>
-              </ListHeader>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="adjust-microphone" strokeColor="none" />
+              <Text>Webex smart audio (You can choose one)</Text>
+            </Flex>
           }
         >
           {(item) => (
@@ -236,6 +204,7 @@ SelectionGroups.parameters = {
             </Item>
           )}
         </SelectionGroup>,
+        <MenuSeperator key="sep-2" />,
         <SelectionGroup
           key="3"
           tickPosition="none"
@@ -256,14 +225,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction4', rest);
           }}
           title={
-            <>
-              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-                <ListItemBaseSection position="start">
-                  <Icon scale={16} name="accessibility" strokeColor="none" />
-                </ListItemBaseSection>
-                <ListItemBaseSection position="fill">Layout</ListItemBaseSection>
-              </ListHeader>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="accessibility" strokeColor="none" />
+              <Text>Layout</Text>
+            </Flex>
           }
         >
           {(item) => (

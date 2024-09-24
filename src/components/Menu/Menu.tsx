@@ -17,6 +17,7 @@ import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import MenuSelectionGroup from '../MenuSelectionGroup';
+import ContentSeparator from '../ContentSeparator';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -70,7 +71,9 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
 
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
-      if (item.type === 'section') {
+      if (item.type === 'seperator') {
+        return <ContentSeparator {...item.props} />;
+      } else if (item.type === 'section') {
         if (item.props?.selectionGroup) {
           return (
             <MenuSelectionGroup
