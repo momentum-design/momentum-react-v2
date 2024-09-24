@@ -88,19 +88,22 @@ describe('MenuSeperator', () => {
   });
 
   it('getCollectionNode should yield a single node with props passed', () => {
+    const props = {
+      className: 'main-seperator',
+    };
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore - We don't export this method in the types
-    const generator = MenuSeperator.getCollectionNode({
-      className: 'main-seperator',
-    });
+    const generator = MenuSeperator.getCollectionNode(props);
     const results = Array.from(generator);
 
     expect(results).toHaveLength(1);
     expect(results[0]).toEqual({
       type: 'seperator',
-      props: {
-        className: 'main-seperator',
-      },
+      props: expect.any(Object),
     });
+
+    const result = results[0] as { type: 'seperator'; props: Record<PropertyKey, unknown> };
+    expect(result.props).toBe(props);
   });
 });
