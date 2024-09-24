@@ -132,7 +132,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -147,7 +147,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -162,7 +162,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.id).toBe(id);
@@ -178,7 +178,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);

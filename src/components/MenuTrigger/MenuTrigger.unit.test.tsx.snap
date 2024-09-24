@@ -19,6 +19,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -290,7 +291,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -460,7 +461,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
             >
@@ -484,7 +485,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-placement="bottom-start"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -2219,6 +2220,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -2490,7 +2492,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -2660,7 +2662,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
             >
@@ -2684,7 +2686,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-placement="bottom-start"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -4419,6 +4421,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -4690,7 +4693,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -4860,7 +4863,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
             >
@@ -4884,7 +4887,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-placement="bottom-start"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -6620,6 +6623,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -6892,7 +6896,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   data-placement="bottom-start"
                   data-round="75"
                   id="example-id"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -7063,7 +7067,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
             >
@@ -7088,7 +7092,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   data-round={75}
                   id="example-id"
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -8823,6 +8827,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="top"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -9094,7 +9099,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-padded="true"
                   data-placement="top"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -9264,7 +9269,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               isPadded={true}
               onKeyDown={[Function]}
               placement="top"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
             >
@@ -9288,7 +9293,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-placement="top"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -11023,6 +11028,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={true}
     trigger="click"
@@ -11294,7 +11300,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -11495,7 +11501,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={true}
             >
@@ -11519,7 +11525,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-placement="bottom-start"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -13293,6 +13299,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     style={
@@ -13569,7 +13576,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                   style="color: pink;"
                 >
                   <div
@@ -13740,7 +13747,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
               style={
@@ -13769,7 +13776,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   data-placement="bottom-start"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                   style={
                     Object {
                       "color": "pink",
@@ -15509,6 +15516,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -15780,7 +15788,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="50"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -15950,7 +15958,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={50}
               showArrow={false}
             >
@@ -15974,7 +15982,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-placement="bottom-start"
                   data-round={50}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
@@ -17709,6 +17717,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
     onClickOutside={[Function]}
     onKeyDown={[Function]}
     placement="bottom-start"
+    role="generic"
     setInstance={[Function]}
     showArrow={false}
     trigger="click"
@@ -17984,7 +17993,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
-                  role="dialog"
+                  role="generic"
                 >
                   <div
                     class="md-menu-wrapper"
@@ -18154,7 +18163,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
               isPadded={true}
               onKeyDown={[Function]}
               placement="bottom-start"
-              role="dialog"
+              role="generic"
               round={75}
               showArrow={false}
             >
@@ -18178,7 +18187,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-placement="bottom-start"
                   data-round={75}
                   onKeyDown={[Function]}
-                  role="dialog"
+                  role="generic"
                 >
                   <_Menu
                     key=".$2"
