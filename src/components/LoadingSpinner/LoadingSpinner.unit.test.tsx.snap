@@ -31,7 +31,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
     </Icon>
     <Icon
       className="md-loading-spinner-arch"
-      name="spinner-partial"
+      name="spinner-in-progress"
       scale={24}
       weight="regular"
     >
@@ -45,7 +45,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
           className=""
           data-autoscale={false}
           data-scale={24}
-          data-test="spinner-partial"
+          data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
           style={Object {}}
@@ -91,7 +91,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
     </Icon>
     <Icon
       className="md-loading-spinner-arch"
-      name="spinner-partial"
+      name="spinner-in-progress"
       scale={24}
       weight="regular"
     >
@@ -105,7 +105,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
           className=""
           data-autoscale={false}
           data-scale={24}
-          data-test="spinner-partial"
+          data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
           style={Object {}}
@@ -152,7 +152,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
     </Icon>
     <Icon
       className="md-loading-spinner-arch"
-      name="spinner-partial"
+      name="spinner-in-progress"
       scale={24}
       weight="regular"
     >
@@ -166,7 +166,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
           className=""
           data-autoscale={false}
           data-scale={24}
-          data-test="spinner-partial"
+          data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
           style={Object {}}
@@ -212,7 +212,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
     </Icon>
     <Icon
       className="md-loading-spinner-arch"
-      name="spinner-partial"
+      name="spinner-in-progress"
       scale={32}
       weight="regular"
     >
@@ -226,7 +226,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
           className=""
           data-autoscale={false}
           data-scale={32}
-          data-test="spinner-partial"
+          data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
           style={Object {}}
@@ -281,7 +281,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
     </Icon>
     <Icon
       className="md-loading-spinner-arch"
-      name="spinner-partial"
+      name="spinner-in-progress"
       scale={24}
       weight="regular"
     >
@@ -295,7 +295,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
           className=""
           data-autoscale={false}
           data-scale={24}
-          data-test="spinner-partial"
+          data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
           style={Object {}}

@@ -269,6 +269,11 @@ export interface TreeContextValue
    * The item selection state of the tree nodes.
    */
   itemSelection: ItemSelection<TreeNodeId>;
+  /**
+   * True when the focus is inside the tree component before the tree structure changed,
+   * otherwise false
+   */
+  isFocusWithin: boolean;
 }
 
 /**

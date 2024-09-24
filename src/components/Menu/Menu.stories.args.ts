@@ -114,19 +114,6 @@ export default {
       },
     },
   },
-  isTickOnLeftSide: {
-    defaultValue: false,
-    description: 'Wether we should display the tick on the left side.',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: 'false',
-      },
-    },
-  },
   ariaLabelledby: {
     description: 'The aria-labelledby for the menu wrapper',
     control: { type: 'text' },
@@ -159,6 +146,20 @@ export default {
       },
       defaultValue: {
         summary: 'false',
+      },
+    },
+  },
+  tickPosition: {
+    defaultValue: DEFAULTS.TICK_POSITION,
+    description: 'Position of the tick when selected, none when no tick',
+    control: { type: 'select' },
+    options: ['left', 'right', 'none', undefined],
+    table: {
+      type: {
+        summary: "'left' | 'right' | 'none'",
+      },
+      defaultValue: {
+        summary: DEFAULTS.TICK_POSITION,
       },
     },
   },

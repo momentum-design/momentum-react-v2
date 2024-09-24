@@ -33,103 +33,14 @@
     }
   }
 
-  .md-meeting-list-item-start-section {
-    display: flex;
-    align-items: center;
-
-    &.md-meeting-list-item-start-section-no-image {
-      margin-right: 0;
-    }
-
-    .md-meeting-list-item-border {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 0.3rem;
-      border-radius: 0.5rem 0 0 0.5rem;
-      margin-right: 0.5rem;
-
-      &[data-color='AcceptedActive'] {
-        background-color: var(--mds-color-theme-button-join-normal);
-      }
-
-      &[data-color='AcceptedInactive'] {
-        background-color: var(--mds-color-theme-background-secondary-active);
-      }
-
-      &[data-color='TentativeActive'] {
-        background: webkit-repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 7%,
-          var(--mds-color-theme-button-join-normal) 7%,
-          var(--mds-color-theme-button-join-normal) 14%
-        );
-        background: -o-repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 7%,
-          var(--mds-color-theme-button-join-normal) 7%,
-          var(--mds-color-theme-button-join-normal) 14%
-        );
-        background: repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 7%,
-          var(--mds-color-theme-button-join-normal) 7%,
-          var(--mds-color-theme-button-join-normal) 14%
-        );
-      }
-
-      &[data-color='TentativeInactive'] {
-        background: webkit-repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 7%,
-          var(--mds-color-theme-background-secondary-active) 7%,
-          var(--mds-color-theme-background-secondary-active) 14%
-        );
-        background: -o-repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 7%,
-          var(--mds-color-theme-background-secondary-active) 7%,
-          var(--mds-color-theme-background-secondary-active) 14%
-        );
-        background: repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 7%,
-          var(--mds-color-theme-background-secondary-active) 7%,
-          var(--mds-color-theme-background-secondary-active) 14%
-        );
-      }
-    }
-  }
-
-  .md-meeting-list-item-middle-section {
-    .md-text-wrapper:first-of-type {
-      margin-bottom: -0.25rem;
-    }
-  }
-
   &[data-disabled='false'] {
-    .md-meeting-list-item-middle-section {
+    .md-meeting-row-content-middle-section {
       *:first-of-type {
         color: var(--mds-color-theme-text-primary-normal);
       }
 
       *:last-of-type:not(:first-of-type) {
         color: var(--mds-color-theme-text-secondary-normal);
-      }
-    }
-  }
-
-  .md-meeting-list-item-end-section {
-    .md-button-group-wrapper > .md-icon-wrapper > svg {
-      path {
-        fill: var(--mds-color-theme-text-secondary-normal);
       }
     }
   }

@@ -2,6 +2,7 @@ import type { ReactElement, ReactNode } from 'react';
 
 import { ButtonSimpleProps } from '../ButtonSimple';
 import { PopoverProps } from '../Popover';
+import { InferredIconName } from '../Icon/Icon.types';
 
 export interface CoachmarkWithoutHeaderProps {
   /**
@@ -24,7 +25,7 @@ export interface CoachmarkWithHeaderProps extends CoachmarkWithoutHeaderProps {
   /**
    * Icon to display to the left of the title.
    */
-  icon?: string;
+  icon?: InferredIconName;
 
   /**
    * Image associated with this Coachmark.

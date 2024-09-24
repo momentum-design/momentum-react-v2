@@ -120,4 +120,42 @@ function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<Props> {
   return LocalTemplate;
 }
 
-export { MultiTemplate, Template, MultiTemplateWithPseudoStates };
+/**
+ * Generate a Story Template that consists of multiple variants of a single Component with a label. See the [Storybook Documentation]{@link https://storybook.js.org/docs/react/writing-stories/introduction#using-args}.
+ * @param Component - Functional Component to generate multiple templates from.
+ * @returns - A Story Template with multiple variants of the provided Component's states.
+ */
+function MultiTemplateWithLabel<Props>(Component: FC): Story<Props> {
+  const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
+    const { variants } = parameters;
+
+    const items = variants.map(({ Wrapper, ...variant }, index) => (
+      <div key={index}>
+        <div style={{ padding: '0 1rem' }}>{variant.label}</div>
+        <div
+          style={{
+            minWidth: '18rem',
+            padding: '1rem',
+            gap: '1.5rem',
+            alignItems: 'start',
+            alignContent: 'start',
+          }}
+        >
+          {Wrapper ? (
+            <Wrapper key={index}>
+              <Component {...args} {...variant} />
+            </Wrapper>
+          ) : (
+            <Component key={index} {...args} {...variant} />
+          )}
+        </div>
+      </div>
+    ));
+
+    return <>{items}</>;
+  };
+
+  return LocalTemplate;
+}
+
+export { MultiTemplate, Template, MultiTemplateWithPseudoStates, MultiTemplateWithLabel };

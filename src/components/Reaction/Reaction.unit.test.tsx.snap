@@ -487,7 +487,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
       </Icon>
       <Icon
         className="md-loading-spinner-arch"
-        name="spinner-partial"
+        name="spinner-in-progress"
         scale={16}
         weight="regular"
       >
@@ -501,7 +501,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
             className=""
             data-autoscale={false}
             data-scale={16}
-            data-test="spinner-partial"
+            data-test="spinner-in-progress"
             fill="currentColor"
             height="100%"
             style={Object {}}

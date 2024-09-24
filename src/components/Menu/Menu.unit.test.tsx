@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { renderHook } from '@testing-library/react-hooks';
 import { Item, Section } from '@react-stately/collections';
 
 import Menu, { MENU_CONSTANTS as CONSTANTS, SelectionGroup } from './';
@@ -9,6 +10,82 @@ import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MenuSelectionGroup from '../MenuSelectionGroup';
+import { MenuAppearanceContextValue } from './Menu.types';
+import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
+import ListItemBaseSection from '../ListItemBaseSection';
+
+describe('useMenuAppearanceContext', () => {
+  const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
+    tickPosition: 'left',
+    classNameSelectedItem: 'selected-class',
+    itemSize: 32,
+  };
+
+  it('should return default context values when no props are provided', () => {
+    // eslint-disable-next-line react/prop-types
+    const wrapper = ({ children }) => (
+      <MenuAppearanceContext.Provider value={fakeMenuAppearanceContextValue}>
+        {children}
+      </MenuAppearanceContext.Provider>
+    );
+
+    const { result } = renderHook(() => useMenuAppearanceContext({}), { wrapper });
+
+    expect(result.current).toEqual({
+      tickPosition: 'left',
+      classNameSelectedItem: 'selected-class',
+      itemSize: 32,
+    });
+  });
+
+  it('should override context values with provided props', () => {
+    // eslint-disable-next-line react/prop-types
+    const wrapper = ({ children }) => (
+      <MenuAppearanceContext.Provider value={fakeMenuAppearanceContextValue}>
+        {children}
+      </MenuAppearanceContext.Provider>
+    );
+
+    const { result } = renderHook(
+      () =>
+        useMenuAppearanceContext({
+          tickPosition: 'right',
+          classNameSelectedItem: 'custom-selected-class',
+          itemSize: 'auto',
+        }),
+      { wrapper }
+    );
+
+    expect(result.current).toEqual({
+      tickPosition: 'right',
+      classNameSelectedItem: 'custom-selected-class',
+      itemSize: 'auto',
+    });
+  });
+
+  it('should use context values for props that are not provided', () => {
+    // eslint-disable-next-line react/prop-types
+    const wrapper = ({ children }) => (
+      <MenuAppearanceContext.Provider value={fakeMenuAppearanceContextValue}>
+        {children}
+      </MenuAppearanceContext.Provider>
+    );
+
+    const { result } = renderHook(
+      () =>
+        useMenuAppearanceContext({
+          tickPosition: 'right',
+        }),
+      { wrapper }
+    );
+
+    expect(result.current).toEqual({
+      tickPosition: 'right',
+      classNameSelectedItem: 'selected-class',
+      itemSize: 32,
+    });
+  });
+});
 
 describe('<Menu />', () => {
   const defaultProps = {
@@ -81,6 +158,28 @@ describe('<Menu />', () => {
       const hasSeparators = true;
 
       const container = mount(<Menu {...defaultProps} hasSeparators={hasSeparators} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with tickPosition', () => {
+      expect.assertions(1);
+
+      const tickPosition = 'left';
+
+      const container = mount(<Menu {...defaultProps} itemSize={50} tickPosition={tickPosition} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with className', () => {
+      expect.assertions(1);
+
+      const classNameSelectedItem = 'example-class-when-selected';
+
+      const container = mount(
+        <Menu {...defaultProps} classNameSelectedItem={classNameSelectedItem} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -232,6 +331,40 @@ describe('<Menu />', () => {
 
       const separators = queryAllByRole('separator');
       expect(separators.length).toBe(0);
+    });
+
+    it('should have rendered tickPlaceholder when tickPosition left is provided', () => {
+      expect.assertions(1);
+
+      const tickPosition = 'left';
+
+      const leftTickPlaceholder = mount(<Menu {...defaultProps} tickPosition={tickPosition} />)
+        .find(ListItemBase)
+        .at(0)
+        .find(ListItemBaseSection)
+        .filter({ position: 'start' })
+        .find('div.md-menu-item-tick-placeholder');
+
+      expect(leftTickPlaceholder.exists()).toEqual(true);
+    });
+
+    it('should have provided classNameSelectedItem to selected item when classNameSelectedItem is provided', () => {
+      expect.assertions(1);
+
+      const classNameSelectedItem = 'some-classname';
+
+      const selectedItem = mount(
+        <Menu
+          {...defaultProps}
+          selectedKeys={['one']}
+          classNameSelectedItem={classNameSelectedItem}
+        />
+      )
+        .find(ListItemBase)
+        .filter({ 'data-key': 'one' })
+        .getDOMNode();
+
+      expect(selectedItem.classList.contains(classNameSelectedItem)).toBe(true);
     });
   });
 

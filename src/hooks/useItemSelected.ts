@@ -83,10 +83,12 @@ const getSelection = <T extends Array<unknown>>(
   mode: SelectionMode,
   selectedByDefault: T = [] as T
 ): T => {
-  if (mode === 'none' || !selectedByDefault) {
-    console.warn(
-      '"None" selection mode does not support any selection, selected items will be ignored'
-    );
+  if (mode === 'none') {
+    if (selectedByDefault && selectedByDefault.length > 0) {
+      console.warn(
+        '"None" selection mode does not support any selection, selected items will be ignored'
+      );
+    }
     return [] as T;
   }
   if (mode === 'single' && selectedByDefault.length > 1) {

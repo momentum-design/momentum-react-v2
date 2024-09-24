@@ -28,6 +28,7 @@ const getMockedTreeContext = (activeNodeId: string): TreeContextValue => ({
     update: jest.fn(),
     clear: jest.fn(),
   },
+  isFocusWithin: true,
 });
 
 const getSampleTree = () => {

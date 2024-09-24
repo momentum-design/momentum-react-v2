@@ -1,4 +1,5 @@
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import { TickPosition } from './Menu.types';
 
 const CLASS_PREFIX = 'md-menu';
 
@@ -10,8 +11,8 @@ const STYLE = {
 const DEFAULTS = {
   ITEM_SIZE: 40 as ListItemBaseSize,
   ITEM_SHAPE: 'rectangle' as const,
-  IS_TICK_ON_LEFT_SIDE: false,
   HAS_SEPARATORS: false,
+  TICK_POSITION: 'right' as TickPosition,
 };
 
 const GROUP = 'group';

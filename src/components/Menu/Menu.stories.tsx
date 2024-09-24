@@ -13,6 +13,7 @@ import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { Icon, Text } from '..';
+import './Menu.stories.style.scss';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -67,7 +68,6 @@ const Sections = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Sections.argTypes = { ...argTypes };
 delete Sections.argTypes.children;
-delete Sections.argTypes.isTickOnLeftSide;
 delete Sections.argTypes.itemSize;
 
 Sections.args = {
@@ -79,7 +79,6 @@ Sections.parameters = {
   variants: [
     {
       itemSize: 32,
-      isTickOnLeftSide: true,
       onSelectionChange: menuOnSelectionChange,
       onAction: menuOnAction,
       hasSeparators: true,
@@ -107,9 +106,8 @@ Sections.parameters = {
 const SelectionGroups = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 SelectionGroups.argTypes = { ...argTypes };
-delete Sections.argTypes.children;
-delete Sections.argTypes.isTickOnLeftSide;
-delete Sections.argTypes.itemSize;
+delete SelectionGroups.argTypes.children;
+delete SelectionGroups.argTypes.itemSize;
 
 SelectionGroups.args = {
   'aria-label': 'Menu with multiple selection modes component',
@@ -121,7 +119,7 @@ SelectionGroups.parameters = {
     {
       selectionMode: 'multiple', // this is the default for all the group
       itemSize: 32,
-      isTickOnLeftSide: true,
+      tickPosition: 'left',
       onSelectionChange: menuOnSelectionChange,
       onAction: menuOnAction,
       hasSeparators: 'true',
@@ -152,6 +150,7 @@ SelectionGroups.parameters = {
         <SelectionGroup
           key="1"
           selectionMode="single"
+          tickPosition="right"
           aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection2', rest);
@@ -174,6 +173,8 @@ SelectionGroups.parameters = {
         </SelectionGroup>,
         <SelectionGroup
           key="2"
+          tickPosition="none"
+          classNameSelectedItem="selectedItem"
           items={[
             { key: '20', value: 'No optimization' },
             { key: '21', value: 'Noise removal' },
@@ -192,6 +193,40 @@ SelectionGroups.parameters = {
               <Flex direction="row" alignItems="center" xgap="0.25rem">
                 <Icon scale={16} name="adjust-microphone" strokeColor="none" />
                 <Text>Webex smart audio (You can choose one)</Text>
+              </Flex>
+            </>
+          }
+        >
+          {(item) => (
+            <Item textValue={item.value} key={item.key}>
+              {item.value}
+            </Item>
+          )}
+        </SelectionGroup>,
+        <SelectionGroup
+          key="3"
+          tickPosition="none"
+          classNameSelectedItem="selectedItem"
+          className="layoutGroup"
+          itemSize="auto"
+          items={[
+            { key: '30', value: 'Grid' },
+            { key: '31', value: 'Stack' },
+            { key: '32', value: 'Side by side' },
+          ]}
+          selectionMode="single"
+          aria-label="Third group"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection4', rest);
+          }}
+          onAction={(...rest) => {
+            console.log('selectionOnAction4', rest);
+          }}
+          title={
+            <>
+              <Flex direction="row" alignItems="center" xgap="0.25rem">
+                <Icon scale={16} name="accessibility" strokeColor="none" />
+                <Text>Layout</Text>
               </Flex>
             </>
           }

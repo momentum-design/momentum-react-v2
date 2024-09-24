@@ -1,6 +1,7 @@
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import { AriaButtonProps } from '@react-types/button';
 import { SIZES } from './Avatar.constants';
+import { InferredIconName } from '../Icon/Icon.types';
 
 export enum PresenceType {
   Default = 'default',
@@ -70,12 +71,12 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
   /**
    * The icon name to display instead of initials or image
    */
-  icon?: string;
+  icon?: InferredIconName;
 
   /**
    * The icon to display when Avatar is hovered or focused
    */
-  iconOnHover?: string;
+  iconOnHover?: InferredIconName;
 
   /**
    * The main description of the Avatar, which will be the first part of its aria-label.

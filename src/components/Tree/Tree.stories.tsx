@@ -18,6 +18,7 @@ import { TreeNodeRecord, TreeRefObject } from './Tree.types';
 import ButtonPill from '../ButtonPill';
 import Flex from '../Flex';
 import { v4 as uuidV4 } from 'uuid';
+import { PRESERVE_TABINDEX_CLASSNAME } from '../../utils/navigation';
 
 // prettier-ignore
 const exampleTree =
@@ -89,6 +90,7 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
           </div>
           {nodeDetails.isLeaf && (
             <MenuTrigger
+              className={PRESERVE_TABINDEX_CLASSNAME}
               triggerComponent={
                 <ButtonCircle size={20} ghost aria-label="More menu">
                   <Icon name="more" weight="bold" autoScale={100} />

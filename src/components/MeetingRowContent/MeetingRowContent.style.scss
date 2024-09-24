@@ -1,0 +1,88 @@
+.md-meeting-row-content-start-section {
+  display: flex;
+  align-items: center;
+
+  &.md-meeting-row-content-start-section-no-image {
+    margin-right: 0 !important;
+  }
+
+  .md-meeting-row-content-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0.3rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin-right: 0.5rem;
+
+    &[data-color='AcceptedActive'] {
+      background-color: var(--mds-color-theme-button-join-normal);
+    }
+
+    &[data-color='AcceptedInactive'] {
+      background-color: var(--mds-color-theme-background-secondary-active);
+    }
+
+    &[data-color='TentativeActive'] {
+      background: webkit-repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 7%,
+        var(--mds-color-theme-button-join-normal) 7%,
+        var(--mds-color-theme-button-join-normal) 14%
+      );
+      background: -o-repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 7%,
+        var(--mds-color-theme-button-join-normal) 7%,
+        var(--mds-color-theme-button-join-normal) 14%
+      );
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 7%,
+        var(--mds-color-theme-button-join-normal) 7%,
+        var(--mds-color-theme-button-join-normal) 14%
+      );
+    }
+
+    &[data-color='TentativeInactive'] {
+      background: webkit-repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 7%,
+        var(--mds-color-theme-background-secondary-active) 7%,
+        var(--mds-color-theme-background-secondary-active) 14%
+      );
+      background: -o-repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 7%,
+        var(--mds-color-theme-background-secondary-active) 7%,
+        var(--mds-color-theme-background-secondary-active) 14%
+      );
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 7%,
+        var(--mds-color-theme-background-secondary-active) 7%,
+        var(--mds-color-theme-background-secondary-active) 14%
+      );
+    }
+  }
+}
+
+.md-meeting-row-content-middle-section {
+  .md-text-wrapper:first-of-type {
+    margin-bottom: -0.25rem;
+  }
+}
+
+.md-meeting-row-content-end-section {
+  .md-button-group-wrapper > .md-icon-wrapper > svg {
+    path {
+      fill: var(--mds-color-theme-text-secondary-normal);
+    }
+  }
+}
