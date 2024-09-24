@@ -46,9 +46,7 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
       {item.rendered && (
         <div className={STYLE.header}>
           {!React.isValidElement(item.rendered) ? (
-            <span className={STYLE.header} {...headingProps}>
-              {item.rendered}
-            </span>
+            <span {...headingProps}>{item.rendered}</span>
           ) : (
             React.cloneElement(item.rendered as ReactElement, { ...headingProps })
           )}
