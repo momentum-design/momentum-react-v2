@@ -258,13 +258,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
   <div
     role="presentation"
   >
-    <span
-      aria-hidden={true}
+    <div
       className="md-menu-selection-group-header-wrapper"
-      id="test-ID"
     >
-      x
-    </span>
+      <span
+        aria-hidden={true}
+        id="test-ID"
+      >
+        x
+      </span>
+    </div>
     <ul
       aria-label="selection"
       aria-labelledby="test-ID"
