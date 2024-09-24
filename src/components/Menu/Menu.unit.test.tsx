@@ -360,7 +360,7 @@ describe('<Menu />', () => {
       expect(menuItems[0]).toHaveFocus();
     });
 
-    it('should handle up/down arrow keys correctly - for vertical menus with seperators', async () => {
+    it('should handle up/down arrow keys correctly - for vertical menus with seperator', async () => {
       const user = userEvent.setup();
 
       const props = {
@@ -401,6 +401,7 @@ describe('<Menu />', () => {
             <Item key="one">One</Item>
             <Item key="two">Two</Item>
           </Section>
+          <MenuSeperator key="sep" />
           <Section title="Section 2" key="s2" aria-label="section2">
             <Item key="three">Three</Item>
             <Item key="four">Four</Item>
@@ -461,6 +462,7 @@ describe('<Menu />', () => {
             <Item key="one">One</Item>
             <Item key="two">Two</Item>
           </SelectionGroup>
+          <MenuSeperator key="sep" />
           <SelectionGroup
             selectionMode="multiple"
             title="SelectionGroup 2"
