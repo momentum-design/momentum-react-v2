@@ -74,7 +74,7 @@ describe('MenuSeparator', () => {
     expect(MenuSeparator.__name).toBe('MenuSeparator');
   });
 
-  it('getCollectionNode should yield a single node with type "seperator"', () => {
+  it('getCollectionNode should yield a single node with type "separator"', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore - We don't export this method in the types
     const generator = MenuSeparator.getCollectionNode();
@@ -82,14 +82,14 @@ describe('MenuSeparator', () => {
 
     expect(results).toHaveLength(1);
     expect(results[0]).toEqual({
-      type: 'seperator',
+      type: 'separator',
       props: undefined,
     });
   });
 
   it('getCollectionNode should yield a single node with props passed', () => {
     const props = {
-      className: 'main-seperator',
+      className: 'main-separator',
     };
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -99,7 +99,7 @@ describe('MenuSeparator', () => {
 
     expect(results).toHaveLength(1);
     expect(results[0]).toEqual({
-      type: 'seperator',
+      type: 'separator',
       props,
     });
   });
