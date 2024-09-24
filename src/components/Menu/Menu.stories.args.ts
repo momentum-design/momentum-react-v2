@@ -137,7 +137,8 @@ export default {
     },
   },
   hasSeparators: {
-    description: 'Wheather the menu should display separator lines between menu children',
+    description:
+      'Wheather the menu should display separator lines between groups (sections/selectionGroups)',
     default: false,
     control: { type: 'boolean' },
     table: {
