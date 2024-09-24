@@ -128,7 +128,6 @@ SelectionGroups.parameters = {
         <SelectionGroup
           key="0"
           selectionMode="multiple"
-          aria-label="First group"
           onSelectionChange={(...rest) => {
             console.log('singleselection1', rest);
           }}
@@ -153,7 +152,6 @@ SelectionGroups.parameters = {
           key="1"
           selectionMode="single"
           tickPosition="right"
-          aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection2', rest);
           }}
@@ -184,7 +182,6 @@ SelectionGroups.parameters = {
             { key: '22', value: 'Music mode' },
           ]}
           selectionMode="single"
-          aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection3', rest);
           }}
@@ -217,7 +214,6 @@ SelectionGroups.parameters = {
             { key: '32', value: 'Side by side' },
           ]}
           selectionMode="single"
-          aria-label="Third group"
           onSelectionChange={(...rest) => {
             console.log('singleselection4', rest);
           }}
