@@ -197,6 +197,7 @@ export {
   Tree,
   useTreeContext,
   SelectionGroup,
+  MenuSeperator,
   TreeNodeBase,
   MeetingRowContent,
 } from './components';
