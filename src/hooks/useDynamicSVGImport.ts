@@ -25,8 +25,8 @@ interface UseDynamicSVGImportReturn {
  */
 function useDynamicSVGImport(
   name: string,
-  options: UseDynamicSVGImportOptions = {},
-  library: IconLibrary
+  library: IconLibrary,
+  options: UseDynamicSVGImportOptions = {}
 ): UseDynamicSVGImportReturn {
   const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>();
   const [loading, setLoading] = useState(false);
