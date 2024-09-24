@@ -14,6 +14,7 @@ import { MenuAppearanceContextValue } from './Menu.types';
 import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { MenuSeperator } from './Menu.utils';
+import ContentSeparator from '../ContentSeparator';
 
 describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
@@ -359,6 +360,38 @@ describe('<Menu />', () => {
       expect(menuItems[0]).toHaveFocus();
     });
 
+    it('should handle up/down arrow keys correctly - for vertical menus with seperators', async () => {
+      const user = userEvent.setup();
+
+      const props = {
+        ...defaultProps,
+        children: [
+          <Item key="one">One</Item>,
+          <MenuSeperator key="sep" />,
+          <Item key="two">Two</Item>,
+        ],
+      };
+
+      const { getAllByRole } = render(<Menu {...props} />);
+
+      await user.tab();
+
+      const menuItems = getAllByRole('menuitem');
+      expect(menuItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(menuItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(menuItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowRight}');
+
+      expect(menuItems[0]).toHaveFocus();
+    });
+
     it('should handle up/down arrow keys correctly - for vertical menu with section', async () => {
       const user = userEvent.setup();
 
@@ -598,6 +631,18 @@ describe('<Menu />', () => {
         children: expect.any(Object),
         selectionGroup: true,
       });
+    });
+
+    it('should render ContentSeperator if children has MenuSeperator', () => {
+      const wrapper = mount(
+        <Menu {...defaultProps}>
+          <Item key="01">One</Item>
+          <MenuSeperator key="sep" />
+          <Item key="02">Two</Item>
+        </Menu>
+      );
+
+      expect(wrapper.find(ContentSeparator).exists()).toBe(true);
     });
   });
 });
