@@ -13,7 +13,7 @@ import MenuSelectionGroup from '../MenuSelectionGroup';
 import { MenuAppearanceContextValue } from './Menu.types';
 import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
 import ListItemBaseSection from '../ListItemBaseSection';
-import { MenuSeperator } from './Menu.utils';
+import { MenuSeparator } from './Menu.utils';
 import ContentSeparator from '../ContentSeparator';
 
 describe('useMenuAppearanceContext', () => {
@@ -181,7 +181,7 @@ describe('<Menu />', () => {
         ...defaultProps,
         children: [
           <Item key="one">One</Item>,
-          <MenuSeperator key="sep" />,
+          <MenuSeparator key="sep" />,
           <Item key="two">Two</Item>,
         ],
       };
@@ -367,7 +367,7 @@ describe('<Menu />', () => {
         ...defaultProps,
         children: [
           <Item key="one">One</Item>,
-          <MenuSeperator key="sep" />,
+          <MenuSeparator key="sep" />,
           <Item key="two">Two</Item>,
         ],
       };
@@ -401,7 +401,7 @@ describe('<Menu />', () => {
             <Item key="one">One</Item>
             <Item key="two">Two</Item>
           </Section>
-          <MenuSeperator key="sep" />
+          <MenuSeparator key="sep" />
           <Section title="Section 2" key="s2" aria-label="section2">
             <Item key="three">Three</Item>
             <Item key="four">Four</Item>
@@ -462,7 +462,7 @@ describe('<Menu />', () => {
             <Item key="one">One</Item>
             <Item key="two">Two</Item>
           </SelectionGroup>
-          <MenuSeperator key="sep" />
+          <MenuSeparator key="sep" />
           <SelectionGroup
             selectionMode="multiple"
             title="SelectionGroup 2"
@@ -635,11 +635,11 @@ describe('<Menu />', () => {
       });
     });
 
-    it('should render ContentSeperator if children has MenuSeperator', () => {
+    it('should render ContentSeperator if children has MenuSeparator', () => {
       const wrapper = mount(
         <Menu {...defaultProps}>
           <Item key="01">One</Item>
-          <MenuSeperator key="sep" />
+          <MenuSeparator key="sep" />
           <Item key="02">Two</Item>
         </Menu>
       );

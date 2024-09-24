@@ -53,7 +53,7 @@ export { default as ReactionPicker } from './ReactionPicker';
 export { default as AddReactionButton } from './AddReactionButton';
 export { default as AvatarMeetingsListItem } from './AvatarMeetingsListItem';
 export { default as MenuTrigger } from './MenuTrigger';
-export { default as Menu, SelectionGroup, MenuSeperator } from './Menu';
+export { default as Menu, SelectionGroup, MenuSeparator } from './Menu';
 export { default as DividerDot } from './DividerDot';
 export { default as Popover } from './Popover';
 export { default as ListHeader } from './ListHeader';

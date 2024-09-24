@@ -71,7 +71,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
 
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
-      if (item.type === 'seperator') {
+      if (item.type === 'separator') {
         return <ContentSeparator {...item.props} />;
       } else if (item.type === 'section') {
         if (item.props?.selectionGroup) {

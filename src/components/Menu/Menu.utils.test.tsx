@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuSeperator, SelectionGroup } from './Menu.utils';
+import { MenuSeparator, SelectionGroup } from './Menu.utils';
 import { Item, Section, PartialNode } from '@react-stately/collections';
 import { SelectionMode } from '@react-types/shared';
 import { SelectionGroupProps } from './Menu.types';
@@ -62,22 +62,22 @@ describe('SelectionGroup', () => {
   });
 });
 
-describe('MenuSeperator', () => {
+describe('MenuSeparator', () => {
   it('returns null', () => {
-    const result = MenuSeperator({});
+    const result = MenuSeparator({});
     expect(result).toBeNull();
   });
 
-  it('should have a __name property set to "MenuSeperator"', () => {
+  it('should have a __name property set to "MenuSeparator"', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    expect(MenuSeperator.__name).toBe('MenuSeperator');
+    expect(MenuSeparator.__name).toBe('MenuSeparator');
   });
 
   it('getCollectionNode should yield a single node with type "seperator"', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore - We don't export this method in the types
-    const generator = MenuSeperator.getCollectionNode();
+    const generator = MenuSeparator.getCollectionNode();
     const results = Array.from(generator);
 
     expect(results).toHaveLength(1);
@@ -94,7 +94,7 @@ describe('MenuSeperator', () => {
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore - We don't export this method in the types
-    const generator = MenuSeperator.getCollectionNode(props);
+    const generator = MenuSeparator.getCollectionNode(props);
     const results = Array.from(generator);
 
     expect(results).toHaveLength(1);
