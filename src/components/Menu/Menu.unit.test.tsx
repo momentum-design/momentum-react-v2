@@ -13,6 +13,7 @@ import MenuSelectionGroup from '../MenuSelectionGroup';
 import { MenuAppearanceContextValue } from './Menu.types';
 import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
 import ListItemBaseSection from '../ListItemBaseSection';
+import { MenuSeperator } from './Menu.utils';
 
 describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
@@ -171,6 +172,20 @@ describe('<Menu />', () => {
         <Menu {...defaultProps} classNameSelectedItem={classNameSelectedItem} />
       );
 
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with seperator between items', () => {
+      const props = {
+        ...defaultProps,
+        children: [
+          <Item key="one">One</Item>,
+          <MenuSeperator key="sep" />,
+          <Item key="two">Two</Item>,
+        ],
+      };
+
+      const container = mount(<Menu {...props} />);
       expect(container).toMatchSnapshot();
     });
   });
