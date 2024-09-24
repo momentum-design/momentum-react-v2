@@ -189,12 +189,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction3', rest);
           }}
           title={
-            <>
-              <Flex direction="row" alignItems="center" xgap="0.25rem">
-                <Icon scale={16} name="adjust-microphone" strokeColor="none" />
-                <Text>Webex smart audio (You can choose one)</Text>
-              </Flex>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="adjust-microphone" strokeColor="none" />
+              <Text>Webex smart audio (You can choose one)</Text>
+            </Flex>
           }
         >
           {(item) => (
@@ -223,12 +221,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction4', rest);
           }}
           title={
-            <>
-              <Flex direction="row" alignItems="center" xgap="0.25rem">
-                <Icon scale={16} name="accessibility" strokeColor="none" />
-                <Text>Layout</Text>
-              </Flex>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="accessibility" strokeColor="none" />
+              <Text>Layout</Text>
+            </Flex>
           }
         >
           {(item) => (
