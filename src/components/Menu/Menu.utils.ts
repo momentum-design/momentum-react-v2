@@ -3,22 +3,6 @@
 import { PartialNode, Section } from '@react-stately/collections';
 import { ReactElement } from 'react';
 import { SelectionGroupProps } from './Menu.types';
-import { ContentSeparatorProps } from '../ContentSeparator';
-
-function MenuSeparator(): ReactElement {
-  return null;
-}
-
-MenuSeparator.__name = 'MenuSeparator';
-
-MenuSeparator.getCollectionNode = function* getCollectionNode<T>(
-  props: ContentSeparatorProps
-): Generator<PartialNode<T>> {
-  yield {
-    type: 'separator',
-    props,
-  };
-};
 
 function SelectionGroup(): ReactElement {
   return null;
@@ -48,5 +32,4 @@ SelectionGroup.getCollectionNode = function* getCollectionNode<T>(
 
 // We don't want getCollectionNode to show up in the type definition
 const _SelectionGroup = SelectionGroup as <T>(props: SelectionGroupProps<T>) => JSX.Element;
-const _MenuSeparator = MenuSeparator as (props: ContentSeparatorProps) => JSX.Element;
-export { _MenuSeparator as MenuSeparator, _SelectionGroup as SelectionGroup };
+export { _SelectionGroup as SelectionGroup };
