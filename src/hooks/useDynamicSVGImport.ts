@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useIsMounted } from './useIsMounted';
-import { IconLibrary } from '../components/Icon/Icon.types';
+import { IconLibrary } from 'src/components/Icon/Icon.types';
 
 interface UseDynamicSVGImportOptions {
   onCompleted?: (
