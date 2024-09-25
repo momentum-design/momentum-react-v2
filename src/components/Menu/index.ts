@@ -1,9 +1,9 @@
 import { default as Menu, MenuContext } from './Menu';
 import * as CONSTANTS from './Menu.constants';
 import { Props } from './Menu.types';
-import { SelectionGroup, MenuSeparator } from './Menu.utils';
+import { SelectionGroup } from './Menu.utils';
 
-export { CONSTANTS as MENU_CONSTANTS, MenuContext, SelectionGroup, MenuSeparator };
+export { CONSTANTS as MENU_CONSTANTS, MenuContext, SelectionGroup };
 
 export type MenuProps<T> = Props<T>;
 

@@ -1,8 +1,9 @@
 import React from 'react';
-import { MenuSeparator, SelectionGroup } from './Menu.utils';
+import { SelectionGroup } from './Menu.utils';
 import { Item, Section, PartialNode } from '@react-stately/collections';
 import { SelectionMode } from '@react-types/shared';
 import { SelectionGroupProps } from './Menu.types';
+import ContentSeparator from '../ContentSeparator';
 
 jest.mock('@react-stately/collections', () => ({
   Section: {
@@ -62,28 +63,19 @@ describe('SelectionGroup', () => {
   });
 });
 
-describe('MenuSeparator', () => {
-  it('returns null', () => {
-    const result = MenuSeparator({});
-    expect(result).toBeNull();
-  });
-
-  it('should have a __name property set to "MenuSeparator"', () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(MenuSeparator.__name).toBe('MenuSeparator');
-  });
-
-  it('getCollectionNode should yield a single node with type "separator"', () => {
+describe('ContentSeparator', () => {
+  it('getCollectionNode should yield a single node with type "item" and have prop _isSeparator', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore - We don't export this method in the types
-    const generator = MenuSeparator.getCollectionNode();
+    const generator = ContentSeparator.getCollectionNode();
     const results = Array.from(generator);
 
     expect(results).toHaveLength(1);
     expect(results[0]).toEqual({
-      type: 'separator',
-      props: undefined,
+      type: 'item',
+      props: {
+        _isSeparator: true,
+      },
     });
   });
 
@@ -94,13 +86,16 @@ describe('MenuSeparator', () => {
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore - We don't export this method in the types
-    const generator = MenuSeparator.getCollectionNode(props);
+    const generator = ContentSeparator.getCollectionNode(props);
     const results = Array.from(generator);
 
     expect(results).toHaveLength(1);
     expect(results[0]).toEqual({
-      type: 'separator',
-      props,
+      type: 'item',
+      props: {
+        _isSeparator: true,
+        ...props,
+      },
     });
   });
 });

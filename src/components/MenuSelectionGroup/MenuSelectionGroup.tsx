@@ -9,6 +9,7 @@ import './MenuSelectionGroup.style.scss';
 import MenuItem from '../MenuItem';
 import { SelectionManager, useMultipleSelectionState } from '@react-stately/selection';
 import { useMenuSection } from '@react-aria/menu';
+import ContentSeparator from '../ContentSeparator';
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction, tickPosition, classNameSelectedItem, className, itemSize } = props;
@@ -54,6 +55,13 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
       )}
       <ul {...groupProps} className={classNames(STYLE.wrapper, className)}>
         {Array.from(item.childNodes).map((node) => {
+          if (node.props?._isSeparator) {
+            const props = { ...node.props };
+            delete props._isSeparator;
+
+            return <ContentSeparator {...props} />;
+          }
+
           let item = (
             <MenuItem
               key={node.key}
