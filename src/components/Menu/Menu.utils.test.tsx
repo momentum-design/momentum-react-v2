@@ -3,7 +3,6 @@ import { SelectionGroup } from './Menu.utils';
 import { Item, Section, PartialNode } from '@react-stately/collections';
 import { SelectionMode } from '@react-types/shared';
 import { SelectionGroupProps } from './Menu.types';
-import ContentSeparator from '../ContentSeparator';
 
 jest.mock('@react-stately/collections', () => ({
   Section: {
