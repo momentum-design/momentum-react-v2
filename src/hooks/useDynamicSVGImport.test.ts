@@ -21,10 +21,14 @@ describe('Icon', () => {
       );
 
       const hook = renderHook(() =>
-        useDynamicSVGImport(name, library, {
-          onCompleted: onCompleteMock,
-          onError: onErrorMock,
-        })
+        useDynamicSVGImport(
+          name,
+          {
+            onCompleted: onCompleteMock,
+            onError: onErrorMock,
+          },
+          library
+        )
       );
       expect(hook.result.current.loading).toBe(true);
 
@@ -54,10 +58,14 @@ describe('Icon', () => {
     );
 
     const hook = renderHook(() =>
-      useDynamicSVGImport(name, 'icons', {
-        onCompleted: onCompleteMock,
-        onError: onErrorMock,
-      })
+      useDynamicSVGImport(
+        name,
+        {
+          onCompleted: onCompleteMock,
+          onError: onErrorMock,
+        },
+        'icons'
+      )
     );
     expect(hook.result.current.loading).toBe(true);
 
