@@ -1,12 +1,11 @@
 import { CSSProperties } from 'react';
 import IconKeys from '@momentum-design/icons/dist/types/types';
-import BrandVisualsKeys from '@momentum-design/brand-visuals/dist/types/types';
 
 export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 
 type RemoveWeight<T> = T extends `${infer Base}-${IconWeight}` ? Base : T;
 
-export type InferredIconName = RemoveWeight<IconKeys | BrandVisualsKeys>;
+export type InferredIconName = RemoveWeight<IconKeys>;
 
 export type IconScale =
   | 8
@@ -29,8 +28,6 @@ export type IconScale =
   | 124
   | 'auto'
   | 'inherit';
-
-export type IconLibrary = 'icons' | 'brand-visuals';
 
 export interface Props {
   /**
@@ -113,6 +110,4 @@ export interface Props {
    * An example would be brand icons.
    */
   weightless?: boolean;
-
-  library?: IconLibrary;
 }

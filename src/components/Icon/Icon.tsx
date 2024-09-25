@@ -31,11 +31,10 @@ const Icon: React.FC<Props> = (props: Props) => {
     weight,
     weightless = DEFAULTS.WEIGHTLESS,
     ariaLabel,
-    library = DEFAULTS.LIBRARY,
     ...otherProps
   } = props;
   const resolvedSVGName = getResolvedSVGName(name, weight, weightless);
-  const { SvgIcon, error } = useDynamicSVGImport(resolvedSVGName, undefined, library);
+  const { SvgIcon, error } = useDynamicSVGImport(resolvedSVGName);
 
   const isColoredIcon = /-colou?red$/.test(name as string);
 
