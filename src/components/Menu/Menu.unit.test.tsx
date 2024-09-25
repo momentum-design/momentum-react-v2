@@ -188,6 +188,50 @@ describe('<Menu />', () => {
       const container = mount(<Menu {...props} />);
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with seperator within selection group', () => {
+      const props = {
+        ...defaultProps,
+        children: [
+          <SelectionGroup key="section-1" selectionMode="single">
+            <Item key="1-one">One</Item>
+            <ContentSeparator key="sep-section-1" />
+            <Item key="1-two">Two</Item>
+          </SelectionGroup>,
+          <ContentSeparator key="sep-middle" />,
+          <SelectionGroup key="section-2" selectionMode="multiple">
+            <Item key="2-one">One</Item>
+            <ContentSeparator key="sep-section-2" />
+            <Item key="2-two">Two</Item>
+          </SelectionGroup>,
+        ],
+      };
+
+      const container = mount(<Menu {...props} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with seperator within section', () => {
+      const props = {
+        ...defaultProps,
+        children: [
+          <Section key="section-1">
+            <Item key="1-one">One</Item>
+            <ContentSeparator key="sep-section-1" />
+            <Item key="1-two">Two</Item>
+          </Section>,
+          <ContentSeparator key="sep-middle" />,
+          <Section key="section-2">
+            <Item key="2-one">One</Item>
+            <ContentSeparator key="sep-section-2" />
+            <Item key="2-two">Two</Item>
+          </Section>,
+        ],
+      };
+
+      const container = mount(<Menu {...props} />);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -398,6 +442,7 @@ describe('<Menu />', () => {
         <Menu {...defaultProps}>
           <Section title="Section 1" key="s1" aria-label="section1">
             <Item key="one">One</Item>
+            <ContentSeparator key="sep" />
             <Item key="two">Two</Item>
           </Section>
           <ContentSeparator key="sep" />
@@ -459,6 +504,7 @@ describe('<Menu />', () => {
             aria-label="selection1"
           >
             <Item key="one">One</Item>
+            <ContentSeparator key="sep" />
             <Item key="two">Two</Item>
           </SelectionGroup>
           <ContentSeparator key="sep" />
