@@ -11,8 +11,9 @@ import Documentation from './Menu.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
+import ContentSeparator from '../ContentSeparator';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon } from '..';
+import { Icon, Text } from '..';
 import './Menu.stories.style.scss';
 
 export default {
@@ -82,39 +83,21 @@ Sections.parameters = {
       onSelectionChange: menuOnSelectionChange,
       onAction: menuOnAction,
       children: [
-        <Section
-          key="0"
-          title={
-            <ListHeader outline={false}>
-              <ListItemBaseSection position="fill">Europe</ListItemBaseSection>
-            </ListHeader>
-          }
-        >
+        <Section key="0" title="Europe">
           <Item key="00">Spain</Item>
           <Item key="01">France</Item>
           <Item key="02">Italy</Item>
         </Section>,
-        <Section
-          key="1"
-          title={
-            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-              <ListItemBaseSection position="fill">Asia</ListItemBaseSection>
-            </ListHeader>
-          }
-        >
+        <ContentSeparator key="sep-0" />,
+        <Section key="1" title="Asia">
           <Item key="10">India</Item>
           <Item key="11">China</Item>
           <Item key="12">Japan</Item>
         </Section>,
-        <Section
-          key="2"
-          title={
-            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-              <ListItemBaseSection position="fill">America</ListItemBaseSection>
-            </ListHeader>
-          }
-        >
+        <ContentSeparator key="sep-1" />,
+        <Section key="2" title="America">
           <Item key="13">USA</Item>
+          <ContentSeparator key="sep-21" />
           <Item key="14">Mexico</Item>
           <Item key="15">Canada</Item>
         </Section>,
@@ -146,7 +129,6 @@ SelectionGroups.parameters = {
         <SelectionGroup
           key="0"
           selectionMode="multiple"
-          aria-label="First group"
           onSelectionChange={(...rest) => {
             console.log('singleselection1', rest);
           }}
@@ -154,27 +136,24 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction1', rest);
           }}
           title={
-            <ListHeader outline={false}>
-              <ListItemBaseSection position="start">
-                <Icon scale={16} name="speaker" strokeColor="none" />
-              </ListItemBaseSection>
-              <ListItemBaseSection position="fill">
-                Speaker (you can choose many)
-              </ListItemBaseSection>
-            </ListHeader>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="speaker" strokeColor="none" />
+              <Text type="body-secondary">Speaker (you can choose many)</Text>
+            </Flex>
           }
         >
           <Item key="00">System default speaker</Item>
           <Item key="01">Default - External Headphones (Built-in)</Item>
+          <ContentSeparator key="sep-21" />
           <Item key="02">Desk Pro Web Camera</Item>
           <Item key="03">MacBook Pro Speakers</Item>
           <Item key="04">Webex Media Audio Device</Item>
         </SelectionGroup>,
+        <ContentSeparator key="sep-0" />,
         <SelectionGroup
           key="1"
           selectionMode="single"
           tickPosition="right"
-          aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection2', rest);
           }}
@@ -182,16 +161,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction2', rest);
           }}
           title={
-            <>
-              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-                <ListItemBaseSection position="start">
-                  <Icon scale={16} name="microphone" strokeColor="none" />
-                </ListItemBaseSection>
-                <ListItemBaseSection position="fill">
-                  Microphone (you can choose one)
-                </ListItemBaseSection>
-              </ListHeader>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="microphone" strokeColor="none" />
+              <Text type="body-secondary">Microphone (you can choose one)</Text>
+            </Flex>
           }
         >
           <Item key="10">No Microphone</Item>
@@ -200,6 +173,7 @@ SelectionGroups.parameters = {
           <Item key="13">MacBook Pro Microphone</Item>
           <Item key="14">Webex Media Audio Device</Item>
         </SelectionGroup>,
+        <ContentSeparator key="sep-1" />,
         <SelectionGroup
           key="2"
           tickPosition="none"
@@ -210,7 +184,6 @@ SelectionGroups.parameters = {
             { key: '22', value: 'Music mode' },
           ]}
           selectionMode="single"
-          aria-label="Second group"
           onSelectionChange={(...rest) => {
             console.log('singleselection3', rest);
           }}
@@ -218,16 +191,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction3', rest);
           }}
           title={
-            <>
-              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-                <ListItemBaseSection position="start">
-                  <Icon scale={16} name="adjust-microphone" strokeColor="none" />
-                </ListItemBaseSection>
-                <ListItemBaseSection position="fill">
-                  Webex smart audio (You can choose one)
-                </ListItemBaseSection>
-              </ListHeader>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="adjust-microphone" strokeColor="none" />
+              <Text type="body-secondary">Webex smart audio (You can choose one)</Text>
+            </Flex>
           }
         >
           {(item) => (
@@ -236,6 +203,7 @@ SelectionGroups.parameters = {
             </Item>
           )}
         </SelectionGroup>,
+        <ContentSeparator key="sep-2" />,
         <SelectionGroup
           key="3"
           tickPosition="none"
@@ -248,7 +216,6 @@ SelectionGroups.parameters = {
             { key: '32', value: 'Side by side' },
           ]}
           selectionMode="single"
-          aria-label="Third group"
           onSelectionChange={(...rest) => {
             console.log('singleselection4', rest);
           }}
@@ -256,14 +223,10 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction4', rest);
           }}
           title={
-            <>
-              <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-                <ListItemBaseSection position="start">
-                  <Icon scale={16} name="accessibility" strokeColor="none" />
-                </ListItemBaseSection>
-                <ListItemBaseSection position="fill">Layout</ListItemBaseSection>
-              </ListHeader>
-            </>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="accessibility" strokeColor="none" />
+              <Text type="body-secondary">Layout</Text>
+            </Flex>
           }
         >
           {(item) => (

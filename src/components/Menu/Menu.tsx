@@ -17,6 +17,7 @@ import MenuItem from '../MenuItem';
 import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import MenuSelectionGroup from '../MenuSelectionGroup';
+import ContentSeparator from '../ContentSeparator';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -63,10 +64,18 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
 
   const internalRef = useRef();
   const ref = providedRef || internalRef;
+  const itemArray = Array.from(state.collection.getKeys());
+
+  // Ensure all separators are in the disabledKeys set so they are not interactable
+  // This may need copying instead of modifying due to how React works
+  itemArray.forEach((key) => {
+    const item = state.collection.getItem(key);
+    if (item.props?._isSeparator) {
+      state.disabledKeys.add(key);
+    }
+  });
 
   const { menuProps } = useMenu(_props, state, ref);
-
-  const itemArray = Array.from(state.collection.getKeys());
 
   const renderItem = useCallback(
     <T extends object>(item: Node<T>, state: TreeState<T>) => {
@@ -88,6 +97,13 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         // and we don't want to render items twice
         if (item.parentKey !== null) {
           return;
+        }
+
+        if (item.props?._isSeparator) {
+          const props = { ...item.props };
+          delete props._isSeparator;
+
+          return <ContentSeparator {...props} />;
         }
 
         let menuItem = (

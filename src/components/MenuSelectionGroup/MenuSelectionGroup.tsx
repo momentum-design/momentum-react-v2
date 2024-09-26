@@ -9,6 +9,7 @@ import './MenuSelectionGroup.style.scss';
 import MenuItem from '../MenuItem';
 import { SelectionManager, useMultipleSelectionState } from '@react-stately/selection';
 import { useMenuSection } from '@react-aria/menu';
+import ContentSeparator from '../ContentSeparator';
 
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction, tickPosition, classNameSelectedItem, className, itemSize } = props;
@@ -43,15 +44,24 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
 
   return (
     <div {...itemProps}>
-      {!React.isValidElement(item.rendered) && item.rendered ? (
-        <span className={STYLE.header} {...headingProps}>
-          {item.rendered}
-        </span>
-      ) : (
-        item.rendered && React.cloneElement(item.rendered as ReactElement, { ...headingProps })
+      {item.rendered && (
+        <div className={STYLE.header}>
+          {!React.isValidElement(item.rendered) ? (
+            <span {...headingProps}>{item.rendered}</span>
+          ) : (
+            React.cloneElement(item.rendered as ReactElement, { ...headingProps })
+          )}
+        </div>
       )}
       <ul {...groupProps} className={classNames(STYLE.wrapper, className)}>
         {Array.from(item.childNodes).map((node) => {
+          if (node.props?._isSeparator) {
+            const props = { ...node.props };
+            delete props._isSeparator;
+
+            return <ContentSeparator {...props} />;
+          }
+
           let item = (
             <MenuItem
               key={node.key}

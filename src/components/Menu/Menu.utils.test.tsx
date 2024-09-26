@@ -10,13 +10,13 @@ jest.mock('@react-stately/collections', () => ({
   },
 }));
 
-const defaultProps = {
-  children: [<Item key="one">One</Item>, <Item key="two">Two</Item>],
-  'aria-label': 'Menu component',
-  selectionMode: 'single' as Exclude<SelectionMode, 'none'>,
-};
-
 describe('SelectionGroup', () => {
+  const defaultProps = {
+    children: [<Item key="one">One</Item>, <Item key="two">Two</Item>],
+    'aria-label': 'Menu component',
+    selectionMode: 'single' as Exclude<SelectionMode, 'none'>,
+  };
+
   it('returns null', () => {
     const result = SelectionGroup(defaultProps);
     expect(result).toBeNull();

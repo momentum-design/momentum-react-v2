@@ -13,6 +13,7 @@ import MenuSelectionGroup from '../MenuSelectionGroup';
 import { MenuAppearanceContextValue } from './Menu.types';
 import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
 import ListItemBaseSection from '../ListItemBaseSection';
+import ContentSeparator from '../ContentSeparator';
 
 describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
@@ -171,6 +172,64 @@ describe('<Menu />', () => {
         <Menu {...defaultProps} classNameSelectedItem={classNameSelectedItem} />
       );
 
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with seperator between items', () => {
+      const props = {
+        ...defaultProps,
+        children: [
+          <Item key="one">One</Item>,
+          <ContentSeparator key="sep" />,
+          <Item key="two">Two</Item>,
+        ],
+      };
+
+      const container = mount(<Menu {...props} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with seperator within selection group', () => {
+      const props = {
+        ...defaultProps,
+        children: [
+          <SelectionGroup key="section-1" selectionMode="single">
+            <Item key="1-one">One</Item>
+            <ContentSeparator key="sep-section-1" />
+            <Item key="1-two">Two</Item>
+          </SelectionGroup>,
+          <ContentSeparator key="sep-middle" />,
+          <SelectionGroup key="section-2" selectionMode="multiple">
+            <Item key="2-one">One</Item>
+            <ContentSeparator key="sep-section-2" />
+            <Item key="2-two">Two</Item>
+          </SelectionGroup>,
+        ],
+      };
+
+      const container = mount(<Menu {...props} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with seperator within section', () => {
+      const props = {
+        ...defaultProps,
+        children: [
+          <Section key="section-1">
+            <Item key="1-one">One</Item>
+            <ContentSeparator key="sep-section-1" />
+            <Item key="1-two">Two</Item>
+          </Section>,
+          <ContentSeparator key="sep-middle" />,
+          <Section key="section-2">
+            <Item key="2-one">One</Item>
+            <ContentSeparator key="sep-section-2" />
+            <Item key="2-two">Two</Item>
+          </Section>,
+        ],
+      };
+
+      const container = mount(<Menu {...props} />);
       expect(container).toMatchSnapshot();
     });
   });
@@ -344,6 +403,38 @@ describe('<Menu />', () => {
       expect(menuItems[0]).toHaveFocus();
     });
 
+    it('should handle up/down arrow keys correctly - for vertical menus with seperator', async () => {
+      const user = userEvent.setup();
+
+      const props = {
+        ...defaultProps,
+        children: [
+          <Item key="one">One</Item>,
+          <ContentSeparator key="sep" />,
+          <Item key="two">Two</Item>,
+        ],
+      };
+
+      const { getAllByRole } = render(<Menu {...props} />);
+
+      await user.tab();
+
+      const menuItems = getAllByRole('menuitem');
+      expect(menuItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(menuItems[1]).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(menuItems[0]).toHaveFocus();
+
+      await user.keyboard('{ArrowRight}');
+
+      expect(menuItems[0]).toHaveFocus();
+    });
+
     it('should handle up/down arrow keys correctly - for vertical menu with section', async () => {
       const user = userEvent.setup();
 
@@ -351,8 +442,10 @@ describe('<Menu />', () => {
         <Menu {...defaultProps}>
           <Section title="Section 1" key="s1" aria-label="section1">
             <Item key="one">One</Item>
+            <ContentSeparator key="sep" />
             <Item key="two">Two</Item>
           </Section>
+          <ContentSeparator key="sep" />
           <Section title="Section 2" key="s2" aria-label="section2">
             <Item key="three">Three</Item>
             <Item key="four">Four</Item>
@@ -411,8 +504,10 @@ describe('<Menu />', () => {
             aria-label="selection1"
           >
             <Item key="one">One</Item>
+            <ContentSeparator key="sep" />
             <Item key="two">Two</Item>
           </SelectionGroup>
+          <ContentSeparator key="sep" />
           <SelectionGroup
             selectionMode="multiple"
             title="SelectionGroup 2"
@@ -583,6 +678,18 @@ describe('<Menu />', () => {
         children: expect.any(Object),
         selectionGroup: true,
       });
+    });
+
+    it('should render ContentSeperator if children has ContentSeparator', () => {
+      const wrapper = mount(
+        <Menu {...defaultProps}>
+          <Item key="01">One</Item>
+          <ContentSeparator key="sep" />
+          <Item key="02">Two</Item>
+        </Menu>
+      );
+
+      expect(wrapper.find(ContentSeparator).exists()).toBe(true);
     });
   });
 });
