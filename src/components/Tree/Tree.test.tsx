@@ -7,8 +7,7 @@ import userEvent from '@testing-library/user-event';
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
 import TreeNodeBase from '../TreeNodeBase';
-import { convertNestedTree2MappedTree, getTreeRootId, mapTree } from './Tree.utils';
-import { act } from 'react-test-renderer';
+import { convertNestedTree2MappedTree, mapTree } from './Tree.utils';
 
 const getSampleTree = () => {
   // prettier-ignore
@@ -39,12 +38,6 @@ describe('<Tree />', () => {
     treeStructure: tNode('root', true, [tNode('1'), tNode('2')]),
   };
 
-  // Remove noisy console.warn
-  beforeAll(() => {
-    jest.spyOn(console, 'warn').mockImplementation(() => {
-      /**/
-    });
-  });
   afterAll(() => {
     jest.restoreAllMocks();
   });
@@ -946,6 +939,9 @@ describe('<Tree />', () => {
     });
 
     it('should update selected items based on the selectionMode', async () => {
+      jest.spyOn(console, 'warn').mockImplementation(() => {
+        /**/
+      });
       const tree = getSampleTree();
       const { rerender, getByTestId } = render(
         getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['1', '2.2'] })
@@ -958,6 +954,8 @@ describe('<Tree />', () => {
 
       expect(getByTestId('1')).not.toHaveAttribute('aria-selected', 'true');
       expect(getByTestId('2.2')).not.toHaveAttribute('aria-selected', 'true');
+      // eslint-disable-next-line no-console
+      expect(console.warn).toHaveBeenCalled();
     });
 
     describe('controlled tree selection', () => {

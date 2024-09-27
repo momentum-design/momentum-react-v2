@@ -322,6 +322,12 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
 </TreeNodeBase>
 `;
 
+exports[`TreeNodeBase snapshot should match snapshot without tree context 1`] = `
+<TreeNodeBase
+  nodeId="42"
+/>
+`;
+
 exports[`TreeNodeBase snapshot should not render the content of the hidden nodes 1`] = `
 <Tree
   excludeTreeRoot={false}
@@ -397,6 +403,7 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
               root
             </div>
             <div
+              aria-labelledby="md-tree-node-root"
               aria-owns="md-tree-node-1 md-tree-node-2"
               className="md-tree-node-base-group"
               role="group"
@@ -539,6 +546,7 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
           >
             root
             <div
+              aria-labelledby="md-tree-node-root"
               aria-owns="md-tree-node-1 md-tree-node-2"
               className="md-tree-node-base-group"
               role="group"
