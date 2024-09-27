@@ -21,7 +21,8 @@ export const TreeContext = React.createContext<TreeContextValue>(null);
 export const useTreeContext = (): TreeContextValue => {
   const value = useContext(TreeContext);
   if (!value) {
-    throw new Error('useTreeContext hook used without TreeContext!');
+    // eslint-disable-next-line no-console
+    console.error('useTreeContext hook used without TreeContext!');
   }
   return value;
 };
