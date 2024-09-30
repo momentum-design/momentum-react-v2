@@ -230,12 +230,17 @@ CloseOnSelect.parameters = {
       onOpenChange: action('onOpenChange'),
       triggerComponent: (
         <ButtonPill>
-          <div>closeOnSelect: false</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+          <div>Menu with closeOnSelect: false</div>{' '}
+          <Icon name="arrow-down" weight="bold" autoScale={100} />
         </ButtonPill>
       ),
       children: [
         <Menu key="2">
-          <SelectionGroup key="test1" selectionMode="single" title="Will keep the menu open">
+          <SelectionGroup
+            key="test1"
+            selectionMode="single"
+            title="By default, the whole menu stays open on select unless stated differently in the item"
+          >
             <Item key="one">Selection 1</Item>
             <Item key="two">Selection 2</Item>
             <Item key="three">Selection 3</Item>
@@ -243,7 +248,7 @@ CloseOnSelect.parameters = {
           <ContentSeparator />
           <Section key="test2">
             <Item key="close" closeOnSelect>
-              Action that will close the menu once triggered
+              Action with closeOnSelect: true
             </Item>
           </Section>
         </Menu>,
@@ -254,25 +259,30 @@ CloseOnSelect.parameters = {
       onOpenChange: action('onOpenChange'),
       triggerComponent: (
         <ButtonPill>
-          <div>closeOnSelect: true</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+          <div>Menu with closeOnSelect: true</div>{' '}
+          <Icon name="arrow-down" weight="bold" autoScale={100} />
         </ButtonPill>
       ),
       children: [
         <Menu key="2">
-          <SelectionGroup key="test1" selectionMode="single" title="Will keep the menu open">
+          <SelectionGroup
+            key="test1"
+            selectionMode="single"
+            title="By default, the whole menu closes on select unless stated differently in the item"
+          >
             <Item key="one" closeOnSelect={false}>
-              Selection 1
+              Selection 1 with closeOnSelect: false
             </Item>
             <Item key="two" closeOnSelect={false}>
-              Selection 2
+              Selection 2 with closeOnSelect: false
             </Item>
             <Item key="three" closeOnSelect={false}>
-              Selection 3
+              Selection 3 with closeOnSelect: false
             </Item>
           </SelectionGroup>
           <ContentSeparator />
           <Section key="test2">
-            <Item key="close">Action that will close the menu once triggered</Item>
+            <Item key="close">Action</Item>
           </Section>
         </Menu>,
       ],
