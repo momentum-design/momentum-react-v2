@@ -56,6 +56,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   const internalRef = useRef<HTMLDivElement>();
   const ref = providedRef && typeof providedRef !== 'function' ? providedRef : internalRef;
   const isHidden = !nodeDetails || nodeDetails.isHidden;
+  const isLeaf = nodeDetails?.isLeaf;
 
   // When used in a popover, the ref will be a callback.
   // We need to update this callback ref, so the popover
@@ -115,14 +116,14 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
       if (
         treeContext &&
         treeContext.itemSelection.selectionMode !== 'none' &&
-        (treeContext.selectableNodes === 'any' || nodeDetails?.isLeaf)
+        (treeContext.selectableNodes === 'any' || isLeaf)
       ) {
         treeContext.itemSelection.toggle(nodeId);
       }
 
       onPress?.(event);
     },
-    [treeContext, nodeDetails.isLeaf, onPress, ref, nodeId]
+    [treeContext, isLeaf, onPress, ref, nodeId]
   );
 
   const { pressProps, isPressed } = usePress({
