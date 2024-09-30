@@ -9,12 +9,13 @@ import argTypes from './MenuTrigger.stories.args';
 import Documentation from './MenuTrigger.stories.docs.mdx';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
-import Menu from '../Menu';
+import Menu, { SelectionGroup } from '../Menu';
 import Icon from '../Icon';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { action } from '@storybook/addon-actions';
+import ContentSeparator from '../ContentSeparator';
 
 export default {
   title: 'Momentum UI/MenuTrigger',
@@ -214,4 +215,69 @@ Common.parameters = {
   ],
 };
 
-export { Example, Common };
+const CloseOnSelect = MultiTemplate<MenuTriggerProps>(MenuTrigger).bind({});
+
+CloseOnSelect.argTypes = { ...argTypes };
+
+CloseOnSelect.args = {
+  'aria-label': 'Menu trigger',
+};
+
+CloseOnSelect.parameters = {
+  variants: [
+    {
+      closeOnSelect: false,
+      onOpenChange: action('onOpenChange'),
+      triggerComponent: (
+        <ButtonPill>
+          <div>closeOnSelect: false</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+        </ButtonPill>
+      ),
+      children: [
+        <Menu key="2">
+          <SelectionGroup key="test1" selectionMode="single" title="Will keep the menu open">
+            <Item key="one">Selection 1</Item>
+            <Item key="two">Selection 2</Item>
+            <Item key="three">Selection 3</Item>
+          </SelectionGroup>
+          <ContentSeparator />
+          <Section key="test2">
+            <Item key="close" closeOnSelect>
+              Action that will close the menu once triggered
+            </Item>
+          </Section>
+        </Menu>,
+      ],
+    },
+    {
+      closeOnSelect: true,
+      onOpenChange: action('onOpenChange'),
+      triggerComponent: (
+        <ButtonPill>
+          <div>closeOnSelect: true</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+        </ButtonPill>
+      ),
+      children: [
+        <Menu key="2">
+          <SelectionGroup key="test1" selectionMode="single" title="Will keep the menu open">
+            <Item key="one" closeOnSelect={false}>
+              Selection 1
+            </Item>
+            <Item key="two" closeOnSelect={false}>
+              Selection 2
+            </Item>
+            <Item key="three" closeOnSelect={false}>
+              Selection 3
+            </Item>
+          </SelectionGroup>
+          <ContentSeparator />
+          <Section key="test2">
+            <Item key="close">Action that will close the menu once triggered</Item>
+          </Section>
+        </Menu>,
+      ],
+    },
+  ],
+};
+
+export { Example, Common, CloseOnSelect };

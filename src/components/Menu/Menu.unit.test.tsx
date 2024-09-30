@@ -10,8 +10,13 @@ import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MenuSelectionGroup from '../MenuSelectionGroup';
-import { MenuAppearanceContextValue } from './Menu.types';
-import { MenuAppearanceContext, useMenuAppearanceContext } from './Menu';
+import { MenuAppearanceContextValue, MenuContextValue } from './Menu.types';
+import {
+  MenuAppearanceContext,
+  MenuContext,
+  useMenuAppearanceContext,
+  useMenuContext,
+} from './Menu';
 import ListItemBaseSection from '../ListItemBaseSection';
 import ContentSeparator from '../ContentSeparator';
 
@@ -84,6 +89,64 @@ describe('useMenuAppearanceContext', () => {
       tickPosition: 'right',
       classNameSelectedItem: 'selected-class',
       itemSize: 32,
+    });
+  });
+});
+
+describe('useMenuContext', () => {
+  const fakeMenuContextValue: MenuContextValue = {
+    shouldFocusWrap: true,
+  };
+
+  it('should return default context values when no props are provided', () => {
+    // eslint-disable-next-line react/prop-types
+    const wrapper = ({ children }) => (
+      <MenuContext.Provider value={fakeMenuContextValue}>{children}</MenuContext.Provider>
+    );
+
+    const { result } = renderHook(() => useMenuContext(), { wrapper });
+
+    expect(result.current).toEqual({
+      shouldFocusWrap: true,
+    });
+  });
+
+  it('should override context values with provided props', () => {
+    // eslint-disable-next-line react/prop-types
+    const wrapper = ({ children }) => (
+      <MenuContext.Provider value={fakeMenuContextValue}>{children}</MenuContext.Provider>
+    );
+
+    const { result } = renderHook(
+      () =>
+        useMenuContext({
+          shouldFocusWrap: false,
+        }),
+      { wrapper }
+    );
+
+    expect(result.current).toEqual({
+      shouldFocusWrap: false,
+    });
+  });
+
+  it('should use context values for props that are not provided', () => {
+    // eslint-disable-next-line react/prop-types
+    const wrapper = ({ children }) => (
+      <MenuContext.Provider value={fakeMenuContextValue}>{children}</MenuContext.Provider>
+    );
+
+    const { result } = renderHook(
+      () =>
+        useMenuContext({
+          closeOnSelect: true,
+        }),
+      { wrapper }
+    );
+
+    expect(result.current).toEqual({
+      shouldFocusWrap: true,
+      closeOnSelect: true,
     });
   });
 });

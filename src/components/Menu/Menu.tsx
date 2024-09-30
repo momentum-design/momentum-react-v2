@@ -18,28 +18,24 @@ import { mergeProps } from '@react-aria/utils';
 import MenuSection from '../MenuSection';
 import MenuSelectionGroup from '../MenuSelectionGroup';
 import ContentSeparator from '../ContentSeparator';
+import { defaults } from 'lodash';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
-export function useMenuContext(): MenuContextValue {
-  return useContext(MenuContext);
+export function useMenuContext(props: Partial<MenuContextValue> = {}): MenuContextValue {
+  const context = useContext(MenuContext);
+
+  return defaults({}, props, context);
 }
 
 export const MenuAppearanceContext = React.createContext<MenuAppearanceContextValue>({});
 
-export function useMenuAppearanceContext({
-  tickPosition,
-  classNameSelectedItem,
-  itemSize,
-}: SelectionGroupAppearanceProps): MenuAppearanceContextValue {
+export function useMenuAppearanceContext(
+  props: Partial<SelectionGroupAppearanceProps> = {}
+): MenuAppearanceContextValue {
   const menuAppearance = useContext(MenuAppearanceContext);
 
-  return {
-    ...menuAppearance,
-    itemSize: itemSize || menuAppearance.itemSize,
-    tickPosition: tickPosition || menuAppearance.tickPosition,
-    classNameSelectedItem: classNameSelectedItem || menuAppearance.classNameSelectedItem,
-  };
+  return defaults({}, props, menuAppearance);
 }
 
 const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivElement>) => {
