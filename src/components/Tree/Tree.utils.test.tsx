@@ -74,9 +74,17 @@ describe('Tree utils', () => {
       expect(result.current).toBe('treeContext');
     });
 
-    it('should throw an error when the tree context is not available', () => {
+    it('should return with null and log error when the tree context is not available', () => {
+      jest.spyOn(console, 'error').mockImplementation(() => {
+        /**/
+      });
       const { result } = renderHook(() => useTreeContext());
-      expect(result.error).toEqual(Error('useTreeContext hook used without TreeContext!'));
+      expect(result.current).toEqual(null);
+      // eslint-disable-next-line no-console
+      expect(console.error).toHaveBeenNthCalledWith(
+        1,
+        'useTreeContext hook used without TreeContext!'
+      );
     });
   });
 
@@ -126,10 +134,15 @@ describe('Tree utils', () => {
     });
 
     it('should returns with the same nodeId when it is not found in the tree', () => {
+      jest.spyOn(console, 'warn').mockImplementation(() => {
+        /**/
+      });
       const result = getNextActiveNode(tree, 'not-found', 'ArrowDown', true, toggleTreeNode);
 
       expect(toggleTreeNode).not.toHaveBeenCalled();
       expect(result).toEqual('not-found');
+      // eslint-disable-next-line no-console
+      expect(console.warn).toHaveBeenCalledTimes(1);
     });
 
     describe('when root excluded', () => {
@@ -258,6 +271,9 @@ describe('Tree utils', () => {
         });
 
         it('should return with the last node id before the loop restart when the tree has a loop', () => {
+          jest.spyOn(console, 'error').mockImplementation(() => {
+            /**/
+          });
           const loopTree = createTree();
           loopTree.get('2').parent = '2.2.3';
 
@@ -305,10 +321,15 @@ describe('Tree utils', () => {
       });
 
       it('should return with the last node id before the loop restart when the tree has a loop', () => {
+        jest.spyOn(console, 'error').mockImplementation(() => {
+          /**/
+        });
         const loopTree = createTree();
         loopTree.get('2.2').children.push('3');
 
         expect(getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toEqual('3');
+        // eslint-disable-next-line no-console
+        expect(console.error).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -605,6 +626,9 @@ describe('Tree utils', () => {
     });
 
     it('should skip duplicated tree node id with the whole subtree', () => {
+      jest.spyOn(console, 'error').mockImplementation(() => {
+        /**/
+      });
       const tree = tNode('<root>', true, [tNode('0'), tNode('0', false, [tNode('1')])]);
 
       expect(convertNestedTree2MappedTree(tree)).toEqual(
@@ -650,6 +674,8 @@ describe('Tree utils', () => {
           ],
         ])
       );
+      // eslint-disable-next-line no-console
+      expect(console.error).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -663,6 +689,9 @@ describe('Tree utils', () => {
     });
 
     it('should return with empty array when the there is no root node', () => {
+      jest.spyOn(console, 'error').mockImplementation(() => {
+        /**/
+      });
       // Tree with circular reference -> no node with parent === undefined
       const tree: TreeIdNodeMap = new Map([
         ['root', { id: 'root', parent: '1' } as TreeNodeRecord],
@@ -673,6 +702,8 @@ describe('Tree utils', () => {
       expect(mapTree(tree, callback, { rootNodeId: wrongId })).toEqual([]);
 
       expect(callback).not.toHaveBeenCalled();
+      // eslint-disable-next-line no-console
+      expect(console.error).toHaveBeenCalledTimes(1);
     });
 
     it('should not call the callback on the tree root by default', () => {

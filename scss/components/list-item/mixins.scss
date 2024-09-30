@@ -412,6 +412,10 @@
     background-color: $active-bgrd-color;
     background-color: var($active-bgrd-color-css-var, $active-bgrd-color);
 
+    .md-menu-item__content {
+      font-weight: 700;
+    }
+
     .#{$list-item__class} {
       &__header {
         color: $active-header-color;

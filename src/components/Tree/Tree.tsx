@@ -135,6 +135,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       const groupProps = {
         role: 'group',
         'aria-owns': node.children.map(getNodeDOMId).join(' '),
+        'aria-labelledby': getNodeDOMId(node.id),
       };
 
       return {

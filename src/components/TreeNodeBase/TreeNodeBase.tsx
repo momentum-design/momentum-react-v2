@@ -51,7 +51,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   }
 
   const treeContext = useTreeContext();
-  const nodeDetails = treeContext.getNodeDetails(nodeId);
+  const nodeDetails = treeContext?.getNodeDetails(nodeId);
 
   const internalRef = useRef<HTMLDivElement>();
   const ref = providedRef && typeof providedRef !== 'function' ? providedRef : internalRef;
@@ -145,7 +145,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   /**
    * Focus management
    */
-  const tabIndex = nodeId === treeContext.activeNodeId ? 0 : -1;
+  const tabIndex = nodeId === treeContext?.activeNodeId ? 0 : -1;
 
   // makes sure that whenever an item is pressed, the tree focus state gets updated as well
   useEffect(() => {
@@ -167,10 +167,11 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   const lastActiveNode = usePrevious(treeContext?.activeNodeId);
   useDidUpdateEffect(() => {
     if (
+      treeContext &&
       ref.current &&
       lastActiveNode !== undefined &&
-      lastActiveNode !== treeContext?.activeNodeId &&
-      treeContext?.activeNodeId === nodeId &&
+      lastActiveNode !== treeContext.activeNodeId &&
+      treeContext.activeNodeId === nodeId &&
       treeContext.isFocusWithin
     ) {
       ref.current.focus();
@@ -190,10 +191,10 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     return null;
   }
 
-  const { nodeProps, groupProps } = treeContext.getNodeAriaProps(nodeId);
+  const { nodeProps, groupProps } = treeContext?.getNodeAriaProps(nodeId);
   const isSelected =
-    treeContext.itemSelection.selectionMode !== 'none'
-      ? treeContext.itemSelection.isSelected(nodeId)
+    treeContext?.itemSelection.selectionMode !== 'none'
+      ? treeContext?.itemSelection.isSelected(nodeId)
       : undefined;
 
   return (
@@ -209,7 +210,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         data-shape={shape}
         className={classnames(className, STYLE.wrapper, {
           selected: isPressed || isSelected,
-          'active-node': nodeId === treeContext.activeNodeId,
+          'active-node': nodeId === treeContext?.activeNodeId,
         })}
         lang={lang}
         {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
@@ -218,7 +219,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         {...rest}
       >
         {content}
-        {treeContext.isRenderedFlat && !nodeDetails.isLeaf && (
+        {treeContext?.isRenderedFlat && !nodeDetails.isLeaf && (
           <div className={STYLE.group} {...groupProps} />
         )}
       </div>
