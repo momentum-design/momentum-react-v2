@@ -57,6 +57,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   const ref = providedRef && typeof providedRef !== 'function' ? providedRef : internalRef;
   const isHidden = !nodeDetails || nodeDetails.isHidden;
   const isLeaf = nodeDetails?.isLeaf;
+  const activeNodeId = treeContext?.activeNodeId;
 
   // When used in a popover, the ref will be a callback.
   // We need to update this callback ref, so the popover
@@ -145,7 +146,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   /**
    * Focus management
    */
-  const tabIndex = nodeId === treeContext?.activeNodeId ? 0 : -1;
+  const tabIndex = nodeId === activeNodeId ? 0 : -1;
 
   // makes sure that whenever an item is pressed, the tree focus state gets updated as well
   useEffect(() => {
@@ -164,26 +165,26 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     }
   }, [ref, tabIndex, isHidden]);
 
-  const lastActiveNode = usePrevious(treeContext?.activeNodeId);
+  const lastActiveNode = usePrevious(activeNodeId);
   useDidUpdateEffect(() => {
     if (
       treeContext &&
       ref.current &&
       lastActiveNode !== undefined &&
-      lastActiveNode !== treeContext.activeNodeId &&
-      treeContext.activeNodeId === nodeId &&
+      lastActiveNode !== activeNodeId &&
+      activeNodeId === nodeId &&
       treeContext.isFocusWithin
     ) {
       ref.current.focus();
     }
-  }, [treeContext?.activeNodeId]);
+  }, [activeNodeId]);
 
   // Update tab indexes of the node's element when the active node changes
   useEffect(() => {
-    if (treeContext?.activeNodeId !== undefined) {
+    if (activeNodeId !== undefined) {
       updateTabIndexes();
     }
-  }, [treeContext.activeNodeId, updateTabIndexes]);
+  }, [activeNodeId, updateTabIndexes]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
@@ -210,7 +211,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         data-shape={shape}
         className={classnames(className, STYLE.wrapper, {
           selected: isPressed || isSelected,
-          'active-node': nodeId === treeContext?.activeNodeId,
+          'active-node': nodeId === activeNodeId,
         })}
         lang={lang}
         {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
