@@ -20,6 +20,9 @@ describe('<MenuItem />', () => {
         <Item key="$.1" aria-label="1">
           Item 2
         </Item>,
+        <Item key="$.2" aria-label="2" closeOnSelect={false}>
+          Item 3
+        </Item>,
       ],
       selectedKeys: ['$.0'],
     })
@@ -239,5 +242,23 @@ describe('<MenuItem />', () => {
     triggerPress(element);
 
     expect(onCloseMock).not.toHaveBeenCalled();
+  });
+
+  it('should call useMenuContext with empty object', async () => {
+    const item = state.collection.getItem('$.1');
+    const useMenuContextMock = jest.spyOn(menu, 'useMenuContext');
+
+    mount(<MenuItem state={state} key={item.key} item={item} />);
+
+    expect(useMenuContextMock).toHaveBeenCalledWith({});
+  });
+
+  it('should call useMenuContext with closeOnSelect override', async () => {
+    const item = state.collection.getItem('$.2');
+    const useMenuContextMock = jest.spyOn(menu, 'useMenuContext');
+
+    mount(<MenuItem state={state} key={item.key} item={item} />);
+
+    expect(useMenuContextMock).toHaveBeenCalledWith({ closeOnSelect: false });
   });
 });

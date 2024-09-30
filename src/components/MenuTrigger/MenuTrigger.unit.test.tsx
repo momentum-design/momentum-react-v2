@@ -371,6 +371,72 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       });
     });
 
+    it('should close the menu when closeOnSelect is false but overridden by <Item closeOnSelect={true} />', async () => {
+      const user = userEvent.setup();
+
+      const children = [...defaultProps.children];
+      children.push(
+        <Menu>
+          <Item key="close" closeOnSelect={true}>
+            Close
+          </Item>
+        </Menu>
+      );
+
+      render(
+        <MenuTrigger {...defaultProps} closeOnSelect={false}>
+          {children}
+        </MenuTrigger>
+      );
+
+      await openMenu(user, screen);
+
+      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+
+      await waitFor(() => {
+        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+      });
+
+      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+
+      await waitFor(() => {
+        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not close the menu when closeOnSelect is true but overridden by <Item closeOnSelect={false} />', async () => {
+      const user = userEvent.setup();
+
+      const children = [...defaultProps.children];
+      children.push(
+        <Menu>
+          <Item key="close" closeOnSelect={false}>
+            Close
+          </Item>
+        </Menu>
+      );
+
+      render(
+        <MenuTrigger {...defaultProps} closeOnSelect={true}>
+          {children}
+        </MenuTrigger>
+      );
+
+      await openMenu(user, screen);
+
+      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+
+      await waitFor(() => {
+        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+      });
+
+      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+
+      await waitFor(() => {
+        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+      });
+    });
+
     it('should open and close if isOpen prop is provided (controlled)', async () => {
       const user = userEvent.setup();
 
