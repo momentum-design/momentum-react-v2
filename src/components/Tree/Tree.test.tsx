@@ -485,9 +485,9 @@ describe('<Tree />', () => {
       node.remove();
 
       await waitFor(() => {
-        const clonedNode = getByText('1');
+        const clonedNode = getByTestId('1');
         expect(clonedNode).toHaveFocus();
-        // get a dedicated clas name
+        // get a dedicated class name
         expect(clonedNode).toHaveClass(TREE_CONSTANTS.STYLE.clonedVirtualTreeNode);
         // nodeid unsetted
         expect(clonedNode.dataset.nodeid).toBe(undefined);
@@ -533,7 +533,7 @@ describe('<Tree />', () => {
       expect(scrollToNode).toHaveBeenNthCalledWith(1, '1');
     });
 
-    it('should not call scrollToNode when cloned node exists and user press Shift+Tab', async () => {
+    it('should call scrollToNode when the focus moves back to the tree and the active node is not in the DOM', async () => {
       expect.assertions(2);
       const scrollToNode = jest.fn();
       const { getByText } = await renderTreeAndRemoveNode({
@@ -547,6 +547,30 @@ describe('<Tree />', () => {
       expect(getByText('1')).not.toBeNull();
       expect(scrollToNode).toHaveBeenCalledTimes(0);
     });
+
+    it.each`
+      keyPressed
+      ${'ArrowUp'}
+      ${'ArrowDown'}
+      ${'ArrowLeft'}
+      ${'ArrowRight'}
+    `(
+      'should call scrollToNode when active node is not in the DOM and $kepPressed key pressed',
+      async ({ keyPressed }) => {
+        expect.assertions(2);
+        const scrollToNode = jest.fn();
+        const { getByText } = await renderTreeAndRemoveNode({
+          scrollToNode,
+          setNodeOpen: jest.fn(),
+        });
+
+        await userEvent.keyboard(`{${keyPressed}}`);
+
+        // Only adding back Node 1 will remove the cloned node
+        expect(getByText('1')).not.toBeNull();
+        expect(scrollToNode).toHaveBeenCalledTimes(1);
+      }
+    );
 
     it('should remove the cloned node when the real node added back', async () => {
       expect.assertions(5);

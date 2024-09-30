@@ -21,7 +21,6 @@ import {
 } from './Tree.types';
 import { createTreeNode as tNode } from './test.utils';
 import { renderHook } from '@testing-library/react-hooks';
-import tree from './Tree';
 
 const createSingleLevelTree = () =>
   // prettier-ignore

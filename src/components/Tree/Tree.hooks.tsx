@@ -9,13 +9,18 @@ import { NODE_ID_ATTRIBUTE_NAME, NODE_ID_DATA_NAME } from '../TreeNodeBase/TreeN
 /**
  * Handle DOM changes for virtual tree
  *
+ * This hook manage 2 use cases:
+ * 1) When Virtual Tree removes active node, the hook adds a cloned node to not lose focus.
+ * 2) When the active node added back to the DOM, the hook invoke focus on the element and trigger
+ *    key event if it happened on the cloned element.
+ *
  * @param props
  * @internal
  */
 export const useVirtualTreeNavigation = ({
   virtualTreeConnector,
   treeRef,
-  activeNodeId,
+  activeNodeIdRef,
 }: UseVirtualTreeNavigationProps): void => {
   // Handle DOM changes for virtual tree
   useEffect(() => {
@@ -36,12 +41,13 @@ export const useVirtualTreeNavigation = ({
       );
 
     // Filter element by active node id
-    const getByNodeId = (node: HTMLElement) => node.dataset[NODE_ID_DATA_NAME] === activeNodeId;
+    const getByNodeId = (node: HTMLElement) =>
+      node.dataset[NODE_ID_DATA_NAME] === activeNodeIdRef.current;
 
     // Mutation observer to handle the focus change
     const mutationHandler: MutationCallback = (mutationList) => {
       for (const mutation of mutationList) {
-        // Handle removed active node
+        // Active node moved out of view and removed
         const removed = Array.from(mutation.removedNodes).find(getByNodeId) as HTMLElement;
         if (removed) {
           // Clone the active node and make some modifications
@@ -58,11 +64,11 @@ export const useVirtualTreeNavigation = ({
 
           // add focus and keydown event listeners
           clonedNode.addEventListener('focus', () => {
-            virtualTreeConnector.scrollToNode(activeNodeId);
+            virtualTreeConnector.scrollToNode(activeNodeIdRef.current);
           });
           clonedNode.addEventListener('keydown', (evt) => {
             if (TREE_NAVIGATION_KEYS.includes(evt.key) || (evt.key === 'Tab' && !evt.shiftKey)) {
-              virtualTreeConnector.scrollToNode(activeNodeId);
+              virtualTreeConnector.scrollToNode(activeNodeIdRef.current);
               keyDownEvent = new KeyboardEvent('keydown', evt);
               evt.stopPropagation();
               evt.preventDefault();
@@ -71,7 +77,7 @@ export const useVirtualTreeNavigation = ({
           return;
         }
 
-        // Handle adding back the focused node
+        // Active node moved back into the view and it added back to the DOM
         const added = Array.from(mutation.addedNodes).find(getByNodeId) as HTMLElement;
         if (added) {
           cleanUp();
@@ -103,5 +109,5 @@ export const useVirtualTreeNavigation = ({
       observer.disconnect();
       cleanUp();
     };
-  }, [virtualTreeConnector, activeNodeId, treeRef.current]);
+  }, [virtualTreeConnector, treeRef.current]);
 };

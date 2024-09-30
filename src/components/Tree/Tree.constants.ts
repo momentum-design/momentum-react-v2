@@ -7,6 +7,7 @@ const DEFAULTS = {
   SELECTABLE_NODES: 'leafOnly' as const,
   IS_REQUIRED: false,
   NODE_ID_PREFIX: 'md-tree-node',
+  SHOULD_NODE_FOCUS_BE_INSET: true,
 };
 
 const STYLE = {
