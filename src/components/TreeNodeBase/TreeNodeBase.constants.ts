@@ -24,6 +24,7 @@ const DEFAULTS = {
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   contextMenuWrapper: `${CLASS_PREFIX}-context-menu-wrapper`,
+  content: `${CLASS_PREFIX}-content`,
   group: `${CLASS_PREFIX}-group`,
 };
 

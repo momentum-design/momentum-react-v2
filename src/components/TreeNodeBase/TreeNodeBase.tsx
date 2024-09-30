@@ -193,7 +193,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     return null;
   }
 
-  const { nodeProps, groupProps } = treeContext?.getNodeAriaProps(nodeId);
+  const { nodeProps, nodeContentProps, groupProps } = treeContext?.getNodeAriaProps(nodeId);
   const isSelected =
     treeContext?.itemSelection.selectionMode !== 'none'
       ? treeContext?.itemSelection.isSelected(nodeId)
@@ -220,7 +220,13 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         {...nodeProps}
         {...rest}
       >
-        {content}
+        {/*
+        Unfortunately, we do need a wrapper around the content, because the aria-labelledby of the group element will
+        get the text from this and all the child nodes
+        */}
+        <div className={STYLE.content} {...nodeContentProps}>
+          {content}
+        </div>
         {treeContext?.isRenderedFlat && !nodeDetails.isLeaf && (
           <div className={STYLE.group} {...groupProps} />
         )}

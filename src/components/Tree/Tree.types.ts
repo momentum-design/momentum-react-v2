@@ -204,9 +204,12 @@ export interface Props
  */
 export interface UseVirtualTreeNavigationProps extends Pick<Props, 'virtualTreeConnector'> {
   /**
-   * The active node id in the tree.
+   * Reference to the active node id in the tree.
+   *
+   * @remarks This prevent to destroy and re-create MutationObserver every time when active node
+   * changes. Also, this solves the problem of missed mutations.
    */
-  activeNodeId: TreeNodeId;
+  activeNodeIdRef: MutableRefObject<TreeNodeId>;
   /**
    * The reference of the tree DOM element.
    */
@@ -221,6 +224,10 @@ export interface NodeAriaProps {
    * attributes to re-build the semantic structure of the tree.
    */
   nodeProps: Partial<HTMLAttributes<HTMLElement>>;
+  /**
+   * Additional attributes for the tree node's content.
+   */
+  nodeContentProps: Partial<HTMLAttributes<HTMLElement>>;
   /**
    * Additional attributes for the node connection group.
    *

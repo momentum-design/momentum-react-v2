@@ -31,7 +31,11 @@ exports[`TreeNodeBase snapshot should match snapshot 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -70,7 +74,11 @@ exports[`TreeNodeBase snapshot should match snapshot with className 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -110,7 +118,11 @@ exports[`TreeNodeBase snapshot should match snapshot with id 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -149,7 +161,11 @@ exports[`TreeNodeBase snapshot should match snapshot with isSelected 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -189,7 +205,11 @@ exports[`TreeNodeBase snapshot should match snapshot with lang 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -228,7 +248,11 @@ exports[`TreeNodeBase snapshot should match snapshot with shape 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -267,7 +291,11 @@ exports[`TreeNodeBase snapshot should match snapshot with size 1`] = `
         onTouchStart={[Function]}
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -315,7 +343,11 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
         }
         tabIndex={0}
       >
-        Test
+        <div
+          className="md-tree-node-base-content"
+        >
+          Test
+        </div>
       </div>
     </FocusRing>
   </FocusRing>
@@ -363,10 +395,13 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
       key="root"
       nodeId="root"
     >
-      <FocusRing>
+      <FocusRing
+        isInset={true}
+      >
         <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+          focusClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          focusRingClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          isInset={true}
         >
           <div
             aria-expanded="false"
@@ -398,12 +433,17 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
             tabIndex={0}
           >
             <div
-              className="node-content"
+              className="md-tree-node-base-content"
+              id="md-tree-node-root-content"
             >
-              root
+              <div
+                className="node-content"
+              >
+                root
+              </div>
             </div>
             <div
-              aria-labelledby="md-tree-node-root"
+              aria-labelledby="md-tree-node-root-content"
               aria-owns="md-tree-node-1 md-tree-node-2"
               className="md-tree-node-base-group"
               role="group"
@@ -510,10 +550,13 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
       key="root"
       nodeId="root"
     >
-      <FocusRing>
+      <FocusRing
+        isInset={true}
+      >
         <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+          focusClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          focusRingClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          isInset={true}
         >
           <div
             aria-expanded="true"
@@ -544,9 +587,14 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             role="treeitem"
             tabIndex={0}
           >
-            root
             <div
-              aria-labelledby="md-tree-node-root"
+              className="md-tree-node-base-content"
+              id="md-tree-node-root-content"
+            >
+              root
+            </div>
+            <div
+              aria-labelledby="md-tree-node-root-content"
               aria-owns="md-tree-node-1 md-tree-node-2"
               className="md-tree-node-base-group"
               role="group"
@@ -560,10 +608,13 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
       key="1"
       nodeId="1"
     >
-      <FocusRing>
+      <FocusRing
+        isInset={true}
+      >
         <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+          focusClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          focusRingClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          isInset={true}
         >
           <div
             aria-level={1}
@@ -593,7 +644,12 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             role="treeitem"
             tabIndex={-1}
           >
-            1
+            <div
+              className="md-tree-node-base-content"
+              id="md-tree-node-1-content"
+            >
+              1
+            </div>
           </div>
         </FocusRing>
       </FocusRing>
@@ -603,10 +659,13 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
       key="2"
       nodeId="2"
     >
-      <FocusRing>
+      <FocusRing
+        isInset={true}
+      >
         <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+          focusClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          focusRingClass="md-focus-ring-wrapper isInset children md-focus-ring-inset"
+          isInset={true}
         >
           <div
             aria-level={1}
@@ -636,7 +695,12 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             role="treeitem"
             tabIndex={-1}
           >
-            2
+            <div
+              className="md-tree-node-base-content"
+              id="md-tree-node-2-content"
+            >
+              2
+            </div>
           </div>
         </FocusRing>
       </FocusRing>

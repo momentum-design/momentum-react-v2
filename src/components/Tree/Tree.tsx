@@ -14,11 +14,11 @@ import { TreeIdNodeMap, Props, TreeContextValue, TreeNodeId, TreeRefObject } fro
 import './Tree.style.scss';
 import {
   convertNestedTree2MappedTree,
+  isActiveNodeInDOM,
   getFistActiveNode,
   getNextActiveNode,
   getNodeDOMId,
   getTreeRootId,
-  isActiveNodeInDOM,
   migrateTreeState,
   toggleTreeNodeRecord,
   TreeContext,
@@ -35,7 +35,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     id,
     style,
     children,
-    shouldNodeFocusBeInset,
+    shouldNodeFocusBeInset = DEFAULTS.SHOULD_NODE_FOCUS_BE_INSET,
     treeStructure,
     isRenderedFlat = DEFAULTS.IS_RENDERED_FLAT,
     excludeTreeRoot = DEFAULTS.EXCLUDE_TREE_ROOT,
@@ -60,10 +60,11 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     isRequired,
   });
   const [tree, setTree] = useState<TreeIdNodeMap>(convertNestedTree2MappedTree(treeStructure));
-  const [activeNodeId, setActiveNodeId] = useState<TreeNodeId | undefined>(
+  const [activeNode, setActiveNode] = useState<TreeNodeId | undefined>(
     getFistActiveNode(tree, excludeTreeRoot)
   );
   const [isFocusWithin, setIsFocusWithin] = useState(false);
+  const activeNodeIdRef = useRef<TreeNodeId>(activeNode);
 
   const previousTree = usePrevious(tree);
 
@@ -72,7 +73,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     migrateTreeState(previousTree, newTree);
     setTree(newTree);
     // Find the closest node to the last active node in the new tree
-    let newActiveNodeId = activeNodeId;
+    let newActiveNodeId = activeNode;
     while (newActiveNodeId) {
       if (newTree.has(newActiveNodeId) && !newTree.get(newActiveNodeId).isHidden) break;
       newActiveNodeId = previousTree.get(newActiveNodeId)?.parent;
@@ -86,17 +87,35 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
 
   const isVirtualTree = virtualTreeConnector !== undefined;
 
+  const scrollToVTreeNode = useCallback(
+    (nodeId: TreeNodeId) => {
+      if (isVirtualTree && virtualTreeConnector && !isActiveNodeInDOM(treeRef, nodeId)) {
+        virtualTreeConnector.scrollToNode?.(nodeId);
+      }
+    },
+    [isVirtualTree, virtualTreeConnector]
+  );
+
   // Handle DOM changes for virtual tree
-  useVirtualTreeNavigation({ virtualTreeConnector, treeRef: treeRef, activeNodeId });
+  useVirtualTreeNavigation({ virtualTreeConnector, treeRef: treeRef, activeNodeIdRef });
+
+  const setActiveNodeId = useCallback(
+    (newNodeId) => {
+      if (activeNodeIdRef.current !== newNodeId) {
+        activeNodeIdRef.current = newNodeId;
+        setActiveNode(newNodeId);
+        scrollToVTreeNode(newNodeId);
+      }
+    },
+    [isVirtualTree, setActiveNode]
+  );
 
   const toggleTreeNode = useCallback(
     async (id: TreeNodeId, isOpen?: boolean): Promise<void> => {
       const newOpenState = isOpen !== undefined ? isOpen : !tree.get(id).isOpen;
 
       if (isVirtualTree) {
-        if (!isActiveNodeInDOM(treeRef, activeNodeId)) {
-          virtualTreeConnector.scrollToNode?.(id);
-        }
+        scrollToVTreeNode(id);
         await virtualTreeConnector.setNodeOpen?.(id, newOpenState);
       }
 
@@ -116,10 +135,10 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
 
       const parent = node.parent && tree.get(node.parent);
       const isRoot = parent === undefined;
-
       // tabindex depends on the treeNodeBase params as well
       const nodeProps = {
         id: getNodeDOMId(node.id),
+
         'aria-setsize': isRoot ? 1 : parent.children.length,
         'aria-level': node.level + (excludeTreeRoot ? 0 : 1),
         'aria-posinset': node.index + 1,
@@ -133,16 +152,16 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       if (!node.isLeaf) {
         nodeProps['aria-expanded'] = (!!node.isOpen).toString();
       }
+
+      const contentId = `${getNodeDOMId(node.id)}-content`;
+      const nodeContentProps = { id: contentId };
       const groupProps = {
         role: 'group',
         'aria-owns': node.children.map(getNodeDOMId).join(' '),
-        'aria-labelledby': getNodeDOMId(node.id),
+        'aria-labelledby': contentId,
       };
 
-      return {
-        nodeProps,
-        groupProps,
-      };
+      return { nodeProps, nodeContentProps, groupProps };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [tree]
@@ -154,15 +173,15 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       getNodeDetails,
       isRenderedFlat,
       shouldNodeFocusBeInset,
-      activeNodeId,
+      activeNodeId: activeNode,
       setActiveNodeId,
       toggleTreeNode,
       selectableNodes,
       itemSelection,
-      isFocusWithin: isFocusWithin,
+      isFocusWithin,
     }),
     [
-      activeNodeId,
+      activeNode,
       getNodeAriaProps,
       getNodeDetails,
       isRenderedFlat,
@@ -188,7 +207,12 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   );
 
   const { focusWithinProps } = useFocusWithin({
-    onFocusWithinChange: setIsFocusWithin,
+    onFocusWithinChange: (val) => {
+      setIsFocusWithin(val);
+      if (val) {
+        scrollToVTreeNode(activeNode);
+      }
+    },
   });
 
   const { keyboardProps } = useKeyboard({
@@ -200,14 +224,8 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         case 'ArrowRight':
         case 'ArrowLeft': {
           evt.preventDefault();
-          if (activeNodeId) {
-            const next = getNextActiveNode(
-              tree,
-              activeNodeId,
-              key,
-              excludeTreeRoot,
-              toggleTreeNode
-            );
+          if (activeNode) {
+            const next = getNextActiveNode(tree, activeNode, key, excludeTreeRoot, toggleTreeNode);
             setActiveNodeId(next);
           }
           break;
@@ -215,11 +233,11 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         case 'Space': // Space
           if (
             selectionMode !== 'none' &&
-            activeNodeId &&
-            (selectableNodes === 'any' || tree.get(activeNodeId)?.isLeaf)
+            activeNode &&
+            (selectableNodes === 'any' || tree.get(activeNode)?.isLeaf)
           ) {
             evt.preventDefault();
-            itemSelection.toggle(activeNodeId);
+            itemSelection.toggle(activeNode);
           }
           break;
 

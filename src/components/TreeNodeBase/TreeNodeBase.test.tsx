@@ -273,7 +273,7 @@ describe('TreeNodeBase', () => {
       expect(container.find('div[role="group"]').props()).toEqual({
         'aria-owns': 'md-tree-node-1 md-tree-node-2',
         className: 'md-tree-node-base-group',
-        'aria-labelledby': 'md-tree-node-root',
+        'aria-labelledby': 'md-tree-node-root-content',
         role: 'group',
       });
     });
