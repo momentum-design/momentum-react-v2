@@ -545,7 +545,7 @@ describe('<Tree />', () => {
 
       // Only adding back Node 1 will remove the cloned node
       expect(getByText('1')).not.toBeNull();
-      expect(scrollToNode).toHaveBeenCalledTimes(0);
+      expect(scrollToNode).toHaveBeenCalledTimes(1);
     });
 
     it.each`
