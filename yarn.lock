@@ -2536,6 +2536,7 @@ __metadata:
     "@tippyjs/react": ^4.2.6
     "@types/enzyme": ^3.10.8
     "@types/jest": ^26.0.23
+    "@types/lodash": 4.14.171
     "@types/react": ^17.0.11
     "@types/uuid": ^9.0.1
     "@typescript-eslint/eslint-plugin": ^4.28.3
@@ -6667,6 +6668,13 @@ __metadata:
     "@types/interpret": "*"
     "@types/node": "*"
   checksum: 3d411a234a911d0464f5f77e8cb63ad88e1115fadb1138cfa12b02b67fb93d365966a0af5e1cc4a9f92c8d8d369727021cb638df4f9756d953fa37f3a3d6ba46
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:4.14.171":
+  version: 4.14.171
+  resolution: "@types/lodash@npm:4.14.171"
+  checksum: d093d8ff8b31d7829ab5f2625d824bb1f903fb07d4beca50812c99c3d6c6b63155c56eb0ecf14b97f0d4ba5fcb3b13f8259cca6d4313345326f3c48bed6f4b9f
   languageName: node
   linkType: hard
 
