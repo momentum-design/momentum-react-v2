@@ -56,8 +56,6 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   const internalRef = useRef<HTMLDivElement>();
   const ref = providedRef && typeof providedRef !== 'function' ? providedRef : internalRef;
   const isHidden = !nodeDetails || nodeDetails.isHidden;
-  const isLeaf = nodeDetails?.isLeaf;
-  const activeNodeId = treeContext?.activeNodeId;
 
   // When used in a popover, the ref will be a callback.
   // We need to update this callback ref, so the popover
@@ -117,14 +115,15 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
       if (
         treeContext &&
         treeContext.itemSelection.selectionMode !== 'none' &&
-        (treeContext.selectableNodes === 'any' || isLeaf)
+        (treeContext.selectableNodes === 'any' || nodeDetails?.isLeaf)
       ) {
         treeContext.itemSelection.toggle(nodeId);
       }
 
       onPress?.(event);
     },
-    [treeContext, isLeaf, onPress, ref, nodeId]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [treeContext, nodeDetails, nodeId, onPress]
   );
 
   const { pressProps, isPressed } = usePress({
@@ -146,7 +145,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   /**
    * Focus management
    */
-  const tabIndex = nodeId === activeNodeId ? 0 : -1;
+  const tabIndex = nodeId === treeContext?.activeNodeId ? 0 : -1;
 
   // makes sure that whenever an item is pressed, the tree focus state gets updated as well
   useEffect(() => {
@@ -155,7 +154,8 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
       treeContext.setActiveNodeId(nodeId);
       treeContext.toggleTreeNode(nodeId);
     }
-  }, [isPressed, isHidden, treeContext, nodeId, ref]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPressed, isHidden]);
 
   const updateTabIndexes = useCallback(() => {
     if (!isHidden) {
@@ -165,26 +165,27 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     }
   }, [ref, tabIndex, isHidden]);
 
-  const lastActiveNode = usePrevious(activeNodeId);
+  const lastActiveNode = usePrevious(treeContext?.activeNodeId);
   useDidUpdateEffect(() => {
     if (
       treeContext &&
       ref.current &&
       lastActiveNode !== undefined &&
-      lastActiveNode !== activeNodeId &&
-      activeNodeId === nodeId &&
+      lastActiveNode !== treeContext.activeNodeId &&
+      treeContext.activeNodeId === nodeId &&
       treeContext.isFocusWithin
     ) {
       ref.current.focus();
     }
-  }, [activeNodeId]);
+  }, [treeContext?.activeNodeId]);
 
   // Update tab indexes of the node's element when the active node changes
   useEffect(() => {
-    if (activeNodeId !== undefined) {
+    if (treeContext?.activeNodeId !== undefined) {
       updateTabIndexes();
     }
-  }, [activeNodeId, updateTabIndexes]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [treeContext?.activeNodeId]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
@@ -211,7 +212,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         data-shape={shape}
         className={classnames(className, STYLE.wrapper, {
           selected: isPressed || isSelected,
-          'active-node': nodeId === activeNodeId,
+          'active-node': nodeId === treeContext?.activeNodeId,
         })}
         lang={lang}
         {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
