@@ -117,7 +117,8 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         return menuItem;
       }
     },
-    [_props.onAction]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [state]
   );
 
   // needs to be removed because when used in Menu Trigger, it will

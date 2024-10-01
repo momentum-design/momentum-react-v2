@@ -30,12 +30,14 @@ const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => 
 
   useEffect(() => {
     menuSelectionManager.setFocusedKey(selectionManager.focusedKey);
-  }, [menuSelectionManager, selectionManager.focusedKey]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectionManager.focusedKey]);
 
   useEffect(() => {
     selectionManager.setFocused(menuSelectionManager.isFocused);
     selectionManager.setFocusedKey(menuSelectionManager.focusedKey);
-  }, [menuSelectionManager.focusedKey, menuSelectionManager.isFocused, selectionManager]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [menuSelectionManager.focusedKey, menuSelectionManager.isFocused]);
 
   const { itemProps, headingProps, groupProps } = useMenuSection({
     heading: item.rendered,

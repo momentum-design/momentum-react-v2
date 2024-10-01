@@ -27,7 +27,8 @@ const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
       }
       return <MenuItem key={node.key} item={node} state={state} onAction={onAction} />;
     });
-  }, [item.childNodes, onAction, state]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
 
   return (
     <div {...itemProps}>

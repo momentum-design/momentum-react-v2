@@ -103,7 +103,8 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       onToggleNode?.(id, newOpenState);
       setTree((prevTree) => toggleTreeNodeRecord(id, prevTree, newOpenState));
     },
-    [tree, isVirtualTree, onToggleNode, activeNodeId, virtualTreeConnector]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [tree, isVirtualTree]
   );
 
   const getNodeDetails = useCallback((id: TreeNodeId) => tree.get(id), [tree]);
@@ -143,7 +144,8 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         groupProps,
       };
     },
-    [excludeTreeRoot, tree]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [tree]
   );
 
   const context = useMemo(
