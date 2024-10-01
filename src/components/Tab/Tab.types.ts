@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
+import { AriaRole, CSSProperties, ReactElement } from 'react';
 import { BadgeProps } from '../Badge';
 import { IconProps } from '../Icon';
 import { TextProps } from '../Text';
@@ -34,4 +34,14 @@ export interface Props extends AriaButtonProps {
    * Determines whether the tab is disabled or not.
    */
   disabled?: boolean;
+
+  /**
+   * Tabindex for accessibility
+   */
+  tabIndex?: number;
+
+  /**
+   * WAI-ARIA role for accessibility
+   */
+  role?: AriaRole;
 }

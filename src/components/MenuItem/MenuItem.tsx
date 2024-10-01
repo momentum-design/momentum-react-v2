@@ -26,7 +26,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const isDisabled = state.disabledKeys.has(item.key);
   const isSelected = state.selectionManager.selectedKeys.has(item.key);
 
-  const { onClose, closeOnSelect } = useMenuContext();
+  const { onClose, closeOnSelect } = useMenuContext({ closeOnSelect: item?.props?.closeOnSelect });
   const {
     itemShape,
     itemSize,

@@ -1096,16 +1096,18 @@ exports[`<Tab /> snapshot string children should match snapshot 1`] = `
         >
           <PrimitiveConverter
             fontStyle="subheader-secondary"
+            tagName="span"
           >
             <Text
+              tagName="span"
               type="subheader-secondary"
             >
-              <h3
+              <span
                 className="md-text-wrapper"
                 data-type="subheader-secondary"
               >
                 Example label
-              </h3>
+              </span>
             </Text>
           </PrimitiveConverter>
         </button>

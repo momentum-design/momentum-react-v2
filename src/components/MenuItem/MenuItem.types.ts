@@ -1,10 +1,10 @@
 import { Key } from 'react';
 import { Node } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
-import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import { MenuAppearanceContextValue, MenuContextValue } from '../Menu/Menu.types';
 
 export type TickPosition = 'left' | 'right' | 'none';
-export interface Props<T> {
+export interface Props<T> extends MenuAppearanceContextValue {
   /**
    * The contents of this menu item
    */
@@ -19,17 +19,9 @@ export interface Props<T> {
    * Handler to be called when this element is selected
    */
   onAction?: (key: Key) => void;
+}
 
-  /**
-   * Position of the tick when selected, none when no tick
-   * @default right
-   */
-  tickPosition?: TickPosition;
-
-  /**
-   * Custom class for overriding this component's CSS when selected.
-   */
-  classNameSelectedItem?: string;
-
-  itemSize?: ListItemBaseSize;
+declare module '@react-types/shared' {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-interface
+  interface ItemProps<T> extends Pick<MenuContextValue, 'closeOnSelect'> {}
 }
