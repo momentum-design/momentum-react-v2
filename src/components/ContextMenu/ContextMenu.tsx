@@ -43,7 +43,11 @@ const ContextMenu: FC<Props> = (props: Props) => {
     }
 
     const { pageX, pageY } = event;
-    setContextMenuState({ x: pageX, y: pageY, isOpen: !contextMenuState.isOpen });
+    setContextMenuState({
+      x: pageX - triggerRef.current.getBoundingClientRect().left,
+      y: pageY - triggerRef.current.getBoundingClientRect().top,
+      isOpen: !contextMenuState.isOpen,
+    });
   };
 
   useEffect(() => {
@@ -68,7 +72,7 @@ const ContextMenu: FC<Props> = (props: Props) => {
       id={id}
       color={'primary' as const}
       style={{
-        position: 'fixed',
+        position: 'absolute',
         left: `${contextMenuState.x}px`,
         top: `${contextMenuState.y}px`,
         ...style,
