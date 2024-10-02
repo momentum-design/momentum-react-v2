@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContextMenu /> snapshot should match snapshot 1`] = `
+Object {
+  "container": <TestComponent
+    contextMenuActions={
+      Array [
+        Object {
+          "action": [Function],
+          "text": "Action 1",
+        },
+        Object {
+          "action": [Function],
+          "text": "Action 2",
+        },
+      ]
+    }
+  >
+    <div>
+      <button>
+        Right click on me
+      </button>
+      <ContextMenu
+        contextMenuActions={
+          Array [
+            Object {
+              "action": [Function],
+              "text": "Action 1",
+            },
+            Object {
+              "action": [Function],
+              "text": "Action 2",
+            },
+          ]
+        }
+        triggerRef={
+          Object {
+            "current": <button>
+              Right click on me
+            </button>,
+          }
+        }
+      />
+    </div>
+  </TestComponent>,
+  "contextMenu": <div
+    aria-modal="true"
+    class="md-context-menu-wrapper md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation="0"
+    data-padded="true"
+    data-round="75"
+    id="context-menu"
+    role="dialog"
+    style="position: fixed;"
+  >
+    <button
+      aria-label="Action 1"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 1
+      </span>
+    </button>
+    <button
+      aria-label="Action 2"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 2
+      </span>
+    </button>
+  </div>,
+}
+`;
+
+exports[`<ContextMenu /> snapshot should match snapshot with className 1`] = `
+Object {
+  "container": <TestComponent
+    className="example-class"
+    contextMenuActions={
+      Array [
+        Object {
+          "action": [Function],
+          "text": "Action 1",
+        },
+        Object {
+          "action": [Function],
+          "text": "Action 2",
+        },
+      ]
+    }
+  >
+    <div>
+      <button>
+        Right click on me
+      </button>
+      <ContextMenu
+        className="example-class"
+        contextMenuActions={
+          Array [
+            Object {
+              "action": [Function],
+              "text": "Action 1",
+            },
+            Object {
+              "action": [Function],
+              "text": "Action 2",
+            },
+          ]
+        }
+        triggerRef={
+          Object {
+            "current": <button>
+              Right click on me
+            </button>,
+          }
+        }
+      />
+    </div>
+  </TestComponent>,
+  "contextMenu": <div
+    aria-modal="true"
+    class="example-class md-context-menu-wrapper md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation="0"
+    data-padded="true"
+    data-round="75"
+    id="context-menu"
+    role="dialog"
+    style="position: fixed;"
+  >
+    <button
+      aria-label="Action 1"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 1
+      </span>
+    </button>
+    <button
+      aria-label="Action 2"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 2
+      </span>
+    </button>
+  </div>,
+}
+`;
+
+exports[`<ContextMenu /> snapshot should match snapshot with id 1`] = `
+Object {
+  "container": <TestComponent
+    contextMenuActions={
+      Array [
+        Object {
+          "action": [Function],
+          "text": "Action 1",
+        },
+        Object {
+          "action": [Function],
+          "text": "Action 2",
+        },
+      ]
+    }
+    id="example-id"
+  >
+    <div>
+      <button>
+        Right click on me
+      </button>
+      <ContextMenu
+        contextMenuActions={
+          Array [
+            Object {
+              "action": [Function],
+              "text": "Action 1",
+            },
+            Object {
+              "action": [Function],
+              "text": "Action 2",
+            },
+          ]
+        }
+        id="example-id"
+        triggerRef={
+          Object {
+            "current": <button>
+              Right click on me
+            </button>,
+          }
+        }
+      />
+    </div>
+  </TestComponent>,
+  "contextMenu": <div
+    aria-modal="true"
+    class="md-context-menu-wrapper md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation="0"
+    data-padded="true"
+    data-round="75"
+    id="example-id"
+    role="dialog"
+    style="position: fixed;"
+  >
+    <button
+      aria-label="Action 1"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 1
+      </span>
+    </button>
+    <button
+      aria-label="Action 2"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 2
+      </span>
+    </button>
+  </div>,
+}
+`;
+
+exports[`<ContextMenu /> snapshot should match snapshot with style 1`] = `
+Object {
+  "container": <TestComponent
+    contextMenuActions={
+      Array [
+        Object {
+          "action": [Function],
+          "text": "Action 1",
+        },
+        Object {
+          "action": [Function],
+          "text": "Action 2",
+        },
+      ]
+    }
+    style={
+      Object {
+        "color": "pink",
+      }
+    }
+  >
+    <div>
+      <button>
+        Right click on me
+      </button>
+      <ContextMenu
+        contextMenuActions={
+          Array [
+            Object {
+              "action": [Function],
+              "text": "Action 1",
+            },
+            Object {
+              "action": [Function],
+              "text": "Action 2",
+            },
+          ]
+        }
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+        triggerRef={
+          Object {
+            "current": <button>
+              Right click on me
+            </button>,
+          }
+        }
+      />
+    </div>
+  </TestComponent>,
+  "contextMenu": <div
+    aria-modal="true"
+    class="md-context-menu-wrapper md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation="0"
+    data-padded="true"
+    data-round="75"
+    id="context-menu"
+    role="dialog"
+    style="position: fixed; color: pink;"
+  >
+    <button
+      aria-label="Action 1"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 1
+      </span>
+    </button>
+    <button
+      aria-label="Action 2"
+      class="md-button-simple-wrapper"
+      type="button"
+    >
+      <span>
+        Action 2
+      </span>
+    </button>
+  </div>,
+}
+`;

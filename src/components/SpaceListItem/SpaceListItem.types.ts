@@ -1,9 +1,9 @@
 import { PressEvents } from '@react-types/shared';
 import { CSSProperties } from 'react';
-import { ContextMenu } from '../ListItemBase/ListItemBase.types';
 import { SpaceRowContentProps } from '../SpaceRowContent';
+import { ContextMenuActionsProp } from '../ContextMenu/ContextMenu.types';
 
-export interface Props extends PressEvents, ContextMenu, SpaceRowContentProps {
+export interface Props extends PressEvents, ContextMenuActionsProp, SpaceRowContentProps {
   /**
    * Custom class for overriding this component's CSS.
    */

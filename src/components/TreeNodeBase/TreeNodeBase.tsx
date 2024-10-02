@@ -31,6 +31,7 @@ import './TreeNodeBase.style.scss';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
 import { usePrevious } from '../../hooks/usePrevious';
 import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
+import ContextMenu from '../ContextMenu';
 
 const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): ReactElement => {
   const {
@@ -44,6 +45,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     style,
     onPress,
     lang,
+    contextMenuActions,
     ...rest
   } = props;
   if (!nodeId) {
@@ -221,6 +223,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         {treeContext?.isRenderedFlat && !nodeDetails.isLeaf && (
           <div className={STYLE.group} {...groupProps} />
         )}
+        <ContextMenu contextMenuActions={contextMenuActions} triggerRef={ref} />
       </div>
     </FocusRing>
   );

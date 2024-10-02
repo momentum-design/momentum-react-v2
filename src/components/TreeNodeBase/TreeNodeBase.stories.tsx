@@ -57,6 +57,7 @@ const Example = Template((args) => (
             </>
           ),
         onPress: action('onPress'),
+        contextMenuActions: [{ text: 'Action 1' }],
       },
       {},
       TreeWrapper
