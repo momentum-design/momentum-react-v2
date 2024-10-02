@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { STYLE } from './ContextMenu.constants';
 import { ContextMenuState, Props } from './ContextMenu.types';
 import './ContextMenu.style.scss';
-import { useOverlay } from 'react-aria';
+import { useOverlay } from '@react-aria/overlays';
 import ModalContainer from '../ModalContainer';
 import ButtonSimple from '../ButtonSimple';
 
