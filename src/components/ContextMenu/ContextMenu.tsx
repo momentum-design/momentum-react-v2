@@ -43,7 +43,6 @@ const ContextMenu: FC<Props> = (props: Props) => {
     }
 
     const { pageX, pageY } = event;
-    console.log(event, pageX);
     setContextMenuState({ x: pageX, y: pageY, isOpen: !contextMenuState.isOpen });
   };
 
