@@ -63,6 +63,12 @@
     }
   }
 
+  &[data-focused='true'] {
+    border-color: transparent;
+    outline: none !important;
+    box-shadow: var(--md-globals-focus-ring-box-shadow);
+  }
+
   & > div[data-position='start'] {
     width: fit-content;
     margin-right: 0.75rem;
@@ -80,7 +86,8 @@
     // trim any type of text inside
     &,
     p,
-    span {
+    span,
+    div {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

@@ -244,4 +244,20 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `false`
    */
   disableFocusLock?: boolean;
+
+  /**
+   * Used to control whether aria-hidden attribute is retained on tippy.
+   * Enable it when you need Tippy to support some accessibility features.
+   * @default `false`
+   */
+  removeTippyAriaHidden?: boolean;
+
+  /**
+   * Refer to [popover.js](https://popper.js.org/docs/v2/modifiers/compute-styles/)
+   * This option, enabled by default, tells Popper to use the most suitable CSS properties to position the popper (either top and left, or bottom and right).
+   * This allows the popper content to change, and reduce the likelihood of needing to recompute the popper position.
+   * Disabling this option to resolve some positioning calculation errors
+   * @default `true`
+   */
+  adaptive?: boolean;
 }

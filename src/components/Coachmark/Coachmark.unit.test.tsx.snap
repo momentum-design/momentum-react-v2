@@ -10,7 +10,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
   <div
     data-tippy-root=""
     id="tippy-2"
-    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
   >
     <span
       data-focus-scope-start="true"
@@ -201,7 +201,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
   <div
     data-tippy-root=""
     id="tippy-1"
-    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
+    style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
   >
     <span
       data-focus-scope-start="true"

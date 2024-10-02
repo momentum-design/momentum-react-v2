@@ -64,6 +64,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
       >
         <ListItemBase
           isDisabled={false}
+          isFocused={false}
           isPadded={true}
           key="$.0.0"
         >
@@ -79,6 +80,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
                 className="md-list-item-base-wrapper"
                 data-allow-text-select={false}
                 data-disabled={false}
+                data-focused={false}
                 data-interactive={true}
                 data-padded={true}
                 data-shape="rectangle"
@@ -146,6 +148,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
       >
         <ListItemBase
           isDisabled={false}
+          isFocused={false}
           isPadded={true}
           key="$.0.1"
         >
@@ -161,6 +164,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
                 className="md-list-item-base-wrapper"
                 data-allow-text-select={false}
                 data-disabled={false}
+                data-focused={false}
                 data-interactive={true}
                 data-padded={true}
                 data-shape="rectangle"

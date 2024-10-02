@@ -376,10 +376,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                         "padding": 8,
                                       },
                                     },
+                                    Object {
+                                      "name": "computeStyles",
+                                      "options": Object {
+                                        "adaptive": false,
+                                      },
+                                    },
                                   ],
                                   "strategy": "absolute",
                                 }
                               }
+                              removeTippyAriaHidden={false}
                               render={[Function]}
                               setInstance={[Function]}
                               trigger="mouseenter focus"
@@ -432,6 +439,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                           "altAxis": true,
                                           "boundariesElement": "scrollParent",
                                           "padding": 8,
+                                        },
+                                      },
+                                      Object {
+                                        "name": "computeStyles",
+                                        "options": Object {
+                                          "adaptive": false,
                                         },
                                       },
                                     ],
@@ -489,6 +502,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                             "altAxis": true,
                                             "boundariesElement": "scrollParent",
                                             "padding": 8,
+                                          },
+                                        },
+                                        Object {
+                                          "name": "computeStyles",
+                                          "options": Object {
+                                            "adaptive": false,
                                           },
                                         },
                                       ],
@@ -704,10 +723,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                             "padding": 8,
                                           },
                                         },
+                                        Object {
+                                          "name": "computeStyles",
+                                          "options": Object {
+                                            "adaptive": false,
+                                          },
+                                        },
                                       ],
                                       "strategy": "absolute",
                                     }
                                   }
+                                  removeTippyAriaHidden={false}
                                   render={[Function]}
                                   setInstance={[Function]}
                                   trigger="mouseenter focus"
@@ -760,6 +786,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                               "altAxis": true,
                                               "boundariesElement": "scrollParent",
                                               "padding": 8,
+                                            },
+                                          },
+                                          Object {
+                                            "name": "computeStyles",
+                                            "options": Object {
+                                              "adaptive": false,
                                             },
                                           },
                                         ],
@@ -817,6 +849,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                                 "altAxis": true,
                                                 "boundariesElement": "scrollParent",
                                                 "padding": 8,
+                                              },
+                                            },
+                                            Object {
+                                              "name": "computeStyles",
+                                              "options": Object {
+                                                "adaptive": false,
                                               },
                                             },
                                           ],
@@ -984,10 +1022,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                             "padding": 8,
                                           },
                                         },
+                                        Object {
+                                          "name": "computeStyles",
+                                          "options": Object {
+                                            "adaptive": false,
+                                          },
+                                        },
                                       ],
                                       "strategy": "absolute",
                                     }
                                   }
+                                  removeTippyAriaHidden={false}
                                   render={[Function]}
                                   setInstance={[Function]}
                                   trigger="mouseenter focus"
@@ -1040,6 +1085,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                               "altAxis": true,
                                               "boundariesElement": "scrollParent",
                                               "padding": 8,
+                                            },
+                                          },
+                                          Object {
+                                            "name": "computeStyles",
+                                            "options": Object {
+                                              "adaptive": false,
                                             },
                                           },
                                         ],
@@ -1097,6 +1148,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                                 "altAxis": true,
                                                 "boundariesElement": "scrollParent",
                                                 "padding": 8,
+                                              },
+                                            },
+                                            Object {
+                                              "name": "computeStyles",
+                                              "options": Object {
+                                                "adaptive": false,
                                               },
                                             },
                                           ],
@@ -1267,10 +1324,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                           "padding": 8,
                                         },
                                       },
+                                      Object {
+                                        "name": "computeStyles",
+                                        "options": Object {
+                                          "adaptive": false,
+                                        },
+                                      },
                                     ],
                                     "strategy": "absolute",
                                   }
                                 }
+                                removeTippyAriaHidden={false}
                                 render={[Function]}
                                 setInstance={[Function]}
                                 trigger="mouseenter focus"
@@ -1323,6 +1387,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                             "altAxis": true,
                                             "boundariesElement": "scrollParent",
                                             "padding": 8,
+                                          },
+                                        },
+                                        Object {
+                                          "name": "computeStyles",
+                                          "options": Object {
+                                            "adaptive": false,
                                           },
                                         },
                                       ],
@@ -1380,6 +1450,12 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                               "altAxis": true,
                                               "boundariesElement": "scrollParent",
                                               "padding": 8,
+                                            },
+                                          },
+                                          Object {
+                                            "name": "computeStyles",
+                                            "options": Object {
+                                              "adaptive": false,
                                             },
                                           },
                                         ],

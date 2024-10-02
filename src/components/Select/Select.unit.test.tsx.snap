@@ -363,10 +363,17 @@ exports[`Select snapshot should match snapshot 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -420,6 +427,12 @@ exports[`Select snapshot should match snapshot 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -478,6 +491,12 @@ exports[`Select snapshot should match snapshot 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -928,10 +947,17 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -985,6 +1011,12 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -1043,6 +1075,12 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -1494,10 +1532,17 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -1551,6 +1596,12 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -1609,6 +1660,12 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -1714,6 +1771,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="true"
                         data-interactive="true"
                         data-key="$.0"
                         data-padded="true"
@@ -1736,6 +1794,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="false"
                         data-interactive="true"
                         data-key="$.1"
                         data-padded="true"
@@ -2025,6 +2084,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                                   data-key="$.0"
                                   id="test-ID-option-$.0"
                                   isDisabled={false}
+                                  isFocused={true}
                                   isPadded={true}
                                   key="$.0"
                                   onClick={[Function]}
@@ -2059,6 +2119,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={true}
                                         data-interactive={true}
                                         data-key="$.0"
                                         data-padded={true}
@@ -2133,6 +2194,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                                   data-key="$.1"
                                   id="test-ID-option-$.1"
                                   isDisabled={false}
+                                  isFocused={false}
                                   isPadded={true}
                                   key="$.1"
                                   onClick={[Function]}
@@ -2167,6 +2229,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={false}
                                         data-interactive={true}
                                         data-key="$.1"
                                         data-padded={true}
@@ -2591,10 +2654,17 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -2648,6 +2718,12 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -2706,6 +2782,12 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -3157,10 +3239,17 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -3214,6 +3303,12 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -3272,6 +3367,12 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -3723,10 +3824,17 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -3780,6 +3888,12 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -3838,6 +3952,12 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -4299,10 +4419,17 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -4356,6 +4483,12 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -4414,6 +4547,12 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -4519,6 +4658,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="true"
+                        data-focused="false"
                         data-interactive="true"
                         data-key="$.0"
                         data-padded="true"
@@ -4541,6 +4681,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="true"
                         data-interactive="true"
                         data-key="$.1"
                         data-padded="true"
@@ -4834,6 +4975,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                                   data-key="$.0"
                                   id="test-ID-option-$.0"
                                   isDisabled={true}
+                                  isFocused={false}
                                   isPadded={true}
                                   key="$.0"
                                   onClick={[Function]}
@@ -4868,6 +5010,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={true}
+                                        data-focused={false}
                                         data-interactive={true}
                                         data-key="$.0"
                                         data-padded={true}
@@ -4942,6 +5085,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                                   data-key="$.1"
                                   id="test-ID-option-$.1"
                                   isDisabled={false}
+                                  isFocused={true}
                                   isPadded={true}
                                   key="$.1"
                                   onClick={[Function]}
@@ -4976,6 +5120,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={true}
                                         data-interactive={true}
                                         data-key="$.1"
                                         data-padded={true}
@@ -5399,10 +5544,17 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -5456,6 +5608,12 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -5514,6 +5672,12 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -5729,10 +5893,17 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -5786,6 +5957,12 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -5844,6 +6021,12 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -6295,10 +6478,17 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -6352,6 +6542,12 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -6410,6 +6606,12 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -6515,6 +6717,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="true"
                         data-interactive="true"
                         data-key="$.0"
                         data-padded="true"
@@ -6537,6 +6740,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="false"
                         data-interactive="true"
                         data-key="$.1"
                         data-padded="true"
@@ -6826,6 +7030,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                                   data-key="$.0"
                                   id="test-ID-option-$.0"
                                   isDisabled={false}
+                                  isFocused={true}
                                   isPadded={true}
                                   key="$.0"
                                   onClick={[Function]}
@@ -6860,6 +7065,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={true}
                                         data-interactive={true}
                                         data-key="$.0"
                                         data-padded={true}
@@ -6934,6 +7140,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                                   data-key="$.1"
                                   id="test-ID-option-$.1"
                                   isDisabled={false}
+                                  isFocused={false}
                                   isPadded={true}
                                   key="$.1"
                                   onClick={[Function]}
@@ -6968,6 +7175,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={false}
                                         data-interactive={true}
                                         data-key="$.1"
                                         data-padded={true}
@@ -7390,10 +7598,17 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -7447,6 +7662,12 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -7505,6 +7726,12 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -7609,6 +7836,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="true"
                         data-interactive="true"
                         data-key="$.0"
                         data-padded="true"
@@ -7631,6 +7859,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="false"
                         data-interactive="true"
                         data-key="$.1"
                         data-padded="true"
@@ -7920,6 +8149,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                                   data-key="$.0"
                                   id="test-ID-option-$.0"
                                   isDisabled={false}
+                                  isFocused={true}
                                   isPadded={true}
                                   key="$.0"
                                   onClick={[Function]}
@@ -7954,6 +8184,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={true}
                                         data-interactive={true}
                                         data-key="$.0"
                                         data-padded={true}
@@ -8028,6 +8259,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                                   data-key="$.1"
                                   id="test-ID-option-$.1"
                                   isDisabled={false}
+                                  isFocused={false}
                                   isPadded={true}
                                   key="$.1"
                                   onClick={[Function]}
@@ -8062,6 +8294,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={false}
                                         data-interactive={true}
                                         data-key="$.1"
                                         data-padded={true}
@@ -8484,10 +8717,17 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "fixed",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -8541,6 +8781,12 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -8599,6 +8845,12 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -8703,6 +8955,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="true"
                         data-interactive="true"
                         data-key="$.0"
                         data-padded="true"
@@ -8725,6 +8978,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="false"
                         data-interactive="true"
                         data-key="$.1"
                         data-padded="true"
@@ -9014,6 +9268,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                                   data-key="$.0"
                                   id="test-ID-option-$.0"
                                   isDisabled={false}
+                                  isFocused={true}
                                   isPadded={true}
                                   key="$.0"
                                   onClick={[Function]}
@@ -9048,6 +9303,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={true}
                                         data-interactive={true}
                                         data-key="$.0"
                                         data-padded={true}
@@ -9122,6 +9378,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                                   data-key="$.1"
                                   id="test-ID-option-$.1"
                                   isDisabled={false}
+                                  isFocused={false}
                                   isPadded={true}
                                   key="$.1"
                                   onClick={[Function]}
@@ -9156,6 +9413,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={false}
                                         data-interactive={true}
                                         data-key="$.1"
                                         data-padded={true}
@@ -9584,10 +9842,17 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -9641,6 +9906,12 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -9699,6 +9970,12 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -10181,10 +10458,17 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -10238,6 +10522,12 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -10296,6 +10586,12 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -10781,10 +11077,17 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -10838,6 +11141,12 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -10896,6 +11205,12 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -11004,6 +11319,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="true"
                         data-interactive="true"
                         data-key="$.0"
                         data-padded="true"
@@ -11048,6 +11364,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                         class="md-list-item-base-wrapper"
                         data-allow-text-select="false"
                         data-disabled="false"
+                        data-focused="false"
                         data-interactive="true"
                         data-key="$.1"
                         data-padded="true"
@@ -11360,6 +11677,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                   data-key="$.0"
                                   id="test-ID-option-$.0"
                                   isDisabled={false}
+                                  isFocused={true}
                                   isPadded={true}
                                   key="$.0"
                                   onClick={[Function]}
@@ -11394,6 +11712,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={true}
                                         data-interactive={true}
                                         data-key="$.0"
                                         data-padded={true}
@@ -11506,6 +11825,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                   data-key="$.1"
                                   id="test-ID-option-$.1"
                                   isDisabled={false}
+                                  isFocused={false}
                                   isPadded={true}
                                   key="$.1"
                                   onClick={[Function]}
@@ -11540,6 +11860,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                         className="md-list-item-base-wrapper"
                                         data-allow-text-select={false}
                                         data-disabled={false}
+                                        data-focused={false}
                                         data-interactive={true}
                                         data-key="$.1"
                                         data-padded={true}
@@ -11964,10 +12285,17 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -12021,6 +12349,12 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -12079,6 +12413,12 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -12536,10 +12876,17 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -12593,6 +12940,12 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -12651,6 +13004,12 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
@@ -13100,10 +13459,17 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                   "padding": 8,
                 },
               },
+              Object {
+                "name": "computeStyles",
+                "options": Object {
+                  "adaptive": false,
+                },
+              },
             ],
             "strategy": "absolute",
           }
         }
+        removeTippyAriaHidden={false}
         render={[Function]}
         setInstance={[Function]}
         trigger="manual"
@@ -13157,6 +13523,12 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
+                  },
+                },
+                Object {
+                  "name": "computeStyles",
+                  "options": Object {
+                    "adaptive": false,
                   },
                 },
               ],
@@ -13215,6 +13587,12 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
+                    },
+                  },
+                  Object {
+                    "name": "computeStyles",
+                    "options": Object {
+                      "adaptive": false,
                     },
                   },
                 ],
