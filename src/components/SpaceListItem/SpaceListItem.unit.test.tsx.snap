@@ -126,6 +126,54 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="32"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-row"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    >
+                      firstLine
+                    </p>
+                    <div
+                      class="md-divider-dot-wrapper"
+                    />
+                    <small
+                      aria-label="testteam"
+                      class="md-text-wrapper"
+                      data-test="list-item-second-line"
+                      data-type="body-secondary"
+                    >
+                      testteam
+                    </small>
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -215,6 +263,41 @@ exports[`<SpaceListItem /> snapshot should match snapshot 1`] = `
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -319,6 +402,45 @@ exports[`<SpaceListItem /> snapshot should match snapshot with action 1`] = `
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <p>
+                      action
+                    </p>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -410,6 +532,41 @@ exports[`<SpaceListItem /> snapshot should match snapshot with className 1`] = `
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="example-class md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -504,6 +661,43 @@ exports[`<SpaceListItem /> snapshot should match snapshot with firstLine 1`] = `
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    >
+                      firstLine
+                    </p>
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -597,6 +791,42 @@ exports[`<SpaceListItem /> snapshot should match snapshot with id 1`] = `
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  id="example-id"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -720,6 +950,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="alert"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-primary-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -843,6 +1126,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="alert-muted"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-primary-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -934,6 +1270,41 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isDisabled 1`] = 
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="true"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="true"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1057,6 +1428,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="enter-room"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-control-active-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1180,6 +1604,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="priority-circle"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-error-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1303,6 +1780,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="mention"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-control-active-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1395,6 +1925,41 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isNewActivity 1`]
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1488,6 +2053,41 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected 1`] = 
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper active"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1614,6 +2214,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="draft-indicator"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-primary-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1737,6 +2390,59 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column md-space-row-content-is-new-activity"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="14"
+                        data-test="unread"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-control-active-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1896,6 +2602,57 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                    <small
+                      aria-label="one, two, three"
+                      class="md-text-wrapper"
+                      data-test="list-item-second-line"
+                      data-type="body-secondary"
+                    >
+                      one
+                      <div
+                        class="md-divider-dot-wrapper"
+                      />
+                      two
+                      <div
+                        class="md-divider-dot-wrapper"
+                      />
+                      three
+                    </small>
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -2017,6 +2774,49 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                    <small
+                      aria-label="secondLine"
+                      class="md-text-wrapper"
+                      data-test="list-item-second-line"
+                      data-type="body-secondary"
+                    >
+                      secondLine
+                    </small>
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -2122,6 +2922,42 @@ exports[`<SpaceListItem /> snapshot should match snapshot with style 1`] = `
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  style="color: pink;"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -2214,6 +3050,41 @@ exports[`<SpaceListItem /> snapshot should match snapshot with teamColor 1`] = `
               />
             </ListItemBaseSection>
           </SpaceRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-space-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    class="md-space-row-content-text-wrapper text-column"
+                    data-position="middle"
+                  >
+                    <p
+                      class="md-text-wrapper"
+                      data-disabled="false"
+                      data-test="list-item-first-line"
+                      data-type="body-primary"
+                    />
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>

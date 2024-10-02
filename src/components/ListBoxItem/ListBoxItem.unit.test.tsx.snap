@@ -77,6 +77,30 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
               Item 1
             </div>
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="40"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="fill"
+                    title="Item 1"
+                  >
+                    Item 1
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>

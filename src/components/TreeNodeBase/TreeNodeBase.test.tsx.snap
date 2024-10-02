@@ -32,6 +32,22 @@ exports[`TreeNodeBase snapshot should match snapshot 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -71,6 +87,22 @@ exports[`TreeNodeBase snapshot should match snapshot with className 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="example-class md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -111,6 +143,23 @@ exports[`TreeNodeBase snapshot should match snapshot with id 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                id="example-id"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -150,6 +199,23 @@ exports[`TreeNodeBase snapshot should match snapshot with isSelected 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                aria-selected="true"
+                class="md-tree-node-base-wrapper selected active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -190,6 +256,23 @@ exports[`TreeNodeBase snapshot should match snapshot with lang 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                lang="en-US"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -229,6 +312,22 @@ exports[`TreeNodeBase snapshot should match snapshot with shape 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="isPilled"
+                data-size="50"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -268,6 +367,22 @@ exports[`TreeNodeBase snapshot should match snapshot with size 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -316,6 +431,23 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
         tabIndex={0}
       >
         Test
+        <ContextMenu
+          triggerRef={
+            Object {
+              "current": <div
+                class="md-tree-node-base-wrapper active-node"
+                data-nodeid="42"
+                data-padded="false"
+                data-shape="rectangle"
+                data-size="40"
+                style="color: pink;"
+                tabindex="0"
+              >
+                Test
+              </div>,
+            }
+          }
+        />
       </div>
     </FocusRing>
   </FocusRing>
@@ -407,6 +539,39 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
               aria-owns="md-tree-node-1 md-tree-node-2"
               className="md-tree-node-base-group"
               role="group"
+            />
+            <ContextMenu
+              triggerRef={
+                Object {
+                  "current": <div
+                    aria-expanded="false"
+                    aria-level="1"
+                    aria-posinset="1"
+                    aria-setsize="1"
+                    class="md-tree-node-base-wrapper active-node"
+                    data-nodeid="root"
+                    data-padded="false"
+                    data-shape="rectangle"
+                    data-size="40"
+                    data-testid="node-root"
+                    id="md-tree-node-root"
+                    role="treeitem"
+                    tabindex="0"
+                  >
+                    <div
+                      class="node-content"
+                    >
+                      root
+                    </div>
+                    <div
+                      aria-labelledby="md-tree-node-root"
+                      aria-owns="md-tree-node-1 md-tree-node-2"
+                      class="md-tree-node-base-group"
+                      role="group"
+                    />
+                  </div>,
+                }
+              }
             />
           </div>
         </FocusRing>
@@ -551,6 +716,35 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
               className="md-tree-node-base-group"
               role="group"
             />
+            <ContextMenu
+              triggerRef={
+                Object {
+                  "current": <div
+                    aria-expanded="true"
+                    aria-level="1"
+                    aria-posinset="1"
+                    aria-setsize="1"
+                    class="md-tree-node-base-wrapper active-node"
+                    data-nodeid="root"
+                    data-padded="false"
+                    data-shape="rectangle"
+                    data-size="40"
+                    data-testid="node-root"
+                    id="md-tree-node-root"
+                    role="treeitem"
+                    tabindex="0"
+                  >
+                    root
+                    <div
+                      aria-labelledby="md-tree-node-root"
+                      aria-owns="md-tree-node-1 md-tree-node-2"
+                      class="md-tree-node-base-group"
+                      role="group"
+                    />
+                  </div>,
+                }
+              }
+            />
           </div>
         </FocusRing>
       </FocusRing>
@@ -594,6 +788,28 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             tabIndex={-1}
           >
             1
+            <ContextMenu
+              triggerRef={
+                Object {
+                  "current": <div
+                    aria-level="1"
+                    aria-posinset="1"
+                    aria-setsize="2"
+                    class="md-tree-node-base-wrapper"
+                    data-nodeid="1"
+                    data-padded="false"
+                    data-shape="rectangle"
+                    data-size="40"
+                    data-testid="node-1"
+                    id="md-tree-node-1"
+                    role="treeitem"
+                    tabindex="-1"
+                  >
+                    1
+                  </div>,
+                }
+              }
+            />
           </div>
         </FocusRing>
       </FocusRing>
@@ -637,6 +853,28 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
             tabIndex={-1}
           >
             2
+            <ContextMenu
+              triggerRef={
+                Object {
+                  "current": <div
+                    aria-level="1"
+                    aria-posinset="2"
+                    aria-setsize="2"
+                    class="md-tree-node-base-wrapper"
+                    data-nodeid="2"
+                    data-padded="false"
+                    data-shape="rectangle"
+                    data-size="40"
+                    data-testid="node-2"
+                    id="md-tree-node-2"
+                    role="treeitem"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>,
+                }
+              }
+            />
           </div>
         </FocusRing>
       </FocusRing>

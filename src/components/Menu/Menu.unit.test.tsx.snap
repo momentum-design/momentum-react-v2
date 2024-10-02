@@ -240,6 +240,32 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -470,6 +496,32 @@ exports[`<Menu /> snapshot should match snapshot 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -720,6 +772,32 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -950,6 +1028,32 @@ exports[`<Menu /> snapshot should match snapshot with className 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -1200,6 +1304,32 @@ exports[`<Menu /> snapshot should match snapshot with className 2`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -1430,6 +1560,32 @@ exports[`<Menu /> snapshot should match snapshot with className 2`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -1681,6 +1837,32 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -1911,6 +2093,32 @@ exports[`<Menu /> snapshot should match snapshot with id 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -2162,6 +2370,32 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="isPilled"
+                      data-size="50"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -2392,6 +2626,32 @@ exports[`<Menu /> snapshot should match snapshot with itemShape 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="isPilled"
+                      data-size="50"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -2642,6 +2902,32 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="50"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -2872,6 +3158,32 @@ exports[`<Menu /> snapshot should match snapshot with itemSize 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="50"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -3167,6 +3479,32 @@ exports[`<Menu /> snapshot should match snapshot with seperator between items 1`
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -3449,6 +3787,32 @@ exports[`<Menu /> snapshot should match snapshot with seperator between items 1`
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -4467,6 +4831,32 @@ exports[`<Menu /> snapshot should match snapshot with seperator within section 1
                         One
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="1-one"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitem"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="One"
+                            >
+                              One
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -5007,6 +5397,32 @@ exports[`<Menu /> snapshot should match snapshot with seperator within section 1
                         Two
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="1-two"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitem"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="Two"
+                            >
+                              Two
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -6015,6 +6431,32 @@ exports[`<Menu /> snapshot should match snapshot with seperator within section 1
                         One
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="2-one"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitem"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="One"
+                            >
+                              One
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -6555,6 +6997,32 @@ exports[`<Menu /> snapshot should match snapshot with seperator within section 1
                         Two
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="2-two"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitem"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="Two"
+                            >
+                              Two
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -7688,6 +8156,33 @@ exports[`<Menu /> snapshot should match snapshot with seperator within selection
                         One
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-checked="false"
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="1-one"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitemradio"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="One"
+                            >
+                              One
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -8278,6 +8773,33 @@ exports[`<Menu /> snapshot should match snapshot with seperator within selection
                         Two
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-checked="false"
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="1-two"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitemradio"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="Two"
+                            >
+                              Two
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -9398,6 +9920,33 @@ exports[`<Menu /> snapshot should match snapshot with seperator within selection
                         One
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-checked="false"
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="2-one"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitemcheckbox"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="One"
+                            >
+                              One
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -9988,6 +10537,33 @@ exports[`<Menu /> snapshot should match snapshot with seperator within selection
                         Two
                       </div>
                     </ListItemBaseSection>
+                    <ContextMenu
+                      triggerRef={
+                        Object {
+                          "current": <li
+                            aria-checked="false"
+                            aria-disabled="false"
+                            class="md-menu-item-wrapper md-list-item-base-wrapper"
+                            data-allow-text-select="false"
+                            data-disabled="false"
+                            data-interactive="true"
+                            data-key="2-two"
+                            data-padded="true"
+                            data-shape="rectangle"
+                            data-size="40"
+                            role="menuitemcheckbox"
+                            tabindex="-1"
+                          >
+                            <div
+                              data-position="fill"
+                              title="Two"
+                            >
+                              Two
+                            </div>
+                          </li>,
+                        }
+                      }
+                    />
                   </li>
                 </FocusRing>
               </FocusRing>
@@ -10250,6 +10826,32 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -10480,6 +11082,32 @@ exports[`<Menu /> snapshot should match snapshot with style 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="40"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -10742,6 +11370,39 @@ exports[`<Menu /> snapshot should match snapshot with tickPosition 1`] = `
                   One
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="one"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="50"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="start"
+                      >
+                        <div
+                          class="md-menu-item-tick-placeholder"
+                        />
+                      </div>
+                      <div
+                        data-position="fill"
+                        title="One"
+                      >
+                        One
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>
@@ -10983,6 +11644,39 @@ exports[`<Menu /> snapshot should match snapshot with tickPosition 1`] = `
                   Two
                 </div>
               </ListItemBaseSection>
+              <ContextMenu
+                triggerRef={
+                  Object {
+                    "current": <li
+                      aria-disabled="false"
+                      class="md-menu-item-wrapper md-list-item-base-wrapper"
+                      data-allow-text-select="false"
+                      data-disabled="false"
+                      data-interactive="true"
+                      data-key="two"
+                      data-padded="true"
+                      data-shape="rectangle"
+                      data-size="50"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        data-position="start"
+                      >
+                        <div
+                          class="md-menu-item-tick-placeholder"
+                        />
+                      </div>
+                      <div
+                        data-position="fill"
+                        title="Two"
+                      >
+                        Two
+                      </div>
+                    </li>,
+                  }
+                }
+              />
             </li>
           </FocusRing>
         </FocusRing>

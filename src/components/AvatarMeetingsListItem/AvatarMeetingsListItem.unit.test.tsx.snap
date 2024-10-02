@@ -106,6 +106,58 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -269,6 +321,80 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                      <div
+                        class="md-avatar-presence-icon-wrapper"
+                        data-shape="true"
+                      >
+                        <div
+                          aria-hidden="true"
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          role="img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class=""
+                            data-autoscale="false"
+                            data-scale="14"
+                            data-test="unread"
+                            height="100%"
+                            style="fill: var(--mds-color-theme-indicator-stable); stroke: none;"
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -384,6 +510,58 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="example-class md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -580,6 +758,90 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
               </ButtonCircle>
             </div>
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-inverted="false"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-shallow-disabled="false"
+                      data-size="28"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="more"
+                          fill="currentColor"
+                          height="100%"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -783,6 +1045,91 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
               </ButtonCircle>
             </div>
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-inverted="false"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-shallow-disabled="false"
+                      data-size="28"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="microphone-on"
+                          fill="currentColor"
+                          height="100%"
+                          style="stroke: none;"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -985,6 +1332,90 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
               </ButtonCircle>
             </div>
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  >
+                    <button
+                      class="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled="false"
+                      data-ghost="true"
+                      data-inverted="false"
+                      data-multiple-children="false"
+                      data-outline="false"
+                      data-shallow-disabled="false"
+                      data-size="28"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        role="img"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class=""
+                          data-autoscale="false"
+                          data-scale="16"
+                          data-test="microphone-muted"
+                          height="100%"
+                          style="fill: var(--mds-color-theme-text-error-normal); stroke: none;"
+                          viewBox="0, 0, 32, 32"
+                          width="100%"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1102,6 +1533,60 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      >
+                        firstLine
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1219,6 +1704,59 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  id="example-id"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1364,6 +1902,75 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="scheduler-available"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-success-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1509,6 +2116,75 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="scheduler-not-working-hours"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-secondary-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1654,6 +2330,75 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="scheduler-unavailable"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-warning-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1799,6 +2544,75 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="scheduler-unknown"
+                        height="100%"
+                        style="fill: var(--mds-color-theme-text-error-normal); stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -1924,6 +2738,64 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                      <small
+                        class="md-text-wrapper"
+                        data-type="body-secondary"
+                      >
+                        secondLine
+                      </small>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -2053,6 +2925,59 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
               data-position="end"
             />
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="false"
+                  data-shape="isPilled"
+                  data-size="50"
+                  role="listitem"
+                  style="color: pink;"
+                  tabindex="0"
+                >
+                  <div
+                    data-position="start"
+                  >
+                    <div
+                      aria-hidden="false"
+                      aria-label=""
+                      class="md-avatar-wrapper"
+                      data-color="default"
+                      data-size="32"
+                      role="img"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="md-avatar-wrapper-children"
+                      >
+                        C
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-text-wrapper"
+                    data-position="middle"
+                  >
+                    <div>
+                      <p
+                        class="md-text-wrapper"
+                        data-type="body-primary"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-avatar-meetings-list-item-actions-wrapper"
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>

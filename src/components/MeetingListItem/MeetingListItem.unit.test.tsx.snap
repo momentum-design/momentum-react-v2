@@ -69,6 +69,38 @@ exports[`<MeetingListItem /> snapshot should match snapshot 1`] = `
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -168,6 +200,51 @@ exports[`<MeetingListItem /> snapshot should match snapshot with buttonGroup 1`]
               </div>
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                  <div
+                    class="md-meeting-row-content-end-section"
+                    data-position="end"
+                  >
+                    <div
+                      class="md-button-group-wrapper"
+                      data-compressed="false"
+                      data-orientation="horizontal"
+                      data-round="false"
+                      data-separator="false"
+                      data-spaced="false"
+                    />
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -246,6 +323,38 @@ exports[`<MeetingListItem /> snapshot should match snapshot with className 1`] =
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="example-class md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -324,6 +433,38 @@ exports[`<MeetingListItem /> snapshot should match snapshot with color 1`] = `
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="AcceptedActive"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="AcceptedActive"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-AcceptedActive"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -404,6 +545,39 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  id="example-id"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -520,6 +694,56 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                    <div
+                      aria-hidden="true"
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class=""
+                        data-autoscale="false"
+                        data-scale="12"
+                        data-test="placeholder"
+                        fill="currentColor"
+                        height="100%"
+                        style="stroke: none;"
+                        viewBox="0, 0, 32, 32"
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -600,6 +824,38 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="true"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -692,6 +948,39 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
               />
             </ListItemBaseSection>
           </MeetingRowContent>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  class="md-meeting-list-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-color="Transparent"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="50"
+                  role="listitem"
+                  style="color: pink;"
+                  tabindex="0"
+                >
+                  <div
+                    class="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+                    data-position="start"
+                  >
+                    <div
+                      class="md-meeting-row-content-border"
+                      data-color="Transparent"
+                    />
+                  </div>
+                  <div
+                    class="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+                    data-position="middle"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>

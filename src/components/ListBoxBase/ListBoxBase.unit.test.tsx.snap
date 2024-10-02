@@ -265,6 +265,33 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                           Item 1
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.0"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.0"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 1"
+                              >
+                                Item 1
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -371,6 +398,33 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                           Item 2
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.1"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.1"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 2"
+                              >
+                                Item 2
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -651,6 +705,33 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                           Item 1
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.0"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.0"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 1"
+                              >
+                                Item 1
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -757,6 +838,33 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                           Item 2
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.1"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.1"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 2"
+                              >
+                                Item 2
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -1038,6 +1146,33 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                           Item 1
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.0"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.0"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 1"
+                              >
+                                Item 1
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -1144,6 +1279,33 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                           Item 2
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.1"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.1"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 2"
+                              >
+                                Item 2
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -1424,6 +1586,33 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                           Item 1
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.0"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.0"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 1"
+                              >
+                                Item 1
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -1530,6 +1719,33 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                           Item 2
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.1"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.1"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 2"
+                              >
+                                Item 2
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -1966,6 +2182,33 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                                 Item 1
                               </div>
                             </ListItemBaseSection>
+                            <ContextMenu
+                              triggerRef={
+                                Object {
+                                  "current": <li
+                                    aria-disabled="false"
+                                    class="md-list-item-base-wrapper"
+                                    data-allow-text-select="false"
+                                    data-disabled="false"
+                                    data-interactive="true"
+                                    data-key="$.0.0"
+                                    data-padded="true"
+                                    data-shape="rectangle"
+                                    data-size="40"
+                                    id="test-ID-option-$.0.0"
+                                    role="option"
+                                    tabindex="-1"
+                                  >
+                                    <div
+                                      data-position="fill"
+                                      title="Item 1"
+                                    >
+                                      Item 1
+                                    </div>
+                                  </li>,
+                                }
+                              }
+                            />
                           </li>
                         </FocusRing>
                       </FocusRing>
@@ -2072,6 +2315,33 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                                 Item 2
                               </div>
                             </ListItemBaseSection>
+                            <ContextMenu
+                              triggerRef={
+                                Object {
+                                  "current": <li
+                                    aria-disabled="false"
+                                    class="md-list-item-base-wrapper"
+                                    data-allow-text-select="false"
+                                    data-disabled="false"
+                                    data-interactive="true"
+                                    data-key="$.0.1"
+                                    data-padded="true"
+                                    data-shape="rectangle"
+                                    data-size="40"
+                                    id="test-ID-option-$.0.1"
+                                    role="option"
+                                    tabindex="-1"
+                                  >
+                                    <div
+                                      data-position="fill"
+                                      title="Item 2"
+                                    >
+                                      Item 2
+                                    </div>
+                                  </li>,
+                                }
+                              }
+                            />
                           </li>
                         </FocusRing>
                       </FocusRing>
@@ -2219,6 +2489,33 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                                 Item 3
                               </div>
                             </ListItemBaseSection>
+                            <ContextMenu
+                              triggerRef={
+                                Object {
+                                  "current": <li
+                                    aria-disabled="false"
+                                    class="md-list-item-base-wrapper"
+                                    data-allow-text-select="false"
+                                    data-disabled="false"
+                                    data-interactive="true"
+                                    data-key="$.1.0"
+                                    data-padded="true"
+                                    data-shape="rectangle"
+                                    data-size="40"
+                                    id="test-ID-option-$.1.0"
+                                    role="option"
+                                    tabindex="-1"
+                                  >
+                                    <div
+                                      data-position="fill"
+                                      title="Item 3"
+                                    >
+                                      Item 3
+                                    </div>
+                                  </li>,
+                                }
+                              }
+                            />
                           </li>
                         </FocusRing>
                       </FocusRing>
@@ -2520,6 +2817,33 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                           Item 1
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.0"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.0"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 1"
+                              >
+                                Item 1
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>
@@ -2626,6 +2950,33 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                           Item 2
                         </div>
                       </ListItemBaseSection>
+                      <ContextMenu
+                        triggerRef={
+                          Object {
+                            "current": <li
+                              aria-disabled="false"
+                              class="md-list-item-base-wrapper"
+                              data-allow-text-select="false"
+                              data-disabled="false"
+                              data-interactive="true"
+                              data-key="$.1"
+                              data-padded="true"
+                              data-shape="rectangle"
+                              data-size="40"
+                              id="test-ID-option-$.1"
+                              role="option"
+                              tabindex="-1"
+                            >
+                              <div
+                                data-position="fill"
+                                title="Item 2"
+                              >
+                                Item 2
+                              </div>
+                            </li>,
+                          }
+                        }
+                      />
                     </li>
                   </FocusRing>
                 </FocusRing>

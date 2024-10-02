@@ -773,6 +773,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -1049,6 +1076,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -1325,6 +1379,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -1626,6 +1707,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -1902,6 +2010,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -2178,6 +2313,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -2974,6 +3136,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -3250,6 +3439,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -3526,6 +3742,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -3827,6 +4070,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -4103,6 +4373,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -4379,6 +4676,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -5175,6 +5499,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -5451,6 +5802,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -5727,6 +6105,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -6028,6 +6433,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -6304,6 +6736,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -6580,6 +7039,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -7380,6 +7866,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -7656,6 +8169,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -7932,6 +8472,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -8233,6 +8800,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -8509,6 +9103,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -8785,6 +9406,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -9581,6 +10229,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -9857,6 +10532,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -10133,6 +10835,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -10434,6 +11163,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -10710,6 +11466,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -10986,6 +11769,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -11813,6 +12623,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -12089,6 +12926,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -12365,6 +13229,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -12666,6 +13557,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -12942,6 +13860,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -13218,6 +14163,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -14069,6 +15041,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -14345,6 +15344,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -14621,6 +15647,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -14922,6 +15975,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -15198,6 +16278,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -15474,6 +16581,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -16270,6 +17404,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -16546,6 +17707,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -16822,6 +18010,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -17123,6 +18338,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -17399,6 +18641,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -17675,6 +18944,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -18475,6 +19771,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                     One
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="one"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="One"
+                                        >
+                                          One
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -18751,6 +20074,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                     Two
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="two"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Two"
+                                        >
+                                          Two
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -19027,6 +20377,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                     Three
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="three"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemradio"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Three"
+                                        >
+                                          Three
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -19328,6 +20705,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                     Four
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="asd"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Four"
+                                        >
+                                          Four
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -19604,6 +21008,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                     Five
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="ff"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Five"
+                                        >
+                                          Five
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>
@@ -19880,6 +21311,33 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                     Six
                                   </div>
                                 </ListItemBaseSection>
+                                <ContextMenu
+                                  triggerRef={
+                                    Object {
+                                      "current": <li
+                                        aria-checked="false"
+                                        aria-disabled="false"
+                                        class="md-menu-item-wrapper md-list-item-base-wrapper"
+                                        data-allow-text-select="false"
+                                        data-disabled="false"
+                                        data-interactive="true"
+                                        data-key="d"
+                                        data-padded="true"
+                                        data-shape="rectangle"
+                                        data-size="40"
+                                        role="menuitemcheckbox"
+                                        tabindex="-1"
+                                      >
+                                        <div
+                                          data-position="fill"
+                                          title="Six"
+                                        >
+                                          Six
+                                        </div>
+                                      </li>,
+                                    }
+                                  }
+                                />
                               </li>
                             </FocusRing>
                           </FocusRing>

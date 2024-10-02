@@ -297,6 +297,36 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               />
             </div>
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  aria-disabled="false"
+                  aria-label="0"
+                  class="md-menu-item-wrapper some-classname md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-key="$.0"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="40"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="fill"
+                    title="Item 1"
+                  >
+                    Item 1
+                  </div>
+                  <div
+                    data-position="end"
+                  />
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
@@ -601,6 +631,36 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               Item 1
             </div>
           </ListItemBaseSection>
+          <ContextMenu
+            triggerRef={
+              Object {
+                "current": <li
+                  aria-disabled="false"
+                  aria-label="0"
+                  class="md-menu-item-wrapper md-list-item-base-wrapper"
+                  data-allow-text-select="false"
+                  data-disabled="false"
+                  data-interactive="true"
+                  data-key="$.0"
+                  data-padded="true"
+                  data-shape="rectangle"
+                  data-size="30"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  <div
+                    data-position="start"
+                  />
+                  <div
+                    data-position="fill"
+                    title="Item 1"
+                  >
+                    Item 1
+                  </div>
+                </li>,
+              }
+            }
+          />
         </li>
       </FocusRing>
     </FocusRing>
