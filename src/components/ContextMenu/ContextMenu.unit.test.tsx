@@ -126,7 +126,7 @@ describe('<ContextMenu />', () => {
       expect.assertions(1);
 
       const style = { color: 'pink' };
-      const styleString = 'position: fixed; color: pink;';
+      const styleString = 'position: absolute; color: pink;';
 
       const { contextMenu } = renderAndTriggerContextMenu({ ...defaultProps, style });
 

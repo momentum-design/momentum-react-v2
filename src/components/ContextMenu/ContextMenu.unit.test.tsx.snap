@@ -52,7 +52,7 @@ Object {
     data-round="75"
     id="context-menu"
     role="dialog"
-    style="position: fixed;"
+    style="position: absolute;"
   >
     <button
       aria-label="Action 1"
@@ -130,7 +130,7 @@ Object {
     data-round="75"
     id="context-menu"
     role="dialog"
-    style="position: fixed;"
+    style="position: absolute;"
   >
     <button
       aria-label="Action 1"
@@ -208,7 +208,7 @@ Object {
     data-round="75"
     id="example-id"
     role="dialog"
-    style="position: fixed;"
+    style="position: absolute;"
   >
     <button
       aria-label="Action 1"
@@ -294,7 +294,7 @@ Object {
     data-round="75"
     id="context-menu"
     role="dialog"
-    style="position: fixed; color: pink;"
+    style="position: absolute; color: pink;"
   >
     <button
       aria-label="Action 1"
