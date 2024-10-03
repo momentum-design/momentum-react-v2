@@ -145,7 +145,7 @@ function MultiTemplateWithLabel<Props>(Component: FC): Story<Props> {
             <Wrapper key={index}>
               <Component {...args} {...variant} />
             </Wrapper>
-            ) : (
+          ) : (
             <Component key={index} {...args} {...variant} />
           )}
         </div>

@@ -156,5 +156,16 @@ describe('navigation', () => {
 
       expect(ids).toEqual(['1']);
     });
+
+    it('should exclude data-exclude-focus', () => {
+      const ids = getKeyboardFocusableElements(
+        createRootNodeRef(`
+        <button id="1" tabindex='0' />
+        <button id="2" data-exclude-focus />
+    `)
+      ).map((n) => n.id);
+
+      expect(ids).toEqual(['1']);
+    });
   });
 });

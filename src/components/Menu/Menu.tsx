@@ -113,6 +113,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
         return menuItem;
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [state]
   );
 

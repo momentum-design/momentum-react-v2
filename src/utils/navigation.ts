@@ -35,6 +35,7 @@ export function getKeyboardFocusableElements<T extends HTMLElement>(
       el.getAttribute('aria-hidden') !== 'true' &&
       el.getAttribute('tabindex') !== tabindex &&
       // note: container.contains(container) is true
-      !preserveTabindexContainers.some((p) => p.contains(el))
+      !preserveTabindexContainers.some((p) => p.contains(el)) &&
+      !el.hasAttribute('data-exclude-focus')
   ) as Array<HTMLElement>;
 }

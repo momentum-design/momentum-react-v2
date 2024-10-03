@@ -163,6 +163,7 @@ export const useItemSelected = <TItemId extends string | number>({
       isControlled
         ? new Set(getSelection(selectionMode, selectedItemsFromProps))
         : internalSelectedItems,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [isControlled, selectedItemsFromProps, internalSelectedItems]
   );
 
@@ -226,6 +227,7 @@ export const useItemSelected = <TItemId extends string | number>({
         }
       },
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [selectedItems]
   );
 };

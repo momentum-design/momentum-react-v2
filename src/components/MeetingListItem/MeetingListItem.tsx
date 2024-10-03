@@ -1,9 +1,4 @@
-import React, {
-  FC,
-  forwardRef,
-  useRef,
-  RefObject,
-} from 'react';
+import React, { FC, forwardRef, useRef, RefObject } from 'react';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './MeetingListItem.constants';
@@ -40,7 +35,12 @@ const MeetingListItem: FC<Props> = forwardRef(
         size={large ? 70 : 50}
         {...rest}
       >
-        <MeetingRowContent color={color} isDisabled={isDisabled} buttonGroup={buttonGroup} image={image}>
+        <MeetingRowContent
+          color={color}
+          isDisabled={isDisabled}
+          buttonGroup={buttonGroup}
+          image={image}
+        >
           {children}
         </MeetingRowContent>
       </ListItemBase>

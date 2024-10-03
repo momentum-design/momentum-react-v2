@@ -36,6 +36,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -156,6 +157,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -314,6 +316,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -433,6 +436,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -630,6 +634,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -832,6 +837,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1030,6 +1036,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1149,6 +1156,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1264,6 +1272,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1409,6 +1418,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1554,6 +1564,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1699,6 +1710,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1844,6 +1856,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -1978,6 +1991,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}

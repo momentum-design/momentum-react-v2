@@ -2571,6 +2571,7 @@ __metadata:
     eslint-plugin-import: ^2.23.4
     eslint-plugin-jsx-a11y: ^6.1.2
     eslint-plugin-react: 7.12.2
+    eslint-plugin-react-hooks: 1.7.0
     eslint-plugin-storybook: ^0.5.5
     eslint-watch: ^6.0.0
     file-loader: ^1.1.6
@@ -3140,22 +3141,6 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
   checksum: 79b81baa828093de3824b371b30d66556e646cc9b7c8e6ca43d1dd6a73755b3cc2a596d7ab131c642a5837ca9563d690b5f1734e270f5f3a8312f5a391606f41
-  languageName: node
-  linkType: hard
-
-"@react-aria/button@npm:^3.3.4":
-  version: 3.3.4
-  resolution: "@react-aria/button@npm:3.3.4"
-  dependencies:
-    "@babel/runtime": ^7.6.2
-    "@react-aria/focus": ^3.5.0
-    "@react-aria/interactions": ^3.6.0
-    "@react-aria/utils": ^3.9.0
-    "@react-stately/toggle": ^3.2.3
-    "@react-types/button": ^3.4.1
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0-rc.1
-  checksum: c67f2097bb1d1b4ecd074865451f0a889773ce5ce6a0f92461e95d323a9a58a71339a7e2b457990de8df2cd18478606da2579b424806c6785b1088f462083a5f
   languageName: node
   linkType: hard
 
@@ -13159,6 +13144,15 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
   checksum: 30326276385b6029754fbca0a25140be0f2f84d263b38f794651acf973399ea316ab1b9d69dffb9b9807d2b47592ba4bc271a242edbb15abfc05d07b08060a7e
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-react-hooks@npm:1.7.0":
+  version: 1.7.0
+  resolution: "eslint-plugin-react-hooks@npm:1.7.0"
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+  checksum: ea16d0cf4aaa0a30db05860bd892f3432a4cc299983a5adece092c021c4ee359e7e7277ff1e7207d1f550fae5f08a8b3aa2698f36e82cdebb756a8a3e1c842eb
   languageName: node
   linkType: hard
 

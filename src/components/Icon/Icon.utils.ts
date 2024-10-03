@@ -8,5 +8,8 @@ import { DEFAULTS } from './Icon.constants';
  * @param weightless - marks that this icon doesn't have a weight
  * @returns - resolved name of the icon
  */
-export const getResolvedSVGName = (name: InferredIconName, weight: IconWeight, weightless: boolean): string =>
-  weightless ? `${String(name)}` : `${String(name)}-${weight || DEFAULTS.WEIGHT}`;
+export const getResolvedSVGName = (
+  name: InferredIconName,
+  weight: IconWeight,
+  weightless: boolean
+): string => (weightless ? `${String(name)}` : `${String(name)}-${weight || DEFAULTS.WEIGHT}`);
