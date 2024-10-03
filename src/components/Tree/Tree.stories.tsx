@@ -211,7 +211,7 @@ const SelectableTree = ({
           .filter((node) => (props.selectableNodes === 'leafOnly' ? node.isLeaf : true))
           .map((node) => node.id)
       ),
-    [ref, exampleTree]
+    [props.selectableNodes]
   );
 
   return (

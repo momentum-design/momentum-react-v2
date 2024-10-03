@@ -103,6 +103,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       onToggleNode?.(id, newOpenState);
       setTree((prevTree) => toggleTreeNodeRecord(id, prevTree, newOpenState));
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [tree, isVirtualTree]
   );
 
@@ -143,6 +144,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         groupProps,
       };
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [tree]
   );
 

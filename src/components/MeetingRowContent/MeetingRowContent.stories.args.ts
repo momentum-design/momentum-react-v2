@@ -5,11 +5,11 @@ export default {
   ...commonStyles,
   ...commonAriaPressProps,
   children: {
-    description: 'Provides the child nodes for this element.', 
+    description: 'Provides the child nodes for this element.',
     control: { type: 'none' },
     table: {
       type: {
-        summary: 'ReactNode', 
+        summary: 'ReactNode',
       },
       defaultValue: {
         summary: 'undefined',

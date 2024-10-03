@@ -60,6 +60,11 @@ export interface Props {
    * @default 'vertical'
    */
   orientation?: ListOrientation;
+
+  /**
+   * The index of the item that should be focused initially
+   */
+  initialFocus?: number;
 }
 
 export interface ListContextValue {
@@ -68,6 +73,10 @@ export interface ListContextValue {
   shouldItemFocusBeInset?: boolean;
   setCurrentFocus?: Dispatch<SetStateAction<number>>;
   listSize?: number;
+  noLoop?: boolean;
+  updateFocusBlocked?: boolean;
+  setUpdateFocusBlocked?: Dispatch<SetStateAction<boolean>>;
+  isFocusedWithin?: boolean;
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;

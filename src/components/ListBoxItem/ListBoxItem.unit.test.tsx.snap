@@ -59,6 +59,7 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}

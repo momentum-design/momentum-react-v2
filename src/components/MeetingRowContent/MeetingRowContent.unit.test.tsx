@@ -31,16 +31,15 @@ describe('<MeetingRowContent />', () => {
       expect(container).toMatchSnapshot();
     });
 
-
     it('should match snapshot with buttonGroup', () => {
       expect.assertions(1);
 
       const buttonGroup = (
         <ButtonGroup spaced>
           <ButtonHyperlink key="link">Link</ButtonHyperlink>
-            <div key="participants-list" style={{ paddingRight: 0 }}>
-              17
-            </div>
+          <div key="participants-list" style={{ paddingRight: 0 }}>
+            17
+          </div>
           <Icon key="participants-icon" name="participant-list" scale={16} />
           <ButtonPill key="join-button" color="join">
             Join
@@ -68,23 +67,24 @@ describe('<MeetingRowContent />', () => {
     it('should have border color classname', () => {
       expect.assertions(1);
 
-      const element = mount(<MeetingRowContent color={MeetingMarker.TentativeActive}/>);
+      const element = mount(<MeetingRowContent color={MeetingMarker.TentativeActive} />);
 
-      const borderDiv =  element.find('.md-meeting-row-content-middle-section').at(1).getDOMNode();
+      const borderDiv = element.find('.md-meeting-row-content-middle-section').at(1).getDOMNode();
 
-      expect(borderDiv.classList.contains('md-meeting-row-content-middle-section-TentativeActive')).toBe(true);
+      expect(
+        borderDiv.classList.contains('md-meeting-row-content-middle-section-TentativeActive')
+      ).toBe(true);
     });
 
     it('should render children as expected', () => {
       expect.assertions(1);
 
-      const container = mount(
-        <MeetingRowContent>
-          Test Children
-        </MeetingRowContent>
-      );
+      const container = mount(<MeetingRowContent>Test Children</MeetingRowContent>);
 
-      const middleSection = container.find('.md-meeting-row-content-middle-section').first().getDOMNode();
+      const middleSection = container
+        .find('.md-meeting-row-content-middle-section')
+        .first()
+        .getDOMNode();
 
       expect(middleSection.textContent).toBe('Test Children');
     });
@@ -123,7 +123,7 @@ describe('<MeetingRowContent />', () => {
           buttonGroup={
             <ButtonGroup>
               <ButtonPill key="1" />
-              <ButtonCircle key="2"/>
+              <ButtonCircle key="2" />
               <Avatar key="4" />
             </ButtonGroup>
           }
@@ -135,9 +135,7 @@ describe('<MeetingRowContent />', () => {
       const avatar = container.find(Avatar).at(0).getDOMNode();
 
       expect(buttonPill.getAttribute('data-size')).toBe('28');
-      expect(buttonCircle.getAttribute('data-size')).toBe(
-        '32'
-      );
+      expect(buttonCircle.getAttribute('data-size')).toBe('32');
       expect(avatar.getAttribute('data-size')).toBe('32');
     });
   });

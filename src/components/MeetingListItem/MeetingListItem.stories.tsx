@@ -19,6 +19,7 @@ import ButtonGroup from '../ButtonGroup';
 import ButtonCircle from '../ButtonCircle';
 import Text from '../Text';
 import { action } from '@storybook/addon-actions';
+import List from '../List';
 
 export default {
   title: 'Momentum UI/MeetingListItem',
@@ -35,10 +36,18 @@ export default {
   },
 };
 
+const Wrapper = (args) => {
+  return (
+    <List listSize={1}>
+      <MeetingListItem itemIndex={0} {...args} />
+    </List>
+  );
+};
+
 const Example = Template((args) => (
   <>
     {getComponentStates(
-      MeetingListItem,
+      Wrapper,
       {
         ...args,
         children: (

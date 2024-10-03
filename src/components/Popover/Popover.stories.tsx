@@ -544,9 +544,7 @@ const WithHideOnBlur = Template<PopoverProps>((args) => {
       <div id="container-1">
         <Popover
           {...args}
-          triggerComponent={
-            <ButtonPill>test 1</ButtonPill>
-          }
+          triggerComponent={<ButtonPill>test 1</ButtonPill>}
           trigger="click"
           focusBackOnTrigger
           interactive
@@ -563,9 +561,7 @@ const WithHideOnBlur = Template<PopoverProps>((args) => {
       <div id="container-2">
         <Popover
           {...args}
-          triggerComponent={
-            <ButtonPill>test 2</ButtonPill>
-          }
+          triggerComponent={<ButtonPill>test 2</ButtonPill>}
           trigger="click"
           focusBackOnTrigger
           interactive
@@ -581,7 +577,6 @@ const WithHideOnBlur = Template<PopoverProps>((args) => {
       </div>
     </>
   );
-  
 }).bind({});
 
 export {
@@ -600,5 +595,5 @@ export {
   WithSearchInput,
   WithMeetingListItemWithButtonsWithPopoverInList,
   WithMeetingListItemWithAvatarWithPopover,
-  WithHideOnBlur
+  WithHideOnBlur,
 };

@@ -15,6 +15,8 @@ describe('getResolvedSVGName', () => {
     ['icon-name', 'thin', true, 'icon-name'],
     ['icon-name', 'filled', true, 'icon-name'],
   ])('returns the correct name for %s, %s, %s', (name, weight, weightless, expected) => {
-    expect(getResolvedSVGName(name as InferredIconName, weight as IconWeight, weightless)).toEqual(expected);
+    expect(getResolvedSVGName(name as InferredIconName, weight as IconWeight, weightless)).toEqual(
+      expected
+    );
   });
 });

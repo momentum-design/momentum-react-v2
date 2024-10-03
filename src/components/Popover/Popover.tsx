@@ -75,7 +75,9 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   } = props;
 
   if ((hideOnBlur && !disableFocusLock) || (hideOnBlur && !interactive)) {
-    console.warn('MRV2 Popover: This component cannot hideOnBlur when focus locked. disableFocusLock must be true if hideOnBlur is true. Additionally, hideOnBlur will only have an effect if the popover has interactive={true}');
+    console.warn(
+      'MRV2 Popover: This component cannot hideOnBlur when focus locked. disableFocusLock must be true if hideOnBlur is true. Additionally, hideOnBlur will only have an effect if the popover has interactive={true}'
+    );
   }
 
   const focusBackOnTrigger =
@@ -126,7 +128,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const handleOnPopoverHidden = useCallback(() => {
     // When the popover hides, the focus goes to the next focusable element by default. Except if focusBackOnTrigger popover prop is true AND shouldFocusTrigger (determined by hideOnBlurPlugin) is true.
     // shouldFocusTrigger is true when the focusout event has no relatedTarget, that is, focusOut was triggered by Esc or Click.
-    
+
     if (focusBackOnTrigger && popoverInstance?.current?.shouldFocusTrigger) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -249,7 +251,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
         onTrigger,
         onUntrigger,
         onClickOutside,
-        ...(hideOnBlur && {isChildPopoverOpen}),
+        ...(hideOnBlur && { isChildPopoverOpen }),
       }}
       onHidden={(instance) => {
         handleOnPopoverHidden();
