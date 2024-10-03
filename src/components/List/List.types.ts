@@ -76,7 +76,6 @@ export interface ListContextValue {
   noLoop?: boolean;
   updateFocusBlocked?: boolean;
   setUpdateFocusBlocked?: Dispatch<SetStateAction<boolean>>;
-  suppressFocus?: boolean;
   isFocusedWithin?: boolean;
 }
 export interface ListRefObject {

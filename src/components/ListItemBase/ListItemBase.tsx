@@ -272,7 +272,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * the size of the new list size (shrinked size)
    */
   useLayoutEffect(() => {
-    // if (!!listSize && currentFocus >= listSize) {
     if (!!listSize && currentFocus >= listSize) {
       // set focus to last item
       listContext.setCurrentFocus(listSize - 1);

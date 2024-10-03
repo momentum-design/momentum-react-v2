@@ -383,11 +383,11 @@ const ListWithNonFocusableChildrenWrapper = () => {
   return (
     <>
       <List shouldFocusOnPress listSize={2}>
-        <ListItemBase data-preserve-tabindex size="auto" itemIndex={0} key={0}>
-          <ButtonPill>1</ButtonPill>
+        <ListItemBase size="auto" itemIndex={0} key={0}>
+          <ButtonPill data-preserve-tabindex tabIndex={-1}>Non-focusable button</ButtonPill>
         </ListItemBase>
         <ListItemBase itemIndex={1} key={1}>
-          <ButtonPill>2</ButtonPill>
+          <ButtonPill>Focusable button</ButtonPill>
         </ListItemBase>
       </List>
     </>
