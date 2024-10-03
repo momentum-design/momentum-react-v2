@@ -63,3 +63,18 @@
     }
   }
 }
+
+.md-list-item-base-wrapper, .md-tree-node-base-wrapper {
+  .md-space-row-content-menu-trigger-wrapper {
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+.md-list-item-base-wrapper:hover, .md-list-item-base-wrapper:focus-within,
+.md-tree-node-base-wrapper:hover, .md-tree-node-base-wrapper:focus-within {
+  .md-space-row-content-menu-trigger-wrapper {
+    opacity: 1;
+    position: initial;
+  }
+}

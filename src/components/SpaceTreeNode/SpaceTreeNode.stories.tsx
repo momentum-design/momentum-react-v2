@@ -71,6 +71,12 @@ Common.parameters = {
       title: 'Tooltip that appears even on disabled',
     },
     {
+      avatar: <Avatar title="C" presence={PresenceType.Away} size={32} />,
+      isNewActivity: true,
+      title: 'Tooltip that appears even on disabled',
+      menuItems: [{ text: 'Action 1' }],
+    },
+    {
       avatar: (
         <Avatar
           title="C"
@@ -83,6 +89,21 @@ Common.parameters = {
       isUnread: true,
       teamColor: TEAM_COLORS.gold,
       title: 'Tooltip that appears even on disabled',
+    },
+    {
+      avatar: (
+        <Avatar
+          title="C"
+          presence={PresenceType.Meet}
+          size={32}
+          color={TEAM_COLORS.gold as TeamColor}
+        />
+      ),
+      isNewActivity: true,
+      isUnread: true,
+      teamColor: TEAM_COLORS.gold,
+      title: 'Tooltip that appears even on disabled',
+      menuItems: [{ text: 'Action 1' }],
     },
     {
       avatar: (
