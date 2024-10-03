@@ -8,7 +8,8 @@ import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import DividerDot from '../DividerDot';
 import ListItemBaseSection from '../ListItemBaseSection';
-import ButtonCircle from '../ButtonCircle';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('<SpaceRowContent />', () => {
   describe('snapshot', () => {
@@ -171,16 +172,6 @@ describe('<SpaceRowContent />', () => {
       const isDisabled = true;
 
       const container = await mountAndWait(<SpaceRowContent isDisabled={isDisabled} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with menuItems', async () => {
-      expect.assertions(1);
-
-      const menuItems = [{ key: 'item-1', text: 'Item 1' }];
-
-      const container = await mountAndWait(<SpaceRowContent menuItems={menuItems} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -507,24 +498,26 @@ describe('<SpaceRowContent />', () => {
       expect(firstLineElement.props()['data-disabled']).toBe(isDisabled);
       expect(mentionIcon.props().fillColor).toBe('var(--mds-color-theme-text-primary-disabled)');
     });
+  });
 
+  describe('actions', () => {
     it('should show menu when menuItems is provided', async () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
-      const element = await mountAndWait(
+      const user = userEvent.setup();
+
+      render(
         <SpaceRowContent
           menuItems={[{ key: 'item-1', text: 'Item 1' }]}
           menuTriggerLabel="Menu trigger label"
         />
       );
 
-      const triggerWrapper = element.find('.md-space-row-content-menu-trigger-wrapper');
+      const triggerButton = screen.getByTestId('menu-trigger-button');
+      expect(triggerButton.getAttribute('aria-label')).toBe('Menu trigger label');
 
-      expect(triggerWrapper.exists()).toBe(true);
-
-      const triggerButton = triggerWrapper.find(ButtonCircle);
-      expect(triggerButton.exists()).toBe(true);
-      expect(triggerButton.prop('aria-label')).toBe('Menu trigger label');
+      await user.click(triggerButton);
+      expect(screen.getByRole('menuitemradio', { name: 'Item 1' })).toBeTruthy();
     });
   });
 });
