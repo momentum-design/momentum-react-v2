@@ -86,7 +86,8 @@ export default {
   },
   allowTextSelection: {
     defaultValue: false,
-    description: ' Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.',
+    description:
+      ' Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.',
     control: { type: 'boolean' },
     table: {
       type: {

@@ -43,7 +43,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         onClose?.();
       }
     },
-    [shouldCloseOnEsc]
+    [onClose, shouldCloseOnEsc]
   );
 
   const ariaLabelledbyProp = ariaLabelledby ?? (title ? id.current : undefined);

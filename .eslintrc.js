@@ -30,7 +30,7 @@ module.exports = {
     'plugin:storybook/recommended',
     'prettier',
   ],
-  plugins: ['react', 'jsx-a11y', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y', '@typescript-eslint'],
   ignorePatterns: ['**/src/app', '**/es', '**/dist', '**/docs', '**/*.d.ts'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -86,6 +86,7 @@ module.exports = {
         forbid: ['any'],
       },
     ],
+    'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-boolean-value': 0,
     'react/jsx-closing-bracket-location': 0,
     'react/jsx-curly-spacing': 1,

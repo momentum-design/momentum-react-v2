@@ -6,6 +6,7 @@ import { ListRefObject, Props } from './List.types';
 import './List.style.scss';
 import { ListContext } from './List.utils';
 import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
+import { mergeProps } from '@react-aria/utils';
 
 const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   const {
@@ -19,13 +20,15 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
     shouldItemFocusBeInset,
     noLoop,
     orientation = DEFAULTS.ORIENTATION,
+    initialFocus = DEFAULTS.INITIAL_FOCUS,
     ...rest
   } = props;
 
-  const { keyboardProps, getContext } = useOrientationBasedKeyboardNavigation({
+  const { keyboardProps, getContext, focusWithinProps } = useOrientationBasedKeyboardNavigation({
     listSize,
     orientation,
     noLoop,
+    initialFocus,
     contextProps: { shouldFocusOnPress, shouldItemFocusBeInset },
   });
 
@@ -46,8 +49,7 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
         style={style}
         id={id}
         role={role}
-        {...keyboardProps}
-        {...rest}
+        {...mergeProps(keyboardProps, focusWithinProps, rest)}
       >
         {children}
       </ul>

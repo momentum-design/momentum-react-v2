@@ -62,7 +62,9 @@ describe('<Icon />', () => {
 
       const ariaLabel = 'This participant is muted';
 
-      container = await mountAndWait(<Icon name="draft-indicator" weight="bold" ariaLabel={ariaLabel} />);
+      container = await mountAndWait(
+        <Icon name="draft-indicator" weight="bold" ariaLabel={ariaLabel} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -72,7 +74,9 @@ describe('<Icon />', () => {
 
       const ariaLabel = 'This participant is muted';
 
-      container = await mountAndWait(<Icon name="draft-indicator" weight="bold" aria-label={ariaLabel} />);
+      container = await mountAndWait(
+        <Icon name="draft-indicator" weight="bold" aria-label={ariaLabel} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -205,7 +209,9 @@ describe('<Icon />', () => {
 
       const title = 'You have a draft message';
 
-      const wrapper = await mountAndWait(<Icon name="draft-indicator" weight="bold" title={title} />);
+      const wrapper = await mountAndWait(
+        <Icon name="draft-indicator" weight="bold" title={title} />
+      );
       const element = wrapper.find(Icon).getDOMNode();
 
       expect(element.getAttribute('title')).toBe(title);

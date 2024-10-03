@@ -1,5 +1,9 @@
 import React from 'react';
-import { MultiTemplate, MultiTemplateWithLabel, Template } from '../../storybook/helper.stories.templates';
+import {
+  MultiTemplate,
+  MultiTemplateWithLabel,
+  Template,
+} from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -26,8 +30,11 @@ export default {
   },
 };
 
-const Example = Template<MeetingRowContentProps>((args: MeetingRowContentProps) => <div style={{position:'relative'}} ><MeetingRowContent {...args} /></div>
-).bind({});
+const Example = Template<MeetingRowContentProps>((args: MeetingRowContentProps) => (
+  <div style={{ position: 'relative' }}>
+    <MeetingRowContent {...args} />
+  </div>
+)).bind({});
 
 Example.argTypes = { ...argTypes };
 
@@ -61,8 +68,11 @@ Example.args = {
 /**
  * Common variants story. This renders multiple variants of a single component.
  */
-const Common = MultiTemplateWithLabel<MeetingRowContentProps>((args: MeetingRowContentProps) => <div style={{position:'relative'}} ><MeetingRowContent {...args} /></div>
-).bind({});
+const Common = MultiTemplateWithLabel<MeetingRowContentProps>((args: MeetingRowContentProps) => (
+  <div style={{ position: 'relative' }}>
+    <MeetingRowContent {...args} />
+  </div>
+)).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
@@ -257,8 +267,11 @@ Common.parameters = {
 };
 
 const Colors = MultiTemplate<MeetingRowContentProps>((args: MeetingRowContentProps) => {
-
-  return <div style={{position:'relative'}} ><MeetingRowContent {...args} /></div>;
+  return (
+    <div style={{ position: 'relative' }}>
+      <MeetingRowContent {...args} />
+    </div>
+  );
 }).bind({});
 
 Colors.argTypes = { ...argTypes };

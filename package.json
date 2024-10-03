@@ -92,6 +92,9 @@
     "react": ">=16.14.0",
     "react-dom": ">=16.14.0"
   },
+  "resolutions": {
+    "@react-aria/button": "3.4.3"
+  },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@momentum-design/animations": "^0.0.4",
@@ -205,6 +208,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "7.12.2",
+    "eslint-plugin-react-hooks": "1.7.0",
     "eslint-plugin-storybook": "^0.5.5",
     "eslint-watch": "^6.0.0",
     "file-loader": "^1.1.6",

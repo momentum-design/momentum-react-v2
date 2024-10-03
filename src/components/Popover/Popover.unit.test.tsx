@@ -1132,7 +1132,7 @@ describe('<Popover />', () => {
                 <button>Content</button>
               </Popover>
             </div>
-          <button>Next focus button</button>
+            <button>Next focus button</button>
           </>
         );
 
@@ -1195,7 +1195,7 @@ describe('<Popover />', () => {
 
       it('should not focus back on the trigger element when popover is hidden and shouldFocusTrigger is false', async () => {
         const user = userEvent.setup();
-  
+
         render(
           <>
             <div>
@@ -1212,7 +1212,7 @@ describe('<Popover />', () => {
                   }
                 }}
               >
-              <button>content</button>
+                <button>content</button>
               </Popover>
             </div>
             <div>
@@ -1220,7 +1220,7 @@ describe('<Popover />', () => {
             </div>
           </>
         );
-  
+
         checkRef(screen.getByRole('button', { name: 'Click Me!' }));
 
         // // assert no popover on screen
@@ -1229,28 +1229,26 @@ describe('<Popover />', () => {
 
         // // after click, popover should be shown
         await openPopoverByClickingOnTriggerAndCheckContent(user);
-  
 
         // goes to listitem
         await user.keyboard('{Tab}');
 
         // tabs out of popover
         await user.keyboard('{Tab}');
-  
+
         // Wait for the popover to be hidden
         await waitFor(() => {
           expect(screen.queryByText('Content')).not.toBeInTheDocument();
         });
-  
+
         // Check if the focus is not back on the trigger element
         const triggerElement = screen.getByRole('button', { name: /click me!/i });
         expect(document.activeElement).not.toEqual(triggerElement);
-  
+
         // Check if the focus is on the next focusable element
         const anotherButton = screen.getByRole('button', { name: /another button/i });
         expect(document.activeElement).toEqual(anotherButton);
       });
-    
 
       it('it should focus on the trigger component when focusBackOnTrigger= = true and popover gets closed', async () => {
         expect.assertions(6);

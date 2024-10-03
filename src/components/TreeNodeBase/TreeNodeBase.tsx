@@ -122,6 +122,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
 
       onPress?.(event);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [treeContext, nodeDetails, nodeId, onPress]
   );
 
@@ -153,6 +154,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
       treeContext.setActiveNodeId(nodeId);
       treeContext.toggleTreeNode(nodeId);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPressed, isHidden]);
 
   const updateTabIndexes = useCallback(() => {
@@ -182,6 +184,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     if (treeContext?.activeNodeId !== undefined) {
       updateTabIndexes();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [treeContext?.activeNodeId]);
 
   useMutationObservable(ref.current, updateTabIndexes);

@@ -1,9 +1,13 @@
 import { CSSProperties, ReactNode } from 'react';
 import { PressEvents } from '@react-types/shared';
+import { FocusProps, FocusWithinProps } from '@react-aria/interactions';
 
 export type ListItemBaseSize = 32 | 40 | 50 | 70 | 'auto';
 
-export interface Props extends PressEvents {
+export interface Props
+  extends PressEvents,
+    Omit<FocusProps, 'isDisabled' | 'onFocusChange'>,
+    Omit<FocusWithinProps, 'isDisabled' | 'onFocusWithinChange'> {
   /**
    * className prop description
    * Child components of this ButtonPill.
@@ -76,6 +80,11 @@ export interface Props extends PressEvents {
    * lang attribute if necessary.
    */
   lang?: string;
+
+  /**
+   * Whether the item should focus on the first child instead of itself
+   */
+  focusChild?: boolean;
 
   /**
    * Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.

@@ -10,8 +10,8 @@
   box-sizing: border-box;
   outline: none;
 
-  &[data-allow-text-select='true'] {
-    user-select: text;
+  & > div {
+    overflow: visible;
   }
 
   &[data-interactive='true'] {
@@ -48,6 +48,11 @@
     }
   }
 
+  &[data-allow-text-select='true'] {
+    user-select: text;
+    cursor: auto !important;
+  }
+
   &[data-disabled='true'],
   &.disable {
     cursor: default;
@@ -78,7 +83,6 @@
     width: 100%;
 
     // trim any type of text inside
-    &,
     p,
     span {
       overflow: hidden;
