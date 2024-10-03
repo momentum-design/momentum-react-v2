@@ -197,7 +197,12 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
           {
             <MenuTrigger
               triggerComponent={
-                <ButtonCircle ghost size={isCompact ? 20 : 28} aria-label={menuTriggerLabel}>
+                <ButtonCircle
+                  ghost
+                  size={isCompact ? 20 : 28}
+                  aria-label={menuTriggerLabel}
+                  data-testid="menu-trigger-button"
+                >
                   <Icon name="more" weight="bold" scale={isCompact ? 16 : 24} />
                 </ButtonCircle>
               }
