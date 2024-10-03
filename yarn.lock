@@ -2451,10 +2451,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/tokens@npm:0.0.77":
-  version: 0.0.77
-  resolution: "@momentum-design/tokens@npm:0.0.77"
-  checksum: f95ec9649e4d0f07b4f1e4eed324f5aa1b7e2b71391716a89bbfd7f7fa1a6fa36ad1e77e2adb0553073645641a9c6bb191641a4750729c4f2f08d675e403b076
+"@momentum-design/tokens@npm:0.0.95":
+  version: 0.0.95
+  resolution: "@momentum-design/tokens@npm:0.0.95"
+  checksum: b7b3fceb874fa4b50a9a765e16f143bc09231ffb6e56cccd2a7422d2c67a1b48e777fc329a81377e4b34ca977414f083620ac3678225c5eab1be38cf8b16061a
   languageName: node
   linkType: hard
 
@@ -2496,7 +2496,7 @@ __metadata:
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
     "@momentum-design/icons": 0.0.164
-    "@momentum-design/tokens": 0.0.77
+    "@momentum-design/tokens": 0.0.95
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
     "@momentum-ui/tokens": ^1.7.1
