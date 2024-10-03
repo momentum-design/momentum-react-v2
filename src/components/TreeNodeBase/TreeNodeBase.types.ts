@@ -2,6 +2,7 @@ import { CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactNode, RefObject 
 import { PressEvents } from '@react-types/shared';
 import { TreeNodeId } from '../Tree';
 import { TreeNodeRecord } from '../Tree/Tree.types';
+import { SpaceRowContentMenuProps } from '../SpaceRowContent/SpaceRowContent.types';
 
 /**
  * TreeNodeBase size options
@@ -20,6 +21,7 @@ export type TreeNodeBaseRefOrCallbackRef =
  */
 export interface Props
   extends PressEvents,
+    SpaceRowContentMenuProps,
     DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   /**
    * Unique identifier for the tree node
