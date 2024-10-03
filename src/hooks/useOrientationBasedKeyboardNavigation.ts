@@ -22,7 +22,6 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     shouldItemFocusBeInset?: boolean;
     noLoop?: boolean;
     updateFocusBlocked?: boolean;
-    supressFocus?: boolean;
     isFocusedWithin?: boolean;
   };
 };
