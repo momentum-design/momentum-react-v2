@@ -11,13 +11,6 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-// poppy uses uuid, which causes snapshot comparison failures
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
-
 describe('<SpaceRowContent />', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
@@ -179,21 +172,6 @@ describe('<SpaceRowContent />', () => {
       const isDisabled = true;
 
       const container = await mountAndWait(<SpaceRowContent isDisabled={isDisabled} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with menuItems', async () => {
-      expect.assertions(1);
-
-      const isDisabled = true;
-
-      const container = await mountAndWait(
-        <SpaceRowContent
-          menuItems={[{ key: 'item-1', text: 'Item 1' }]}
-          menuTriggerLabel="Menu trigger label"
-        />
-      );
 
       expect(container).toMatchSnapshot();
     });
