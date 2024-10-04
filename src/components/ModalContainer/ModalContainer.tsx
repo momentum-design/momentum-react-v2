@@ -1,6 +1,6 @@
 import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
-import {FocusScope} from '@react-aria/focus';
+import { FocusScope } from '@react-aria/focus';
 
 import ModalArrow from '../ModalArrow';
 
@@ -30,38 +30,47 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
 
   const arrowOrientation = getArrowOrientation(placement);
 
-  const content = (<div
-    ref={ref}
-    role={role}
-    aria-modal={ariaModal}
-    className={classnames(className, STYLE.wrapper)}
-    id={id}
-    style={style}
-    data-placement={placement}
-    data-arrow-orientation={arrowOrientation}
-    data-color={color}
-    data-elevation={elevation}
-    data-padded={isPadded}
-    data-round={round}
-    {...otherProps}
-  >
-    {children}
-    {
-      /*arrow has to be wrapped in HTML element to allow Popover to style it*/
-      showArrow && (
-        <div id={arrowId} data-popper-arrow className={classnames(STYLE.arrowWrapper)}>
-          <ModalArrow placement={placement} color={color} />
-        </div>
-      )
-    }
-  </div>);
+  // aria-modal should only be on dialogs (https://w3c.github.io/aria/#aria-modal)
+  const roleProps = ['dialog', 'alertdialog'].includes(role) ? { 'aria-modal': ariaModal } : {};
+
+  const content = (
+    <div
+      ref={ref}
+      role={role}
+      {...roleProps}
+      className={classnames(className, STYLE.wrapper)}
+      id={id}
+      style={style}
+      data-placement={placement}
+      data-arrow-orientation={arrowOrientation}
+      data-color={color}
+      data-elevation={elevation}
+      data-padded={isPadded}
+      data-round={round}
+      {...otherProps}
+    >
+      {children}
+      {
+        /*arrow has to be wrapped in HTML element to allow Popover to style it*/
+        showArrow && (
+          <div id={arrowId} data-popper-arrow className={classnames(STYLE.arrowWrapper)}>
+            <ModalArrow placement={placement} color={color} />
+          </div>
+        )
+      }
+    </div>
+  );
 
   if (!focusLockProps) {
     return content;
   }
 
-  // eslint-disable-next-line jsx-a11y/no-autofocus
-  return <FocusScope contain autoFocus {...focusLockProps}>{content}</FocusScope>;
+  return (
+    // eslint-disable-next-line jsx-a11y/no-autofocus
+    <FocusScope contain autoFocus {...focusLockProps}>
+      {content}
+    </FocusScope>
+  );
 };
 
 const _ModalContainer = forwardRef(ModalContainer);

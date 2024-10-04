@@ -282,8 +282,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -446,7 +444,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -475,8 +472,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -2489,8 +2484,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="example-class md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -2653,7 +2646,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="example-class md-menu-trigger-wrapper"
@@ -2682,8 +2674,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="example-class md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -4696,8 +4686,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="secondary"
@@ -4860,7 +4848,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -4889,8 +4876,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="secondary"
@@ -6904,8 +6889,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -7069,7 +7052,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -7099,8 +7081,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -9114,8 +9094,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -9278,7 +9256,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -9307,8 +9284,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -11321,8 +11296,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -11516,7 +11489,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -11545,8 +11517,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -13603,8 +13573,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -13768,7 +13736,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -13802,8 +13769,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -15821,8 +15786,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -15985,7 +15948,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -16014,8 +15976,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -18032,8 +17992,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   hidden=""
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal="true"
                   class="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"
@@ -18196,7 +18154,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
             }
           >
             <ModalContainer
-              aria-labelledby="test-ID"
               ariaModal={true}
               arrowId="arrow1"
               className="md-menu-trigger-wrapper"
@@ -18225,8 +18182,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   hidden={true}
                 />
                 <div
-                  aria-labelledby="test-ID"
-                  aria-modal={true}
                   className="md-menu-trigger-wrapper md-modal-container-wrapper"
                   data-arrow-orientation="vertical"
                   data-color="primary"

@@ -1690,7 +1690,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal="true"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -1796,7 +1795,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal={true}
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -4497,7 +4495,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal="true"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -4603,7 +4600,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal={true}
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -6495,7 +6491,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal="true"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -6601,7 +6596,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal={true}
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -7591,7 +7585,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal="true"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -7697,7 +7690,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal={true}
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -8687,7 +8679,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal="true"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -8793,7 +8784,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal={true}
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -10990,7 +10980,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal="true"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -11118,7 +11107,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   />
                   <div
                     aria-labelledby="test-ID"
-                    aria-modal={true}
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"

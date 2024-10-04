@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, ComponentProps } from 'react';
+import { CSSProperties, ReactNode, ComponentProps, AriaRole } from 'react';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import { FocusScope } from '@react-aria/focus';
 
@@ -75,7 +75,7 @@ export interface Props {
   /**
    * Role for this modal.
    */
-  role?: string;
+  role?: AriaRole;
 
   /**
    * Boolean for aria modal.
