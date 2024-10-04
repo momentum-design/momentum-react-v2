@@ -10,7 +10,6 @@ const DEFAULTS = {
 const STYLE = {
   textWrapper: `${CLASS_PREFIX}-text-wrapper`,
   isNewActivity: `${CLASS_PREFIX}-is-new-activity`,
-  menuTriggerWrapper: `${CLASS_PREFIX}-menu-trigger-wrapper`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };

@@ -1,18 +1,7 @@
 import { ReactNode } from 'react';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 
-type MenuItem = {
-  key: string;
-  text: string;
-};
-
-export interface SpaceRowContentMenuProps {
-  menuItems?: MenuItem[];
-  onSelectMenuItem?: (key: string) => void;
-  menuTriggerLabel?: string;
-}
-
-export interface Props extends SpaceRowContentMenuProps {
+export interface Props {
   /**
    * Determines whether there is new activity in this space (text appears in bold).
    */

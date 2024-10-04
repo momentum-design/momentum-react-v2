@@ -4,8 +4,24 @@ import { FocusProps, FocusWithinProps } from '@react-aria/interactions';
 
 export type ListItemBaseSize = 32 | 40 | 50 | 70 | 'auto';
 
+export interface ContextMenuState {
+  isOpen: boolean;
+  x: number;
+  y: number;
+}
+
+type ContextMenuAction = {
+  text?: string;
+  action?: () => void;
+};
+
+export interface ContextMenu {
+  contextMenuActions?: ContextMenuAction[];
+}
+
 export interface Props
   extends PressEvents,
+    ContextMenu,
     Omit<FocusProps, 'isDisabled' | 'onFocusChange'>,
     Omit<FocusWithinProps, 'isDisabled' | 'onFocusWithinChange'> {
   /**

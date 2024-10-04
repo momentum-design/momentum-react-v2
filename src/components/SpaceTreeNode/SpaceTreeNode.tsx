@@ -31,9 +31,6 @@ const SpaceTreeNode: FC<Props> = forwardRef(
       isCompact = false,
       rightIconTooltip,
       isDisabled = DEFAULTS.DISABLED,
-      menuItems,
-      onSelectMenuItem,
-      menuTriggerLabel,
       ...rest
     } = props;
 
@@ -69,9 +66,6 @@ const SpaceTreeNode: FC<Props> = forwardRef(
               isCompact,
               rightIconTooltip,
               isDisabled,
-              menuItems,
-              onSelectMenuItem,
-              menuTriggerLabel,
             }}
           />
         )}

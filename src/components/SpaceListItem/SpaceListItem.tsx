@@ -34,9 +34,6 @@ const SpaceListItem: FC<Props> = forwardRef(
       itemIndex,
       rightIconTooltip,
       isDisabled = DEFAULTS.DISABLED,
-      menuItems,
-      onSelectMenuItem,
-      menuTriggerLabel,
       ...rest
     } = props;
 
@@ -75,9 +72,6 @@ const SpaceListItem: FC<Props> = forwardRef(
             isCompact,
             rightIconTooltip,
             isDisabled,
-            menuItems,
-            onSelectMenuItem,
-            menuTriggerLabel,
           }}
         />
       </ListItemBase>
