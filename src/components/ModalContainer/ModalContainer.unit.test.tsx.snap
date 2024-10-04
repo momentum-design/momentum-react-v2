@@ -251,7 +251,6 @@ exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
   role="tooltip"
 >
   <div
-    aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
