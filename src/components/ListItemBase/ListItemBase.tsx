@@ -275,7 +275,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [currentFocus, listContext, listSize, updateTabIndexes]);
 
   useEffect(() => {
-    if (currentFocus === undefined) {
+    if (listContext && currentFocus === undefined) {
       return;
     }
     updateTabIndexes();
