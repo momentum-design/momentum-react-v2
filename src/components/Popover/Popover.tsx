@@ -93,10 +93,13 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
 
   const ariaLabelledby = providedAriaLabelledby || triggerComponent.props?.id || generatedTriggerId;
 
+  const isGenericAriaRole = ['generic', 'presentation', 'none'].includes(role);
+
   const modalConditionalProps = {
     ...(interactive && {
-      ...((providedAriaLabelledby || !ariaLabel) && { 'aria-labelledby': ariaLabelledby }),
-      ...(ariaLabel && { 'aria-label': ariaLabel }),
+      ...((providedAriaLabelledby || !ariaLabel) &&
+        !isGenericAriaRole && { 'aria-labelledby': ariaLabelledby }),
+      ...(ariaLabel && !isGenericAriaRole && { 'aria-label': ariaLabel }),
       focusLockProps: !disableFocusLock
         ? { restoreFocus: focusBackOnTrigger, autoFocus }
         : undefined, // if we pass in undefined, the ModalContainer will not use FocusScope
