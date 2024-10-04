@@ -48,7 +48,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 22.x
           check-latest: true
 
       - name: Validate Dependencies
@@ -82,7 +82,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 22.x
           check-latest: true
 
       - name: Uncache Dependencies
@@ -107,7 +107,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 22.x
           check-latest: true
 
       - name: Uncache Dependencies
@@ -135,7 +135,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 22.x
           check-latest: true
 
       - name: Uncache Dependencies
