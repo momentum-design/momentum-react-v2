@@ -15,7 +15,7 @@ import './Tree.style.scss';
 import {
   convertNestedTree2MappedTree,
   isActiveNodeInDOM,
-  getFistActiveNode,
+  getInitialActiveNode,
   getNextActiveNode,
   getNodeDOMId,
   getTreeRootId,
@@ -61,7 +61,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   });
   const [tree, setTree] = useState<TreeIdNodeMap>(convertNestedTree2MappedTree(treeStructure));
   const [activeNode, setActiveNode] = useState<TreeNodeId | undefined>(
-    getFistActiveNode(tree, excludeTreeRoot)
+    getInitialActiveNode(tree, excludeTreeRoot, itemSelection)
   );
   const [isFocusWithin, setIsFocusWithin] = useState(false);
   const activeNodeIdRef = useRef<TreeNodeId>(activeNode);
@@ -80,7 +80,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     }
     // Fallback to the first node
     if (!newActiveNodeId || newActiveNodeId === getTreeRootId(newTree)) {
-      newActiveNodeId = getFistActiveNode(newTree, excludeTreeRoot);
+      newActiveNodeId = getInitialActiveNode(newTree, excludeTreeRoot, itemSelection);
     }
     setActiveNodeId(newActiveNodeId);
   }, [treeStructure]);

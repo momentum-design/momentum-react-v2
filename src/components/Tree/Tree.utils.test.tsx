@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   convertNestedTree2MappedTree,
-  getFistActiveNode,
+  getInitialActiveNode,
   getNextActiveNode,
   getTreeRootId,
   isActiveNodeInDOM,
@@ -803,7 +803,14 @@ describe('Tree utils', () => {
     `(
       'should return $expected when $msg and $excludeTreeRoot',
       ({ tree, excludeTreeRoot, expected }) => {
-        const result = getFistActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot);
+        const result = getInitialActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot, {
+          selectionMode: 'none',
+          selectedItems: [],
+          isSelected: () => null,
+          toggle: () => null,
+          update: () => null,
+          clear: () => null,
+        });
         expect(result).toEqual(expected);
       }
     );
