@@ -11,6 +11,7 @@ import {
 } from './Tree.types';
 import { NODE_ID_ATTRIBUTE_NAME } from '../TreeNodeBase/TreeNodeBase.constants';
 import { DEFAULTS } from './Tree.constants';
+import { ItemSelection } from '../../hooks/useItemSelected';
 
 export const TreeContext = React.createContext<TreeContextValue>(null);
 
@@ -403,12 +404,28 @@ export const isActiveNodeInDOM = (
 };
 
 /**
- * Get the first active node id in the tree.
+ * Get the initial active node id in the tree.
+ *
+ * If selection mode is single and there is only one shown and selected item, it returns the selected item.
+ * Otherwise, it returns the first shown node in the tree.
  *
  * @param tree
  * @param excludeTreeRoot
+ * @param itemSelection
  */
-export const getFistActiveNode = (tree: TreeIdNodeMap, excludeTreeRoot: boolean): TreeNodeId => {
+export const getInitialActiveNode = (
+  tree: TreeIdNodeMap,
+  excludeTreeRoot: boolean,
+  itemSelection: ItemSelection<string>
+): TreeNodeId => {
+  if (
+    itemSelection.selectionMode === 'single' &&
+    itemSelection.selectedItems.length === 1 &&
+    tree.has(itemSelection.selectedItems[0])
+  ) {
+    return itemSelection.selectedItems[0];
+  }
+
   const rootId = getTreeRootId(tree);
   if (rootId) {
     const treeNode = tree.get(rootId);
