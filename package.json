@@ -24,6 +24,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "packageManager": "yarn@3.6.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/momentum-design/momentum-react-v2.git"
@@ -93,7 +94,8 @@
     "react-dom": ">=16.14.0"
   },
   "resolutions": {
-    "@react-aria/button": "3.4.3"
+    "@react-aria/button": "3.4.3",
+    "@types/node": "22.7.4"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
@@ -146,7 +148,7 @@
     "react-verification-input": "^4.1.2",
     "sass": "1.49.9",
     "ts-loader": "^8.2.0",
-    "typescript": "^4.3.5",
+    "typescript": "^4.8.4",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
