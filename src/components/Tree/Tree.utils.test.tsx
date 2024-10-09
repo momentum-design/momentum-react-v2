@@ -787,25 +787,29 @@ describe('Tree utils', () => {
     });
   });
 
-  describe('getFistActiveNode', () => {
+  describe('getInitialActiveNode', () => {
     it.each`
-      msg                         | tree                                                                                | excludeTreeRoot | expected
-      ${'empty tree'}             | ${{}}                                                                               | ${false}        | ${undefined}
-      ${'empty tree'}             | ${{}}                                                                               | ${true}         | ${undefined}
-      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${true}         | ${undefined}
-      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${false}        | ${'root'}
-      ${'only closed root tree'}  | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${true}         | ${undefined}
-      ${'only closed  root tree'} | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${false}        | ${'root'}
-      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${true}         | ${'node'}
-      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${false}        | ${'root'}
-      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
-      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
+      msg                              | tree                                                                                       | excludeTreeRoot | expected     | selectionMode | selectedItems
+      ${'is empty'}                    | ${{}}                                                                                      | ${false}        | ${undefined} | ${'none'}     | ${[]}
+      ${'is empty'}                    | ${{}}                                                                                      | ${true}         | ${undefined} | ${'none'}     | ${[]}
+      ${'only has root'}               | ${{ id: 'root', children: [] }}                                                            | ${true}         | ${undefined} | ${'none'}     | ${[]}
+      ${'only has root'}               | ${{ id: 'root', children: [] }}                                                            | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'only has closed root'}        | ${{ id: 'root', children: [], isOpenByDefault: false }}                                    | ${true}         | ${undefined} | ${'none'}     | ${[]}
+      ${'only has closed root'}        | ${{ id: 'root', children: [], isOpenByDefault: false }}                                    | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has child'}                   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${true}         | ${'node'}    | ${'none'}     | ${[]}
+      ${'has child'}                   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has hidden child'}            | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }}        | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has hidden child'}            | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }}        | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has child'}                   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${true}         | ${'node'}    | ${'none'}     | ${[]}
+      ${'has single selected child'}   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${true}         | ${'node'}    | ${'single'}   | ${['node']}
+      ${'has single selected child'}   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${false}        | ${'node'}    | ${'single'}   | ${['node']}
+      ${'has multiple selected child'} | ${{ id: 'root', children: [{ id: 'node', children: [] }, { id: 'node2', children: [] }] }} | ${false}        | ${'root'}    | ${'multiple'} | ${['node', 'node2']}
     `(
-      'should return $expected when $msg and $excludeTreeRoot',
-      ({ tree, excludeTreeRoot, expected }) => {
+      'should return $expected when tree $msg and excludeTreeRoot is $excludeTreeRoot',
+      ({ tree, excludeTreeRoot, expected, selectionMode, selectedItems }) => {
         const result = getInitialActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot, {
-          selectionMode: 'none',
-          selectedItems: [],
+          selectionMode,
+          selectedItems,
           isSelected: () => null,
           toggle: () => null,
           update: () => null,
