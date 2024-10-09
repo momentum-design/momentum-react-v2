@@ -15,15 +15,15 @@ import ButtonSimple from '../ButtonSimple';
 
 const Accordion: FC<Props> = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
   const {
-    children,
-    className,
-    id,
-    style,
-    heading,
-    headingRightContent,
-    defaultExpanded = DEFAULTS.DEFAULT_EXPANDED,
     ariaLevel,
     buttonProps,
+    children,
+    className,
+    defaultExpanded = DEFAULTS.DEFAULT_EXPANDED,
+    heading,
+    headingRightContent,
+    id,
+    style,
   } = props;
 
   const [expanded, setExpanded] = useState(defaultExpanded);
