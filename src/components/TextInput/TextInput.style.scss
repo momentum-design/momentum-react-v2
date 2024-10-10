@@ -42,6 +42,11 @@
       opacity: 1;
     }
 
+    &::selection {
+      color: var(--mds-color-theme-inverted-text-primary-normal);
+      background-color: var(--mds-color-theme-background-accent-active);
+    }
+
     &::-webkit-contacts-auto-fill-button {
       background-color: var(--mds-color-theme-text-secondary-normal);
 
