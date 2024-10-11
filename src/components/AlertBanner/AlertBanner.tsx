@@ -42,10 +42,12 @@ const AlertBanner: FC<Props> = (props: Props) => {
 
   if (label) {
     labelComponent = <p className={STYLE.label}>{label}</p>;
-  } else if (children) {
+  } else if (typeof children === 'string' || typeof children === 'number') {
+    labelComponent = <p className={STYLE.label}>{children}</p>;
+  } else if (React.isValidElement(children)) {
     labelComponent = <div className={STYLE.label}>{children}</div>;
   } else {
-    labelComponent = <div className={STYLE.label} />;
+    labelComponent = <p className={STYLE.label} />;
   }
 
   return (
