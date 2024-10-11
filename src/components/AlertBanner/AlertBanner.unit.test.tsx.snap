@@ -14,7 +14,7 @@ exports[`<AlertBanner /> snapshot should match snapshot 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -49,7 +49,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with buttons 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -86,11 +86,13 @@ exports[`<AlertBanner /> snapshot should match snapshot with children 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     >
-      children
-    </p>
+      <div>
+        Example Text
+      </div>
+    </div>
     <div
       className="md-alert-banner-buttons"
     />
@@ -114,7 +116,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with className 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -140,11 +142,11 @@ exports[`<AlertBanner /> snapshot should match snapshot with color 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     >
       Example Text
-    </p>
+    </div>
     <div
       className="md-alert-banner-buttons"
     />
@@ -169,7 +171,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with id 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -201,7 +203,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with image 1`] = `
     >
       A
     </div>
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -227,7 +229,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with isCentered 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -253,7 +255,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with isGrown 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -279,7 +281,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with isPilled 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -304,7 +306,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with isStatic 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div
@@ -358,11 +360,11 @@ exports[`<AlertBanner /> snapshot should match snapshot with size 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     >
       Example Text
-    </p>
+    </div>
     <div
       className="md-alert-banner-buttons"
     />
@@ -395,7 +397,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with style 1`] = `
     <div
       className="md-alert-banner-image"
     />
-    <p
+    <div
       className="md-alert-banner-label"
     />
     <div

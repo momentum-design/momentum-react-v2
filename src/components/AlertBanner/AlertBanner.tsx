@@ -38,7 +38,15 @@ const AlertBanner: FC<Props> = (props: Props) => {
     <div className={STYLE.image} />
   );
 
-  const labelComponent = <p className={STYLE.label}>{label || children}</p>;
+  let labelComponent;
+
+  if (label) {
+    labelComponent = <p className={STYLE.label}>{label}</p>;
+  } else if (children) {
+    labelComponent = <div className={STYLE.label}>{children}</div>;
+  } else {
+    labelComponent = <div className={STYLE.label} />;
+  }
 
   return (
     <div

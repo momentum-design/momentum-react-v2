@@ -68,7 +68,7 @@ describe('<AlertBanner />', () => {
     it('should match snapshot with children', () => {
       expect.assertions(1);
 
-      const children = 'children';
+      const children = <div>Example Text</div>;
 
       const container = mount(<AlertBanner>{children}</AlertBanner>);
 
