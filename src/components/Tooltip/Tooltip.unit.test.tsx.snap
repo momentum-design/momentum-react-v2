@@ -94,7 +94,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   <div
     data-tippy-root=""
     id="tippy-12"
-    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -194,7 +194,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   <div
     data-tippy-root=""
     id="tippy-13"
-    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -388,7 +388,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   <div
     data-tippy-root=""
     id="tippy-14"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -488,7 +488,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   <div
     data-tippy-root=""
     id="tippy-15"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -626,7 +626,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with aria-h
   <div
     data-tippy-root=""
     id="tippy-18"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -715,7 +715,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with classN
   <div
     data-tippy-root=""
     id="tippy-4"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -804,7 +804,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with color 
   <div
     data-tippy-root=""
     id="tippy-7"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -893,7 +893,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with id 2`]
   <div
     data-tippy-root=""
     id="tippy-5"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -983,7 +983,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with labelO
   <div
     data-tippy-root=""
     id="tippy-17"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1072,7 +1072,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with labelO
   <div
     data-tippy-root=""
     id="tippy-16"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="false"
@@ -1161,7 +1161,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
   <div
     data-tippy-root=""
     id="tippy-10"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1250,7 +1250,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
   <div
     data-tippy-root=""
     id="tippy-9"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1339,7 +1339,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
   <div
     data-tippy-root=""
     id="tippy-11"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1428,7 +1428,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with strate
   <div
     data-tippy-root=""
     id="tippy-8"
-    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: fixed; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1517,7 +1517,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with style 
   <div
     data-tippy-root=""
     id="tippy-6"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1607,7 +1607,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type d
   <div
     data-tippy-root=""
     id="tippy-3"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"
@@ -1696,7 +1696,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type l
   <div
     data-tippy-root=""
     id="tippy-2"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="false"
@@ -1765,7 +1765,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type n
   <div
     data-tippy-root=""
     id="tippy-1"
-    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+    style="pointer-events: none; z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
   >
     <div
       aria-hidden="true"

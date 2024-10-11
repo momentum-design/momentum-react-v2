@@ -41,7 +41,6 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     className,
     id,
     style,
-    adaptive = DEFAULTS.ADAPTIVE,
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
     hideOnBlur = DEFAULTS.HIDE_ON_BLUR,
@@ -232,12 +231,6 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
               padding: 8,
               altAxis: true,
               boundariesElement: boundary,
-            },
-          },
-          {
-            name: 'computeStyles',
-            options: {
-              adaptive,
             },
           },
         ],

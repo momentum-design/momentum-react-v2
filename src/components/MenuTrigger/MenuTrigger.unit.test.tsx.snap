@@ -77,12 +77,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -142,12 +136,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -203,12 +191,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -2308,12 +2290,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -2373,12 +2349,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -2434,12 +2404,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -4539,12 +4503,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -4604,12 +4562,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -4665,12 +4617,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -6771,12 +6717,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -6836,12 +6776,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -6897,12 +6831,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -9005,12 +8933,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -9070,12 +8992,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -9131,12 +9047,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -9221,7 +9131,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               <div
                 data-tippy-root=""
                 id="tippy-8"
-                style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px);"
+                style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; bottom: 0px; transform: translate(0px, 0px);"
               >
                 <span
                   data-focus-scope-start="true"
@@ -11236,12 +11146,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -11301,12 +11205,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -11362,12 +11260,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -13542,12 +13434,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -13607,12 +13493,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -13668,12 +13548,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -15784,12 +15658,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -15849,12 +15717,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -15910,12 +15772,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],
@@ -18016,12 +17872,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                 "padding": 8,
               },
             },
-            Object {
-              "name": "computeStyles",
-              "options": Object {
-                "adaptive": false,
-              },
-            },
           ],
           "strategy": "absolute",
         }
@@ -18082,12 +17932,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -18144,12 +17988,6 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
-                  },
-                },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
                   },
                 },
               ],

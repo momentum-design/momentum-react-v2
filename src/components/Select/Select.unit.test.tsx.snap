@@ -363,12 +363,6 @@ exports[`Select snapshot should match snapshot 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -429,12 +423,6 @@ exports[`Select snapshot should match snapshot 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -491,12 +479,6 @@ exports[`Select snapshot should match snapshot 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -947,12 +929,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -1013,12 +989,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -1075,12 +1045,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -1532,12 +1496,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -1598,12 +1556,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -1660,12 +1612,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -2654,12 +2600,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -2720,12 +2660,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -2782,12 +2716,6 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -3239,12 +3167,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -3305,12 +3227,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -3367,12 +3283,6 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -3824,12 +3734,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -3890,12 +3794,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -3952,12 +3850,6 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -4419,12 +4311,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -4485,12 +4371,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -4547,12 +4427,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -5544,12 +5418,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -5610,12 +5478,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -5672,12 +5534,6 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -5893,12 +5749,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -5959,12 +5809,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -6021,12 +5865,6 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -6478,12 +6316,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -6544,12 +6376,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -6606,12 +6432,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -7598,12 +7418,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -7664,12 +7478,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -7726,12 +7534,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -8717,12 +8519,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "fixed",
           }
@@ -8783,12 +8579,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "fixed",
             }
@@ -8845,12 +8635,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -9842,12 +9626,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -9908,12 +9686,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -9970,12 +9742,6 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -10458,12 +10224,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -10524,12 +10284,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -10586,12 +10340,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -11077,12 +10825,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -11143,12 +10885,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -11205,12 +10941,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -12285,12 +12015,6 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -12351,12 +12075,6 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -12413,12 +12131,6 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -12876,12 +12588,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -12942,12 +12648,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -13004,12 +12704,6 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -13459,12 +13153,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -13525,12 +13213,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -13587,12 +13269,6 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],

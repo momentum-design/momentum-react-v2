@@ -54,7 +54,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
       </Text>
     </label>
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -64,7 +63,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -166,12 +164,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -232,12 +224,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -294,12 +280,6 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -467,7 +447,6 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
     }
   >
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -477,7 +456,6 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -577,12 +555,6 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -643,12 +615,6 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -705,12 +671,6 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -875,7 +835,6 @@ exports[`ComboBox snapshot should match snapshot with listboxWidth 1`] = `
     }
   >
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -885,7 +844,6 @@ exports[`ComboBox snapshot should match snapshot with listboxWidth 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="fixed"
@@ -985,12 +943,6 @@ exports[`ComboBox snapshot should match snapshot with listboxWidth 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "fixed",
           }
@@ -1051,12 +1003,6 @@ exports[`ComboBox snapshot should match snapshot with listboxWidth 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "fixed",
             }
@@ -1113,12 +1059,6 @@ exports[`ComboBox snapshot should match snapshot with listboxWidth 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -1283,7 +1223,6 @@ exports[`ComboBox snapshot should match snapshot with noResultLabel 1`] = `
     }
   >
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -1293,7 +1232,6 @@ exports[`ComboBox snapshot should match snapshot with noResultLabel 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -1393,12 +1331,6 @@ exports[`ComboBox snapshot should match snapshot with noResultLabel 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -1459,12 +1391,6 @@ exports[`ComboBox snapshot should match snapshot with noResultLabel 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -1521,12 +1447,6 @@ exports[`ComboBox snapshot should match snapshot with noResultLabel 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -1691,7 +1611,6 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
     }
   >
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -1701,7 +1620,6 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -1802,12 +1720,6 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -1868,12 +1780,6 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -1930,12 +1836,6 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -2106,7 +2006,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
     }
   >
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -2116,7 +2015,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -2216,12 +2114,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -2282,12 +2174,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -2344,12 +2230,6 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],
@@ -2531,7 +2411,6 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
     }
   >
     <Popover
-      adaptive={false}
       className="md-combo-box-popover"
       disableFocusLock={true}
       hideOnEsc={false}
@@ -2541,7 +2420,6 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
       onKeyDown={[Function]}
       placement="bottom"
       removeTippyAriaHidden={true}
-      role={null}
       setInstance={[Function]}
       showArrow={false}
       strategy="absolute"
@@ -2641,12 +2519,6 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                   "padding": 8,
                 },
               },
-              Object {
-                "name": "computeStyles",
-                "options": Object {
-                  "adaptive": false,
-                },
-              },
             ],
             "strategy": "absolute",
           }
@@ -2707,12 +2579,6 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                     "padding": 8,
                   },
                 },
-                Object {
-                  "name": "computeStyles",
-                  "options": Object {
-                    "adaptive": false,
-                  },
-                },
               ],
               "strategy": "absolute",
             }
@@ -2769,12 +2635,6 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
-                    },
-                  },
-                  Object {
-                    "name": "computeStyles",
-                    "options": Object {
-                      "adaptive": false,
                     },
                   },
                 ],

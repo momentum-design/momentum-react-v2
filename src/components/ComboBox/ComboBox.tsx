@@ -13,7 +13,7 @@ import { useComboBox, useFilter } from 'react-aria';
 
 import './ComboBox.style.scss';
 import { Props, IComboBoxGroup, IComboBoxItem } from './ComboBox.types';
-import { STYLE, DEFAULTS , EVENT, ICON, KEYS } from './ComboBox.constants';
+import { STYLE, DEFAULTS, EVENT, ICON, KEYS } from './ComboBox.constants';
 import { useComboBoxState } from '@react-stately/combobox';
 import { useKeyboard } from '@react-aria/interactions';
 import Icon from '../Icon';
@@ -22,7 +22,6 @@ import ButtonSimple from '../ButtonSimple';
 import Popover, { PopoverInstance } from '../Popover';
 import Text from '../Text';
 import { filterItems } from './ComboBox.utils';
-
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function ComboBox(props: Props, ref: RefObject<HTMLInputElement>): ReactElement {
@@ -222,7 +221,6 @@ function ComboBox(props: Props, ref: RefObject<HTMLInputElement>): ReactElement 
       <Popover
         className={STYLE.popover}
         interactive
-        adaptive={false}
         showArrow={false}
         ref={popoverRef}
         removeTippyAriaHidden
