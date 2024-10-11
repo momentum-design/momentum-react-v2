@@ -65,20 +65,20 @@ describe('<AlertBanner />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with children as ReactElement', () => {
+    it('should match snapshot with children as string', () => {
       expect.assertions(1);
 
-      const children = <div>Example Text</div>;
+      const children = 'Example Text';
 
       const container = mount(<AlertBanner>{children}</AlertBanner>);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with children as string', () => {
+    it('should match snapshot with children as ReactElement', () => {
       expect.assertions(1);
 
-      const children = 'Example Text';
+      const children = <div>Example Text</div>;
 
       const container = mount(<AlertBanner>{children}</AlertBanner>);
 
