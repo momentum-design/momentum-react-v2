@@ -131,6 +131,10 @@ export interface Props
    * The initial tree structure
    *
    * It is used to build an internal tree for navigation and follow open/close states.
+   *
+   * The tree can be updated dynamically via `treeStructure`, but `isOpen` will be migrated from the old tree:
+   * If the node exists the both old and new tree then the value used from the old tree otherwise
+   * falls back to the `isOpenByDefault ?? true`
    */
   treeStructure: TreeRoot;
 
@@ -184,6 +188,14 @@ export interface Props
      */
     setNodeOpen?: (id: TreeNodeId, isOpen: boolean) => void | Promise<void>;
   };
+
+  /**
+   * Called when a node's open / close state is toggled.
+   *
+   * @param id
+   * @param isOpen
+   */
+  onToggleNode?: (id: TreeNodeId, isOpen: boolean) => void;
 }
 
 /**
@@ -192,9 +204,12 @@ export interface Props
  */
 export interface UseVirtualTreeNavigationProps extends Pick<Props, 'virtualTreeConnector'> {
   /**
-   * The active node id in the tree.
+   * Reference to the active node id in the tree.
+   *
+   * @remarks This prevent to destroy and re-create MutationObserver every time when active node
+   * changes. Also, this solves the problem of missed mutations.
    */
-  activeNodeId: TreeNodeId;
+  activeNodeIdRef: MutableRefObject<TreeNodeId>;
   /**
    * The reference of the tree DOM element.
    */
@@ -209,6 +224,10 @@ export interface NodeAriaProps {
    * attributes to re-build the semantic structure of the tree.
    */
   nodeProps: Partial<HTMLAttributes<HTMLElement>>;
+  /**
+   * Additional attributes for the tree node's content.
+   */
+  nodeContentProps: Partial<HTMLAttributes<HTMLElement>>;
   /**
    * Additional attributes for the node connection group.
    *
@@ -257,6 +276,11 @@ export interface TreeContextValue
    * The item selection state of the tree nodes.
    */
   itemSelection: ItemSelection<TreeNodeId>;
+  /**
+   * True when the focus is inside the tree component before the tree structure changed,
+   * otherwise false
+   */
+  isFocusWithin: boolean;
 }
 
 /**

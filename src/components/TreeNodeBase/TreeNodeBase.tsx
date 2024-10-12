@@ -51,7 +51,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   }
 
   const treeContext = useTreeContext();
-  const nodeDetails = treeContext.getNodeDetails(nodeId);
+  const nodeDetails = treeContext?.getNodeDetails(nodeId);
 
   const internalRef = useRef<HTMLDivElement>();
   const ref = providedRef && typeof providedRef !== 'function' ? providedRef : internalRef;
@@ -122,6 +122,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
 
       onPress?.(event);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [treeContext, nodeDetails, nodeId, onPress]
   );
 
@@ -144,7 +145,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   /**
    * Focus management
    */
-  const tabIndex = nodeId === treeContext.activeNodeId ? 0 : -1;
+  const tabIndex = nodeId === treeContext?.activeNodeId ? 0 : -1;
 
   // makes sure that whenever an item is pressed, the tree focus state gets updated as well
   useEffect(() => {
@@ -153,6 +154,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
       treeContext.setActiveNodeId(nodeId);
       treeContext.toggleTreeNode(nodeId);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPressed, isHidden]);
 
   const updateTabIndexes = useCallback(() => {
@@ -166,9 +168,12 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
   const lastActiveNode = usePrevious(treeContext?.activeNodeId);
   useDidUpdateEffect(() => {
     if (
+      treeContext &&
+      ref.current &&
       lastActiveNode !== undefined &&
-      lastActiveNode !== treeContext?.activeNodeId &&
-      treeContext?.activeNodeId === nodeId
+      lastActiveNode !== treeContext.activeNodeId &&
+      treeContext.activeNodeId === nodeId &&
+      treeContext.isFocusWithin
     ) {
       ref.current.focus();
     }
@@ -179,6 +184,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     if (treeContext?.activeNodeId !== undefined) {
       updateTabIndexes();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [treeContext?.activeNodeId]);
 
   useMutationObservable(ref.current, updateTabIndexes);
@@ -187,10 +193,10 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
     return null;
   }
 
-  const { nodeProps, groupProps } = treeContext.getNodeAriaProps(nodeId);
+  const { nodeProps, nodeContentProps, groupProps } = treeContext?.getNodeAriaProps(nodeId);
   const isSelected =
-    treeContext.itemSelection.selectionMode !== 'none'
-      ? treeContext.itemSelection.isSelected(nodeId)
+    treeContext?.itemSelection.selectionMode !== 'none'
+      ? treeContext?.itemSelection.isSelected(nodeId)
       : undefined;
 
   return (
@@ -206,7 +212,7 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         data-shape={shape}
         className={classnames(className, STYLE.wrapper, {
           selected: isPressed || isSelected,
-          'active-node': nodeId === treeContext.activeNodeId,
+          'active-node': nodeId === treeContext?.activeNodeId,
         })}
         lang={lang}
         {...{ [NODE_ID_ATTRIBUTE_NAME]: nodeId }}
@@ -214,8 +220,14 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
         {...nodeProps}
         {...rest}
       >
-        {content}
-        {treeContext.isRenderedFlat && !nodeDetails.isLeaf && (
+        {/*
+        Unfortunately, we do need a wrapper around the content, because the aria-labelledby of the group element will
+        get the text from this and all the child nodes
+        */}
+        <div className={STYLE.content} {...nodeContentProps}>
+          {content}
+        </div>
+        {treeContext?.isRenderedFlat && !nodeDetails.isLeaf && (
           <div className={STYLE.group} {...groupProps} />
         )}
       </div>

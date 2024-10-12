@@ -173,9 +173,11 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
 </OverlayAlert>
 `;
 
-exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
+exports[`<OverlayAlert /> snapshot should match snapshot with aria props 1`] = `
 <OverlayAlert
+  ariaDescribedby="test-aria-describedby"
   ariaLabel="test-aria-label"
+  ariaLabelledby="test-aria-labelledby"
 >
   <Overlay
     className="md-overlay-alert-wrapper"
@@ -189,7 +191,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
       onKeyDown={[Function]}
     >
       <ModalContainer
+        aria-describedby="test-aria-describedby"
         aria-label="test-aria-label"
+        aria-labelledby="test-aria-labelledby"
         className="md-overlay-alert-modal-container"
         focusLockProps={
           Object {
@@ -208,7 +212,9 @@ exports[`<OverlayAlert /> snapshot should match snapshot with ariaLabel 1`] = `
             hidden={true}
           />
           <div
+            aria-describedby="test-aria-describedby"
             aria-label="test-aria-label"
+            aria-labelledby="test-aria-labelledby"
             aria-modal={true}
             className="md-overlay-alert-modal-container md-modal-container-wrapper"
             data-color="primary"

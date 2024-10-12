@@ -4,29 +4,25 @@ import React, {
   ReactNode,
   useRef,
   useEffect,
-  useState,
   useCallback,
   useLayoutEffect,
 } from 'react';
 import classnames from 'classnames';
 
 import './ListItemBase.style.scss';
-import { ContextMenuState, Props } from './ListItemBase.types';
+import { Props } from './ListItemBase.types';
 import { DEFAULTS, KEYS, SHAPES, SIZES, STYLE } from './ListItemBase.constants';
 import ListItemBaseSection from '../ListItemBaseSection';
 import { verifyTypes } from '../../helpers/verifyTypes';
 import FocusRing from '../FocusRing';
 import { usePress } from '@react-aria/interactions';
-import ModalContainer from '../ModalContainer';
-import { useOverlay } from '@react-aria/overlays';
 import { useListContext } from '../List/List.utils';
-import ButtonSimple from '../ButtonSimple';
 import Text from '../Text';
 import { getListItemBaseTabIndex } from './ListItemBase.utils';
 import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
-import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
+import { useFocusAndFocusWithinState } from '../../hooks/useFocusState';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -41,14 +37,18 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     isFocused = DEFAULTS.IS_FOCUSED,
     isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
+    focusChild = DEFAULTS.FOCUS_CHILD,
     isSelected,
     style,
     itemIndex,
-    contextMenuActions,
     interactive = DEFAULTS.INTERACTIVE,
     onPress,
     lang,
     allowTextSelection = DEFAULTS.ALLOW_TEXT_SELECTION,
+    onFocus,
+    onBlur,
+    onBlurWithin,
+    onFocusWithin,
     ...rest
   } = props;
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
@@ -56,6 +56,13 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const listContext = useListContext();
 
   const internalRef = useRef<HTMLLIElement>();
+
+  const { focusProps, isFocusedWithin } = useFocusAndFocusWithinState({
+    onFocus,
+    onBlur,
+    onBlurWithin,
+    onFocusWithin,
+  });
 
   let ref = internalRef;
 
@@ -112,14 +119,17 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   // The keyboard press events are not propagated
   // To make popovers work with click, we manually call the click event
-  const internalOnPress = useCallback((event) => {
-    if (event.pointerType === 'keyboard') {
-      ref.current.click();
-    }
-    if (onPress) {
-      onPress(event);
-    }
-  }, []);
+  const internalOnPress = useCallback(
+    (event) => {
+      if (event.pointerType === 'keyboard') {
+        ref.current.click();
+      }
+      if (onPress) {
+        onPress(event);
+      }
+    },
+    [onPress, ref]
+  );
 
   const { pressProps, isPressed } = usePress({
     preventFocusOnPress: true, // we handle it ourselves
@@ -128,53 +138,128 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     ...rest,
   });
 
-  // Prevent list item update because it can cause state lost in the focused component e.g. Menu
-  const listItemPressProps = allowTextSelection
-    ? { ...rest }
-    : {
-        ...pressProps,
-        onKeyDown: (event) => {
-          if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
-            pressProps.onKeyDown(event);
-          }
-        },
-      };
+
+  // This is a workaround because react-aria is killing the mouse/pointer events
+  // It determines whether to prevent default by whether the element is draggable or not
+  // So we set it to draggable on mouse down and pointer down and then set it back to false
+  // This allows text selection to work, which requires the pointer events but still allows
+  // click to work via the usePress hook
+  // see https://github.com/adobe/react-spectrum/issues/2956
+  // If react-aria ever fix this, this workaround can be removed
+  const listItemPressProps = {
+    ...pressProps,
+    onMouseDown: (event) => {
+      event.target.draggable = true;
+      pressProps.onMouseDown?.(event);
+      event.target.draggable = false;
+    },
+    onPointerDown: (event) => {
+      event.target.draggable = true;
+      pressProps.onPointerDown?.(event);
+      event.target.draggable = false;
+    },
+    onKeyDown: (event) => {
+      if (ref.current === document.activeElement || event.key === KEYS.TAB_KEY) {
+        pressProps.onKeyDown(event);
+      }
+    },
+  };
 
   /**
    * Focus management
    */
-  const focus = listContext?.currentFocus === itemIndex;
+  const currentFocus = listContext?.currentFocus;
+  const focus = currentFocus === itemIndex;
+  const listSize = listContext?.listSize || 0;
+  const setCurrentFocus = listContext?.setCurrentFocus;
+  const updateFocusBlocked = listContext?.updateFocusBlocked;
+  const setUpdateFocusBlocked = listContext?.setUpdateFocusBlocked;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
     listContext?.shouldItemFocusBeInset || DEFAULTS.SHOULD_ITEM_FOCUS_BE_INSET;
+  const listFocusedWithin = listContext?.isFocusedWithin;
 
   const listItemTabIndex = getListItemBaseTabIndex({ interactive, listContext, focus });
+
+  const previousItemIndex = usePrevious(itemIndex);
+  const lastCurrentFocus = usePrevious(currentFocus);
+
+  // When an item is added to the list, we need to reset the focus since the list size has changed
+  // and maybe the item index has changed as well
+  useLayoutEffect(() => {
+    if (
+      itemIndex !== previousItemIndex &&
+      currentFocus === previousItemIndex &&
+      listFocusedWithin
+    ) {
+      setCurrentFocus(itemIndex);
+    }
+  }, [
+    currentFocus,
+    itemIndex,
+    lastCurrentFocus,
+    listFocusedWithin,
+    previousItemIndex,
+    setCurrentFocus,
+  ]);
 
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
     if (
-      listContext?.setCurrentFocus &&
+      setCurrentFocus &&
       isPressed &&
       shouldFocusOnPress &&
-      itemIndex !== undefined
+      itemIndex !== undefined &&
+      !focusChild
     ) {
       ref.current.focus();
-      listContext.setCurrentFocus(itemIndex);
+      setCurrentFocus(itemIndex);
     }
-  }, [isPressed]);
+  }, [focusChild, isPressed, itemIndex, listContext, ref, setCurrentFocus, shouldFocusOnPress]);
 
   const updateTabIndexes = useCallback(() => {
     getKeyboardFocusableElements(ref.current, false)
       .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
-      .forEach((el) => el.setAttribute('tabindex', listItemTabIndex.toString()));
-  }, [ref, listItemTabIndex]);
+      .forEach((el) =>
+        el.setAttribute(
+          'tabindex',
+          isFocusedWithin || focusChild ? listItemTabIndex.toString() : '-1'
+        )
+      );
+    // Also include "focus" in the dependencies to update the tab indexes when the focus changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focus, ref, isFocusedWithin, focusChild, listItemTabIndex]);
 
-  const lastCurrentFocus = usePrevious(listContext?.currentFocus);
-  useDidUpdateEffect(() => {
-    if (lastCurrentFocus !== undefined && lastCurrentFocus !== listContext?.currentFocus && focus) {
-      ref.current.focus();
+  useLayoutEffect(() => {
+    if (
+      lastCurrentFocus !== undefined && // prevents focus of new elements
+      (lastCurrentFocus !== currentFocus || (!isFocusedWithin && listFocusedWithin)) && // focuses the new element in up/down navigation
+      focus && // only focus the actually focused item
+      !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
+    ) {
+      const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
+        (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
+      )[0];
+
+      if (focusChild) {
+        firstFocusable?.focus();
+      } else {
+        ref.current.focus();
+      }
     }
-  }, [listContext?.currentFocus]);
+  }, [
+    currentFocus,
+    focus,
+    focusChild,
+    isFocusedWithin,
+    updateFocusBlocked,
+    itemIndex,
+    lastCurrentFocus,
+    listFocusedWithin,
+    listSize,
+    previousItemIndex,
+    ref,
+  ]);
 
   /**
    * When the items inside the list context gets smaller (search/filter applied)
@@ -182,121 +267,56 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * case the index of the element focused before the list shrink is now outside
    * the size of the new list size (shrinked size)
    */
-  useEffect(() => {
-    if (!!listContext?.listSize && listContext?.currentFocus >= listContext?.listSize) {
-      // set focus to first item
-      listContext.setCurrentFocus(0);
+  useLayoutEffect(() => {
+    if (!!listSize && currentFocus >= listSize) {
+      // set focus to last item
+      listContext.setCurrentFocus(listSize - 1);
       updateTabIndexes();
     }
-  }, [listContext?.currentFocus, listContext?.listSize]);
+  }, [currentFocus, listContext, listSize, updateTabIndexes]);
 
   useEffect(() => {
-    if (listContext?.currentFocus === undefined) {
+    if (listContext && currentFocus === undefined) {
       return;
     }
     updateTabIndexes();
-  }, [listContext?.currentFocus]);
+  }, [currentFocus, updateTabIndexes, isFocusedWithin]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
-  /**
-   * Context menu
-   */
+  useLayoutEffect(() => {
+    if (focus) {
+      setUpdateFocusBlocked?.(false);
+    }
+  }, [focus, setUpdateFocusBlocked]);
 
-  const [contextMenuState, setContextMenuState] = useState<ContextMenuState>({
-    isOpen: false,
-    x: 0,
-    y: 0,
-  });
-
-  const toggleContextMenu = () => {
-    setContextMenuState({ ...contextMenuState, isOpen: !contextMenuState.isOpen });
-  };
-
-  const overlayRef = useRef();
-  const { overlayProps } = useOverlay(
-    {
-      onClose: () => toggleContextMenu(),
-      shouldCloseOnBlur: true,
-      isOpen: contextMenuState.isOpen,
-      isDismissable: true,
-    },
-    overlayRef
+  const listElement = (
+    <li
+      tabIndex={focusChild ? -1 : listItemTabIndex}
+      style={style}
+      ref={ref}
+      data-size={size}
+      data-disabled={isDisabled}
+      data-padded={isPadded}
+      data-shape={shape}
+      data-interactive={interactive && !focusChild}
+      data-allow-text-select={allowTextSelection}
+      className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
+      role={role}
+      lang={lang}
+      {...focusProps}
+      {...listItemPressProps}
+      {...rest}
+    >
+      {content}
+    </li>
   );
 
-  const renderContextMenu = () => {
-    const { x, y } = contextMenuState;
+  if (focusChild) {
+    return listElement;
+  }
 
-    return (
-      <ModalContainer
-        isPadded
-        round={75}
-        className={STYLE.contextMenuWrapper}
-        {...overlayProps}
-        id="list-item-context-menu"
-        color={'primary' as const}
-        style={{ position: 'fixed', left: `${x}px`, top: `${y}px` }}
-        ref={overlayRef}
-      >
-        {contextMenuActions.map((item, index) => (
-          <ButtonSimple
-            key={index}
-            aria-label={item?.text}
-            onPress={() => {
-              toggleContextMenu();
-              item?.action();
-            }}
-          >
-            {item?.text}
-          </ButtonSimple>
-        ))}
-      </ModalContainer>
-    );
-  };
-
-  const handleOnContextMenu = (event: MouseEvent) => {
-    event.preventDefault();
-    // Don't allow to open more context-menus at the same time
-    if (document.getElementById('list-item-context-menu')) {
-      return;
-    }
-
-    const { pageX, pageY } = event;
-    setContextMenuState({ x: pageX, y: pageY, isOpen: !contextMenuState.isOpen });
-  };
-
-  useEffect(() => {
-    if (contextMenuActions) {
-      ref.current.addEventListener('contextmenu', handleOnContextMenu);
-    }
-    return () => {
-      ref.current?.removeEventListener('contextmenu', handleOnContextMenu);
-    };
-  }, []);
-
-  return (
-    <FocusRing isInset={shouldItemFocusBeInset}>
-      <li
-        tabIndex={listItemTabIndex}
-        style={style}
-        ref={ref}
-        data-size={size}
-        data-disabled={isDisabled}
-        data-padded={isPadded}
-        data-shape={shape}
-        data-focused={isFocused}
-        data-interactive={interactive}
-        data-allow-text-select={allowTextSelection}
-        className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
-        role={role}
-        lang={lang}
-        {...listItemPressProps}
-      >
-        {content}
-        {contextMenuActions && contextMenuState.isOpen && renderContextMenu()}
-      </li>
-    </FocusRing>
-  );
+  return <FocusRing isInset={shouldItemFocusBeInset}>{listElement}</FocusRing>;
 };
 
 /**

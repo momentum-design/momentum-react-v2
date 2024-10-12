@@ -10,8 +10,8 @@
   box-sizing: border-box;
   outline: none;
 
-  &[data-allow-text-select='true'] {
-    user-select: text;
+  & > div {
+    overflow: visible;
   }
 
   &[data-interactive='true'] {
@@ -46,6 +46,11 @@
         fill: var(--mds-color-theme-text-primary-disabled);
       }
     }
+  }
+
+  &[data-allow-text-select='true'] {
+    user-select: text;
+    cursor: auto !important;
   }
 
   &[data-disabled='true'],
@@ -84,7 +89,6 @@
     width: 100%;
 
     // trim any type of text inside
-    &,
     p,
     span,
     div {

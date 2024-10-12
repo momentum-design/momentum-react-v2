@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MeetingRowContent /> snapshot should match snapshot 1`] = `
+<MeetingRowContent>
+  <ListItemBaseSection
+    className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+    position="start"
+  >
+    <div
+      className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+      data-position="start"
+    >
+      <div
+        className="md-meeting-row-content-border"
+        data-color="Transparent"
+      />
+    </div>
+  </ListItemBaseSection>
+  <ListItemBaseSection
+    className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+    position="middle"
+  >
+    <div
+      className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+      data-position="middle"
+    />
+  </ListItemBaseSection>
+</MeetingRowContent>
+`;
+
+exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1`] = `
+<MeetingRowContent
+  buttonGroup={
+    <ButtonGroup
+      spaced={true}
+    >
+      <ButtonHyperlink>
+        Link
+      </ButtonHyperlink>
+      <div
+        style={
+          Object {
+            "paddingRight": 0,
+          }
+        }
+      >
+        17
+      </div>
+      <Icon
+        name="participant-list"
+        scale={16}
+      />
+      <ButtonPill
+        color="join"
+      >
+        Join
+      </ButtonPill>
+    </ButtonGroup>
+  }
+>
+  <ListItemBaseSection
+    className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+    position="start"
+  >
+    <div
+      className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+      data-position="start"
+    >
+      <div
+        className="md-meeting-row-content-border"
+        data-color="Transparent"
+      />
+    </div>
+  </ListItemBaseSection>
+  <ListItemBaseSection
+    className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+    position="middle"
+  >
+    <div
+      className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+      data-position="middle"
+    />
+  </ListItemBaseSection>
+  <ListItemBaseSection
+    className="md-meeting-row-content-end-section"
+    position="end"
+  >
+    <div
+      className="md-meeting-row-content-end-section"
+      data-position="end"
+    >
+      <ButtonGroup
+        spaced={true}
+      >
+        <div
+          className="md-button-group-wrapper"
+          data-compressed={false}
+          data-orientation="horizontal"
+          data-round={false}
+          data-separator={false}
+          data-spaced={true}
+        >
+          <ButtonHyperlink
+            key="link"
+          >
+            <FocusRing>
+              <FocusRing
+                focusClass="md-focus-ring-wrapper children"
+                focusRingClass="md-focus-ring-wrapper children"
+              >
+                <a
+                  className="md-button-hyperlink-wrapper"
+                  data-disabled={false}
+                  data-inverted={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Link
+                </a>
+              </FocusRing>
+            </FocusRing>
+          </ButtonHyperlink>
+          <div
+            key="participants-list"
+            style={
+              Object {
+                "paddingRight": 0,
+              }
+            }
+          >
+            17
+          </div>
+          <Icon
+            key="participants-icon"
+            name="participant-list"
+            scale={16}
+          />
+          <ButtonPill
+            color="join"
+            key="join-button"
+            size={28}
+          >
+            <ButtonSimple
+              aria-disabled={false}
+              className="md-button-pill-wrapper"
+              data-color="join"
+              data-disabled={false}
+              data-ghost={false}
+              data-grown={false}
+              data-inverted={false}
+              data-outline={false}
+              data-shallow-disabled={false}
+              data-size={28}
+            >
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
+                >
+                  <button
+                    className="md-button-pill-wrapper md-button-simple-wrapper"
+                    data-color="join"
+                    data-disabled={false}
+                    data-ghost={false}
+                    data-grown={false}
+                    data-inverted={false}
+                    data-outline={false}
+                    data-shallow-disabled={false}
+                    data-size={28}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      Join
+                    </span>
+                  </button>
+                </FocusRing>
+              </FocusRing>
+            </ButtonSimple>
+          </ButtonPill>
+        </div>
+      </ButtonGroup>
+    </div>
+  </ListItemBaseSection>
+</MeetingRowContent>
+`;
+
+exports[`<MeetingRowContent /> snapshot should match snapshot with children 1`] = `
+<MeetingRowContent>
+  <ListItemBaseSection
+    className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+    position="start"
+  >
+    <div
+      className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+      data-position="start"
+    >
+      <div
+        className="md-meeting-row-content-border"
+        data-color="Transparent"
+      />
+    </div>
+  </ListItemBaseSection>
+  <ListItemBaseSection
+    className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+    position="middle"
+  >
+    <div
+      className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-Transparent"
+      data-position="middle"
+    >
+      <ButtonPill
+        size={28}
+      >
+        <ButtonSimple
+          aria-disabled={false}
+          className="md-button-pill-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={28}
+        >
+          <FocusRing>
+            <FocusRing
+              focusClass="md-focus-ring-wrapper children"
+              focusRingClass="md-focus-ring-wrapper children"
+            >
+              <button
+                className="md-button-pill-wrapper md-button-simple-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={false}
+                data-grown={false}
+                data-inverted={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={28}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragStart={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchCancel={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <span>
+                  Example children
+                </span>
+              </button>
+            </FocusRing>
+          </FocusRing>
+        </ButtonSimple>
+      </ButtonPill>
+    </div>
+  </ListItemBaseSection>
+</MeetingRowContent>
+`;
+
+exports[`<MeetingRowContent /> snapshot should match snapshot with color 1`] = `
+<MeetingRowContent
+  color="TentativeActive"
+>
+  <ListItemBaseSection
+    className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+    position="start"
+  >
+    <div
+      className="md-meeting-row-content-start-section md-meeting-row-content-start-section-no-image"
+      data-position="start"
+    >
+      <div
+        className="md-meeting-row-content-border"
+        data-color="TentativeActive"
+      />
+    </div>
+  </ListItemBaseSection>
+  <ListItemBaseSection
+    className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-TentativeActive"
+    position="middle"
+  >
+    <div
+      className="md-meeting-row-content-middle-section md-meeting-row-content-middle-section-TentativeActive"
+      data-position="middle"
+    />
+  </ListItemBaseSection>
+</MeetingRowContent>
+`;

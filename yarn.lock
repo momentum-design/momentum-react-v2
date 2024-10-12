@@ -2444,17 +2444,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/icons@npm:0.0.68":
-  version: 0.0.68
-  resolution: "@momentum-design/icons@npm:0.0.68"
-  checksum: 4a25045ff9795547b683dc8adce95df6527c27084592ff50effa1d079690bc25d49d4a0a547853935c53cf92088e1f01e880e3324bf6cb05e1d181520160f26f
+"@momentum-design/icons@npm:0.0.164":
+  version: 0.0.164
+  resolution: "@momentum-design/icons@npm:0.0.164"
+  checksum: 35ac73c6c7a70987b6b564e90e48edfe561a2a715e68bd28dc00bcf12a7b7d1c17a5a8781362b653582f34b196faf1a82cbed9458bcb8069e2d882698fa55343
   languageName: node
   linkType: hard
 
-"@momentum-design/tokens@npm:0.0.77":
-  version: 0.0.77
-  resolution: "@momentum-design/tokens@npm:0.0.77"
-  checksum: f95ec9649e4d0f07b4f1e4eed324f5aa1b7e2b71391716a89bbfd7f7fa1a6fa36ad1e77e2adb0553073645641a9c6bb191641a4750729c4f2f08d675e403b076
+"@momentum-design/tokens@npm:0.0.95":
+  version: 0.0.95
+  resolution: "@momentum-design/tokens@npm:0.0.95"
+  checksum: b7b3fceb874fa4b50a9a765e16f143bc09231ffb6e56cccd2a7422d2c67a1b48e777fc329a81377e4b34ca977414f083620ac3678225c5eab1be38cf8b16061a
   languageName: node
   linkType: hard
 
@@ -2495,8 +2495,8 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/icons": 0.0.68
-    "@momentum-design/tokens": 0.0.77
+    "@momentum-design/icons": 0.0.164
+    "@momentum-design/tokens": 0.0.95
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
     "@momentum-ui/tokens": ^1.7.1
@@ -2536,6 +2536,7 @@ __metadata:
     "@tippyjs/react": ^4.2.6
     "@types/enzyme": ^3.10.8
     "@types/jest": ^26.0.23
+    "@types/lodash": 4.14.171
     "@types/react": ^17.0.11
     "@types/uuid": ^9.0.1
     "@typescript-eslint/eslint-plugin": ^4.28.3
@@ -2570,6 +2571,7 @@ __metadata:
     eslint-plugin-import: ^2.23.4
     eslint-plugin-jsx-a11y: ^6.1.2
     eslint-plugin-react: 7.12.2
+    eslint-plugin-react-hooks: 1.7.0
     eslint-plugin-storybook: ^0.5.5
     eslint-watch: ^6.0.0
     file-loader: ^1.1.6
@@ -3139,22 +3141,6 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
   checksum: 79b81baa828093de3824b371b30d66556e646cc9b7c8e6ca43d1dd6a73755b3cc2a596d7ab131c642a5837ca9563d690b5f1734e270f5f3a8312f5a391606f41
-  languageName: node
-  linkType: hard
-
-"@react-aria/button@npm:^3.3.4":
-  version: 3.3.4
-  resolution: "@react-aria/button@npm:3.3.4"
-  dependencies:
-    "@babel/runtime": ^7.6.2
-    "@react-aria/focus": ^3.5.0
-    "@react-aria/interactions": ^3.6.0
-    "@react-aria/utils": ^3.9.0
-    "@react-stately/toggle": ^3.2.3
-    "@react-types/button": ^3.4.1
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0-rc.1
-  checksum: c67f2097bb1d1b4ecd074865451f0a889773ce5ce6a0f92461e95d323a9a58a71339a7e2b457990de8df2cd18478606da2579b424806c6785b1088f462083a5f
   languageName: node
   linkType: hard
 
@@ -6667,6 +6653,13 @@ __metadata:
     "@types/interpret": "*"
     "@types/node": "*"
   checksum: 3d411a234a911d0464f5f77e8cb63ad88e1115fadb1138cfa12b02b67fb93d365966a0af5e1cc4a9f92c8d8d369727021cb638df4f9756d953fa37f3a3d6ba46
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:4.14.171":
+  version: 4.14.171
+  resolution: "@types/lodash@npm:4.14.171"
+  checksum: d093d8ff8b31d7829ab5f2625d824bb1f903fb07d4beca50812c99c3d6c6b63155c56eb0ecf14b97f0d4ba5fcb3b13f8259cca6d4313345326f3c48bed6f4b9f
   languageName: node
   linkType: hard
 
@@ -13151,6 +13144,15 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
   checksum: 30326276385b6029754fbca0a25140be0f2f84d263b38f794651acf973399ea316ab1b9d69dffb9b9807d2b47592ba4bc271a242edbb15abfc05d07b08060a7e
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-react-hooks@npm:1.7.0":
+  version: 1.7.0
+  resolution: "eslint-plugin-react-hooks@npm:1.7.0"
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+  checksum: ea16d0cf4aaa0a30db05860bd892f3432a4cc299983a5adece092c021c4ee359e7e7277ff1e7207d1f550fae5f08a8b3aa2698f36e82cdebb756a8a3e1c842eb
   languageName: node
   linkType: hard
 

@@ -7,7 +7,7 @@ import '@testing-library/jest-dom';
 import { STYLE } from './ListItemBase.constants';
 import * as listUtils from '../List/List.utils';
 import userEvent from '@testing-library/user-event';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import List from '../List/List';
 import { ListContextValue } from '../List/List.types';
 
@@ -139,6 +139,26 @@ describe('ListItemBase', () => {
       const interactive = false;
 
       container = mount(<ListItemBase interactive={interactive}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with empty list item', () => {
+      expect.assertions(1);
+
+      container = mount(<ListItemBase />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with focusChild', () => {
+      expect.assertions(1);
+
+      container = mount(
+        <ListItemBase focusChild>
+          <ButtonPill>Test</ButtonPill>
+        </ListItemBase>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -358,7 +378,7 @@ describe('ListItemBase', () => {
       expect(mockCallback).toBeCalledTimes(1);
     });
 
-    it('should not handle mouse press events when allowTextSelection is true', async () => {
+    it('should handle mouse press events when allowTextSelection is true', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
@@ -379,7 +399,7 @@ describe('ListItemBase', () => {
 
       await user.click(listItemBase);
 
-      expect(mockCallback).not.toBeCalled();
+      expect(mockCallback).toBeCalled();
     });
   });
 
@@ -490,6 +510,10 @@ describe('ListItemBase', () => {
     expect(getByTestId('list-item-1')).not.toHaveFocus();
   });
 
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('onPress should work when Enter key is pressed', async () => {
     const mockCallback = jest.fn();
     const mockClick = jest.fn();
@@ -510,5 +534,212 @@ describe('ListItemBase', () => {
 
     expect(mockCallback).toBeCalledTimes(1);
     expect(mockClick).toBeCalledTimes(1);
+  });
+
+  const simulateOnPress = (getByTestId, testId) => {
+    // All these are necessary to simulate a press event in react-aria
+    fireEvent.mouseDown(getByTestId(testId));
+    fireEvent.mouseUp(getByTestId(testId));
+    fireEvent.click(getByTestId(testId));
+  };
+
+  it('should focus on press when shouldFocusOnPress is set', async () => {
+    const { getByTestId } = render(
+      <List shouldFocusOnPress listSize={1}>
+        <ListItemBase data-testid="list-item-1" itemIndex={0}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+      </List>
+    );
+
+    simulateOnPress(getByTestId, 'list-item-1');
+
+    expect(getByTestId('list-item-1')).toHaveFocus();
+  });
+
+  it('should not focus on press with focusChild even if shouldFocusOnPress is set', async () => {
+    const { getByTestId } = render(
+      <List shouldFocusOnPress listSize={1}>
+        <ListItemBase focusChild data-testid="list-item-1" itemIndex={0}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+      </List>
+    );
+
+    simulateOnPress(getByTestId, 'list-item-1');
+
+    expect(getByTestId('list-item-1')).not.toHaveFocus();
+  });
+
+  it('should focus on the first focusable child after arrow key nav when focusChild is set', async () => {
+    const user = userEvent.setup();
+
+    const { getByTestId } = render(
+      <List shouldFocusOnPress listSize={2}>
+        <ListItemBase data-testid="list-item-0" itemIndex={0}>
+          <ListItemBaseSection position="fill">
+            <ButtonPill>0</ButtonPill>
+            <ButtonPill>1</ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+        <ListItemBase focusChild data-testid="list-item-1" itemIndex={1}>
+          <ListItemBaseSection position="fill">
+            <ButtonPill data-testid="button-1">2</ButtonPill>
+            <ButtonPill>3</ButtonPill>
+          </ListItemBaseSection>
+        </ListItemBase>
+      </List>
+    );
+
+    await user.tab();
+
+    expect(getByTestId('list-item-0')).toHaveFocus();
+
+    await user.keyboard('{ArrowDown}');
+
+    expect(getByTestId('button-1')).toHaveFocus();
+
+    await user.keyboard('{ArrowUp}');
+
+    expect(getByTestId('list-item-0')).toHaveFocus();
+  });
+
+  it('should call focus and focus within callbacks', async () => {
+    const onFocusWithin = jest.fn();
+    const onBlurWithin = jest.fn();
+    const onFocus = jest.fn();
+    const onBlur = jest.fn();
+
+    const checkCalled = ({
+      onFocusWithinCalled,
+      onBlurWithinCalled,
+      onFocusCalled,
+      onBlurCalled,
+    }) => {
+      expect(onFocusWithin).toHaveBeenCalledTimes(onFocusWithinCalled);
+      expect(onBlurWithin).toHaveBeenCalledTimes(onBlurWithinCalled);
+      expect(onFocus).toHaveBeenCalledTimes(onFocusCalled);
+      expect(onBlur).toHaveBeenCalledTimes(onBlurCalled);
+      onFocusWithin.mockClear();
+      onBlurWithin.mockClear();
+      onFocus.mockClear();
+      onBlur.mockClear();
+    };
+
+    const user = userEvent.setup();
+
+    const { getByTestId } = render(
+      <>
+        <List listSize={2}>
+          <ListItemBase
+            onBlur={onBlur}
+            onFocus={onFocus}
+            onBlurWithin={onBlurWithin}
+            onFocusWithin={onFocusWithin}
+            data-testid="list-item-0"
+            itemIndex={0}
+          >
+            <ListItemBaseSection position="fill">
+              <ButtonPill data-testid="button-0-a">0</ButtonPill>
+              <ButtonPill data-testid="button-0-b">1</ButtonPill>
+            </ListItemBaseSection>
+          </ListItemBase>
+          <ListItemBase focusChild data-testid="list-item-1" itemIndex={1}>
+            <ListItemBaseSection position="fill">
+              <ButtonPill data-testid="button-1">2</ButtonPill>
+              <ButtonPill>3</ButtonPill>
+            </ListItemBaseSection>
+          </ListItemBase>
+        </List>
+        <ButtonPill data-testid="after">2</ButtonPill>
+      </>
+    );
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    checkCalled({
+      onFocusWithinCalled: 1,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 1,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 1,
+    });
+
+    await user.keyboard('{ArrowDown}');
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 1,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.keyboard('{ArrowUp}');
+
+    checkCalled({
+      onFocusWithinCalled: 1,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 1,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    expect(getByTestId('button-0-a')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 1,
+    });
+
+    await user.tab();
+
+    expect(getByTestId('button-0-b')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.tab();
+
+    expect(getByTestId('after')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 0,
+      onBlurWithinCalled: 1,
+      onFocusCalled: 0,
+      onBlurCalled: 0,
+    });
+
+    await user.tab({ shift: true });
+
+    expect(getByTestId('list-item-0')).toHaveFocus();
+
+    checkCalled({
+      onFocusWithinCalled: 1,
+      onBlurWithinCalled: 0,
+      onFocusCalled: 1,
+      onBlurCalled: 0,
+    });
   });
 });

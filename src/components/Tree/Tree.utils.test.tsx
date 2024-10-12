@@ -1,12 +1,13 @@
 import React from 'react';
 import {
   convertNestedTree2MappedTree,
-  getFistActiveNode,
+  getInitialActiveNode,
   getNextActiveNode,
   getTreeRootId,
   isActiveNodeInDOM,
   isEmptyTree,
   mapTree,
+  migrateTreeState,
   toggleTreeNodeRecord,
   TreeContext,
   useTreeContext,
@@ -72,9 +73,17 @@ describe('Tree utils', () => {
       expect(result.current).toBe('treeContext');
     });
 
-    it('should throw an error when the tree context is not available', () => {
+    it('should return with null and log error when the tree context is not available', () => {
+      jest.spyOn(console, 'error').mockImplementation(() => {
+        /**/
+      });
       const { result } = renderHook(() => useTreeContext());
-      expect(result.error).toEqual(Error('useTreeContext hook used without TreeContext!'));
+      expect(result.current).toEqual(null);
+      // eslint-disable-next-line no-console
+      expect(console.error).toHaveBeenNthCalledWith(
+        1,
+        'useTreeContext hook used without TreeContext!'
+      );
     });
   });
 
@@ -124,10 +133,15 @@ describe('Tree utils', () => {
     });
 
     it('should returns with the same nodeId when it is not found in the tree', () => {
+      jest.spyOn(console, 'warn').mockImplementation(() => {
+        /**/
+      });
       const result = getNextActiveNode(tree, 'not-found', 'ArrowDown', true, toggleTreeNode);
 
       expect(toggleTreeNode).not.toHaveBeenCalled();
       expect(result).toEqual('not-found');
+      // eslint-disable-next-line no-console
+      expect(console.warn).toHaveBeenCalledTimes(1);
     });
 
     describe('when root excluded', () => {
@@ -255,13 +269,16 @@ describe('Tree utils', () => {
           expect(result).toEqual('2');
         });
 
-        it('should throw error when the tree has a loop', () => {
+        it('should return with the last node id before the loop restart when the tree has a loop', () => {
+          jest.spyOn(console, 'error').mockImplementation(() => {
+            /**/
+          });
           const loopTree = createTree();
           loopTree.get('2').parent = '2.2.3';
 
-          expect(() =>
-            getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)
-          ).toThrow('Infinite loop detected in the tree navigation.');
+          expect(getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)).toEqual(
+            '2.2'
+          );
         });
       });
 
@@ -302,13 +319,16 @@ describe('Tree utils', () => {
         });
       });
 
-      it('should throw error when the tree has a loop', () => {
+      it('should return with the last node id before the loop restart when the tree has a loop', () => {
+        jest.spyOn(console, 'error').mockImplementation(() => {
+          /**/
+        });
         const loopTree = createTree();
         loopTree.get('2.2').children.push('3');
 
-        expect(() => getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toThrow(
-          'Infinite loop detected in the tree navigation.'
-        );
+        expect(getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toEqual('3');
+        // eslint-disable-next-line no-console
+        expect(console.error).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -604,10 +624,57 @@ describe('Tree utils', () => {
       expect(tree.size).toBe(expected.length);
     });
 
-    it('should throw error when there is a duplicated tree node id', () => {
+    it('should skip duplicated tree node id with the whole subtree', () => {
+      jest.spyOn(console, 'error').mockImplementation(() => {
+        /**/
+      });
       const tree = tNode('<root>', true, [tNode('0'), tNode('0', false, [tNode('1')])]);
 
-      expect(() => convertNestedTree2MappedTree(tree)).toThrow('Duplicate node id found: "0".');
+      expect(convertNestedTree2MappedTree(tree)).toEqual(
+        new Map([
+          [
+            '<root>',
+            {
+              children: ['0'],
+              id: '<root>',
+              index: 0,
+              isHidden: false,
+              isLeaf: false,
+              isOpen: true,
+              level: 0,
+              parent: undefined,
+            },
+          ],
+          [
+            '0',
+            {
+              children: ['1'],
+              id: '0',
+              index: 1,
+              isHidden: false,
+              isLeaf: false,
+              isOpen: false,
+              level: 1,
+              parent: '<root>',
+            },
+          ],
+          [
+            '1',
+            {
+              children: [],
+              id: '1',
+              index: 0,
+              isHidden: true,
+              isLeaf: true,
+              isOpen: true,
+              level: 2,
+              parent: '0',
+            },
+          ],
+        ])
+      );
+      // eslint-disable-next-line no-console
+      expect(console.error).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -620,7 +687,10 @@ describe('Tree utils', () => {
       expect(callback).not.toHaveBeenCalled();
     });
 
-    it('should throw error when the there is no root node', () => {
+    it('should return with empty array when the there is no root node', () => {
+      jest.spyOn(console, 'error').mockImplementation(() => {
+        /**/
+      });
       // Tree with circular reference -> no node with parent === undefined
       const tree: TreeIdNodeMap = new Map([
         ['root', { id: 'root', parent: '1' } as TreeNodeRecord],
@@ -628,11 +698,11 @@ describe('Tree utils', () => {
       const wrongId = 'not-a-root-id';
 
       const callback = jest.fn();
-      expect(() => mapTree(tree, callback, { rootNodeId: wrongId })).toThrow(
-        `Tree root node is not found for id: "${wrongId}".`
-      );
+      expect(mapTree(tree, callback, { rootNodeId: wrongId })).toEqual([]);
 
       expect(callback).not.toHaveBeenCalled();
+      // eslint-disable-next-line no-console
+      expect(console.error).toHaveBeenCalledTimes(1);
     });
 
     it('should not call the callback on the tree root by default', () => {
@@ -717,25 +787,72 @@ describe('Tree utils', () => {
     });
   });
 
-  describe('getFistActiveNode', () => {
+  describe('getInitialActiveNode', () => {
     it.each`
-      msg                         | tree                                                                                | excludeTreeRoot | expected
-      ${'empty tree'}             | ${{}}                                                                               | ${false}        | ${undefined}
-      ${'empty tree'}             | ${{}}                                                                               | ${true}         | ${undefined}
-      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${true}         | ${undefined}
-      ${'only root tree'}         | ${{ id: 'root', children: [] }}                                                     | ${false}        | ${'root'}
-      ${'only closed root tree'}  | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${true}         | ${undefined}
-      ${'only closed  root tree'} | ${{ id: 'root', children: [], isOpenByDefault: false }}                             | ${false}        | ${'root'}
-      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${true}         | ${'node'}
-      ${'tree with child'}        | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                         | ${false}        | ${'root'}
-      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
-      ${'tree with hidden child'} | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }} | ${false}        | ${'root'}
+      msg                              | tree                                                                                       | excludeTreeRoot | expected     | selectionMode | selectedItems
+      ${'is empty'}                    | ${{}}                                                                                      | ${false}        | ${undefined} | ${'none'}     | ${[]}
+      ${'is empty'}                    | ${{}}                                                                                      | ${true}         | ${undefined} | ${'none'}     | ${[]}
+      ${'only has root'}               | ${{ id: 'root', children: [] }}                                                            | ${true}         | ${undefined} | ${'none'}     | ${[]}
+      ${'only has root'}               | ${{ id: 'root', children: [] }}                                                            | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'only has closed root'}        | ${{ id: 'root', children: [], isOpenByDefault: false }}                                    | ${true}         | ${undefined} | ${'none'}     | ${[]}
+      ${'only has closed root'}        | ${{ id: 'root', children: [], isOpenByDefault: false }}                                    | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has child'}                   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${true}         | ${'node'}    | ${'none'}     | ${[]}
+      ${'has child'}                   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has hidden child'}            | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }}        | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has hidden child'}            | ${{ id: 'root', isOpenByDefault: false, children: [{ id: 'node', children: [] }] }}        | ${false}        | ${'root'}    | ${'none'}     | ${[]}
+      ${'has child'}                   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${true}         | ${'node'}    | ${'none'}     | ${[]}
+      ${'has single selected child'}   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${true}         | ${'node'}    | ${'single'}   | ${['node']}
+      ${'has single selected child'}   | ${{ id: 'root', children: [{ id: 'node', children: [] }] }}                                | ${false}        | ${'node'}    | ${'single'}   | ${['node']}
+      ${'has multiple selected child'} | ${{ id: 'root', children: [{ id: 'node', children: [] }, { id: 'node2', children: [] }] }} | ${false}        | ${'root'}    | ${'multiple'} | ${['node', 'node2']}
     `(
-      'should return $expected when $msg and $excludeTreeRoot',
-      ({ tree, excludeTreeRoot, expected }) => {
-        const result = getFistActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot);
+      'should return $expected when tree $msg and excludeTreeRoot is $excludeTreeRoot',
+      ({ tree, excludeTreeRoot, expected, selectionMode, selectedItems }) => {
+        const result = getInitialActiveNode(convertNestedTree2MappedTree(tree), excludeTreeRoot, {
+          selectionMode,
+          selectedItems,
+          isSelected: () => null,
+          toggle: () => null,
+          update: () => null,
+          clear: () => null,
+        });
         expect(result).toEqual(expected);
       }
     );
+  });
+
+  describe('migrateTreeState', () => {
+    it('should handle empty old tree', () => {
+      const tree = convertNestedTree2MappedTree(sampleTree);
+      migrateTreeState(new Map(), tree);
+      expect(tree).toEqual(convertNestedTree2MappedTree(sampleTree));
+    });
+
+    it('should handle empty new tree', () => {
+      const tree = new Map();
+      migrateTreeState(convertNestedTree2MappedTree(sampleTree), tree);
+      expect(tree).toEqual(tree);
+    });
+
+    it('should migrate isOpen state', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(oldTree.get('1').isOpen).not.toEqual(newTree.get('1').isOpen);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1').isOpen).toEqual(newTree.get('1').isOpen);
+    });
+
+    it('should update isHidden correctly', () => {
+      const oldTree = new Map([['1', { isOpen: true }]]) as TreeIdNodeMap;
+      const newTree = convertNestedTree2MappedTree(sampleTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(true);
+
+      migrateTreeState(oldTree, newTree);
+
+      expect(newTree.get('1.1').isHidden).toEqual(false);
+    });
   });
 });

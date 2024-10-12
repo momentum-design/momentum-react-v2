@@ -29,6 +29,8 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     focusLockProps = DEFAULTS.FOCUS_LOCK_PROPS,
     onClose,
     ariaLabel,
+    ariaLabelledby,
+    ariaDescribedby,
     ...other
   } = props;
   const id = useRef(uuidV4());
@@ -41,8 +43,12 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         onClose?.();
       }
     },
-    [shouldCloseOnEsc]
+    [onClose, shouldCloseOnEsc]
   );
+
+  const ariaLabelledbyProp = ariaLabelledby ?? (title ? id.current : undefined);
+  const ariaDescribedbyProp =
+    ariaDescribedby ?? (details && !children ? detailsId.current : undefined);
 
   return (
     <Overlay
@@ -56,8 +62,8 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         round={75}
         color={modalColor}
         aria-label={ariaLabel}
-        aria-labelledby={title ? id.current : undefined}
-        aria-describedby={details && !children ? detailsId.current : undefined}
+        aria-labelledby={ariaLabelledbyProp}
+        aria-describedby={ariaDescribedbyProp}
         focusLockProps={focusLockProps}
       >
         <div>

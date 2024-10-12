@@ -47,16 +47,30 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
     switch (schedulerState) {
       case SCHEDULER_STATES.available:
         return (
-          <Icon name="scheduler-available" fillColor="var(--mds-color-theme-text-success-normal)" {...iconProps} />
+          <Icon
+            name="scheduler-available"
+            fillColor="var(--mds-color-theme-text-success-normal)"
+            {...iconProps}
+          />
         );
 
       case SCHEDULER_STATES.unavailable:
         return (
-          <Icon name="scheduler-unavailable" fillColor="var(--mds-color-theme-text-warning-normal)" {...iconProps} />
+          <Icon
+            name="scheduler-unavailable"
+            fillColor="var(--mds-color-theme-text-warning-normal)"
+            {...iconProps}
+          />
         );
 
       case SCHEDULER_STATES.unknown:
-        return <Icon name="scheduler-unknown" fillColor="var(--mds-color-theme-text-error-normal)" {...iconProps} />;
+        return (
+          <Icon
+            name="scheduler-unknown"
+            fillColor="var(--mds-color-theme-text-error-normal)"
+            {...iconProps}
+          />
+        );
 
       case SCHEDULER_STATES.quietHours:
         return (
@@ -116,7 +130,7 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
         {displayMuteAction && (
           <ButtonCircle onPress={onPressMuteAction} ghost size={28}>
             <Icon
-              name={isMuted ? 'microphone-muted' : 'audio-microphone-on-green-colored'}
+              name={isMuted ? 'microphone-muted' : 'microphone-on'}
               weight="bold"
               scale={16}
               fillColor={isMuted && 'var(--mds-color-theme-text-error-normal)'}

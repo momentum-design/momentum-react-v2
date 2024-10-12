@@ -11,6 +11,7 @@ import {
 } from './Tree.types';
 import { NODE_ID_ATTRIBUTE_NAME } from '../TreeNodeBase/TreeNodeBase.constants';
 import { DEFAULTS } from './Tree.constants';
+import { ItemSelection } from '../../hooks/useItemSelected';
 
 export const TreeContext = React.createContext<TreeContextValue>(null);
 
@@ -21,7 +22,8 @@ export const TreeContext = React.createContext<TreeContextValue>(null);
 export const useTreeContext = (): TreeContextValue => {
   const value = useContext(TreeContext);
   if (!value) {
-    throw new Error('useTreeContext hook used without TreeContext!');
+    // eslint-disable-next-line no-console
+    console.error('useTreeContext hook used without TreeContext!');
   }
   return value;
 };
@@ -81,7 +83,9 @@ const findNextTreeNode = (tree: TreeIdNodeMap, activeNodeId: TreeNodeId): TreeNo
       // If we are at the end of the parent's children, move up one level
       current = parent;
       if (loopCheck.has(current.id)) {
-        throw new Error('Infinite loop detected in the tree navigation.');
+        // eslint-disable-next-line no-console
+        console.error('Infinite loop detected in the tree navigation.');
+        return current.id;
       } else {
         loopCheck.add(current.id);
       }
@@ -127,7 +131,9 @@ const findPreviousTreeNode = (
     next = tree.get(next.children[next.children.length - 1]);
 
     if (loopCheck.has(next.id)) {
-      throw new Error('Infinite loop detected in the tree navigation.');
+      // eslint-disable-next-line no-console
+      console.error('Infinite loop detected in the tree navigation.');
+      return next.id;
     } else {
       loopCheck.add(next.id);
     }
@@ -224,12 +230,14 @@ export const convertNestedTree2MappedTree = (tree: TreeRoot): TreeIdNodeMap => {
     const { node: parentNode, parentId, level, index, isHidden } = nodeStack.pop();
 
     if (idSet.has(parentNode.id)) {
-      throw new Error(`Duplicate node id found: "${parentNode.id.toString()}".`);
+      // eslint-disable-next-line no-console
+      console.error(`Duplicate node id ("${parentNode.id.toString()}") found and skipped.`);
+      continue;
     } else {
       idSet.add(parentNode.id);
     }
 
-    const children = parentNode.children.map((n) => n.id);
+    const children = Array.from(new Set(parentNode.children.map((n) => n.id)));
     const isOpen = parentNode.isOpenByDefault ?? true;
 
     map.set(parentNode.id, {
@@ -360,7 +368,9 @@ export const mapTree = <T>(
   const rootNodeId = options?.rootNodeId ?? getTreeRootId(tree);
 
   if (!tree.has(rootNodeId)) {
-    throw new Error(`Tree root node is not found for id: "${rootNodeId.toString()}".`);
+    // eslint-disable-next-line no-console
+    console.error(`Tree root node is not found for id: "${rootNodeId.toString()}".`);
+    return [];
   }
 
   const excludeRoot = options?.excludeRootNode ?? true;
@@ -394,12 +404,28 @@ export const isActiveNodeInDOM = (
 };
 
 /**
- * Get the first active node id in the tree.
+ * Get the initial active node id in the tree.
+ *
+ * If selection mode is single and there is only one shown and selected item, it returns the selected item.
+ * Otherwise, it returns the first shown node in the tree.
  *
  * @param tree
  * @param excludeTreeRoot
+ * @param itemSelection
  */
-export const getFistActiveNode = (tree: TreeIdNodeMap, excludeTreeRoot: boolean): TreeNodeId => {
+export const getInitialActiveNode = (
+  tree: TreeIdNodeMap,
+  excludeTreeRoot: boolean,
+  itemSelection: ItemSelection<string>
+): TreeNodeId => {
+  if (
+    itemSelection.selectionMode === 'single' &&
+    itemSelection.selectedItems.length === 1 &&
+    tree.has(itemSelection.selectedItems[0])
+  ) {
+    return itemSelection.selectedItems[0];
+  }
+
   const rootId = getTreeRootId(tree);
   if (rootId) {
     const treeNode = tree.get(rootId);
@@ -421,4 +447,33 @@ export const getFistActiveNode = (tree: TreeIdNodeMap, excludeTreeRoot: boolean)
  */
 export const getNodeDOMId = (id: TreeNodeId): string => {
   return `${DEFAULTS.NODE_ID_PREFIX}-${id}`;
+};
+
+/**
+ * Migrate states between old and new trees
+ *
+ * `isOpen` state used from the old tree if the node available otherwise falls back to the new tree's node value.
+ * `isHidden` also updated based on the merged `isOpen` state.
+ *
+ * @remarks
+ * This function modify the `newTree` parameter
+ *
+ * @param oldTree
+ * @param newTree
+ */
+export const migrateTreeState = (oldTree: TreeIdNodeMap, newTree: TreeIdNodeMap): void => {
+  const rootId = getTreeRootId(newTree);
+
+  if (!rootId) return;
+
+  const nodeStack = [{ id: rootId, isHidden: false }];
+  while (nodeStack.length) {
+    const { id, isHidden } = nodeStack.pop();
+    const node = newTree.get(id);
+
+    const isOpen = oldTree.get(id)?.isOpen ?? node.isOpen;
+    newTree.set(node.id, { ...node, isOpen, isHidden });
+
+    nodeStack.push(...node.children.map((id) => ({ id, isHidden: node.isHidden || !isOpen })));
+  }
 };

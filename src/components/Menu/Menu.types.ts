@@ -1,7 +1,15 @@
-import { CSSProperties, HTMLAttributes, MutableRefObject } from 'react';
+import { CSSProperties, HTMLAttributes, Key, MutableRefObject } from 'react';
 import { AriaMenuProps } from '@react-types/menu';
-import { FocusStrategy } from '@react-types/shared';
+import {
+  CollectionBase,
+  FocusStrategy,
+  MultipleSelection,
+  SelectionMode,
+  SectionProps,
+} from '@react-types/shared';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+
+export type TickPosition = 'left' | 'right' | 'none';
 
 export interface Props<T> extends AriaMenuProps<T> {
   /**
@@ -32,15 +40,20 @@ export interface Props<T> extends AriaMenuProps<T> {
   itemShape?: 'rectangle' | 'isPilled';
 
   /**
-   * Wether we should display the tick on the left side.
-   * @default false
+   * Position of the tick when selected, none when no tick
+   * @default right
    */
-  isTickOnLeftSide?: boolean;
+  tickPosition?: TickPosition;
 
   /**
    * aria-labelledby attribute to associate with the menu items
    */
   ariaLabelledby?: string;
+
+  /**
+   * Custom class for overriding this component's items CSS when selected.
+   */
+  classNameSelectedItem?: string;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
@@ -54,5 +67,24 @@ export interface MenuContextValue extends HTMLAttributes<HTMLElement> {
 export interface MenuAppearanceContextValue {
   itemShape?: 'rectangle' | 'isPilled';
   itemSize?: ListItemBaseSize;
-  isTickOnLeftSide?: boolean;
+  tickPosition?: TickPosition;
+  classNameSelectedItem?: string;
+}
+
+export interface SelectionGroupAppearanceProps {
+  tickPosition?: TickPosition;
+  classNameSelectedItem?: string;
+  itemSize?: ListItemBaseSize;
+}
+
+export interface SelectionGroupProps<T>
+  extends Omit<SectionProps<T>, 'children' | 'items'>,
+    Omit<CollectionBase<T>, 'disabledKeys'>,
+    Omit<MultipleSelection, 'disabledKeys' | 'selectionMode'> {
+  onAction?: (key: Key) => void;
+  selectionMode: Exclude<SelectionMode, 'none'>;
+  tickPosition?: TickPosition;
+  classNameSelectedItem?: string;
+  className?: string;
+  itemSize?: ListItemBaseSize;
 }

@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react';
 import { AriaButtonProps } from '@react-types/button';
+import { InferredIconName } from '../Icon/Icon.types';
 
 export interface Props extends AriaButtonProps {
   /**
@@ -30,7 +31,7 @@ export interface Props extends AriaButtonProps {
   /**
    * Size index of this NavTab.
    */
-  icon?: string;
+  icon?: InferredIconName;
 
   /**
    * The amount inside the badge of components of this NavTab. If 0, then it is not shown.

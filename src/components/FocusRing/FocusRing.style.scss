@@ -7,9 +7,11 @@
 
   &.md-focus-ring-inset {
     box-shadow: var(--md-globals-focus-ring-box-shadow-inset);
+    outline-offset: -0.125rem;
   }
 }
 
 .md-focus-ring-wrapper-disabled {
   box-shadow: none;
+  outline: none;
 }

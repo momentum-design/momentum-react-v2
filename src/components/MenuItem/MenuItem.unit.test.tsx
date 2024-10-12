@@ -8,6 +8,7 @@ import { useTreeState } from '@react-stately/tree';
 import { triggerPress } from '../../../test/utils';
 import * as menu from '../Menu/Menu';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
+import ListItemBaseSection from '../ListItemBaseSection';
 
 describe('<MenuItem />', () => {
   const { result } = renderHook(() =>
@@ -19,7 +20,11 @@ describe('<MenuItem />', () => {
         <Item key="$.1" aria-label="1">
           Item 2
         </Item>,
+        <Item key="$.2" aria-label="2" closeOnSelect={false}>
+          Item 3
+        </Item>,
       ],
+      selectedKeys: ['$.0'],
     })
   );
 
@@ -29,7 +34,8 @@ describe('<MenuItem />', () => {
     jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
       itemShape: 'rectangle',
       itemSize: 40 as ListItemBaseSize,
-      isTickOnLeftSide: false,
+      tickPosition: 'right',
+      classNameSelectedItem: 'some-classname',
     });
   });
 
@@ -45,7 +51,7 @@ describe('<MenuItem />', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should match snapshot with tickOnLeftSide', () => {
+    it('should match snapshot with tickPosition', () => {
       const item = state.collection.getItem('$.0');
       jest
         .spyOn(menu, 'useMenuContext')
@@ -54,7 +60,7 @@ describe('<MenuItem />', () => {
       jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
         itemShape: 'rectangle',
         itemSize: 30 as ListItemBaseSize,
-        isTickOnLeftSide: true,
+        tickPosition: 'left',
       });
 
       const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
@@ -75,6 +81,132 @@ describe('<MenuItem />', () => {
       const element = wrapper.find('li div').getDOMNode();
 
       expect(element.innerHTML).toBe(item.rendered);
+    });
+
+    it('should render unselected item with no tick and no classNameSelectedItem when tickPosition is left', () => {
+      const item = state.collection.getItem('$.1'); // 1 is not the selected item in default props
+
+      jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
+        itemShape: 'rectangle',
+        itemSize: 40 as ListItemBaseSize,
+        tickPosition: 'left',
+        classNameSelectedItem: 'some-new-classname',
+      });
+
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+      const element = wrapper.find('li');
+
+      expect(
+        element
+          .find(ListItemBaseSection)
+          .filter({ position: 'start' })
+          .find('div.md-menu-item-tick-placeholder')
+          .exists()
+      ).toEqual(true);
+
+      expect(
+        element
+          .find(ListItemBaseSection)
+          .filter({ position: 'start' })
+          .find('.md-menu-item-tick-icon')
+          .exists()
+      ).toEqual(false);
+
+      expect(
+        element.find(ListItemBaseSection).filter({ position: 'fill' }).getDOMNode().innerHTML
+      ).toBe(item.rendered);
+
+      expect(element.getDOMNode().classList.contains('some-new-classname')).toBe(false);
+    });
+
+    it('should render selected item with tick and classNameSelectedItem when tickPosition is left', () => {
+      const item = state.collection.getItem('$.0'); // 0 is the selected item in default props
+
+      jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
+        itemShape: 'rectangle',
+        itemSize: 40 as ListItemBaseSize,
+        tickPosition: 'left',
+        classNameSelectedItem: 'some-new-classname',
+      });
+
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+      const element = wrapper.find('li');
+
+      expect(
+        element
+          .find(ListItemBaseSection)
+          .filter({ position: 'start' })
+          .find('div.md-menu-item-tick-placeholder')
+          .exists()
+      ).toEqual(false);
+
+      expect(
+        element
+          .find(ListItemBaseSection)
+          .filter({ position: 'start' })
+          .find('.md-menu-item-tick-icon')
+          .exists()
+      ).toEqual(true);
+
+      expect(
+        element.find(ListItemBaseSection).filter({ position: 'fill' }).getDOMNode().innerHTML
+      ).toBe(item.rendered);
+
+      expect(element.getDOMNode().classList.contains('some-new-classname')).toBe(true);
+    });
+
+    it('should render unselected item with no tick and no classNameSelectedItem when tickPosition is right', () => {
+      const item = state.collection.getItem('$.1'); // 1 is not the selected item in default props
+
+      jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
+        itemShape: 'rectangle',
+        itemSize: 40 as ListItemBaseSize,
+        tickPosition: 'right',
+        classNameSelectedItem: 'some-new-classname',
+      });
+
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+      const element = wrapper.find('li');
+
+      expect(element.find(ListItemBaseSection).filter({ position: 'end' }).exists()).toEqual(false);
+
+      expect(
+        element.find(ListItemBaseSection).filter({ position: 'fill' }).getDOMNode().innerHTML
+      ).toBe(item.rendered);
+
+      expect(element.getDOMNode().classList.contains('some-new-classname')).toBe(false);
+    });
+
+    it('should render selected item with tick and classNameSelectedItem when tickPosition is right', () => {
+      const item = state.collection.getItem('$.0'); // 0 is the selected item in default props
+
+      jest.spyOn(menu, 'useMenuAppearanceContext').mockReturnValue({
+        itemShape: 'rectangle',
+        itemSize: 40 as ListItemBaseSize,
+        tickPosition: 'right',
+        classNameSelectedItem: 'some-new-classname',
+      });
+
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+      const element = wrapper.find('li');
+
+      expect(
+        element
+          .find(ListItemBaseSection)
+          .filter({ position: 'end' })
+          .find('.md-menu-item-tick-icon')
+          .exists()
+      ).toEqual(true);
+
+      expect(
+        element.find(ListItemBaseSection).filter({ position: 'fill' }).getDOMNode().innerHTML
+      ).toBe(item.rendered);
+
+      expect(element.getDOMNode().classList.contains('some-new-classname')).toBe(true);
     });
   });
 
@@ -110,5 +242,23 @@ describe('<MenuItem />', () => {
     triggerPress(element);
 
     expect(onCloseMock).not.toHaveBeenCalled();
+  });
+
+  it('should call useMenuContext with empty object', async () => {
+    const item = state.collection.getItem('$.1');
+    const useMenuContextMock = jest.spyOn(menu, 'useMenuContext');
+
+    mount(<MenuItem state={state} key={item.key} item={item} />);
+
+    expect(useMenuContextMock).toHaveBeenCalledWith({});
+  });
+
+  it('should call useMenuContext with closeOnSelect override', async () => {
+    const item = state.collection.getItem('$.2');
+    const useMenuContextMock = jest.spyOn(menu, 'useMenuContext');
+
+    mount(<MenuItem state={state} key={item.key} item={item} />);
+
+    expect(useMenuContextMock).toHaveBeenCalledWith({ closeOnSelect: false });
   });
 });

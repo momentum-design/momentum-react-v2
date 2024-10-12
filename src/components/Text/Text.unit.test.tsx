@@ -60,7 +60,7 @@ describe('Text', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'small'])(
+  it.each(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'small', 'div', 'span'])(
     'should match snapshot with type and tagName override',
     async (tagName) => {
       expect.assertions(1);

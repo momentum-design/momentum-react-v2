@@ -1,8 +1,5 @@
 .md-tree-node-base-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 1rem;
   line-height: 1.5rem;
   color: var(--mds-color-theme-text-primary-normal);
@@ -24,40 +21,6 @@
 
   &.focus {
     color: var(--mds-color-theme-text-primary-normal);
-  }
-
-  & > div[data-position='start'] {
-    width: fit-content;
-    margin-right: 0.75rem;
-    flex-shrink: 0;
-  }
-
-  &[data-size='32'] > div[data-position='start'] {
-    margin-right: 0.5rem;
-  }
-
-  & > div[data-position='fill'],
-  *[data-position='middle'] {
-    width: 100%;
-
-    // trim any type of text inside
-    &,
-    p,
-    span {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  & > div[data-position='end'] {
-    width: auto;
-    margin-left: 0.75rem;
-    flex-shrink: 0;
-
-    & > button {
-      margin: 0;
-    }
   }
 
   &[data-size='32'] {
@@ -101,6 +64,48 @@
 
     &[data-size='auto'] {
       height: auto;
+    }
+  }
+
+  .md-tree-node-base-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    & > div[data-position='start'] {
+      width: fit-content;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    &[data-size='32'] > div[data-position='start'] {
+      margin-right: 0.5rem;
+    }
+
+    & > div[data-position='fill'],
+    *[data-position='middle'] {
+      width: 100%;
+
+      // trim any type of text inside
+      &,
+      p,
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    & > div[data-position='end'] {
+      width: auto;
+      margin-left: 0.75rem;
+      flex-shrink: 0;
+
+      & > button {
+        margin: 0;
+      }
     }
   }
 

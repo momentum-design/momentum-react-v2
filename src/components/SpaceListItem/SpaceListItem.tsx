@@ -7,7 +7,6 @@ import './SpaceListItem.style.scss';
 import ListItemBase from '../ListItemBase';
 import SpaceRowContent from '../SpaceRowContent';
 
-//TODO: support 2-line labels for right/position-end section.
 /**
  * The SpaceListItem component.
  */
@@ -35,6 +34,9 @@ const SpaceListItem: FC<Props> = forwardRef(
       itemIndex,
       rightIconTooltip,
       isDisabled = DEFAULTS.DISABLED,
+      menuItems,
+      onSelectMenuItem,
+      menuTriggerLabel,
       ...rest
     } = props;
 
@@ -73,6 +75,9 @@ const SpaceListItem: FC<Props> = forwardRef(
             isCompact,
             rightIconTooltip,
             isDisabled,
+            menuItems,
+            onSelectMenuItem,
+            menuTriggerLabel,
           }}
         />
       </ListItemBase>

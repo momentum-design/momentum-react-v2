@@ -98,7 +98,6 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -198,7 +197,6 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -392,7 +390,6 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -492,7 +489,6 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -630,7 +626,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with aria-h
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -719,7 +714,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with classN
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="example-class md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -808,7 +802,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with color 
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="tertiary"
@@ -897,7 +890,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with id 2`]
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -987,7 +979,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with labelO
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1076,7 +1067,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with labelO
   >
     <div
       aria-hidden="false"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1165,7 +1155,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1254,7 +1243,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1343,7 +1331,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1432,7 +1419,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with strate
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1521,7 +1507,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with style 
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1611,7 +1596,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type d
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1700,7 +1684,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type l
   >
     <div
       aria-hidden="false"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"
@@ -1769,7 +1752,6 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type n
   >
     <div
       aria-hidden="true"
-      aria-modal="false"
       class="md-modal-container-wrapper"
       data-arrow-orientation="vertical"
       data-color="primary"

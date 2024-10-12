@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import classNames from 'classnames';
 
 import { DEFAULTS, STYLE, CHILD_OF } from './ButtonGroup.constants';
@@ -7,12 +7,13 @@ import { Props } from './ButtonGroup.types';
 import './ButtonGroup.style.scss';
 
 export interface CompoundProps {
-  CHILD_PROPS: {
+  CHILD_PROPS?: {
     [CHILD_OF.KEY]: typeof CHILD_OF.VALUE;
   };
 }
 
-const ButtonGroup: FC<Props> & CompoundProps = (props: Props) => {
+const ButtonGroup: React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLDivElement>> &
+  CompoundProps = forwardRef<HTMLDivElement, Props>((props: Props, ref) => {
   const {
     children,
     className,
@@ -29,6 +30,7 @@ const ButtonGroup: FC<Props> & CompoundProps = (props: Props) => {
 
   return (
     <div
+      ref={ref}
       className={classNames(STYLE.wrapper, className)}
       data-round={round || DEFAULTS.ROUND}
       data-spaced={spaced || DEFAULTS.SPACED}
@@ -43,7 +45,9 @@ const ButtonGroup: FC<Props> & CompoundProps = (props: Props) => {
       {children}
     </div>
   );
-};
+});
+
+ButtonGroup.displayName = 'ButtonGroup';
 
 export default ButtonGroup;
 

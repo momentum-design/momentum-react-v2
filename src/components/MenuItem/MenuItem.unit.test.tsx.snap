@@ -67,7 +67,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "index": 1,
             "key": "$.1",
             "level": 0,
-            "nextKey": undefined,
+            "nextKey": "$.2",
             "parentKey": null,
             "prevKey": "$.0",
             "props": Object {
@@ -81,8 +81,32 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
+          "$.2" => Object {
+            "aria-label": "2",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 2,
+            "key": "$.2",
+            "level": 0,
+            "nextKey": undefined,
+            "parentKey": null,
+            "prevKey": "$.1",
+            "props": Object {
+              "aria-label": "2",
+              "children": "Item 3",
+              "closeOnSelect": false,
+            },
+            "rendered": "Item 3",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 3",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
         },
-        "lastKey": "$.1",
+        "lastKey": "$.2",
       },
       "disabledKeys": Set {},
       "expandedKeys": Set {},
@@ -127,7 +151,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "index": 1,
               "key": "$.1",
               "level": 0,
-              "nextKey": undefined,
+              "nextKey": "$.2",
               "parentKey": null,
               "prevKey": "$.0",
               "props": Object {
@@ -141,8 +165,32 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
+            "$.2" => Object {
+              "aria-label": "2",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 2,
+              "key": "$.2",
+              "level": 0,
+              "nextKey": undefined,
+              "parentKey": null,
+              "prevKey": "$.1",
+              "props": Object {
+                "aria-label": "2",
+                "children": "Item 3",
+                "closeOnSelect": false,
+              },
+              "rendered": "Item 3",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 3",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
           },
-          "lastKey": "$.1",
+          "lastKey": "$.2",
         },
         "state": Object {
           "childFocusStrategy": null,
@@ -150,7 +198,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           "disallowEmptySelection": undefined,
           "focusedKey": null,
           "isFocused": false,
-          "selectedKeys": Set {},
+          "selectedKeys": Set {
+            "$.0",
+          },
           "selectionMode": "none",
           "setFocused": [Function],
           "setFocusedKey": [Function],
@@ -165,7 +215,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
     aria-disabled={false}
     aria-label="0"
     aria-labelledby={null}
-    className="md-menu-item-wrapper"
+    className="md-menu-item-wrapper some-classname"
     data-key="$.0"
     isDisabled={false}
     isPadded={true}
@@ -196,7 +246,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           aria-disabled={false}
           aria-label="0"
           aria-labelledby={null}
-          className="md-menu-item-wrapper md-list-item-base-wrapper"
+          className="md-menu-item-wrapper some-classname md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
           data-focused={false}
@@ -215,6 +265,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -233,6 +284,21 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               Item 1
             </div>
           </ListItemBaseSection>
+          <ListItemBaseSection
+            position="end"
+          >
+            <div
+              data-position="end"
+            >
+              <Icon
+                className="md-menu-item-tick-icon"
+                name="check"
+                scale={16}
+                strokeColor="none"
+                weight="bold"
+              />
+            </div>
+          </ListItemBaseSection>
         </li>
       </FocusRing>
     </FocusRing>
@@ -240,7 +306,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
 </MenuItem>
 `;
 
-exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
+exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
 <MenuItem
   item={
     Object {
@@ -307,7 +373,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
             "index": 1,
             "key": "$.1",
             "level": 0,
-            "nextKey": undefined,
+            "nextKey": "$.2",
             "parentKey": null,
             "prevKey": "$.0",
             "props": Object {
@@ -321,8 +387,32 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
+          "$.2" => Object {
+            "aria-label": "2",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 2,
+            "key": "$.2",
+            "level": 0,
+            "nextKey": undefined,
+            "parentKey": null,
+            "prevKey": "$.1",
+            "props": Object {
+              "aria-label": "2",
+              "children": "Item 3",
+              "closeOnSelect": false,
+            },
+            "rendered": "Item 3",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 3",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
         },
-        "lastKey": "$.1",
+        "lastKey": "$.2",
       },
       "disabledKeys": Set {},
       "expandedKeys": Set {},
@@ -367,7 +457,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
               "index": 1,
               "key": "$.1",
               "level": 0,
-              "nextKey": undefined,
+              "nextKey": "$.2",
               "parentKey": null,
               "prevKey": "$.0",
               "props": Object {
@@ -381,8 +471,32 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
+            "$.2" => Object {
+              "aria-label": "2",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 2,
+              "key": "$.2",
+              "level": 0,
+              "nextKey": undefined,
+              "parentKey": null,
+              "prevKey": "$.1",
+              "props": Object {
+                "aria-label": "2",
+                "children": "Item 3",
+                "closeOnSelect": false,
+              },
+              "rendered": "Item 3",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 3",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
           },
-          "lastKey": "$.1",
+          "lastKey": "$.2",
         },
         "state": Object {
           "childFocusStrategy": null,
@@ -390,7 +504,9 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
           "disallowEmptySelection": undefined,
           "focusedKey": null,
           "isFocused": false,
-          "selectedKeys": Set {},
+          "selectedKeys": Set {
+            "$.0",
+          },
           "selectionMode": "none",
           "setFocused": [Function],
           "setFocusedKey": [Function],
@@ -455,6 +571,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          onPointerDown={[Function]}
           onTouchCancel={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
@@ -468,8 +585,12 @@ exports[`<MenuItem /> snapshot should match snapshot with tickOnLeftSide 1`] = `
             <div
               data-position="start"
             >
-              <div
-                className="md-menu-item-tick-placeholder"
+              <Icon
+                className="md-menu-item-tick-icon"
+                name="check"
+                scale={16}
+                strokeColor="none"
+                weight="bold"
               />
             </div>
           </ListItemBaseSection>

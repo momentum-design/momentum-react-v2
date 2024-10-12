@@ -7,6 +7,7 @@ import Icon, { ICON_CONSTANTS, IconProps } from '../Icon';
 import { ICONS, STYLE } from './ButtonControl.constants';
 import { Props } from './ButtonControl.types';
 import './ButtonControl.style.scss';
+import { InferredIconName } from '../Icon/Icon.types';
 
 /**
  * `<ControlButtons />` are used to control [close, maximize, minimize, etc] components [usually panels] they are assigned to.
@@ -14,7 +15,7 @@ import './ButtonControl.style.scss';
 const ButtonControl = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, control, isCircular, ...otherProps } = props;
 
-  const iconName = ICONS[control] || 'not-found';
+  const iconName = (ICONS[control] || 'not-found') as InferredIconName;
   const iconProps: IconProps = {
     autoScale: true,
     name: iconName,

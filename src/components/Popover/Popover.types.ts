@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { AriaRole, CSSProperties, ReactElement, ReactNode } from 'react';
 import type { Instance, LifecycleHooks } from 'tippy.js';
 import type { TippyProps } from '@tippyjs/react';
 import type { Color } from '../ModalContainer/ModalContainer.types';
@@ -214,7 +214,7 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
   /**
    * Role of the popover content
    */
-  role?: string;
+  role?: AriaRole;
 
   /**
    * The element to append the popover to.

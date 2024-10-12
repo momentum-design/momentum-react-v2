@@ -29,6 +29,7 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -65,7 +66,20 @@ exports[`ListItemBase snapshot should match snapshot with allowTextSelection=tru
         data-shape="rectangle"
         data-size={40}
         onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onPointerDown={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
         role="listitem"
         tabIndex={-1}
       >
@@ -107,6 +121,7 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -118,6 +133,133 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
       </li>
     </FocusRing>
   </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with empty list item 1`] = `
+<ListItemBase>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
+        data-disabled={false}
+        data-interactive={true}
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onPointerDown={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="listitem"
+        tabIndex={-1}
+      />
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with focusChild 1`] = `
+<ListItemBase
+  focusChild={true}
+>
+  <li
+    className="md-list-item-base-wrapper"
+    data-allow-text-select={false}
+    data-disabled={false}
+    data-interactive={false}
+    data-padded={false}
+    data-shape="rectangle"
+    data-size={40}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onPointerDown={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="listitem"
+    tabIndex={-1}
+  >
+    <ButtonPill>
+      <ButtonSimple
+        aria-disabled={false}
+        className="md-button-pill-wrapper"
+        data-color="primary"
+        data-disabled={false}
+        data-ghost={false}
+        data-grown={false}
+        data-inverted={false}
+        data-outline={false}
+        data-shallow-disabled={false}
+        data-size={40}
+      >
+        <FocusRing>
+          <FocusRing
+            focusClass="md-focus-ring-wrapper children"
+            focusRingClass="md-focus-ring-wrapper children"
+          >
+            <button
+              className="md-button-pill-wrapper md-button-simple-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-ghost={false}
+              data-grown={false}
+              data-inverted={false}
+              data-outline={false}
+              data-shallow-disabled={false}
+              data-size={40}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              type="button"
+            >
+              <span>
+                Test
+              </span>
+            </button>
+          </FocusRing>
+        </FocusRing>
+      </ButtonSimple>
+    </ButtonPill>
+  </li>
 </ListItemBase>
 `;
 
@@ -153,6 +295,7 @@ exports[`ListItemBase snapshot should match snapshot with id 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -198,6 +341,7 @@ exports[`ListItemBase snapshot should match snapshot with interactive=false 1`] 
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -288,6 +432,7 @@ exports[`ListItemBase snapshot should match snapshot with isFocused 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -333,6 +478,7 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -379,6 +525,7 @@ exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -424,6 +571,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -469,6 +617,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -514,6 +663,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
@@ -563,6 +713,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        onPointerDown={[Function]}
         onTouchCancel={[Function]}
         onTouchEnd={[Function]}
         onTouchMove={[Function]}

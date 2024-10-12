@@ -1,7 +1,6 @@
 import { Key } from 'react';
 import { Node } from '@react-types/shared';
 import { TreeState } from '@react-stately/tree';
-import { ListOrientation } from '../List/List.types';
 
 export interface Props<T> {
   /**

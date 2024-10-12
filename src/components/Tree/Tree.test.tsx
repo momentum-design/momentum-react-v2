@@ -3,7 +3,6 @@ import { mount } from 'enzyme';
 import '@testing-library/jest-dom';
 import { render, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { act } from 'react-test-renderer';
 
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
@@ -39,12 +38,6 @@ describe('<Tree />', () => {
     treeStructure: tNode('root', true, [tNode('1'), tNode('2')]),
   };
 
-  // Remove noisy console.warn
-  beforeAll(() => {
-    jest.spyOn(console, 'warn').mockImplementation(() => {
-      /**/
-    });
-  });
   afterAll(() => {
     jest.restoreAllMocks();
   });
@@ -184,6 +177,23 @@ describe('<Tree />', () => {
 
       expect(element.getAttribute('aria-labelledby')).toBe(labelBy);
     });
+
+    it.each`
+      selectionMode          | valueOfAriaMultiselectable
+      ${'none' as const}     | ${null}
+      ${'single' as const}   | ${'false'}
+      ${'multiple' as const} | ${'true'}
+    `(
+      'should have provided style when style is provided',
+      ({ selectionMode, valueOfAriaMultiselectable }) => {
+        expect.assertions(1);
+
+        const container = mount(<Tree selectionMode={selectionMode} {...commonProps} />);
+        const element = container.find(Tree).getDOMNode();
+
+        expect(element.getAttribute('aria-multiselectable')).toBe(valueOfAriaMultiselectable);
+      }
+    );
   });
 
   describe('tree navigation', () => {
@@ -290,11 +300,12 @@ describe('<Tree />', () => {
     });
 
     it('should handle left/right arrow keys correctly', async () => {
-      expect.assertions(16);
+      expect.assertions(34);
       const user = userEvent.setup();
       const tree = getSampleTree();
       const setNodeOpen = jest.fn();
       const scrollToNode = jest.fn();
+      const onToggleNode = jest.fn();
 
       const { getByTestId } = render(
         <Tree
@@ -304,6 +315,7 @@ describe('<Tree />', () => {
             setNodeOpen,
             scrollToNode,
           }}
+          onToggleNode={onToggleNode}
         >
           {mapTree(
             convertNestedTree2MappedTree(tree),
@@ -328,13 +340,19 @@ describe('<Tree />', () => {
         { nextFocusedNode: '1.1.1', toggleNode: false },
       ];
       for (const { nextFocusedNode, toggleNode } of nodeOrder) {
+        expect(onToggleNode).not.toBeCalled();
         await user.keyboard('{ArrowRight}');
         expect(getByTestId(nextFocusedNode)).toHaveFocus();
 
         if (toggleNode) {
           expect(setNodeOpen).toHaveBeenCalledWith(nextFocusedNode, true);
           expect(scrollToNode).not.toHaveBeenNthCalledWith(1, nextFocusedNode);
+          expect(onToggleNode).toHaveBeenCalledWith(nextFocusedNode, true);
+        } else {
+          expect(onToggleNode).not.toBeCalled();
         }
+
+        onToggleNode.mockReset();
       }
 
       const reversNodeOrder = [
@@ -346,14 +364,53 @@ describe('<Tree />', () => {
       ];
 
       for (const { nextFocusedNode, toggleNode } of reversNodeOrder) {
+        expect(onToggleNode).not.toBeCalled();
         await user.keyboard('{ArrowLeft}');
         expect(getByTestId(nextFocusedNode)).toHaveFocus();
 
         if (toggleNode) {
           expect(setNodeOpen).toHaveBeenCalledWith(nextFocusedNode, false);
           expect(scrollToNode).not.toHaveBeenCalledWith(nextFocusedNode);
+          expect(onToggleNode).toHaveBeenCalledWith(nextFocusedNode, false);
+        } else {
+          expect(onToggleNode).not.toBeCalled();
         }
+
+        onToggleNode.mockReset();
       }
+    });
+
+    it('should exclude interactable elements with preserved-tabindex form navigation ', async () => {
+      expect.assertions(3);
+      const user = userEvent.setup();
+
+      const { getByTestId, getByText } = render(
+        <Tree treeStructure={{ id: 'root', children: [] }} excludeTreeRoot={false}>
+          <TreeNodeBase nodeId="root" data-testid="root">
+            {() => (
+              <>
+                <button tabIndex={-1}>button 1</button>
+                <button tabIndex={-1} className="md-nav-preserve-tabindex">
+                  button 2
+                </button>
+                <div className="md-nav-preserve-tabindex">
+                  <button tabIndex={-1}>button 3</button>
+                </div>
+              </>
+            )}
+          </TreeNodeBase>
+        </Tree>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('root')).toHaveFocus();
+      await user.tab();
+      // active root node change the tabindex for button 1...
+      expect(getByText('button 1')).toHaveFocus();
+      // ...but not for button 2 and 3
+      await user.tab();
+      expect(document.body).toHaveFocus();
     });
   });
 
@@ -428,9 +485,9 @@ describe('<Tree />', () => {
       node.remove();
 
       await waitFor(() => {
-        const clonedNode = getByText('1');
+        const clonedNode = getByTestId('1');
         expect(clonedNode).toHaveFocus();
-        // get a dedicated clas name
+        // get a dedicated class name
         expect(clonedNode).toHaveClass(TREE_CONSTANTS.STYLE.clonedVirtualTreeNode);
         // nodeid unsetted
         expect(clonedNode.dataset.nodeid).toBe(undefined);
@@ -476,7 +533,7 @@ describe('<Tree />', () => {
       expect(scrollToNode).toHaveBeenNthCalledWith(1, '1');
     });
 
-    it('should not call scrollToNode when cloned node exists and user press Shift+Tab', async () => {
+    it('should call scrollToNode when the focus moves back to the tree and the active node is not in the DOM', async () => {
       expect.assertions(2);
       const scrollToNode = jest.fn();
       const { getByText } = await renderTreeAndRemoveNode({
@@ -490,6 +547,30 @@ describe('<Tree />', () => {
       expect(getByText('1')).not.toBeNull();
       expect(scrollToNode).toHaveBeenCalledTimes(0);
     });
+
+    it.each`
+      keyPressed
+      ${'ArrowUp'}
+      ${'ArrowDown'}
+      ${'ArrowLeft'}
+      ${'ArrowRight'}
+    `(
+      'should call scrollToNode when active node is not in the DOM and $kepPressed key pressed',
+      async ({ keyPressed }) => {
+        expect.assertions(2);
+        const scrollToNode = jest.fn();
+        const { getByText } = await renderTreeAndRemoveNode({
+          scrollToNode,
+          setNodeOpen: jest.fn(),
+        });
+
+        await userEvent.keyboard(`{${keyPressed}}`);
+
+        // Only adding back Node 1 will remove the cloned node
+        expect(getByText('1')).not.toBeNull();
+        expect(scrollToNode).toHaveBeenCalledTimes(1);
+      }
+    );
 
     it('should remove the cloned node when the real node added back', async () => {
       expect.assertions(5);
@@ -653,9 +734,14 @@ describe('<Tree />', () => {
       await userEvent.keyboard('{ArrowDown}');
       await userEvent.keyboard('{ArrowDown}');
       await userEvent.keyboard('{ArrowDown}');
-      expect(getByTestId('2.1')).toHaveFocus();
+      await userEvent.keyboard('{ArrowDown}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('2.2.1')).toHaveFocus();
 
-      const newTree = tNode('new-root', true, [tNode('new-1'), tNode('2', false, [tNode('2.1')])]);
+      const newTree = tNode('new-root', true, [
+        tNode('new-1'),
+        tNode('2', true, [tNode('new-2.2', false, [tNode('2.2.1')])]),
+      ]);
       rerender(getTreeComponent(newTree));
 
       expect(getByTestId('2')).toHaveFocus();
@@ -695,6 +781,81 @@ describe('<Tree />', () => {
       await userEvent.keyboard('{ArrowDown}');
 
       expect(getByTestId('new-2')).toHaveFocus();
+    });
+
+    it('should keep the open state of the tree between updates', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree()));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1')).toHaveFocus();
+      await userEvent.keyboard('{ArrowRight}');
+
+      rerender(getTreeComponent(getSampleTree()));
+
+      // can move to 1.1 because it was opened before update
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+    });
+
+    it('should select the next visible child of the root when excludeTreeRoot true', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(getTreeComponent(nextTree, true));
+
+      // Focus should move to node '2'
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should autofocus after update when the focused element was inside of the tree', async () => {
+      const { rerender, getByTestId } = render(getTreeComponent(getSampleTree(), true));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(getTreeComponent(nextTree, true));
+
+      // Focus should move to node '2'
+      expect(getByTestId('2')).toHaveFocus();
+    });
+
+    it('should not autofocus after update when the focused element was outside of the tree', async () => {
+      const renderTreeWithButton = (tree) => (
+        <div>
+          {getTreeComponent(tree, true)}
+          <button>button</button>
+        </div>
+      );
+      const { rerender, getByTestId, getByText } = render(renderTreeWithButton(getSampleTree()));
+
+      await userEvent.tab();
+      await userEvent.keyboard('{ArrowRight}');
+      await userEvent.keyboard('{ArrowDown}');
+      expect(getByTestId('1.1')).toHaveFocus();
+
+      // move focus to the button
+      getByText('button').focus();
+
+      const nextTree = getSampleTree();
+      nextTree.children = nextTree.children.filter(({ id }) => id !== '1');
+
+      rerender(renderTreeWithButton(nextTree));
+
+      // Focus should remain on the button
+      expect(getByText('button')).toHaveFocus();
     });
   });
 
@@ -802,6 +963,9 @@ describe('<Tree />', () => {
     });
 
     it('should update selected items based on the selectionMode', async () => {
+      jest.spyOn(console, 'warn').mockImplementation(() => {
+        /**/
+      });
       const tree = getSampleTree();
       const { rerender, getByTestId } = render(
         getTreeComponent(tree, { selectionMode: 'multiple', selectedItems: ['1', '2.2'] })
@@ -814,6 +978,8 @@ describe('<Tree />', () => {
 
       expect(getByTestId('1')).not.toHaveAttribute('aria-selected', 'true');
       expect(getByTestId('2.2')).not.toHaveAttribute('aria-selected', 'true');
+      // eslint-disable-next-line no-console
+      expect(console.warn).toHaveBeenCalled();
     });
 
     describe('controlled tree selection', () => {

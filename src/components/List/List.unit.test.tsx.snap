@@ -8,6 +8,8 @@ exports[`<List /> snapshot should match snapshot 1`] = `
   <ul
     aria-label="test"
     className="md-list-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
   >
     <ListItemBase
@@ -40,6 +42,7 @@ exports[`<List /> snapshot should match snapshot 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -82,6 +85,7 @@ exports[`<List /> snapshot should match snapshot 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -107,6 +111,8 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
   <ul
     aria-label="test"
     className="example-class md-list-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
   >
     <ListItemBase
@@ -139,6 +145,7 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -181,6 +188,7 @@ exports[`<List /> snapshot should match snapshot with className 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -207,6 +215,8 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
     aria-label="test"
     className="md-list-wrapper"
     id="example-id"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
   >
     <ListItemBase
@@ -239,6 +249,7 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -281,6 +292,7 @@ exports[`<List /> snapshot should match snapshot with id 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -306,6 +318,8 @@ exports[`<List /> snapshot should match snapshot with role 1`] = `
   <ul
     aria-label="test"
     className="md-list-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     role="tablist"
   >
@@ -339,6 +353,7 @@ exports[`<List /> snapshot should match snapshot with role 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -381,6 +396,7 @@ exports[`<List /> snapshot should match snapshot with role 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -410,6 +426,8 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
   <ul
     aria-label="test"
     className="md-list-wrapper"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
     style={
       Object {
@@ -447,6 +465,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
@@ -489,6 +508,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             onMouseUp={[Function]}
+            onPointerDown={[Function]}
             onTouchCancel={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}

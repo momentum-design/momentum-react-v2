@@ -28,6 +28,7 @@ const getMockedTreeContext = (activeNodeId: string): TreeContextValue => ({
     update: jest.fn(),
     clear: jest.fn(),
   },
+  isFocusWithin: true,
 });
 
 const getSampleTree = () => {
@@ -70,6 +71,17 @@ describe('TreeNodeBase', () => {
 
     afterEach(() => {
       jest.restoreAllMocks();
+    });
+
+    it('should match snapshot without tree context', () => {
+      useTreeContextSpy = useTreeContextSpy = jest
+        .spyOn(treeUtils, 'useTreeContext')
+        .mockImplementation(() => null);
+      expect.assertions(1);
+
+      container = mount(<TreeNodeBase nodeId="42">{() => 'Test'}</TreeNodeBase>);
+
+      expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot', () => {
@@ -261,6 +273,7 @@ describe('TreeNodeBase', () => {
       expect(container.find('div[role="group"]').props()).toEqual({
         'aria-owns': 'md-tree-node-1 md-tree-node-2',
         className: 'md-tree-node-base-group',
+        'aria-labelledby': 'md-tree-node-root-content',
         role: 'group',
       });
     });
@@ -632,5 +645,18 @@ describe('TreeNodeBase', () => {
 
     rerender(<Wrapper value={getMockedTreeContext('42')} />);
     expect(getByTestId('tree-node-1')).not.toHaveFocus();
+  });
+
+  it('should handle without error and do not render DOM element when the tree context is null', () => {
+    const Wrapper = () => (
+      <TreeNodeBase data-testid="tree-node-1" key="1" nodeId="42">
+        {() => <button data-testid="node-content">Content</button>}
+      </TreeNodeBase>
+    );
+
+    const { queryByTestId } = render(<Wrapper />);
+
+    expect(queryByTestId('tree-node-1')).not.toBeInTheDocument();
+    expect(queryByTestId('node-content')).not.toBeInTheDocument();
   });
 });

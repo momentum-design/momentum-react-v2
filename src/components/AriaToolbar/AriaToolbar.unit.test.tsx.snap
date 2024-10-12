@@ -1154,11 +1154,13 @@ exports[`<AriaToolbar /> snapshot should update order if triggered externally 1`
     />
     <button
       class="md-button-simple-wrapper"
+      data-exclude-focus="true"
       tabindex="-1"
       type="button"
     />
     <button
       class="md-button-simple-wrapper"
+      data-exclude-focus="true"
       tabindex="-1"
       type="button"
     />
@@ -1180,11 +1182,13 @@ exports[`<AriaToolbar /> snapshot should update order if triggered externally 2`
     />
     <button
       class="md-button-simple-wrapper"
+      data-exclude-focus="true"
       tabindex="-1"
       type="button"
     />
     <button
       class="md-button-simple-wrapper md-focus-ring-wrapper children"
+      data-exclude-focus="true"
       type="button"
     />
   </div>
@@ -1205,10 +1209,12 @@ exports[`<AriaToolbar /> snapshot should update order if triggered externally 3`
     />
     <button
       class="md-button-simple-wrapper md-focus-ring-wrapper children"
+      data-exclude-focus="true"
       type="button"
     />
     <button
       class="md-button-simple-wrapper"
+      data-exclude-focus="true"
       tabindex="-1"
       type="button"
     />
@@ -1230,11 +1236,13 @@ exports[`<AriaToolbar /> snapshot should update order if triggered externally 4`
     />
     <button
       class="md-button-simple-wrapper"
+      data-exclude-focus="true"
       tabindex="-1"
       type="button"
     />
     <button
       class="md-button-simple-wrapper md-focus-ring-wrapper children"
+      data-exclude-focus="true"
       type="button"
     />
   </div>

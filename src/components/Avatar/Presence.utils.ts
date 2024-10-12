@@ -1,7 +1,8 @@
+import { InferredIconName } from '../Icon/Icon.types';
 import { PresenceType } from './Avatar.types';
 
 type ReturnType = {
-  presenceIcon?: string;
+  presenceIcon?: InferredIconName;
   presenceColor?: string;
   isCircularWrapper?: boolean;
 };
@@ -9,7 +10,7 @@ export const getPresenceIconColor = (
   presenceType: PresenceType,
   failureBadge: boolean
 ): ReturnType => {
-  let presenceIcon: string;
+  let presenceIcon: InferredIconName;
   let presenceColor: string;
   let isCircularWrapper = true;
 

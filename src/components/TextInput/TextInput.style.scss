@@ -10,7 +10,8 @@
 
   .md-text-input-container {
     background-color: var(--mds-color-theme-background-solid-primary-normal);
-    border: 0.0625rem var(--md-globals-border-style-solid) var(--mds-color-theme-outline-input-normal);
+    border: 0.0625rem var(--md-globals-border-style-solid)
+      var(--mds-color-theme-outline-input-normal);
     border-radius: 0.5rem;
 
     &:hover {
@@ -39,6 +40,11 @@
     &::placeholder {
       color: var(--mds-color-theme-text-secondary-normal);
       opacity: 1;
+    }
+
+    &::selection {
+      color: var(--mds-color-theme-inverted-text-primary-normal);
+      background-color: var(--mds-color-theme-background-accent-active);
     }
 
     &::-webkit-contacts-auto-fill-button {

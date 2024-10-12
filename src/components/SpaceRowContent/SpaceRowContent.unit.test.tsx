@@ -8,6 +8,15 @@ import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import DividerDot from '../DividerDot';
 import ListItemBaseSection from '../ListItemBaseSection';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+// poppy uses uuid, which causes snapshot comparison failures
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
 
 describe('<SpaceRowContent />', () => {
   describe('snapshot', () => {
@@ -170,6 +179,21 @@ describe('<SpaceRowContent />', () => {
       const isDisabled = true;
 
       const container = await mountAndWait(<SpaceRowContent isDisabled={isDisabled} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with menuItems', async () => {
+      expect.assertions(1);
+
+      const isDisabled = true;
+
+      const container = await mountAndWait(
+        <SpaceRowContent
+          menuItems={[{ key: 'item-1', text: 'Item 1' }]}
+          menuTriggerLabel="Menu trigger label"
+        />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -495,6 +519,27 @@ describe('<SpaceRowContent />', () => {
 
       expect(firstLineElement.props()['data-disabled']).toBe(isDisabled);
       expect(mentionIcon.props().fillColor).toBe('var(--mds-color-theme-text-primary-disabled)');
+    });
+  });
+
+  describe('actions', () => {
+    it('should show menu when menuItems is provided', async () => {
+      expect.assertions(2);
+
+      const user = userEvent.setup();
+
+      render(
+        <SpaceRowContent
+          menuItems={[{ key: 'item-1', text: 'Item 1' }]}
+          menuTriggerLabel="Menu trigger label"
+        />
+      );
+
+      const triggerButton = screen.getByTestId('menu-trigger-button');
+      expect(triggerButton.getAttribute('aria-label')).toBe('Menu trigger label');
+
+      await user.click(triggerButton);
+      expect(screen.getByRole('menuitemradio', { name: 'Item 1' })).toBeTruthy();
     });
   });
 });

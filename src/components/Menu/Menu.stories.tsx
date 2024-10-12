@@ -1,17 +1,20 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { Item, Section } from '@react-stately/collections';
 
-import Menu, { MenuProps } from './';
+import Menu, { MenuProps, SelectionGroup } from './';
 import argTypes from './Menu.stories.args';
 import Documentation from './Menu.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
 import Flex from '../Flex';
 import Avatar from '../Avatar';
+import ContentSeparator from '../ContentSeparator';
 import { PresenceType } from '../Avatar/Avatar.types';
-import { ListHeader, ListItemBaseSection, Icon } from '..';
+import { Icon, Text } from '..';
+import './Menu.stories.style.scss';
 
 export default {
   title: 'Momentum UI/Menu',
@@ -22,6 +25,14 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
+};
+
+const menuOnSelectionChange = (...rest) => {
+  console.log('menuOnSelectionChange', rest);
+};
+
+const menuOnAction = (...rest) => {
+  console.log('menuOnAction', rest);
 };
 
 const Example = Template<MenuProps<unknown>>(Menu).bind({});
@@ -39,61 +50,191 @@ Example.args = {
   ],
 };
 
+const ActionMenu = Template<MenuProps<unknown>>(Menu).bind({});
+
+ActionMenu.argTypes = { ...argTypes };
+
+ActionMenu.args = {
+  'aria-label': 'Menu component',
+  onAction: action('onAction'),
+  selectionMode: 'none',
+  children: [
+    <Item key="Copy">Copy</Item>,
+    <Item key="Cut">Cut</Item>,
+    <Item key="Paste">Paste</Item>,
+  ],
+};
+
 const Sections = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Sections.argTypes = { ...argTypes };
 delete Sections.argTypes.children;
-delete Sections.argTypes.isTickOnLeftSide;
 delete Sections.argTypes.itemSize;
 
 Sections.args = {
-  'aria-label': 'Menu component',
-  onAction: action('onAction'),
-  onSelectionChange: action('onSelectionChange'),
+  'aria-label': 'Where would you like to live',
+  selectionMode: 'multiple',
 };
 
 Sections.parameters = {
   variants: [
     {
-      selectionMode: 'single',
       itemSize: 32,
-      isTickOnLeftSide: true,
+      onSelectionChange: menuOnSelectionChange,
+      onAction: menuOnAction,
       children: [
-        <Section
+        <Section key="0" title="Europe">
+          <Item key="00">Spain</Item>
+          <Item key="01">France</Item>
+          <Item key="02">Italy</Item>
+        </Section>,
+        <ContentSeparator key="sep-0" />,
+        <Section key="1" title="Asia">
+          <Item key="10">India</Item>
+          <Item key="11">China</Item>
+          <Item key="12">Japan</Item>
+        </Section>,
+        <ContentSeparator key="sep-1" />,
+        <Section key="2" title="America">
+          <Item key="13">USA</Item>
+          <ContentSeparator key="sep-21" />
+          <Item key="14">Mexico</Item>
+          <Item key="15">Canada</Item>
+        </Section>,
+      ],
+    },
+  ],
+};
+
+const SelectionGroups = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
+
+SelectionGroups.argTypes = { ...argTypes };
+delete SelectionGroups.argTypes.children;
+delete SelectionGroups.argTypes.itemSize;
+
+SelectionGroups.args = {
+  'aria-label': 'Menu with multiple selection modes component',
+  onSelectionChange: action('onSelectionChange'),
+};
+
+SelectionGroups.parameters = {
+  variants: [
+    {
+      selectionMode: 'multiple', // this is the default for all the group
+      itemSize: 32,
+      tickPosition: 'left',
+      onSelectionChange: menuOnSelectionChange,
+      onAction: menuOnAction,
+      children: [
+        <SelectionGroup
           key="0"
+          selectionMode="multiple"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection1', rest);
+          }}
+          onAction={(...rest) => {
+            console.log('selectionOnAction1', rest);
+          }}
           title={
-            <ListHeader outline={false}>
-              <ListItemBaseSection position="start">
-                <Icon scale={16} name="speaker" strokeColor="none" />
-              </ListItemBaseSection>
-              <ListItemBaseSection position="fill">Speaker</ListItemBaseSection>
-            </ListHeader>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="speaker" strokeColor="none" />
+              <Text type="body-secondary">Speaker (you can choose many)</Text>
+            </Flex>
           }
         >
-          <Item key="00">Use system setting (internal speakers)</Item>
-          <Item key="01">Internal speaker</Item>
-          <Item key="02">Bose Headset 100</Item>
-        </Section>,
-        <Section
+          <Item key="00">System default speaker</Item>
+          <Item key="01">Default - External Headphones (Built-in)</Item>
+          <ContentSeparator key="sep-21" />
+          <Item key="02">Desk Pro Web Camera</Item>
+          <Item key="03">MacBook Pro Speakers</Item>
+          <Item key="04">Webex Media Audio Device</Item>
+        </SelectionGroup>,
+        <ContentSeparator key="sep-0" />,
+        <SelectionGroup
           key="1"
+          selectionMode="single"
+          tickPosition="right"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection2', rest);
+          }}
+          onAction={(...rest) => {
+            console.log('selectionOnAction2', rest);
+          }}
           title={
-            <ListHeader outline={true} outlinePosition="top" outlineColor="secondary">
-              <ListItemBaseSection position="start">
-                <Icon scale={16} name="microphone" strokeColor="none" />
-              </ListItemBaseSection>
-              <ListItemBaseSection position="fill">Microphone</ListItemBaseSection>
-            </ListHeader>
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="microphone" strokeColor="none" />
+              <Text type="body-secondary">Microphone (you can choose one)</Text>
+            </Flex>
           }
         >
-          <Item key="10">Use system setting (internal microphone)</Item>
-          <Item key="11">Bose Headset 100</Item>
-        </Section>,
-        <Section title={<ListHeader outline outlineColor="secondary" />} key="2">
-          <Item key="20">No title in the section</Item>
-        </Section>,
-        <Section title={<ListHeader outline outlineColor="secondary" />} key="3">
-          <Item key="30">No title in the section</Item>
-        </Section>,
+          <Item key="10">No Microphone</Item>
+          <Item key="11">Default - External Microhpone (Built-in)</Item>
+          <Item key="12">Desk Pro Web Microphone</Item>
+          <Item key="13">MacBook Pro Microphone</Item>
+          <Item key="14">Webex Media Audio Device</Item>
+        </SelectionGroup>,
+        <ContentSeparator key="sep-1" />,
+        <SelectionGroup
+          key="2"
+          tickPosition="none"
+          classNameSelectedItem="selectedItem"
+          items={[
+            { key: '20', value: 'No optimization' },
+            { key: '21', value: 'Noise removal' },
+            { key: '22', value: 'Music mode' },
+          ]}
+          selectionMode="single"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection3', rest);
+          }}
+          onAction={(...rest) => {
+            console.log('selectionOnAction3', rest);
+          }}
+          title={
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="adjust-microphone" strokeColor="none" />
+              <Text type="body-secondary">Webex smart audio (You can choose one)</Text>
+            </Flex>
+          }
+        >
+          {(item) => (
+            <Item textValue={item.value} key={item.key}>
+              {item.value}
+            </Item>
+          )}
+        </SelectionGroup>,
+        <ContentSeparator key="sep-2" />,
+        <SelectionGroup
+          key="3"
+          tickPosition="none"
+          classNameSelectedItem="selectedItem"
+          className="layoutGroup"
+          itemSize="auto"
+          items={[
+            { key: '30', value: 'Grid' },
+            { key: '31', value: 'Stack' },
+            { key: '32', value: 'Side by side' },
+          ]}
+          selectionMode="single"
+          onSelectionChange={(...rest) => {
+            console.log('singleselection4', rest);
+          }}
+          onAction={(...rest) => {
+            console.log('selectionOnAction4', rest);
+          }}
+          title={
+            <Flex direction="row" alignItems="center" xgap="0.25rem">
+              <Icon scale={16} name="accessibility" strokeColor="none" />
+              <Text type="body-secondary">Layout</Text>
+            </Flex>
+          }
+        >
+          {(item) => (
+            <Item textValue={item.value} key={item.key}>
+              {item.value}
+            </Item>
+          )}
+        </SelectionGroup>,
       ],
     },
   ],
@@ -103,6 +244,8 @@ const Common = MultiTemplate<MenuProps<unknown>>(Menu).bind({});
 
 Common.argTypes = { ...argTypes };
 delete Common.argTypes.children;
+delete Common.argTypes.selectionMode;
+delete Common.argTypes.itemShape;
 
 Common.args = {
   'aria-label': 'Menu component',
@@ -142,7 +285,6 @@ Common.parameters = {
         </Section>,
       ],
     },
-
     {
       selectionMode: 'single',
       itemShape: 'isPilled',
@@ -172,4 +314,4 @@ Common.parameters = {
 delete Common.argTypes.onAction;
 delete Common.argTypes.disabledKeys;
 
-export { Example, Sections, Common };
+export { Example, ActionMenu, Sections, SelectionGroups, Common };

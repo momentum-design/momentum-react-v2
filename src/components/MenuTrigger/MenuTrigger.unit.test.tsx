@@ -132,7 +132,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -147,7 +147,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -162,7 +162,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.id).toBe(id);
@@ -178,7 +178,7 @@ describe('<MenuTrigger /> - Enzyme', () => {
         .find(MenuTrigger)
         .find(ModalContainer)
         .children()
-        .find('[role="dialog"]')
+        .find('[role="generic"]')
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -368,6 +368,72 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
       await waitFor(() => {
         expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+      });
+    });
+
+    it('should close the menu when closeOnSelect is false but overridden by <Item closeOnSelect={true} />', async () => {
+      const user = userEvent.setup();
+
+      const children = [...defaultProps.children];
+      children.push(
+        <Menu>
+          <Item key="close" closeOnSelect={true}>
+            Close
+          </Item>
+        </Menu>
+      );
+
+      render(
+        <MenuTrigger {...defaultProps} closeOnSelect={false}>
+          {children}
+        </MenuTrigger>
+      );
+
+      await openMenu(user, screen);
+
+      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+
+      await waitFor(() => {
+        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+      });
+
+      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+
+      await waitFor(() => {
+        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not close the menu when closeOnSelect is true but overridden by <Item closeOnSelect={false} />', async () => {
+      const user = userEvent.setup();
+
+      const children = [...defaultProps.children];
+      children.push(
+        <Menu>
+          <Item key="close" closeOnSelect={false}>
+            Close
+          </Item>
+        </Menu>
+      );
+
+      render(
+        <MenuTrigger {...defaultProps} closeOnSelect={true}>
+          {children}
+        </MenuTrigger>
+      );
+
+      await openMenu(user, screen);
+
+      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+
+      await waitFor(() => {
+        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+      });
+
+      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+
+      await waitFor(() => {
+        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
       });
     });
 

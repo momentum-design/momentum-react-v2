@@ -122,6 +122,7 @@ const MenuTrigger = forwardRef(
         className={classnames(className, STYLE.wrapper)}
         trigger="click"
         id={id}
+        role="generic"
         style={style}
         placement={placement as PlacementType}
         interactive={true}

@@ -1,4 +1,11 @@
 import { CSSProperties } from 'react';
+import IconKeys from '@momentum-design/icons/dist/types/types';
+
+export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
+
+type RemoveWeight<T> = T extends `${infer Base}-${IconWeight}` ? Base : T;
+
+export type InferredIconName = RemoveWeight<IconKeys>;
 
 export type IconScale =
   | 8
@@ -21,8 +28,6 @@ export type IconScale =
   | 124
   | 'auto'
   | 'inherit';
-
-export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 
 export interface Props {
   /**
@@ -58,7 +63,7 @@ export interface Props {
    * Name of the icon. Should be lowercase. See Icon docs for
    * available icons.
    */
-  name: string;
+  name: InferredIconName;
 
   /**
    * Scale represents the size/scale of te icon.

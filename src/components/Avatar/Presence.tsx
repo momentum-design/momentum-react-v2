@@ -3,10 +3,11 @@ import Icon from '../Icon';
 
 import { AvatarSize } from './Avatar.types';
 import { STYLE, AVATAR_PRESENCE_ICON_SIZE_MAPPING } from './Avatar.constants';
+import { InferredIconName } from '../Icon/Icon.types';
 
 interface PresenceProps {
   presenceColor: string;
-  presenceIcon: string;
+  presenceIcon: InferredIconName;
   isCircularWrapper: boolean;
   size: AvatarSize;
 }

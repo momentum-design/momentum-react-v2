@@ -28,7 +28,8 @@ exports[`<Icon /> snapshot should match snapshot 1`] = `
 exports[`<Icon /> snapshot should match snapshot with aria-label 1`] = `
 <Icon
   aria-label="This participant is muted"
-  name="draft-indicator-bold"
+  name="draft-indicator"
+  weight="bold"
 >
   <div
     aria-hidden="false"
@@ -41,7 +42,7 @@ exports[`<Icon /> snapshot should match snapshot with aria-label 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
-      data-test="draft-indicator-bold"
+      data-test="draft-indicator"
       fill="currentColor"
       height="100%"
       style={Object {}}
@@ -55,7 +56,8 @@ exports[`<Icon /> snapshot should match snapshot with aria-label 1`] = `
 exports[`<Icon /> snapshot should match snapshot with ariaLabel 1`] = `
 <Icon
   ariaLabel="This participant is muted"
-  name="draft-indicator-bold"
+  name="draft-indicator"
+  weight="bold"
 >
   <div
     aria-hidden="false"
@@ -68,7 +70,7 @@ exports[`<Icon /> snapshot should match snapshot with ariaLabel 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
-      data-test="draft-indicator-bold"
+      data-test="draft-indicator"
       fill="currentColor"
       height="100%"
       style={Object {}}
@@ -380,8 +382,9 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
 
 exports[`<Icon /> snapshot should match snapshot with title 1`] = `
 <Icon
-  name="draft-indicator-bold"
+  name="draft-indicator"
   title="You have a draft message"
+  weight="bold"
 >
   <div
     aria-hidden="false"
@@ -395,7 +398,7 @@ exports[`<Icon /> snapshot should match snapshot with title 1`] = `
       className=""
       data-autoscale={false}
       data-scale={32}
-      data-test="draft-indicator-bold"
+      data-test="draft-indicator"
       fill="currentColor"
       height="100%"
       style={Object {}}

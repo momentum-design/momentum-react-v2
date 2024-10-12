@@ -6,7 +6,12 @@ import ListItemBase from '../ListItemBase';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { ListItemBaseSection, MenuTrigger } from '@momentum-ui/react-collaboration';
+import {
+  AriaToolbar,
+  AriaToolbarItem,
+  ListItemBaseSection,
+  MenuTrigger,
+} from '@momentum-ui/react-collaboration';
 import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
@@ -455,12 +460,12 @@ describe('<List />', () => {
       await user.tab();
       expect(document.body).toHaveFocus();
 
-      // Move focus to the last interactable element of the last selected list item
+      // Shift tabbing into the last selects the list item itself again
       await user.tab({ shift: true });
-      expect(buttons[0]).toHaveFocus();
+      expect(listItems[0]).toHaveFocus();
 
-      // Second last interactable
-      await user.tab({ shift: true });
+      // First interactable within the list item
+      await user.tab();
       expect(inputs[0]).toHaveFocus();
 
       // Move focus to the selected list item
@@ -624,6 +629,545 @@ describe('<List />', () => {
       await user.click(buttons[0]);
 
       expect(listItems[0]).toHaveFocus();
+    });
+
+    it('should focus the item with initialFocus', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3} initialFocus={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      // If the list is already focused, changing the initial
+      // focus should not change the current focused position
+
+      rerender(
+        <List listSize={3} initialFocus={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-3" key="3" itemIndex={3}>
+            3
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-2')).toHaveFocus();
+    });
+
+    it('should focus the item with initialFocus when updated', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3} initialFocus={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      rerender(
+        <List listSize={4} initialFocus={2}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-3" key="3" itemIndex={3}>
+            3
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-2')).toHaveFocus();
+    });
+
+    it('should not autofocus when a new item is added to the list', async () => {
+      const { rerender } = render(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={0}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      rerender(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+    });
+
+    it('should retain focus when the first item is removed from list', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      rerender(
+        <List listSize={2}>
+          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={0}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+    });
+
+    it('should retain focus when the an item before the focused item is removed from list', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      rerender(
+        <List listSize={2}>
+          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={0}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+    });
+
+    it('should retain focus when the last item has focus and is removed from list', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-2')).toHaveFocus();
+
+      rerender(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+    });
+
+    it('should not autofocus when the last item is removed from the list', async () => {
+      const { rerender } = render(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      rerender(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+    });
+
+    it('should retain focus when a middle focused item is removed from list', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      rerender(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-2')).toHaveFocus();
+    });
+
+    it('should focus as expected when more items are added before tabbing to the list', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      rerender(
+        <List listSize={3}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+    });
+
+    it('should handle text selection', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={1} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            text selection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.pointer([
+        { target: getByTestId('list-item-0'), offset: 0, keys: '[MouseLeft>]' },
+        { offset: 4 },
+        { keys: '[/MouseLeft]' },
+      ]);
+
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('text');
+    });
+
+    it('should handle text selection - pointer', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={1} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            textselection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.pointer([
+        { target: getByTestId('list-item-0'), offset: 0, keys: '[TouchA]' },
+        { target: getByTestId('list-item-0'), offset: 4, keys: '[TouchB]' },
+      ]);
+
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('textselection');
+    });
+
+    it('should handle text selection of a not currently focused element', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={2} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            text selection
+          </ListItemBase>
+          <ListItemBase allowTextSelection data-testid="list-item-1" key="1" itemIndex={1}>
+            other selection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.pointer([
+        { target: getByTestId('list-item-1'), offset: 0, keys: '[MouseLeft>]' },
+        { offset: 4 },
+        { keys: '[/MouseLeft]' },
+      ]);
+
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('othe');
+    });
+
+    it('should handle text selection of a not currently focused element - pointer', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={2} shouldFocusOnPress>
+          <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
+            text selection
+          </ListItemBase>
+          <ListItemBase allowTextSelection data-testid="list-item-1" key="1" itemIndex={1}>
+            other selection
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      await user.pointer([
+        { target: getByTestId('list-item-1'), offset: 0, keys: '[TouchA]' },
+        { target: getByTestId('list-item-1'), offset: 4, keys: '[TouchB]' },
+      ]);
+      const selection = document.getSelection()?.toString();
+
+      expect(selection).toBe('other');
+    });
+
+    it('should focus on press when shouldFocusOnPress is true', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <List listSize={3} shouldFocusOnPress>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase
+            id="test"
+            allowTextSelection
+            data-testid="list-item-1"
+            key="1"
+            itemIndex={1}
+          >
+            1
+          </ListItemBase>
+          <ListItemBase allowTextSelection data-testid="list-item-2" key="2" itemIndex={2}>
+            2
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.click(getByTestId('list-item-1'));
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+    });
+
+    it('should handle an AriaToolbar in a list correctly', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId } = render(
+        <>
+          <ButtonPill data-testid="before">Before</ButtonPill>
+          <List listSize={2}>
+            <ListItemBase data-testid="list-item-0" size="auto" itemIndex={0} key={0}>
+              <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+                <AriaToolbarItem itemIndex={0}>
+                  <ButtonPill data-testid="button-1">Button 1</ButtonPill>
+                </AriaToolbarItem>
+                <AriaToolbarItem itemIndex={1}>
+                  <ButtonPill data-testid="button-2">Button 2</ButtonPill>
+                </AriaToolbarItem>
+              </AriaToolbar>
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" itemIndex={1} key={1}>
+              1
+            </ListItemBase>
+          </List>
+          <ButtonPill data-testid="after">After</ButtonPill>
+        </>
+      );
+
+      expect(document.body).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('before')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-1')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('after')).toHaveFocus();
+
+      await user.tab({ shift: true });
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('button-1')).toHaveFocus();
+
+      await user.keyboard('{ArrowRight}');
+
+      expect(getByTestId('button-2')).toHaveFocus();
+
+      await user.tab();
+
+      expect(getByTestId('after')).toHaveFocus();
     });
   });
 });

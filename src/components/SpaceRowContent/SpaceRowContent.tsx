@@ -10,6 +10,10 @@ import Icon from '../Icon';
 import DividerDot from '../DividerDot';
 import SecondLineElement from './SecondLineElement';
 import { cleanSecondLine } from './SpaceRowContent.utils';
+import ButtonCircle from '../ButtonCircle';
+import { Item } from '@react-stately/collections';
+import MenuTrigger from '../MenuTrigger';
+import Menu from '../Menu';
 
 //TODO: support 2-line labels for right/position-end section.
 /**
@@ -34,6 +38,9 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
     isCompact = false,
     rightIconTooltip,
     isDisabled = DEFAULTS.DISABLED,
+    menuItems,
+    onSelectMenuItem,
+    menuTriggerLabel,
   } = props;
 
   const renderText = () => {
@@ -185,6 +192,30 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
         {renderText()}
       </ListItemBaseSection>
       <ListItemBaseSection position="end">{renderRightSection()}</ListItemBaseSection>
+      {menuItems?.length ? (
+        <ListItemBaseSection position="end" className={STYLE.menuTriggerWrapper}>
+          {
+            <MenuTrigger
+              triggerComponent={
+                <ButtonCircle
+                  ghost
+                  size={isCompact ? 20 : 28}
+                  aria-label={menuTriggerLabel}
+                  data-testid="menu-trigger-button"
+                >
+                  <Icon name="more" weight="bold" scale={isCompact ? 16 : 24} />
+                </ButtonCircle>
+              }
+            >
+              <Menu selectionMode="single" onAction={onSelectMenuItem}>
+                {menuItems.map(({ key, text }) => (
+                  <Item key={key}>{text}</Item>
+                ))}
+              </Menu>
+            </MenuTrigger>
+          }
+        </ListItemBaseSection>
+      ) : null}
     </>
   );
 };
