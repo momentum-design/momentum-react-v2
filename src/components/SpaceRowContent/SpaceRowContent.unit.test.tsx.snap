@@ -977,6 +977,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                 "strategy": "absolute",
               }
             }
+            removeTippyAriaHidden={false}
             render={[Function]}
             setInstance={[Function]}
             trigger="click"

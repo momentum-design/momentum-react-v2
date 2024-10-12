@@ -1,5 +1,6 @@
 import { FocusStrategy } from '@react-types/shared';
 import { Direction } from './ComboBox.types';
+import { InferredIconName } from '../Icon/Icon.types';
 
 const CLASS_PREFIX = 'md-combo-box';
 
@@ -18,8 +19,12 @@ const KEYS = {
   NO_RESULT: 'no_result',
 };
 
-const ICON = {
-  ARROW_UP: 'arrow-up',
+type IconName = {
+  [key: string]: InferredIconName;
+};
+
+const ICON: IconName = {
+  ARROW_UP: 'arrow-down',
   ARROW_DOWN: 'arrow-down',
 };
 

@@ -138,7 +138,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     ...rest,
   });
 
-
   // This is a workaround because react-aria is killing the mouse/pointer events
   // It determines whether to prevent default by whether the element is draggable or not
   // So we set it to draggable on mouse down and pointer down and then set it back to false
@@ -280,7 +279,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       return;
     }
     updateTabIndexes();
-  }, [currentFocus, updateTabIndexes, isFocusedWithin]);
+  }, [currentFocus, updateTabIndexes, isFocusedWithin, listContext]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
@@ -299,6 +298,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       data-disabled={isDisabled}
       data-padded={isPadded}
       data-shape={shape}
+      data-focused={isFocused}
       data-interactive={interactive && !focusChild}
       data-allow-text-select={allowTextSelection}
       className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
