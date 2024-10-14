@@ -5,5 +5,8 @@ export type Props<TComponent extends AllowedTagNames = AllowedTagNames> = Omit<
   ComponentProps<TComponent>,
   'id'
 > & {
+  /**
+   * The HTMLElement that the tabpanel should be rendered as
+   */
   as?: TComponent;
 };
