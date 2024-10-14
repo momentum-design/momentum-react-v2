@@ -84,3 +84,5 @@ export { default as ButtonPillLink } from './ButtonPillLink';
 export { default as Tree, useTreeContext } from './Tree';
 export { default as TreeNodeBase } from './TreeNodeBase';
 export { default as MeetingRowContent } from './MeetingRowContent';
+export { default as TabList, Tabs, useTabsContext } from './TabList';
+export { default as TabPanel } from './TabPanel';
