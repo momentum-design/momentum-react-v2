@@ -1,4 +1,4 @@
-import { CSSProperties, PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import { TabProps } from '../Tab';
 import { ButtonGroupProps } from '../ButtonGroup';
 
@@ -8,49 +8,39 @@ export interface Props extends ButtonGroupProps {
    */
   children?: ReactElement<TabProps> | ReactElement<TabProps>[];
 
+  /**
+   * Handler that is called when a tab is pressed. If <Tab /> has a defined `onPress`, this handler is not called.
+   */
   onTabSelection?: (tab: React.Key) => void;
-
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
-
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
 }
 
 export type TabsProps = PropsWithChildren<{
   /**
-   * @todo
+   * The currently selected tab's key
    */
   selectedTab: React.Key;
 
   /**
-   * @todo
+   * The ID prefix for the tabs and the tabpanel
+   *
+   * By default: a UUIDv4 string will be used
    */
   id?: string;
 }>;
 
 export type TabsContextValue = Required<Omit<TabsProps, 'children'>> & {
   /**
-   * @todo
+   * The ID property of the active tab
    */
   activeTabId: string;
 
   /**
-   * @todo
+   * The ID property of the active tabpanel
    */
   activePanelId: string;
 
   /**
-   * @todo
+   * Prefixes the given key with the ID of the context
    */
   getTabId: (key: React.Key) => string;
 };
