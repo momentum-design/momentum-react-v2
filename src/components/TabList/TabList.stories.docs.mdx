@@ -18,6 +18,29 @@ the `active` property of `<Tabs>` to determine where the keyboard focus should b
 | `tabindex` | If `<Tab>` has active prop equal to true: `0`; else `-1` |
 | `onPress`  | Calls `onTabSelection` if not defined on `<Tab>`         |
 
+### Example Implementation
+
+```tsx
+// Example
+const [selectedTab, setSelectedTab] = useState('tab-1');
+
+return (
+  <TabList onTabSelection={setSelectedTab}>
+    <TabNext
+      key="tab-1"
+      // Uncontrolled: you have to set the following properties
+      active={selectedTab === 'tab-1'}
+      aria-selected={selectedTab === 'tab-1'}
+      aria-controls={selectedTab === 'tab-1' ? 'tab-1-tabpanel' : undefined}
+    >
+      Tab 1
+    </TabNext>
+    <TabNext key="tab-2">Tab 2</TabNext>
+    <TabNext key="tab-3">Tab 3</TabNext>
+  </TabList>
+);
+```
+
 ## Controlled <small>(where the `<TabList>` is inside a `<Tabs>` component)</small>
 
 Controlled adds all the active properies required for a11y automatically on `<Tab>` children.
@@ -28,8 +51,26 @@ Controlled adds all the active properies required for a11y automatically on `<Ta
 | --------------- | -------------------------------------------------------- |
 | `id`            | A unique id for the tab                                  |
 | `role`          | `tab`                                                    |
-| `tabindex`      | If `<Tab>` has active prop equal to true: `0`; else `-1` |
+| `tabIndex`      | If `<Tab>` has active prop equal to true: `0`; else `-1` |
 | `onPress`       | Calls `onTabSelection` if not defined on `<Tab>`         |
 | `active`        | `Tabs.selectedTab = Tab.key`                             |
 | `aria-selected` | String version of `active`                               |
 | `aria-controls` | If tab is active, the id of the related `tabpanel`       |
+
+### Example Implementation
+
+```tsx
+// Example
+const [selectedTab, setSelectedTab] = useState('tab-1');
+
+return (
+  <Tabs selectedTab={selectedTab}>
+    <TabList onTabSelection={setSelectedTab}>
+      {/* Controlled: you don't have to define any of state based properties */}
+      <TabNext key="tab-1">Tab 1</TabNext>
+      <TabNext key="tab-2">Tab 2</TabNext>
+      <TabNext key="tab-3">Tab 3</TabNext>
+    </TabList>
+  </Tabs>
+);
+```
