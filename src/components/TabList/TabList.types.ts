@@ -1,8 +1,6 @@
-import { ComponentProps, CSSProperties, PropsWithChildren, ReactElement, ReactNode } from 'react';
+import { CSSProperties, PropsWithChildren, ReactElement } from 'react';
 import { TabProps } from '../Tab';
 import { ButtonGroupProps } from '../ButtonGroup';
-import { ListOrientation } from '../List/List.types';
-import { Orientation } from '@react-types/shared';
 
 export interface Props extends ButtonGroupProps {
   /**
@@ -56,11 +54,3 @@ export type TabsContextValue = Required<Omit<TabsProps, 'children'>> & {
    */
   getTabId: (key: React.Key) => string;
 };
-
-// export type TabPanelProps = ComponentProps<'div'>;
-
-export type AllowedTagNames = 'div' | 'section';
-export type TabPanelProps<TComponent extends AllowedTagNames = AllowedTagNames> =
-  ComponentProps<TComponent> & {
-    as?: TComponent;
-  };

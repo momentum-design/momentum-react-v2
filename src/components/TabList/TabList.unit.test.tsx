@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Tab from '../Tab/Tab';
-import TabList, { TAB_LIST_CONSTANTS as CONSTANTS, TabPanel, Tabs } from './';
+import TabList, { TAB_LIST_CONSTANTS as CONSTANTS, Tabs } from './';
 import { Orientation } from '@react-types/shared';
 import * as useOrientationBasedKeyboardNavigationHook from '../../hooks/useOrientationBasedKeyboardNavigation';
 import { triggerPress } from 'test/utils';

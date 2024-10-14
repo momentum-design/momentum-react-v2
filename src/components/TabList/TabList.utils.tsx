@@ -1,13 +1,5 @@
-import React, {
-  HTMLAttributes,
-  createContext,
-  FC,
-  useContext,
-  useRef,
-  useCallback,
-  useMemo,
-} from 'react';
-import { AllowedTagNames, TabPanelProps, TabsContextValue, TabsProps } from './TabList.types';
+import React, { createContext, FC, useContext, useRef, useCallback, useMemo } from 'react';
+import { TabsContextValue, TabsProps } from './TabList.types';
 import { v4 as uuidv4 } from 'uuid';
 
 export const TabsContext = createContext<TabsContextValue>(null);
@@ -37,31 +29,4 @@ export const Tabs: FC<TabsProps> = (props: TabsProps) => {
   );
 
   return <TabsContext.Provider value={contextProps}>{children}</TabsContext.Provider>;
-};
-
-/**
- * The TabPanel Component
- */
-export const TabPanel: FC<TabPanelProps> = <T extends AllowedTagNames>(props: TabPanelProps<T>) => {
-  const { as, ...componentProps } = props;
-
-  const tabsContext = useTabsContext();
-
-  if (tabsContext === null) {
-    // eslint-disable-next-line no-console
-    console.error(
-      'MRV2 (TabPanel): Not recommended to use this component outside of a TabsContext'
-    );
-  }
-
-  const ariaProps = {
-    'aria-labelledby': tabsContext?.activeTabId || props['aria-labelledby'],
-    id: tabsContext?.activePanelId || props.id,
-  } as HTMLAttributes<HTMLElement>;
-
-  const Tag = as || 'div';
-
-  return (
-    <Tag {...(componentProps as HTMLAttributes<HTMLElement>)} role="tabpanel" {...ariaProps} />
-  );
 };
