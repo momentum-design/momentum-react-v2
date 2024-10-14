@@ -1,0 +1,35 @@
+The `<TabList />` component provides a wrapper around the `<ButtonGroupNext />` component that
+implements the accessibility requirements of a
+[tablist](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/).
+
+This component has been created for use inside and outside the `<Tabs>` component.
+
+## Uncontrolled <small>(where the `<TabList>` is outside of a `<Tabs>` component)</small>
+
+Uncontrolled requires the developer to update the active properties required for a11y. The only
+functionality `<TabList>` provides in this state is orientation based keyboard navigation. This uses
+the `active` property of `<Tabs>` to determine where the keyboard focus should be.
+
+`<TabList>` adds the following properties to `<Tab>` children:
+
+| Prop       | Value                                                    |
+| ---------- | -------------------------------------------------------- |
+| `role`     | `tab`                                                    |
+| `tabindex` | If `<Tab>` has active prop equal to true: `0`; else `-1` |
+| `onPress`  | Calls `onTabSelection` if not defined on `<Tab>`         |
+
+## Controlled <small>(where the `<TabList>` is inside a `<Tabs>` component)</small>
+
+Controlled adds all the active properies required for a11y automatically on `<Tab>` children.
+
+`<TabList>` adds the following properties to `<Tab>` children:
+
+| Prop            | Value                                                    |
+| --------------- | -------------------------------------------------------- |
+| `id`            | A unique id for the tab                                  |
+| `role`          | `tab`                                                    |
+| `tabindex`      | If `<Tab>` has active prop equal to true: `0`; else `-1` |
+| `onPress`       | Calls `onTabSelection` if not defined on `<Tab>`         |
+| `active`        | `Tabs.selectedTab = Tab.key`                             |
+| `aria-selected` | String version of `active`                               |
+| `aria-controls` | If tab is active, the id of the related `tabpanel`       |
