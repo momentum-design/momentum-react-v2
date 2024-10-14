@@ -36,16 +36,6 @@ describe('<TabPanel />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with id', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = mount(<TabPanel id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
     it('should match snapshot with style', () => {
       expect.assertions(1);
 
@@ -90,16 +80,18 @@ describe('<TabPanel />', () => {
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should have provided id when id is provided', () => {
+    it('should not use a provided id', () => {
       expect.assertions(1);
 
       const id = 'example-id';
 
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       const element = mount(<TabPanel id={id} />)
         .find(TabPanel)
         .getDOMNode();
 
-      expect(element.id).toBe(id);
+      expect(element.id).not.toBe(id);
     });
 
     it('should have provided style when style is provided', () => {
@@ -117,7 +109,7 @@ describe('<TabPanel />', () => {
 
     it('should render as the provided tag name', () => {
       const container = mount(
-        <TabPanel aria-labelledby="label" id="id" className="test" as="section">
+        <TabPanel aria-labelledby="label" className="test" as="section">
           Hello World
         </TabPanel>
       );
@@ -127,7 +119,7 @@ describe('<TabPanel />', () => {
       expect(container.find('section').props()).toStrictEqual({
         'aria-labelledby': 'label',
         className: 'md-tab-panel-wrapper test',
-        id: 'id',
+        id: undefined,
         children: 'Hello World',
         role: 'tabpanel',
       });

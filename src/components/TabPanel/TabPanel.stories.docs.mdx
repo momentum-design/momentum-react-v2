@@ -1,3 +1,32 @@
 The `<TabPanel />` component implements the a11y requirements for a
 [tabpanel](https://w3c.github.io/aria/#tabpanel) based upon the context within a `<Tabs />`
-component.
+component. The component automatically sets the `id` and the `aria-controlledby` properties.
+
+The `<TabPanel />` component **does not** filter the correct tab to display itself. This must be
+implemented by the developer.
+
+### Example Implementation
+
+```tsx
+// Example
+const [selectedTab, setSelectedTab] = useState('tab-1');
+
+const TABS = { 'tab-1': 'One', 'tab-2': 'Two', 'tab-3': 'Three' };
+
+return (
+  <Tabs selectedTab={selectedTab}>
+    <TabList onTabSelection={setSelectedTab}>
+      <TabNext key="tab-1">Tab 1</TabNext>
+      <TabNext key="tab-2">Tab 2</TabNext>
+      <TabNext key="tab-3">Tab 3</TabNext>
+    </TabList>
+
+    <TabPanel>{TABS[selectedTab]}</TabPanel>
+  </Tabs>
+);
+```
+
+## Stylization
+
+This element supports the usage of `className` and `style` props to allow for custom dynamic theming
+and element identification.

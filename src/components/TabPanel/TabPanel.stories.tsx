@@ -1,6 +1,5 @@
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import TabPanel, { TabPanelProps } from './';
 import argTypes from './TabPanel.stories.args';
@@ -12,7 +11,7 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocumentationPage(Documentation, StyleDocs),
+      page: DocumentationPage(Documentation),
     },
   },
 };

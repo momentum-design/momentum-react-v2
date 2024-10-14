@@ -21,7 +21,7 @@ export const TabPanel: FC<Props> = <T extends AllowedTagNames>(props: Props<T>) 
 
   const ariaProps = {
     'aria-labelledby': tabsContext?.activeTabId || props['aria-labelledby'],
-    id: tabsContext?.activePanelId || props.id,
+    id: tabsContext?.activePanelId,
   } as HTMLAttributes<HTMLElement>;
 
   return (

@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/react';
 import { TabPanelProps } from '.';
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonStyles as _commonStyles } from '../../storybook/helper.stories.argtypes';
 
 const tabPanelArgTypes: Meta<TabPanelProps>['argTypes'] = {
   // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
@@ -34,6 +34,9 @@ const tabPanelArgTypes: Meta<TabPanelProps>['argTypes'] = {
 };
 
 export { tabPanelArgTypes };
+
+const commonStyles = { ..._commonStyles };
+delete commonStyles.id;
 
 export default {
   ...commonStyles,
