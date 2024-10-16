@@ -59,7 +59,7 @@ const generateMain = (dir) => {
       // Adding these will mean they go through babel and therefore work with IE
       nodeModulesRule.include = [
         nodeModulesRule.include,
-        /[\\/]node_modules[\\/](@react-aria|react-verification-input)/,
+        /[\\/]node_modules[\\/](@react-aria|react-verification-input|lit|@lit\/react|@lit\/context)/,
       ];
       return config;
     },

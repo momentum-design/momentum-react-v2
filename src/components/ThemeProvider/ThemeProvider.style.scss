@@ -1,26 +1,12 @@
-// Inter Variable Font
-@font-face {
-  font-family: 'Inter';
-  src: url('../../fonts/Inter.var.woff2') format('woff2');
-  font-style: normal;
-  font-display: swap;
-  font-weight: 1 1000; /* Required for Safari support */
-}
-
 .md-theme-provider-wrapper {
   border: 0;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
-  color: var(--mds-color-theme-text-primary-normal);
   // IE11 Bug with scroll bar: See https://www.sitepoint.com/community/t/content-shifting/110141/9
   background: var(--mds-color-theme-background-solid-primary-normal);
   background: var(--md-globals-gradient-primary);
-  font-family: var(--md-globals-font-default);
-  font-weight: 450;
-  // adjusting Inter's letter spacing to match the old CiscoSans
-  letter-spacing: -0.25px;
 
   // Firefox fix for scrollbar
   // On macOS, you need to set the General > Show scroll bars
@@ -49,7 +35,6 @@
   --md-globals-elevation-7: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-elevation-8: 0 2rem 4rem rgba(0, 0, 0, 0.2), 0 0 0.0625rem rgba(0, 0, 0, 0.11);
   --md-globals-focus-ring-outline: none;
-  --md-globals-font-default: 'Inter';
   --md-globals-border-style-none: none;
   --md-globals-border-style-solid: solid;
 
