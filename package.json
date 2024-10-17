@@ -5,7 +5,7 @@
   "author": "Cisco Systems, Inc.",
   "homepage": "http://momentum.design",
   "engines": {
-    "node": ">=16"
+    "node": ">=22"
   },
   "keywords": [
     "Cisco",
