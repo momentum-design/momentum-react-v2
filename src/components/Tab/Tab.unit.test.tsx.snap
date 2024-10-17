@@ -162,9 +162,13 @@ exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`]
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    isDisabled={false}
   >
-    <FocusRing>
+    <FocusRing
+      disabled={false}
+    >
       <FocusRing
+        disabled={false}
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
@@ -172,6 +176,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`]
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -530,9 +535,13 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    isDisabled={false}
   >
-    <FocusRing>
+    <FocusRing
+      disabled={false}
+    >
       <FocusRing
+        disabled={false}
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
@@ -540,6 +549,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -898,9 +908,13 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    isDisabled={false}
   >
-    <FocusRing>
+    <FocusRing
+      disabled={false}
+    >
       <FocusRing
+        disabled={false}
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
@@ -908,6 +922,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -1205,9 +1220,13 @@ exports[`<Tab /> snapshot string children should match snapshot with disabled 1`
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    isDisabled={false}
   >
-    <FocusRing>
+    <FocusRing
+      disabled={false}
+    >
       <FocusRing
+        disabled={false}
         focusClass="md-focus-ring-wrapper children"
         focusRingClass="md-focus-ring-wrapper children"
       >
@@ -1215,6 +1234,7 @@ exports[`<Tab /> snapshot string children should match snapshot with disabled 1`
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
