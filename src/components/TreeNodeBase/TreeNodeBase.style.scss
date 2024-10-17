@@ -17,6 +17,11 @@
   &.selected {
     color: var(--mds-color-theme-text-primary-normal);
     background-color: var(--mds-color-theme-background-primary-active);
+
+    @media (forced-colors: active) {
+      background: SelectedItem !important;
+      color: SelectedItemText !important;
+    }
   }
 
   &.focus {
