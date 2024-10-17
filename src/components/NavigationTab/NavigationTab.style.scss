@@ -47,7 +47,14 @@
 
     @media (forced-colors: active) {
       background-color: SelectedItem;
-      color: SelectedItemText;
+
+      > .md-navigation-tab-icon > * {
+        color: SelectedItemText;
+      }
+
+      > .md-navigation-tab-label {
+        color: SelectedItemText;
+      }
     }
 
     > .md-navigation-tab-icon > * {
