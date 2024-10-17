@@ -1,7 +1,6 @@
+import type { ComboBoxProps } from '@react-types/combobox';
 import { CollectionChildren } from '@react-types/shared';
-import { PressEvent } from '@react-types/shared/src/events';
-import { CSSProperties, RefObject } from 'react';
-
+import { CSSProperties } from 'react';
 
 export type IComboBoxItem = {
   key: string;
@@ -14,84 +13,68 @@ export type IComboBoxGroup = {
   section?: string;
 };
 
-export interface Props {
-  /**
-   * Handler that is called when an item is selected in the list.
-   * If the selected item matches the selectedKey, the parameter is undefined.
-   */
-  onSelectionChange?: (item: IComboBoxItem) => void;
-  /**
-   * Handler that is called when the ComboBox input value changes.
-   */
-  onInputChange?: (event: InputEvent) => void;
-  /**
-   * Handler that is called when the arrowButton pressed.
-   */
-  onArrowButtonPress?: (event: PressEvent) => void;
-  /**
-   * Handler that is called when isOpen state of list chanages.
-   */
-  openStateChange?: (isOpen: boolean) => void;
+export type Direction = 'top' | 'bottom';
+
+export interface Props extends ComboBoxProps<IComboBoxItem | IComboBoxGroup> {
   /**
    * id: id of help message.
    */
   id?: string;
+
   /**
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
   /**
    * Custom class to be able to override the component's CSS.
    */
   className?: string;
+
   /**
    * Label/message to be displayed with this component.
    */
   label?: string;
+
   /**
    * Description associated with this component. Appears below the title.
    */
   description?: string;
-  /**
-   * Description associated with this component. Appears below the title.
-   */
-  error?: boolean;
-  /**
-   * Override the list box width and ComboBox container width.
-   * defaultValue: 16.25rem
-   */
-  width?: string;
-  /**
-   * Text to display inside the input when there is no inputValue.
-   */
-  placeholder?: string;
-  /**
-   * This property represents whether to filter based on the input value when click the arrowButton.
-   */
-  shouldFilterOnArrowButton?: boolean;
+
   /**
    * Text to display inside the list box when there are no items that match the user's input.
-   * defaultValue: No results found
    */
-  noResultText?: string;
+  noResultLabel?: string;
+
   /**
-   * The list of options for this component.
+   * Direction in which the option list will display
+   * @default bottom
    */
-  comboBoxGroups: IComboBoxGroup[];
+  direction?: Direction;
+
   /**
-   * The currently disabled keys in the collection.
+   * To override the list box max height
    */
-  disabledKeys?: string[];
+  listboxMaxHeight?: string;
+
   /**
-   * The currently selected key in the collection.
+   * Override the list box width to allow for fixed popover strategy
+   *
+   * To style the list box without applying fixed popover strategy, pass in className instead
+   *
+   * NOTE: if set, the popover strategy will be set to 'fixed'
    */
-  selectedKey?: string; 
+  listboxWidth?: string;
+
   /**
-   * Used to get the input DOM within the component.
+   * The list of ComboBox items (uncontrolled).
    */
-  inputRef?: RefObject<HTMLInputElement>;
+  items?: Array<IComboBoxItem | IComboBoxGroup>;
+
   /**
-   * Child components of this component.
+   * The list of ComboBox items (controlled).
    */
+  defaultItems?: Array<IComboBoxItem | IComboBoxGroup>;
+
   children: CollectionChildren<any>;
 }

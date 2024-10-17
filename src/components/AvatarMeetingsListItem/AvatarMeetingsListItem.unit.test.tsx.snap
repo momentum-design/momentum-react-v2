@@ -22,6 +22,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -143,6 +144,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -302,6 +304,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
           className="example-class md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -422,6 +425,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -620,6 +624,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -823,6 +828,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1022,6 +1028,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1141,6 +1148,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1258,6 +1266,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1404,6 +1413,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1550,6 +1560,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1696,6 +1707,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1842,6 +1854,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"
@@ -1977,6 +1990,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
           className="md-avatar-meetings-list-item-wrapper md-list-item-base-wrapper"
           data-allow-text-select={false}
           data-disabled={false}
+          data-focused={false}
           data-interactive={true}
           data-padded={false}
           data-shape="isPilled"

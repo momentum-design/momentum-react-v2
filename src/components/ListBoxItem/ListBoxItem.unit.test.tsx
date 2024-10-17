@@ -58,6 +58,7 @@ describe('ListBoxItem', () => {
       expect(base.props()).toEqual({
         isPadded: true,
         isDisabled: false,
+        isFocused: false,
         children: expect.any(Object),
       });
       expect(element.innerHTML).toBe(item.rendered);

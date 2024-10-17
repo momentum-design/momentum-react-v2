@@ -34,6 +34,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     shape = DEFAULTS.SHAPE,
     size = DEFAULTS.SIZE(shape || DEFAULTS.SHAPE),
     isDisabled = DEFAULTS.IS_DISABLED,
+    isFocused = DEFAULTS.IS_FOCUSED,
     isPadded = DEFAULTS.IS_PADDED,
     role = DEFAULTS.ROLE,
     focusChild = DEFAULTS.FOCUS_CHILD,
@@ -50,7 +51,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     onFocusWithin,
     ...rest
   } = props;
-
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
   const listContext = useListContext();
@@ -279,7 +279,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       return;
     }
     updateTabIndexes();
-  }, [currentFocus, updateTabIndexes, isFocusedWithin]);
+  }, [currentFocus, updateTabIndexes, isFocusedWithin, listContext]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
@@ -298,6 +298,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       data-disabled={isDisabled}
       data-padded={isPadded}
       data-shape={shape}
+      data-focused={isFocused}
       data-interactive={interactive && !focusChild}
       data-allow-text-select={allowTextSelection}
       className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}

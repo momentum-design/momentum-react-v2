@@ -36,6 +36,12 @@ export interface Props
   isDisabled?: boolean;
 
   /**
+   * Determines if this item is focused
+   * @default false
+   */
+  isFocused?: boolean;
+
+  /**
    * Determines if this item is selected
    * @default false
    */
