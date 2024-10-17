@@ -194,6 +194,15 @@ svg.md-icon-coloured {
   height: fit-content;
   justify-content: center;
   width: fit-content;
+
+  @media (forced-colors: active) {
+    background: Canvas !important;
+
+    svg {
+      fill: CanvasText !important;
+      stroke: CanvasText !important;
+    }
+  }
 }
 
 .md-icon-not-found {
