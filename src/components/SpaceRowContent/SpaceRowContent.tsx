@@ -56,7 +56,7 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
     if (secondLineArrayClean.length) {
       return (
         <>
-          <Text type="body-primary" data-test="list-item-first-line" data-disabled={isDisabled}>
+          <Text type="body-primary" tagName="div" data-test="list-item-first-line" data-disabled={isDisabled}>
             {firstLine}
           </Text>
           {isCompact && <DividerDot data-test="compact-mode-divider-dot" />}
@@ -76,7 +76,7 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
       );
     } else {
       return (
-        <Text data-test="list-item-first-line" type="body-primary" data-disabled={isDisabled}>
+        <Text data-test="list-item-first-line" tagName="div" type="body-primary" data-disabled={isDisabled}>
           {firstLine}
         </Text>
       );
