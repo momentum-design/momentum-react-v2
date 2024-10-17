@@ -292,7 +292,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
 exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
 <ReactionButton
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -303,7 +303,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
     ghost={true}
     size={32}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -321,7 +321,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
       data-shallow-disabled={false}
       data-size={32}
       style={
-        Object {
+        {
           "color": "pink",
         }
       }
@@ -357,7 +357,7 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
             onTouchMove={[Function]}
             onTouchStart={[Function]}
             style={
-              Object {
+              {
                 "color": "pink",
               }
             }

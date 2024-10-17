@@ -37,7 +37,7 @@ exports[`<AriaGroup /> snapshot should match snapshot with children 1`] = `
   >
     <div
       style={
-        Object {
+        {
           "display": "flex",
           "flexDirection": "column",
           "justifyContent": "start",

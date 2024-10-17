@@ -410,7 +410,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
   aria-label="test"
   listSize={2}
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -422,7 +422,7 @@ exports[`<List /> snapshot should match snapshot with style 1`] = `
     onFocus={[Function]}
     onKeyDown={[Function]}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }

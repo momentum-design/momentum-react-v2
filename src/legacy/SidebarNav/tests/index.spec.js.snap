@@ -12,7 +12,7 @@ exports[`<SidebarNav /> should render a SidebarNav 1`] = `
     <Component>
       <UID
         idSource={
-          Object {
+          {
             "prefix": "",
             "uid": [Function],
             "value": 2,

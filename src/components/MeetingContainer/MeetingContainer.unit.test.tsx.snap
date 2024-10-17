@@ -333,7 +333,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
 exports[`<MeetingContainer /> snapshot should match snapshot with circle action buttons supplied 1`] = `
 <MeetingContainer
   actionButtons={
-    Array [
+    [
       <ButtonCircle
         color="join"
         ghost={true}
@@ -757,7 +757,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
 exports[`<MeetingContainer /> snapshot should match snapshot with disable supplied 1`] = `
 <MeetingContainer
   actionButtons={
-    Array [
+    [
       <ButtonPill
         color="join"
         ghost={true}
@@ -786,7 +786,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
     </ButtonHyperlink>
   }
   tags={
-    Array [
+    [
       <Tag>
         Messages
       </Tag>,
@@ -1285,7 +1285,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
 exports[`<MeetingContainer /> snapshot should match snapshot with pill action buttons supplied 1`] = `
 <MeetingContainer
   actionButtons={
-    Array [
+    [
       <ButtonPill
         color="join"
         ghost={true}
@@ -2146,7 +2146,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
 exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
 <MeetingContainer
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -2155,7 +2155,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
     className="md-meeting-container-wrapper"
     height="auto"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -2166,7 +2166,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
       data-height="auto"
       data-rounding={2}
       style={
-        Object {
+        {
           "color": "pink",
         }
       }
@@ -2196,7 +2196,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
             onTouchMove={[Function]}
             onTouchStart={[Function]}
             style={
-              Object {
+              {
                 "color": "pink",
               }
             }
@@ -2269,7 +2269,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
 exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 1`] = `
 <MeetingContainer
   tags={
-    Array [
+    [
       <Tag>
         Messages
       </Tag>,

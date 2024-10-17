@@ -1,4 +1,4 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils'); // eslint-disable-line
+const { pathsToModuleNameMapper } = require('ts-jest'); // eslint-disable-line
 const { compilerOptions } = require('./tsconfig.json'); // eslint-disable-line
 
 const moduleMaps = pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' });
@@ -22,4 +22,5 @@ module.exports = {
     '\\/reactions/.*\\.json\\?lottie$': '<rootDir>/tools/reactionMock.js',
     ...moduleMaps,
   },
+  testEnvironment: 'jsdom',
 };
