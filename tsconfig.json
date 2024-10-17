@@ -9,7 +9,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
-    "moduleResolution": "node16",
+    "moduleResolution": "node",
     "outDir": "./dist/esm",
     "baseUrl": ".",
     "paths": {

@@ -160,7 +160,7 @@ describe('tests for <Coachmark />', () => {
 
     container.setState({ coachmarkOpen: true });
 
-    jest.runTimersToTime(300);
+    jest.advanceTimersByTime(300);
     container.update();
     expect(container.find('.coachmark-content').length).toEqual(1);
 
@@ -169,7 +169,7 @@ describe('tests for <Coachmark />', () => {
     evt.initEvent('click', false, true);
     document.dispatchEvent(evt);
 
-    jest.runTimersToTime(200);
+    jest.advanceTimersByTime(200);
     container.update();
     expect(container.find('.coachmark-content').length).toEqual(0);
   });

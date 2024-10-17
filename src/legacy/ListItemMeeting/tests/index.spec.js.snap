@@ -20,7 +20,7 @@ exports[`tests for <ListItemMeeting /> should match SnapShot 1`] = `
   ratioOffset={-0.4}
   statusColor={null}
   time={
-    Object {
+    {
       "end": "",
       "start": "",
     }
@@ -46,7 +46,7 @@ exports[`tests for <ListItemMeeting /> should match SnapShot 1`] = `
       focus={false}
       focusLockTabbableChildren={false}
       focusLockTabbableChildrenProps={
-        Object {
+        {
           "portalNodeQuery": "",
           "tabbableChildrenHasPopover": false,
           "tabbableChildrenQuery": "",
@@ -77,7 +77,7 @@ exports[`tests for <ListItemMeeting /> should match SnapShot 1`] = `
       >
         <UID
           idSource={
-            Object {
+            {
               "prefix": "",
               "uid": [Function],
               "value": 2,

@@ -43,7 +43,7 @@ exports[`tests for <ContentItem /> should match SnapShot 1`] = `
           onKeyDown={[Function]}
           role="presentation"
           style={
-            Object {
+            {
               "backgroundImage": null,
             }
           }
