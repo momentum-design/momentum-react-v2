@@ -48,8 +48,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 22.x
-          check-latest: true
+          node-version-file: '.nvmrc'
 
       - name: Validate Dependencies
         id: validate-dependencies
@@ -82,8 +81,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 22.x
-          check-latest: true
+          node-version-file: '.nvmrc'
 
       - name: Uncache Dependencies
         uses: actions/cache@v2
@@ -107,8 +105,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 22.x
-          check-latest: true
+          node-version-file: '.nvmrc'
 
       - name: Uncache Dependencies
         uses: actions/cache@v2
@@ -135,8 +132,7 @@ jobs:
       - name: Setup Environment
         uses: actions/setup-node@v2
         with:
-          node-version: 22.x
-          check-latest: true
+          node-version-file: '.nvmrc'
 
       - name: Uncache Dependencies
         uses: actions/cache@v2
