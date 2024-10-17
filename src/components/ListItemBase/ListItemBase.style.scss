@@ -26,6 +26,11 @@
     &.active {
       color: var(--mds-color-theme-text-primary-normal);
       background-color: var(--mds-color-theme-background-primary-active);
+
+      @media (forced-colors: active) {
+        background-color: SelectedItem !important;
+        color: SelectedItemText !important;
+      }
     }
 
     &.focus {
@@ -40,10 +45,18 @@
       &,
       .md-text-wrapper {
         color: var(--mds-color-theme-text-primary-disabled);
+
+        @media (forced-colors: active) {
+          color: GrayText !important;
+        }
       }
 
       svg {
         fill: var(--mds-color-theme-text-primary-disabled);
+
+        @media (forced-colors: active) {
+          fill: GrayText !important;
+        }
       }
     }
   }
