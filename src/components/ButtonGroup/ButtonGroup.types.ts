@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
+import { AriaRole, CSSProperties, ReactElement } from 'react';
 
 import { ButtonCircleProps } from '../ButtonCircle';
 import { ButtonPillProps } from '../ButtonPill';
@@ -59,7 +59,7 @@ export interface Props {
   /**
    * Role for adding accessibility
    */
-  role?: string;
+  role?: AriaRole;
 
   /**
    * Orientation of ButtonGroup

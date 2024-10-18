@@ -1,4 +1,4 @@
-import { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
+import { AriaRole, CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
 
 export type ListOrientation = 'horizontal' | 'vertical';
 
@@ -36,7 +36,7 @@ export interface Props {
   /**
    * Aria role
    */
-  role?: string;
+  role?: AriaRole;
 
   /**
    * Determines if the onPress handler should also focus the selected item
