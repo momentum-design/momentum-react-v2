@@ -5,8 +5,17 @@
   width: 6rem;
   background-color: var(--mds-color-theme-background-primary-ghost);
 
+  @media (forced-colors: active) {
+    outline: 1px solid ButtonBorder;
+  }
+
   &:hover {
     background-color: var(--mds-color-theme-background-primary-hover);
+
+    @media (forced-colors: active) {
+      background-color: SelectedItem;
+      color: SelectedItemText;
+    }
   }
 
   &:active {
@@ -15,6 +24,11 @@
 
   &[data-selected='true'] {
     background-color: var(--mds-color-theme-background-primary-active);
+
+    @media (forced-colors: active) {
+      background-color: SelectedItem;
+      color: SelectedItemText;
+    }
   }
 
   &[data-focused='true'] {
