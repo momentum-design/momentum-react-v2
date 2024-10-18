@@ -93,16 +93,17 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
                           data-type="body-primary"
                         >
                           firstLine
-                        </p>
+                        </div>
                       </Text>
                       <DividerDot
                         data-test="compact-mode-divider-dot"
@@ -248,9 +249,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -375,9 +377,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -497,9 +500,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -616,16 +620,17 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
                           data-type="body-primary"
                         >
                           firstLine
-                        </p>
+                        </div>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -737,9 +742,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -856,9 +862,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1006,9 +1013,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1155,9 +1163,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = 
                       <Text
                         data-disabled={true}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={true}
                           data-test="list-item-first-line"
@@ -1274,9 +1283,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1424,9 +1434,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1574,9 +1585,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1724,9 +1736,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`]
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1843,9 +1856,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = 
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -1964,9 +1978,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -2114,9 +2129,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -2276,9 +2292,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -2450,9 +2467,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -2611,9 +2629,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
@@ -2730,9 +2749,10 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with teamColor 1`] = `
                       <Text
                         data-disabled={false}
                         data-test="list-item-first-line"
+                        tagName="div"
                         type="body-primary"
                       >
-                        <p
+                        <div
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"

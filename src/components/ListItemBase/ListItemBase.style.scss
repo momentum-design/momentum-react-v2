@@ -84,7 +84,8 @@
 
     // trim any type of text inside
     p,
-    span {
+    span,
+    .md-text-wrapper {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
