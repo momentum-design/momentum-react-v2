@@ -422,7 +422,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
     />
   }
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -433,7 +433,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
     data-reacted={false}
     size={20}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -452,7 +452,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
       data-shallow-disabled={false}
       data-size={20}
       style={
-        Object {
+        {
           "color": "pink",
         }
       }
@@ -489,7 +489,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
             onTouchMove={[Function]}
             onTouchStart={[Function]}
             style={
-              Object {
+              {
                 "color": "pink",
               }
             }

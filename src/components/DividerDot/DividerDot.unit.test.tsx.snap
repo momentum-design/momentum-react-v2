@@ -32,7 +32,7 @@ exports[`<DividerDot /> snapshot should match snapshot with id 1`] = `
 exports[`<DividerDot /> snapshot should match snapshot with style 1`] = `
 <DividerDot
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -40,7 +40,7 @@ exports[`<DividerDot /> snapshot should match snapshot with style 1`] = `
   <div
     className="md-divider-dot-wrapper"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }

@@ -11,7 +11,7 @@ exports[`tests for <ComboBox /> should match SnapShot 1`] = `
   onChange={null}
   onSelect={null}
   options={
-    Array [
+    [
       "a",
       "ab",
       "abc",
@@ -20,7 +20,7 @@ exports[`tests for <ComboBox /> should match SnapShot 1`] = `
   placeholder=""
   searchProp="label"
   targetOffset={
-    Object {
+    {
       "horizontal": 0,
       "vertical": 4,
     }
@@ -83,7 +83,7 @@ exports[`tests for <ComboBox /> should match SnapShot 1`] = `
         inputSize=""
         isFilled={false}
         label=""
-        messageArr={Array []}
+        messageArr={[]}
         multiline={false}
         name={null}
         nestedLevel={0}
@@ -134,7 +134,7 @@ exports[`tests for <ComboBox /> should match SnapShot 1`] = `
                     aria-label={null}
                     className="md-icon icon icon-search_20"
                     style={
-                      Object {
+                      {
                         "fontSize": 20,
                       }
                     }

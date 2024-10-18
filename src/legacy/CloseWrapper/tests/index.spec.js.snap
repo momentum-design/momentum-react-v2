@@ -31,7 +31,7 @@ exports[`tests for <CloseWrapper /> should match SnapShot 1`] = `
         aria-label="Close"
         className="md-icon icon icon-clear-active_20"
         style={
-          Object {
+          {
             "fontSize": 20,
           }
         }

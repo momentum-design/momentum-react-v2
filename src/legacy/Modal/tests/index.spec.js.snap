@@ -73,13 +73,13 @@ exports[`tests for <Modal /> should render a Modal 1`] = `
         underlayClass="md-modal__backdrop fade in"
         underlayClickExits={false}
         underlayColor="rgba(0,0,0,0.5)"
-        underlayProps={Object {}}
+        underlayProps={{}}
       >
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}
           focusTrapOptions={
-            Object {
+            {
               "escapeDeactivates": true,
               "initialFocus": "#react-aria-modal-dialog",
             }
@@ -90,7 +90,7 @@ exports[`tests for <Modal /> should render a Modal 1`] = `
           <div>
             <div
               className="md-modal__backdrop fade in"
-              style={Object {}}
+              style={{}}
             >
               <div
                 aria-labelledby="testModal"
@@ -98,7 +98,7 @@ exports[`tests for <Modal /> should render a Modal 1`] = `
                 id="react-aria-modal-dialog"
                 key="b"
                 role="dialog"
-                style={Object {}}
+                style={{}}
                 tabIndex="-1"
               >
                 <div

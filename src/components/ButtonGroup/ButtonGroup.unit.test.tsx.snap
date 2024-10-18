@@ -979,7 +979,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
 exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
 <ButtonCircle
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -996,7 +996,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
     data-shallow-disabled={false}
     data-size={40}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -1031,7 +1031,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            Object {
+            {
               "color": "pink",
             }
           }

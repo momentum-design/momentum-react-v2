@@ -62,7 +62,7 @@ exports[`<Overlay /> snapshot should match snapshot with id 1`] = `
 exports[`<Overlay /> snapshot should match snapshot with style 1`] = `
 <Overlay
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -72,7 +72,7 @@ exports[`<Overlay /> snapshot should match snapshot with style 1`] = `
     data-color="primary"
     data-fullscreen={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }

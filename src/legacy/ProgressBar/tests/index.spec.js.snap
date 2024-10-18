@@ -40,7 +40,7 @@ exports[`tests for <ProgressBar /> should match SnapShot 1`] = `
         className="meter"
         role="progressbar"
         style={
-          Object {
+          {
             "width": "50%",
           }
         }

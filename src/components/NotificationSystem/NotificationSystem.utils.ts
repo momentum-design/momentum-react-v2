@@ -23,7 +23,7 @@ export const getContainerID = (id: string, attention: AttentionType): string =>
 export const calculateAutoClose = (options?: NotifyOptionsType): number | false => {
   const defaultAutoClose =
     options?.attention === ATTENTION.MEDIUM ? false : DEFAULTS.AUTOCLOSE_TIMEOUT;
-  return options?.autoClose > 0 || options?.autoClose === false
+  return options?.autoClose === false || options?.autoClose > 0
     ? options.autoClose
     : defaultAutoClose;
 };

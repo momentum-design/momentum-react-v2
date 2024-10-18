@@ -37,7 +37,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
             >
               <UID
                 idSource={
-                  Object {
+                  {
                     "prefix": "",
                     "uid": [Function],
                     "value": 1,
@@ -69,7 +69,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
                       focus={false}
                       focusLockTabbableChildren={false}
                       focusLockTabbableChildrenProps={
-                        Object {
+                        {
                           "portalNodeQuery": "",
                           "tabbableChildrenHasPopover": false,
                           "tabbableChildrenQuery": "",
@@ -100,7 +100,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
                       >
                         <UID
                           idSource={
-                            Object {
+                            {
                               "prefix": "",
                               "uid": [Function],
                               "value": 1,

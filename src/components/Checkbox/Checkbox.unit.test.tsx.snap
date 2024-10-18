@@ -9,7 +9,7 @@ exports[`<Checkbox /> snapshot should match snapshot 1`] = `
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -64,7 +64,7 @@ exports[`<Checkbox /> snapshot should match snapshot with className 1`] = `
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -119,7 +119,7 @@ exports[`<Checkbox /> snapshot should match snapshot with disabled checkbox 1`] 
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -175,7 +175,7 @@ exports[`<Checkbox /> snapshot should match snapshot with id 1`] = `
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -230,7 +230,7 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -289,7 +289,7 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
             data-test="minus"
             fill="currentColor"
             height="100%"
-            style={Object {}}
+            style={{}}
             viewBox="0, 0, 32, 32"
             width="100%"
           />
@@ -311,7 +311,7 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox 1`] 
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -368,7 +368,7 @@ exports[`<Checkbox /> snapshot should match snapshot with not selected checkbox 
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -423,7 +423,7 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",
@@ -482,7 +482,7 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
             data-test="check"
             fill="currentColor"
             height="100%"
-            style={Object {}}
+            style={{}}
             viewBox="0, 0, 32, 32"
             width="100%"
           />
@@ -496,7 +496,7 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
 exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
 <Checkbox
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -505,7 +505,7 @@ exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
     className="md-checkbox-wrapper"
     data-disabled={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -513,7 +513,7 @@ exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
     <VisuallyHidden>
       <div
         style={
-          Object {
+          {
             "border": 0,
             "clip": "rect(0 0 0 0)",
             "clipPath": "inset(50%)",

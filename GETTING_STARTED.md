@@ -36,12 +36,11 @@ In order to execute any scripts associated with this project, the projects depen
 initialized using the following command:
 
 ```bash
-yarn install # installing with yarn package manager
-
-# or
-
-npm install # installing with node package manager
+yarn install
 ```
+
+> In case you get `command not found: yarn`, please run `corepack enable` before you try again
+> `yarn install`
 
 ## Building
 
@@ -51,9 +50,6 @@ compile the source code:
 ```bash
 yarn build # building with yarn package manager
 
-# or
-
-npm run build # building with node package manager
 ```
 
 ## Consumption

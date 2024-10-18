@@ -36,7 +36,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot 1`] = `
               fill="currentColor"
               height="100%"
               style={
-                Object {
+                {
                   "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
@@ -73,10 +73,10 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
     aria-label="global search"
     clearButtonAriaLabel="search"
     filters={
-      Array [
-        Object {
+      [
+        {
           "term": "from",
-          "translations": Object {
+          "translations": {
             "empty": "empty",
             "filterAdded": "filteradded",
             "filterRemoved": "filterremoved",
@@ -85,9 +85,9 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
           },
           "value": "Joe",
         },
-        Object {
+        {
           "term": "in",
-          "translations": Object {
+          "translations": {
             "empty": "empty",
             "filterAdded": "filteradded",
             "filterRemoved": "filterremoved",
@@ -132,7 +132,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
               fill="currentColor"
               height="100%"
               style={
-                Object {
+                {
                   "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
@@ -224,7 +224,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when filters are s
                     data-test="cancel"
                     fill="currentColor"
                     height="100%"
-                    style={Object {}}
+                    style={{}}
                     viewBox="0, 0, 32, 32"
                     width="100%"
                   />
@@ -276,7 +276,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
               fill="currentColor"
               height="100%"
               style={
-                Object {
+                {
                   "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
@@ -344,7 +344,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with className 1`]
               fill="currentColor"
               height="100%"
               style={
-                Object {
+                {
                   "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
@@ -413,7 +413,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with id 1`] = `
               fill="currentColor"
               height="100%"
               style={
-                Object {
+                {
                   "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }
@@ -450,7 +450,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
     aria-label="global search"
     clearButtonAriaLabel="search"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -460,7 +460,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
       data-focus={false}
       onClick={[Function]}
       style={
-        Object {
+        {
           "color": "pink",
         }
       }
@@ -490,7 +490,7 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot with style 1`] = `
               fill="currentColor"
               height="100%"
               style={
-                Object {
+                {
                   "stroke": "var(--mds-color-theme-text-primary-normal)",
                 }
               }

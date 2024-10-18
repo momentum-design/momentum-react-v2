@@ -186,7 +186,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                           data-test="camera"
                           fill="currentColor"
                           height="100%"
-                          style={Object {}}
+                          style={{}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -260,7 +260,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={Object {}}
+                          style={{}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -464,7 +464,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                           data-test="camera"
                           fill="currentColor"
                           height="100%"
-                          style={Object {}}
+                          style={{}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -538,7 +538,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={Object {}}
+                          style={{}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -941,7 +941,7 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
 exports[`<Banner /> snapshot should match snapshot with style 1`] = `
 <Banner
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -950,7 +950,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
     className="md-banner-wrapper"
     round={75}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -964,7 +964,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
       data-round={75}
       role="dialog"
       style={
-        Object {
+        {
           "color": "pink",
         }
       }

@@ -36,7 +36,7 @@ exports[`tests for <CollapseButton /> should match SnapShot 1`] = `
       preventKeyboardDoubleClick={false}
       removeStyle={false}
       size={36}
-      style={Object {}}
+      style={{}}
       tag="button"
       type="button"
     >
@@ -45,7 +45,7 @@ exports[`tests for <CollapseButton /> should match SnapShot 1`] = `
       >
         <UID
           idSource={
-            Object {
+            {
               "prefix": "",
               "uid": [Function],
               "value": 2,
@@ -65,8 +65,8 @@ exports[`tests for <CollapseButton /> should match SnapShot 1`] = `
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             style={
-              Object {
-                "style": Object {},
+              {
+                "style": {},
               }
             }
             tabIndex={0}
@@ -76,7 +76,7 @@ exports[`tests for <CollapseButton /> should match SnapShot 1`] = `
               className="md-button__children"
               key="child-1"
               style={
-                Object {
+                {
                   "opacity": "1",
                 }
               }
@@ -102,7 +102,7 @@ exports[`tests for <CollapseButton /> should match SnapShot 1`] = `
                   aria-label={null}
                   className="md-icon icon icon-panel-control-right_12"
                   style={
-                    Object {
+                    {
                       "fontSize": 12,
                     }
                   }

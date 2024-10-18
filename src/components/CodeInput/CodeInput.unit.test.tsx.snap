@@ -11,19 +11,19 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
     <VerificationInput
       autoFocus={false}
       classNames={
-        Object {
+        {
           "character": "md-code-input-character",
           "characterInactive": "md-code-input-character--inactive",
           "characterSelected": "md-code-input-character--selected",
         }
       }
       containerProps={
-        Object {
+        {
           "className": "md-code-input-container",
         }
       }
       inputProps={
-        Object {
+        {
           "aria-describedby": undefined,
           "aria-label": undefined,
           "className": "md-code-input-input",
@@ -100,9 +100,9 @@ exports[`CodeInput snapshot should match snapshot 1`] = `
       </div>
       <style
         dangerouslySetInnerHTML={
-          Object {
-            "__html": Array [
-              Array [
+          {
+            "__html": [
+              [
                 28,
                 ".vi {
   top: 0;

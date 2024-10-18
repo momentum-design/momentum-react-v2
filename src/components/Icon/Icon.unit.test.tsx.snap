@@ -17,7 +17,7 @@ exports[`<Icon /> snapshot should match snapshot 1`] = `
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -45,7 +45,7 @@ exports[`<Icon /> snapshot should match snapshot with aria-label 1`] = `
       data-test="draft-indicator"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -73,7 +73,7 @@ exports[`<Icon /> snapshot should match snapshot with ariaLabel 1`] = `
       data-test="draft-indicator"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -99,7 +99,7 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to 'true' 1`
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -125,7 +125,7 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to a percent
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -151,7 +151,7 @@ exports[`<Icon /> snapshot should match snapshot with className 1`] = `
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -177,7 +177,7 @@ exports[`<Icon /> snapshot should match snapshot with color 1`] = `
       data-test="accessibility"
       height="100%"
       style={
-        Object {
+        {
           "fill": "red",
           "stroke": "red",
         }
@@ -207,7 +207,7 @@ exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
       data-test="accessibility"
       height="100%"
       style={
-        Object {
+        {
           "fill": "red",
         }
       }
@@ -237,7 +237,7 @@ exports[`<Icon /> snapshot should match snapshot with id 1`] = `
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -281,7 +281,7 @@ exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -307,7 +307,7 @@ exports[`<Icon /> snapshot should match snapshot with small icons 1`] = `
       data-test="info-badge"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 14, 14"
       width="100%"
     />
@@ -334,7 +334,7 @@ exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
       fill="currentColor"
       height="100%"
       style={
-        Object {
+        {
           "stroke": "red",
         }
       }
@@ -349,7 +349,7 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
 <Icon
   name="accessibility"
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -359,7 +359,7 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
     role="img"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -372,7 +372,7 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -401,7 +401,7 @@ exports[`<Icon /> snapshot should match snapshot with title 1`] = `
       data-test="draft-indicator"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />
@@ -427,7 +427,7 @@ exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
       data-test="accessibility"
       fill="currentColor"
       height="100%"
-      style={Object {}}
+      style={{}}
       viewBox="0, 0, 32, 32"
       width="100%"
     />

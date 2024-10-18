@@ -625,7 +625,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
 exports[`ListItemBase snapshot should match snapshot with style 1`] = `
 <ListItemBase
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -663,7 +663,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
         onTouchStart={[Function]}
         role="listitem"
         style={
-          Object {
+          {
             "color": "pink",
           }
         }

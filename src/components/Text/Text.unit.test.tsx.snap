@@ -37,7 +37,7 @@ exports[`Text should match snapshot with id 1`] = `
 exports[`Text should match snapshot with style 1`] = `
 <Text
   style={
-    Object {
+    {
       "color": "red",
     }
   }
@@ -46,7 +46,7 @@ exports[`Text should match snapshot with style 1`] = `
     className="md-text-wrapper"
     data-type="body-primary"
     style={
-      Object {
+      {
         "color": "red",
       }
     }

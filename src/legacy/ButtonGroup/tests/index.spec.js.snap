@@ -48,7 +48,7 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
           preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={36}
-          style={Object {}}
+          style={{}}
           tag="button"
           type="button"
         >
@@ -57,7 +57,7 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
           >
             <UID
               idSource={
-                Object {
+                {
                   "prefix": "",
                   "uid": [Function],
                   "value": 1,
@@ -79,8 +79,8 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
                 onKeyDown={[Function]}
                 onKeyUp={[Function]}
                 style={
-                  Object {
-                    "style": Object {},
+                  {
+                    "style": {},
                     "width": "60px",
                   }
                 }
@@ -91,7 +91,7 @@ exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
                   className="md-button__children"
                   key="child-1"
                   style={
-                    Object {
+                    {
                       "opacity": "1",
                     }
                   }
