@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { AriaRole, CSSProperties, ReactNode } from 'react';
 import { PressEvents } from '@react-types/shared';
 import { FocusProps, FocusWithinProps } from '@react-aria/interactions';
 
@@ -63,7 +63,7 @@ export interface Props
    * Aria role
    * @default "listitem"
    */
-  role?: string;
+  role?: AriaRole;
 
   /**
    * Indicates wether this item is currently focusable
