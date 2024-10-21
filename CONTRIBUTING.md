@@ -93,16 +93,15 @@ of your changes. An approval is required before your changes can be merged.
 ## Requirements
 
 In order to begin making contributions to this project, [NodeJS](https://nodejs.org/en/) must be
-installed. Currently, this project is built for usage on the Node `v14.x.x` **LTS** runtime.
+installed. The currently used NodeJS version is defined in the [.nvmrc](./.nvmrc).
 
-While the [NodeJS](https://nodejs.org/en/) installation package includes the package manager:
-[Node Package Manager](https://www.npmjs.com/), we recommend that the developement platform has
-[yarn package manager](https://yarnpkg.com/) installed globally. See
-[this yarn documentation page](https://yarnpkg.com/getting-started/install) as a reference for
-installing yarn 1 on your platform.
+While [NodeJS](https://nodejs.org/en/) can be installed manually, we recommend to use
+[NVM - Node Version Manager](https://github.com/nvm-sh/nvm) instead. It can automatically switch to
+the correct version of NodeJS based on the `.nvmrc` or download it if necessary.
 
-Note that all example scripts within this contribution guide will utilize `yarn` as the package
-manager.
+This project use [Yarn Package Manager](https://yarnpkg.com/) via
+[NodeJS corepack](https://nodejs.org/api/corepack.html). To activate it, just run `corepack enable`
+in the root of the project after NodeJS installed.
 
 ## Project Structure
 

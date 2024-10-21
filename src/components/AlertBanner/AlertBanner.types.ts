@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
 import { ButtonSimpleProps } from '../ButtonSimple';
 import { IconProps } from '../Icon';
 
@@ -14,7 +14,7 @@ export interface Props {
   /**
    * Label/message to be displayed with this component. Overrides `label`.
    */
-  children?: string;
+  children?: ReactNode;
 
   /**
    * Custom class for overriding this component's CSS.

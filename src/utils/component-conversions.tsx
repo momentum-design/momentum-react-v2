@@ -39,7 +39,7 @@ const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConvert
   const addedProps: { className?: string } = {};
 
   if (className) {
-    addedProps.className = isElement ? classNames(children.classNames, className) : className;
+    addedProps.className = isElement ? classNames(children['classNames'], className) : className;
   }
 
   return isElement ? (

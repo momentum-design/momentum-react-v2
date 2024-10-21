@@ -27,7 +27,7 @@ exports[`<AlertBanner /> snapshot should match snapshot 1`] = `
 exports[`<AlertBanner /> snapshot should match snapshot with buttons 1`] = `
 <AlertBanner
   buttons={
-    Array [
+    [
       <div>
         button 1
       </div>,
@@ -72,7 +72,35 @@ exports[`<AlertBanner /> snapshot should match snapshot with buttons 1`] = `
 </AlertBanner>
 `;
 
-exports[`<AlertBanner /> snapshot should match snapshot with children 1`] = `
+exports[`<AlertBanner /> snapshot should match snapshot with children as ReactElement 1`] = `
+<AlertBanner>
+  <div
+    className="md-alert-banner-wrapper"
+    data-centered={false}
+    data-color="default"
+    data-grow={false}
+    data-pill={false}
+    data-size="default"
+    data-static={false}
+  >
+    <div
+      className="md-alert-banner-image"
+    />
+    <div
+      className="md-alert-banner-label"
+    >
+      <div>
+        Example Text
+      </div>
+    </div>
+    <div
+      className="md-alert-banner-buttons"
+    />
+  </div>
+</AlertBanner>
+`;
+
+exports[`<AlertBanner /> snapshot should match snapshot with children as string 1`] = `
 <AlertBanner>
   <div
     className="md-alert-banner-wrapper"
@@ -89,7 +117,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with children 1`] = `
     <p
       className="md-alert-banner-label"
     >
-      children
+      Example Text
     </p>
     <div
       className="md-alert-banner-buttons"
@@ -373,7 +401,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with size 1`] = `
 exports[`<AlertBanner /> snapshot should match snapshot with style 1`] = `
 <AlertBanner
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -387,7 +415,7 @@ exports[`<AlertBanner /> snapshot should match snapshot with style 1`] = `
     data-size="default"
     data-static={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }

@@ -39,7 +39,7 @@ describe('useMutationObservable', () => {
 
   beforeAll(() => {
     jest.clearAllTimers();
-    jest.useFakeTimers('modern');
+    jest.useFakeTimers();
   });
 
   it('should call the callback after DOM change', async function () {

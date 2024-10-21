@@ -2,7 +2,7 @@
 
 exports[`<Sidebar /> should render a Sidebar 1`] = `
 <Sidebar
-  buttonProps={Object {}}
+  buttonProps={{}}
   className=""
   collapsable={false}
   expanded={true}

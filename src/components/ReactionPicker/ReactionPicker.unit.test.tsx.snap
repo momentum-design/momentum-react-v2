@@ -13,6 +13,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot 1`] = `
   >
     <div
       aria-label="test-aria-label"
+      aria-orientation="horizontal"
       className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
       role="toolbar"
     />
@@ -33,6 +34,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
   >
     <div
       aria-label="test-aria-label"
+      aria-orientation="horizontal"
       className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
       role="toolbar"
     >
@@ -132,6 +134,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with className 1`] = 
   >
     <div
       aria-label="test-aria-label"
+      aria-orientation="horizontal"
       className="example-class md-reaction-picker-wrapper md-aria-toolbar-wrapper"
       role="toolbar"
     />
@@ -154,6 +157,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with id 1`] = `
   >
     <div
       aria-label="test-aria-label"
+      aria-orientation="horizontal"
       className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
       id="example-id"
       role="toolbar"
@@ -167,7 +171,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
   ariaLabel="test-aria-label"
   ariaToolbarItemsSize={0}
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -178,17 +182,18 @@ exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
     className="md-reaction-picker-wrapper"
     orientation="horizontal"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
   >
     <div
       aria-label="test-aria-label"
+      aria-orientation="horizontal"
       className="md-reaction-picker-wrapper md-aria-toolbar-wrapper"
       role="toolbar"
       style={
-        Object {
+        {
           "color": "pink",
         }
       }

@@ -268,7 +268,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with id 1`] = `
 exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = `
 <Tab
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -278,7 +278,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = 
     data-active={false}
     data-disabled={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -307,7 +307,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = 
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            Object {
+            {
               "color": "pink",
             }
           }
@@ -382,7 +382,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
                 data-test="plus"
                 fill="currentColor"
                 height="100%"
-                style={Object {}}
+                style={{}}
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />
@@ -448,7 +448,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
                 data-test="plus"
                 fill="currentColor"
                 height="100%"
-                style={Object {}}
+                style={{}}
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />
@@ -514,7 +514,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
                 data-test="plus"
                 fill="currentColor"
                 height="100%"
-                style={Object {}}
+                style={{}}
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />
@@ -585,7 +585,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
                 data-test="plus"
                 fill="currentColor"
                 height="100%"
-                style={Object {}}
+                style={{}}
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />
@@ -653,7 +653,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
                 data-test="plus"
                 fill="currentColor"
                 height="100%"
-                style={Object {}}
+                style={{}}
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />
@@ -669,7 +669,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
 exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
 <Tab
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -679,7 +679,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
     data-active={false}
     data-disabled={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -708,7 +708,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            Object {
+            {
               "color": "pink",
             }
           }
@@ -733,7 +733,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
                 data-test="plus"
                 fill="currentColor"
                 height="100%"
-                style={Object {}}
+                style={{}}
                 viewBox="0, 0, 32, 32"
                 width="100%"
               />
@@ -1014,7 +1014,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
 exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
 <Tab
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -1024,7 +1024,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
     data-active={false}
     data-disabled={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -1053,7 +1053,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            Object {
+            {
               "color": "pink",
             }
           }
@@ -1302,7 +1302,7 @@ exports[`<Tab /> snapshot string children should match snapshot with id 1`] = `
 exports[`<Tab /> snapshot string children should match snapshot with style 1`] = `
 <Tab
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -1312,7 +1312,7 @@ exports[`<Tab /> snapshot string children should match snapshot with style 1`] =
     data-active={false}
     data-disabled={false}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -1341,7 +1341,7 @@ exports[`<Tab /> snapshot string children should match snapshot with style 1`] =
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            Object {
+            {
               "color": "pink",
             }
           }

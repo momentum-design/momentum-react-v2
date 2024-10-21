@@ -35,7 +35,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
               data-test="warning"
               height="100%"
               style={
-                Object {
+                {
                   "fill": "var(--mds-color-theme-text-error-normal)",
                 }
               }

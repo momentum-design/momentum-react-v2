@@ -18,7 +18,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     id,
     style,
     children,
-    orientation = DEFAULTS.ORIENTATION as Props['orientation'],
+    orientation = DEFAULTS.ORIENTATION,
     shouldRenderAsButtonGroup = DEFAULTS.SHOULD_RENDER_AS_BUTTON_GROUP,
     onTabPress,
     ariaControls,
@@ -55,6 +55,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     'aria-label': ariaLabel,
     'aria-controls': ariaControls,
     role: 'toolbar',
+    'aria-orientation': orientation,
     ...rest,
   };
 
@@ -76,7 +77,7 @@ const AriaToolbar: FC<Props> = (props: Props) => {
 
   useEffect(() => {
     // When the toolbar is rendered inside a list, only the first item in the toolbar
-    // should be focusable. This is the preserve the tab order as the
+    // should be focusable. This is to preserve the tab order as the
     // List uses a roving tab index.
     getKeyboardFocusableElements(ref.current, false).forEach((el, index) => {
       if (index === 0) {

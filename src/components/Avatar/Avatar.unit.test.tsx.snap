@@ -113,7 +113,7 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
               data-test="warning"
               height="100%"
               style={
-                Object {
+                {
                   "fill": "var(--mds-color-theme-indicator-attention)",
                   "stroke": "none",
                 }
@@ -160,7 +160,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
           data-test="check"
           fill="currentColor"
           height="100%"
-          style={Object {}}
+          style={{}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -204,7 +204,7 @@ exports[`Avatar snapshot should match snapshot with iconOnHover 1`] = `
             data-test="check"
             fill="currentColor"
             height="100%"
-            style={Object {}}
+            style={{}}
             viewBox="0, 0, 32, 32"
             width="100%"
           />
@@ -275,7 +275,7 @@ exports[`Avatar snapshot should match snapshot with isTyping and typingLabel 1`]
     >
       <div
         style={
-          Object {
+          {
             "transform": "scale(0.4)",
           }
         }
@@ -496,7 +496,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="unread"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-stable)",
                     "stroke": "none",
                   }
@@ -566,7 +566,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="camera-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-unstable)",
                     "stroke": "none",
                   }
@@ -636,7 +636,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="meetings-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-unstable)",
                     "stroke": "none",
                   }
@@ -706,7 +706,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="handset"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-unstable)",
                     "stroke": "none",
                   }
@@ -776,7 +776,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="dnd-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-attention)",
                     "stroke": "none",
                   }
@@ -846,7 +846,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="share-screen"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-attention)",
                     "stroke": "none",
                   }
@@ -916,7 +916,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="quiet-hours-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-locked)",
                     "stroke": "none",
                   }
@@ -986,7 +986,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="recents-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-locked)",
                     "stroke": "none",
                   }
@@ -1056,7 +1056,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="pto-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-locked)",
                     "stroke": "none",
                   }
@@ -1126,7 +1126,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="busy-presence"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-unstable)",
                     "stroke": "none",
                   }
@@ -1196,7 +1196,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="phone"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-locked)",
                     "stroke": "none",
                   }
@@ -1266,7 +1266,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="generic-device-video"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-locked)",
                     "stroke": "none",
                   }
@@ -1336,7 +1336,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 data-test="pause"
                 height="100%"
                 style={
-                  Object {
+                  {
                     "fill": "var(--mds-color-theme-indicator-locked)",
                     "stroke": "none",
                   }

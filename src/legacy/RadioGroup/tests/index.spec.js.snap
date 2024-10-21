@@ -4,7 +4,7 @@ exports[`tests for <RadioGroup /> should match SnapShot 1`] = `
 <RadioGroup
   name=""
   onChange={[Function]}
-  values={Array []}
+  values={[]}
 >
   <div
     className="md-radio-group"

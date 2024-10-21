@@ -273,6 +273,31 @@ describe('<AriaToolbar />', () => {
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
+
+    it.each`
+      orientation     | ariaOrientation
+      ${'horizontal'} | ${'horizontal'}
+      ${'vertical'}   | ${'vertical'}
+      ${undefined}    | ${'horizontal'}
+    `(
+      'should have provided aria-orientation when orientation is $orientation',
+      ({ orientation, ariaOrientation }) => {
+        expect.assertions(1);
+
+        const element = mount(
+          <AriaToolbar
+            shouldRenderAsButtonGroup
+            ariaLabel="test"
+            orientation={orientation}
+            ariaToolbarItemsSize={0}
+          />
+        )
+          .find(AriaToolbar)
+          .getDOMNode();
+
+        expect(element.getAttribute('aria-orientation')).toBe(ariaOrientation);
+      }
+    );
   });
 
   describe('actions', () => {
