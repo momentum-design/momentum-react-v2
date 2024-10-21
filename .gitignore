@@ -64,7 +64,6 @@ bundle.min.js.map
 /src/app/data
 /storybook-static
 /docs
-!/src/docs/
 
 # Packages #
 ############
@@ -109,6 +108,7 @@ packages
 **/build/
 **/dist/
 **/coverage/
+**/docs/
 **/downloads
 **/backup
 **/uploads
