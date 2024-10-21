@@ -39,7 +39,7 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
       </ButtonHyperlink>
       <div
         style={
-          Object {
+          {
             "paddingRight": 0,
           }
         }
@@ -137,7 +137,7 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
           <div
             key="participants-list"
             style={
-              Object {
+              {
                 "paddingRight": 0,
               }
             }

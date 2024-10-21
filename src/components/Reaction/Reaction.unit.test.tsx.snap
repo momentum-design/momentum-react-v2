@@ -479,7 +479,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
             data-test="spinner"
             fill="currentColor"
             height="100%"
-            style={Object {}}
+            style={{}}
             viewBox="0, 0, 32, 32"
             width="100%"
           />
@@ -504,7 +504,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
             data-test="spinner-in-progress"
             fill="currentColor"
             height="100%"
-            style={Object {}}
+            style={{}}
             viewBox="0, 0, 32, 32"
             width="100%"
           />
@@ -519,7 +519,7 @@ exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
 <Reaction
   name="haha"
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -529,7 +529,7 @@ exports[`<Reaction/> snapshot should match snapshot with style 1`] = `
     data-name="haha"
     data-scale={12}
     style={
-      Object {
+      {
         "color": "pink",
       }
     }

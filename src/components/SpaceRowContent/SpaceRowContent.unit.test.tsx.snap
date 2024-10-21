@@ -47,7 +47,7 @@ exports[`<SpaceRowContent /> snapshot checks divider dot position in compact mod
         aria-label="testteam"
         data-test="list-item-second-line"
         style={
-          Object {
+          {
             "color": "var(--mds-color-theme-text-teamdefault-normal)",
           }
         }
@@ -59,7 +59,7 @@ exports[`<SpaceRowContent /> snapshot checks divider dot position in compact mod
           data-test="list-item-second-line"
           data-type="body-secondary"
           style={
-            Object {
+            {
               "color": "var(--mds-color-theme-text-teamdefault-normal)",
             }
           }
@@ -284,7 +284,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isAlert 1`] = `
             data-test="alert"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-text-primary-normal)",
                 "stroke": "none",
               }
@@ -359,7 +359,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isAlertMuted 1`
             data-test="alert-muted"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-text-primary-normal)",
                 "stroke": "none",
               }
@@ -478,7 +478,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isEnterRoom 1`]
             data-test="enter-room"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-control-active-normal)",
                 "stroke": "none",
               }
@@ -553,7 +553,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isError 1`] = `
             data-test="priority-circle"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-text-error-normal)",
                 "stroke": "none",
               }
@@ -628,7 +628,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isMention 1`] =
             data-test="mention"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-control-active-normal)",
                 "stroke": "none",
               }
@@ -748,7 +748,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isSelected and 
             data-test="draft-indicator"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-text-primary-normal)",
                 "stroke": "none",
               }
@@ -823,7 +823,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isUnread 1`] = 
             data-test="unread"
             height="100%"
             style={
-              Object {
+              {
                 "fill": "var(--mds-color-theme-control-active-normal)",
                 "stroke": "none",
               }
@@ -841,8 +841,8 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with isUnread 1`] = 
 exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] = `
 <SpaceRowContent
   menuItems={
-    Array [
-      Object {
+    [
+      {
         "key": "item-1",
         "text": "Item 1",
       },
@@ -952,7 +952,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
             hideOnClick={true}
             interactive={true}
             offset={
-              Array [
+              [
                 0,
                 5,
               ]
@@ -961,27 +961,27 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
             onHidden={[Function]}
             placement="bottom-start"
             plugins={
-              Array [
-                Object {
+              [
+                {
                   "fn": [Function],
                   "name": "addBackdropPlugin",
                 },
               ]
             }
             popperOptions={
-              Object {
-                "modifiers": Array [
-                  Object {
+              {
+                "modifiers": [
+                  {
                     "enabled": false,
                     "name": "arrow",
-                    "options": Object {
+                    "options": {
                       "element": "#arrow1",
                       "padding": 5,
                     },
                   },
-                  Object {
+                  {
                     "name": "preventOverflow",
-                    "options": Object {
+                    "options": {
                       "altAxis": true,
                       "boundariesElement": "scrollParent",
                       "padding": 8,
@@ -1001,7 +1001,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
               hideOnClick={true}
               interactive={true}
               offset={
-                Array [
+                [
                   0,
                   5,
                 ]
@@ -1010,36 +1010,36 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
               onHidden={[Function]}
               placement="bottom-start"
               plugins={
-                Array [
-                  Object {
+                [
+                  {
                     "fn": [Function],
                   },
-                  Object {
+                  {
                     "fn": [Function],
                   },
-                  Object {
+                  {
                     "fn": [Function],
                   },
-                  Object {
+                  {
                     "fn": [Function],
                     "name": "addBackdropPlugin",
                   },
                 ]
               }
               popperOptions={
-                Object {
-                  "modifiers": Array [
-                    Object {
+                {
+                  "modifiers": [
+                    {
                       "enabled": false,
                       "name": "arrow",
-                      "options": Object {
+                      "options": {
                         "element": "#arrow1",
                         "padding": 5,
                       },
                     },
-                    Object {
+                    {
                       "name": "preventOverflow",
-                      "options": Object {
+                      "options": {
                         "altAxis": true,
                         "boundariesElement": "scrollParent",
                         "padding": 8,
@@ -1058,7 +1058,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                 hideOnClick={true}
                 interactive={true}
                 offset={
-                  Array [
+                  [
                     0,
                     5,
                   ]
@@ -1067,36 +1067,36 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                 onHidden={[Function]}
                 placement="bottom-start"
                 plugins={
-                  Array [
-                    Object {
+                  [
+                    {
                       "fn": [Function],
                     },
-                    Object {
+                    {
                       "fn": [Function],
                     },
-                    Object {
+                    {
                       "fn": [Function],
                     },
-                    Object {
+                    {
                       "fn": [Function],
                       "name": "addBackdropPlugin",
                     },
                   ]
                 }
                 popperOptions={
-                  Object {
-                    "modifiers": Array [
-                      Object {
+                  {
+                    "modifiers": [
+                      {
                         "enabled": false,
                         "name": "arrow",
-                        "options": Object {
+                        "options": {
                           "element": "#arrow1",
                           "padding": 5,
                         },
                       },
-                      Object {
+                      {
                         "name": "preventOverflow",
-                        "options": Object {
+                        "options": {
                           "altAxis": true,
                           "boundariesElement": "scrollParent",
                           "padding": 8,
@@ -1197,7 +1197,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                                 data-test="more"
                                 fill="currentColor"
                                 height="100%"
-                                style={Object {}}
+                                style={{}}
                                 viewBox="0, 0, 32, 32"
                                 width="100%"
                               />
@@ -1232,7 +1232,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
 exports[`<SpaceRowContent /> snapshot should match snapshot with multiple string secondLine 1`] = `
 <SpaceRowContent
   secondLine={
-    Array [
+    [
       "one",
       "two",
       "three",
@@ -1271,7 +1271,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with multiple string
         aria-label="one, two, three"
         data-test="list-item-second-line"
         style={
-          Object {
+          {
             "color": "var(--mds-color-theme-text-teamdefault-normal)",
           }
         }
@@ -1283,7 +1283,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with multiple string
           data-test="list-item-second-line"
           data-type="body-secondary"
           style={
-            Object {
+            {
               "color": "var(--mds-color-theme-text-teamdefault-normal)",
             }
           }
@@ -1370,7 +1370,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with secondLine 1`] 
         aria-label="secondLine"
         data-test="list-item-second-line"
         style={
-          Object {
+          {
             "color": "var(--mds-color-theme-text-teamdefault-normal)",
           }
         }
@@ -1382,7 +1382,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with secondLine 1`] 
           data-test="list-item-second-line"
           data-type="body-secondary"
           style={
-            Object {
+            {
               "color": "var(--mds-color-theme-text-teamdefault-normal)",
             }
           }

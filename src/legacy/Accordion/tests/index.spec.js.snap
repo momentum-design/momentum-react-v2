@@ -3,7 +3,7 @@
 exports[`tests for <Accordion /> should match SnapShot 1`] = `
 <Accordion
   className=""
-  initialActive={Array []}
+  initialActive={[]}
   multipleVisible={false}
   onSelect={null}
   showSeparator={false}
