@@ -4,11 +4,11 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Tab from '../Tab/Tab';
-import TabList, { TAB_LIST_CONSTANTS as CONSTANTS, Tabs } from './';
+import Tab from '../Tab';
+import TabList, { TAB_LIST_CONSTANTS as CONSTANTS } from './';
+import Tabs from '../Tabs';
 import { Orientation } from '@react-types/shared';
 import * as useOrientationBasedKeyboardNavigationHook from '../../hooks/useOrientationBasedKeyboardNavigation';
-import { triggerPress } from 'test/utils';
 
 describe('<TabList />', () => {
   const detachedCommonProps = (activeTab: string | undefined = 'tab-1') => ({
@@ -305,8 +305,6 @@ describe('<TabList />', () => {
     });
 
     it('sets the tabindex correctly when a disabled element is in the list', async () => {
-      const user = userEvent.setup();
-
       const { getAllByRole } = render(
         <TabList>
           <Tab key="tab-1">Tab 1</Tab>
@@ -333,7 +331,7 @@ describe('<TabList />', () => {
 
       const onTabSelection = jest.fn();
 
-      const { getByText, getAllByRole } = render(
+      const { getByText } = render(
         <TabList onTabSelection={onTabSelection} {...detachedCommonProps()} />
       );
 
@@ -359,7 +357,7 @@ describe('<TabList />', () => {
     it(`resets the focused element when tabbing out`, async () => {
       const user = userEvent.setup();
 
-      const { getByRole, getAllByRole } = render(<TabList {...detachedCommonProps('tab-2')} />);
+      const { getAllByRole } = render(<TabList {...detachedCommonProps('tab-2')} />);
       const tabs = getAllByRole('tab');
 
       await user.tab();
