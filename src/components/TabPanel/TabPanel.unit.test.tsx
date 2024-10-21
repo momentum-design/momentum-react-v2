@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import TabPanel, { TAB_PANEL_CONSTANTS as CONSTANTS } from './';
-import { Tabs } from '../TabList';
+import Tabs from '../Tabs';
 
 describe('<TabPanel />', () => {
   let consoleWarnSpy: jest.SpyInstance;

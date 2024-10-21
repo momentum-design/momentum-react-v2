@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { STYLE, DEFAULTS } from './TabPanel.constants';
 import { AllowedTagNames, Props } from './TabPanel.types';
 import './TabPanel.style.scss';
-import { useTabsContext } from '../TabList/TabList.utils';
+import { useTabsContext } from '../Tabs/Tabs.utils';
 
 /**
  * The TabPanel Component

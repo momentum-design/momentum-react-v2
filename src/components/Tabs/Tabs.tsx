@@ -1,15 +1,13 @@
-import React, { createContext, FC, useContext, useCallback, useMemo, useState } from 'react';
-import { TabsContextValue, TabsProps } from './TabList.types';
+import React, { FC, useCallback, useMemo, useState } from 'react';
+
 import { v4 as uuidv4 } from 'uuid';
-
-export const TabsContext = createContext<TabsContextValue>(null);
-
-export const useTabsContext: () => TabsContextValue = () => useContext(TabsContext);
+import { Props, TabsContextValue } from './Tabs.types';
+import { TabsContext } from './Tabs.utils';
 
 /**
- * The Tabs Component
+ * The Tabs component.
  */
-export const Tabs: FC<TabsProps> = (props: TabsProps) => {
+const Tabs: FC<Props> = (props: Props) => {
   const { selectedTab, id: _id, children } = props;
 
   const [id] = useState(_id || uuidv4());
@@ -30,3 +28,5 @@ export const Tabs: FC<TabsProps> = (props: TabsProps) => {
 
   return <TabsContext.Provider value={contextProps}>{children}</TabsContext.Provider>;
 };
+
+export default Tabs;
