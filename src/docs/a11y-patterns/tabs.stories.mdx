@@ -1,0 +1,28 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="A11y Patterns/Tabs" />
+
+# Tabs
+
+> W3C Aria Guidelines: https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+
+The Aria tab pattern is implemented with 3 components: `<TabsNext>`,
+[`<TabListNext>`](?path=/story/momentum-ui-tablist--example) and
+[`<TabPanelNext>`](?path=/story/momentum-ui-tabpanel--example).
+
+```tsx
+<TabsNext selectedTab="tab-1">
+  <TabListNext onTabSelection={setSelectedTab}>
+    <TabNext key="tab-1">Tab 1</TabNext>
+    <TabNext key="tab-2">Tab 2</TabNext>
+  </TabListNext>
+  <TabPanelNext>{/* Render selected tab's contents */}</TabPanelNext>
+</TabsNext>
+```
+
+When implementing this pattern, please note that the `<TabPanelNext>` does not display the correct
+tab automatically and is just a wrapper that adds the correct properties for a `tabpanel` role.
+
+## Example
+
+<Story id="momentum-ui-tablist--controlled" />
