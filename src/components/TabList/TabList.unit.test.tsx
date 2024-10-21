@@ -139,7 +139,7 @@ describe('<TabList />', () => {
         </TabList>
       );
 
-      expect(keyboardNavigationHookSpy).toBeCalledWith({
+      expect(keyboardNavigationHookSpy).toHaveBeenCalledWith({
         noLoop: false,
         listSize: 3,
         orientation: 'vertical',
@@ -336,7 +336,7 @@ describe('<TabList />', () => {
       );
 
       await user.click(getByText('Tab 2'));
-      expect(onTabSelection).toBeCalledWith('tab-2');
+      expect(onTabSelection).toHaveBeenCalledWith('tab-2');
     });
 
     it('fires onTabSelection when a tab is activated by keyboard', async () => {
@@ -351,7 +351,7 @@ describe('<TabList />', () => {
       await user.tab();
       await user.keyboard('{ArrowRight}');
       await user.keyboard('{Enter}');
-      expect(onTabSelection).toBeCalledWith('tab-2');
+      expect(onTabSelection).toHaveBeenCalledWith('tab-2');
     });
 
     it(`resets the focused element when tabbing out`, async () => {
