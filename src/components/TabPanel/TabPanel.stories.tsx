@@ -16,7 +16,6 @@ export default {
   },
 };
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<TabPanelProps>(TabPanel).bind({});
 
 Example.argTypes = { ...argTypes };

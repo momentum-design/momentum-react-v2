@@ -1,16 +1,16 @@
 import React, { FC, ReactElement, useLayoutEffect, useRef } from 'react';
-
-import { STYLE, DEFAULTS } from './TabList.constants';
-import { Props } from './TabList.types';
-import './TabList.style.scss';
-import { defaultsDeep } from 'lodash';
-import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
-import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
-import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
-import { TabProps } from '../Tab';
 import classnames from 'classnames';
-import { getKeyboardFocusableElements } from '../../utils/navigation';
+
 import { PressEvent } from '@react-types/shared';
+import { defaultsDeep } from 'lodash';
+import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
+import { getKeyboardFocusableElements } from '../../utils/navigation';
+import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
+import { TabProps } from '../Tab';
+import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
+import { DEFAULTS, STYLE } from './TabList.constants';
+import './TabList.style.scss';
+import { Props } from './TabList.types';
 
 /**
  * The TabList component.

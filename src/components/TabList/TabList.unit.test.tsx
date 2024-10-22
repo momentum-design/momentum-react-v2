@@ -1,14 +1,14 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
+import { Orientation } from '@react-types/shared';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Tab from '../Tab';
-import TabList, { TAB_LIST_CONSTANTS as CONSTANTS } from './';
-import TabsProvider from '../TabsProvider';
-import { Orientation } from '@react-types/shared';
 import * as useOrientationBasedKeyboardNavigationHook from '../../hooks/useOrientationBasedKeyboardNavigation';
+import Tab from '../Tab';
+import TabsProvider from '../TabsProvider';
+import TabList, { TAB_LIST_CONSTANTS as CONSTANTS } from './';
 
 describe('<TabList />', () => {
   const detachedCommonProps = (activeTab: string | undefined = 'tab-1') => ({

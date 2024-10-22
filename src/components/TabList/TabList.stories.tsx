@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
+import React from 'react';
 
 import { Meta } from '@storybook/react';
-import React from 'react';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
@@ -21,14 +21,13 @@ export default {
   },
 } as Meta<TabListProps>;
 
-// NOTE: Primary story. This renders a single component with all external props.
 const Example = Template<TabListProps>(TabList).bind({});
 
 Example.argTypes = { ...argTypes };
 
 // TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
-  onTabSelection: console.log,
+  onTabSelection: (key: React.Key) => console.log('tab selected', key),
   children: [
     <Tab key="tab-1" active>
       Tab 1
@@ -48,7 +47,7 @@ Common.argTypes = { ...argTypes };
 Common.parameters = {
   variants: [
     {
-      onTabSelection: console.log,
+      onTabSelection: (key: React.Key) => console.log('tab selected', key),
       children: [
         <Tab key="tab-1" active>
           Tab 1
@@ -60,7 +59,7 @@ Common.parameters = {
       ],
     },
     {
-      onTabSelection: console.log,
+      onTabSelection: (key: React.Key) => console.log('tab selected', key),
       round: false,
       spaced: false,
       children: [
@@ -76,5 +75,4 @@ Common.parameters = {
   ],
 };
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
-export { Example, Common };
+export { Common, Example };
