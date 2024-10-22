@@ -94,7 +94,7 @@ const TabList: FC<Props> = (props: Props) => {
     }
 
     if (elementKey === null) {
-      console.warn('Tabs in TabGroup must have a key', element);
+      console.warn('MRV2: Tabs in TabList must have a key', element);
 
       return element;
     }
