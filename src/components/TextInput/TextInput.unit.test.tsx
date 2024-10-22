@@ -111,6 +111,14 @@ describe('<TextInput/>', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isDisabled', async () => {
+      expect.assertions(1);
+
+      const container = await mountComponent(<TextInput aria-label="text-input" isDisabled />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -210,6 +218,22 @@ describe('<TextInput/>', () => {
       );
 
       expect(textInputComponent.props()['aria-describedby']).toBe(undefined);
+    });
+
+    it('should have the clear input button displayed when not disabled', async () => {
+      const textInputComponent = (
+        await mountAndWait(<TextInput aria-label="text-input" value="Hello World" />)
+      ).find(TextInput);
+
+      expect(textInputComponent.find('.clear-icon').exists()).toBe(true);
+    });
+
+    it('should not have the clear input button displayed when isDisabled', async () => {
+      const textInputComponent = (
+        await mountAndWait(<TextInput aria-label="text-input" value="Hello World" isDisabled />)
+      ).find(TextInput);
+
+      expect(textInputComponent.find('.clear-icon').exists()).toBe(false);
     });
   });
 
