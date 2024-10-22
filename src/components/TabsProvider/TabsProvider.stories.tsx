@@ -1,9 +1,9 @@
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 
-import Tabs from './';
-import argTypes from './Tabs.stories.args';
-import Documentation from './Tabs.stories.docs.mdx';
+import TabsProvider from '.';
+import argTypes from './TabsProvider.stories.args';
+import Documentation from './TabsProvider.stories.docs.mdx';
 import React, { ComponentProps, useState } from 'react';
 import Tab from '../Tab/Tab';
 import TabList from '../TabList';
@@ -11,8 +11,8 @@ import ContentSeparator from '../ContentSeparator';
 import TabPanel from '../TabPanel';
 
 export default {
-  title: 'Momentum UI/Tabs',
-  component: Tabs,
+  title: 'Momentum UI/TabsProvider',
+  component: TabsProvider,
   parameters: {
     expanded: true,
     docs: {
@@ -25,7 +25,7 @@ const ExampleComponent = () => {
   const [selectedTab, setSelectedTab] = useState<React.Key>('tab-1');
 
   return (
-    <Tabs selectedTab={selectedTab}>
+    <TabsProvider selectedTab={selectedTab}>
       <TabList onTabSelection={setSelectedTab}>
         <Tab key="tab-1">Tab 1</Tab>
         <Tab key="tab-2">Tab 2</Tab>
@@ -42,7 +42,7 @@ const ExampleComponent = () => {
           ]
         }
       </TabPanel>
-    </Tabs>
+    </TabsProvider>
   );
 };
 

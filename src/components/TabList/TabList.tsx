@@ -4,7 +4,7 @@ import { STYLE, DEFAULTS } from './TabList.constants';
 import { Props } from './TabList.types';
 import './TabList.style.scss';
 import { defaultsDeep } from 'lodash';
-import { useTabsContext } from '../Tabs/Tabs.utils';
+import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
 import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
 import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 import { TabProps } from '../Tab';
@@ -88,7 +88,7 @@ const TabList: FC<Props> = (props: Props) => {
       onPress: handleOnPress,
     };
 
-    // If <TabList /> is used outside of a <Tabs />, just include keyboard navigation stuff
+    // If <TabList /> is used outside of a <TabsProvider />, just include keyboard navigation stuff
     if (tabsContext === null) {
       return React.cloneElement(element, { ...commonProps });
     }

@@ -1,4 +1,4 @@
-const CLASS_PREFIX = 'md-tabs';
+const CLASS_PREFIX = 'md-tabs-provider';
 
 const DEFAULTS = {};
 

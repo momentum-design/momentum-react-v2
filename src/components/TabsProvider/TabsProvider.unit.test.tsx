@@ -1,17 +1,23 @@
 import React from 'react';
 
-import Tabs from './';
+import TabsProvider from '.';
 import { renderHook, RenderHookResult } from '@testing-library/react-hooks';
-import { Props, TabsContextValue } from './Tabs.types';
-import { useTabsContext } from './Tabs.utils';
+import { Props, TabsProviderContextValue } from './TabsProvider.types';
+import { useTabsContext } from './TabsProvider.utils';
 
-describe('<Tabs />', () => {
-  let result: RenderHookResult<{ children: unknown; props: Props }, TabsContextValue>['result'];
-  let rerender: RenderHookResult<{ children: unknown; props: Props }, TabsContextValue>['rerender'];
+describe('<TabsProvider />', () => {
+  let result: RenderHookResult<
+    { children: unknown; props: Props },
+    TabsProviderContextValue
+  >['result'];
+  let rerender: RenderHookResult<
+    { children: unknown; props: Props },
+    TabsProviderContextValue
+  >['rerender'];
 
   const mountHook = (initialProps: Props) => {
     const wrapper = ({ children, props }: { children: unknown; props: Props }) => {
-      return <Tabs {...props}>{children}</Tabs>;
+      return <TabsProvider {...props}>{children}</TabsProvider>;
     };
     ({ result, rerender } = renderHook(() => useTabsContext(), {
       wrapper,

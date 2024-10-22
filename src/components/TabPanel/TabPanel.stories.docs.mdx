@@ -1,5 +1,5 @@
 The `<TabPanel />` component implements the a11y requirements for a
-[tabpanel](https://w3c.github.io/aria/#tabpanel) based upon the context within a `<Tabs />`
+[tabpanel](https://w3c.github.io/aria/#tabpanel) based upon the context within a `<TabsProvider />`
 component. The component automatically sets the `id` and the `aria-controlledby` properties.
 
 The `<TabPanel />` component **does not** filter the correct tab to display itself. This must be
@@ -14,7 +14,7 @@ const [selectedTab, setSelectedTab] = useState('tab-1');
 const TABS = { 'tab-1': 'One', 'tab-2': 'Two', 'tab-3': 'Three' };
 
 return (
-  <Tabs selectedTab={selectedTab}>
+  <TabsProvider selectedTab={selectedTab}>
     <TabList onTabSelection={setSelectedTab}>
       <TabNext key="tab-1">Tab 1</TabNext>
       <TabNext key="tab-2">Tab 2</TabNext>
@@ -22,7 +22,7 @@ return (
     </TabList>
 
     <TabPanel>{TABS[selectedTab]}</TabPanel>
-  </Tabs>
+  </TabsProvider>
 );
 ```
 

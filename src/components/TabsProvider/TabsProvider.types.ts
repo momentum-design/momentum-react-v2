@@ -16,7 +16,7 @@ export interface Props {
   id?: string;
 }
 
-export type TabsContextValue = Required<Omit<Props, 'children'>> & {
+export type TabsProviderContextValue = Required<Omit<Props, 'children'>> & {
   /**
    * The ID property of the active tab
    */
