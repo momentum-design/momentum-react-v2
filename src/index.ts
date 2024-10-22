@@ -152,17 +152,9 @@ export {
   SpaceListItem as SpaceListItemNext,
   SpaceTreeNode,
   List as ListNext,
-  ListRefObject,
   Popover as PopoverNext,
   Reaction,
-  OnVideoReactionName,
-  OriginalReactionName,
   REACTION_CONSTANTS,
-  ReactionName,
-  ReactionProps,
-  ReactionWithSkinTone,
-  ReactionWithoutSkinTone,
-  SkinTone,
   ReactionBadge,
   ReactionButton,
   ReactionPicker,
@@ -201,4 +193,19 @@ export {
   MeetingRowContent,
 } from './components';
 
+/** V2 Types [TypeScript] */
+export type {
+  ListRefObject,
+  OnVideoReactionName,
+  OriginalReactionName,
+  ReactionName,
+  ReactionProps,
+  ReactionWithSkinTone,
+  ReactionWithoutSkinTone,
+  SkinTone,
+} from './components';
+
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
+
+/** Include updated types for ItemProps from '@react-props/shared' which is used by <Item /> from '@react-stately/collections' */
+import './types/item';
