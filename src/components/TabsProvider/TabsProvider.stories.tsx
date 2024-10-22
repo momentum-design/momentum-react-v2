@@ -52,5 +52,4 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {};
 
-// NOTE: Export stories here. The first export should be `Example`, and the last export should be `Common`.
 export { Example };

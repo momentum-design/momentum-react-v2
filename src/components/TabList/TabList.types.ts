@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
-import { TabProps } from '../Tab';
+
 import { ButtonGroupProps } from '../ButtonGroup';
+import { TabProps } from '../Tab';
 
 export interface Props extends ButtonGroupProps {
   /**

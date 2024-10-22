@@ -1,11 +1,10 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import type { Meta } from '@storybook/react';
-import { TabListProps } from '.';
-
-import _buttonGroupArgTypes from '../ButtonGroup/ButtonGroup.stories.args';
 import { cloneDeep } from 'lodash';
+import { TabListProps } from '.';
+import { ButtonGroupProps } from '../ButtonGroup';
+import _buttonGroupArgTypes from '../ButtonGroup/ButtonGroup.stories.args';
 
-const buttonGroupArgTypes = cloneDeep(_buttonGroupArgTypes);
+const buttonGroupArgTypes: Meta<ButtonGroupProps>['argTypes'] = cloneDeep(_buttonGroupArgTypes);
 Object.values(buttonGroupArgTypes).forEach((prop) => {
   if (prop.table.category) return;
 
@@ -17,15 +16,14 @@ buttonGroupArgTypes.round.defaultValue = true;
 buttonGroupArgTypes.spaced.defaultValue = true;
 
 const tabListArgTypes: Meta<TabListProps>['argTypes'] = {
-  // NOTE: Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
   children: {
-    description: 'Provides the child nodes for this element.', // NOTE: Description of this prop.
+    description: 'Provides the child nodes for this element.',
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'ReactNode',
       },
       defaultValue: {
-        summary: 'undefined', // NOTE: Default value for this prop.
+        summary: 'undefined',
       },
     },
   },

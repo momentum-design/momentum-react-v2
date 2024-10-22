@@ -13,46 +13,10 @@ This component has been created for use:
   </li>
 </ol>
 
-## Uncontrolled <small>(where the `<TabList>` is outside of a `<TabsProvider>` component)</small>
-
-Uncontrolled requires the developer to update the active properties required for a11y. The only
-functionality `<TabList>` provides in this state is orientation based keyboard navigation. This uses
-the `active` property of `<TabsProvider>` to determine where the keyboard focus should be.
-
-`<TabList>` adds the following properties to `<Tab>` children:
-
-| Prop       | Value                                                    |
-| ---------- | -------------------------------------------------------- |
-| `role`     | `tab`                                                    |
-| `tabindex` | If `<Tab>` has active prop equal to true: `0`; else `-1` |
-| `onPress`  | Calls `onTabSelection` if not defined on `<Tab>`         |
-
-### Example Implementation
-
-```tsx
-// Example
-const [selectedTab, setSelectedTab] = useState('tab-1');
-
-return (
-  <TabList onTabSelection={setSelectedTab}>
-    <Tab
-      key="tab-1"
-      // Uncontrolled: you have to set the following properties
-      active={selectedTab === 'tab-1'}
-      aria-selected={selectedTab === 'tab-1'}
-      aria-controls={selectedTab === 'tab-1' ? 'tab-1-tabpanel' : undefined}
-    >
-      Tab 1
-    </TabNext>
-    <Tab key="tab-2">Tab 2</TabNext>
-    <Tab key="tab-3">Tab 3</TabNext>
-  </TabList>
-);
-```
-
 ## Controlled <small>(where the `<TabList>` is inside a `<TabsProvider>` component)</small>
 
-Controlled adds all the active properies required for a11y automatically on `<Tab>` children.
+Controlled adds all the active properies required for a11y automatically on `<Tab>` children and it
+also provides orientation based keyboard navigation.
 
 `<TabList>` adds the following properties to `<Tab>` children:
 
@@ -76,10 +40,47 @@ return (
   <TabsProvider selectedTab={selectedTab}>
     <TabList onTabSelection={setSelectedTab}>
       {/* Controlled: you don't have to define any of state based properties */}
-      <Tab key="tab-1">Tab 1</TabNext>
-      <Tab key="tab-2">Tab 2</TabNext>
-      <Tab key="tab-3">Tab 3</TabNext>
+      <Tab key="tab-1">Tab 1</Tab>
+      <Tab key="tab-2">Tab 2</Tab>
+      <Tab key="tab-3">Tab 3</Tab>
     </TabList>
   </TabsProvider>
+);
+```
+
+## Uncontrolled <small>(where the `<TabList>` is outside of a `<TabsProvider>` component)</small>
+
+Uncontrolled requires the developer to update the active properties required for a11y. The only
+functionality `<TabList>` provides in this state is orientation based keyboard navigation. This uses
+the `active` property of the `<Tab>`s to determine where the keyboard focus should be.
+
+`<TabList>` adds the following properties to `<Tab>` children:
+
+| Prop       | Value                                                    |
+| ---------- | -------------------------------------------------------- |
+| `role`     | `tab`                                                    |
+| `tabindex` | If `<Tab>` has active prop equal to true: `0`; else `-1` |
+| `onPress`  | Calls `onTabSelection` if not defined on `<Tab>`         |
+
+### Example Implementation
+
+```tsx
+// Example
+const [selectedTab, setSelectedTab] = useState('tab-1');
+
+return (
+  <TabList onTabSelection={setSelectedTab}>
+    <Tab
+      key="tab-1"
+      // Uncontrolled: you have to set the following properties for all tabs
+      active={selectedTab === 'tab-1'}
+      aria-selected={selectedTab === 'tab-1'}
+      aria-controls={selectedTab === 'tab-1' ? 'tab-1-tabpanel' : undefined}
+    >
+      Tab 1
+    </Tab>
+    <Tab key="tab-2">Tab 2</Tab>
+    <Tab key="tab-3">Tab 3</Tab>
+  </TabList>
 );
 ```
