@@ -41,3 +41,14 @@ exports[`<TabPanel /> snapshot should match snapshot with style 1`] = `
   />
 </TabPanel>
 `;
+
+exports[`<TabPanel /> snapshot should match snapshot with tagName 1`] = `
+<TabPanel
+  tagName="section"
+>
+  <section
+    className="md-tab-panel-wrapper"
+    role="tabpanel"
+  />
+</TabPanel>
+`;

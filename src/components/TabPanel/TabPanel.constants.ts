@@ -3,7 +3,7 @@ import { AllowedTagNames } from './TabPanel.types';
 const CLASS_PREFIX = 'md-tab-panel';
 
 const DEFAULTS = {
-  as: 'div' as AllowedTagNames,
+  tagName: 'div' as AllowedTagNames,
 };
 
 const STYLE = {

@@ -10,7 +10,7 @@ import { useTabsContext } from '../Tabs/Tabs.utils';
  * The TabPanel Component
  */
 export const TabPanel: FC<Props> = <T extends AllowedTagNames>(props: Props<T>) => {
-  const { as: Tag = DEFAULTS.as, ...componentProps } = props;
+  const { tagName: Tag = DEFAULTS.tagName, ...componentProps } = props;
 
   const tabsContext = useTabsContext();
 

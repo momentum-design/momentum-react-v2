@@ -45,6 +45,14 @@ describe('<TabPanel />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with tagName', () => {
+      expect.assertions(1);
+
+      const container = mount(<TabPanel tagName="section" />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -109,7 +117,7 @@ describe('<TabPanel />', () => {
 
     it('should render as the provided tag name', () => {
       const container = mount(
-        <TabPanel aria-labelledby="label" className="test" as="section">
+        <TabPanel aria-labelledby="label" className="test" tagName="section">
           Hello World
         </TabPanel>
       );

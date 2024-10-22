@@ -16,7 +16,7 @@ const tabPanelArgTypes: Meta<TabPanelProps>['argTypes'] = {
       },
     },
   },
-  as: {
+  tagName: {
     description: 'Define the wrapping element tag',
     control: {
       type: 'select',
