@@ -26,7 +26,7 @@ const [selectedTab, setSelectedTab] = useState('tab-1');
 
 return (
   <TabList onTabSelection={setSelectedTab}>
-    <TabNext
+    <Tab
       key="tab-1"
       // Uncontrolled: you have to set the following properties
       active={selectedTab === 'tab-1'}
@@ -35,8 +35,8 @@ return (
     >
       Tab 1
     </TabNext>
-    <TabNext key="tab-2">Tab 2</TabNext>
-    <TabNext key="tab-3">Tab 3</TabNext>
+    <Tab key="tab-2">Tab 2</TabNext>
+    <Tab key="tab-3">Tab 3</TabNext>
   </TabList>
 );
 ```
@@ -67,9 +67,9 @@ return (
   <TabsProvider selectedTab={selectedTab}>
     <TabList onTabSelection={setSelectedTab}>
       {/* Controlled: you don't have to define any of state based properties */}
-      <TabNext key="tab-1">Tab 1</TabNext>
-      <TabNext key="tab-2">Tab 2</TabNext>
-      <TabNext key="tab-3">Tab 3</TabNext>
+      <Tab key="tab-1">Tab 1</TabNext>
+      <Tab key="tab-2">Tab 2</TabNext>
+      <Tab key="tab-3">Tab 3</TabNext>
     </TabList>
   </TabsProvider>
 );

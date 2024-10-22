@@ -16,9 +16,9 @@ const TABS = { 'tab-1': 'One', 'tab-2': 'Two', 'tab-3': 'Three' };
 return (
   <TabsProvider selectedTab={selectedTab}>
     <TabList onTabSelection={setSelectedTab}>
-      <TabNext key="tab-1">Tab 1</TabNext>
-      <TabNext key="tab-2">Tab 2</TabNext>
-      <TabNext key="tab-3">Tab 3</TabNext>
+      <Tab key="tab-1">Tab 1</TabNext>
+      <Tab key="tab-2">Tab 2</TabNext>
+      <Tab key="tab-3">Tab 3</TabNext>
     </TabList>
 
     <TabPanel>{TABS[selectedTab]}</TabPanel>
