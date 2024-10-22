@@ -16,7 +16,9 @@ export const TabPanel: FC<Props> = <T extends AllowedTagNames>(props: Props<T>) 
 
   if (tabsContext === null) {
     // eslint-disable-next-line no-console
-    console.warn('MRV2 (TabPanel): Not recommended to use this component outside of a TabsContext');
+    console.warn(
+      'MRV2 (TabPanel): Not recommended to use this component outside of a TabsProvider'
+    );
   }
 
   const ariaProps = {
