@@ -1,4 +1,15 @@
 const tabsProviderArgTypes = {
+  children: {
+    description: 'Provides the child nodes for this element.',
+    table: {
+      type: {
+        summary: 'ReactNode',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   selectedTab: {
     description: 'The key of the selected tab',
     control: { type: 'text' },
