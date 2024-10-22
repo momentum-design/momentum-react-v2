@@ -1,7 +1,7 @@
 import React from 'react';
-import { TabsContext, useTabsContext } from './Tabs.utils';
+import { TabsProviderContext, useTabsContext } from './TabsProvider.utils';
 import { renderHook } from '@testing-library/react-hooks';
-import { TabsContextValue } from './Tabs.types';
+import { TabsProviderContextValue } from './TabsProvider.types';
 
 describe('useTabsContext', () => {
   it('returns null when called outside of Context', () => {
@@ -13,9 +13,9 @@ describe('useTabsContext', () => {
   it('returns context when used inside of Context', () => {
     const wrapper = ({ children }: { children: unknown }) => {
       return (
-        <TabsContext.Provider value={'tabsContext' as unknown as TabsContextValue}>
+        <TabsProviderContext.Provider value={'tabsContext' as unknown as TabsProviderContextValue}>
           {children}
-        </TabsContext.Provider>
+        </TabsProviderContext.Provider>
       );
     };
     const { result } = renderHook(() => useTabsContext(), { wrapper });

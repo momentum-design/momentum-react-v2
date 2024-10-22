@@ -6,7 +6,7 @@ import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Tab from '../Tab';
 import TabList, { TAB_LIST_CONSTANTS as CONSTANTS } from './';
-import Tabs from '../Tabs';
+import TabsProvider from '../TabsProvider';
 import { Orientation } from '@react-types/shared';
 import * as useOrientationBasedKeyboardNavigationHook from '../../hooks/useOrientationBasedKeyboardNavigation';
 
@@ -387,7 +387,7 @@ describe('<TabList />', () => {
     });
   });
 
-  describe('within <Tabs />', () => {
+  describe('within <TabsProvider />', () => {
     const TABS: { key: React.Key; label: string; disabled?: boolean }[] = [
       { key: 'tab-1', label: 'Tab 1' },
       { key: 'tab-2', label: 'Tab 2' },
@@ -398,13 +398,13 @@ describe('<TabList />', () => {
       const [selectedTab, setSelectedTab] = React.useState<React.Key>(defaultSelectedTab);
 
       return (
-        <Tabs selectedTab={selectedTab} id="TestComponent">
+        <TabsProvider selectedTab={selectedTab} id="TestComponent">
           <TabList onTabSelection={setSelectedTab}>
             {TABS.map((tab) => (
               <Tab key={tab.key}>{tab.label}</Tab>
             ))}
           </TabList>
-        </Tabs>
+        </TabsProvider>
       );
     };
 

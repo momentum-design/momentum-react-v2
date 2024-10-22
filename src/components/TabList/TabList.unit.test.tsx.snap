@@ -886,9 +886,9 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
 </TabList>
 `;
 
-exports[`<TabList /> within <Tabs /> snapshot matches snapshot 1`] = `
+exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot 1`] = `
 <Component>
-  <Tabs
+  <TabsProvider
     id="TestComponent"
     selectedTab="tab-1"
   >
@@ -1128,15 +1128,15 @@ exports[`<TabList /> within <Tabs /> snapshot matches snapshot 1`] = `
         </div>
       </ButtonGroup>
     </TabList>
-  </Tabs>
+  </TabsProvider>
 </Component>
 `;
 
-exports[`<TabList /> within <Tabs /> snapshot matches snapshot when defining the selected tab 1`] = `
+exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot when defining the selected tab 1`] = `
 <Component
   defaultSelectedTab="tab-2"
 >
-  <Tabs
+  <TabsProvider
     id="TestComponent"
     selectedTab="tab-2"
   >
@@ -1376,6 +1376,6 @@ exports[`<TabList /> within <Tabs /> snapshot matches snapshot when defining the
         </div>
       </ButtonGroup>
     </TabList>
-  </Tabs>
+  </TabsProvider>
 </Component>
 `;

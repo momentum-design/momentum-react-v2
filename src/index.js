@@ -200,7 +200,7 @@ export {
   TreeNodeBase,
   MeetingRowContent,
   TabList as TabListNext,
-  Tabs as TabsNext,
+  TabsProvider as TabsProviderNext,
   TabPanel as TabPanelNext,
 } from './components';
 

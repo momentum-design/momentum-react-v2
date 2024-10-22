@@ -2,13 +2,13 @@ The `<TabList />` component provides a wrapper around the `<ButtonGroupNext />` 
 implements the accessibility requirements of a
 [tablist](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/).
 
-This component has been created for use inside and outside the `<Tabs>` component.
+This component has been created for use inside and outside the `<TabsProvider>` component.
 
-## Uncontrolled <small>(where the `<TabList>` is outside of a `<Tabs>` component)</small>
+## Uncontrolled <small>(where the `<TabList>` is outside of a `<TabsProvider>` component)</small>
 
 Uncontrolled requires the developer to update the active properties required for a11y. The only
 functionality `<TabList>` provides in this state is orientation based keyboard navigation. This uses
-the `active` property of `<Tabs>` to determine where the keyboard focus should be.
+the `active` property of `<TabsProvider>` to determine where the keyboard focus should be.
 
 `<TabList>` adds the following properties to `<Tab>` children:
 
@@ -41,7 +41,7 @@ return (
 );
 ```
 
-## Controlled <small>(where the `<TabList>` is inside a `<Tabs>` component)</small>
+## Controlled <small>(where the `<TabList>` is inside a `<TabsProvider>` component)</small>
 
 Controlled adds all the active properies required for a11y automatically on `<Tab>` children.
 
@@ -64,13 +64,13 @@ Controlled adds all the active properies required for a11y automatically on `<Ta
 const [selectedTab, setSelectedTab] = useState('tab-1');
 
 return (
-  <Tabs selectedTab={selectedTab}>
+  <TabsProvider selectedTab={selectedTab}>
     <TabList onTabSelection={setSelectedTab}>
       {/* Controlled: you don't have to define any of state based properties */}
       <TabNext key="tab-1">Tab 1</TabNext>
       <TabNext key="tab-2">Tab 2</TabNext>
       <TabNext key="tab-3">Tab 3</TabNext>
     </TabList>
-  </Tabs>
+  </TabsProvider>
 );
 ```

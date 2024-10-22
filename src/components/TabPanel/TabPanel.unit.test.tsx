@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import TabPanel, { TAB_PANEL_CONSTANTS as CONSTANTS } from './';
-import Tabs from '../Tabs';
+import TabsProvider from '../TabsProvider';
 
 describe('<TabPanel />', () => {
   let consoleWarnSpy: jest.SpyInstance;
@@ -134,11 +134,11 @@ describe('<TabPanel />', () => {
       expect(consoleWarnSpy).toHaveBeenCalled();
     });
 
-    it('should set the id and aria-labelledby based on selectedTab from <Tabs />', () => {
+    it('should set the id and aria-labelledby based on selectedTab from <TabsProvider />', () => {
       const wrapper = mount(
-        <Tabs selectedTab={'tab'} id="TabListUtils">
+        <TabsProvider selectedTab={'tab'} id="TabListUtils">
           <TabPanel>Hello World</TabPanel>
-        </Tabs>
+        </TabsProvider>
       );
 
       const container = wrapper.find(TabPanel);
@@ -150,7 +150,7 @@ describe('<TabPanel />', () => {
   });
 
   describe('actions', () => {
-    it('renders with a console.warn outside of <Tabs />', () => {
+    it('renders with a console.warn outside of <TabsProvider />', () => {
       const container = mount(<TabPanel>Hello World</TabPanel>);
 
       expect(container.exists()).toBe(true);
