@@ -7,6 +7,11 @@
     background-color: var(--mds-color-theme-background-accent-normal);
     color: var(--mds-color-theme-common-text-primary-normal); // Update with component token
 
+    @media (forced-colors: active) {
+      background-color: AccentColor !important;
+      color: AccentColorText !important;
+    }
+
     /* Sizing */
     border-radius: 2rem;
     height: 1.125rem;
