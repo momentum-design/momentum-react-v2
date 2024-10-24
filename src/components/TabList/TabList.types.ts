@@ -15,7 +15,7 @@ export interface Props extends ButtonGroupProps {
   onTabSelection?: (tab: React.Key) => void;
 
   /**
-   * Whether the tab list should look like a sub tabs list
+   * Whether the tab list should have a gray background
    */
-  isSubTabList?: boolean;
+  hasBackground?: boolean;
 }

@@ -64,10 +64,10 @@ describe('<TabList />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSubTabList = true', () => {
+    it('should match snapshot with hasBackground = true', () => {
       expect.assertions(1);
 
-      const container = mount(<TabList {...detachedCommonProps()} isSubTabList />);
+      const container = mount(<TabList {...detachedCommonProps()} hasBackground />);
 
       expect(container).toMatchSnapshot();
     });
@@ -133,11 +133,11 @@ describe('<TabList />', () => {
     it('should pass isSubTabList prop', () => {
       expect.assertions(1);
 
-      const element = mount(<TabList {...detachedCommonProps()} isSubTabList />)
+      const element = mount(<TabList {...detachedCommonProps()} hasBackground />)
         .find(TabList)
         .getDOMNode();
 
-      expect(element.getAttribute('data-subtabs')).toBe(`${true}`);
+      expect(element.getAttribute('data-has-background')).toBe(`${true}`);
     });
 
     it('calls useOrientationBasedKeyboardNavigation with the correct props', () => {

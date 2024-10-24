@@ -38,7 +38,7 @@ const tabListArgTypes: Meta<TabListProps>['argTypes'] = {
       },
     },
   },
-  isSubTabList: {
+  hasBackground: {
     description: 'Whether the tab list should look like a sub tabs list',
     options: [true, false],
     control: { type: 'boolean' },
@@ -47,7 +47,7 @@ const tabListArgTypes: Meta<TabListProps>['argTypes'] = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: DEFAULTS.IS_SUBTAB_LIST,
+        summary: DEFAULTS.HAS_BACKGROUND,
       },
     },
   },

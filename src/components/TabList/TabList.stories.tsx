@@ -39,13 +39,13 @@ Example.args = {
   ],
 };
 
-const SubTabs = Template<TabListProps>(TabList).bind({});
+const HasBackground = Template<TabListProps>(TabList).bind({});
 
-SubTabs.argTypes = { ...argTypes };
+HasBackground.argTypes = { ...argTypes };
 
-SubTabs.args = {
+HasBackground.args = {
   onTabSelection: (key: React.Key) => console.log('tab selected', key),
-  isSubTabList: true,
+  hasBackground: true,
   children: [
     <Tab key="tab-1" active>
       Tab 1
@@ -93,4 +93,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, SubTabs, Common };
+export { Example, HasBackground, Common };
