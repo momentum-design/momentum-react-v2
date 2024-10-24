@@ -52,6 +52,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     closeButtonProps,
     strategy = DEFAULTS.STRATEGY,
     role = DEFAULTS.ROLE,
+    removeTippyAriaHidden = DEFAULTS.REMOVE_TIPPY_ARIA_HIDDEN,
     onAfterUpdate,
     onBeforeUpdate,
     onCreate,
@@ -179,6 +180,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       ref={ref}
       /* needed to prevent the popover from closing when the focus is changed via click events */
       hideOnClick={!trigger.includes('manual')}
+      removeTippyAriaHidden={removeTippyAriaHidden}
       continuePropagationOnTrigger={continuePropagationOnTrigger}
       render={(attrs) => (
         <ModalContainer

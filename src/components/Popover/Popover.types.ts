@@ -244,4 +244,11 @@ export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> 
    * @default `false`
    */
   disableFocusLock?: boolean;
+
+  /**
+   * Used to control whether aria-hidden attribute is retained on tippy.
+   * Enable it when you need Tippy to support some accessibility features.
+   * @default `false`
+   */
+  removeTippyAriaHidden?: boolean;
 }

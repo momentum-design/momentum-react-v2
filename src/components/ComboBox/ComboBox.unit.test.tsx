@@ -1,14 +1,13 @@
 import ComboBox from '.';
-import React, { createRef } from 'react';
+import React from 'react';
 import { Item, Section } from '@react-stately/collections';
 import { STYLE } from './ComboBox.constants';
 import { mountAndWait } from '../../../test/utils';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
-import { IComboBoxGroup } from './ComboBox.types';
+import { IComboBoxGroup, IComboBoxItem } from './ComboBox.types';
 import { act } from 'react-dom/test-utils';
-import TextInput from '../TextInput';
 jest.mock('@react-aria/utils');
 jest.mock('uuid', () => {
   return {
@@ -19,17 +18,13 @@ jest.mock('uuid', () => {
 describe('ComboBox', () => {
   let container;
 
-  const withoutSection: IComboBoxGroup[] = [
-    {
-      items: [
-        { key: 'key1', label: 'item1' },
-        { key: 'key2', label: 'item2' },
-        { key: 'key3', label: 'item3' },
-        { key: 'key4', label: 'menu1' },
-        { key: 'key5', label: 'menu2' },
-        { key: 'key6', label: 'menu3' },
-      ],
-    },
+  const withoutSection: IComboBoxItem[] = [
+    { key: 'key1', label: 'item1' },
+    { key: 'key2', label: 'item2' },
+    { key: 'key3', label: 'item3' },
+    { key: 'key4', label: 'listbox1' },
+    { key: 'key5', label: 'listbox2' },
+    { key: 'key6', label: 'listbox3' },
   ];
 
   const withSection: IComboBoxGroup[] = [
@@ -54,27 +49,37 @@ describe('ComboBox', () => {
   ];
 
   describe('snapshot', () => {
-    const renderChildren = (group) => {
-      const itemsEle: any = group?.items?.map((menuItem) => {
-        return menuItem.popoverText ? (
-          <Item key={menuItem.key} textValue={menuItem.key} data-test="menuItem">
-            <div>{menuItem.popoverText}</div>
+    const renderChildren = (itemOrGroup) => {
+      if ('items' in itemOrGroup) {
+        const group = itemOrGroup;
+        const itemsEle = group.items.map((listboxItem: IComboBoxItem) => (
+          <Item key={listboxItem.key} textValue={listboxItem.label}>
+            <div key={listboxItem.key + '-label'}>{listboxItem.label}</div>
           </Item>
+        ));
+
+        return group.section ? (
+          <Section title={group.section} key={group.section}>
+            {itemsEle}
+          </Section>
         ) : (
-          <Item key={menuItem.key} textValue={menuItem.key}>
-            <div>{menuItem.label}</div>
+          <Section key="withoutSection">{itemsEle}</Section>
+        );
+      } else {
+        const item = itemOrGroup;
+        return (
+          <Item key={item.key} textValue={item.label}>
+            {item.label}
           </Item>
         );
-      });
-
-      return <Section key="noSection">{itemsEle}</Section>;
+      }
     };
 
     it('should match snapshot label', async () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <ComboBox label="comboBox_label" comboBoxGroups={withoutSection}>
+        <ComboBox label="comboBox_label" defaultItems={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -86,16 +91,16 @@ describe('ComboBox', () => {
       expect.assertions(1);
 
       container = await mountAndWait(
-        <ComboBox comboBoxGroups={withSection}>
+        <ComboBox defaultItems={withSection}>
           {(group) => {
-            const itemsEle = group?.items?.map((menuItem) => {
-              return menuItem.popoverText ? (
-                <Item key={menuItem.key} textValue={menuItem.key} data-test="menuItem">
-                  <div>{menuItem.popoverText}</div>
+            const itemsEle = group?.items?.map((listboxItem) => {
+              return listboxItem.popoverText ? (
+                <Item key={listboxItem.key} textValue={listboxItem.key} data-test="listboxItem">
+                  <div>{listboxItem.popoverText}</div>
                 </Item>
               ) : (
-                <Item key={menuItem.key} textValue={menuItem.key}>
-                  <div>{menuItem.label}</div>
+                <Item key={listboxItem.key} textValue={listboxItem.key}>
+                  <div>{listboxItem.label}</div>
                 </Item>
               );
             });
@@ -118,7 +123,7 @@ describe('ComboBox', () => {
       const className = 'example-class';
 
       container = await mountAndWait(
-        <ComboBox className={className} comboBoxGroups={withoutSection}>
+        <ComboBox className={className} defaultItems={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -132,7 +137,7 @@ describe('ComboBox', () => {
       const style = { color: 'pink' };
 
       container = await mountAndWait(
-        <ComboBox style={style} comboBoxGroups={withoutSection}>
+        <ComboBox style={style} defaultItems={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -146,7 +151,7 @@ describe('ComboBox', () => {
       const placeholder = 'ComboBox';
 
       container = await mountAndWait(
-        <ComboBox placeholder={placeholder} comboBoxGroups={withoutSection}>
+        <ComboBox placeholder={placeholder} defaultItems={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -154,13 +159,13 @@ describe('ComboBox', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with noResultText', async () => {
+    it('should match snapshot with noResultLabel', async () => {
       expect.assertions(1);
 
-      const noResultText = 'No result';
+      const noResultLabel = 'No result';
 
       container = await mountAndWait(
-        <ComboBox noResultText={noResultText} comboBoxGroups={withoutSection}>
+        <ComboBox noResultLabel={noResultLabel} defaultItems={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -168,14 +173,13 @@ describe('ComboBox', () => {
       expect(container).toMatchSnapshot();
     });
 
-
-    it('should match snapshot with width', async () => {
+    it('should match snapshot with listboxWidth', async () => {
       expect.assertions(1);
 
-      const width = '16rem';
+      const listboxWidth = '16rem';
 
       container = await mountAndWait(
-        <ComboBox width={width} comboBoxGroups={withoutSection}>
+        <ComboBox listboxWidth={listboxWidth} defaultItems={withoutSection}>
           {renderChildren}
         </ComboBox>
       );
@@ -186,7 +190,7 @@ describe('ComboBox', () => {
     describe('attributes', () => {
       it('should have its wrapper class', async () => {
         container = await mountAndWait(
-          <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+          <ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>
         );
         const element = container.find(ComboBox).getDOMNode();
 
@@ -198,7 +202,7 @@ describe('ComboBox', () => {
         const className = 'example-class';
 
         container = await mountAndWait(
-          <ComboBox className={className} comboBoxGroups={withoutSection}>
+          <ComboBox className={className} defaultItems={withoutSection}>
             {renderChildren}
           </ComboBox>
         );
@@ -215,25 +219,23 @@ describe('ComboBox', () => {
         const styleString = 'color: pink;';
 
         const wrapper = await mountAndWait(
-          <ComboBox style={style} comboBoxGroups={withoutSection}>
+          <ComboBox style={style} defaultItems={withoutSection}>
             {renderChildren}
           </ComboBox>
         );
         const element = wrapper.find(ComboBox).getDOMNode();
 
-        expect(element.getAttribute('style')).toBe(
-          `--local-width: 16.25rem; ${styleString}`
-        );
+        expect(element.getAttribute('style')).toBe(`--local-width: 100%; ${styleString}`);
       });
 
-      it('should have provided style when style is width', async () => {
+      it('should have provided style when style is listboxWidth', async () => {
         expect.assertions(1);
 
-        const width = '16rem';
+        const listboxWidth = '16rem';
         const styleString = '--local-width: 16rem;';
 
         const wrapper = await mountAndWait(
-          <ComboBox width={width} comboBoxGroups={withoutSection}>
+          <ComboBox listboxWidth={listboxWidth} defaultItems={withoutSection}>
             {renderChildren}
           </ComboBox>
         );
@@ -242,76 +244,20 @@ describe('ComboBox', () => {
         expect(element.getAttribute('style')).toBe(`${styleString}`);
       });
 
-      it('should have provided label when label is provided', async () => {
-        expect.assertions(1);
+      // it('should have provided error style when error is provided', async () => {
+      //   expect.assertions(1);
 
-        const label = 'ComboBox';
+      //   const error = true;
 
-        const wrapper = await mountAndWait(
-          <ComboBox label={label} comboBoxGroups={withoutSection}>
-            {renderChildren}
-          </ComboBox>
-        );
+      //   const wrapper = await mountAndWait(
+      //     <ComboBox error={error} defaultItems={withoutSection}>
+      //       {renderChildren}
+      //     </ComboBox>
+      //   );
+      //   const element = wrapper.find(ComboBox).getDOMNode();
 
-        const labelContainer = wrapper.find('div').filter({ className: 'md-combo-box-label' });
-
-        expect(labelContainer.props()).toEqual({
-          className: 'md-combo-box-label',
-          children: label,
-        });
-      });
-
-      it('should have provided description when description is provided', async () => {
-        expect.assertions(1);
-
-        const description = 'ComboBox description';
-
-        const wrapper = await mountAndWait(
-          <ComboBox description={description} comboBoxGroups={withoutSection}>
-            {renderChildren}
-          </ComboBox>
-        );
-
-        const descriptionContainer = wrapper
-          .find('div')
-          .filter({ className: 'md-combo-box-description' });
-
-        expect(descriptionContainer.props()).toEqual({
-          className: 'md-combo-box-description',
-          children: description,
-        });
-      });
-
-      it('should have provided error style when error is provided', async () => {
-        expect.assertions(1);
-
-        const error = true;
-
-        const wrapper = await mountAndWait(
-          <ComboBox error={error} comboBoxGroups={withoutSection}>
-            {renderChildren}
-          </ComboBox>
-        );
-        const element = wrapper.find(ComboBox).getDOMNode();
-
-        expect(element.getAttribute('data-error')).toBe(`${error}`);
-      });
-
-      it('should have expected props on selectedKey', async () => {
-        expect.assertions(1);
-
-        const selectedKey = 'key1';
-
-        const wrapper = await mountAndWait(
-          <ComboBox selectedKey={selectedKey} comboBoxGroups={withoutSection}>
-            {renderChildren}
-          </ComboBox>
-        );
-
-        expect(
-          wrapper.find('[aria-label="md-combo-box-input"]').at(0).props()
-        ).toHaveProperty('value', 'item1');
-      });
+      //   expect(element.getAttribute('data-error')).toBe(`${error}`);
+      // });
 
       it('should have expected props on placeholder', async () => {
         expect.assertions(1);
@@ -319,71 +265,40 @@ describe('ComboBox', () => {
         const placeholder = 'please select';
 
         const wrapper = await mountAndWait(
-          <ComboBox placeholder={placeholder} comboBoxGroups={withoutSection}>
+          <ComboBox placeholder={placeholder} defaultItems={withoutSection}>
             {renderChildren}
           </ComboBox>
         );
 
-        expect(
-          wrapper.find('[aria-label="md-combo-box-input"]').at(0).props()
-        ).toHaveProperty('placeholder', placeholder);
-      });
-
-      it('should match inputRef props', async () => {
-        expect.assertions(1);
-
-        const inputRef = createRef<HTMLInputElement>();
-
-        const wrapper = await mountAndWait(
-          <ComboBox inputRef={inputRef} comboBoxGroups={withoutSection}>
-            {renderChildren}
-          </ComboBox>
+        expect(wrapper.find('.md-combo-box-input').at(0).props()).toHaveProperty(
+          'placeholder',
+          placeholder
         );
-
-        expect(
-          wrapper.find(TextInput).props()['aria-label']
-        ).toEqual(inputRef.current.getAttribute('aria-label'));
       });
 
       describe('actions', () => {
-        it('should show menu on click', async () => {
+        it('should show list on click', async () => {
           const user = userEvent.setup();
 
-          render(<ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>);
+          render(<ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>);
 
-          const menuItem = screen.queryByRole('menu');
-          expect(menuItem).not.toBeInTheDocument();
+          expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
 
           await user.click(screen.getByRole('button'));
 
-          expect(screen.getByRole('menu')).toBeVisible();
-        });
-
-        it('should call onArrowButtonPress when click', async () => {
-          const user = userEvent.setup();
-          const onArrowButtonPress = jest.fn();
-
-          render(
-            <ComboBox onArrowButtonPress={onArrowButtonPress} comboBoxGroups={withoutSection}>
-              {renderChildren}
-            </ComboBox>
-          );
-
-          await user.click(screen.getByRole('button'));
-
-          expect(onArrowButtonPress).toHaveBeenCalled();
+          expect(screen.getByRole('listbox')).toBeVisible();
         });
 
         it('should call onInputChange when type on input', async () => {
           const onInputChange = jest.fn();
 
           render(
-            <ComboBox onInputChange={onInputChange} comboBoxGroups={withoutSection}>
+            <ComboBox onInputChange={onInputChange} defaultItems={withoutSection}>
               {renderChildren}
             </ComboBox>
           );
 
-          await userEvent.type(screen.getByLabelText('md-combo-box-input'), 'hello');
+          await userEvent.type(screen.getByRole('combobox'), 'hello');
 
           expect(onInputChange).toHaveBeenCalled();
         });
@@ -393,53 +308,24 @@ describe('ComboBox', () => {
           const onSelectionChange = jest.fn();
 
           render(
-            <ComboBox onSelectionChange={onSelectionChange} comboBoxGroups={withoutSection}>
+            <ComboBox onSelectionChange={onSelectionChange} defaultItems={withoutSection}>
               {renderChildren}
             </ComboBox>
           );
 
           const button = screen
-          .queryAllByRole('button')
-          .find((button) => button.classList.contains('md-combo-box-button'));
+            .queryAllByRole('button')
+            .find((button) => button.classList.contains('md-combo-box-button'));
 
-          act(()=>{
+          act(() => {
             button.focus();
           });
           await user.keyboard('{Enter}');
-          expect(screen.getByRole('menu')).toBeVisible();
-          
-          const item = screen.getByText('item1').parentElement;
-          await waitFor(() => {
-            expect(item.parentElement).toHaveFocus();
-          });
+          expect(screen.getByRole('listbox')).toBeVisible();
+
           expect(onSelectionChange).not.toHaveBeenCalled();
-          await user.keyboard('{Enter}');
+          await user.click(screen.getAllByRole('option')[0]);
           expect(onSelectionChange).toHaveBeenCalled();
-        });
-
-        it('should call openStateChange when list is expanded or collapsed', async () => {
-          const user = userEvent.setup();
-          const openStateChange = jest.fn();
-
-          render(
-            <ComboBox openStateChange={openStateChange} comboBoxGroups={withoutSection}>
-              {renderChildren}
-            </ComboBox>
-          );
-
-          const button = screen
-          .queryAllByRole('button')
-          .find((button) => button.classList.contains('md-combo-box-button'));
-
-          act(()=>{
-            button.focus();
-          });;
-          expect(openStateChange).toBeCalledWith(false);
-          await user.keyboard('{Enter}');
-          expect(screen.getByRole('menu')).toBeVisible();
-          expect(openStateChange).toBeCalledWith(true);
-          await user.keyboard('{Escape}');
-          expect(openStateChange).toBeCalledWith(false);
         });
 
         it('should show disabledKeys when click', async () => {
@@ -448,7 +334,7 @@ describe('ComboBox', () => {
           const disabledKeys = ['key1'];
 
           const { container } = render(
-            <ComboBox disabledKeys={disabledKeys} comboBoxGroups={withoutSection}>
+            <ComboBox disabledKeys={disabledKeys} defaultItems={withoutSection}>
               {renderChildren}
             </ComboBox>
           );
@@ -461,30 +347,30 @@ describe('ComboBox', () => {
           );
         });
 
-        it('should show menu when focused and pressing enter', async () => {
+        it('should show list when focused and pressing enter', async () => {
           const user = userEvent.setup();
 
-          render(<ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>);
+          render(<ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>);
 
-          const menuItem = screen.queryByRole('menu');
-          expect(menuItem).not.toBeInTheDocument();
+          const list = screen.queryByRole('listbox');
+          expect(list).not.toBeInTheDocument();
 
           const button = screen.getByRole('button');
-          act(()=>{
+          act(() => {
             button.focus();
-          });;
+          });
           expect(button).toHaveFocus();
 
           await user.keyboard('{Enter}');
-          expect(screen.getByRole('menu')).toBeVisible();
+          expect(screen.getByRole('listbox')).toBeVisible();
         });
 
-        it('should hide menu when clicking outside', async () => {
+        it('should hide list when clicking outside', async () => {
           const user = userEvent.setup();
 
           render(
             <>
-              <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+              <ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>
               <button>button-outside</button>
             </>
           );
@@ -494,20 +380,20 @@ describe('ComboBox', () => {
             .find((button) => button.classList.contains('md-combo-box-button'));
 
           await user.click(ele);
-          expect(screen.getByRole('menu')).toBeVisible();
+          expect(screen.getByRole('listbox')).toBeVisible();
 
-          await user.click(screen.getByRole('button', { name: 'button-outside' }));
+          await user.click(screen.getAllByRole('button')[1]);
           await waitFor(() => {
-            expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+            expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
           });
         });
       });
 
-      it('should have show noResultText when items is empty', async () => {
-        const noResultText = 'empty result';
+      it('should have show noResultLabel when items is empty', async () => {
+        const noResultLabel = 'empty result';
 
         render(
-          <ComboBox noResultText={noResultText} comboBoxGroups={withoutSection}>
+          <ComboBox noResultLabel={noResultLabel} defaultItems={withoutSection}>
             {renderChildren}
           </ComboBox>
         );
@@ -515,34 +401,9 @@ describe('ComboBox', () => {
         const user = userEvent.setup();
         await user.click(screen.getByRole('button'));
 
-        await userEvent.type(screen.getByLabelText('md-combo-box-input'), 'hello');
+        await userEvent.type(screen.getByRole('combobox'), 'hello');
 
-        expect(screen.getByLabelText('md-combo-box-no-result-text')).toHaveTextContent(
-          noResultText
-        );
-      });
-
-      it('if shouldFilterOnArrowButton is false, should not filter when press arrowButton', async () => {
-
-        render(
-          <ComboBox shouldFilterOnArrowButton={false} comboBoxGroups={withoutSection}>
-            {renderChildren}
-          </ComboBox>
-        );
-
-        const user = userEvent.setup();
-        const input = screen.getByLabelText('md-combo-box-input');
-        const button = screen.getByRole('button');
-        act(()=>{
-          input.focus();
-        });
-        await user.keyboard('{4}');
-        await user.keyboard('{Escape}');
-        await user.click(button);
-        expect(screen.getByRole('menu')).toBeVisible();
-
-        const item = screen.getByText('item1').parentElement;
-        expect(item).toBeVisible();
+        expect(screen.getByRole('option')).toHaveTextContent(noResultLabel);
       });
 
       it('When list is hidden, entering text in the input, list will display', async () => {
@@ -550,85 +411,63 @@ describe('ComboBox', () => {
 
         render(
           <>
-            <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
+        const input = screen.getByRole('combobox');
+        act(() => {
           input.focus();
         });
-        await user.keyboard('{Enter}');
-        expect(screen.getByRole('menu')).toBeVisible();
+        await user.keyboard('{i}');
+        expect(screen.getByRole('listbox')).toBeVisible();
 
         await waitFor(() => {
-          expect(screen.queryByRole('menu')).toBeInTheDocument();
+          expect(screen.queryByRole('listbox')).toBeInTheDocument();
         });
       });
 
-      it('when input is focused, list is hidden, press Enter, list will display, and item will be focused', async () => {
+      it('when input is focused, list is hidden, press arrowDown, list will display, and item will be focused', async () => {
         const user = userEvent.setup();
 
         render(
           <>
-            <ComboBox selectedKey={'key2'} comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultSelectedKey={'key2'} defaultItems={withoutSection}>
+              {renderChildren}
+            </ComboBox>
           </>
         );
 
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
+        const input = screen.getByRole('combobox');
+        act(() => {
           input.focus();
         });
-        await user.keyboard('{Enter}');
-        expect(screen.getByRole('menu')).toBeVisible();
+        await user.keyboard('{arrowDown}');
+        expect(screen.getByRole('listbox')).toBeVisible();
 
-        const item = screen.getByText('item2').parentElement;
-        await waitFor(() => {
-          expect(item.parentElement).toHaveFocus();
-        });
+        const item = screen.getAllByRole('option')[1];
+        expect(item.getAttribute('data-focused')).toBe('true');
       });
 
-      it('when input is focused, list is hidden, press ArrowDown, list will display, and item will be focused', async () => {
-        const user = userEvent.setup();
-
-        render(
-          <>
-            <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
-          </>
-        );
-
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
-          input.focus();
-        });
-        await user.keyboard('{ArrowDown}');
-        expect(screen.getByRole('menu')).toBeVisible();
-
-        const item = screen.getByText('item1').parentElement;
- 
-        await waitFor(() => {
-          expect(item.parentElement).toHaveFocus();
-        });
-      });
       it('when input is focused, list is displayed, press Escape, list will be hidden', async () => {
         const user = userEvent.setup();
 
         render(
           <>
-            <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
 
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
+        const input = screen.getByRole('combobox');
+        act(() => {
           input.focus();
         });
         await user.keyboard('{i}');
-        expect(screen.getByRole('menu')).toBeVisible();
+        expect(screen.getByRole('listbox')).toBeVisible();
 
         await user.keyboard('{Escape}');
         await waitFor(() => {
-          expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+          expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
         });
       });
 
@@ -637,18 +476,19 @@ describe('ComboBox', () => {
 
         render(
           <>
-            <ComboBox selectedKey='key1' comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultSelectedKey="key1" defaultItems={withoutSection}>
+              {renderChildren}
+            </ComboBox>
           </>
         );
 
-        const input = screen.getByLabelText('md-combo-box-input');
-        expect(input).toHaveProperty('value','item1');
-        act(()=>{
+        const input = screen.getByRole('combobox');
+        expect(input).toHaveProperty('value', 'item1');
+        act(() => {
           input.focus();
         });
         await user.keyboard('{Escape}');
-
-        expect(input).toHaveProperty('value','');
+        expect(input).toHaveProperty('value', '');
       });
 
       it('when listitem is focused, press Escape, input will be focused', async () => {
@@ -656,50 +496,22 @@ describe('ComboBox', () => {
 
         render(
           <>
-            <ComboBox  comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultItems={withoutSection}>{renderChildren}</ComboBox>
           </>
         );
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
+        const input = screen.getByRole('combobox');
+        act(() => {
           input.focus();
         });
-        await user.keyboard('{Enter}');
-        expect(screen.getByRole('menu')).toBeVisible();
+        await user.keyboard('{ArrowDown}');
+        expect(screen.getByRole('listbox')).toBeVisible();
 
-        const item = screen.getByText('item1').parentElement;
-        await waitFor(() => {
-          expect(item.parentElement).toHaveFocus();
-        });
+        const item = screen.getAllByRole('option')[0];
+        expect(item.getAttribute('data-focused')).toBe('true');
 
         await user.keyboard('{Escape}');
         await waitFor(() => {
           expect(input).toHaveFocus();
-        });
-      });
-
-      it('when listitem is focused, press Tab, The focus will not escape.', async () => {
-        const user = userEvent.setup();
-
-        render(
-          <>
-            <ComboBox  comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
-          </>
-        );
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
-          input.focus();
-        });
-        await user.keyboard('{Enter}');
-        expect(screen.getByRole('menu')).toBeVisible();
-
-        const item = screen.getByText('item1').parentElement;
-        await waitFor(() => {
-          expect(item.parentElement).toHaveFocus();
-        });
-
-        await user.keyboard('{Tab}');
-        await waitFor(() => {
-          expect(item.parentElement).toHaveFocus();
         });
       });
 
@@ -708,88 +520,94 @@ describe('ComboBox', () => {
 
         render(
           <>
-            <ComboBox  selectedKey='key1' comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultSelectedKey="key1" defaultItems={withoutSection}>
+              {renderChildren}
+            </ComboBox>
             <button>button-outside</button>
           </>
         );
-        const input = screen.getByLabelText('md-combo-box-input');
-        act(()=>{
+        const input = screen.getByRole('combobox');
+        act(() => {
           input.focus();
         });
-        await user.keyboard('{Escape}');
-        expect(input).toHaveProperty('value','');
+        await user.keyboard('{i}');
+        expect(input).toHaveProperty('value', 'item1i');
 
         const button = screen.getByRole('button', { name: 'button-outside' });
-        act(()=>{
+        act(() => {
           button.focus();
         });
 
         await waitFor(() => {
-          expect(input).toHaveProperty('value','item1');
+          expect(input).toHaveProperty('value', 'item1');
         });
       });
 
-      it('reset inputValue, when mousedown outside the component', async () => {
+      it('reset inputValue, when click outside the component', async () => {
         const user = userEvent.setup();
 
         render(
           <>
-            <ComboBox  selectedKey='key1' comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultSelectedKey="key1" defaultItems={withoutSection}>
+              {renderChildren}
+            </ComboBox>
             <button>button-outside</button>
           </>
         );
-        const input = screen.getByLabelText('md-combo-box-input');
-
+        const input = screen.getByRole('combobox');
 
         await waitFor(() => {
-          expect(input).toHaveProperty('value','item1');
+          expect(input).toHaveProperty('value', 'item1');
         });
-        act(()=>{
+        act(() => {
           input.focus();
         });
         await user.keyboard('{1}');
         await waitFor(() => {
-          expect(input).toHaveProperty('value','item11');
+          expect(input).toHaveProperty('value', 'item11');
         });
 
         const button = screen.getByRole('button', { name: 'button-outside' });
         await user.click(button);
 
         await waitFor(() => {
-          expect(input).toHaveProperty('value','item1');
+          expect(input).toHaveProperty('value', 'item1');
         });
       });
 
-      it('filter list when the input is focused', async () => {
+      it('filter list when input', async () => {
         const user = userEvent.setup();
 
         render(
           <>
-            <ComboBox  selectedKey='key1' shouldFilterOnArrowButton={false} comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+            <ComboBox defaultSelectedKey="key1" defaultItems={withoutSection}>
+              {renderChildren}
+            </ComboBox>
           </>
         );
-        const input = screen.getByLabelText('md-combo-box-input');
-        const button = screen
-        .queryAllByRole('button')
-        .find((button) => button.classList.contains('md-combo-box-button'));
+        const input = screen.getByRole('combobox');
 
         await waitFor(() => {
-          expect(input).toHaveProperty('value','item1');
+          expect(input).toHaveProperty('value', 'item1');
         });
-        await user.click(button);
-        const menu = screen.getByRole('menu');
-        expect(menu).toBeVisible();
-        const item2 = screen.getByText('item2').parentElement;
-        await user.click(button);
-        await user.click(input);
-        await user.keyboard('{Enter}');
-        expect(input).toHaveProperty('value','item1');
-        const item1 = screen.getByText('item1').parentElement;
+        act(() => {
+          input.focus();
+        });
+        await user.keyboard('{ArrowDown}');
+        const listbox = screen.getByRole('listbox');
+        expect(listbox).toBeVisible();
+        const item2 = screen.getAllByRole('option')[1];
+        const item1 = screen.getAllByRole('option')[0];
+        expect(item1).toBeInTheDocument();
+        expect(item2).toBeInTheDocument();
+        await user.keyboard('{Backspace}');
+        await user.keyboard('{1}');
+        expect(input).toHaveProperty('value', 'item1');
         await waitFor(() => {
-          expect(item1.parentElement).toHaveFocus();
+          expect(item1).toBeInTheDocument();
           expect(item2).not.toBeInTheDocument();
         });
       });
-    });     
+    });
   });
 });
