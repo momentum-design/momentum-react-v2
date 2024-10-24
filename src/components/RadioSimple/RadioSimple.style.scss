@@ -6,7 +6,7 @@
   background-color: var(--mds-color-theme-background-primary-ghost);
 
   @media (forced-colors: active) {
-    outline: 1px solid ButtonBorder;
+    border: 1px solid ButtonBorder;
   }
 
   &:hover {
@@ -33,7 +33,7 @@
 
   &[data-focused='true'] {
     border-color: transparent;
-    outline: none;
+    outline: var(--md-globals-focus-ring-outline);
     box-shadow: var(--md-globals-focus-ring-box-shadow);
   }
 
