@@ -23,6 +23,9 @@
   position: relative;
   width: fit-content;
 
+  // The color of these elements are descriptive therefore don't override them in high contrast
+  forced-color-adjust: none;
+
   .md-avatar-wrapper-children {
     position: absolute;
   }
