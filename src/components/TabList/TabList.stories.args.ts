@@ -39,7 +39,7 @@ const tabListArgTypes: Meta<TabListProps>['argTypes'] = {
     },
   },
   hasBackground: {
-    description: 'Whether the tab list should look like a sub tabs list',
+    description: 'Whether the tab list should have a grey background',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
