@@ -1,5 +1,6 @@
 .md-button-circle-toggle-wrapper {
   &[data-selected='true'] {
+    // TODO: Check whether all of these !importants are required
     &[data-outline='true'],
     &[data-ghost='true'] {
       background-color: var(--mds-color-theme-button-secondary-active-normal) !important;
@@ -40,6 +41,18 @@
       &[data-disabled='true'],
       &.disable {
         border-color: var(--mds-color-theme-outline-primary-disabled) !important;
+      }
+    }
+
+    &[data-selected='true'][data-selected='true'] {
+      @media (forced-colors: active) {
+        background-color: SelectedItem !important;
+        color: SelectedItemText !important;
+
+        &[data-disabled='true'],
+        &.disable {
+          color: GrayText !important;
+        }
       }
     }
   }
