@@ -18,6 +18,18 @@
     color: var(--mds-color-theme-text-secondary-normal);
   }
 
+  @media (forced-colors: active) {
+    background-color: ButtonFace;
+
+    > .md-navigation-tab-icon > * {
+      color: ButtonText;
+    }
+
+    > .md-navigation-tab-label {
+      color: ButtonText;
+    }
+  }
+
   &:hover {
     background-color: var(--mds-color-theme-button-secondary-hover);
 
@@ -44,18 +56,6 @@
 
   &[data-active='true'] {
     background-color: var(--mds-color-theme-button-secondary-pressed);
-
-    @media (forced-colors: active) {
-      background-color: SelectedItem;
-
-      > .md-navigation-tab-icon > * {
-        color: SelectedItemText;
-      }
-
-      > .md-navigation-tab-label {
-        color: SelectedItemText;
-      }
-    }
 
     > .md-navigation-tab-icon > * {
       color: var(--mds-color-theme-text-primary-normal);
@@ -86,6 +86,18 @@
 
       > .md-navigation-tab-label {
         color: var(--mds-color-theme-text-primary-normal);
+      }
+    }
+
+    @media (forced-colors: active) {
+      background-color: SelectedItem;
+
+      > .md-navigation-tab-icon > * {
+        color: SelectedItemText;
+      }
+
+      > .md-navigation-tab-label {
+        color: SelectedItemText;
       }
     }
   }
