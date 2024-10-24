@@ -199,6 +199,9 @@ export {
   SelectionGroup,
   TreeNodeBase,
   MeetingRowContent,
+  TabList as TabListNext,
+  TabsProvider as TabsProviderNext,
+  TabPanel as TabPanelNext,
 } from './components';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';

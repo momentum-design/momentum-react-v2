@@ -92,6 +92,7 @@
     p,
     span,
     div {
+    .md-text-wrapper {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

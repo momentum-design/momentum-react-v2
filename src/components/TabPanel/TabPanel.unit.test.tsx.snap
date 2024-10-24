@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabPanel /> snapshot should match snapshot 1`] = `
+<TabPanel>
+  <div
+    className="md-tab-panel-wrapper"
+    role="tabpanel"
+  >
+    Hello World
+  </div>
+</TabPanel>
+`;
+
+exports[`<TabPanel /> snapshot should match snapshot with className 1`] = `
+<TabPanel
+  className="example-class"
+>
+  <div
+    className="md-tab-panel-wrapper example-class"
+    role="tabpanel"
+  />
+</TabPanel>
+`;
+
+exports[`<TabPanel /> snapshot should match snapshot with style 1`] = `
+<TabPanel
+  style={
+    {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="md-tab-panel-wrapper"
+    role="tabpanel"
+    style={
+      {
+        "color": "pink",
+      }
+    }
+  />
+</TabPanel>
+`;
+
+exports[`<TabPanel /> snapshot should match snapshot with tagName 1`] = `
+<TabPanel
+  tagName="section"
+>
+  <section
+    className="md-tab-panel-wrapper"
+    role="tabpanel"
+  />
+</TabPanel>
+`;

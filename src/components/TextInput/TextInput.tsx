@@ -81,7 +81,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           maxLength={inputMaxLen}
           aria-describedby={messages && !!messages.length ? messageId.current : undefined}
         />
-        {!!state.value && (
+        {!!state.value && !isDisabled && (
           <ButtonSimple
             className="clear-icon"
             aria-label={clearAriaLabel}

@@ -3,9 +3,9 @@
 exports[`<MenuItem /> snapshot should match snapshot 1`] = `
 <MenuItem
   item={
-    Object {
+    {
       "aria-label": "0",
-      "childNodes": Object {
+      "childNodes": {
         Symbol(Symbol.iterator): [Function],
       },
       "hasChildNodes": false,
@@ -15,7 +15,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
       "nextKey": "$.1",
       "parentKey": null,
       "prevKey": undefined,
-      "props": Object {
+      "props": {
         "aria-label": "0",
         "children": "Item 1",
       },
@@ -28,16 +28,16 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
     }
   }
   state={
-    Object {
+    {
       "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
         "firstKey": "$.0",
-        "iterable": Object {
+        "iterable": {
           Symbol(Symbol.iterator): [Function],
         },
         "keyMap": Map {
-          "$.0" => Object {
+          "$.0" => {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -47,7 +47,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "nextKey": "$.1",
             "parentKey": null,
             "prevKey": undefined,
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -58,9 +58,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.1" => Object {
+          "$.1" => {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -70,7 +70,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "nextKey": "$.2",
             "parentKey": null,
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },
@@ -81,9 +81,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.2" => Object {
+          "$.2" => {
             "aria-label": "2",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -93,7 +93,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "nextKey": undefined,
             "parentKey": null,
             "prevKey": "$.1",
-            "props": Object {
+            "props": {
               "aria-label": "2",
               "children": "Item 3",
               "closeOnSelect": false,
@@ -115,13 +115,13 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
         "allowsCellSelection": false,
         "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
           "firstKey": "$.0",
-          "iterable": Object {
+          "iterable": {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => Object {
+            "$.0" => {
               "aria-label": "0",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -131,7 +131,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": Object {
+              "props": {
                 "aria-label": "0",
                 "children": "Item 1",
               },
@@ -142,9 +142,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => Object {
+            "$.1" => {
               "aria-label": "1",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -154,7 +154,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "nextKey": "$.2",
               "parentKey": null,
               "prevKey": "$.0",
-              "props": Object {
+              "props": {
                 "aria-label": "1",
                 "children": "Item 2",
               },
@@ -165,9 +165,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.2" => Object {
+            "$.2" => {
               "aria-label": "2",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -177,7 +177,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.1",
-              "props": Object {
+              "props": {
                 "aria-label": "2",
                 "children": "Item 3",
                 "closeOnSelect": false,
@@ -192,7 +192,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           },
           "lastKey": "$.2",
         },
-        "state": Object {
+        "state": {
           "childFocusStrategy": null,
           "disabledKeys": Set {},
           "disallowEmptySelection": undefined,
@@ -309,9 +309,9 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
 exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
 <MenuItem
   item={
-    Object {
+    {
       "aria-label": "0",
-      "childNodes": Object {
+      "childNodes": {
         Symbol(Symbol.iterator): [Function],
       },
       "hasChildNodes": false,
@@ -321,7 +321,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
       "nextKey": "$.1",
       "parentKey": null,
       "prevKey": undefined,
-      "props": Object {
+      "props": {
         "aria-label": "0",
         "children": "Item 1",
       },
@@ -334,16 +334,16 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
     }
   }
   state={
-    Object {
+    {
       "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
         "firstKey": "$.0",
-        "iterable": Object {
+        "iterable": {
           Symbol(Symbol.iterator): [Function],
         },
         "keyMap": Map {
-          "$.0" => Object {
+          "$.0" => {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -353,7 +353,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "nextKey": "$.1",
             "parentKey": null,
             "prevKey": undefined,
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -364,9 +364,9 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.1" => Object {
+          "$.1" => {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -376,7 +376,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "nextKey": "$.2",
             "parentKey": null,
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },
@@ -387,9 +387,9 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.2" => Object {
+          "$.2" => {
             "aria-label": "2",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -399,7 +399,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "nextKey": undefined,
             "parentKey": null,
             "prevKey": "$.1",
-            "props": Object {
+            "props": {
               "aria-label": "2",
               "children": "Item 3",
               "closeOnSelect": false,
@@ -421,13 +421,13 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
         "allowsCellSelection": false,
         "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
           "firstKey": "$.0",
-          "iterable": Object {
+          "iterable": {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => Object {
+            "$.0" => {
               "aria-label": "0",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -437,7 +437,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": Object {
+              "props": {
                 "aria-label": "0",
                 "children": "Item 1",
               },
@@ -448,9 +448,9 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => Object {
+            "$.1" => {
               "aria-label": "1",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -460,7 +460,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "nextKey": "$.2",
               "parentKey": null,
               "prevKey": "$.0",
-              "props": Object {
+              "props": {
                 "aria-label": "1",
                 "children": "Item 2",
               },
@@ -471,9 +471,9 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.2" => Object {
+            "$.2" => {
               "aria-label": "2",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -483,7 +483,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.1",
-              "props": Object {
+              "props": {
                 "aria-label": "2",
                 "children": "Item 3",
                 "closeOnSelect": false,
@@ -498,7 +498,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
           },
           "lastKey": "$.2",
         },
-        "state": Object {
+        "state": {
           "childFocusStrategy": null,
           "disabledKeys": Set {},
           "disallowEmptySelection": undefined,

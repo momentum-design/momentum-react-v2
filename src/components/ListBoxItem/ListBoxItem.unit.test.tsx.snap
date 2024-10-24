@@ -3,9 +3,9 @@
 exports[`ListBoxItem snapshot should match snapshot 1`] = `
 <ListBoxItem
   item={
-    Object {
+    {
       "aria-label": "0",
-      "childNodes": Object {
+      "childNodes": {
         Symbol(Symbol.iterator): [Function],
       },
       "hasChildNodes": false,
@@ -15,7 +15,7 @@ exports[`ListBoxItem snapshot should match snapshot 1`] = `
       "nextKey": "$.1",
       "parentKey": null,
       "prevKey": undefined,
-      "props": Object {
+      "props": {
         "aria-label": "0",
         "children": "Item 1",
       },

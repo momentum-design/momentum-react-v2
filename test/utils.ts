@@ -1,8 +1,8 @@
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 
-export const waitForComponentToPaint = async (wrapper: ReactWrapper): Promise<undefined> => {
-  return await act(async () => {
+export const waitForComponentToPaint = async (wrapper: ReactWrapper): Promise<void> => {
+  return act(async () => {
     await new Promise((resolve) => setTimeout(resolve, 0));
     wrapper.update();
   });
@@ -98,13 +98,6 @@ export const sypOnEventListener = (target: EventTarget, spyOnEvents?: string[]) 
     } else {
       originalREL(eventName, ...args);
     }
-  });
-
-  afterEach(() => {
-    (target.addEventListener as any).mockRestore();
-    (target.removeEventListener as any).mockRestore();
-    target.addEventListener = originalAEL;
-    target.removeEventListener = originalREL;
   });
 
   return {

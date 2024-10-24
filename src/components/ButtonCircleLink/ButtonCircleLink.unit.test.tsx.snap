@@ -468,7 +468,7 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with style 1`] = `
 <ButtonCircleLink
   href="https://www.webex.com"
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -487,7 +487,7 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with style 1`] = `
     hasExternalLinkIcon={false}
     href="https://www.webex.com"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }
@@ -511,7 +511,7 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with style 1`] = `
           href="https://www.webex.com"
           rel=""
           style={
-            Object {
+            {
               "color": "pink",
             }
           }

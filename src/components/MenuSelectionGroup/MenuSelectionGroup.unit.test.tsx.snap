@@ -5,9 +5,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
   className="some-classname"
   classNameSelectedItem="selected-classname"
   item={
-    Object {
+    {
       "aria-label": "selection",
-      "childNodes": Object {
+      "childNodes": {
         Symbol(Symbol.iterator): [Function],
       },
       "hasChildNodes": true,
@@ -17,9 +17,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
       "nextKey": "$.0.0",
       "parentKey": null,
       "prevKey": undefined,
-      "props": Object {
+      "props": {
         "aria-label": "selection",
-        "children": Array [
+        "children": [
           <$de85adf0b38f4f13e9cffd2f21$var$Item
             aria-label="0"
           >
@@ -45,16 +45,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
   }
   itemSize={32}
   state={
-    Object {
+    {
       "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
         "firstKey": "$.0",
-        "iterable": Object {
+        "iterable": {
           Symbol(Symbol.iterator): [Function],
         },
         "keyMap": Map {
-          "$.0" => Object {
+          "$.0" => {
             "aria-label": "selection",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": true,
@@ -64,9 +64,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "nextKey": "$.0.0",
             "parentKey": null,
             "prevKey": undefined,
-            "props": Object {
+            "props": {
               "aria-label": "selection",
-              "children": Array [
+              "children": [
                 <$de85adf0b38f4f13e9cffd2f21$var$Item
                   aria-label="0"
                 >
@@ -89,9 +89,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.0.0" => Object {
+          "$.0.0" => {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -101,7 +101,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "nextKey": "$.0.1",
             "parentKey": "$.0",
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -112,9 +112,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.0.1" => Object {
+          "$.0.1" => {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -124,7 +124,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "nextKey": undefined,
             "parentKey": "$.0",
             "prevKey": "$.0.0",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },
@@ -145,13 +145,13 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
         "allowsCellSelection": false,
         "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
           "firstKey": "$.0",
-          "iterable": Object {
+          "iterable": {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => Object {
+            "$.0" => {
               "aria-label": "selection",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": true,
@@ -161,9 +161,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "nextKey": "$.0.0",
               "parentKey": null,
               "prevKey": undefined,
-              "props": Object {
+              "props": {
                 "aria-label": "selection",
-                "children": Array [
+                "children": [
                   <$de85adf0b38f4f13e9cffd2f21$var$Item
                     aria-label="0"
                   >
@@ -186,9 +186,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.0" => Object {
+            "$.0.0" => {
               "aria-label": "0",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -198,7 +198,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "nextKey": "$.0.1",
               "parentKey": "$.0",
               "prevKey": "$.0",
-              "props": Object {
+              "props": {
                 "aria-label": "0",
                 "children": "Item 1",
               },
@@ -209,9 +209,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.1" => Object {
+            "$.0.1" => {
               "aria-label": "1",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -221,7 +221,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "nextKey": undefined,
               "parentKey": "$.0",
               "prevKey": "$.0.0",
-              "props": Object {
+              "props": {
                 "aria-label": "1",
                 "children": "Item 2",
               },
@@ -235,7 +235,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
           },
           "lastKey": "$.0.1",
         },
-        "state": Object {
+        "state": {
           "childFocusStrategy": "first",
           "disabledKeys": Set {},
           "disallowEmptySelection": undefined,
@@ -277,9 +277,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
       <MenuItem
         classNameSelectedItem="selected-classname"
         item={
-          Object {
+          {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -289,7 +289,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "nextKey": "$.0.1",
             "parentKey": "$.0",
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -304,16 +304,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
         itemSize={32}
         key="$.0.0"
         state={
-          Object {
+          {
             "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
               "firstKey": "$.0",
-              "iterable": Object {
+              "iterable": {
                 Symbol(Symbol.iterator): [Function],
               },
               "keyMap": Map {
-                "$.0" => Object {
+                "$.0" => {
                   "aria-label": "selection",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": true,
@@ -323,9 +323,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "nextKey": "$.0.0",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": Object {
+                  "props": {
                     "aria-label": "selection",
-                    "children": Array [
+                    "children": [
                       <$de85adf0b38f4f13e9cffd2f21$var$Item
                         aria-label="0"
                       >
@@ -348,9 +348,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.0" => Object {
+                "$.0.0" => {
                   "aria-label": "0",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -360,7 +360,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "nextKey": "$.0.1",
                   "parentKey": "$.0",
                   "prevKey": "$.0",
-                  "props": Object {
+                  "props": {
                     "aria-label": "0",
                     "children": "Item 1",
                   },
@@ -371,9 +371,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.1" => Object {
+                "$.0.1" => {
                   "aria-label": "1",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -383,7 +383,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "nextKey": undefined,
                   "parentKey": "$.0",
                   "prevKey": "$.0.0",
-                  "props": Object {
+                  "props": {
                     "aria-label": "1",
                     "children": "Item 2",
                   },
@@ -404,13 +404,13 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "allowsCellSelection": false,
               "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
                 "firstKey": "$.0",
-                "iterable": Object {
+                "iterable": {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "keyMap": Map {
-                  "$.0" => Object {
+                  "$.0" => {
                     "aria-label": "selection",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": true,
@@ -420,9 +420,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "nextKey": "$.0.0",
                     "parentKey": null,
                     "prevKey": undefined,
-                    "props": Object {
+                    "props": {
                       "aria-label": "selection",
-                      "children": Array [
+                      "children": [
                         <$de85adf0b38f4f13e9cffd2f21$var$Item
                           aria-label="0"
                         >
@@ -445,9 +445,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.0" => Object {
+                  "$.0.0" => {
                     "aria-label": "0",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -457,7 +457,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "nextKey": "$.0.1",
                     "parentKey": "$.0",
                     "prevKey": "$.0",
-                    "props": Object {
+                    "props": {
                       "aria-label": "0",
                       "children": "Item 1",
                     },
@@ -468,9 +468,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.1" => Object {
+                  "$.0.1" => {
                     "aria-label": "1",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -480,7 +480,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "nextKey": undefined,
                     "parentKey": "$.0",
                     "prevKey": "$.0.0",
-                    "props": Object {
+                    "props": {
                       "aria-label": "1",
                       "children": "Item 2",
                     },
@@ -494,7 +494,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                 },
                 "lastKey": "$.0.1",
               },
-              "state": Object {
+              "state": {
                 "childFocusStrategy": "first",
                 "disabledKeys": Set {},
                 "disallowEmptySelection": undefined,
@@ -592,9 +592,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
       <MenuItem
         classNameSelectedItem="selected-classname"
         item={
-          Object {
+          {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -604,7 +604,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
             "nextKey": undefined,
             "parentKey": "$.0",
             "prevKey": "$.0.0",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },
@@ -619,16 +619,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
         itemSize={32}
         key="$.0.1"
         state={
-          Object {
+          {
             "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
               "firstKey": "$.0",
-              "iterable": Object {
+              "iterable": {
                 Symbol(Symbol.iterator): [Function],
               },
               "keyMap": Map {
-                "$.0" => Object {
+                "$.0" => {
                   "aria-label": "selection",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": true,
@@ -638,9 +638,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "nextKey": "$.0.0",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": Object {
+                  "props": {
                     "aria-label": "selection",
-                    "children": Array [
+                    "children": [
                       <$de85adf0b38f4f13e9cffd2f21$var$Item
                         aria-label="0"
                       >
@@ -663,9 +663,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.0" => Object {
+                "$.0.0" => {
                   "aria-label": "0",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -675,7 +675,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "nextKey": "$.0.1",
                   "parentKey": "$.0",
                   "prevKey": "$.0",
-                  "props": Object {
+                  "props": {
                     "aria-label": "0",
                     "children": "Item 1",
                   },
@@ -686,9 +686,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.1" => Object {
+                "$.0.1" => {
                   "aria-label": "1",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -698,7 +698,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                   "nextKey": undefined,
                   "parentKey": "$.0",
                   "prevKey": "$.0.0",
-                  "props": Object {
+                  "props": {
                     "aria-label": "1",
                     "children": "Item 2",
                   },
@@ -719,13 +719,13 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
               "allowsCellSelection": false,
               "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
                 "firstKey": "$.0",
-                "iterable": Object {
+                "iterable": {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "keyMap": Map {
-                  "$.0" => Object {
+                  "$.0" => {
                     "aria-label": "selection",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": true,
@@ -735,9 +735,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "nextKey": "$.0.0",
                     "parentKey": null,
                     "prevKey": undefined,
-                    "props": Object {
+                    "props": {
                       "aria-label": "selection",
-                      "children": Array [
+                      "children": [
                         <$de85adf0b38f4f13e9cffd2f21$var$Item
                           aria-label="0"
                         >
@@ -760,9 +760,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.0" => Object {
+                  "$.0.0" => {
                     "aria-label": "0",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -772,7 +772,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "nextKey": "$.0.1",
                     "parentKey": "$.0",
                     "prevKey": "$.0",
-                    "props": Object {
+                    "props": {
                       "aria-label": "0",
                       "children": "Item 1",
                     },
@@ -783,9 +783,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.1" => Object {
+                  "$.0.1" => {
                     "aria-label": "1",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -795,7 +795,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                     "nextKey": undefined,
                     "parentKey": "$.0",
                     "prevKey": "$.0.0",
-                    "props": Object {
+                    "props": {
                       "aria-label": "1",
                       "children": "Item 2",
                     },
@@ -809,7 +809,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot 1`] = `
                 },
                 "lastKey": "$.0.1",
               },
-              "state": Object {
+              "state": {
                 "childFocusStrategy": "first",
                 "disabledKeys": Set {},
                 "disallowEmptySelection": undefined,
@@ -914,9 +914,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
   className="some-classname"
   classNameSelectedItem="selected-classname"
   item={
-    Object {
+    {
       "aria-label": "selection",
-      "childNodes": Object {
+      "childNodes": {
         Symbol(Symbol.iterator): [Function],
       },
       "hasChildNodes": true,
@@ -926,9 +926,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
       "nextKey": "$.0.0",
       "parentKey": null,
       "prevKey": undefined,
-      "props": Object {
+      "props": {
         "aria-label": "selection",
-        "children": Array [
+        "children": [
           <$de85adf0b38f4f13e9cffd2f21$var$Item
             aria-label="0"
           >
@@ -955,16 +955,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
   }
   itemSize={32}
   state={
-    Object {
+    {
       "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
         "firstKey": "$.0",
-        "iterable": Object {
+        "iterable": {
           Symbol(Symbol.iterator): [Function],
         },
         "keyMap": Map {
-          "$.0" => Object {
+          "$.0" => {
             "aria-label": "selection",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": true,
@@ -974,9 +974,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "nextKey": "$.0.0",
             "parentKey": null,
             "prevKey": undefined,
-            "props": Object {
+            "props": {
               "aria-label": "selection",
-              "children": Array [
+              "children": [
                 <$de85adf0b38f4f13e9cffd2f21$var$Item
                   aria-label="0"
                 >
@@ -1000,9 +1000,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.0.0" => Object {
+          "$.0.0" => {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -1012,7 +1012,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "nextKey": "$.0.sep",
             "parentKey": "$.0",
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -1023,9 +1023,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.0.sep" => Object {
+          "$.0.sep" => {
             "aria-label": undefined,
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": undefined,
@@ -1035,7 +1035,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "nextKey": "$.0.1",
             "parentKey": "$.0",
             "prevKey": "$.0.0",
-            "props": Object {
+            "props": {
               "_isSeparator": true,
             },
             "rendered": undefined,
@@ -1045,9 +1045,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "value": undefined,
             "wrapper": undefined,
           },
-          "$.0.1" => Object {
+          "$.0.1" => {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -1057,7 +1057,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "nextKey": undefined,
             "parentKey": "$.0",
             "prevKey": "$.0.sep",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },
@@ -1078,13 +1078,13 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
         "allowsCellSelection": false,
         "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
           "firstKey": "$.0",
-          "iterable": Object {
+          "iterable": {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => Object {
+            "$.0" => {
               "aria-label": "selection",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": true,
@@ -1094,9 +1094,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "nextKey": "$.0.0",
               "parentKey": null,
               "prevKey": undefined,
-              "props": Object {
+              "props": {
                 "aria-label": "selection",
-                "children": Array [
+                "children": [
                   <$de85adf0b38f4f13e9cffd2f21$var$Item
                     aria-label="0"
                   >
@@ -1120,9 +1120,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.0" => Object {
+            "$.0.0" => {
               "aria-label": "0",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1132,7 +1132,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "nextKey": "$.0.sep",
               "parentKey": "$.0",
               "prevKey": "$.0",
-              "props": Object {
+              "props": {
                 "aria-label": "0",
                 "children": "Item 1",
               },
@@ -1143,9 +1143,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.sep" => Object {
+            "$.0.sep" => {
               "aria-label": undefined,
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": undefined,
@@ -1155,7 +1155,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "nextKey": "$.0.1",
               "parentKey": "$.0",
               "prevKey": "$.0.0",
-              "props": Object {
+              "props": {
                 "_isSeparator": true,
               },
               "rendered": undefined,
@@ -1165,9 +1165,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.1" => Object {
+            "$.0.1" => {
               "aria-label": "1",
-              "childNodes": Object {
+              "childNodes": {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1177,7 +1177,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "nextKey": undefined,
               "parentKey": "$.0",
               "prevKey": "$.0.sep",
-              "props": Object {
+              "props": {
                 "aria-label": "1",
                 "children": "Item 2",
               },
@@ -1191,7 +1191,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
           },
           "lastKey": "$.0.1",
         },
-        "state": Object {
+        "state": {
           "childFocusStrategy": "first",
           "disabledKeys": Set {},
           "disallowEmptySelection": undefined,
@@ -1233,9 +1233,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
       <MenuItem
         classNameSelectedItem="selected-classname"
         item={
-          Object {
+          {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -1245,7 +1245,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "nextKey": "$.0.sep",
             "parentKey": "$.0",
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -1260,16 +1260,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
         itemSize={32}
         key="$.0.0"
         state={
-          Object {
+          {
             "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
               "firstKey": "$.0",
-              "iterable": Object {
+              "iterable": {
                 Symbol(Symbol.iterator): [Function],
               },
               "keyMap": Map {
-                "$.0" => Object {
+                "$.0" => {
                   "aria-label": "selection",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": true,
@@ -1279,9 +1279,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": "$.0.0",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": Object {
+                  "props": {
                     "aria-label": "selection",
-                    "children": Array [
+                    "children": [
                       <$de85adf0b38f4f13e9cffd2f21$var$Item
                         aria-label="0"
                       >
@@ -1305,9 +1305,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.0" => Object {
+                "$.0.0" => {
                   "aria-label": "0",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1317,7 +1317,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": "$.0.sep",
                   "parentKey": "$.0",
                   "prevKey": "$.0",
-                  "props": Object {
+                  "props": {
                     "aria-label": "0",
                     "children": "Item 1",
                   },
@@ -1328,9 +1328,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.sep" => Object {
+                "$.0.sep" => {
                   "aria-label": undefined,
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": undefined,
@@ -1340,7 +1340,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": "$.0.1",
                   "parentKey": "$.0",
                   "prevKey": "$.0.0",
-                  "props": Object {
+                  "props": {
                     "_isSeparator": true,
                   },
                   "rendered": undefined,
@@ -1350,9 +1350,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.1" => Object {
+                "$.0.1" => {
                   "aria-label": "1",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1362,7 +1362,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": undefined,
                   "parentKey": "$.0",
                   "prevKey": "$.0.sep",
-                  "props": Object {
+                  "props": {
                     "aria-label": "1",
                     "children": "Item 2",
                   },
@@ -1383,13 +1383,13 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "allowsCellSelection": false,
               "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
                 "firstKey": "$.0",
-                "iterable": Object {
+                "iterable": {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "keyMap": Map {
-                  "$.0" => Object {
+                  "$.0" => {
                     "aria-label": "selection",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": true,
@@ -1399,9 +1399,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": "$.0.0",
                     "parentKey": null,
                     "prevKey": undefined,
-                    "props": Object {
+                    "props": {
                       "aria-label": "selection",
-                      "children": Array [
+                      "children": [
                         <$de85adf0b38f4f13e9cffd2f21$var$Item
                           aria-label="0"
                         >
@@ -1425,9 +1425,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.0" => Object {
+                  "$.0.0" => {
                     "aria-label": "0",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -1437,7 +1437,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": "$.0.sep",
                     "parentKey": "$.0",
                     "prevKey": "$.0",
-                    "props": Object {
+                    "props": {
                       "aria-label": "0",
                       "children": "Item 1",
                     },
@@ -1448,9 +1448,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.sep" => Object {
+                  "$.0.sep" => {
                     "aria-label": undefined,
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": undefined,
@@ -1460,7 +1460,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": "$.0.1",
                     "parentKey": "$.0",
                     "prevKey": "$.0.0",
-                    "props": Object {
+                    "props": {
                       "_isSeparator": true,
                     },
                     "rendered": undefined,
@@ -1470,9 +1470,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.1" => Object {
+                  "$.0.1" => {
                     "aria-label": "1",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -1482,7 +1482,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": undefined,
                     "parentKey": "$.0",
                     "prevKey": "$.0.sep",
-                    "props": Object {
+                    "props": {
                       "aria-label": "1",
                       "children": "Item 2",
                     },
@@ -1496,7 +1496,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                 },
                 "lastKey": "$.0.1",
               },
-              "state": Object {
+              "state": {
                 "childFocusStrategy": "first",
                 "disabledKeys": Set {},
                 "disallowEmptySelection": undefined,
@@ -1600,9 +1600,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
       <MenuItem
         classNameSelectedItem="selected-classname"
         item={
-          Object {
+          {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -1612,7 +1612,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
             "nextKey": undefined,
             "parentKey": "$.0",
             "prevKey": "$.0.sep",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },
@@ -1627,16 +1627,16 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
         itemSize={32}
         key="$.0.1"
         state={
-          Object {
+          {
             "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
               "firstKey": "$.0",
-              "iterable": Object {
+              "iterable": {
                 Symbol(Symbol.iterator): [Function],
               },
               "keyMap": Map {
-                "$.0" => Object {
+                "$.0" => {
                   "aria-label": "selection",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": true,
@@ -1646,9 +1646,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": "$.0.0",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": Object {
+                  "props": {
                     "aria-label": "selection",
-                    "children": Array [
+                    "children": [
                       <$de85adf0b38f4f13e9cffd2f21$var$Item
                         aria-label="0"
                       >
@@ -1672,9 +1672,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.0" => Object {
+                "$.0.0" => {
                   "aria-label": "0",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1684,7 +1684,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": "$.0.sep",
                   "parentKey": "$.0",
                   "prevKey": "$.0",
-                  "props": Object {
+                  "props": {
                     "aria-label": "0",
                     "children": "Item 1",
                   },
@@ -1695,9 +1695,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.sep" => Object {
+                "$.0.sep" => {
                   "aria-label": undefined,
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": undefined,
@@ -1707,7 +1707,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": "$.0.1",
                   "parentKey": "$.0",
                   "prevKey": "$.0.0",
-                  "props": Object {
+                  "props": {
                     "_isSeparator": true,
                   },
                   "rendered": undefined,
@@ -1717,9 +1717,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "value": undefined,
                   "wrapper": undefined,
                 },
-                "$.0.1" => Object {
+                "$.0.1" => {
                   "aria-label": "1",
-                  "childNodes": Object {
+                  "childNodes": {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1729,7 +1729,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                   "nextKey": undefined,
                   "parentKey": "$.0",
                   "prevKey": "$.0.sep",
-                  "props": Object {
+                  "props": {
                     "aria-label": "1",
                     "children": "Item 2",
                   },
@@ -1750,13 +1750,13 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
               "allowsCellSelection": false,
               "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
                 "firstKey": "$.0",
-                "iterable": Object {
+                "iterable": {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "keyMap": Map {
-                  "$.0" => Object {
+                  "$.0" => {
                     "aria-label": "selection",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": true,
@@ -1766,9 +1766,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": "$.0.0",
                     "parentKey": null,
                     "prevKey": undefined,
-                    "props": Object {
+                    "props": {
                       "aria-label": "selection",
-                      "children": Array [
+                      "children": [
                         <$de85adf0b38f4f13e9cffd2f21$var$Item
                           aria-label="0"
                         >
@@ -1792,9 +1792,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.0" => Object {
+                  "$.0.0" => {
                     "aria-label": "0",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -1804,7 +1804,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": "$.0.sep",
                     "parentKey": "$.0",
                     "prevKey": "$.0",
-                    "props": Object {
+                    "props": {
                       "aria-label": "0",
                       "children": "Item 1",
                     },
@@ -1815,9 +1815,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.sep" => Object {
+                  "$.0.sep" => {
                     "aria-label": undefined,
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": undefined,
@@ -1827,7 +1827,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": "$.0.1",
                     "parentKey": "$.0",
                     "prevKey": "$.0.0",
-                    "props": Object {
+                    "props": {
                       "_isSeparator": true,
                     },
                     "rendered": undefined,
@@ -1837,9 +1837,9 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "value": undefined,
                     "wrapper": undefined,
                   },
-                  "$.0.1" => Object {
+                  "$.0.1" => {
                     "aria-label": "1",
-                    "childNodes": Object {
+                    "childNodes": {
                       Symbol(Symbol.iterator): [Function],
                     },
                     "hasChildNodes": false,
@@ -1849,7 +1849,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                     "nextKey": undefined,
                     "parentKey": "$.0",
                     "prevKey": "$.0.sep",
-                    "props": Object {
+                    "props": {
                       "aria-label": "1",
                       "children": "Item 2",
                     },
@@ -1863,7 +1863,7 @@ exports[`<MenuSelectionGroup /> snapshot should match snapshot with seperator wi
                 },
                 "lastKey": "$.0.1",
               },
-              "state": Object {
+              "state": {
                 "childFocusStrategy": "first",
                 "disabledKeys": Set {},
                 "disallowEmptySelection": undefined,

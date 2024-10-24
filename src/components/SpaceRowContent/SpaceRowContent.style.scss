@@ -27,7 +27,7 @@
     justify-content: flex-start;
   }
 
-  p {
+  p, .md-text-wrapper {
     margin: 0;
     float: left;
     overflow: hidden;
@@ -52,7 +52,7 @@
 }
 
 .md-space-row-content-is-new-activity {
-  p {
+  div.md-text-wrapper {
     font-weight: 750 !important;
     color: var(--mds-color-theme-text-primary-normal) !important;
   }

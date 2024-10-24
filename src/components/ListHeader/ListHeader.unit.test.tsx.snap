@@ -506,7 +506,7 @@ exports[`<ListHeader /> snapshot should match snapshot with outlinePosition 2`] 
 exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
 <ListHeader
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -519,7 +519,7 @@ exports[`<ListHeader /> snapshot should match snapshot with style 1`] = `
     data-outline-only={true}
     data-outline-position="bottom"
     style={
-      Object {
+      {
         "color": "pink",
       }
     }

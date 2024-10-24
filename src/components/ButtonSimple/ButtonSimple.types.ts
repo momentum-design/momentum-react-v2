@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { AriaRole, CSSProperties, ReactNode } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 import { HoverProps } from '@react-aria/interactions';
 
@@ -38,7 +38,7 @@ export interface Props extends AriaButtonProps, HoverProps {
   /**
    * Role for adding accessibility
    */
-  role?: string;
+  role?: AriaRole;
 
   /**
    * Tabindex for accessibility

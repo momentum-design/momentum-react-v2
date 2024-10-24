@@ -268,7 +268,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
                     fill="currentColor"
                     height="100%"
                     style={
-                      Object {
+                      {
                         "stroke": "none",
                       }
                     }
@@ -596,7 +596,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                     fill="currentColor"
                     height="100%"
                     style={
-                      Object {
+                      {
                         "stroke": "none",
                       }
                     }
@@ -680,7 +680,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                     fill="currentColor"
                     height="100%"
                     style={
-                      Object {
+                      {
                         "stroke": "none",
                       }
                     }
@@ -701,7 +701,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
 exports[`<NavigationTab /> snapshot should match snapshot with style 1`] = `
 <NavigationTab
   style={
-    Object {
+    {
       "color": "pink",
     }
   }
@@ -718,7 +718,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with style 1`] = `
         onBlur={[Function]}
         onFocus={[Function]}
         style={
-          Object {
+          {
             "color": "pink",
           }
         }
@@ -747,7 +747,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with style 1`] = `
               onTouchMove={[Function]}
               onTouchStart={[Function]}
               style={
-                Object {
+                {
                   "color": "pink",
                 }
               }

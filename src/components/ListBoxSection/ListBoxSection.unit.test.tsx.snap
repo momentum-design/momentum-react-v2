@@ -3,9 +3,9 @@
 exports[`ListBoxSection snapshot should match snapshot 1`] = `
 <ListBoxSection
   section={
-    Object {
+    {
       "aria-label": "section",
-      "childNodes": Object {
+      "childNodes": {
         Symbol(Symbol.iterator): [Function],
       },
       "hasChildNodes": true,
@@ -36,9 +36,9 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
     >
       <ListBoxItem
         item={
-          Object {
+          {
             "aria-label": "0",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -48,7 +48,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
             "nextKey": "$.0.1",
             "parentKey": "$.0",
             "prevKey": "$.0",
-            "props": Object {
+            "props": {
               "aria-label": "0",
               "children": "Item 1",
             },
@@ -121,9 +121,9 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
       </ListBoxItem>
       <ListBoxItem
         item={
-          Object {
+          {
             "aria-label": "1",
-            "childNodes": Object {
+            "childNodes": {
               Symbol(Symbol.iterator): [Function],
             },
             "hasChildNodes": false,
@@ -133,7 +133,7 @@ exports[`ListBoxSection snapshot should match snapshot 1`] = `
             "nextKey": undefined,
             "parentKey": "$.0",
             "prevKey": "$.0.0",
-            "props": Object {
+            "props": {
               "aria-label": "1",
               "children": "Item 2",
             },

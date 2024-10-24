@@ -1,0 +1,18 @@
+The `<TabsProvider />` component provides the context to use `<TabList>` and `<TabPanel>` together.
+
+The `selectedKey` property defines the selected tab in the `TabList` and provides the context for
+the `TabPanel` to have the correct a11y properties.
+
+If the `id` property is defined, the ids of the Tabs inside the TabList and the TabPanel will have
+the id prefixed with the property value. Otherwise, the ids will be prefixed with a generated uuidv4
+string. For example:
+
+```tsx
+<TabsProvider selectedTab="tab-1" id="world">
+  <TabList>
+    <Tab key="tab-1" /> {/* id: worldtab-1 */}
+    <Tab key="tab-2" /> {/* id: worldtab-2 */}
+  </TabList>
+  <TabPanel /> {/* worldtab-1-TabPanel */}
+</TabsProvider>
+```
