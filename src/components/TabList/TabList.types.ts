@@ -13,4 +13,9 @@ export interface Props extends ButtonGroupProps {
    * Handler that is called when a tab is pressed. If <Tab /> has a defined `onPress`, this handler is not called.
    */
   onTabSelection?: (tab: React.Key) => void;
+
+  /**
+   * Whether the tab list should look like a sub tabs list
+   */
+  isSubTabList?: boolean;
 }

@@ -63,6 +63,14 @@ describe('<TabList />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with isSubTabList = true', () => {
+      expect.assertions(1);
+
+      const container = mount(<TabList {...detachedCommonProps()} isSubTabList />);
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -120,6 +128,16 @@ describe('<TabList />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    it('should pass isSubTabList prop', () => {
+      expect.assertions(1);
+
+      const element = mount(<TabList {...detachedCommonProps()} isSubTabList />)
+        .find(TabList)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-subtabs')).toBe(`${true}`);
     });
 
     it('calls useOrientationBasedKeyboardNavigation with the correct props', () => {
