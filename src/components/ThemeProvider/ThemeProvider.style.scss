@@ -54,7 +54,7 @@
   --md-globals-border-style-solid: solid;
 
   @media (forced-colors: active) {
-    --md-globals-focus-ring-outline: 0.125rem solid var(--mds-color-theme-outline-theme-normal);
+    --md-globals-focus-ring-outline: 0.125rem solid CanvasText;
   }
 
   // Gradient backgrounds
