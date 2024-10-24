@@ -27,13 +27,13 @@
     justify-content: flex-start;
   }
 
-  p, .md-text-wrapper {
+  div.md-text-wrapper {
     margin: 0;
-    float: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
+    flex-shrink: 0;
+    max-width: 100%;
   }
 
   small {
