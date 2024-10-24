@@ -20,7 +20,7 @@ const TabList: FC<Props> = (props: Props) => {
     children: _children,
     orientation = DEFAULTS.ORIENTATION,
     onTabSelection,
-    isSubTabList = DEFAULTS.IS_SUBTAB_LIST,
+    hasBackground = DEFAULTS.HAS_BACKGROUND,
     ...otherProps
   } = props;
   const children: ReactElement<TabProps>[] = Array.isArray(_children)
@@ -117,7 +117,7 @@ const TabList: FC<Props> = (props: Props) => {
       {...buttonGroupProps}
       {...keyboardProps}
       {...focusWithinProps}
-      data-subtabs={isSubTabList}
+      data-has-background={hasBackground}
       role="tablist"
       className={classnames(STYLE.wrapper, props.className)}
     >
