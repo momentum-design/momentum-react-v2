@@ -11,11 +11,6 @@
 
   &:hover {
     background-color: var(--mds-color-theme-background-primary-hover);
-
-    @media (forced-colors: active) {
-      background-color: SelectedItem;
-      color: SelectedItemText;
-    }
   }
 
   &:active {
