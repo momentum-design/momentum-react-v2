@@ -3,7 +3,7 @@ import { cloneDeep } from 'lodash';
 import { TabListProps } from '.';
 import { ButtonGroupProps } from '../ButtonGroup';
 import _buttonGroupArgTypes from '../ButtonGroup/ButtonGroup.stories.args';
-
+import { DEFAULTS } from './TabList.constants';
 const buttonGroupArgTypes: Meta<ButtonGroupProps>['argTypes'] = cloneDeep(_buttonGroupArgTypes);
 Object.values(buttonGroupArgTypes).forEach((prop) => {
   if (prop.table.category) return;
@@ -35,6 +35,19 @@ const tabListArgTypes: Meta<TabListProps>['argTypes'] = {
       },
       defaultValue: {
         summary: 'undefined',
+      },
+    },
+  },
+  isSubTabList: {
+    description: 'Whether the tab list should look like a sub tabs list',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.IS_SUBTAB_LIST,
       },
     },
   },

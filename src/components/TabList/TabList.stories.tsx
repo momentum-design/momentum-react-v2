@@ -25,9 +25,27 @@ const Example = Template<TabListProps>(TabList).bind({});
 
 Example.argTypes = { ...argTypes };
 
-// TODO: Provide default arguments for this story here. These populate into the argument table for this component.
 Example.args = {
   onTabSelection: (key: React.Key) => console.log('tab selected', key),
+  children: [
+    <Tab key="tab-1" active>
+      Tab 1
+    </Tab>,
+    <Tab key="tab-2">Tab 2</Tab>,
+    <Tab key="disabled" disabled>
+      Disabled
+    </Tab>,
+    <Tab key="tab-3">Tab 3</Tab>,
+  ],
+};
+
+const SubTabs = Template<TabListProps>(TabList).bind({});
+
+SubTabs.argTypes = { ...argTypes };
+
+SubTabs.args = {
+  onTabSelection: (key: React.Key) => console.log('tab selected', key),
+  isSubTabList: true,
   children: [
     <Tab key="tab-1" active>
       Tab 1
@@ -75,4 +93,4 @@ Common.parameters = {
   ],
 };
 
-export { Common, Example };
+export { Example, SubTabs, Common };
