@@ -5,6 +5,10 @@
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
+  @media (forced-colors: active) {
+    border: 1px solid ButtonBorder;
+  }
+
   /* Colorization */
   &[data-active='false'] {
     &[data-disabled='false'] {
