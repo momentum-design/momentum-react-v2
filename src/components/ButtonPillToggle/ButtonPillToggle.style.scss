@@ -42,5 +42,17 @@
         border-color: var(--mds-color-theme-outline-primary-disabled) !important;
       }
     }
+
+    &[data-selected='true'][data-selected='true'] {
+      @media (forced-colors: active) {
+        background-color: SelectedItem !important;
+        color: SelectedItemText !important;
+
+        &[data-disabled='true'],
+        &.disable {
+          color: GrayText !important;
+        }
+      }
+    }
   }
 }
