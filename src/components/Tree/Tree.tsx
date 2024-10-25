@@ -212,7 +212,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       setIsFocusWithin(true);
       const targetNode = e.target.closest('[data-nodeid]');
       if (!!targetNode && targetNode.getAttribute('data-nodeid') !== activeNode) {
-        // if the user's focus is on a different tree node, then don't scroll to the current actie node
+        // if the user's focus is on a different tree node, then don't scroll to the current active node
         return;
       }
       scrollToVTreeNode(activeNode);
