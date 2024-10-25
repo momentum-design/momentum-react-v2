@@ -548,6 +548,27 @@ describe('<Tree />', () => {
       expect(scrollToNode).toHaveBeenCalledTimes(0);
     });
 
+    it('should not call scrollToNode when the focus moves back to the tree to a different node even if the active node is not in the DOM', async () => {
+      expect.assertions(4);
+      const scrollToNode = jest.fn();
+      const { getByText } = await renderTreeAndRemoveNode({
+        scrollToNode,
+        setNodeOpen: jest.fn(),
+      });
+
+      document.body.focus();
+      await userEvent.tab();
+      expect(scrollToNode).toHaveBeenCalledTimes(1);
+      expect(scrollToNode).toHaveBeenCalledWith('1');
+      scrollToNode.mockReset();
+
+      await userEvent.click(getByText('4.1'));
+
+      // Only adding back Node 1 will remove the cloned node
+      expect(getByText('1')).not.toBeNull();
+      expect(scrollToNode).toHaveBeenCalledTimes(0);
+    });
+
     it.each`
       keyPressed
       ${'ArrowUp'}

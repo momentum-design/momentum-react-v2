@@ -107,7 +107,7 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         scrollToVTreeNode(newNodeId);
       }
     },
-    [isVirtualTree, setActiveNode]
+    [scrollToVTreeNode]
   );
 
   const toggleTreeNode = useCallback(
@@ -181,14 +181,15 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
       isFocusWithin,
     }),
     [
-      activeNode,
       getNodeAriaProps,
       getNodeDetails,
       isRenderedFlat,
       shouldNodeFocusBeInset,
+      activeNode,
+      setActiveNodeId,
       toggleTreeNode,
-      itemSelection,
       selectableNodes,
+      itemSelection,
       isFocusWithin,
     ]
   );
@@ -207,11 +208,17 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   );
 
   const { focusWithinProps } = useFocusWithin({
-    onFocusWithinChange: (val) => {
-      setIsFocusWithin(val);
-      if (val) {
-        scrollToVTreeNode(activeNode);
+    onFocusWithin: (e) => {
+      setIsFocusWithin(true);
+      const targetNode = e.target.closest('[data-nodeid]');
+      if (!!targetNode && targetNode.getAttribute('data-nodeid') !== activeNode) {
+        // if the user's focus is on a different tree node, then don't scroll to the current actie node
+        return;
       }
+      scrollToVTreeNode(activeNode);
+    },
+    onBlurWithin: () => {
+      setIsFocusWithin(false);
     },
   });
 
