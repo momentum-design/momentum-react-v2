@@ -380,6 +380,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   "strategy": "absolute",
                                 }
                               }
+                              removeTippyAriaHidden={false}
                               render={[Function]}
                               setInstance={[Function]}
                               trigger="mouseenter focus"
@@ -708,6 +709,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       "strategy": "absolute",
                                     }
                                   }
+                                  removeTippyAriaHidden={false}
                                   render={[Function]}
                                   setInstance={[Function]}
                                   trigger="mouseenter focus"
@@ -988,6 +990,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       "strategy": "absolute",
                                     }
                                   }
+                                  removeTippyAriaHidden={false}
                                   render={[Function]}
                                   setInstance={[Function]}
                                   trigger="mouseenter focus"
@@ -1271,6 +1274,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     "strategy": "absolute",
                                   }
                                 }
+                                removeTippyAriaHidden={false}
                                 render={[Function]}
                                 setInstance={[Function]}
                                 trigger="mouseenter focus"

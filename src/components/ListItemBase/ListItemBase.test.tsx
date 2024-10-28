@@ -73,6 +73,16 @@ describe('ListItemBase', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with isFocused', () => {
+      expect.assertions(1);
+
+      const isFocused = true;
+
+      container = mount(<ListItemBase isFocused={isFocused}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with lang', () => {
       expect.assertions(1);
 
@@ -232,6 +242,18 @@ describe('ListItemBase', () => {
       const element = container.find(ListItemBase).getDOMNode();
 
       expect(element.getAttribute('lang')).toBe('en-US');
+    });
+
+    it('should have provided data-focused when isFocused is provided', () => {
+      expect.assertions(1);
+
+      const isFocused = true;
+
+      container = mount(<ListItemBase isFocused={isFocused}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase).getDOMNode();
+
+      expect(element.getAttribute('data-focused')).toBe('true');
     });
 
     it('should have provided data-padding when isPadded is provided', () => {

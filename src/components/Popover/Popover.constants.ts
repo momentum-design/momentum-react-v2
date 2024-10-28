@@ -37,6 +37,7 @@ const DEFAULTS = {
   STRATEGY: 'absolute' as const,
   ADD_BACKDROP: true,
   ROLE: MODAL_CONTAINER_CONSTANTS.DEFAULTS.ROLE,
+  REMOVE_TIPPY_ARIA_HIDDEN: false,
   APPEND_TO: 'parent' as const,
   DISABLE_FOCUS_LOCK: false,
 };
