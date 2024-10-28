@@ -4,14 +4,14 @@ exports[`<RadioSimple /> snapshot should match snapshot 1`] = `
 <DocumentFragment>
   <label
     class="md-radio-simple-wrapper"
-    data-disabled="false"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
+        checked=""
         tabindex="0"
         type="radio"
         value="red"
@@ -33,15 +33,15 @@ exports[`<RadioSimple /> snapshot should match snapshot with ariaLabel 1`] = `
 <DocumentFragment>
   <label
     class="md-radio-simple-wrapper"
-    data-disabled="false"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
         aria-label="example-ariaLabel"
+        checked=""
         tabindex="0"
         type="radio"
         value="red"
@@ -63,15 +63,15 @@ exports[`<RadioSimple /> snapshot should match snapshot with ariaLabelledBy 1`] 
 <DocumentFragment>
   <label
     class="md-radio-simple-wrapper"
-    data-disabled="false"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
         aria-labelledby="example-ariaLabel"
+        checked=""
         tabindex="0"
         type="radio"
         value="red"
@@ -93,15 +93,45 @@ exports[`<RadioSimple /> snapshot should match snapshot with className 1`] = `
 <DocumentFragment>
   <label
     class="md-radio-simple-wrapper example-className"
-    data-disabled="false"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
+        checked=""
         tabindex="0"
+        type="radio"
+        value="red"
+      />
+    </div>
+    <div>
+      <p
+        class="md-text-wrapper"
+        data-type="body-primary"
+      >
+        Red
+      </p>
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`<RadioSimple /> snapshot should match snapshot with disabled RadioSimpleGroup 1`] = `
+<DocumentFragment>
+  <label
+    class="md-radio-simple-wrapper"
+    data-disabled="true"
+    data-focused="false"
+    data-selected="true"
+  >
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <input
+        checked=""
+        disabled=""
         type="radio"
         value="red"
       />
@@ -122,15 +152,15 @@ exports[`<RadioSimple /> snapshot should match snapshot with id 1`] = `
 <DocumentFragment>
   <label
     class="md-radio-simple-wrapper"
-    data-disabled="false"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
     id="example-id"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
+        checked=""
         id="example-id"
         tabindex="0"
         type="radio"
@@ -155,12 +185,13 @@ exports[`<RadioSimple /> snapshot should match snapshot with isDisabled 1`] = `
     class="md-radio-simple-wrapper"
     data-disabled="true"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
+        checked=""
         disabled=""
         type="radio"
         value="red"
@@ -182,15 +213,15 @@ exports[`<RadioSimple /> snapshot should match snapshot with style 1`] = `
 <DocumentFragment>
   <label
     class="md-radio-simple-wrapper"
-    data-disabled="false"
     data-focused="false"
-    data-selected="false"
+    data-selected="true"
     style="color: red;"
   >
     <div
       style="border: 0px; clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <input
+        checked=""
         tabindex="0"
         type="radio"
         value="red"

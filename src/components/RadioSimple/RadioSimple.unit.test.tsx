@@ -21,8 +21,8 @@ describe('<RadioSimple />', () => {
       expect.assertions(1);
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red'/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -35,8 +35,8 @@ describe('<RadioSimple />', () => {
       const ariaLabel = 'example-ariaLabel';
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' ariaLabel={ariaLabel}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" ariaLabel={ariaLabel} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -49,8 +49,8 @@ describe('<RadioSimple />', () => {
       const ariaLabelledBy = 'example-ariaLabel';
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' ariaLabelledBy={ariaLabelledBy}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" ariaLabelledBy={ariaLabelledBy} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -63,8 +63,8 @@ describe('<RadioSimple />', () => {
       const className = 'example-className';
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' className={className}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" className={className} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -77,8 +77,8 @@ describe('<RadioSimple />', () => {
       const id = 'example-id';
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' id={id}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" id={id} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -91,8 +91,22 @@ describe('<RadioSimple />', () => {
       const isDisabled = true;
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red'isDisabled={isDisabled}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" isDisabled={isDisabled} />
+        </RadioSimpleGroupContext.Provider>
+      );
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should match snapshot with disabled RadioSimpleGroup', () => {
+      expect.assertions(1);
+
+      const isDisabled = true;
+
+      const { asFragment } = render(
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red', isDisabled: isDisabled }}>
+          <RadioSimple children={children} value="red" />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -105,8 +119,8 @@ describe('<RadioSimple />', () => {
       const style = { color: 'red' };
 
       const { asFragment } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' style={style}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" style={style} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -119,8 +133,8 @@ describe('<RadioSimple />', () => {
       expect.assertions(1);
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red'/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -135,8 +149,8 @@ describe('<RadioSimple />', () => {
       const ariaLabel = 'example-ariaLabel';
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' ariaLabel={ariaLabel}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" ariaLabel={ariaLabel} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -151,8 +165,8 @@ describe('<RadioSimple />', () => {
       const ariaLabelledBy = 'example-ariaLabelledBy';
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' ariaLabelledBy={ariaLabelledBy}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" ariaLabelledBy={ariaLabelledBy} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -167,8 +181,8 @@ describe('<RadioSimple />', () => {
       const className = 'example-className';
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' className={className}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" className={className} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -183,8 +197,8 @@ describe('<RadioSimple />', () => {
       const id = 'example-id';
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' id={id}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" id={id} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -199,8 +213,24 @@ describe('<RadioSimple />', () => {
       const isDisabled = true;
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' isDisabled={isDisabled}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" isDisabled={isDisabled} />
+        </RadioSimpleGroupContext.Provider>
+      );
+
+      const radioSimple = container.querySelector('label');
+
+      expect(radioSimple.getAttribute('data-disabled')).toBe('true');
+    });
+
+    it('should have provided isDisabled when RadioSimpleGroup is disabled', () => {
+      expect.assertions(1);
+
+      const isDisabled = true;
+
+      const { container } = render(
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red', isDisabled: isDisabled }}>
+          <RadioSimple children={children} value="red" />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -215,8 +245,8 @@ describe('<RadioSimple />', () => {
       const style = { color: 'pink' };
 
       const { container } = render(
-        <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value='red' style={style}/>
+        <RadioSimpleGroupContext.Provider value={{ selectedValue: 'red' }}>
+          <RadioSimple children={children} value="red" style={style} />
         </RadioSimpleGroupContext.Provider>
       );
 

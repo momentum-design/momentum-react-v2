@@ -33,7 +33,8 @@
 
   &[data-disabled='true'] {
     cursor: default;
-    background-color: var(--mds-color-theme-background-primary-disabled);
+    background-color: var(--mds-color-theme-button-secondary-disabled);
+    color: var(--mds-color-theme-text-primary-disabled);
 
     &[data-selected='true'] {
       background-color: var(--mds-color-theme-button-secondary-active-disabled);
