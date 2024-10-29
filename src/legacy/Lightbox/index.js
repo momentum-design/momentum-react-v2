@@ -27,6 +27,7 @@ class Lightbox extends React.Component {
       height: 600,
     },
     zoom: 1,
+    theme: 'lightWebex',
   };
 
   componentDidMount() {
@@ -168,6 +169,10 @@ class Lightbox extends React.Component {
     const { zoom, viewportDimensions } = this.state;
     const currentPage = pages[index];
     const showColumn = pages.length > 1;
+
+    const LightThemeStyle = this.props.theme === this.state.theme   
+    ? { color: 'var(--mds-color-theme-text-primary-normal)' }   
+    : {}; 
 
     const calculateAspectRatioFit = (srcWidth, srcHeight, maxWidth, maxHeight) => {
       let maxW, maxH;
@@ -352,6 +357,7 @@ class Lightbox extends React.Component {
 
     const leftArrowControl = (
       <TooltipNext
+        style={LightThemeStyle}
         type="label"
         placement="right"
         triggerComponent={
@@ -373,6 +379,7 @@ class Lightbox extends React.Component {
 
     const rightArrowControl = (
       <TooltipNext
+        style={LightThemeStyle}
         type="label"
         placement="left"
         triggerComponent={
@@ -395,6 +402,7 @@ class Lightbox extends React.Component {
     const viewportControls = () => {
       const downloadButton = (
         <TooltipNext
+        style={LightThemeStyle}
           type="label"
           placement="top"
           triggerComponent={
@@ -429,6 +437,7 @@ class Lightbox extends React.Component {
         pages.length > 1 ? (
           <div className="md-lightbox__controls md-lightbox__controls--center">
             <TooltipNext
+            style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -449,6 +458,7 @@ class Lightbox extends React.Component {
             </TooltipNext>
             <span className="md-lightbox__control-value">{`${index + 1} / ${pages.length}`}</span>
             <TooltipNext
+            style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -483,6 +493,7 @@ class Lightbox extends React.Component {
         >
           <div className="md-lightbox__controls" style={controlStyle}>
             <TooltipNext
+            style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -490,6 +501,7 @@ class Lightbox extends React.Component {
                   className="md-lightbox__control"
                   data-test="zoom-out-button"
                   onPress={() => this.setZoom(-0.25)}
+                  color="red"
                 >
                   <IconNext
                     name="zoom-out"
@@ -506,6 +518,7 @@ class Lightbox extends React.Component {
               {`${Math.round(((newHeight * 1.0) / height) * 100)}%`}
             </span>
             <TooltipNext
+            style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -531,7 +544,6 @@ class Lightbox extends React.Component {
         </div>
       );
     };
-
     return (
       <Modal
         includeDefaultStyles={false}
@@ -559,6 +571,7 @@ class Lightbox extends React.Component {
             </div>
             <div className="md-lightbox__header-item--right">
               <TooltipNext
+                style={{color:'var(--mds-color-theme-text-primary-normal)'}}
                 type="label"
                 placement="bottom-start"
                 triggerComponent={
