@@ -501,7 +501,6 @@ class Lightbox extends React.Component {
                   className="md-lightbox__control"
                   data-test="zoom-out-button"
                   onPress={() => this.setZoom(-0.25)}
-                  color="red"
                 >
                   <IconNext
                     name="zoom-out"
