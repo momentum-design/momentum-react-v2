@@ -69,138 +69,142 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 role="dialog"
                 tabindex="-1"
               >
-                <div
-                  class="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex mds-theme-stable-darkWebex"
+                <mdc-themeprovider
+                  class="md-theme-darkWebex mds-typography"
                 >
                   <div
-                    class="md-lightbox__header"
+                    class="md-theme-provider-wrapper md-theme-provider-globals"
                   >
                     <div
-                      class="md-lightbox__header-item--left"
+                      class="md-lightbox__header"
                     >
                       <div
-                        class="md-lightbox__header-meta"
+                        class="md-lightbox__header-item--left"
                       >
                         <div
-                          class="md-lightbox__header-sharer"
-                        />
-                        <div
-                          class="md-lightbox__header-timestamp"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="md-lightbox__header-item--center"
-                    >
-                      <h2
-                        class="md-lightbox__header-name"
-                        id="test-ID"
-                      >
-                        test
-                      </h2>
-                    </div>
-                    <div
-                      class="md-lightbox__header-item--right"
-                    >
-                      <button
-                        aria-labelledby="test-ID"
-                        class="md-lightbox__control md-lightbox__control-close md-button-simple-wrapper"
-                        type="button"
-                      />
-                      <div
-                        class="md-tooltip-label"
-                        id="test-ID"
-                      >
-                        Exit
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="md-lightbox__body"
-                    role="tablist"
-                  >
-                    <div
-                      class="md-lightbox__content"
-                    >
-                      <div
-                        class="md-lightbox__viewport md-lightbox__viewport--decrypting"
-                      >
-                        <i
-                          class="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
-                        />
-                        <div
-                          class="md-lightbox__viewport-wrapper"
-                          style="width: 100px; height: 100px;"
+                          class="md-lightbox__header-meta"
                         >
-                          <img
-                            alt="test"
-                            class="md-lightbox__viewport-image"
-                            draggable="false"
-                            src="testImage"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="md-lightbox__viewer-controls"
-                        role="group"
-                      >
-                        <div
-                          class="md-lightbox__controls"
-                        >
-                          <button
-                            aria-labelledby="test-ID"
-                            class="md-lightbox__control md-button-simple-wrapper"
-                            data-test="zoom-out-button"
-                            type="button"
+                          <div
+                            class="md-lightbox__header-sharer"
                           />
                           <div
-                            class="md-tooltip-label"
-                            id="test-ID"
-                          >
-                            Zoom out
-                          </div>
-                          <span
-                            class="md-lightbox__control-value md-lightbox__control-zoom-level"
-                          >
-                            100%
-                          </span>
-                          <button
-                            aria-labelledby="test-ID"
-                            class="md-lightbox__control md-button-simple-wrapper"
-                            data-test="zoom-in-button"
-                            type="button"
+                            class="md-lightbox__header-timestamp"
                           />
-                          <div
-                            class="md-tooltip-label"
-                            id="test-ID"
-                          >
-                            Zoom in
-                          </div>
                         </div>
-                        <div
-                          class="md-lightbox__controls"
+                      </div>
+                      <div
+                        class="md-lightbox__header-item--center"
+                      >
+                        <h2
+                          class="md-lightbox__header-name"
+                          id="test-ID"
                         >
-                          <span
-                            class="md-lightbox__control-value"
-                          >
-                            1
-                          </span>
-                        </div>
+                          test
+                        </h2>
+                      </div>
+                      <div
+                        class="md-lightbox__header-item--right"
+                      >
                         <button
                           aria-labelledby="test-ID"
-                          class="md-lightbox__control md-lightbox__control-download md-button-simple-wrapper"
+                          class="md-lightbox__control md-lightbox__control-close md-button-simple-wrapper"
                           type="button"
                         />
                         <div
                           class="md-tooltip-label"
                           id="test-ID"
                         >
-                          Download
+                          Exit
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="md-lightbox__body"
+                      role="tablist"
+                    >
+                      <div
+                        class="md-lightbox__content"
+                      >
+                        <div
+                          class="md-lightbox__viewport md-lightbox__viewport--decrypting"
+                        >
+                          <i
+                            class="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
+                          />
+                          <div
+                            class="md-lightbox__viewport-wrapper"
+                            style="width: 100px; height: 100px;"
+                          >
+                            <img
+                              alt="test"
+                              class="md-lightbox__viewport-image"
+                              draggable="false"
+                              src="testImage"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="md-lightbox__viewer-controls"
+                          role="group"
+                        >
+                          <div
+                            class="md-lightbox__controls"
+                          >
+                            <button
+                              aria-labelledby="test-ID"
+                              class="md-lightbox__control md-button-simple-wrapper"
+                              data-test="zoom-out-button"
+                              type="button"
+                            />
+                            <div
+                              class="md-tooltip-label"
+                              id="test-ID"
+                            >
+                              Zoom out
+                            </div>
+                            <span
+                              class="md-lightbox__control-value md-lightbox__control-zoom-level"
+                            >
+                              100%
+                            </span>
+                            <button
+                              aria-labelledby="test-ID"
+                              class="md-lightbox__control md-button-simple-wrapper"
+                              data-test="zoom-in-button"
+                              type="button"
+                            />
+                            <div
+                              class="md-tooltip-label"
+                              id="test-ID"
+                            >
+                              Zoom in
+                            </div>
+                          </div>
+                          <div
+                            class="md-lightbox__controls"
+                          >
+                            <span
+                              class="md-lightbox__control-value"
+                            >
+                              1
+                            </span>
+                          </div>
+                          <button
+                            aria-labelledby="test-ID"
+                            class="md-lightbox__control md-lightbox__control-download md-button-simple-wrapper"
+                            type="button"
+                          />
+                          <div
+                            class="md-tooltip-label"
+                            id="test-ID"
+                          >
+                            Download
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </mdc-themeprovider>
               </div>
             </div>
           </div>
@@ -255,195 +259,95 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 <ThemeProvider
                   theme="darkWebex"
                 >
-                  <div
-                    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex mds-theme-stable-darkWebex"
+                  <ThemeProvider
+                    className="md-theme-darkWebex mds-typography"
+                    themeclass="mds-theme-stable-darkWebex"
                   >
-                    <div
-                      className="md-lightbox__header"
+                    <mdc-themeprovider
+                      class="md-theme-darkWebex mds-typography"
+                      suppressHydrationWarning={true}
                     >
                       <div
-                        className="md-lightbox__header-item--left"
+                        className="md-theme-provider-wrapper md-theme-provider-globals"
                       >
                         <div
-                          className="md-lightbox__header-meta"
+                          className="md-lightbox__header"
                         >
                           <div
-                            className="md-lightbox__header-sharer"
-                          />
-                          <div
-                            className="md-lightbox__header-timestamp"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="md-lightbox__header-item--center"
-                      >
-                        <h2
-                          className="md-lightbox__header-name"
-                          id="test-ID"
-                        >
-                          test
-                        </h2>
-                      </div>
-                      <div
-                        className="md-lightbox__header-item--right"
-                      >
-                        <Tooltip
-                          placement="bottom-start"
-                          style={Object {}}
-                          triggerComponent={
-                            <ButtonSimple
-                              className="md-lightbox__control md-lightbox__control-close"
-                              onPress={[Function]}
-                            >
-                              <Icon
-                                color="var(--mds-color-theme-common-text-primary-normal)"
-                                name="cancel"
-                                scale={20}
-                                weight="light"
-                              />
-                            </ButtonSimple>
-                          }
-                          type="label"
-                        >
-                          <Popover
-                            addBackdrop={false}
-                            aria-hidden={false}
-                            boundary="scrollParent"
-                            color="primary"
-                            interactive={false}
-                            offsetDistance={5}
-                            offsetSkidding={0}
-                            placement="bottom-start"
-                            role="tooltip"
-                            setInstance={[Function]}
-                            showArrow={true}
-                            strategy="absolute"
-                            style={Object {}}
-                            trigger="mouseenter focus"
-                            triggerComponent={
-                              <ButtonSimple
-                                aria-labelledby="test-ID"
-                                className="md-lightbox__control md-lightbox__control-close"
-                                onPress={[Function]}
-                              >
-                                <Icon
-                                  color="var(--mds-color-theme-common-text-primary-normal)"
-                                  name="cancel"
-                                  scale={20}
-                                  weight="light"
-                                />
-                              </ButtonSimple>
-                            }
-                            variant="small"
+                            className="md-lightbox__header-item--left"
                           >
-                            <LazyTippy
-                              animation={false}
-                              appendTo="parent"
-                              hideOnClick={true}
-                              interactive={false}
-                              offset={
-                                Array [
-                                  0,
-                                  17,
-                                ]
-                              }
-                              onHidden={[Function]}
-                              placement="bottom-start"
-                              plugins={
-                                Array [
-                                  Object {
-                                    "defaultValue": true,
-                                    "fn": [Function],
-                                    "name": "hideOnEsc",
-                                  },
-                                ]
-                              }
-                              popperOptions={
-                                Object {
-                                  "modifiers": Array [
-                                    Object {
-                                      "enabled": true,
-                                      "name": "arrow",
-                                      "options": Object {
-                                        "element": "#arrowtest-ID",
-                                        "padding": 5,
-                                      },
-                                    },
-                                    Object {
-                                      "name": "preventOverflow",
-                                      "options": Object {
-                                        "altAxis": true,
-                                        "boundariesElement": "scrollParent",
-                                        "padding": 8,
-                                      },
-                                    },
-                                  ],
-                                  "strategy": "absolute",
-                                }
-                              }
-                              render={[Function]}
-                              setInstance={[Function]}
-                              trigger="mouseenter focus"
+                            <div
+                              className="md-lightbox__header-meta"
                             >
-                              <ForwardRef(TippyWrapper)
-                                animation={false}
-                                appendTo="parent"
-                                hideOnClick={true}
+                              <div
+                                className="md-lightbox__header-sharer"
+                              />
+                              <div
+                                className="md-lightbox__header-timestamp"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            className="md-lightbox__header-item--center"
+                          >
+                            <h2
+                              className="md-lightbox__header-name"
+                              id="test-ID"
+                            >
+                              test
+                            </h2>
+                          </div>
+                          <div
+                            className="md-lightbox__header-item--right"
+                          >
+                            <Tooltip
+                              placement="bottom-start"
+                              triggerComponent={
+                                <ButtonSimple
+                                  className="md-lightbox__control md-lightbox__control-close"
+                                  onPress={[Function]}
+                                >
+                                  <Icon
+                                    color="var(--mds-color-theme-common-text-primary-normal)"
+                                    name="cancel"
+                                    scale={20}
+                                    weight="light"
+                                  />
+                                </ButtonSimple>
+                              }
+                              type="label"
+                            >
+                              <Popover
+                                addBackdrop={false}
+                                aria-hidden={false}
+                                boundary="scrollParent"
+                                color="primary"
                                 interactive={false}
-                                offset={
-                                  Array [
-                                    0,
-                                    17,
-                                  ]
-                                }
-                                onHidden={[Function]}
+                                offsetDistance={5}
+                                offsetSkidding={0}
                                 placement="bottom-start"
-                                plugins={
-                                  Array [
-                                    Object {
-                                      "fn": [Function],
-                                    },
-                                    Object {
-                                      "fn": [Function],
-                                    },
-                                    Object {
-                                      "fn": [Function],
-                                    },
-                                    Object {
-                                      "defaultValue": true,
-                                      "fn": [Function],
-                                      "name": "hideOnEsc",
-                                    },
-                                  ]
-                                }
-                                popperOptions={
-                                  Object {
-                                    "modifiers": Array [
-                                      Object {
-                                        "enabled": true,
-                                        "name": "arrow",
-                                        "options": Object {
-                                          "element": "#arrowtest-ID",
-                                          "padding": 5,
-                                        },
-                                      },
-                                      Object {
-                                        "name": "preventOverflow",
-                                        "options": Object {
-                                          "altAxis": true,
-                                          "boundariesElement": "scrollParent",
-                                          "padding": 8,
-                                        },
-                                      },
-                                    ],
-                                    "strategy": "absolute",
-                                  }
-                                }
-                                render={[Function]}
+                                role="tooltip"
+                                setInstance={[Function]}
+                                showArrow={true}
+                                strategy="absolute"
                                 trigger="mouseenter focus"
+                                triggerComponent={
+                                  <ButtonSimple
+                                    aria-labelledby="test-ID"
+                                    className="md-lightbox__control md-lightbox__control-close"
+                                    onPress={[Function]}
+                                  >
+                                    <Icon
+                                      color="var(--mds-color-theme-common-text-primary-normal)"
+                                      name="cancel"
+                                      scale={20}
+                                      weight="light"
+                                    />
+                                  </ButtonSimple>
+                                }
+                                variant="small"
                               >
-                                <Tippy
+                                <LazyTippy
                                   animation={false}
                                   appendTo="parent"
                                   hideOnClick={true}
@@ -459,230 +363,6 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   plugins={
                                     Array [
                                       Object {
-                                        "fn": [Function],
-                                      },
-                                      Object {
-                                        "fn": [Function],
-                                      },
-                                      Object {
-                                        "fn": [Function],
-                                      },
-                                      Object {
-                                        "defaultValue": true,
-                                        "fn": [Function],
-                                        "name": "hideOnEsc",
-                                      },
-                                    ]
-                                  }
-                                  popperOptions={
-                                    Object {
-                                      "modifiers": Array [
-                                        Object {
-                                          "enabled": true,
-                                          "name": "arrow",
-                                          "options": Object {
-                                            "element": "#arrowtest-ID",
-                                            "padding": 5,
-                                          },
-                                        },
-                                        Object {
-                                          "name": "preventOverflow",
-                                          "options": Object {
-                                            "altAxis": true,
-                                            "boundariesElement": "scrollParent",
-                                            "padding": 8,
-                                          },
-                                        },
-                                      ],
-                                      "strategy": "absolute",
-                                    }
-                                  }
-                                  render={[Function]}
-                                  trigger="mouseenter focus"
-                                >
-                                  <ButtonSimple
-                                    aria-labelledby="test-ID"
-                                    className="md-lightbox__control md-lightbox__control-close"
-                                    onPress={[Function]}
-                                    useNativeKeyDown={true}
-                                  >
-                                    <FocusRing>
-                                      <FocusRing
-                                        focusClass="md-focus-ring-wrapper children"
-                                        focusRingClass="md-focus-ring-wrapper children"
-                                      >
-                                        <button
-                                          aria-labelledby="test-ID"
-                                          className="md-lightbox__control md-lightbox__control-close md-button-simple-wrapper"
-                                          onBlur={[Function]}
-                                          onClick={[Function]}
-                                          onDragStart={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyUp={[Function]}
-                                          onMouseDown={[Function]}
-                                          onMouseEnter={[Function]}
-                                          onMouseLeave={[Function]}
-                                          onMouseUp={[Function]}
-                                          onTouchCancel={[Function]}
-                                          onTouchEnd={[Function]}
-                                          onTouchMove={[Function]}
-                                          onTouchStart={[Function]}
-                                          type="button"
-                                        >
-                                          <Icon
-                                            color="var(--mds-color-theme-common-text-primary-normal)"
-                                            name="cancel"
-                                            scale={20}
-                                            weight="light"
-                                          />
-                                        </button>
-                                      </FocusRing>
-                                    </FocusRing>
-                                  </ButtonSimple>
-                                  <Portal
-                                    containerInfo={
-                                      <div
-                                        data-tippy-root=""
-                                        id="tippy-1"
-                                        style="pointer-events: none; z-index: 9999;"
-                                      >
-                                        
-                                      </div>
-                                    }
-                                  />
-                                </Tippy>
-                              </ForwardRef(TippyWrapper)>
-                            </LazyTippy>
-                          </Popover>
-                          <div
-                            className="md-tooltip-label"
-                            id="test-ID"
-                          >
-                            Exit
-                          </div>
-                        </Tooltip>
-                      </div>
-                    </div>
-                    <div
-                      className="md-lightbox__body"
-                      role="tablist"
-                    >
-                      <div
-                        className="md-lightbox__content"
-                      >
-                        <div
-                          className="md-lightbox__viewport md-lightbox__viewport--decrypting"
-                        >
-                          <Spinner
-                            className="md-lightbox__decrypting-spinner"
-                            color="black"
-                            percentage={null}
-                            showCheck={false}
-                            showPercentage={false}
-                            size={36}
-                          >
-                            <i
-                              className="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
-                            />
-                          </Spinner>
-                          <div
-                            className="md-lightbox__viewport-wrapper"
-                            style={
-                              Object {
-                                "height": "100px",
-                                "width": "100px",
-                              }
-                            }
-                          >
-                            <img
-                              alt="test"
-                              className="md-lightbox__viewport-image"
-                              draggable="false"
-                              onClick={[Function]}
-                              onDoubleClick={[Function]}
-                              onDragStart={[Function]}
-                              onKeyPress={[Function]}
-                              src="testImage"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          className="md-lightbox__viewer-controls"
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          role="group"
-                        >
-                          <div
-                            className="md-lightbox__controls"
-                            style={Object {}}
-                          >
-                            <Tooltip
-                              placement="top"
-                              style={Object {}}
-                              triggerComponent={
-                                <ButtonSimple
-                                  className="md-lightbox__control"
-                                  data-test="zoom-out-button"
-                                  onPress={[Function]}
-                                >
-                                  <Icon
-                                    color="var(--mds-color-theme-common-text-primary-normal)"
-                                    name="zoom-out"
-                                    scale={20}
-                                    weight="light"
-                                  />
-                                </ButtonSimple>
-                              }
-                              type="label"
-                            >
-                              <Popover
-                                addBackdrop={false}
-                                aria-hidden={false}
-                                boundary="scrollParent"
-                                color="primary"
-                                interactive={false}
-                                offsetDistance={5}
-                                offsetSkidding={0}
-                                placement="top"
-                                role="tooltip"
-                                setInstance={[Function]}
-                                showArrow={true}
-                                strategy="absolute"
-                                style={Object {}}
-                                trigger="mouseenter focus"
-                                triggerComponent={
-                                  <ButtonSimple
-                                    aria-labelledby="test-ID"
-                                    className="md-lightbox__control"
-                                    data-test="zoom-out-button"
-                                    onPress={[Function]}
-                                  >
-                                    <Icon
-                                      color="var(--mds-color-theme-common-text-primary-normal)"
-                                      name="zoom-out"
-                                      scale={20}
-                                      weight="light"
-                                    />
-                                  </ButtonSimple>
-                                }
-                                variant="small"
-                              >
-                                <LazyTippy
-                                  animation={false}
-                                  appendTo="parent"
-                                  hideOnClick={true}
-                                  interactive={false}
-                                  offset={
-                                    Array [
-                                      0,
-                                      17,
-                                    ]
-                                  }
-                                  onHidden={[Function]}
-                                  placement="top"
-                                  plugins={
-                                    Array [
-                                      Object {
                                         "defaultValue": true,
                                         "fn": [Function],
                                         "name": "hideOnEsc",
@@ -728,7 +408,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       ]
                                     }
                                     onHidden={[Function]}
-                                    placement="top"
+                                    placement="bottom-start"
                                     plugins={
                                       Array [
                                         Object {
@@ -785,7 +465,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                         ]
                                       }
                                       onHidden={[Function]}
-                                      placement="top"
+                                      placement="bottom-start"
                                       plugins={
                                         Array [
                                           Object {
@@ -830,175 +510,735 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       render={[Function]}
                                       trigger="mouseenter focus"
                                     >
+                                      <ButtonSimple
+                                        aria-labelledby="test-ID"
+                                        className="md-lightbox__control md-lightbox__control-close"
+                                        onPress={[Function]}
+                                        useNativeKeyDown={true}
+                                      >
+                                        <FocusRing>
+                                          <FocusRing
+                                            focusClass="md-focus-ring-wrapper children"
+                                            focusRingClass="md-focus-ring-wrapper children"
+                                          >
+                                            <button
+                                              aria-labelledby="test-ID"
+                                              className="md-lightbox__control md-lightbox__control-close md-button-simple-wrapper"
+                                              onBlur={[Function]}
+                                              onClick={[Function]}
+                                              onDragStart={[Function]}
+                                              onFocus={[Function]}
+                                              onKeyUp={[Function]}
+                                              onMouseDown={[Function]}
+                                              onMouseEnter={[Function]}
+                                              onMouseLeave={[Function]}
+                                              onMouseUp={[Function]}
+                                              onTouchCancel={[Function]}
+                                              onTouchEnd={[Function]}
+                                              onTouchMove={[Function]}
+                                              onTouchStart={[Function]}
+                                              type="button"
+                                            >
+                                              <Icon
+                                                color="var(--mds-color-theme-common-text-primary-normal)"
+                                                name="cancel"
+                                                scale={20}
+                                                weight="light"
+                                              />
+                                            </button>
+                                          </FocusRing>
+                                        </FocusRing>
+                                      </ButtonSimple>
+                                      <Portal
+                                        containerInfo={
+                                          <div
+                                            data-tippy-root=""
+                                            id="tippy-1"
+                                            style="pointer-events: none; z-index: 9999;"
+                                          >
+                                            
+                                          </div>
+                                        }
+                                      />
+                                    </Tippy>
+                                  </ForwardRef(TippyWrapper)>
+                                </LazyTippy>
+                              </Popover>
+                              <div
+                                className="md-tooltip-label"
+                                id="test-ID"
+                              >
+                                Exit
+                              </div>
+                            </Tooltip>
+                          </div>
+                        </div>
+                        <div
+                          className="md-lightbox__body"
+                          role="tablist"
+                        >
+                          <div
+                            className="md-lightbox__content"
+                          >
+                            <div
+                              className="md-lightbox__viewport md-lightbox__viewport--decrypting"
+                            >
+                              <Spinner
+                                className="md-lightbox__decrypting-spinner"
+                                color="black"
+                                percentage={null}
+                                showCheck={false}
+                                showPercentage={false}
+                                size={36}
+                              >
+                                <i
+                                  className="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
+                                />
+                              </Spinner>
+                              <div
+                                className="md-lightbox__viewport-wrapper"
+                                style={
+                                  Object {
+                                    "height": "100px",
+                                    "width": "100px",
+                                  }
+                                }
+                              >
+                                <img
+                                  alt="test"
+                                  className="md-lightbox__viewport-image"
+                                  draggable="false"
+                                  onClick={[Function]}
+                                  onDoubleClick={[Function]}
+                                  onDragStart={[Function]}
+                                  onKeyPress={[Function]}
+                                  src="testImage"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              className="md-lightbox__viewer-controls"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                              role="group"
+                            >
+                              <div
+                                className="md-lightbox__controls"
+                                style={Object {}}
+                              >
+                                <Tooltip
+                                  placement="top"
+                                  triggerComponent={
+                                    <ButtonSimple
+                                      className="md-lightbox__control"
+                                      data-test="zoom-out-button"
+                                      onPress={[Function]}
+                                    >
+                                      <Icon
+                                        color="var(--mds-color-theme-common-text-primary-normal)"
+                                        name="zoom-out"
+                                        scale={20}
+                                        weight="light"
+                                      />
+                                    </ButtonSimple>
+                                  }
+                                  type="label"
+                                >
+                                  <Popover
+                                    addBackdrop={false}
+                                    aria-hidden={false}
+                                    boundary="scrollParent"
+                                    color="primary"
+                                    interactive={false}
+                                    offsetDistance={5}
+                                    offsetSkidding={0}
+                                    placement="top"
+                                    role="tooltip"
+                                    setInstance={[Function]}
+                                    showArrow={true}
+                                    strategy="absolute"
+                                    trigger="mouseenter focus"
+                                    triggerComponent={
                                       <ButtonSimple
                                         aria-labelledby="test-ID"
                                         className="md-lightbox__control"
                                         data-test="zoom-out-button"
                                         onPress={[Function]}
-                                        useNativeKeyDown={true}
                                       >
-                                        <FocusRing>
-                                          <FocusRing
-                                            focusClass="md-focus-ring-wrapper children"
-                                            focusRingClass="md-focus-ring-wrapper children"
-                                          >
-                                            <button
-                                              aria-labelledby="test-ID"
-                                              className="md-lightbox__control md-button-simple-wrapper"
-                                              data-test="zoom-out-button"
-                                              onBlur={[Function]}
-                                              onClick={[Function]}
-                                              onDragStart={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyUp={[Function]}
-                                              onMouseDown={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              onMouseUp={[Function]}
-                                              onTouchCancel={[Function]}
-                                              onTouchEnd={[Function]}
-                                              onTouchMove={[Function]}
-                                              onTouchStart={[Function]}
-                                              type="button"
-                                            >
-                                              <Icon
-                                                color="var(--mds-color-theme-common-text-primary-normal)"
-                                                name="zoom-out"
-                                                scale={20}
-                                                weight="light"
-                                              />
-                                            </button>
-                                          </FocusRing>
-                                        </FocusRing>
+                                        <Icon
+                                          color="var(--mds-color-theme-common-text-primary-normal)"
+                                          name="zoom-out"
+                                          scale={20}
+                                          weight="light"
+                                        />
                                       </ButtonSimple>
-                                      <Portal
-                                        containerInfo={
-                                          <div
-                                            data-tippy-root=""
-                                            id="tippy-2"
-                                            style="pointer-events: none; z-index: 9999;"
-                                          >
-                                            
-                                          </div>
+                                    }
+                                    variant="small"
+                                  >
+                                    <LazyTippy
+                                      animation={false}
+                                      appendTo="parent"
+                                      hideOnClick={true}
+                                      interactive={false}
+                                      offset={
+                                        Array [
+                                          0,
+                                          17,
+                                        ]
+                                      }
+                                      onHidden={[Function]}
+                                      placement="top"
+                                      plugins={
+                                        Array [
+                                          Object {
+                                            "defaultValue": true,
+                                            "fn": [Function],
+                                            "name": "hideOnEsc",
+                                          },
+                                        ]
+                                      }
+                                      popperOptions={
+                                        Object {
+                                          "modifiers": Array [
+                                            Object {
+                                              "enabled": true,
+                                              "name": "arrow",
+                                              "options": Object {
+                                                "element": "#arrowtest-ID",
+                                                "padding": 5,
+                                              },
+                                            },
+                                            Object {
+                                              "name": "preventOverflow",
+                                              "options": Object {
+                                                "altAxis": true,
+                                                "boundariesElement": "scrollParent",
+                                                "padding": 8,
+                                              },
+                                            },
+                                          ],
+                                          "strategy": "absolute",
                                         }
-                                      />
-                                    </Tippy>
-                                  </ForwardRef(TippyWrapper)>
-                                </LazyTippy>
-                              </Popover>
-                              <div
-                                className="md-tooltip-label"
-                                id="test-ID"
-                              >
-                                Zoom out
-                              </div>
-                            </Tooltip>
-                            <span
-                              className="md-lightbox__control-value md-lightbox__control-zoom-level"
-                            >
-                              100%
-                            </span>
-                            <Tooltip
-                              placement="top"
-                              style={Object {}}
-                              triggerComponent={
-                                <ButtonSimple
-                                  className="md-lightbox__control"
-                                  data-test="zoom-in-button"
-                                  onPress={[Function]}
+                                      }
+                                      render={[Function]}
+                                      setInstance={[Function]}
+                                      trigger="mouseenter focus"
+                                    >
+                                      <ForwardRef(TippyWrapper)
+                                        animation={false}
+                                        appendTo="parent"
+                                        hideOnClick={true}
+                                        interactive={false}
+                                        offset={
+                                          Array [
+                                            0,
+                                            17,
+                                          ]
+                                        }
+                                        onHidden={[Function]}
+                                        placement="top"
+                                        plugins={
+                                          Array [
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "defaultValue": true,
+                                              "fn": [Function],
+                                              "name": "hideOnEsc",
+                                            },
+                                          ]
+                                        }
+                                        popperOptions={
+                                          Object {
+                                            "modifiers": Array [
+                                              Object {
+                                                "enabled": true,
+                                                "name": "arrow",
+                                                "options": Object {
+                                                  "element": "#arrowtest-ID",
+                                                  "padding": 5,
+                                                },
+                                              },
+                                              Object {
+                                                "name": "preventOverflow",
+                                                "options": Object {
+                                                  "altAxis": true,
+                                                  "boundariesElement": "scrollParent",
+                                                  "padding": 8,
+                                                },
+                                              },
+                                            ],
+                                            "strategy": "absolute",
+                                          }
+                                        }
+                                        render={[Function]}
+                                        trigger="mouseenter focus"
+                                      >
+                                        <Tippy
+                                          animation={false}
+                                          appendTo="parent"
+                                          hideOnClick={true}
+                                          interactive={false}
+                                          offset={
+                                            Array [
+                                              0,
+                                              17,
+                                            ]
+                                          }
+                                          onHidden={[Function]}
+                                          placement="top"
+                                          plugins={
+                                            Array [
+                                              Object {
+                                                "fn": [Function],
+                                              },
+                                              Object {
+                                                "fn": [Function],
+                                              },
+                                              Object {
+                                                "fn": [Function],
+                                              },
+                                              Object {
+                                                "defaultValue": true,
+                                                "fn": [Function],
+                                                "name": "hideOnEsc",
+                                              },
+                                            ]
+                                          }
+                                          popperOptions={
+                                            Object {
+                                              "modifiers": Array [
+                                                Object {
+                                                  "enabled": true,
+                                                  "name": "arrow",
+                                                  "options": Object {
+                                                    "element": "#arrowtest-ID",
+                                                    "padding": 5,
+                                                  },
+                                                },
+                                                Object {
+                                                  "name": "preventOverflow",
+                                                  "options": Object {
+                                                    "altAxis": true,
+                                                    "boundariesElement": "scrollParent",
+                                                    "padding": 8,
+                                                  },
+                                                },
+                                              ],
+                                              "strategy": "absolute",
+                                            }
+                                          }
+                                          render={[Function]}
+                                          trigger="mouseenter focus"
+                                        >
+                                          <ButtonSimple
+                                            aria-labelledby="test-ID"
+                                            className="md-lightbox__control"
+                                            data-test="zoom-out-button"
+                                            onPress={[Function]}
+                                            useNativeKeyDown={true}
+                                          >
+                                            <FocusRing>
+                                              <FocusRing
+                                                focusClass="md-focus-ring-wrapper children"
+                                                focusRingClass="md-focus-ring-wrapper children"
+                                              >
+                                                <button
+                                                  aria-labelledby="test-ID"
+                                                  className="md-lightbox__control md-button-simple-wrapper"
+                                                  data-test="zoom-out-button"
+                                                  onBlur={[Function]}
+                                                  onClick={[Function]}
+                                                  onDragStart={[Function]}
+                                                  onFocus={[Function]}
+                                                  onKeyUp={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  onMouseEnter={[Function]}
+                                                  onMouseLeave={[Function]}
+                                                  onMouseUp={[Function]}
+                                                  onTouchCancel={[Function]}
+                                                  onTouchEnd={[Function]}
+                                                  onTouchMove={[Function]}
+                                                  onTouchStart={[Function]}
+                                                  type="button"
+                                                >
+                                                  <Icon
+                                                    color="var(--mds-color-theme-common-text-primary-normal)"
+                                                    name="zoom-out"
+                                                    scale={20}
+                                                    weight="light"
+                                                  />
+                                                </button>
+                                              </FocusRing>
+                                            </FocusRing>
+                                          </ButtonSimple>
+                                          <Portal
+                                            containerInfo={
+                                              <div
+                                                data-tippy-root=""
+                                                id="tippy-2"
+                                                style="pointer-events: none; z-index: 9999;"
+                                              >
+                                                
+                                              </div>
+                                            }
+                                          />
+                                        </Tippy>
+                                      </ForwardRef(TippyWrapper)>
+                                    </LazyTippy>
+                                  </Popover>
+                                  <div
+                                    className="md-tooltip-label"
+                                    id="test-ID"
+                                  >
+                                    Zoom out
+                                  </div>
+                                </Tooltip>
+                                <span
+                                  className="md-lightbox__control-value md-lightbox__control-zoom-level"
                                 >
-                                  <Icon
-                                    color="var(--mds-color-theme-common-text-primary-normal)"
-                                    name="zoom-in"
-                                    scale={20}
-                                    weight="light"
-                                  />
-                                </ButtonSimple>
-                              }
-                              type="label"
-                            >
-                              <Popover
-                                addBackdrop={false}
-                                aria-hidden={false}
-                                boundary="scrollParent"
-                                color="primary"
-                                interactive={false}
-                                offsetDistance={5}
-                                offsetSkidding={0}
+                                  100%
+                                </span>
+                                <Tooltip
+                                  placement="top"
+                                  triggerComponent={
+                                    <ButtonSimple
+                                      className="md-lightbox__control"
+                                      data-test="zoom-in-button"
+                                      onPress={[Function]}
+                                    >
+                                      <Icon
+                                        color="var(--mds-color-theme-common-text-primary-normal)"
+                                        name="zoom-in"
+                                        scale={20}
+                                        weight="light"
+                                      />
+                                    </ButtonSimple>
+                                  }
+                                  type="label"
+                                >
+                                  <Popover
+                                    addBackdrop={false}
+                                    aria-hidden={false}
+                                    boundary="scrollParent"
+                                    color="primary"
+                                    interactive={false}
+                                    offsetDistance={5}
+                                    offsetSkidding={0}
+                                    placement="top"
+                                    role="tooltip"
+                                    setInstance={[Function]}
+                                    showArrow={true}
+                                    strategy="absolute"
+                                    trigger="mouseenter focus"
+                                    triggerComponent={
+                                      <ButtonSimple
+                                        aria-labelledby="test-ID"
+                                        className="md-lightbox__control"
+                                        data-test="zoom-in-button"
+                                        onPress={[Function]}
+                                      >
+                                        <Icon
+                                          color="var(--mds-color-theme-common-text-primary-normal)"
+                                          name="zoom-in"
+                                          scale={20}
+                                          weight="light"
+                                        />
+                                      </ButtonSimple>
+                                    }
+                                    variant="small"
+                                  >
+                                    <LazyTippy
+                                      animation={false}
+                                      appendTo="parent"
+                                      hideOnClick={true}
+                                      interactive={false}
+                                      offset={
+                                        Array [
+                                          0,
+                                          17,
+                                        ]
+                                      }
+                                      onHidden={[Function]}
+                                      placement="top"
+                                      plugins={
+                                        Array [
+                                          Object {
+                                            "defaultValue": true,
+                                            "fn": [Function],
+                                            "name": "hideOnEsc",
+                                          },
+                                        ]
+                                      }
+                                      popperOptions={
+                                        Object {
+                                          "modifiers": Array [
+                                            Object {
+                                              "enabled": true,
+                                              "name": "arrow",
+                                              "options": Object {
+                                                "element": "#arrowtest-ID",
+                                                "padding": 5,
+                                              },
+                                            },
+                                            Object {
+                                              "name": "preventOverflow",
+                                              "options": Object {
+                                                "altAxis": true,
+                                                "boundariesElement": "scrollParent",
+                                                "padding": 8,
+                                              },
+                                            },
+                                          ],
+                                          "strategy": "absolute",
+                                        }
+                                      }
+                                      render={[Function]}
+                                      setInstance={[Function]}
+                                      trigger="mouseenter focus"
+                                    >
+                                      <ForwardRef(TippyWrapper)
+                                        animation={false}
+                                        appendTo="parent"
+                                        hideOnClick={true}
+                                        interactive={false}
+                                        offset={
+                                          Array [
+                                            0,
+                                            17,
+                                          ]
+                                        }
+                                        onHidden={[Function]}
+                                        placement="top"
+                                        plugins={
+                                          Array [
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "defaultValue": true,
+                                              "fn": [Function],
+                                              "name": "hideOnEsc",
+                                            },
+                                          ]
+                                        }
+                                        popperOptions={
+                                          Object {
+                                            "modifiers": Array [
+                                              Object {
+                                                "enabled": true,
+                                                "name": "arrow",
+                                                "options": Object {
+                                                  "element": "#arrowtest-ID",
+                                                  "padding": 5,
+                                                },
+                                              },
+                                              Object {
+                                                "name": "preventOverflow",
+                                                "options": Object {
+                                                  "altAxis": true,
+                                                  "boundariesElement": "scrollParent",
+                                                  "padding": 8,
+                                                },
+                                              },
+                                            ],
+                                            "strategy": "absolute",
+                                          }
+                                        }
+                                        render={[Function]}
+                                        trigger="mouseenter focus"
+                                      >
+                                        <Tippy
+                                          animation={false}
+                                          appendTo="parent"
+                                          hideOnClick={true}
+                                          interactive={false}
+                                          offset={
+                                            Array [
+                                              0,
+                                              17,
+                                            ]
+                                          }
+                                          onHidden={[Function]}
+                                          placement="top"
+                                          plugins={
+                                            Array [
+                                              Object {
+                                                "fn": [Function],
+                                              },
+                                              Object {
+                                                "fn": [Function],
+                                              },
+                                              Object {
+                                                "fn": [Function],
+                                              },
+                                              Object {
+                                                "defaultValue": true,
+                                                "fn": [Function],
+                                                "name": "hideOnEsc",
+                                              },
+                                            ]
+                                          }
+                                          popperOptions={
+                                            Object {
+                                              "modifiers": Array [
+                                                Object {
+                                                  "enabled": true,
+                                                  "name": "arrow",
+                                                  "options": Object {
+                                                    "element": "#arrowtest-ID",
+                                                    "padding": 5,
+                                                  },
+                                                },
+                                                Object {
+                                                  "name": "preventOverflow",
+                                                  "options": Object {
+                                                    "altAxis": true,
+                                                    "boundariesElement": "scrollParent",
+                                                    "padding": 8,
+                                                  },
+                                                },
+                                              ],
+                                              "strategy": "absolute",
+                                            }
+                                          }
+                                          render={[Function]}
+                                          trigger="mouseenter focus"
+                                        >
+                                          <ButtonSimple
+                                            aria-labelledby="test-ID"
+                                            className="md-lightbox__control"
+                                            data-test="zoom-in-button"
+                                            onPress={[Function]}
+                                            useNativeKeyDown={true}
+                                          >
+                                            <FocusRing>
+                                              <FocusRing
+                                                focusClass="md-focus-ring-wrapper children"
+                                                focusRingClass="md-focus-ring-wrapper children"
+                                              >
+                                                <button
+                                                  aria-labelledby="test-ID"
+                                                  className="md-lightbox__control md-button-simple-wrapper"
+                                                  data-test="zoom-in-button"
+                                                  onBlur={[Function]}
+                                                  onClick={[Function]}
+                                                  onDragStart={[Function]}
+                                                  onFocus={[Function]}
+                                                  onKeyUp={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  onMouseEnter={[Function]}
+                                                  onMouseLeave={[Function]}
+                                                  onMouseUp={[Function]}
+                                                  onTouchCancel={[Function]}
+                                                  onTouchEnd={[Function]}
+                                                  onTouchMove={[Function]}
+                                                  onTouchStart={[Function]}
+                                                  type="button"
+                                                >
+                                                  <Icon
+                                                    color="var(--mds-color-theme-common-text-primary-normal)"
+                                                    name="zoom-in"
+                                                    scale={20}
+                                                    weight="light"
+                                                  />
+                                                </button>
+                                              </FocusRing>
+                                            </FocusRing>
+                                          </ButtonSimple>
+                                          <Portal
+                                            containerInfo={
+                                              <div
+                                                data-tippy-root=""
+                                                id="tippy-3"
+                                                style="pointer-events: none; z-index: 9999;"
+                                              >
+                                                
+                                              </div>
+                                            }
+                                          />
+                                        </Tippy>
+                                      </ForwardRef(TippyWrapper)>
+                                    </LazyTippy>
+                                  </Popover>
+                                  <div
+                                    className="md-tooltip-label"
+                                    id="test-ID"
+                                  >
+                                    Zoom in
+                                  </div>
+                                </Tooltip>
+                              </div>
+                              <div
+                                className="md-lightbox__controls"
+                              >
+                                <span
+                                  className="md-lightbox__control-value"
+                                >
+                                  1
+                                </span>
+                              </div>
+                              <Tooltip
                                 placement="top"
-                                role="tooltip"
-                                setInstance={[Function]}
-                                showArrow={true}
-                                strategy="absolute"
-                                style={Object {}}
-                                trigger="mouseenter focus"
                                 triggerComponent={
                                   <ButtonSimple
-                                    aria-labelledby="test-ID"
-                                    className="md-lightbox__control"
-                                    data-test="zoom-in-button"
+                                    className="md-lightbox__control md-lightbox__control-download"
                                     onPress={[Function]}
                                   >
                                     <Icon
                                       color="var(--mds-color-theme-common-text-primary-normal)"
-                                      name="zoom-in"
+                                      name="download"
                                       scale={20}
                                       weight="light"
                                     />
                                   </ButtonSimple>
                                 }
-                                variant="small"
+                                type="label"
                               >
-                                <LazyTippy
-                                  animation={false}
-                                  appendTo="parent"
-                                  hideOnClick={true}
+                                <Popover
+                                  addBackdrop={false}
+                                  aria-hidden={false}
+                                  boundary="scrollParent"
+                                  color="primary"
                                   interactive={false}
-                                  offset={
-                                    Array [
-                                      0,
-                                      17,
-                                    ]
-                                  }
-                                  onHidden={[Function]}
+                                  offsetDistance={5}
+                                  offsetSkidding={0}
                                   placement="top"
-                                  plugins={
-                                    Array [
-                                      Object {
-                                        "defaultValue": true,
-                                        "fn": [Function],
-                                        "name": "hideOnEsc",
-                                      },
-                                    ]
-                                  }
-                                  popperOptions={
-                                    Object {
-                                      "modifiers": Array [
-                                        Object {
-                                          "enabled": true,
-                                          "name": "arrow",
-                                          "options": Object {
-                                            "element": "#arrowtest-ID",
-                                            "padding": 5,
-                                          },
-                                        },
-                                        Object {
-                                          "name": "preventOverflow",
-                                          "options": Object {
-                                            "altAxis": true,
-                                            "boundariesElement": "scrollParent",
-                                            "padding": 8,
-                                          },
-                                        },
-                                      ],
-                                      "strategy": "absolute",
-                                    }
-                                  }
-                                  render={[Function]}
+                                  role="tooltip"
                                   setInstance={[Function]}
+                                  showArrow={true}
+                                  strategy="absolute"
                                   trigger="mouseenter focus"
+                                  triggerComponent={
+                                    <ButtonSimple
+                                      aria-labelledby="test-ID"
+                                      className="md-lightbox__control md-lightbox__control-download"
+                                      onPress={[Function]}
+                                    >
+                                      <Icon
+                                        color="var(--mds-color-theme-common-text-primary-normal)"
+                                        name="download"
+                                        scale={20}
+                                        weight="light"
+                                      />
+                                    </ButtonSimple>
+                                  }
+                                  variant="small"
                                 >
-                                  <ForwardRef(TippyWrapper)
+                                  <LazyTippy
                                     animation={false}
                                     appendTo="parent"
                                     hideOnClick={true}
@@ -1013,15 +1253,6 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     placement="top"
                                     plugins={
                                       Array [
-                                        Object {
-                                          "fn": [Function],
-                                        },
-                                        Object {
-                                          "fn": [Function],
-                                        },
-                                        Object {
-                                          "fn": [Function],
-                                        },
                                         Object {
                                           "defaultValue": true,
                                           "fn": [Function],
@@ -1053,9 +1284,10 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       }
                                     }
                                     render={[Function]}
+                                    setInstance={[Function]}
                                     trigger="mouseenter focus"
                                   >
-                                    <Tippy
+                                    <ForwardRef(TippyWrapper)
                                       animation={false}
                                       appendTo="parent"
                                       hideOnClick={true}
@@ -1112,356 +1344,130 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       render={[Function]}
                                       trigger="mouseenter focus"
                                     >
-                                      <ButtonSimple
-                                        aria-labelledby="test-ID"
-                                        className="md-lightbox__control"
-                                        data-test="zoom-in-button"
-                                        onPress={[Function]}
-                                        useNativeKeyDown={true}
-                                      >
-                                        <FocusRing>
-                                          <FocusRing
-                                            focusClass="md-focus-ring-wrapper children"
-                                            focusRingClass="md-focus-ring-wrapper children"
-                                          >
-                                            <button
-                                              aria-labelledby="test-ID"
-                                              className="md-lightbox__control md-button-simple-wrapper"
-                                              data-test="zoom-in-button"
-                                              onBlur={[Function]}
-                                              onClick={[Function]}
-                                              onDragStart={[Function]}
-                                              onFocus={[Function]}
-                                              onKeyUp={[Function]}
-                                              onMouseDown={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              onMouseUp={[Function]}
-                                              onTouchCancel={[Function]}
-                                              onTouchEnd={[Function]}
-                                              onTouchMove={[Function]}
-                                              onTouchStart={[Function]}
-                                              type="button"
-                                            >
-                                              <Icon
-                                                color="var(--mds-color-theme-common-text-primary-normal)"
-                                                name="zoom-in"
-                                                scale={20}
-                                                weight="light"
-                                              />
-                                            </button>
-                                          </FocusRing>
-                                        </FocusRing>
-                                      </ButtonSimple>
-                                      <Portal
-                                        containerInfo={
-                                          <div
-                                            data-tippy-root=""
-                                            id="tippy-3"
-                                            style="pointer-events: none; z-index: 9999;"
-                                          >
-                                            
-                                          </div>
+                                      <Tippy
+                                        animation={false}
+                                        appendTo="parent"
+                                        hideOnClick={true}
+                                        interactive={false}
+                                        offset={
+                                          Array [
+                                            0,
+                                            17,
+                                          ]
                                         }
-                                      />
-                                    </Tippy>
-                                  </ForwardRef(TippyWrapper)>
-                                </LazyTippy>
-                              </Popover>
-                              <div
-                                className="md-tooltip-label"
-                                id="test-ID"
-                              >
-                                Zoom in
-                              </div>
-                            </Tooltip>
-                          </div>
-                          <div
-                            className="md-lightbox__controls"
-                          >
-                            <span
-                              className="md-lightbox__control-value"
-                            >
-                              1
-                            </span>
-                          </div>
-                          <Tooltip
-                            placement="top"
-                            style={Object {}}
-                            triggerComponent={
-                              <ButtonSimple
-                                className="md-lightbox__control md-lightbox__control-download"
-                                onPress={[Function]}
-                              >
-                                <Icon
-                                  color="var(--mds-color-theme-common-text-primary-normal)"
-                                  name="download"
-                                  scale={20}
-                                  weight="light"
-                                />
-                              </ButtonSimple>
-                            }
-                            type="label"
-                          >
-                            <Popover
-                              addBackdrop={false}
-                              aria-hidden={false}
-                              boundary="scrollParent"
-                              color="primary"
-                              interactive={false}
-                              offsetDistance={5}
-                              offsetSkidding={0}
-                              placement="top"
-                              role="tooltip"
-                              setInstance={[Function]}
-                              showArrow={true}
-                              strategy="absolute"
-                              style={Object {}}
-                              trigger="mouseenter focus"
-                              triggerComponent={
-                                <ButtonSimple
-                                  aria-labelledby="test-ID"
-                                  className="md-lightbox__control md-lightbox__control-download"
-                                  onPress={[Function]}
-                                >
-                                  <Icon
-                                    color="var(--mds-color-theme-common-text-primary-normal)"
-                                    name="download"
-                                    scale={20}
-                                    weight="light"
-                                  />
-                                </ButtonSimple>
-                              }
-                              variant="small"
-                            >
-                              <LazyTippy
-                                animation={false}
-                                appendTo="parent"
-                                hideOnClick={true}
-                                interactive={false}
-                                offset={
-                                  Array [
-                                    0,
-                                    17,
-                                  ]
-                                }
-                                onHidden={[Function]}
-                                placement="top"
-                                plugins={
-                                  Array [
-                                    Object {
-                                      "defaultValue": true,
-                                      "fn": [Function],
-                                      "name": "hideOnEsc",
-                                    },
-                                  ]
-                                }
-                                popperOptions={
-                                  Object {
-                                    "modifiers": Array [
-                                      Object {
-                                        "enabled": true,
-                                        "name": "arrow",
-                                        "options": Object {
-                                          "element": "#arrowtest-ID",
-                                          "padding": 5,
-                                        },
-                                      },
-                                      Object {
-                                        "name": "preventOverflow",
-                                        "options": Object {
-                                          "altAxis": true,
-                                          "boundariesElement": "scrollParent",
-                                          "padding": 8,
-                                        },
-                                      },
-                                    ],
-                                    "strategy": "absolute",
-                                  }
-                                }
-                                render={[Function]}
-                                setInstance={[Function]}
-                                trigger="mouseenter focus"
-                              >
-                                <ForwardRef(TippyWrapper)
-                                  animation={false}
-                                  appendTo="parent"
-                                  hideOnClick={true}
-                                  interactive={false}
-                                  offset={
-                                    Array [
-                                      0,
-                                      17,
-                                    ]
-                                  }
-                                  onHidden={[Function]}
-                                  placement="top"
-                                  plugins={
-                                    Array [
-                                      Object {
-                                        "fn": [Function],
-                                      },
-                                      Object {
-                                        "fn": [Function],
-                                      },
-                                      Object {
-                                        "fn": [Function],
-                                      },
-                                      Object {
-                                        "defaultValue": true,
-                                        "fn": [Function],
-                                        "name": "hideOnEsc",
-                                      },
-                                    ]
-                                  }
-                                  popperOptions={
-                                    Object {
-                                      "modifiers": Array [
-                                        Object {
-                                          "enabled": true,
-                                          "name": "arrow",
-                                          "options": Object {
-                                            "element": "#arrowtest-ID",
-                                            "padding": 5,
-                                          },
-                                        },
-                                        Object {
-                                          "name": "preventOverflow",
-                                          "options": Object {
-                                            "altAxis": true,
-                                            "boundariesElement": "scrollParent",
-                                            "padding": 8,
-                                          },
-                                        },
-                                      ],
-                                      "strategy": "absolute",
-                                    }
-                                  }
-                                  render={[Function]}
-                                  trigger="mouseenter focus"
-                                >
-                                  <Tippy
-                                    animation={false}
-                                    appendTo="parent"
-                                    hideOnClick={true}
-                                    interactive={false}
-                                    offset={
-                                      Array [
-                                        0,
-                                        17,
-                                      ]
-                                    }
-                                    onHidden={[Function]}
-                                    placement="top"
-                                    plugins={
-                                      Array [
-                                        Object {
-                                          "fn": [Function],
-                                        },
-                                        Object {
-                                          "fn": [Function],
-                                        },
-                                        Object {
-                                          "fn": [Function],
-                                        },
-                                        Object {
-                                          "defaultValue": true,
-                                          "fn": [Function],
-                                          "name": "hideOnEsc",
-                                        },
-                                      ]
-                                    }
-                                    popperOptions={
-                                      Object {
-                                        "modifiers": Array [
-                                          Object {
-                                            "enabled": true,
-                                            "name": "arrow",
-                                            "options": Object {
-                                              "element": "#arrowtest-ID",
-                                              "padding": 5,
+                                        onHidden={[Function]}
+                                        placement="top"
+                                        plugins={
+                                          Array [
+                                            Object {
+                                              "fn": [Function],
                                             },
-                                          },
-                                          Object {
-                                            "name": "preventOverflow",
-                                            "options": Object {
-                                              "altAxis": true,
-                                              "boundariesElement": "scrollParent",
-                                              "padding": 8,
+                                            Object {
+                                              "fn": [Function],
                                             },
-                                          },
-                                        ],
-                                        "strategy": "absolute",
-                                      }
-                                    }
-                                    render={[Function]}
-                                    trigger="mouseenter focus"
-                                  >
-                                    <ButtonSimple
-                                      aria-labelledby="test-ID"
-                                      className="md-lightbox__control md-lightbox__control-download"
-                                      onPress={[Function]}
-                                      useNativeKeyDown={true}
-                                    >
-                                      <FocusRing>
-                                        <FocusRing
-                                          focusClass="md-focus-ring-wrapper children"
-                                          focusRingClass="md-focus-ring-wrapper children"
+                                            Object {
+                                              "fn": [Function],
+                                            },
+                                            Object {
+                                              "defaultValue": true,
+                                              "fn": [Function],
+                                              "name": "hideOnEsc",
+                                            },
+                                          ]
+                                        }
+                                        popperOptions={
+                                          Object {
+                                            "modifiers": Array [
+                                              Object {
+                                                "enabled": true,
+                                                "name": "arrow",
+                                                "options": Object {
+                                                  "element": "#arrowtest-ID",
+                                                  "padding": 5,
+                                                },
+                                              },
+                                              Object {
+                                                "name": "preventOverflow",
+                                                "options": Object {
+                                                  "altAxis": true,
+                                                  "boundariesElement": "scrollParent",
+                                                  "padding": 8,
+                                                },
+                                              },
+                                            ],
+                                            "strategy": "absolute",
+                                          }
+                                        }
+                                        render={[Function]}
+                                        trigger="mouseenter focus"
+                                      >
+                                        <ButtonSimple
+                                          aria-labelledby="test-ID"
+                                          className="md-lightbox__control md-lightbox__control-download"
+                                          onPress={[Function]}
+                                          useNativeKeyDown={true}
                                         >
-                                          <button
-                                            aria-labelledby="test-ID"
-                                            className="md-lightbox__control md-lightbox__control-download md-button-simple-wrapper"
-                                            onBlur={[Function]}
-                                            onClick={[Function]}
-                                            onDragStart={[Function]}
-                                            onFocus={[Function]}
-                                            onKeyUp={[Function]}
-                                            onMouseDown={[Function]}
-                                            onMouseEnter={[Function]}
-                                            onMouseLeave={[Function]}
-                                            onMouseUp={[Function]}
-                                            onTouchCancel={[Function]}
-                                            onTouchEnd={[Function]}
-                                            onTouchMove={[Function]}
-                                            onTouchStart={[Function]}
-                                            type="button"
-                                          >
-                                            <Icon
-                                              color="var(--mds-color-theme-common-text-primary-normal)"
-                                              name="download"
-                                              scale={20}
-                                              weight="light"
-                                            />
-                                          </button>
-                                        </FocusRing>
-                                      </FocusRing>
-                                    </ButtonSimple>
-                                    <Portal
-                                      containerInfo={
-                                        <div
-                                          data-tippy-root=""
-                                          id="tippy-4"
-                                          style="pointer-events: none; z-index: 9999;"
-                                        >
-                                          
-                                        </div>
-                                      }
-                                    />
-                                  </Tippy>
-                                </ForwardRef(TippyWrapper)>
-                              </LazyTippy>
-                            </Popover>
-                            <div
-                              className="md-tooltip-label"
-                              id="test-ID"
-                            >
-                              Download
+                                          <FocusRing>
+                                            <FocusRing
+                                              focusClass="md-focus-ring-wrapper children"
+                                              focusRingClass="md-focus-ring-wrapper children"
+                                            >
+                                              <button
+                                                aria-labelledby="test-ID"
+                                                className="md-lightbox__control md-lightbox__control-download md-button-simple-wrapper"
+                                                onBlur={[Function]}
+                                                onClick={[Function]}
+                                                onDragStart={[Function]}
+                                                onFocus={[Function]}
+                                                onKeyUp={[Function]}
+                                                onMouseDown={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                onMouseUp={[Function]}
+                                                onTouchCancel={[Function]}
+                                                onTouchEnd={[Function]}
+                                                onTouchMove={[Function]}
+                                                onTouchStart={[Function]}
+                                                type="button"
+                                              >
+                                                <Icon
+                                                  color="var(--mds-color-theme-common-text-primary-normal)"
+                                                  name="download"
+                                                  scale={20}
+                                                  weight="light"
+                                                />
+                                              </button>
+                                            </FocusRing>
+                                          </FocusRing>
+                                        </ButtonSimple>
+                                        <Portal
+                                          containerInfo={
+                                            <div
+                                              data-tippy-root=""
+                                              id="tippy-4"
+                                              style="pointer-events: none; z-index: 9999;"
+                                            >
+                                              
+                                            </div>
+                                          }
+                                        />
+                                      </Tippy>
+                                    </ForwardRef(TippyWrapper)>
+                                  </LazyTippy>
+                                </Popover>
+                                <div
+                                  className="md-tooltip-label"
+                                  id="test-ID"
+                                >
+                                  Download
+                                </div>
+                              </Tooltip>
                             </div>
-                          </Tooltip>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    </mdc-themeprovider>
+                  </ThemeProvider>
                 </ThemeProvider>
               </div>
             </div>

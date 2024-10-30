@@ -1,8 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { ThemeProvider } from '@momentum-ui/react-collaboration';
+import ThemeProvider from './ThemeProvider';
 
 import {
+  DEFAULTS,
   STYLE,
   THEME_CLASS_PREFIX,
   THEME_CLASS_PREFIX_STABLE,
@@ -35,37 +36,39 @@ describe('<ThemeProvider />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its main class', () => {
+    it('web component should have typography class set', () => {
       expect.assertions(1);
 
       const element = mount(<ThemeProvider />)
         .find(ThemeProvider)
         .getDOMNode();
 
-      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
+      expect(element.classList.contains(STYLE.typography)).toBe(true);
     });
 
-    it('should have its globals class', () => {
-      expect.assertions(1);
-
-      const element = mount(<ThemeProvider />)
-        .find(ThemeProvider)
-        .getDOMNode();
-
-      expect(element.classList.contains(STYLE.globals)).toBe(true);
-    });
-
-    it('should have an abstracted theme class', () => {
+    it('div in web component should have its wrapper and globals class', () => {
       expect.assertions(2);
+
+      const divInElement = mount(<ThemeProvider />)
+        .find(ThemeProvider)
+        .find('div')
+        .getDOMNode();
+
+      expect(divInElement.classList.contains(STYLE.wrapper)).toBe(true);
+      expect(divInElement.classList.contains(STYLE.globals)).toBe(true);
+    });
+
+    it('web component should have an abstracted theme class', () => {
+      expect.assertions(1);
 
       const themeName = THEMES[Object.keys(THEMES)[0]];
 
-      const element = mount(<ThemeProvider theme={themeName} />)
+      const wrapper = mount(<ThemeProvider theme={themeName} />);
+      const element = wrapper
         .find(ThemeProvider)
         .getDOMNode();
 
       expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
-      expect(element.classList.contains(`${THEME_CLASS_PREFIX_STABLE}-${themeName}`)).toBe(true);
     });
 
     it('should have provided style when style is provided', () => {
@@ -74,11 +77,12 @@ describe('<ThemeProvider />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ThemeProvider style={style} />)
+      const divInElement = mount(<ThemeProvider style={style} />)
         .find(ThemeProvider)
+        .find('div')
         .getDOMNode();
 
-      expect(element.getAttribute('style')).toBe(styleString);
+      expect(divInElement.getAttribute('style')).toBe(styleString);
     });
 
     it('should pass child props', () => {
@@ -86,11 +90,13 @@ describe('<ThemeProvider />', () => {
 
       const children = [<div key="0" />, <div key="1" />, <div key="2" />];
 
-      const component = mount(<ThemeProvider>{children}</ThemeProvider>)
+
+      const divInElement = mount(<ThemeProvider>{children}</ThemeProvider>)
         .find(ThemeProvider)
+        .find('div.md-theme-provider-wrapper')
         .getDOMNode();
 
-      expect(component.childNodes.length).toBe(children.length);
+      expect(divInElement.childNodes.length).toBe(children.length);
     });
   });
 });

@@ -2781,6 +2781,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lit-labs/ssr-dom-shim@npm:^1.2.0":
+  version: 1.2.1
+  resolution: "@lit-labs/ssr-dom-shim@npm:1.2.1"
+  checksum: 5667c44f58e16edaa257fc3ae7f752250d5250d4eb1d071b65df0f1fce0b90b42e8528787cc2673998d76d993440143a2a20c3358ce125c62df4cd193784de8d
+  languageName: node
+  linkType: hard
+
+"@lit/context@npm:^1.1.2":
+  version: 1.1.3
+  resolution: "@lit/context@npm:1.1.3"
+  dependencies:
+    "@lit/reactive-element": ^1.6.2 || ^2.0.0
+  checksum: 2ed81d67718aca84c3a70bc2bfbb04e5af9e3b96cab83f630366808ec8467383911390a97ed8487ab2c695e7a9f67788d673c2324024a62041552931e7e3c0cd
+  languageName: node
+  linkType: hard
+
+"@lit/react@npm:^1.0.5":
+  version: 1.0.6
+  resolution: "@lit/react@npm:1.0.6"
+  peerDependencies:
+    "@types/react": 17 || 18
+  checksum: f904f2cce9cd6b5d7476b9b165a3779a402b6b963f54fbd6b0e01ee0b31379ad24016de975dd4aa71e1bce5d79210de2a2c79c21a9d1a677ade4ce0122d4b11e
+  languageName: node
+  linkType: hard
+
+"@lit/reactive-element@npm:^1.6.2 || ^2.0.0, @lit/reactive-element@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "@lit/reactive-element@npm:2.0.4"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.2.0
+  checksum: 368d788d9eefdde74e77721e38c78de222dc5ec87d543e0638d0d28f7a8cf530c3d7b49aa8606efeec3f3485abbb22a43b58c2f20c1e6e7f0de266d4c6d125c4
+  languageName: node
+  linkType: hard
+
 "@mdx-js/loader@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/loader@npm:1.6.22"
@@ -2842,6 +2876,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@momentum-design/components@npm:0.4.3":
+  version: 0.4.3
+  resolution: "@momentum-design/components@npm:0.4.3"
+  dependencies:
+    "@lit/context": ^1.1.2
+    "@lit/react": ^1.0.5
+    lit: ^3.2.0
+  peerDependencies:
+    "@momentum-design/fonts": "*"
+    "@momentum-design/icons": "*"
+    "@momentum-design/tokens": "*"
+  checksum: 02467296d2af581d3eb46f55f4ecb5ee3a342e3c8715597b6adc9c500e0ec6737d47e0352f1ca30a1c9dd17a4cda2dbcf8d8f58bdff97df4ae57eaf01059c347
+  languageName: node
+  linkType: hard
+
+"@momentum-design/fonts@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@momentum-design/fonts@npm:0.0.8"
+  checksum: 22315148d139f3f18dda0d37be60dd7c8fea7ba338e4cad25b27d484ff973791b32c33c80369b00dd421a69a4a5c3902c06687cd8d5a9f95e87a921e825276f9
+  languageName: node
+  linkType: hard
+
 "@momentum-design/icons@npm:0.0.164":
   version: 0.0.164
   resolution: "@momentum-design/icons@npm:0.0.164"
@@ -2849,10 +2905,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/tokens@npm:0.0.95":
-  version: 0.0.95
-  resolution: "@momentum-design/tokens@npm:0.0.95"
-  checksum: b7b3fceb874fa4b50a9a765e16f143bc09231ffb6e56cccd2a7422d2c67a1b48e777fc329a81377e4b34ca977414f083620ac3678225c5eab1be38cf8b16061a
+"@momentum-design/tokens@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@momentum-design/tokens@npm:0.1.2"
+  checksum: 0158a280aec472dfd8a9a4caf7af5e437ce5a192f8a0eb7a37721b38e4a23c643368f1bb558714bb09ee131e97f3e3b236056f6679ac8437de25e6b33c5c5195
   languageName: node
   linkType: hard
 
@@ -2893,8 +2949,10 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
+    "@momentum-design/components": 0.4.3
+    "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.0.164
-    "@momentum-design/tokens": 0.0.95
+    "@momentum-design/tokens": 0.1.2
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
     "@momentum-ui/tokens": ^1.7.1
@@ -7481,6 +7539,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 9578470db0b527c26e246a1220ae9bffc6bf47f20f89c54aac467c083ab1f7e16c00d9a7b4bb6cb4e2dfae465027270827e5908a6236063f6214625e50585d78
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:^2.0.2":
+  version: 2.0.7
+  resolution: "@types/trusted-types@npm:2.0.7"
+  checksum: 8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
   languageName: node
   linkType: hard
 
@@ -19724,6 +19789,37 @@ __metadata:
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
   checksum: 758b9d463d663d14f69f0a1d8dac7fb1236d5b7abb90dd1fcb168d5fd9cb146bec1024e7c364b1806b5622ab2f856ea4d86eacbb7971d20af4c608f598d188fd
+  languageName: node
+  linkType: hard
+
+"lit-element@npm:^4.1.0":
+  version: 4.1.1
+  resolution: "lit-element@npm:4.1.1"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.2.0
+    "@lit/reactive-element": ^2.0.4
+    lit-html: ^3.2.0
+  checksum: 74d0f2d6fb784b1e96f27c54d036b6eb49ca9883577db627ce9ca42b242c5a5da3ae7b5c874fe2a0559ee6134726a741ec2166a48bfee90ab91346a237f33e85
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^3.2.0":
+  version: 3.2.1
+  resolution: "lit-html@npm:3.2.1"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 1bacd9f8b2acfe44a989c09c21f1aedbe409409196eff8d203c952c7ad034899b16d239551efa76872a3cea21883db62a5309aeefc604a1e3d4a8d36c9719e63
+  languageName: node
+  linkType: hard
+
+"lit@npm:^3.2.0":
+  version: 3.2.1
+  resolution: "lit@npm:3.2.1"
+  dependencies:
+    "@lit/reactive-element": ^2.0.4
+    lit-element: ^4.1.0
+    lit-html: ^3.2.0
+  checksum: ee22bbc53d5d639258b4a3a3d10f166adf959fd4ddb61db739d0a8328d0094a2232ffebb808fec3a645aeb166b15c03c688f75dde723524bf7b22263e078158f
   languageName: node
   linkType: hard
 

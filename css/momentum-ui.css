@@ -33275,7 +33275,7 @@ md-slider,
     height: 2.75rem;
     padding: 0 0.9375rem; }
     .md-list-item--space-filter-summary > [class$='__left'] {
-      fill: --mds-color-theme-text-primary-normal; }
+      fill: var(--mds-color-theme-text-primary-normal); }
     .md-list-item--space-filter-summary [class*='__header'] {
       color: #FFFFFF; }
   .md-list-item--space-search, .md-list-item--space-filter, .md-list-item--space-flag, .md-list-item--space-filter-search {

@@ -5,6 +5,8 @@ const CLASS_PREFIX = `${THEME_CLASS_PREFIX}-provider`;
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   globals: `${CLASS_PREFIX}-globals`,
+  // momentum-design typography class to be set
+  typography: 'mds-typography',
 };
 
 // Some themes are disabled until tokens are properly imported.
