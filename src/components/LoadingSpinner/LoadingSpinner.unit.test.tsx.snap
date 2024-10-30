@@ -23,7 +23,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
           data-test="spinner"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -48,7 +48,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
           data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -83,7 +83,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
           data-test="spinner"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -108,7 +108,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
           data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -144,7 +144,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
           data-test="spinner"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -169,7 +169,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
           data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -204,7 +204,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
           data-test="spinner"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -229,7 +229,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
           data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -242,7 +242,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
 exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
 <LoadingSpinner
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -250,7 +250,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
   <div
     className="md-loading-spinner-wrapper"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -273,7 +273,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
           data-test="spinner"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />
@@ -298,7 +298,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
           data-test="spinner-in-progress"
           fill="currentColor"
           height="100%"
-          style={{}}
+          style={Object {}}
           viewBox="0, 0, 32, 32"
           width="100%"
         />

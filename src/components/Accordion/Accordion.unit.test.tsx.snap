@@ -353,7 +353,7 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
   heading="Heading text"
   id="accordion-id"
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -362,7 +362,7 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
     className="md-accordion-wrapper"
     id="accordion-id"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

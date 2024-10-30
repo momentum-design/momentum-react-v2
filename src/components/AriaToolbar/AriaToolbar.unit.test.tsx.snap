@@ -20,7 +20,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button
   ariaToolbarItemsSize={0}
   shouldRenderAsButtonGroup={true}
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -32,7 +32,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button
     orientation="horizontal"
     role="toolbar"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -48,7 +48,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button
       data-spaced={false}
       role="toolbar"
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
@@ -109,7 +109,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
   ariaLabel="test"
   ariaToolbarItemsSize={0}
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -120,7 +120,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
     className="md-aria-toolbar-wrapper"
     role="toolbar"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

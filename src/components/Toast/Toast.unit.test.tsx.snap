@@ -46,7 +46,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -78,7 +78,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -204,7 +204,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -266,7 +266,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -328,7 +328,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -482,7 +482,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -713,7 +713,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -746,7 +746,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -872,7 +872,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -934,7 +934,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -996,7 +996,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -1150,7 +1150,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -1381,7 +1381,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -1413,7 +1413,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -1539,7 +1539,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -1601,7 +1601,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -1663,7 +1663,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -1817,7 +1817,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -2004,7 +2004,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
 exports[`<Toast /> snapshot should match snapshot with content children and details prop 1`] = `
 <Toast
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -2036,7 +2036,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -2162,7 +2162,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -2224,7 +2224,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -2286,7 +2286,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -2441,7 +2441,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -2628,7 +2628,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
 exports[`<Toast /> snapshot should match snapshot with details and content children 1`] = `
 <Toast
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -2646,7 +2646,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -2773,7 +2773,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -2835,7 +2835,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -2897,7 +2897,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -3052,7 +3052,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -3282,7 +3282,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -3300,7 +3300,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -3427,7 +3427,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -3489,7 +3489,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -3551,7 +3551,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -3705,7 +3705,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -3935,7 +3935,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -3969,7 +3969,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -4095,7 +4095,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -4157,7 +4157,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -4219,7 +4219,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -4373,7 +4373,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -4603,7 +4603,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -4630,7 +4630,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
     </ToastDetails>
   }
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -4638,14 +4638,14 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
   <div
     className="md-toast-wrapper"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
   >
     <ToastDetails
       controls={
-        [
+        Array [
           <ButtonControl
             control="close"
           />,
@@ -4771,7 +4771,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                           data-test="cancel"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -4833,7 +4833,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                           data-test="arrow-up"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -4895,7 +4895,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                           data-test="arrow-down"
                           fill="currentColor"
                           height="100%"
-                          style={{}}
+                          style={Object {}}
                           viewBox="0, 0, 32, 32"
                           width="100%"
                         />
@@ -5049,7 +5049,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />
@@ -5279,7 +5279,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
     </ToastContent>
   }
   controls={
-    [
+    Array [
       <ButtonControl
         control="close"
       />,
@@ -5376,7 +5376,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         data-test="cancel"
                         fill="currentColor"
                         height="100%"
-                        style={{}}
+                        style={Object {}}
                         viewBox="0, 0, 32, 32"
                         width="100%"
                       />
@@ -5435,7 +5435,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         data-test="arrow-up"
                         fill="currentColor"
                         height="100%"
-                        style={{}}
+                        style={Object {}}
                         viewBox="0, 0, 32, 32"
                         width="100%"
                       />
@@ -5494,7 +5494,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         data-test="arrow-down"
                         fill="currentColor"
                         height="100%"
-                        style={{}}
+                        style={Object {}}
                         viewBox="0, 0, 32, 32"
                         width="100%"
                       />
@@ -5710,7 +5710,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                             data-test="alarm"
                             fill="currentColor"
                             height="100%"
-                            style={{}}
+                            style={Object {}}
                             viewBox="0, 0, 32, 32"
                             width="100%"
                           />

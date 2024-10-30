@@ -9,15 +9,15 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
   height={100}
   imgClassName=""
   index={0}
-  info={{}}
+  info={Object {}}
   isImageRotated={false}
   name="test"
   onChange={null}
   onClose={null}
   onDownload={[MockFunction]}
   pages={
-    [
-      {
+    Array [
+      Object {
         "decrypting": true,
         "image": "testImage",
         "thumb": "testImage",
@@ -25,14 +25,14 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
     ]
   }
   popoverProps={
-    {
+    Object {
       "direction": "bottom-right",
       "isContained": true,
     }
   }
   theme="darkWebex"
   tooltips={
-    {
+    Object {
       "download": "Download",
       "downloading": "Downloading...",
       "exit": "Exit",
@@ -223,13 +223,13 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
         underlayClass="md-lightbox__container"
         underlayClickExits={true}
         underlayColor="rgba(0,0,0,0.5)"
-        underlayProps={{}}
+        underlayProps={Object {}}
       >
         <FocusTrap
           _createFocusTrap={[Function]}
           active={true}
           focusTrapOptions={
-            {
+            Object {
               "escapeDeactivates": true,
               "initialFocus": "#react-aria-modal-dialog",
             }
@@ -241,7 +241,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
             <div
               className="md-lightbox__container"
               onMouseDown={[Function]}
-              style={{}}
+              style={Object {}}
             >
               <div
                 aria-labelledby="test-ID"
@@ -249,7 +249,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 id="react-aria-modal-dialog"
                 key="b"
                 role="dialog"
-                style={{}}
+                style={Object {}}
                 tabIndex="-1"
               >
                 <ThemeProvider
@@ -341,7 +341,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                               hideOnClick={true}
                               interactive={false}
                               offset={
-                                [
+                                Array [
                                   0,
                                   17,
                                 ]
@@ -349,8 +349,8 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                               onHidden={[Function]}
                               placement="bottom-start"
                               plugins={
-                                [
-                                  {
+                                Array [
+                                  Object {
                                     "defaultValue": true,
                                     "fn": [Function],
                                     "name": "hideOnEsc",
@@ -358,19 +358,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 ]
                               }
                               popperOptions={
-                                {
-                                  "modifiers": [
-                                    {
+                                Object {
+                                  "modifiers": Array [
+                                    Object {
                                       "enabled": true,
                                       "name": "arrow",
-                                      "options": {
+                                      "options": Object {
                                         "element": "#arrowtest-ID",
                                         "padding": 5,
                                       },
                                     },
-                                    {
+                                    Object {
                                       "name": "preventOverflow",
-                                      "options": {
+                                      "options": Object {
                                         "altAxis": true,
                                         "boundariesElement": "scrollParent",
                                         "padding": 8,
@@ -390,7 +390,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 hideOnClick={true}
                                 interactive={false}
                                 offset={
-                                  [
+                                  Array [
                                     0,
                                     17,
                                   ]
@@ -398,17 +398,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 onHidden={[Function]}
                                 placement="bottom-start"
                                 plugins={
-                                  [
-                                    {
+                                  Array [
+                                    Object {
                                       "fn": [Function],
                                     },
-                                    {
+                                    Object {
                                       "fn": [Function],
                                     },
-                                    {
+                                    Object {
                                       "fn": [Function],
                                     },
-                                    {
+                                    Object {
                                       "defaultValue": true,
                                       "fn": [Function],
                                       "name": "hideOnEsc",
@@ -416,19 +416,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   ]
                                 }
                                 popperOptions={
-                                  {
-                                    "modifiers": [
-                                      {
+                                  Object {
+                                    "modifiers": Array [
+                                      Object {
                                         "enabled": true,
                                         "name": "arrow",
-                                        "options": {
+                                        "options": Object {
                                           "element": "#arrowtest-ID",
                                           "padding": 5,
                                         },
                                       },
-                                      {
+                                      Object {
                                         "name": "preventOverflow",
-                                        "options": {
+                                        "options": Object {
                                           "altAxis": true,
                                           "boundariesElement": "scrollParent",
                                           "padding": 8,
@@ -447,7 +447,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   hideOnClick={true}
                                   interactive={false}
                                   offset={
-                                    [
+                                    Array [
                                       0,
                                       17,
                                     ]
@@ -455,17 +455,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   onHidden={[Function]}
                                   placement="bottom-start"
                                   plugins={
-                                    [
-                                      {
+                                    Array [
+                                      Object {
                                         "fn": [Function],
                                       },
-                                      {
+                                      Object {
                                         "fn": [Function],
                                       },
-                                      {
+                                      Object {
                                         "fn": [Function],
                                       },
-                                      {
+                                      Object {
                                         "defaultValue": true,
                                         "fn": [Function],
                                         "name": "hideOnEsc",
@@ -473,19 +473,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     ]
                                   }
                                   popperOptions={
-                                    {
-                                      "modifiers": [
-                                        {
+                                    Object {
+                                      "modifiers": Array [
+                                        Object {
                                           "enabled": true,
                                           "name": "arrow",
-                                          "options": {
+                                          "options": Object {
                                             "element": "#arrowtest-ID",
                                             "padding": 5,
                                           },
                                         },
-                                        {
+                                        Object {
                                           "name": "preventOverflow",
-                                          "options": {
+                                          "options": Object {
                                             "altAxis": true,
                                             "boundariesElement": "scrollParent",
                                             "padding": 8,
@@ -586,7 +586,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                           <div
                             className="md-lightbox__viewport-wrapper"
                             style={
-                              {
+                              Object {
                                 "height": "100px",
                                 "width": "100px",
                               }
@@ -612,7 +612,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                         >
                           <div
                             className="md-lightbox__controls"
-                            style={{}}
+                            style={Object {}}
                           >
                             <Tooltip
                               placement="top"
@@ -669,7 +669,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   hideOnClick={true}
                                   interactive={false}
                                   offset={
-                                    [
+                                    Array [
                                       0,
                                       17,
                                     ]
@@ -677,8 +677,8 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   onHidden={[Function]}
                                   placement="top"
                                   plugins={
-                                    [
-                                      {
+                                    Array [
+                                      Object {
                                         "defaultValue": true,
                                         "fn": [Function],
                                         "name": "hideOnEsc",
@@ -686,19 +686,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     ]
                                   }
                                   popperOptions={
-                                    {
-                                      "modifiers": [
-                                        {
+                                    Object {
+                                      "modifiers": Array [
+                                        Object {
                                           "enabled": true,
                                           "name": "arrow",
-                                          "options": {
+                                          "options": Object {
                                             "element": "#arrowtest-ID",
                                             "padding": 5,
                                           },
                                         },
-                                        {
+                                        Object {
                                           "name": "preventOverflow",
-                                          "options": {
+                                          "options": Object {
                                             "altAxis": true,
                                             "boundariesElement": "scrollParent",
                                             "padding": 8,
@@ -718,7 +718,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     hideOnClick={true}
                                     interactive={false}
                                     offset={
-                                      [
+                                      Array [
                                         0,
                                         17,
                                       ]
@@ -726,17 +726,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     onHidden={[Function]}
                                     placement="top"
                                     plugins={
-                                      [
-                                        {
+                                      Array [
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "defaultValue": true,
                                           "fn": [Function],
                                           "name": "hideOnEsc",
@@ -744,19 +744,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       ]
                                     }
                                     popperOptions={
-                                      {
-                                        "modifiers": [
-                                          {
+                                      Object {
+                                        "modifiers": Array [
+                                          Object {
                                             "enabled": true,
                                             "name": "arrow",
-                                            "options": {
+                                            "options": Object {
                                               "element": "#arrowtest-ID",
                                               "padding": 5,
                                             },
                                           },
-                                          {
+                                          Object {
                                             "name": "preventOverflow",
-                                            "options": {
+                                            "options": Object {
                                               "altAxis": true,
                                               "boundariesElement": "scrollParent",
                                               "padding": 8,
@@ -775,7 +775,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       hideOnClick={true}
                                       interactive={false}
                                       offset={
-                                        [
+                                        Array [
                                           0,
                                           17,
                                         ]
@@ -783,17 +783,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       onHidden={[Function]}
                                       placement="top"
                                       plugins={
-                                        [
-                                          {
+                                        Array [
+                                          Object {
                                             "fn": [Function],
                                           },
-                                          {
+                                          Object {
                                             "fn": [Function],
                                           },
-                                          {
+                                          Object {
                                             "fn": [Function],
                                           },
-                                          {
+                                          Object {
                                             "defaultValue": true,
                                             "fn": [Function],
                                             "name": "hideOnEsc",
@@ -801,19 +801,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                         ]
                                       }
                                       popperOptions={
-                                        {
-                                          "modifiers": [
-                                            {
+                                        Object {
+                                          "modifiers": Array [
+                                            Object {
                                               "enabled": true,
                                               "name": "arrow",
-                                              "options": {
+                                              "options": Object {
                                                 "element": "#arrowtest-ID",
                                                 "padding": 5,
                                               },
                                             },
-                                            {
+                                            Object {
                                               "name": "preventOverflow",
-                                              "options": {
+                                              "options": Object {
                                                 "altAxis": true,
                                                 "boundariesElement": "scrollParent",
                                                 "padding": 8,
@@ -949,7 +949,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   hideOnClick={true}
                                   interactive={false}
                                   offset={
-                                    [
+                                    Array [
                                       0,
                                       17,
                                     ]
@@ -957,8 +957,8 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   onHidden={[Function]}
                                   placement="top"
                                   plugins={
-                                    [
-                                      {
+                                    Array [
+                                      Object {
                                         "defaultValue": true,
                                         "fn": [Function],
                                         "name": "hideOnEsc",
@@ -966,19 +966,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     ]
                                   }
                                   popperOptions={
-                                    {
-                                      "modifiers": [
-                                        {
+                                    Object {
+                                      "modifiers": Array [
+                                        Object {
                                           "enabled": true,
                                           "name": "arrow",
-                                          "options": {
+                                          "options": Object {
                                             "element": "#arrowtest-ID",
                                             "padding": 5,
                                           },
                                         },
-                                        {
+                                        Object {
                                           "name": "preventOverflow",
-                                          "options": {
+                                          "options": Object {
                                             "altAxis": true,
                                             "boundariesElement": "scrollParent",
                                             "padding": 8,
@@ -998,7 +998,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     hideOnClick={true}
                                     interactive={false}
                                     offset={
-                                      [
+                                      Array [
                                         0,
                                         17,
                                       ]
@@ -1006,17 +1006,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     onHidden={[Function]}
                                     placement="top"
                                     plugins={
-                                      [
-                                        {
+                                      Array [
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "defaultValue": true,
                                           "fn": [Function],
                                           "name": "hideOnEsc",
@@ -1024,19 +1024,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       ]
                                     }
                                     popperOptions={
-                                      {
-                                        "modifiers": [
-                                          {
+                                      Object {
+                                        "modifiers": Array [
+                                          Object {
                                             "enabled": true,
                                             "name": "arrow",
-                                            "options": {
+                                            "options": Object {
                                               "element": "#arrowtest-ID",
                                               "padding": 5,
                                             },
                                           },
-                                          {
+                                          Object {
                                             "name": "preventOverflow",
-                                            "options": {
+                                            "options": Object {
                                               "altAxis": true,
                                               "boundariesElement": "scrollParent",
                                               "padding": 8,
@@ -1055,7 +1055,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       hideOnClick={true}
                                       interactive={false}
                                       offset={
-                                        [
+                                        Array [
                                           0,
                                           17,
                                         ]
@@ -1063,17 +1063,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       onHidden={[Function]}
                                       placement="top"
                                       plugins={
-                                        [
-                                          {
+                                        Array [
+                                          Object {
                                             "fn": [Function],
                                           },
-                                          {
+                                          Object {
                                             "fn": [Function],
                                           },
-                                          {
+                                          Object {
                                             "fn": [Function],
                                           },
-                                          {
+                                          Object {
                                             "defaultValue": true,
                                             "fn": [Function],
                                             "name": "hideOnEsc",
@@ -1081,19 +1081,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                         ]
                                       }
                                       popperOptions={
-                                        {
-                                          "modifiers": [
-                                            {
+                                        Object {
+                                          "modifiers": Array [
+                                            Object {
                                               "enabled": true,
                                               "name": "arrow",
-                                              "options": {
+                                              "options": Object {
                                                 "element": "#arrowtest-ID",
                                                 "padding": 5,
                                               },
                                             },
-                                            {
+                                            Object {
                                               "name": "preventOverflow",
-                                              "options": {
+                                              "options": Object {
                                                 "altAxis": true,
                                                 "boundariesElement": "scrollParent",
                                                 "padding": 8,
@@ -1232,7 +1232,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 hideOnClick={true}
                                 interactive={false}
                                 offset={
-                                  [
+                                  Array [
                                     0,
                                     17,
                                   ]
@@ -1240,8 +1240,8 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 onHidden={[Function]}
                                 placement="top"
                                 plugins={
-                                  [
-                                    {
+                                  Array [
+                                    Object {
                                       "defaultValue": true,
                                       "fn": [Function],
                                       "name": "hideOnEsc",
@@ -1249,19 +1249,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   ]
                                 }
                                 popperOptions={
-                                  {
-                                    "modifiers": [
-                                      {
+                                  Object {
+                                    "modifiers": Array [
+                                      Object {
                                         "enabled": true,
                                         "name": "arrow",
-                                        "options": {
+                                        "options": Object {
                                           "element": "#arrowtest-ID",
                                           "padding": 5,
                                         },
                                       },
-                                      {
+                                      Object {
                                         "name": "preventOverflow",
-                                        "options": {
+                                        "options": Object {
                                           "altAxis": true,
                                           "boundariesElement": "scrollParent",
                                           "padding": 8,
@@ -1281,7 +1281,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   hideOnClick={true}
                                   interactive={false}
                                   offset={
-                                    [
+                                    Array [
                                       0,
                                       17,
                                     ]
@@ -1289,17 +1289,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   onHidden={[Function]}
                                   placement="top"
                                   plugins={
-                                    [
-                                      {
+                                    Array [
+                                      Object {
                                         "fn": [Function],
                                       },
-                                      {
+                                      Object {
                                         "fn": [Function],
                                       },
-                                      {
+                                      Object {
                                         "fn": [Function],
                                       },
-                                      {
+                                      Object {
                                         "defaultValue": true,
                                         "fn": [Function],
                                         "name": "hideOnEsc",
@@ -1307,19 +1307,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     ]
                                   }
                                   popperOptions={
-                                    {
-                                      "modifiers": [
-                                        {
+                                    Object {
+                                      "modifiers": Array [
+                                        Object {
                                           "enabled": true,
                                           "name": "arrow",
-                                          "options": {
+                                          "options": Object {
                                             "element": "#arrowtest-ID",
                                             "padding": 5,
                                           },
                                         },
-                                        {
+                                        Object {
                                           "name": "preventOverflow",
-                                          "options": {
+                                          "options": Object {
                                             "altAxis": true,
                                             "boundariesElement": "scrollParent",
                                             "padding": 8,
@@ -1338,7 +1338,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     hideOnClick={true}
                                     interactive={false}
                                     offset={
-                                      [
+                                      Array [
                                         0,
                                         17,
                                       ]
@@ -1346,17 +1346,17 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     onHidden={[Function]}
                                     placement="top"
                                     plugins={
-                                      [
-                                        {
+                                      Array [
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "fn": [Function],
                                         },
-                                        {
+                                        Object {
                                           "defaultValue": true,
                                           "fn": [Function],
                                           "name": "hideOnEsc",
@@ -1364,19 +1364,19 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                       ]
                                     }
                                     popperOptions={
-                                      {
-                                        "modifiers": [
-                                          {
+                                      Object {
+                                        "modifiers": Array [
+                                          Object {
                                             "enabled": true,
                                             "name": "arrow",
-                                            "options": {
+                                            "options": Object {
                                               "element": "#arrowtest-ID",
                                               "padding": 5,
                                             },
                                           },
-                                          {
+                                          Object {
                                             "name": "preventOverflow",
-                                            "options": {
+                                            "options": Object {
                                               "altAxis": true,
                                               "boundariesElement": "scrollParent",
                                               "padding": 8,

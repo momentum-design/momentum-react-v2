@@ -25,7 +25,7 @@ exports[`<TabPanel /> snapshot should match snapshot with className 1`] = `
 exports[`<TabPanel /> snapshot should match snapshot with style 1`] = `
 <TabPanel
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -34,7 +34,7 @@ exports[`<TabPanel /> snapshot should match snapshot with style 1`] = `
     className="md-tab-panel-wrapper"
     role="tabpanel"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

@@ -49,7 +49,7 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
         preventKeyboardDoubleClick={false}
         removeStyle={false}
         size={36}
-        style={{}}
+        style={Object {}}
         tag="button"
         type="button"
       >
@@ -58,7 +58,7 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
         >
           <UID
             idSource={
-              {
+              Object {
                 "prefix": "",
                 "uid": [Function],
                 "value": 2,
@@ -80,8 +80,8 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               style={
-                {
-                  "style": {},
+                Object {
+                  "style": Object {},
                 }
               }
               tabIndex={0}
@@ -91,7 +91,7 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
                 className="md-button__children"
                 key="child-1"
                 style={
-                  {
+                  Object {
                     "opacity": "1",
                   }
                 }
@@ -121,7 +121,7 @@ exports[`tests for <Select /> should match normal SnapShot 1`] = `
                       aria-label={null}
                       className="md-icon icon icon-arrow-down_16"
                       style={
-                        {
+                        Object {
                           "fontSize": 16,
                         }
                       }

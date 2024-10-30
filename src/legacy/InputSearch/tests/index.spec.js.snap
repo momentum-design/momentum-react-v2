@@ -34,7 +34,7 @@ exports[`tests for <InputSearch /> should match loading SnapShot 1`] = `
     inputSize=""
     isFilled={false}
     label=""
-    messageArr={[]}
+    messageArr={Array []}
     multiline={false}
     name="test"
     nestedLevel={0}
@@ -139,7 +139,7 @@ exports[`tests for <InputSearch /> should match normal SnapShot 1`] = `
     inputSize=""
     isFilled={false}
     label=""
-    messageArr={[]}
+    messageArr={Array []}
     multiline={false}
     name="test"
     nestedLevel={0}
@@ -189,7 +189,7 @@ exports[`tests for <InputSearch /> should match normal SnapShot 1`] = `
                 aria-label={null}
                 className="md-icon icon icon-search_20"
                 style={
-                  {
+                  Object {
                     "fontSize": 20,
                   }
                 }
@@ -260,7 +260,7 @@ exports[`tests for <InputSearch /> should match pill SnapShot 1`] = `
     inputSize=""
     isFilled={false}
     label=""
-    messageArr={[]}
+    messageArr={Array []}
     multiline={false}
     name="test"
     nestedLevel={0}
@@ -310,7 +310,7 @@ exports[`tests for <InputSearch /> should match pill SnapShot 1`] = `
                 aria-label={null}
                 className="md-icon icon icon-search_20"
                 style={
-                  {
+                  Object {
                     "fontSize": 20,
                   }
                 }

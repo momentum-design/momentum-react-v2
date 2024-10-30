@@ -11,7 +11,7 @@ exports[`tests for <ListSeparator /> should match SnapShot 1`] = `
 >
   <div
     className="md-list-separator"
-    style={{}}
+    style={Object {}}
   >
     <span
       className="md-list-separator__container"

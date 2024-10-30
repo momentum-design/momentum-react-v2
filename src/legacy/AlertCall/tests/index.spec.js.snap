@@ -5,7 +5,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
   avatar={null}
   avatarProps={null}
   caller={
-    {
+    Object {
       "alt": "+1 408-555-1212",
       "title": "Jefe Guadelupe",
     }
@@ -13,7 +13,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
   defaultSelectedDevice={0}
   deviceListHeader="Device selection"
   deviceListProps={null}
-  devices={[]}
+  devices={Array []}
   onAnswerShare={null}
   onAnswerVideo={null}
   onAnswerVoice={null}
@@ -69,7 +69,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
             className="md-avatar__letter"
             key="letter"
             style={
-              {
+              Object {
                 "backgroundColor": "",
                 "color": "",
               }
@@ -125,7 +125,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
           preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={44}
-          style={{}}
+          style={Object {}}
           tag="button"
           type="button"
         >
@@ -134,7 +134,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
           >
             <UID
               idSource={
-                {
+                Object {
                   "prefix": "",
                   "uid": [Function],
                   "value": 2,
@@ -154,8 +154,8 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
                 onKeyDown={[Function]}
                 onKeyUp={[Function]}
                 style={
-                  {
-                    "style": {},
+                  Object {
+                    "style": Object {},
                   }
                 }
                 tabIndex={0}
@@ -165,7 +165,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
                   className="md-button__children"
                   key="child-1"
                   style={
-                    {
+                    Object {
                       "opacity": "1",
                     }
                   }
@@ -191,7 +191,7 @@ exports[`tests for <AlertCall /> should match SnapShot 1`] = `
                       aria-label={null}
                       className="md-icon icon icon-cancel_24"
                       style={
-                        {
+                        Object {
                           "fontSize": 24,
                         }
                       }
@@ -213,7 +213,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
   avatar={null}
   avatarProps={null}
   caller={
-    {
+    Object {
       "alt": "+1 408-555-1212",
       "title": "Jefe Guadelupe",
     }
@@ -222,13 +222,13 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
   deviceListHeader="Device selection"
   deviceListProps={null}
   devices={
-    [
-      {
+    Array [
+      Object {
         "name": "SJC21-Babelfish",
         "type": "device",
         "value": "1010101",
       },
-      {
+      Object {
         "name": "Use my computer",
         "value": "2020202",
       },
@@ -289,7 +289,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
             className="md-avatar__letter"
             key="letter"
             style={
-              {
+              Object {
                 "backgroundColor": "",
                 "color": "",
               }
@@ -315,13 +315,13 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
         className=""
         defaultSelected={0}
         devices={
-          [
-            {
+          Array [
+            Object {
               "name": "SJC21-Babelfish",
               "type": "device",
               "value": "1010101",
             },
-            {
+            Object {
               "name": "Use my computer",
               "value": "2020202",
             },
@@ -384,7 +384,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                   focus={false}
                   focusLockTabbableChildren={false}
                   focusLockTabbableChildrenProps={
-                    {
+                    Object {
                       "portalNodeQuery": "",
                       "tabbableChildrenHasPopover": false,
                       "tabbableChildrenQuery": "",
@@ -415,7 +415,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                   >
                     <UID
                       idSource={
-                        {
+                        Object {
                           "prefix": "",
                           "uid": [Function],
                           "value": 6,
@@ -467,7 +467,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
             >
               <UID
                 idSource={
-                  {
+                  Object {
                     "prefix": "",
                     "uid": [Function],
                     "value": 6,
@@ -491,7 +491,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                     focus={false}
                     focusLockTabbableChildren={false}
                     focusLockTabbableChildrenProps={
-                      {
+                      Object {
                         "portalNodeQuery": "",
                         "tabbableChildrenHasPopover": false,
                         "tabbableChildrenQuery": "",
@@ -522,7 +522,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                     >
                       <UID
                         idSource={
-                          {
+                          Object {
                             "prefix": "",
                             "uid": [Function],
                             "value": 6,
@@ -571,7 +571,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                                   aria-label={null}
                                   className="md-icon icon icon-spark-board_20"
                                   style={
-                                    {
+                                    Object {
                                       "fontSize": 20,
                                     }
                                   }
@@ -621,7 +621,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                                   aria-label={null}
                                   className="md-icon icon icon-check_20"
                                   style={
-                                    {
+                                    Object {
                                       "color": "rgba(0, 160, 209, 1)",
                                       "fontSize": 20,
                                     }
@@ -643,7 +643,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
             >
               <UID
                 idSource={
-                  {
+                  Object {
                     "prefix": "",
                     "uid": [Function],
                     "value": 6,
@@ -667,7 +667,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                     focus={false}
                     focusLockTabbableChildren={false}
                     focusLockTabbableChildrenProps={
-                      {
+                      Object {
                         "portalNodeQuery": "",
                         "tabbableChildrenHasPopover": false,
                         "tabbableChildrenQuery": "",
@@ -698,7 +698,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                     >
                       <UID
                         idSource={
-                          {
+                          Object {
                             "prefix": "",
                             "uid": [Function],
                             "value": 6,
@@ -746,7 +746,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                                   aria-label={null}
                                   className="md-icon icon icon-laptop_20"
                                   style={
-                                    {
+                                    Object {
                                       "fontSize": 20,
                                     }
                                   }
@@ -821,7 +821,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
           preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={44}
-          style={{}}
+          style={Object {}}
           tag="button"
           type="button"
         >
@@ -830,7 +830,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
           >
             <UID
               idSource={
-                {
+                Object {
                   "prefix": "",
                   "uid": [Function],
                   "value": 3,
@@ -850,8 +850,8 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                 onKeyDown={[Function]}
                 onKeyUp={[Function]}
                 style={
-                  {
-                    "style": {},
+                  Object {
+                    "style": Object {},
                   }
                 }
                 tabIndex={0}
@@ -861,7 +861,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                   className="md-button__children"
                   key="child-1"
                   style={
-                    {
+                    Object {
                       "opacity": "1",
                     }
                   }
@@ -887,7 +887,7 @@ exports[`tests for <AlertCall /> should match SnapShot with devices 1`] = `
                       aria-label={null}
                       className="md-icon icon icon-cancel_24"
                       style={
-                        {
+                        Object {
                           "fontSize": 24,
                         }
                       }

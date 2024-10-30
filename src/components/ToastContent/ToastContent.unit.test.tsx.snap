@@ -253,7 +253,7 @@ exports[`<ToastContent /> snapshot should match snapshot with info 1`] = `
 exports[`<ToastContent /> snapshot should match snapshot with style 1`] = `
 <ToastContent
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -261,7 +261,7 @@ exports[`<ToastContent /> snapshot should match snapshot with style 1`] = `
   <div
     className="md-toast-content-wrapper"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

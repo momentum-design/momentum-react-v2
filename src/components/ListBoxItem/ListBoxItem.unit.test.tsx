@@ -5,6 +5,7 @@ import { useListState } from '@react-stately/list';
 import { renderHook } from '@testing-library/react-hooks';
 import { Item } from '@react-stately/collections';
 import ListItemBase from '../ListItemBase';
+import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 
 jest.mock('@react-aria/listbox', () => {
   return {
@@ -13,6 +14,7 @@ jest.mock('@react-aria/listbox', () => {
 });
 
 describe('ListBoxItem', () => {
+  let wrapper: any;
   const { result } = renderHook(() =>
     useListState({
       children: [
@@ -27,19 +29,20 @@ describe('ListBoxItem', () => {
   );
 
   const state = result.current;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let useContextMock: jest.Mock<any, any>;
-
-  beforeEach(() => {
-    useContextMock = React.useContext = jest.fn();
-  });
+  
+  const setup = (item: any) => {
+    (wrapper) = mount(
+      <ListBoxContext.Provider value={state}>
+        <ListBoxItem key={item.key} item={item} />
+      </ListBoxContext.Provider>
+    );
+  };
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      useContextMock.mockReturnValue(state);
       const item = state.collection.getItem('$.0');
 
-      const wrapper = mount(<ListBoxItem key={item.key} item={item} />);
+      setup(item);
 
       expect(wrapper).toMatchSnapshot();
     });
@@ -47,10 +50,9 @@ describe('ListBoxItem', () => {
 
   describe('attributes', () => {
     it('should render the given item', () => {
-      useContextMock.mockReturnValue(state);
       const item = state.collection.getItem('$.1');
 
-      const wrapper = mount(<ListBoxItem key={item.key} item={item} />);
+      setup(item);
 
       const element = wrapper.find('li div').getDOMNode();
 

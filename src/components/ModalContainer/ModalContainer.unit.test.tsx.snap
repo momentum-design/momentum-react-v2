@@ -166,7 +166,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = 
 exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1`] = `
 <ModalContainer
   focusLockProps={
-    {
+    Object {
       "restoreFocus": true,
     }
   }
@@ -264,7 +264,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
 exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
 <ModalContainer
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -278,7 +278,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
     data-round={0}
     role="dialog"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

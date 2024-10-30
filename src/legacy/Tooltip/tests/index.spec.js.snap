@@ -3,7 +3,7 @@
 exports[`tests for <Tooltip /> should match SnapShot 1`] = `
 <Tooltip
   className=""
-  popoverProps={{}}
+  popoverProps={Object {}}
   tooltip="test"
   tooltipTrigger="MouseEnter"
   width={null}

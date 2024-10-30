@@ -5,7 +5,7 @@ exports[`tests for <TopbarNav /> should match SnapShot 1`] = `
   alignment={null}
   className=""
   id="test"
-  listProps={{}}
+  listProps={Object {}}
 >
   <nav
     className="md-top-bar__nav"

@@ -117,7 +117,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
 exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarProps 1`] = `
 <AvatarMeetingsListItem
   avatarProps={
-    {
+    Object {
       "presence": "active",
       "title": "Cisco",
     }
@@ -226,7 +226,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                             data-test="unread"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-indicator-stable)",
                                 "stroke": "none",
                               }
@@ -397,7 +397,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
 exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayMoreAction 1`] = `
 <AvatarMeetingsListItem
   displayActions={
-    [
+    Array [
       "more",
     ]
   }
@@ -571,7 +571,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                               data-test="more"
                               fill="currentColor"
                               height="100%"
-                              style={{}}
+                              style={Object {}}
                               viewBox="0, 0, 32, 32"
                               width="100%"
                             />
@@ -594,7 +594,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
 exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayMuteAction && !isMuted 1`] = `
 <AvatarMeetingsListItem
   displayActions={
-    [
+    Array [
       "mute",
     ]
   }
@@ -772,7 +772,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                               fill="currentColor"
                               height="100%"
                               style={
-                                {
+                                Object {
                                   "stroke": "none",
                                 }
                               }
@@ -798,7 +798,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
 exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayMuteAction 1`] = `
 <AvatarMeetingsListItem
   displayActions={
-    [
+    Array [
       "mute",
     ]
   }
@@ -974,7 +974,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                               data-test="microphone-muted"
                               height="100%"
                               style={
-                                {
+                                Object {
                                   "fill": "var(--mds-color-theme-text-error-normal)",
                                   "stroke": "none",
                                 }
@@ -1342,7 +1342,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     data-test="scheduler-available"
                     height="100%"
                     style={
-                      {
+                      Object {
                         "fill": "var(--mds-color-theme-text-success-normal)",
                         "stroke": "none",
                       }
@@ -1488,7 +1488,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     data-test="scheduler-not-working-hours"
                     height="100%"
                     style={
-                      {
+                      Object {
                         "fill": "var(--mds-color-theme-text-secondary-normal)",
                         "stroke": "none",
                       }
@@ -1634,7 +1634,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     data-test="scheduler-unavailable"
                     height="100%"
                     style={
-                      {
+                      Object {
                         "fill": "var(--mds-color-theme-text-warning-normal)",
                         "stroke": "none",
                       }
@@ -1780,7 +1780,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                     data-test="scheduler-unknown"
                     height="100%"
                     style={
-                      {
+                      Object {
                         "fill": "var(--mds-color-theme-text-error-normal)",
                         "stroke": "none",
                       }
@@ -1947,7 +1947,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
 exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`] = `
 <AvatarMeetingsListItem
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -1960,7 +1960,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
     shape="isPilled"
     size={50}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -1998,7 +1998,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
           onTouchStart={[Function]}
           role="listitem"
           style={
-            {
+            Object {
               "color": "pink",
             }
           }

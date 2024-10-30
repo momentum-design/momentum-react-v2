@@ -3,9 +3,9 @@
 exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
 <AlertMeeting
   attendees={
-    [
-      {
-        "props": {
+    Array [
+      Object {
+        "props": Object {
           "id": "testid",
         },
         "title": "J $",
@@ -60,7 +60,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           className="md-avatar__letter"
           key="letter"
           style={
-            {
+            Object {
               "backgroundColor": "",
               "color": "",
             }
@@ -118,7 +118,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={44}
-          style={{}}
+          style={Object {}}
           tag="button"
           type="button"
         >
@@ -127,7 +127,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           >
             <UID
               idSource={
-                {
+                Object {
                   "prefix": "",
                   "uid": [Function],
                   "value": 3,
@@ -147,8 +147,8 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                 onKeyDown={[Function]}
                 onKeyUp={[Function]}
                 style={
-                  {
-                    "style": {},
+                  Object {
+                    "style": Object {},
                   }
                 }
                 tabIndex={0}
@@ -158,7 +158,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                   className="md-button__children"
                   key="child-1"
                   style={
-                    {
+                    Object {
                       "opacity": "1",
                     }
                   }
@@ -184,7 +184,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                       aria-label={null}
                       className="md-icon icon icon-alarm_16"
                       style={
-                        {
+                        Object {
                           "fontSize": 16,
                         }
                       }
@@ -230,7 +230,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={44}
-          style={{}}
+          style={Object {}}
           tag="button"
           type="button"
         >
@@ -239,7 +239,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
           >
             <UID
               idSource={
-                {
+                Object {
                   "prefix": "",
                   "uid": [Function],
                   "value": 3,
@@ -259,8 +259,8 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                 onKeyDown={[Function]}
                 onKeyUp={[Function]}
                 style={
-                  {
-                    "style": {},
+                  Object {
+                    "style": Object {},
                   }
                 }
                 tabIndex={0}
@@ -270,7 +270,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                   className="md-button__children"
                   key="child-1"
                   style={
-                    {
+                    Object {
                       "opacity": "1",
                     }
                   }
@@ -296,7 +296,7 @@ exports[`tests for <AlertMeeting /> should match SnapShot 1`] = `
                       aria-label={null}
                       className="md-icon icon icon-cancel_16"
                       style={
-                        {
+                        Object {
                           "fontSize": 16,
                         }
                       }

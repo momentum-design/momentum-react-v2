@@ -84,7 +84,7 @@ export const sypOnEventListener = (target: EventTarget, spyOnEvents?: string[]) 
     eventHandlers[event] = (eventHandlers[event] ?? []).filter((c) => c !== handler);
   });
 
-  jest.spyOn(target, 'addEventListener').mockImplementation((eventName, ...args) => {
+  jest.spyOn(target, 'addEventListener').mockImplementationOnce((eventName, ...args) => {
     if (spyOnEvents === undefined || spyOnEvents.includes(eventName)) {
       addEventListenerSpy(eventName, ...args);
     } else {
@@ -92,7 +92,7 @@ export const sypOnEventListener = (target: EventTarget, spyOnEvents?: string[]) 
     }
   });
 
-  jest.spyOn(target, 'removeEventListener').mockImplementation((eventName, ...args) => {
+  jest.spyOn(target, 'removeEventListener').mockImplementationOnce((eventName, ...args) => {
     if (spyOnEvents === undefined || spyOnEvents.includes(eventName)) {
       removeEventListenerSpy(eventName, ...args);
     } else {

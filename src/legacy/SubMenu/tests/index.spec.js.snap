@@ -9,7 +9,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
     content={null}
     customNode={null}
     eventOverlayProps={null}
-    index={[]}
+    index={Array []}
     isHeader={false}
     isOpen={false}
     keepMenuOpen={false}
@@ -23,7 +23,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
       <Component>
         <UID
           idSource={
-            {
+            Object {
               "prefix": "",
               "uid": [Function],
               "value": 2,
@@ -35,7 +35,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
           >
             <UID
               idSource={
-                {
+                Object {
                   "prefix": "1-",
                   "uid": [Function],
                   "value": 3,
@@ -65,7 +65,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
                     focus={false}
                     focusLockTabbableChildren={false}
                     focusLockTabbableChildrenProps={
-                      {
+                      Object {
                         "portalNodeQuery": "",
                         "tabbableChildrenHasPopover": false,
                         "tabbableChildrenQuery": "",
@@ -96,7 +96,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
                     >
                       <UID
                         idSource={
-                          {
+                          Object {
                             "prefix": "1-",
                             "uid": [Function],
                             "value": 3,
@@ -150,7 +150,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
                                 aria-label={null}
                                 className="md-icon icon icon-arrow-right_16"
                                 style={
-                                  {
+                                  Object {
                                     "fontSize": 16,
                                   }
                                 }

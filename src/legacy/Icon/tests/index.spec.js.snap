@@ -22,7 +22,7 @@ exports[`Tests for <Icon /> Test the accessibilty of <Icon /> should match SnapS
     aria-label="Test Title This is a test description"
     className="md-icon icon icon-accessibility_16"
     style={
-      {
+      Object {
         "fontSize": 16,
       }
     }
@@ -53,7 +53,7 @@ exports[`Tests for <Icon /> Test the colors of <Icon /> should match SnapShot 1`
     aria-label={null}
     className="md-icon icon icon-accessibility_16"
     style={
-      {
+      Object {
         "fontSize": 16,
       }
     }
@@ -83,7 +83,7 @@ exports[`Tests for <Icon /> Test the sizes of <Icon /> should match SnapShot 1`]
     aria-label={null}
     className="md-icon icon icon-accessibility_16 testClass"
     style={
-      {
+      Object {
         "color": "rgba(247, 100, 74, 1)",
         "fontSize": 24,
       }
@@ -114,7 +114,7 @@ exports[`Tests for <Icon /> should match SnapShot 1`] = `
     aria-label={null}
     className="md-icon icon icon-accessibility_16 testClass"
     style={
-      {
+      Object {
         "color": "rgba(0, 160, 209, 1)",
         "fontSize": 16,
       }

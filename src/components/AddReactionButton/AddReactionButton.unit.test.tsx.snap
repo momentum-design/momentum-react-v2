@@ -66,7 +66,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
                   data-test="reactions"
                   fill="currentColor"
                   height="100%"
-                  style={{}}
+                  style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -148,7 +148,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
                   data-test="reactions"
                   fill="currentColor"
                   height="100%"
-                  style={{}}
+                  style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -233,7 +233,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
                   data-test="reactions"
                   fill="currentColor"
                   height="100%"
-                  style={{}}
+                  style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />
@@ -250,7 +250,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
 exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
 <AddReactionButton
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -259,7 +259,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
     className="md-add-reaction-button-wrapper"
     size={20}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -276,7 +276,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
       data-shallow-disabled={false}
       data-size={20}
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
@@ -311,7 +311,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
             onTouchMove={[Function]}
             onTouchStart={[Function]}
             style={
-              {
+              Object {
                 "color": "pink",
               }
             }
@@ -334,7 +334,7 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
                   data-test="reactions"
                   fill="currentColor"
                   height="100%"
-                  style={{}}
+                  style={Object {}}
                   viewBox="0, 0, 32, 32"
                   width="100%"
                 />

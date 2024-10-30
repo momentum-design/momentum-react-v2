@@ -82,7 +82,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with id 1`] = `
 exports[`<MenuListBackground /> snapshot should match snapshot with style 1`] = `
 <MenuListBackground
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -98,7 +98,7 @@ exports[`<MenuListBackground /> snapshot should match snapshot with style 1`] = 
         onBlur={[Function]}
         onFocus={[Function]}
         style={
-          {
+          Object {
             "color": "pink",
           }
         }

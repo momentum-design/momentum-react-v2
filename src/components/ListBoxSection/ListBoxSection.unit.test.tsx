@@ -4,6 +4,7 @@ import React from 'react';
 import { Item, Section } from '@react-stately/collections';
 import { useListState } from '@react-stately/list';
 import { renderHook } from '@testing-library/react-hooks';
+import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 
 jest.mock('@react-aria/listbox', () => {
   return {
@@ -13,6 +14,7 @@ jest.mock('@react-aria/listbox', () => {
 });
 
 describe('ListBoxSection', () => {
+  let wrapper: any;
   const { result } = renderHook(() =>
     useListState({
       children: [
@@ -29,19 +31,19 @@ describe('ListBoxSection', () => {
   );
 
   const state = result.current;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let useContextMock: jest.Mock<any, any>;
 
-  beforeEach(() => {
-    useContextMock = React.useContext = jest.fn();
-  });
+  const setup = (item: any) => {
+    (wrapper) = mount(
+      <ListBoxContext.Provider value={state}>
+        <ListBoxSection key={item.key} section={item} />
+      </ListBoxContext.Provider>
+    );
+  };
 
   describe('snapshot', () => {
     it('should match snapshot', () => {
-      useContextMock.mockReturnValue(state);
-
       const item = state.collection.getItem('$.0');
-      const wrapper = mount(<ListBoxSection key={item.key} section={item} />);
+      setup(item);
 
       expect(wrapper).toMatchSnapshot();
     });
@@ -49,12 +51,9 @@ describe('ListBoxSection', () => {
 
   describe('attributes', () => {
     it('should render the items inside the section', () => {
-      useContextMock.mockReturnValue(state);
-
       const item = state.collection.getItem('$.0');
       const numberOfItems = [...item.childNodes].length;
-
-      const wrapper = mount(<ListBoxSection key={item.key} section={item} />);
+      setup(item);
 
       const element = wrapper.find('ListItemBase li div');
       expect(element.length).toEqual(numberOfItems);

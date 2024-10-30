@@ -883,7 +883,7 @@ exports[`<TabList /> snapshot should match snapshot with id 1`] = `
 exports[`<TabList /> snapshot should match snapshot with style 1`] = `
 <TabList
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -898,7 +898,7 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
     round={true}
     spaced={true}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -916,7 +916,7 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
       onKeyDown={[Function]}
       role="tablist"
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
