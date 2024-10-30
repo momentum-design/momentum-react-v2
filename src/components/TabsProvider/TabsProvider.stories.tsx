@@ -21,11 +21,11 @@ export default {
   },
 };
 
-const ExampleComponent = () => {
+const ExampleComponent = (props) => {
   const [selectedTab, setSelectedTab] = useState<React.Key>('tab-1');
 
   return (
-    <TabsProvider selectedTab={selectedTab}>
+    <TabsProvider selectedTab={selectedTab} {...props}>
       <TabList onTabSelection={setSelectedTab}>
         <Tab key="tab-1">Tab 1</Tab>
         <Tab key="tab-2">Tab 2</Tab>
