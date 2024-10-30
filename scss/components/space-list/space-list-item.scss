@@ -86,7 +86,7 @@
         padding: $list-item--space-overview__padding;
 
         > [class$='__left'] {
-          fill: --mds-color-theme-text-primary-normal;
+          fill: var(--mds-color-theme-text-primary-normal);
         }
 
         [class*='__header'] {
@@ -412,6 +412,7 @@
             color: var(--mdl-button-primary-text-color, $md-gray-05);
             background-color: $md-green-60;
             background-color: var(--mdl-button-join-bg-color, $md-green-60);
+
             &:hover {
               background-color: $md-green-70;
               background-color: var(--mdl-button-join-hover-bg-color, $md-green-70);

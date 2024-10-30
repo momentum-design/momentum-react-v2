@@ -4,7 +4,7 @@ module.exports = {
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   modulePathIgnorePatterns: ['<rootDir>/src/app/'],
   transformIgnorePatterns: [
-    'node_modules/(?!(@lit/react|lit|lit-html|lit-element|@lit/reactive-element|@lit/context)/)',
+    'node_modules/(?!(@lit/react|lit|lit-html|lit-element|@lit/reactive-element|@lit/context|@momentum-design/components)/)',
   ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   snapshotResolver: '<rootDir>/config/jest/jest.snapshot-resolver.js',

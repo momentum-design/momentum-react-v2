@@ -4,9 +4,19 @@ exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
 <ThemeProvider
   theme="darkWebex"
 >
-  <div
-    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex mds-theme-stable-darkWebex"
-  />
+  <ThemeProvider
+    className="md-theme-darkWebex mds-typography"
+    themeclass="mds-theme-stable-darkWebex"
+  >
+    <mdc-themeprovider
+      class="md-theme-darkWebex mds-typography"
+      suppressHydrationWarning={true}
+    >
+      <div
+        className="md-theme-provider-wrapper md-theme-provider-globals"
+      />
+    </mdc-themeprovider>
+  </ThemeProvider>
 </ThemeProvider>
 `;
 
@@ -18,13 +28,23 @@ exports[`<ThemeProvider /> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <div
-    className="md-theme-provider-wrapper md-theme-provider-globals md-theme-darkWebex mds-theme-stable-darkWebex"
-    style={
-      Object {
-        "color": "pink",
-      }
-    }
-  />
+  <ThemeProvider
+    className="md-theme-darkWebex mds-typography"
+    themeclass="mds-theme-stable-darkWebex"
+  >
+    <mdc-themeprovider
+      class="md-theme-darkWebex mds-typography"
+      suppressHydrationWarning={true}
+    >
+      <div
+        className="md-theme-provider-wrapper md-theme-provider-globals"
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+      />
+    </mdc-themeprovider>
+  </ThemeProvider>
 </ThemeProvider>
 `;
