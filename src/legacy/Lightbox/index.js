@@ -543,6 +543,7 @@ class Lightbox extends React.Component {
         </div>
       );
     };
+    
     return (
       <Modal
         includeDefaultStyles={false}
@@ -570,7 +571,7 @@ class Lightbox extends React.Component {
             </div>
             <div className="md-lightbox__header-item--right">
               <TooltipNext
-                style={{color:'var(--mds-color-theme-text-primary-normal)'}}
+                style={LightThemeStyle}
                 type="label"
                 placement="bottom-start"
                 triggerComponent={
