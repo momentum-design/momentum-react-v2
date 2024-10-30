@@ -10,7 +10,8 @@ import { TabsProviderContext } from './TabsProvider.utils';
 const TabsProvider: FC<Props> = (props: Props) => {
   const { selectedTab, id: _id, children } = props;
 
-  const [id] = useState(_id || uuidv4());
+  const [uuid] = useState(uuidv4);
+  const id = _id || uuid;
 
   const getTabId = useCallback((key: React.Key) => `${id}${key}`, [id]);
   const getPanelId = useCallback((key: React.Key) => `${getTabId(key)}-TabPanel`, [getTabId]);
