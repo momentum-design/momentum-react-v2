@@ -9,6 +9,7 @@ import TooltipNext from '../../components/Tooltip';
 import IconNext from '../../components/Icon';
 import MomentumThemeProvider from '../../components/ThemeProvider';
 import LoadingSpinner from '../../components/LoadingSpinner';
+import {THEME_NAMES} from '../../components/ThemeProvider/ThemeProvider.constants';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -27,7 +28,6 @@ class Lightbox extends React.Component {
       height: 600,
     },
     zoom: 1,
-    theme: 'lightWebex',
   };
 
   componentDidMount() {
@@ -170,7 +170,7 @@ class Lightbox extends React.Component {
     const currentPage = pages[index];
     const showColumn = pages.length > 1;
 
-    const LightThemeStyle = this.props.theme === this.state.theme   
+    const LightThemeStyle = this.props.theme === THEME_NAMES.LIGHT_WEBEX   
     ? { color: 'var(--mds-color-theme-text-primary-normal)' }   
     : {}; 
 
