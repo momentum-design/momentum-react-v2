@@ -290,11 +290,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                       >
                         <Tooltip
                           placement="bottom-start"
-                          style={
-                            {
-                              "color": "var(--mds-color-theme-text-primary-normal)",
-                            }
-                          }
+                          style={{}}
                           triggerComponent={
                             <ButtonSimple
                               className="md-lightbox__control md-lightbox__control-close"
@@ -323,11 +319,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                             setInstance={[Function]}
                             showArrow={true}
                             strategy="absolute"
-                            style={
-                              {
-                                "color": "var(--mds-color-theme-text-primary-normal)",
-                              }
-                            }
+                            style={{}}
                             trigger="mouseenter focus"
                             triggerComponent={
                               <ButtonSimple
