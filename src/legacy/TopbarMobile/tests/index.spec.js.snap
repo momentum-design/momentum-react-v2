@@ -59,7 +59,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
           preventKeyboardDoubleClick={false}
           removeStyle={false}
           size={36}
-          style={{}}
+          style={Object {}}
           tag="button"
           type="button"
         >
@@ -68,7 +68,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
           >
             <UID
               idSource={
-                {
+                Object {
                   "prefix": "",
                   "uid": [Function],
                   "value": 3,
@@ -88,8 +88,8 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
                 onKeyDown={[Function]}
                 onKeyUp={[Function]}
                 style={
-                  {
-                    "style": {},
+                  Object {
+                    "style": Object {},
                   }
                 }
                 tabIndex={0}
@@ -99,7 +99,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
                   className="md-button__children"
                   key="child-1"
                   style={
-                    {
+                    Object {
                       "opacity": "1",
                     }
                   }
@@ -108,7 +108,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
                     aria-label={null}
                     className="md-icon icon icon-list-menu_20"
                     style={
-                      {
+                      Object {
                         "fontSize": 20,
                       }
                     }
@@ -177,7 +177,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
             preventKeyboardDoubleClick={false}
             removeStyle={false}
             size={36}
-            style={{}}
+            style={Object {}}
             tag="button"
             type="button"
           >
@@ -186,7 +186,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
             >
               <UID
                 idSource={
-                  {
+                  Object {
                     "prefix": "",
                     "uid": [Function],
                     "value": 3,
@@ -206,8 +206,8 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
                   onKeyDown={[Function]}
                   onKeyUp={[Function]}
                   style={
-                    {
-                      "style": {},
+                    Object {
+                      "style": Object {},
                     }
                   }
                   tabIndex={0}
@@ -217,7 +217,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
                     className="md-button__children"
                     key="child-1"
                     style={
-                      {
+                      Object {
                         "opacity": "1",
                       }
                     }
@@ -226,7 +226,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
                       aria-label={null}
                       className="md-icon icon icon-cancel_20"
                       style={
-                        {
+                        Object {
                           "fontSize": 20,
                         }
                       }
@@ -252,7 +252,7 @@ exports[`tests for <TopbarMobile /> should match SnapShot 1`] = `
       >
         <div
           className="md-list-separator"
-          style={{}}
+          style={Object {}}
         >
           <span
             className="md-list-separator__container"

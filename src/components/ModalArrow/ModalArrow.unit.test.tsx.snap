@@ -164,7 +164,7 @@ exports[`<ModalArrow /> snapshot should match snapshot with style 1`] = `
 <ModalArrow
   placement="bottom"
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -175,7 +175,7 @@ exports[`<ModalArrow /> snapshot should match snapshot with style 1`] = `
     data-placement="bottom"
     height={12}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

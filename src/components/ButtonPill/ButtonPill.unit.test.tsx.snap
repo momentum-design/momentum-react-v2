@@ -692,7 +692,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
 exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
 <ButtonPill
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -709,7 +709,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
     data-shallow-disabled={false}
     data-size={40}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -744,7 +744,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            {
+            Object {
               "color": "pink",
             }
           }

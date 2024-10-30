@@ -4,7 +4,7 @@ exports[`tests for <CheckboxGroup /> should match SnapShot 1`] = `
 <CheckboxGroup
   name=""
   onChange={[Function]}
-  values={[]}
+  values={Array []}
 >
   <div
     className="md-checkbox-group"

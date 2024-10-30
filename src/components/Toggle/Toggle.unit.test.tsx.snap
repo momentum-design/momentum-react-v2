@@ -164,7 +164,7 @@ exports[`<Toggle /> snapshot should match snapshot with style 1`] = `
 <Toggle
   aria-label="toggle"
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -192,7 +192,7 @@ exports[`<Toggle /> snapshot should match snapshot with style 1`] = `
     onTouchStart={[Function]}
     role="switch"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }

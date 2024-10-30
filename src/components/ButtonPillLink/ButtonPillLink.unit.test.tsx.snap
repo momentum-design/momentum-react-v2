@@ -562,7 +562,7 @@ exports[`<ButtonPillLink /> snapshot should match snapshot with style 1`] = `
 <ButtonPillLink
   href="https://www.webex.com"
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -581,7 +581,7 @@ exports[`<ButtonPillLink /> snapshot should match snapshot with style 1`] = `
     hasExternalLinkIcon={false}
     href="https://www.webex.com"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -605,7 +605,7 @@ exports[`<ButtonPillLink /> snapshot should match snapshot with style 1`] = `
           href="https://www.webex.com"
           rel=""
           style={
-            {
+            Object {
               "color": "pink",
             }
           }

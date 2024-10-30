@@ -505,7 +505,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                       fill="currentColor"
                       height="100%"
                       style={
-                        {
+                        Object {
                           "stroke": "none",
                         }
                       }
@@ -617,7 +617,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with isDisabled 1`] 
 exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
 <MeetingListItem
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -628,7 +628,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
     isPadded={true}
     size={50}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -667,7 +667,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with style 1`] = `
           onTouchStart={[Function]}
           role="listitem"
           style={
-            {
+            Object {
               "color": "pink",
             }
           }

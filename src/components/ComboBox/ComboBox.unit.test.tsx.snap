@@ -3,30 +3,30 @@
 exports[`ComboBox snapshot should match snapshot label 1`] = `
 <ComboBox
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "menu1",
           },
-          {
+          Object {
             "key": "key5",
             "label": "menu2",
           },
-          {
+          Object {
             "key": "key6",
             "label": "menu3",
           },
@@ -46,7 +46,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16.25rem",
       }
     }
@@ -159,7 +159,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />
@@ -179,30 +179,30 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
 <ComboBox
   className="example-class"
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "menu1",
           },
-          {
+          Object {
             "key": "key5",
             "label": "menu2",
           },
-          {
+          Object {
             "key": "key6",
             "label": "menu3",
           },
@@ -216,7 +216,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16.25rem",
       }
     }
@@ -329,7 +329,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />
@@ -348,30 +348,30 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
 exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
 <ComboBox
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "menu1",
           },
-          {
+          Object {
             "key": "key5",
             "label": "menu2",
           },
-          {
+          Object {
             "key": "key6",
             "label": "menu3",
           },
@@ -386,7 +386,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16.25rem",
       }
     }
@@ -499,7 +499,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />
@@ -518,30 +518,30 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
 exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
 <ComboBox
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "menu1",
           },
-          {
+          Object {
             "key": "key5",
             "label": "menu2",
           },
-          {
+          Object {
             "key": "key6",
             "label": "menu3",
           },
@@ -556,7 +556,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16.25rem",
       }
     }
@@ -669,7 +669,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />
@@ -688,30 +688,30 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
 exports[`ComboBox snapshot should match snapshot with style 1`] = `
 <ComboBox
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "menu1",
           },
-          {
+          Object {
             "key": "key5",
             "label": "menu2",
           },
-          {
+          Object {
             "key": "key6",
             "label": "menu3",
           },
@@ -720,7 +720,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
     ]
   }
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -730,7 +730,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16.25rem",
         "color": "pink",
       }
@@ -844,7 +844,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />
@@ -863,30 +863,30 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
 exports[`ComboBox snapshot should match snapshot with width 1`] = `
 <ComboBox
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "menu1",
           },
-          {
+          Object {
             "key": "key5",
             "label": "menu2",
           },
-          {
+          Object {
             "key": "key6",
             "label": "menu3",
           },
@@ -901,7 +901,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16rem",
       }
     }
@@ -1014,7 +1014,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />
@@ -1033,43 +1033,43 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
 exports[`ComboBox snapshot should match snapshot withSection 1`] = `
 <ComboBox
   comboBoxGroups={
-    [
-      {
-        "items": [
-          {
+    Array [
+      Object {
+        "items": Array [
+          Object {
             "key": "key1",
             "label": "item1",
           },
-          {
+          Object {
             "key": "key2",
             "label": "item2",
           },
-          {
+          Object {
             "key": "key3",
             "label": "item3",
           },
-          {
+          Object {
             "key": "key4",
             "label": "item4",
           },
         ],
         "section": "section1",
       },
-      {
-        "items": [
-          {
+      Object {
+        "items": Array [
+          Object {
             "key": "key5",
             "label": "item5",
           },
-          {
+          Object {
             "key": "key6",
             "label": "item6",
           },
-          {
+          Object {
             "key": "key7",
             "label": "item7",
           },
-          {
+          Object {
             "key": "key8",
             "label": "item8",
           },
@@ -1084,7 +1084,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
     data-error={false}
     data-input-have-value={false}
     style={
-      {
+      Object {
         "--local-width": "16.25rem",
       }
     }
@@ -1197,7 +1197,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                       data-test="arrow-down"
                       fill="currentColor"
                       height="100%"
-                      style={{}}
+                      style={Object {}}
                       viewBox="0, 0, 32, 32"
                       width="100%"
                     />

@@ -49,7 +49,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
       hideOnClick={true}
       interactive={true}
       offset={
-        [
+        Array [
           0,
           17,
         ]
@@ -59,32 +59,32 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
       onShow={[Function]}
       placement="auto"
       plugins={
-        [
-          {
+        Array [
+          Object {
             "defaultValue": true,
             "fn": [Function],
             "name": "hideOnEsc",
           },
-          {
+          Object {
             "fn": [Function],
             "name": "addBackdropPlugin",
           },
         ]
       }
       popperOptions={
-        {
-          "modifiers": [
-            {
+        Object {
+          "modifiers": Array [
+            Object {
               "enabled": true,
               "name": "arrow",
-              "options": {
+              "options": Object {
                 "element": "#arrow1",
                 "padding": 5,
               },
             },
-            {
+            Object {
               "name": "preventOverflow",
-              "options": {
+              "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
                 "padding": 8,
@@ -104,7 +104,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         hideOnClick={true}
         interactive={true}
         offset={
-          [
+          Array [
             0,
             17,
           ]
@@ -114,41 +114,41 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         onShow={[Function]}
         placement="auto"
         plugins={
-          [
-            {
+          Array [
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
             },
-            {
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
         }
         popperOptions={
-          {
-            "modifiers": [
-              {
+          Object {
+            "modifiers": Array [
+              Object {
                 "enabled": true,
                 "name": "arrow",
-                "options": {
+                "options": Object {
                   "element": "#arrow1",
                   "padding": 5,
                 },
               },
-              {
+              Object {
                 "name": "preventOverflow",
-                "options": {
+                "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
@@ -167,7 +167,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
           hideOnClick={true}
           interactive={true}
           offset={
-            [
+            Array [
               0,
               17,
             ]
@@ -177,41 +177,41 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
           onShow={[Function]}
           placement="auto"
           plugins={
-            [
-              {
+            Array [
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "defaultValue": true,
                 "fn": [Function],
                 "name": "hideOnEsc",
               },
-              {
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
           }
           popperOptions={
-            {
-              "modifiers": [
-                {
+            Object {
+              "modifiers": Array [
+                Object {
                   "enabled": true,
                   "name": "arrow",
-                  "options": {
+                  "options": Object {
                     "element": "#arrow1",
                     "padding": 5,
                   },
                 },
-                {
+                Object {
                   "name": "preventOverflow",
-                  "options": {
+                  "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
@@ -269,7 +269,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 hideOnClick={true}
                 interactive={false}
                 offset={
-                  [
+                  Array [
                     0,
                     17,
                   ]
@@ -279,8 +279,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                 onShow={[Function]}
                 placement="auto"
                 plugins={
-                  [
-                    {
+                  Array [
+                    Object {
                       "defaultValue": true,
                       "fn": [Function],
                       "name": "hideOnEsc",
@@ -288,19 +288,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   ]
                 }
                 popperOptions={
-                  {
-                    "modifiers": [
-                      {
+                  Object {
+                    "modifiers": Array [
+                      Object {
                         "enabled": true,
                         "name": "arrow",
-                        "options": {
+                        "options": Object {
                           "element": "#arrow1",
                           "padding": 5,
                         },
                       },
-                      {
+                      Object {
                         "name": "preventOverflow",
-                        "options": {
+                        "options": Object {
                           "altAxis": true,
                           "boundariesElement": "scrollParent",
                           "padding": 8,
@@ -320,7 +320,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   hideOnClick={true}
                   interactive={false}
                   offset={
-                    [
+                    Array [
                       0,
                       17,
                     ]
@@ -330,17 +330,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   onShow={[Function]}
                   placement="auto"
                   plugins={
-                    [
-                      {
+                    Array [
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -348,19 +348,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     ]
                   }
                   popperOptions={
-                    {
-                      "modifiers": [
-                        {
+                    Object {
+                      "modifiers": Array [
+                        Object {
                           "enabled": true,
                           "name": "arrow",
-                          "options": {
+                          "options": Object {
                             "element": "#arrow1",
                             "padding": 5,
                           },
                         },
-                        {
+                        Object {
                           "name": "preventOverflow",
-                          "options": {
+                          "options": Object {
                             "altAxis": true,
                             "boundariesElement": "scrollParent",
                             "padding": 8,
@@ -379,7 +379,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     hideOnClick={true}
                     interactive={false}
                     offset={
-                      [
+                      Array [
                         0,
                         17,
                       ]
@@ -389,17 +389,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                     onShow={[Function]}
                     placement="auto"
                     plugins={
-                      [
-                        {
+                      Array [
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "defaultValue": true,
                           "fn": [Function],
                           "name": "hideOnEsc",
@@ -407,19 +407,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                       ]
                     }
                     popperOptions={
-                      {
-                        "modifiers": [
-                          {
+                      Object {
+                        "modifiers": Array [
+                          Object {
                             "enabled": true,
                             "name": "arrow",
-                            "options": {
+                            "options": Object {
                               "element": "#arrow1",
                               "padding": 5,
                             },
                           },
-                          {
+                          Object {
                             "name": "preventOverflow",
-                            "options": {
+                            "options": Object {
                               "altAxis": true,
                               "boundariesElement": "scrollParent",
                               "padding": 8,
@@ -488,7 +488,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
 exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopoverProps  1`] = `
 <TooltipPopoverCombo
   otherTooltipProps={
-    {
+    Object {
       "placement": "bottom",
     }
   }
@@ -540,7 +540,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
       hideOnClick={true}
       interactive={true}
       offset={
-        [
+        Array [
           0,
           17,
         ]
@@ -550,32 +550,32 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
       onShow={[Function]}
       placement="auto"
       plugins={
-        [
-          {
+        Array [
+          Object {
             "defaultValue": true,
             "fn": [Function],
             "name": "hideOnEsc",
           },
-          {
+          Object {
             "fn": [Function],
             "name": "addBackdropPlugin",
           },
         ]
       }
       popperOptions={
-        {
-          "modifiers": [
-            {
+        Object {
+          "modifiers": Array [
+            Object {
               "enabled": true,
               "name": "arrow",
-              "options": {
+              "options": Object {
                 "element": "#arrow1",
                 "padding": 5,
               },
             },
-            {
+            Object {
               "name": "preventOverflow",
-              "options": {
+              "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
                 "padding": 8,
@@ -595,7 +595,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         hideOnClick={true}
         interactive={true}
         offset={
-          [
+          Array [
             0,
             17,
           ]
@@ -605,41 +605,41 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         onShow={[Function]}
         placement="auto"
         plugins={
-          [
-            {
+          Array [
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
             },
-            {
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
         }
         popperOptions={
-          {
-            "modifiers": [
-              {
+          Object {
+            "modifiers": Array [
+              Object {
                 "enabled": true,
                 "name": "arrow",
-                "options": {
+                "options": Object {
                   "element": "#arrow1",
                   "padding": 5,
                 },
               },
-              {
+              Object {
                 "name": "preventOverflow",
-                "options": {
+                "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
@@ -658,7 +658,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
           hideOnClick={true}
           interactive={true}
           offset={
-            [
+            Array [
               0,
               17,
             ]
@@ -668,41 +668,41 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
           onShow={[Function]}
           placement="auto"
           plugins={
-            [
-              {
+            Array [
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "defaultValue": true,
                 "fn": [Function],
                 "name": "hideOnEsc",
               },
-              {
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
           }
           popperOptions={
-            {
-              "modifiers": [
-                {
+            Object {
+              "modifiers": Array [
+                Object {
                   "enabled": true,
                   "name": "arrow",
-                  "options": {
+                  "options": Object {
                     "element": "#arrow1",
                     "padding": 5,
                   },
                 },
-                {
+                Object {
                   "name": "preventOverflow",
-                  "options": {
+                  "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
@@ -761,7 +761,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 hideOnClick={true}
                 interactive={false}
                 offset={
-                  [
+                  Array [
                     0,
                     17,
                   ]
@@ -771,8 +771,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                 onShow={[Function]}
                 placement="bottom"
                 plugins={
-                  [
-                    {
+                  Array [
+                    Object {
                       "defaultValue": true,
                       "fn": [Function],
                       "name": "hideOnEsc",
@@ -780,19 +780,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   ]
                 }
                 popperOptions={
-                  {
-                    "modifiers": [
-                      {
+                  Object {
+                    "modifiers": Array [
+                      Object {
                         "enabled": true,
                         "name": "arrow",
-                        "options": {
+                        "options": Object {
                           "element": "#arrow1",
                           "padding": 5,
                         },
                       },
-                      {
+                      Object {
                         "name": "preventOverflow",
-                        "options": {
+                        "options": Object {
                           "altAxis": true,
                           "boundariesElement": "scrollParent",
                           "padding": 8,
@@ -812,7 +812,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   hideOnClick={true}
                   interactive={false}
                   offset={
-                    [
+                    Array [
                       0,
                       17,
                     ]
@@ -822,17 +822,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   onShow={[Function]}
                   placement="bottom"
                   plugins={
-                    [
-                      {
+                    Array [
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -840,19 +840,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     ]
                   }
                   popperOptions={
-                    {
-                      "modifiers": [
-                        {
+                    Object {
+                      "modifiers": Array [
+                        Object {
                           "enabled": true,
                           "name": "arrow",
-                          "options": {
+                          "options": Object {
                             "element": "#arrow1",
                             "padding": 5,
                           },
                         },
-                        {
+                        Object {
                           "name": "preventOverflow",
-                          "options": {
+                          "options": Object {
                             "altAxis": true,
                             "boundariesElement": "scrollParent",
                             "padding": 8,
@@ -871,7 +871,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     hideOnClick={true}
                     interactive={false}
                     offset={
-                      [
+                      Array [
                         0,
                         17,
                       ]
@@ -881,17 +881,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                     onShow={[Function]}
                     placement="bottom"
                     plugins={
-                      [
-                        {
+                      Array [
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "defaultValue": true,
                           "fn": [Function],
                           "name": "hideOnEsc",
@@ -899,19 +899,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                       ]
                     }
                     popperOptions={
-                      {
-                        "modifiers": [
-                          {
+                      Object {
+                        "modifiers": Array [
+                          Object {
                             "enabled": true,
                             "name": "arrow",
-                            "options": {
+                            "options": Object {
                               "element": "#arrow1",
                               "padding": 5,
                             },
                           },
-                          {
+                          Object {
                             "name": "preventOverflow",
-                            "options": {
+                            "options": Object {
                               "altAxis": true,
                               "boundariesElement": "scrollParent",
                               "padding": 8,
@@ -980,7 +980,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
 exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherTooltipProps  1`] = `
 <TooltipPopoverCombo
   otherTooltipProps={
-    {
+    Object {
       "placement": "top",
     }
   }
@@ -1032,7 +1032,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
       hideOnClick={true}
       interactive={true}
       offset={
-        [
+        Array [
           0,
           17,
         ]
@@ -1042,32 +1042,32 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
       onShow={[Function]}
       placement="auto"
       plugins={
-        [
-          {
+        Array [
+          Object {
             "defaultValue": true,
             "fn": [Function],
             "name": "hideOnEsc",
           },
-          {
+          Object {
             "fn": [Function],
             "name": "addBackdropPlugin",
           },
         ]
       }
       popperOptions={
-        {
-          "modifiers": [
-            {
+        Object {
+          "modifiers": Array [
+            Object {
               "enabled": true,
               "name": "arrow",
-              "options": {
+              "options": Object {
                 "element": "#arrow1",
                 "padding": 5,
               },
             },
-            {
+            Object {
               "name": "preventOverflow",
-              "options": {
+              "options": Object {
                 "altAxis": true,
                 "boundariesElement": "scrollParent",
                 "padding": 8,
@@ -1087,7 +1087,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         hideOnClick={true}
         interactive={true}
         offset={
-          [
+          Array [
             0,
             17,
           ]
@@ -1097,41 +1097,41 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         onShow={[Function]}
         placement="auto"
         plugins={
-          [
-            {
+          Array [
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "fn": [Function],
             },
-            {
+            Object {
               "defaultValue": true,
               "fn": [Function],
               "name": "hideOnEsc",
             },
-            {
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
           ]
         }
         popperOptions={
-          {
-            "modifiers": [
-              {
+          Object {
+            "modifiers": Array [
+              Object {
                 "enabled": true,
                 "name": "arrow",
-                "options": {
+                "options": Object {
                   "element": "#arrow1",
                   "padding": 5,
                 },
               },
-              {
+              Object {
                 "name": "preventOverflow",
-                "options": {
+                "options": Object {
                   "altAxis": true,
                   "boundariesElement": "scrollParent",
                   "padding": 8,
@@ -1150,7 +1150,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
           hideOnClick={true}
           interactive={true}
           offset={
-            [
+            Array [
               0,
               17,
             ]
@@ -1160,41 +1160,41 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
           onShow={[Function]}
           placement="auto"
           plugins={
-            [
-              {
+            Array [
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "fn": [Function],
               },
-              {
+              Object {
                 "defaultValue": true,
                 "fn": [Function],
                 "name": "hideOnEsc",
               },
-              {
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
             ]
           }
           popperOptions={
-            {
-              "modifiers": [
-                {
+            Object {
+              "modifiers": Array [
+                Object {
                   "enabled": true,
                   "name": "arrow",
-                  "options": {
+                  "options": Object {
                     "element": "#arrow1",
                     "padding": 5,
                   },
                 },
-                {
+                Object {
                   "name": "preventOverflow",
-                  "options": {
+                  "options": Object {
                     "altAxis": true,
                     "boundariesElement": "scrollParent",
                     "padding": 8,
@@ -1253,7 +1253,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 hideOnClick={true}
                 interactive={false}
                 offset={
-                  [
+                  Array [
                     0,
                     17,
                   ]
@@ -1263,8 +1263,8 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                 onShow={[Function]}
                 placement="top"
                 plugins={
-                  [
-                    {
+                  Array [
+                    Object {
                       "defaultValue": true,
                       "fn": [Function],
                       "name": "hideOnEsc",
@@ -1272,19 +1272,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   ]
                 }
                 popperOptions={
-                  {
-                    "modifiers": [
-                      {
+                  Object {
+                    "modifiers": Array [
+                      Object {
                         "enabled": true,
                         "name": "arrow",
-                        "options": {
+                        "options": Object {
                           "element": "#arrow1",
                           "padding": 5,
                         },
                       },
-                      {
+                      Object {
                         "name": "preventOverflow",
-                        "options": {
+                        "options": Object {
                           "altAxis": true,
                           "boundariesElement": "scrollParent",
                           "padding": 8,
@@ -1304,7 +1304,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   hideOnClick={true}
                   interactive={false}
                   offset={
-                    [
+                    Array [
                       0,
                       17,
                     ]
@@ -1314,17 +1314,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   onShow={[Function]}
                   placement="top"
                   plugins={
-                    [
-                      {
+                    Array [
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "fn": [Function],
                       },
-                      {
+                      Object {
                         "defaultValue": true,
                         "fn": [Function],
                         "name": "hideOnEsc",
@@ -1332,19 +1332,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     ]
                   }
                   popperOptions={
-                    {
-                      "modifiers": [
-                        {
+                    Object {
+                      "modifiers": Array [
+                        Object {
                           "enabled": true,
                           "name": "arrow",
-                          "options": {
+                          "options": Object {
                             "element": "#arrow1",
                             "padding": 5,
                           },
                         },
-                        {
+                        Object {
                           "name": "preventOverflow",
-                          "options": {
+                          "options": Object {
                             "altAxis": true,
                             "boundariesElement": "scrollParent",
                             "padding": 8,
@@ -1363,7 +1363,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     hideOnClick={true}
                     interactive={false}
                     offset={
-                      [
+                      Array [
                         0,
                         17,
                       ]
@@ -1373,17 +1373,17 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                     onShow={[Function]}
                     placement="top"
                     plugins={
-                      [
-                        {
+                      Array [
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "fn": [Function],
                         },
-                        {
+                        Object {
                           "defaultValue": true,
                           "fn": [Function],
                           "name": "hideOnEsc",
@@ -1391,19 +1391,19 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                       ]
                     }
                     popperOptions={
-                      {
-                        "modifiers": [
-                          {
+                      Object {
+                        "modifiers": Array [
+                          Object {
                             "enabled": true,
                             "name": "arrow",
-                            "options": {
+                            "options": Object {
                               "element": "#arrow1",
                               "padding": 5,
                             },
                           },
-                          {
+                          Object {
                             "name": "preventOverflow",
-                            "options": {
+                            "options": Object {
                               "altAxis": true,
                               "boundariesElement": "scrollParent",
                               "padding": 8,

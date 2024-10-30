@@ -7,16 +7,16 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
   <ListBoxBase
     label="test-label"
     state={
-      {
+      Object {
         "collection": ListCollection {
           "firstKey": "$.0",
-          "iterable": {
+          "iterable": Object {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => {
+            "$.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -26,7 +26,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": {
+              "props": Object {
                 "children": "Item 1",
               },
               "rendered": "Item 1",
@@ -36,9 +36,9 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => {
+            "$.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -48,7 +48,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.0",
-              "props": {
+              "props": Object {
                 "children": "Item 2",
               },
               "rendered": "Item 2",
@@ -67,13 +67,13 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
           "allowsCellSelection": false,
           "collection": ListCollection {
             "firstKey": "$.0",
-            "iterable": {
+            "iterable": Object {
               Symbol(Symbol.iterator): [Function],
             },
             "keyMap": Map {
-              "$.0" => {
+              "$.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -83,7 +83,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 "nextKey": "$.1",
                 "parentKey": null,
                 "prevKey": undefined,
-                "props": {
+                "props": Object {
                   "children": "Item 1",
                 },
                 "rendered": "Item 1",
@@ -93,9 +93,9 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1" => {
+              "$.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -105,7 +105,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                 "nextKey": undefined,
                 "parentKey": null,
                 "prevKey": "$.0",
-                "props": {
+                "props": Object {
                   "children": "Item 2",
                 },
                 "rendered": "Item 2",
@@ -118,7 +118,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
             },
             "lastKey": "$.1",
           },
-          "state": {
+          "state": Object {
             "childFocusStrategy": null,
             "disabledKeys": Set {},
             "disallowEmptySelection": undefined,
@@ -166,9 +166,9 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
           >
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -178,7 +178,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                   "nextKey": "$.1",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": {
+                  "props": Object {
                     "children": "Item 1",
                   },
                   "rendered": "Item 1",
@@ -273,9 +273,9 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
             </ListBoxItem>
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -285,7 +285,7 @@ exports[`ListBoxBase snapshot should match snapshot 1`] = `
                   "nextKey": undefined,
                   "parentKey": null,
                   "prevKey": "$.0",
-                  "props": {
+                  "props": Object {
                     "children": "Item 2",
                   },
                   "rendered": "Item 2",
@@ -395,16 +395,16 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
     autoFocus={true}
     label="test-label"
     state={
-      {
+      Object {
         "collection": ListCollection {
           "firstKey": "$.0",
-          "iterable": {
+          "iterable": Object {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => {
+            "$.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -414,7 +414,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": {
+              "props": Object {
                 "children": "Item 1",
               },
               "rendered": "Item 1",
@@ -424,9 +424,9 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => {
+            "$.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -436,7 +436,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.0",
-              "props": {
+              "props": Object {
                 "children": "Item 2",
               },
               "rendered": "Item 2",
@@ -455,13 +455,13 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
           "allowsCellSelection": false,
           "collection": ListCollection {
             "firstKey": "$.0",
-            "iterable": {
+            "iterable": Object {
               Symbol(Symbol.iterator): [Function],
             },
             "keyMap": Map {
-              "$.0" => {
+              "$.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -471,7 +471,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 "nextKey": "$.1",
                 "parentKey": null,
                 "prevKey": undefined,
-                "props": {
+                "props": Object {
                   "children": "Item 1",
                 },
                 "rendered": "Item 1",
@@ -481,9 +481,9 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1" => {
+              "$.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -493,7 +493,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                 "nextKey": undefined,
                 "parentKey": null,
                 "prevKey": "$.0",
-                "props": {
+                "props": Object {
                   "children": "Item 2",
                 },
                 "rendered": "Item 2",
@@ -506,7 +506,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
             },
             "lastKey": "$.1",
           },
-          "state": {
+          "state": Object {
             "childFocusStrategy": "first",
             "disabledKeys": Set {},
             "disallowEmptySelection": undefined,
@@ -554,9 +554,9 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
           >
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -566,7 +566,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                   "nextKey": "$.1",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": {
+                  "props": Object {
                     "children": "Item 1",
                   },
                   "rendered": "Item 1",
@@ -661,9 +661,9 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
             </ListBoxItem>
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -673,7 +673,7 @@ exports[`ListBoxBase snapshot should match snapshot when autoFocus provided 1`] 
                   "nextKey": undefined,
                   "parentKey": null,
                   "prevKey": "$.0",
-                  "props": {
+                  "props": Object {
                     "children": "Item 2",
                   },
                   "rendered": "Item 2",
@@ -783,16 +783,16 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
     className="example-class"
     label="test-label"
     state={
-      {
+      Object {
         "collection": ListCollection {
           "firstKey": "$.0",
-          "iterable": {
+          "iterable": Object {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => {
+            "$.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -802,7 +802,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": {
+              "props": Object {
                 "children": "Item 1",
               },
               "rendered": "Item 1",
@@ -812,9 +812,9 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => {
+            "$.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -824,7 +824,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.0",
-              "props": {
+              "props": Object {
                 "children": "Item 2",
               },
               "rendered": "Item 2",
@@ -843,13 +843,13 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
           "allowsCellSelection": false,
           "collection": ListCollection {
             "firstKey": "$.0",
-            "iterable": {
+            "iterable": Object {
               Symbol(Symbol.iterator): [Function],
             },
             "keyMap": Map {
-              "$.0" => {
+              "$.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -859,7 +859,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 "nextKey": "$.1",
                 "parentKey": null,
                 "prevKey": undefined,
-                "props": {
+                "props": Object {
                   "children": "Item 1",
                 },
                 "rendered": "Item 1",
@@ -869,9 +869,9 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1" => {
+              "$.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -881,7 +881,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                 "nextKey": undefined,
                 "parentKey": null,
                 "prevKey": "$.0",
-                "props": {
+                "props": Object {
                   "children": "Item 2",
                 },
                 "rendered": "Item 2",
@@ -894,7 +894,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
             },
             "lastKey": "$.1",
           },
-          "state": {
+          "state": Object {
             "childFocusStrategy": null,
             "disabledKeys": Set {},
             "disallowEmptySelection": undefined,
@@ -943,9 +943,9 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
           >
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -955,7 +955,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                   "nextKey": "$.1",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": {
+                  "props": Object {
                     "children": "Item 1",
                   },
                   "rendered": "Item 1",
@@ -1050,9 +1050,9 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
             </ListBoxItem>
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1062,7 +1062,7 @@ exports[`ListBoxBase snapshot should match snapshot with className 1`] = `
                   "nextKey": undefined,
                   "parentKey": null,
                   "prevKey": "$.0",
-                  "props": {
+                  "props": Object {
                     "children": "Item 2",
                   },
                   "rendered": "Item 2",
@@ -1172,16 +1172,16 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
     id="example-id"
     label="test-label"
     state={
-      {
+      Object {
         "collection": ListCollection {
           "firstKey": "$.0",
-          "iterable": {
+          "iterable": Object {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => {
+            "$.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1191,7 +1191,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": {
+              "props": Object {
                 "children": "Item 1",
               },
               "rendered": "Item 1",
@@ -1201,9 +1201,9 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => {
+            "$.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1213,7 +1213,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.0",
-              "props": {
+              "props": Object {
                 "children": "Item 2",
               },
               "rendered": "Item 2",
@@ -1232,13 +1232,13 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
           "allowsCellSelection": false,
           "collection": ListCollection {
             "firstKey": "$.0",
-            "iterable": {
+            "iterable": Object {
               Symbol(Symbol.iterator): [Function],
             },
             "keyMap": Map {
-              "$.0" => {
+              "$.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -1248,7 +1248,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 "nextKey": "$.1",
                 "parentKey": null,
                 "prevKey": undefined,
-                "props": {
+                "props": Object {
                   "children": "Item 1",
                 },
                 "rendered": "Item 1",
@@ -1258,9 +1258,9 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1" => {
+              "$.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -1270,7 +1270,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                 "nextKey": undefined,
                 "parentKey": null,
                 "prevKey": "$.0",
-                "props": {
+                "props": Object {
                   "children": "Item 2",
                 },
                 "rendered": "Item 2",
@@ -1283,7 +1283,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
             },
             "lastKey": "$.1",
           },
-          "state": {
+          "state": Object {
             "childFocusStrategy": null,
             "disabledKeys": Set {},
             "disallowEmptySelection": undefined,
@@ -1331,9 +1331,9 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
           >
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1343,7 +1343,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                   "nextKey": "$.1",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": {
+                  "props": Object {
                     "children": "Item 1",
                   },
                   "rendered": "Item 1",
@@ -1438,9 +1438,9 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
             </ListBoxItem>
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -1450,7 +1450,7 @@ exports[`ListBoxBase snapshot should match snapshot with id 1`] = `
                   "nextKey": undefined,
                   "parentKey": null,
                   "prevKey": "$.0",
-                  "props": {
+                  "props": Object {
                     "children": "Item 2",
                   },
                   "rendered": "Item 2",
@@ -1560,16 +1560,16 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
     autoFocus={true}
     label="test-label"
     state={
-      {
+      Object {
         "collection": ListCollection {
           "firstKey": "$.0",
-          "iterable": {
+          "iterable": Object {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => {
+            "$.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": true,
@@ -1587,9 +1587,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.0" => {
+            "$.0.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1599,7 +1599,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "nextKey": "$.0.1",
               "parentKey": "$.0",
               "prevKey": "$.0",
-              "props": {
+              "props": Object {
                 "children": "Item 1",
               },
               "rendered": "Item 1",
@@ -1609,9 +1609,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.0.1" => {
+            "$.0.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1621,7 +1621,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "nextKey": "$.1",
               "parentKey": "$.0",
               "prevKey": "$.0.0",
-              "props": {
+              "props": Object {
                 "children": "Item 2",
               },
               "rendered": "Item 2",
@@ -1631,9 +1631,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => {
+            "$.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": true,
@@ -1651,9 +1651,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1.0" => {
+            "$.1.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -1663,7 +1663,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
               "nextKey": undefined,
               "parentKey": "$.1",
               "prevKey": "$.1",
-              "props": {
+              "props": Object {
                 "children": "Item 3",
               },
               "rendered": "Item 3",
@@ -1682,13 +1682,13 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
           "allowsCellSelection": false,
           "collection": ListCollection {
             "firstKey": "$.0",
-            "iterable": {
+            "iterable": Object {
               Symbol(Symbol.iterator): [Function],
             },
             "keyMap": Map {
-              "$.0" => {
+              "$.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": true,
@@ -1706,9 +1706,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.0.0" => {
+              "$.0.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -1718,7 +1718,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "nextKey": "$.0.1",
                 "parentKey": "$.0",
                 "prevKey": "$.0",
-                "props": {
+                "props": Object {
                   "children": "Item 1",
                 },
                 "rendered": "Item 1",
@@ -1728,9 +1728,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.0.1" => {
+              "$.0.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -1740,7 +1740,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "nextKey": "$.1",
                 "parentKey": "$.0",
                 "prevKey": "$.0.0",
-                "props": {
+                "props": Object {
                   "children": "Item 2",
                 },
                 "rendered": "Item 2",
@@ -1750,9 +1750,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1" => {
+              "$.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": true,
@@ -1770,9 +1770,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1.0" => {
+              "$.1.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -1782,7 +1782,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 "nextKey": undefined,
                 "parentKey": "$.1",
                 "prevKey": "$.1",
-                "props": {
+                "props": Object {
                   "children": "Item 3",
                 },
                 "rendered": "Item 3",
@@ -1795,7 +1795,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
             },
             "lastKey": "$.1.0",
           },
-          "state": {
+          "state": Object {
             "childFocusStrategy": "first",
             "disabledKeys": Set {},
             "disallowEmptySelection": undefined,
@@ -1844,9 +1844,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
             <ListBoxSection
               key="$.0"
               section={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": true,
@@ -1875,9 +1875,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 >
                   <ListBoxItem
                     item={
-                      {
+                      Object {
                         "aria-label": undefined,
-                        "childNodes": {
+                        "childNodes": Object {
                           Symbol(Symbol.iterator): [Function],
                         },
                         "hasChildNodes": false,
@@ -1887,7 +1887,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                         "nextKey": "$.0.1",
                         "parentKey": "$.0",
                         "prevKey": "$.0",
-                        "props": {
+                        "props": Object {
                           "children": "Item 1",
                         },
                         "rendered": "Item 1",
@@ -1982,9 +1982,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                   </ListBoxItem>
                   <ListBoxItem
                     item={
-                      {
+                      Object {
                         "aria-label": undefined,
-                        "childNodes": {
+                        "childNodes": Object {
                           Symbol(Symbol.iterator): [Function],
                         },
                         "hasChildNodes": false,
@@ -1994,7 +1994,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                         "nextKey": "$.1",
                         "parentKey": "$.0",
                         "prevKey": "$.0.0",
-                        "props": {
+                        "props": Object {
                           "children": "Item 2",
                         },
                         "rendered": "Item 2",
@@ -2093,9 +2093,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
             <ListBoxSection
               key="$.1"
               section={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": true,
@@ -2130,9 +2130,9 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                 >
                   <ListBoxItem
                     item={
-                      {
+                      Object {
                         "aria-label": undefined,
-                        "childNodes": {
+                        "childNodes": Object {
                           Symbol(Symbol.iterator): [Function],
                         },
                         "hasChildNodes": false,
@@ -2142,7 +2142,7 @@ exports[`ListBoxBase snapshot should match snapshot with sections 1`] = `
                         "nextKey": undefined,
                         "parentKey": "$.1",
                         "prevKey": "$.1",
-                        "props": {
+                        "props": Object {
                           "children": "Item 3",
                         },
                         "rendered": "Item 3",
@@ -2250,7 +2250,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
 <WrappedComponent
   label="test-label"
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -2258,16 +2258,16 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
   <ListBoxBase
     label="test-label"
     state={
-      {
+      Object {
         "collection": ListCollection {
           "firstKey": "$.0",
-          "iterable": {
+          "iterable": Object {
             Symbol(Symbol.iterator): [Function],
           },
           "keyMap": Map {
-            "$.0" => {
+            "$.0" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -2277,7 +2277,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
               "nextKey": "$.1",
               "parentKey": null,
               "prevKey": undefined,
-              "props": {
+              "props": Object {
                 "children": "Item 1",
               },
               "rendered": "Item 1",
@@ -2287,9 +2287,9 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
-            "$.1" => {
+            "$.1" => Object {
               "aria-label": undefined,
-              "childNodes": {
+              "childNodes": Object {
                 Symbol(Symbol.iterator): [Function],
               },
               "hasChildNodes": false,
@@ -2299,7 +2299,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
               "nextKey": undefined,
               "parentKey": null,
               "prevKey": "$.0",
-              "props": {
+              "props": Object {
                 "children": "Item 2",
               },
               "rendered": "Item 2",
@@ -2318,13 +2318,13 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
           "allowsCellSelection": false,
           "collection": ListCollection {
             "firstKey": "$.0",
-            "iterable": {
+            "iterable": Object {
               Symbol(Symbol.iterator): [Function],
             },
             "keyMap": Map {
-              "$.0" => {
+              "$.0" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -2334,7 +2334,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 "nextKey": "$.1",
                 "parentKey": null,
                 "prevKey": undefined,
-                "props": {
+                "props": Object {
                   "children": "Item 1",
                 },
                 "rendered": "Item 1",
@@ -2344,9 +2344,9 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 "value": undefined,
                 "wrapper": undefined,
               },
-              "$.1" => {
+              "$.1" => Object {
                 "aria-label": undefined,
-                "childNodes": {
+                "childNodes": Object {
                   Symbol(Symbol.iterator): [Function],
                 },
                 "hasChildNodes": false,
@@ -2356,7 +2356,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                 "nextKey": undefined,
                 "parentKey": null,
                 "prevKey": "$.0",
-                "props": {
+                "props": Object {
                   "children": "Item 2",
                 },
                 "rendered": "Item 2",
@@ -2369,7 +2369,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
             },
             "lastKey": "$.1",
           },
-          "state": {
+          "state": Object {
             "childFocusStrategy": null,
             "disabledKeys": Set {},
             "disallowEmptySelection": undefined,
@@ -2385,7 +2385,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
       }
     }
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -2401,7 +2401,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
       onMouseDown={[Function]}
       role="listbox"
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
@@ -2424,7 +2424,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
             onMouseDown={[Function]}
             role="listbox"
             style={
-              {
+              Object {
                 "color": "pink",
               }
             }
@@ -2432,9 +2432,9 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
           >
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -2444,7 +2444,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                   "nextKey": "$.1",
                   "parentKey": null,
                   "prevKey": undefined,
-                  "props": {
+                  "props": Object {
                     "children": "Item 1",
                   },
                   "rendered": "Item 1",
@@ -2539,9 +2539,9 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
             </ListBoxItem>
             <ListBoxItem
               item={
-                {
+                Object {
                   "aria-label": undefined,
-                  "childNodes": {
+                  "childNodes": Object {
                     Symbol(Symbol.iterator): [Function],
                   },
                   "hasChildNodes": false,
@@ -2551,7 +2551,7 @@ exports[`ListBoxBase snapshot should match snapshot with style 1`] = `
                   "nextKey": undefined,
                   "parentKey": null,
                   "prevKey": "$.0",
-                  "props": {
+                  "props": Object {
                     "children": "Item 2",
                   },
                   "rendered": "Item 2",

@@ -306,7 +306,7 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
 <TreeNodeBase
   nodeId="42"
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -337,7 +337,7 @@ exports[`TreeNodeBase snapshot should match snapshot with style 1`] = `
         onTouchMove={[Function]}
         onTouchStart={[Function]}
         style={
-          {
+          Object {
             "color": "pink",
           }
         }
@@ -365,15 +365,15 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
-    {
-      "children": [
-        {
-          "children": [],
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
           "id": "1",
           "isOpenByDefault": undefined,
         },
-        {
-          "children": [],
+        Object {
+          "children": Array [],
           "id": "2",
           "isOpenByDefault": undefined,
         },
@@ -471,15 +471,15 @@ exports[`TreeNodeBase snapshot should not render the content when the node detai
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
-    {
-      "children": [
-        {
-          "children": [],
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
           "id": "1",
           "isOpenByDefault": undefined,
         },
-        {
-          "children": [],
+        Object {
+          "children": Array [],
           "id": "2",
           "isOpenByDefault": undefined,
         },
@@ -520,15 +520,15 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
-    {
-      "children": [
-        {
-          "children": [],
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [],
           "id": "1",
           "isOpenByDefault": undefined,
         },
-        {
-          "children": [],
+        Object {
+          "children": Array [],
           "id": "2",
           "isOpenByDefault": undefined,
         },

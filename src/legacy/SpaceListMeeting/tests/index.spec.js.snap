@@ -2,7 +2,7 @@
 
 exports[`tests for <SpaceListMeeting /> should match SnapShot 1`] = `
 <SpaceListMeeting
-  attendees={[]}
+  attendees={Array []}
   buttonAriaLabel={null}
   buttonClassName=""
   buttonLabel=""
@@ -37,7 +37,7 @@ exports[`tests for <SpaceListMeeting /> should match SnapShot 1`] = `
       focus={false}
       focusLockTabbableChildren={false}
       focusLockTabbableChildrenProps={
-        {
+        Object {
           "portalNodeQuery": "",
           "tabbableChildrenHasPopover": false,
           "tabbableChildrenQuery": "",
@@ -68,7 +68,7 @@ exports[`tests for <SpaceListMeeting /> should match SnapShot 1`] = `
       >
         <UID
           idSource={
-            {
+            Object {
               "prefix": "",
               "uid": [Function],
               "value": 2,
@@ -124,7 +124,7 @@ exports[`tests for <SpaceListMeeting /> should match SnapShot 1`] = `
                       className="md-avatar__letter"
                       key="letter"
                       style={
-                        {
+                        Object {
                           "backgroundColor": "",
                           "color": "",
                         }

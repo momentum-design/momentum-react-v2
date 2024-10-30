@@ -1122,7 +1122,7 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
 exports[`<Chip /> snapshot should match snapshot with style 1`] = `
 <Chip
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -1136,7 +1136,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
     data-size={28}
     size={28}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -1157,7 +1157,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
       data-shallow-disabled={false}
       data-size={28}
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
@@ -1196,7 +1196,7 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
             onTouchMove={[Function]}
             onTouchStart={[Function]}
             style={
-              {
+              Object {
                 "color": "pink",
               }
             }

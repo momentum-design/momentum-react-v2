@@ -16,7 +16,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -79,7 +79,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -196,7 +196,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with aria props 1`] = `
         aria-labelledby="test-aria-labelledby"
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -260,7 +260,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -323,7 +323,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -423,7 +423,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
         aria-describedby="test-ID"
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -497,7 +497,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -560,7 +560,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -634,7 +634,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -874,7 +874,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -1043,7 +1043,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
 exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
 <OverlayAlert
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -1053,7 +1053,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
     color="secondary"
     onKeyDown={[Function]}
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -1064,7 +1064,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
       data-fullscreen={false}
       onKeyDown={[Function]}
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
@@ -1072,7 +1072,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
       <ModalContainer
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }
@@ -1132,7 +1132,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
         aria-labelledby="test-ID"
         className="md-overlay-alert-modal-container"
         focusLockProps={
-          {
+          Object {
             "restoreFocus": true,
           }
         }

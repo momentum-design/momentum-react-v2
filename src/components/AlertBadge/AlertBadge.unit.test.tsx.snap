@@ -369,7 +369,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with label 1`] = `
 exports[`<AlertBadge /> snapshot should match snapshot with style 1`] = `
 <AlertBadge
   style={
-    {
+    Object {
       "color": "pink",
     }
   }
@@ -377,7 +377,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with style 1`] = `
   <ButtonSimple
     className="md-alert-badge-wrapper"
     style={
-      {
+      Object {
         "color": "pink",
       }
     }
@@ -404,7 +404,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with style 1`] = `
           onTouchMove={[Function]}
           onTouchStart={[Function]}
           style={
-            {
+            Object {
               "color": "pink",
             }
           }

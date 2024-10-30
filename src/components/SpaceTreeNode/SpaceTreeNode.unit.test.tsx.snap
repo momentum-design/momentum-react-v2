@@ -4,8 +4,8 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -116,7 +116,7 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
                         aria-label="testteam"
                         data-test="list-item-second-line"
                         style={
-                          {
+                          Object {
                             "color": "var(--mds-color-theme-text-teamdefault-normal)",
                           }
                         }
@@ -128,7 +128,7 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
                           data-test="list-item-second-line"
                           data-type="body-secondary"
                           style={
-                            {
+                            Object {
                               "color": "var(--mds-color-theme-text-teamdefault-normal)",
                             }
                           }
@@ -165,8 +165,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -283,8 +283,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -415,8 +415,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -534,8 +534,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -656,8 +656,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -776,8 +776,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -900,7 +900,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
                             data-test="alert"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-text-primary-normal)",
                                 "stroke": "none",
                               }
@@ -927,8 +927,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1051,7 +1051,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
                             data-test="alert-muted"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-text-primary-normal)",
                                 "stroke": "none",
                               }
@@ -1078,8 +1078,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = 
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1197,8 +1197,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1321,7 +1321,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
                             data-test="enter-room"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-control-active-normal)",
                                 "stroke": "none",
                               }
@@ -1348,8 +1348,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1472,7 +1472,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
                             data-test="priority-circle"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-text-error-normal)",
                                 "stroke": "none",
                               }
@@ -1499,8 +1499,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1623,7 +1623,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
                             data-test="mention"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-control-active-normal)",
                                 "stroke": "none",
                               }
@@ -1650,8 +1650,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`]
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1770,8 +1770,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = 
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -1890,8 +1890,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -2016,7 +2016,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
                             data-test="draft-indicator"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-text-primary-normal)",
                                 "stroke": "none",
                               }
@@ -2043,8 +2043,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -2167,7 +2167,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
                             data-test="unread"
                             height="100%"
                             style={
-                              {
+                              Object {
                                 "fill": "var(--mds-color-theme-control-active-normal)",
                                 "stroke": "none",
                               }
@@ -2194,8 +2194,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -2211,7 +2211,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
     <SpaceTreeNode
       nodeId="root"
       secondLine={
-        [
+        Array [
           "one",
           "two",
           "three",
@@ -2267,7 +2267,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
                   isCompact={false}
                   isDisabled={false}
                   secondLine={
-                    [
+                    Array [
                       "one",
                       "two",
                       "three",
@@ -2306,7 +2306,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
                         aria-label="one, two, three"
                         data-test="list-item-second-line"
                         style={
-                          {
+                          Object {
                             "color": "var(--mds-color-theme-text-teamdefault-normal)",
                           }
                         }
@@ -2318,7 +2318,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
                           data-test="list-item-second-line"
                           data-type="body-secondary"
                           style={
-                            {
+                            Object {
                               "color": "var(--mds-color-theme-text-teamdefault-normal)",
                             }
                           }
@@ -2381,8 +2381,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -2481,7 +2481,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
                         aria-label="secondLine"
                         data-test="list-item-second-line"
                         style={
-                          {
+                          Object {
                             "color": "var(--mds-color-theme-text-teamdefault-normal)",
                           }
                         }
@@ -2493,7 +2493,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
                           data-test="list-item-second-line"
                           data-type="body-secondary"
                           style={
-                            {
+                            Object {
                               "color": "var(--mds-color-theme-text-teamdefault-normal)",
                             }
                           }
@@ -2530,8 +2530,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
@@ -2547,7 +2547,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
     <SpaceTreeNode
       nodeId="root"
       style={
-        {
+        Object {
           "color": "pink",
         }
       }
@@ -2558,7 +2558,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
         shape="isPilled"
         size={50}
         style={
-          {
+          Object {
             "color": "pink",
           }
         }
@@ -2597,7 +2597,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
               onTouchStart={[Function]}
               role="treeitem"
               style={
-                {
+                Object {
                   "color": "pink",
                 }
               }
@@ -2663,8 +2663,8 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with teamColor 1`] = `
 <Tree
   excludeTreeRoot={false}
   treeStructure={
-    {
-      "children": [],
+    Object {
+      "children": Array [],
       "id": "root",
       "isOpenByDefault": true,
     }
