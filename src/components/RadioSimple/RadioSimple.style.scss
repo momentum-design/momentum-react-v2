@@ -3,18 +3,26 @@
   display: flex;
   border-radius: 0.25rem;
   width: 6rem;
-  background-color: var(--mds-color-theme-background-primary-ghost);
+  background-color: var(--mds-color-theme-button-secondary-normal);
 
   &:hover {
-    background-color: var(--mds-color-theme-background-primary-hover);
+    background-color: var(--mds-color-theme-button-secondary-hover);
   }
 
   &:active {
-    background-color: var(--mds-color-theme-background-primary-active);
+    background-color: var(--mds-color-theme-button-secondary-pressed);
   }
 
   &[data-selected='true'] {
-    background-color: var(--mds-color-theme-background-primary-active);
+    background-color: var(--mds-color-theme-button-secondary-active-normal);
+
+    &:hover {
+      background-color: var(--mds-color-theme-button-secondary-active-hover);
+    }
+
+    &:active {
+      background-color: var(--mds-color-theme-button-secondary-active-pressed);
+    }
   }
 
   &[data-focused='true'] {
@@ -25,6 +33,11 @@
 
   &[data-disabled='true'] {
     cursor: default;
-    background-color: var(--mds-color-theme-background-primary-disabled);
+    background-color: var(--mds-color-theme-button-secondary-disabled);
+    color: var(--mds-color-theme-text-primary-disabled);
+
+    &[data-selected='true'] {
+      background-color: var(--mds-color-theme-button-secondary-active-disabled);
+    }
   }
 }

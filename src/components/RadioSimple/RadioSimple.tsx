@@ -24,9 +24,10 @@ const RadioSimple: FC<RadioSimpleProps> = (props: RadioSimpleProps) => {
     style,
     value,
   } = props;
-  const state  = useContext(RadioSimpleGroupContext);
+  const state = useContext(RadioSimpleGroupContext);
   const ref = useRef(null);
   const isSelected = state?.selectedValue === value;
+  const isGroupDisabled = state?.isDisabled;
   const { focusProps, isFocusVisible } = useFocusRing();
   const { inputProps } = useRadio(
     { 'aria-label': ariaLabel, 'aria-labelledby': ariaLabelledBy, ...props },
@@ -39,7 +40,7 @@ const RadioSimple: FC<RadioSimpleProps> = (props: RadioSimpleProps) => {
       className={classnames(STYLE.wrapper, className)}
       data-focused={isFocusVisible}
       data-selected={isSelected}
-      data-disabled={isDisabled}
+      data-disabled={isDisabled || isGroupDisabled}
       style={style}
       id={id}
     >

@@ -27,7 +27,6 @@ const RadioSimpleGroup: FC<RadioSimpleGroupProps> = (props: RadioSimpleGroupProp
     <div
       {...radioGroupProps}
       className={classnames(className, STYLE.wrapper)}
-      data-disabled={state.isDisabled}
       id={radioSimpleGroupId}
       style={style}
       aria-describedby={descriptionId}
