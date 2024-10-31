@@ -1,5 +1,5 @@
 .md-space-tree-node-wrapper {
-  color: var(--mds-color-theme-text-secondary-normal);
+  color: var(--mds-color-theme-text-secondary-normal) !important;
 
   &[data-size='32'] {
     // All immediate children and any deep .md-text-wrapper child
