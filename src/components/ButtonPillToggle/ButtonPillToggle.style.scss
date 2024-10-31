@@ -43,8 +43,10 @@
       }
     }
 
-    &[data-selected='true'][data-selected='true'] {
-      @media (forced-colors: active) {
+    @media (forced-colors: active) {
+      // Because of all of the above !importants, the specificity of this selector needs to be really high
+      // All of the above selectors match 1 or 2 attributes, we need to do the same to override them all
+      &[data-selected='true'][data-selected='true'] {
         background-color: SelectedItem !important;
         color: SelectedItemText !important;
 
