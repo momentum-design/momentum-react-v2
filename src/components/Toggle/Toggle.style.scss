@@ -19,6 +19,11 @@
   justify-content: flex-start;
   align-items: center;
 
+  @media (forced-colors: active) {
+    background-color: ButtonFace;
+    border: 1px solid ButtonBorder !important;
+  }
+
   &:before {
     content: '';
     width: $thumb-size;
@@ -28,19 +33,27 @@
     display: block;
     transition: transform $transition-time;
     background-color: var(--mds-color-theme-text-primary-normal);
-  }
 
-  &:checked:before {
-    transform: translateX($switch-width - $switch-height);
+    @media (forced-colors: active) {
+      background-color: ButtonText;
+    }
   }
 
   &:checked {
     background-color: var(--mds-color-theme-control-active-normal);
     border: none;
 
+    @media (forced-colors: active) {
+      background-color: SelectedItem !important;
+    }
+
     &:before {
       background-color: var(--mds-color-theme-inverted-text-primary-normal);
       transform: translateX($switch-width - $switch-height);
+
+      @media (forced-colors: active) {
+        background-color: SelectedItemText;
+      }
     }
   }
 
@@ -60,6 +73,10 @@
 
     &:before {
       background-color: var(--mds-color-theme-text-primary-normal);
+
+      @media (forced-colors: active) {
+        background-color: SelectedItem;
+      }
     }
 
     &:checked {
@@ -94,8 +111,17 @@
   &:disabled {
     background-color: var(--mds-color-theme-control-inactive-disabled);
 
+    @media (forced-colors: active) {
+      background-color: ButtonFace;
+      border-color: GrayText;
+    }
+
     &:before {
       background-color: var(--mds-color-theme-text-primary-disabled);
+
+      @media (forced-colors: active) {
+        background-color: GrayText;
+      }
     }
 
     &:checked {
