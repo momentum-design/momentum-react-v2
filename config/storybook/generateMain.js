@@ -6,7 +6,7 @@ const REPO_ROOT = path.resolve(__dirname, '../../');
 const generateMain = (dir) => {
   return {
     stories: [
-      path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
+      path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx|mdx)'),
       path.join(REPO_ROOT, dir, LEGACY_COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
     ],
     addons: [
