@@ -275,7 +275,6 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                         >
                           <div
                             className="md-lightbox__header-item--left"
-                            className="md-lightbox__header-item--left"
                           >
                             <div
                               className="md-lightbox__header-meta"
@@ -332,6 +331,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 setInstance={[Function]}
                                 showArrow={true}
                                 strategy="absolute"
+                                style={Object {}}
                                 trigger="mouseenter focus"
                                 triggerComponent={
                                   <ButtonSimple
