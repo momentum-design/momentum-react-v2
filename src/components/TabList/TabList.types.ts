@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 import { ButtonGroupProps } from '../ButtonGroup';
 import { TabProps } from '../Tab';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 interface TabListProps extends ButtonGroupProps {
   /**

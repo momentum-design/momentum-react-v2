@@ -26,7 +26,7 @@ const ExampleComponent = () => {
 
   return (
     <TabsProvider selectedTab={selectedTab}>
-      <TabList onTabSelection={setSelectedTab}>
+      <TabList aria-label="test" onTabSelection={setSelectedTab}>
         <Tab key="tab-1">Tab 1</Tab>
         <Tab key="tab-2">Tab 2</Tab>
         <Tab key="disabled" disabled>

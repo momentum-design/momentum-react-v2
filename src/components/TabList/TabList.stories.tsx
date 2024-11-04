@@ -26,6 +26,7 @@ const Example = Template<TabListProps>(TabList).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
+  'aria-label': 'Hello World',
   onTabSelection: (key: React.Key) => console.log('tab selected', key),
   children: [
     <Tab key="tab-1" active>
@@ -44,6 +45,7 @@ const HasBackground = Template<TabListProps>(TabList).bind({});
 HasBackground.argTypes = { ...argTypes };
 
 HasBackground.args = {
+  'aria-label': 'Hello World',
   onTabSelection: (key: React.Key) => console.log('tab selected', key),
   hasBackground: true,
   children: [
@@ -65,6 +67,7 @@ Common.argTypes = { ...argTypes };
 Common.parameters = {
   variants: [
     {
+      'aria-label': 'Hello World',
       onTabSelection: (key: React.Key) => console.log('tab selected', key),
       children: [
         <Tab key="tab-1" active>
@@ -77,6 +80,7 @@ Common.parameters = {
       ],
     },
     {
+      'aria-label': 'Hello World',
       onTabSelection: (key: React.Key) => console.log('tab selected', key),
       round: false,
       spaced: false,
