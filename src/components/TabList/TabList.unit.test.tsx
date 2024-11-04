@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { mount } from 'enzyme';
 import React from 'react';
 
@@ -177,6 +179,51 @@ describe('<TabList />', () => {
           tabIndex: tab.key() === 'tab-1' ? 0 : -1,
         });
       });
+    });
+
+    it('requires an label', () => {
+      const consoleWarnSpy = jest.spyOn(console, 'warn');
+
+      const wrapper = mount(
+        // @ts-expect-error
+        <TabList>
+          <Tab key="one">Hello</Tab>
+        </TabList>
+      );
+
+      expect(consoleWarnSpy).toHaveBeenCalledWith(
+        'MRV2: TabList requires aria-labelledby or aria-label.'
+      );
+
+      consoleWarnSpy.mockReset();
+    });
+
+    it('does not warn if aria-label defined', () => {
+      const consoleWarnSpy = jest.spyOn(console, 'warn');
+
+      mount(
+        <TabList aria-label="Hello">
+          <Tab key="one">Hello</Tab>
+        </TabList>
+      );
+
+      expect(consoleWarnSpy).not.toHaveBeenCalled();
+
+      consoleWarnSpy.mockReset();
+    });
+
+    it('does not warn if aria-labelledby defined', () => {
+      const consoleWarnSpy = jest.spyOn(console, 'warn');
+
+      mount(
+        <TabList aria-labelledby="Hello">
+          <Tab key="one">Hello</Tab>
+        </TabList>
+      );
+
+      expect(consoleWarnSpy).not.toHaveBeenCalled();
+
+      consoleWarnSpy.mockReset();
     });
   });
 
