@@ -12,6 +12,7 @@ import TabList, { TAB_LIST_CONSTANTS as CONSTANTS } from './';
 
 describe('<TabList />', () => {
   const detachedCommonProps = (activeTab: string | undefined = 'tab-1') => ({
+    'aria-label': 'test',
     children: [
       <Tab key="tab-1" active={activeTab === 'tab-1'}>
         Tab 1
@@ -147,7 +148,7 @@ describe('<TabList />', () => {
       );
 
       mount(
-        <TabList orientation="vertical">
+        <TabList orientation="vertical" aria-label="test">
           <Tab key={'tab-1'}>Tab 1</Tab>
           <Tab key={'tab-2'}>Tab 2</Tab>
           <Tab key={'disabled'} disabled>
@@ -202,7 +203,7 @@ describe('<TabList />', () => {
         const user = userEvent.setup();
 
         const { getAllByRole } = render(
-          <TabList>
+          <TabList aria-label="test">
             {[0, 1, 2].map((i) => (
               <Tab key={i} active={startingIndex === i}>{`Tab ${i + 1}`}</Tab>
             ))}
@@ -243,7 +244,7 @@ describe('<TabList />', () => {
         const user = userEvent.setup();
 
         const { getAllByRole } = render(
-          <TabList orientation="vertical">
+          <TabList aria-label="test" orientation="vertical">
             {[0, 1, 2].map((i) => (
               <Tab key={i} active={startingIndex === i}>{`Tab ${i + 1}`}</Tab>
             ))}
@@ -274,7 +275,7 @@ describe('<TabList />', () => {
         const user = userEvent.setup();
 
         const { getAllByRole } = render(
-          <TabList orientation={orientation}>
+          <TabList aria-label="test" orientation={orientation}>
             {[0, 1, 2].map((i) => (
               <Tab key={i}>{`Tab ${i + 1}`}</Tab>
             ))}
@@ -297,7 +298,7 @@ describe('<TabList />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <TabList>
+        <TabList aria-label="test">
           <Tab key="tab-1" active>
             Tab 1
           </Tab>
@@ -324,7 +325,7 @@ describe('<TabList />', () => {
 
     it('sets the tabindex correctly when a disabled element is in the list', async () => {
       const { getAllByRole } = render(
-        <TabList>
+        <TabList aria-label="test">
           <Tab key="tab-1">Tab 1</Tab>
           <Tab key="tab-2">Tab 2</Tab>
           <Tab key="disabled" disabled>
@@ -417,7 +418,7 @@ describe('<TabList />', () => {
 
       return (
         <TabsProvider selectedTab={selectedTab} id="TestComponent">
-          <TabList onTabSelection={setSelectedTab}>
+          <TabList aria-label="test" onTabSelection={setSelectedTab}>
             {TABS.map((tab) => (
               <Tab key={tab.key}>{tab.label}</Tab>
             ))}

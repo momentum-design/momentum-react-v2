@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TabList /> snapshot should match snapshot 1`] = `
-<TabList>
+<TabList
+  aria-label="test"
+>
   <ButtonGroup
+    aria-label="test"
     className="md-tab-list-wrapper"
     data-has-background={false}
     onBlur={[Function]}
@@ -13,6 +16,7 @@ exports[`<TabList /> snapshot should match snapshot 1`] = `
     spaced={true}
   >
     <div
+      aria-label="test"
       className="md-button-group-wrapper md-tab-list-wrapper"
       data-compressed={false}
       data-has-background={false}
@@ -220,9 +224,11 @@ exports[`<TabList /> snapshot should match snapshot 1`] = `
 
 exports[`<TabList /> snapshot should match snapshot with className 1`] = `
 <TabList
+  aria-label="test"
   className="example-class"
 >
   <ButtonGroup
+    aria-label="test"
     className="md-tab-list-wrapper example-class"
     data-has-background={false}
     onBlur={[Function]}
@@ -233,6 +239,7 @@ exports[`<TabList /> snapshot should match snapshot with className 1`] = `
     spaced={true}
   >
     <div
+      aria-label="test"
       className="md-button-group-wrapper md-tab-list-wrapper example-class"
       data-compressed={false}
       data-has-background={false}
@@ -440,9 +447,11 @@ exports[`<TabList /> snapshot should match snapshot with className 1`] = `
 
 exports[`<TabList /> snapshot should match snapshot with hasBackground = true 1`] = `
 <TabList
+  aria-label="test"
   hasBackground={true}
 >
   <ButtonGroup
+    aria-label="test"
     className="md-tab-list-wrapper"
     data-has-background={true}
     onBlur={[Function]}
@@ -453,6 +462,7 @@ exports[`<TabList /> snapshot should match snapshot with hasBackground = true 1`
     spaced={true}
   >
     <div
+      aria-label="test"
       className="md-button-group-wrapper md-tab-list-wrapper"
       data-compressed={false}
       data-has-background={true}
@@ -660,9 +670,11 @@ exports[`<TabList /> snapshot should match snapshot with hasBackground = true 1`
 
 exports[`<TabList /> snapshot should match snapshot with id 1`] = `
 <TabList
+  aria-label="test"
   id="example-id"
 >
   <ButtonGroup
+    aria-label="test"
     className="md-tab-list-wrapper"
     data-has-background={false}
     id="example-id"
@@ -674,6 +686,7 @@ exports[`<TabList /> snapshot should match snapshot with id 1`] = `
     spaced={true}
   >
     <div
+      aria-label="test"
       className="md-button-group-wrapper md-tab-list-wrapper"
       data-compressed={false}
       data-has-background={false}
@@ -882,6 +895,7 @@ exports[`<TabList /> snapshot should match snapshot with id 1`] = `
 
 exports[`<TabList /> snapshot should match snapshot with style 1`] = `
 <TabList
+  aria-label="test"
   style={
     Object {
       "color": "pink",
@@ -889,6 +903,7 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ButtonGroup
+    aria-label="test"
     className="md-tab-list-wrapper"
     data-has-background={false}
     onBlur={[Function]}
@@ -904,6 +919,7 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
     }
   >
     <div
+      aria-label="test"
       className="md-button-group-wrapper md-tab-list-wrapper"
       data-compressed={false}
       data-has-background={false}
@@ -1121,9 +1137,11 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot 1`] = `
     selectedTab="tab-1"
   >
     <TabList
+      aria-label="test"
       onTabSelection={[Function]}
     >
       <ButtonGroup
+        aria-label="test"
         className="md-tab-list-wrapper"
         data-has-background={false}
         onBlur={[Function]}
@@ -1134,6 +1152,7 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot 1`] = `
         spaced={true}
       >
         <div
+          aria-label="test"
           className="md-button-group-wrapper md-tab-list-wrapper"
           data-compressed={false}
           data-has-background={false}
@@ -1371,9 +1390,11 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot when defi
     selectedTab="tab-2"
   >
     <TabList
+      aria-label="test"
       onTabSelection={[Function]}
     >
       <ButtonGroup
+        aria-label="test"
         className="md-tab-list-wrapper"
         data-has-background={false}
         onBlur={[Function]}
@@ -1384,6 +1405,7 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot when defi
         spaced={true}
       >
         <div
+          aria-label="test"
           className="md-button-group-wrapper md-tab-list-wrapper"
           data-compressed={false}
           data-has-background={false}
