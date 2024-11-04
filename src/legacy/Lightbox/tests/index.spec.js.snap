@@ -275,6 +275,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                         >
                           <div
                             className="md-lightbox__header-item--left"
+                            className="md-lightbox__header-item--left"
                           >
                             <div
                               className="md-lightbox__header-meta"
@@ -302,6 +303,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                           >
                             <Tooltip
                               placement="bottom-start"
+                              style={Object {}}
                               triggerComponent={
                                 <ButtonSimple
                                   className="md-lightbox__control md-lightbox__control-close"
@@ -628,6 +630,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                               >
                                 <Tooltip
                                   placement="top"
+                                  style={Object {}}
                                   triggerComponent={
                                     <ButtonSimple
                                       className="md-lightbox__control"
@@ -657,6 +660,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     setInstance={[Function]}
                                     showArrow={true}
                                     strategy="absolute"
+                                    style={Object {}}
                                     trigger="mouseenter focus"
                                     triggerComponent={
                                       <ButtonSimple
@@ -908,6 +912,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 </span>
                                 <Tooltip
                                   placement="top"
+                                  style={Object {}}
                                   triggerComponent={
                                     <ButtonSimple
                                       className="md-lightbox__control"
@@ -937,6 +942,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     setInstance={[Function]}
                                     showArrow={true}
                                     strategy="absolute"
+                                    style={Object {}}
                                     trigger="mouseenter focus"
                                     triggerComponent={
                                       <ButtonSimple
@@ -1193,6 +1199,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                               </div>
                               <Tooltip
                                 placement="top"
+                                style={Object {}}
                                 triggerComponent={
                                   <ButtonSimple
                                     className="md-lightbox__control md-lightbox__control-download"
@@ -1221,6 +1228,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                   setInstance={[Function]}
                                   showArrow={true}
                                   strategy="absolute"
+                                  style={Object {}}
                                   trigger="mouseenter focus"
                                   triggerComponent={
                                     <ButtonSimple
