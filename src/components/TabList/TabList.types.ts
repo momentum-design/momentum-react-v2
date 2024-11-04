@@ -2,8 +2,9 @@ import { ReactElement } from 'react';
 
 import { ButtonGroupProps } from '../ButtonGroup';
 import { TabProps } from '../Tab';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
-export interface Props extends ButtonGroupProps {
+interface TabListProps extends ButtonGroupProps {
   /**
    * Child components of this TabList.
    */
@@ -19,3 +20,5 @@ export interface Props extends ButtonGroupProps {
    */
   hasBackground?: boolean;
 }
+
+export type Props = TabListProps & AriaLabelRequired;
