@@ -27,6 +27,10 @@ const TabList: FC<Props> = (props: Props) => {
     ? (_children as ReactElement<TabProps>[])
     : [_children];
 
+  if (otherProps['aria-labelledby'] === undefined && otherProps['aria-label'] === undefined) {
+    console.warn('MRV2: TabList requires aria-labelledby or aria-label.');
+  }
+
   const buttonGroupProps = defaultsDeep({}, otherProps, {
     round: true,
     spaced: true,
