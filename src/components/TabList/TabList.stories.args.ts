@@ -16,6 +16,17 @@ buttonGroupArgTypes.round.defaultValue = true;
 buttonGroupArgTypes.spaced.defaultValue = true;
 
 const tabListArgTypes: Meta<TabListProps>['argTypes'] = {
+  'aria-label': {
+    description: 'Aria label for this element.<br>Alternatives: `aria-labelledby`<br>Required.',
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   children: {
     description: 'Provides the child nodes for this element.',
     table: {
