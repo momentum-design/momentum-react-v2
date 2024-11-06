@@ -11,6 +11,7 @@ import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
 import { DEFAULTS, STYLE } from './TabList.constants';
 import './TabList.style.scss';
 import { Props } from './TabList.types';
+import { useCheckForScreenReaderLabel } from '../..//utils/a11y';
 
 /**
  * The TabList component.
@@ -27,9 +28,7 @@ const TabList: FC<Props> = (props: Props) => {
     ? (_children as ReactElement<TabProps>[])
     : [_children];
 
-  if (otherProps['aria-labelledby'] === undefined && otherProps['aria-label'] === undefined) {
-    console.warn('MRV2: TabList requires aria-labelledby or aria-label.');
-  }
+  useCheckForScreenReaderLabel('TabList', props);
 
   const buttonGroupProps = defaultsDeep({}, otherProps, {
     round: true,

@@ -11,6 +11,7 @@ import * as useOrientationBasedKeyboardNavigationHook from '../../hooks/useOrien
 import Tab from '../Tab';
 import TabsProvider from '../TabsProvider';
 import TabList, { TAB_LIST_CONSTANTS as CONSTANTS } from './';
+import * as a11yUtils from '../../utils/a11y';
 
 describe('<TabList />', () => {
   const detachedCommonProps = (activeTab: string | undefined = 'tab-1') => ({
@@ -181,49 +182,14 @@ describe('<TabList />', () => {
       });
     });
 
-    it('requires an label', () => {
-      const consoleWarnSpy = jest.spyOn(console, 'warn');
-
-      const wrapper = mount(
-        // @ts-expect-error
-        <TabList>
-          <Tab key="one">Hello</Tab>
-        </TabList>
-      );
-
-      expect(consoleWarnSpy).toHaveBeenCalledWith(
-        'MRV2: TabList requires aria-labelledby or aria-label.'
-      );
-
-      consoleWarnSpy.mockReset();
-    });
-
-    it('does not warn if aria-label defined', () => {
-      const consoleWarnSpy = jest.spyOn(console, 'warn');
-
+    it('checks for a screen reader label', () => {
+      const useCheckForScreenReaderLabelSpy = jest.spyOn(a11yUtils, 'useCheckForScreenReaderLabel');
       mount(
-        <TabList aria-label="Hello">
+        <TabList aria-label="asdf">
           <Tab key="one">Hello</Tab>
         </TabList>
       );
-
-      expect(consoleWarnSpy).not.toHaveBeenCalled();
-
-      consoleWarnSpy.mockReset();
-    });
-
-    it('does not warn if aria-labelledby defined', () => {
-      const consoleWarnSpy = jest.spyOn(console, 'warn');
-
-      mount(
-        <TabList aria-labelledby="Hello">
-          <Tab key="one">Hello</Tab>
-        </TabList>
-      );
-
-      expect(consoleWarnSpy).not.toHaveBeenCalled();
-
-      consoleWarnSpy.mockReset();
+      expect(useCheckForScreenReaderLabelSpy).toHaveBeenCalledWith('TabList', expect.any(Object));
     });
   });
 
