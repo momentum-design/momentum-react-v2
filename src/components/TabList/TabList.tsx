@@ -11,7 +11,7 @@ import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
 import { DEFAULTS, STYLE } from './TabList.constants';
 import './TabList.style.scss';
 import { Props } from './TabList.types';
-import { useCheckForScreenReaderLabel } from '../..//utils/a11y';
+import { useCheckForScreenReaderLabel } from '../../utils/a11y';
 
 /**
  * The TabList component.
