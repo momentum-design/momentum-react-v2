@@ -1,7 +1,6 @@
 import React from 'react';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
-import { Story } from '@storybook/react';
+import { ComponentMeta, Story } from '@storybook/react';
 
 import ScreenReaderAnnouncer, { ScreenReaderAnnounceOptions } from './';
 import argTypes from './ScreenReaderAnnouncer.stories.args';
@@ -15,10 +14,11 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocumentationPage(Documentation, StyleDocs),
+      page: DocumentationPage(Documentation),
+      inlineStories: false,
     },
   },
-};
+} as ComponentMeta<typeof ScreenReaderAnnouncer>;
 
 const buttonid1 = 'id-1';
 const buttonid2 = 'id-2';
