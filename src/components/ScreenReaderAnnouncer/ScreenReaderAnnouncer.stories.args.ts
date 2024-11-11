@@ -1,4 +1,3 @@
-import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { LEVELS, DEFAULTS } from './ScreenReaderAnnouncer.constants';
 
 const screenReaderAnnouncerArgTypes = {
@@ -16,14 +15,14 @@ const screenReaderAnnouncerArgTypes = {
   },
   level: {
     description: 'The aria-live value for the announcement',
-    options: [undefined, ...LEVELS.ASSERTIVE],
+    options: [undefined, LEVELS.POLITE, LEVELS.ASSERTIVE],
     control: { type: 'select' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: DEFAULTS.LEVEL,
       },
     },
   },
@@ -58,6 +57,5 @@ const screenReaderAnnouncerArgTypes = {
 export { screenReaderAnnouncerArgTypes };
 
 export default {
-  ...commonStyles,
   ...screenReaderAnnouncerArgTypes,
 };
