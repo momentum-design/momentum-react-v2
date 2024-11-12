@@ -1,6 +1,7 @@
 const {swcLoaderOptions} = require('./config/swc/loaderOptions'); // eslint-disable-line
 
 module.exports = {
+  testPathIgnorePatterns: ['/node_modules/', '\\.d\\.test\\.ts$'],
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   modulePathIgnorePatterns: ['<rootDir>/src/app/'],
   transformIgnorePatterns: [
