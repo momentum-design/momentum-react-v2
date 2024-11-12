@@ -1,22 +1,26 @@
 import { AriaAttributes, useEffect } from 'react';
 
 /**
- * Utility type to require one or more of a set of attributes.
+ * Utility type to require one or more from a set of attributes.
  *
  * For example, this is used to check that `aria-label` or `aria-labelledby` is defined on components when consumed.
- * `RequireEither<AriaAttributes, ['aria-label', 'aria-labelledby']>`
+ * `RequireOneOf<AriaAttributes, ['aria-label', 'aria-labelledby']>` = `{'aria-label': string} | {'aria-labelledby': string}`
+ *
+ * More examples can be found in src/utils/a11y.d.test.ts
  *
  * @typeParam TFrom - Used to get the type of the required attributes
- * @typeParam TAttributes - One of these attributes satifies this requirement. Must be given as an array of attributes.
+ * @typeParam TAttributes - One of these attributes satifies this requirement. Must be given as an array.
  */
-export type RequireEither<TFrom, TAttributes extends (keyof TFrom)[]> = TAttributes extends [
+export type RequireOneOf<TFrom, TAttributes extends (keyof TFrom)[]> = TAttributes extends [
+  // Get the first attribute defintion in TAttributes
   infer TFirst extends keyof TFrom,
+  // Get the remaining attribute definitions in TAttributes
   ...infer TLast extends (keyof TFrom)[]
 ]
-  ? { [K in TFirst]-?: TFrom[TFirst] } | RequireEither<TFrom, TLast>
+  ? Required<{ [K in TFirst]: TFrom[K] }> | RequireOneOf<TFrom, TLast>
   : never;
 
-export type AriaLabelRequired = RequireEither<AriaAttributes, ['aria-label', 'aria-labelledby']>;
+export type AriaLabelRequired = RequireOneOf<AriaAttributes, ['aria-label', 'aria-labelledby']>;
 
 /**
  * Check if `aria-labelledby` or `aria-label` are defined and are truthy
