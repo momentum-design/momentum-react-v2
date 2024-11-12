@@ -1,18 +1,22 @@
 import { AriaAttributes, useEffect } from 'react';
 
-export type AriaLabelRequired =
-  | {
-      /**
-       * Defines a string value that labels the current element.
-       */
-      'aria-label': AriaAttributes['aria-label'];
-    }
-  | {
-      /**
-       * Identifies the element (or elements) that labels the current element.
-       */
-      'aria-labelledby': AriaAttributes['aria-labelledby'];
-    };
+/**
+ * Utility type to require one or more of a set of attributes.
+ *
+ * For example, this is used to check that `aria-label` or `aria-labelledby` is defined on components when consumed.
+ * `RequireEither<AriaAttributes, ['aria-label', 'aria-labelledby']>`
+ *
+ * @typeParam TFrom - Used to get the type of the required attributes
+ * @typeParam TAttributes - One of these attributes satifies this requirement. Must be given as an array of attributes.
+ */
+export type RequireEither<TFrom, TAttributes extends (keyof TFrom)[]> = TAttributes extends [
+  infer TFirst extends keyof TFrom,
+  ...infer TLast extends (keyof TFrom)[]
+]
+  ? { [K in TFirst]-?: TFrom[TFirst] } | RequireEither<TFrom, TLast>
+  : never;
+
+export type AriaLabelRequired = RequireEither<AriaAttributes, ['aria-label', 'aria-labelledby']>;
 
 /**
  * Check if `aria-labelledby` or `aria-label` are defined and are truthy
