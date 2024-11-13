@@ -50,7 +50,7 @@
     "generate:legacyStory": "plop legacyStory --cwd ./config/plop --dest .",
     "lint": "yarn lint:src && yarn lint:config",
     "lint:config": "esw \"./config/**/*.{js,jsx,ts,tsx}\"",
-    "lint:src": "esw \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:src": "tsc --noEmit --skipLibCheck && esw \"./src/**/*.{js,jsx,ts,tsx}\"",
     "lint:watch": "yarn lint:src --watch",
     "prepublishOnly": "yarn build",
     "prepare": "husky install",

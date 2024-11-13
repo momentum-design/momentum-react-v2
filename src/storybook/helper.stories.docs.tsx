@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, VFC } from 'react';
 import {
   Title,
   Subtitle,
@@ -13,7 +13,7 @@ import {
  * @param documentation - Array of documentation components provided as `.mdx` files.
  * @returns - Markdown documentation page.
  */
-function DocumentationPage(...documentation: Array<FC>): FC {
+function DocumentationPage(...documentation: Array<VFC>): FC {
   const docs = documentation.map((Markdown: FC, index) => <Markdown key={index} />);
 
   const DocsPage: FC = () => (

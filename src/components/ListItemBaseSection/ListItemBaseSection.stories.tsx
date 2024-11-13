@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListItemBaseSection from '.';
+import ListItemBaseSection, { ListItemBaseSectionProps } from '.';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -21,7 +21,7 @@ export default {
   },
 };
 
-const Example = Template((args) => {
+const Example = Template<ListItemBaseSectionProps>((args) => {
   return (
     <ListItemBase style={{ minWidth: '20rem', border: '1px solid red' }}>
       <ListItemBaseSection {...args} style={{ border: '1px solid blue' }} />
@@ -35,7 +35,7 @@ Example.args = {
   children: 'Content',
 };
 
-const Positions = MultiTemplate((args) => {
+const Positions = MultiTemplate<ListItemBaseSectionProps>((args) => {
   return (
     <ListItemBase style={{ minWidth: '20rem', border: '1px solid red' }}>
       <ListItemBaseSection {...args} style={{ border: '1px solid blue' }} />

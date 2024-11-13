@@ -3,6 +3,7 @@ const CLASS_PREFIX = 'md-reaction-button';
 const DEFAULTS = {
   REACTED: false,
   SIZE: 32,
+  DISABLED: false,
 };
 
 const STYLE = {
