@@ -14,8 +14,8 @@ type cases = [
   Expect<Equal<RequireOneOf<{ one?: number }, ['one']>, { one: number }>>,
   Expect<Equal<RequireOneOf<{ one: number | undefined }, ['one']>, { one: number }>>,
 
-  // Works with non primitive types and doesn't output any attributes defined in the first parameter
-  // but not defined in the second
+  // Works with non primitive types and doesn't output any attributes defined in the attribute list
+  // but not defined in the attribute list that satifies the constrait
   Expect<
     Equal<
       RequireOneOf<
