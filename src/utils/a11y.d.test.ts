@@ -37,7 +37,7 @@ type cases = [
   Expect<
     Equal<
       RequireOneOf<{ a: number; b: number; c: number }, ['a' | 'b', 'c']>,
-      { a: number; b: number } | { c: number }
+      { a: number } | { c: number }
     >
   >,
 
