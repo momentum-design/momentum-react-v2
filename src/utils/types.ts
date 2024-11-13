@@ -4,7 +4,7 @@
  * For example, this is used to check that `aria-label` or `aria-labelledby` is defined on components when consumed.
  * `RequireOneOf<AriaAttributes, ['aria-label', 'aria-labelledby']>` = `{'aria-label': string} | {'aria-labelledby': string}`
  *
- * More examples can be found in src/utils/a11y.d.test.ts
+ * More examples can be found in src/utils/types.test.ts
  *
  * @typeParam TFrom - Used to get the type of the required attributes
  * @typeParam TAttributes - One of these attributes satifies this requirement. Must be given as an array.

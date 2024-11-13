@@ -1,12 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { AriaLabelRequired, useCheckForScreenReaderLabel } from './a11y';
-import { Equal, Expect } from './types.test.util';
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-type cases = [
-  // Check that the AriaLabelRequired type is correct
-  Expect<Equal<AriaLabelRequired, { 'aria-label': string } | { 'aria-labelledby': string }>>
-];
+import { useCheckForScreenReaderLabel } from './a11y';
 
 describe('a11y utils', () => {
   describe('useCheckForScreenReaderLabel', () => {
