@@ -74,7 +74,7 @@ const TemplateCommon: Story = () => {
         </ButtonPill>,
         <ButtonHyperlink key={2}>Hyperlink</ButtonHyperlink>,
       ]}
-      icon={icon && 'placeholder'}
+      icon={icon ? 'placeholder' : undefined}
       image={
         image && (
           <img

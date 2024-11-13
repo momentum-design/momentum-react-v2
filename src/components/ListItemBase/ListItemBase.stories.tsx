@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { useCallback, useState } from 'react';
 
-import ListItemBase from '.';
+import ListItemBase, { ListItemBaseProps } from '.';
 
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import Documentation from './ListItemBase.documentation.mdx';
@@ -36,7 +36,7 @@ export default {
   },
 };
 
-const Example = Template((args) => (
+const Example = Template<ListItemBaseProps>((args) => (
   <>
     {getComponentStates(
       ListItemBase,

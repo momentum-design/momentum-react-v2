@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { ComponentProps, useCallback, useMemo, useRef, useState } from 'react';
 import Text from '../Text';
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -110,7 +110,7 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
   );
 };
 
-const Example = Template<TreeProps>(Tree).bind({});
+const Example = Template<ComponentProps<typeof Tree>>(Tree).bind({});
 
 Example.argTypes = { ...argTypes };
 
@@ -123,7 +123,7 @@ Example.args = {
   )),
 };
 
-const WithRoot = Template<TreeProps>(Tree).bind({});
+const WithRoot = Template<ComponentProps<typeof Tree>>(Tree).bind({});
 
 WithRoot.argTypes = { ...argTypes };
 
@@ -138,7 +138,7 @@ WithRoot.args = {
     { excludeRootNode: false }
   ),
 };
-const TreeWithScroll = Template<TreeProps>(Tree).bind({});
+const TreeWithScroll = Template<ComponentProps<typeof Tree>>(Tree).bind({});
 
 TreeWithScroll.argTypes = { ...argTypes };
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
-import React, { FC, ReactElement } from 'react';
+import React, { VFC, ReactElement, FC } from 'react';
 import { Story } from '@storybook/react';
 
 /**
@@ -9,7 +9,7 @@ import { Story } from '@storybook/react';
  * @param Component - Functional Component to generate a template from.
  * @returns - A Story Template from the provided Component.
  */
-function Template<Props>(Component: FC): Story<Props> {
+function Template<Props>(Component: VFC<Props>): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props) => <Component {...args} />;
 
   return LocalTemplate;
@@ -20,7 +20,7 @@ function Template<Props>(Component: FC): Story<Props> {
  * @param Component - Functional Component to generate multiple templates from.
  * @returns - A Story Template with multiple variants of the provided Component.
  */
-function MultiTemplate<Props>(Component: FC<Props>): Story<Props> {
+function MultiTemplate<Props>(Component: VFC<Props>): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 
@@ -103,7 +103,7 @@ export const getComponentStates = (
  * @param Component - Functional Component to generate multiple templates from.
  * @returns - A Story Template with multiple variants of the provided Component's states.
  */
-function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<Props> {
+function MultiTemplateWithPseudoStates<Props>(Component: VFC<Props>): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 
@@ -125,7 +125,7 @@ function MultiTemplateWithPseudoStates<Props>(Component: FC): Story<Props> {
  * @param Component - Functional Component to generate multiple templates from.
  * @returns - A Story Template with multiple variants of the provided Component's states.
  */
-function MultiTemplateWithLabel<Props>(Component: FC): Story<Props> {
+function MultiTemplateWithLabel<Props>(Component: VFC<Props>): Story<Props> {
   const LocalTemplate: Story<Props> = (args: Props, { parameters }) => {
     const { variants } = parameters;
 

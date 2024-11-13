@@ -44,7 +44,7 @@ const Wrapper = (args) => {
   );
 };
 
-const Example = Template((args) => (
+const Example = Template<MeetingListItemProps>((args) => (
   <>
     {getComponentStates(
       Wrapper,

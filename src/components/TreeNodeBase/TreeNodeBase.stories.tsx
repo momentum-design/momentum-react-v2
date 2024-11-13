@@ -2,7 +2,7 @@
 import React from 'react';
 import omit from 'lodash/omit';
 
-import TreeNodeBase from '.';
+import TreeNodeBase, { TreeNodeBaseProps } from '.';
 
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import Documentation from './TreeNodeBase.stories.docs.mdx';
@@ -41,7 +41,7 @@ const TreeWrapper = ({ children }) => (
   </Tree>
 );
 
-const Example = Template((args) => (
+const Example = Template<TreeNodeBaseProps>((args) => (
   <>
     {getComponentStates(
       TreeNodeBase,

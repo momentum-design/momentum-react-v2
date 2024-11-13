@@ -75,10 +75,6 @@ Common.parameters = {
           {Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => {
             return (
               <SpaceListItem
-                contextMenuActions={[
-                  { text: 'Action 1', action: action('Action') },
-                  { text: 'Action 2', action: action('Action 2') },
-                ]}
                 key={index}
                 itemIndex={index}
                 firstLine={`Daniel Webex - ${index}`}
