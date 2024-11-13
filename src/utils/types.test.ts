@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { RequireOneOf } from './types';
 import { Equal, Expect } from './types.test.util';
 
+// NOTE: STATIC TYPE TESTS RUN ON LINT
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type cases = [
   // If no attributes are defined, type should be never
