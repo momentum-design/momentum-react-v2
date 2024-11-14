@@ -19,6 +19,7 @@ import {
 } from './Menu';
 import ListItemBaseSection from '../ListItemBaseSection';
 import ContentSeparator from '../ContentSeparator';
+import { FocusRing } from 'react-aria';
 
 describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
@@ -295,6 +296,16 @@ describe('<Menu />', () => {
       const container = mount(<Menu {...props} />);
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with shouldItemFocusBeInset', () => {
+      const props = {
+        ...defaultProps,
+        shouldItemFocusBeInset: true,
+      };
+
+      const container = mount(<Menu {...props} />);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -423,6 +434,26 @@ describe('<Menu />', () => {
         .getDOMNode();
 
       expect(selectedItem.classList.contains(classNameSelectedItem)).toBe(true);
+    });
+
+    it('focus ring should be inset if shouldItemFocusBeInset is true', () => {
+      expect.assertions(1);
+
+      const focusRing = mount(<Menu {...defaultProps} shouldItemFocusBeInset />)
+        .find(FocusRing)
+        .first();
+
+      expect(focusRing.prop('isInset')).toBe(true);
+    });
+
+    it('focus ring should be inset if shouldItemFocusBeInset is false', () => {
+      expect.assertions(1);
+
+      const focusRing = mount(<Menu {...defaultProps} shouldItemFocusBeInset={false} />)
+        .find(FocusRing)
+        .first();
+
+      expect(focusRing.prop('isInset')).toBe(false);
     });
   });
 
