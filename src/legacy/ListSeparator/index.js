@@ -3,10 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { prefix } from '../utils/index';
+import { Text } from '../../components';
 
 /**
-* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
-**/
+ * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+ **/
 const ListSeparator = (props) => {
   const { children, className, lineColor, margin, textColor, text, textPadding, ...otherProps } =
     props;
@@ -25,15 +26,17 @@ const ListSeparator = (props) => {
       <span className={`${lsClass}__container`}>
         {children ||
           (text && (
-            <span
+            <Text
               className={`${lsClass}__text`}
               style={{
                 ...(textColor && { color: textColor }),
                 ...(textPadding && { padding: textPadding }),
               }}
+              type="subheader-secondary"
+              tagName="span"
             >
               {children ? children : text}
-            </span>
+            </Text>
           ))}
       </span>
     </div>
