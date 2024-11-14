@@ -108,7 +108,7 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
                 focusClass="md-focus-ring-wrapper children"
                 focusRingClass="md-focus-ring-wrapper children"
               >
-                <a
+                <button
                   className="md-button-hyperlink-wrapper"
                   data-disabled={false}
                   data-inverted={false}
@@ -126,11 +126,10 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
-                  role="button"
-                  tabIndex={0}
+                  type="button"
                 >
                   Link
-                </a>
+                </button>
               </FocusRing>
             </FocusRing>
           </ButtonHyperlink>

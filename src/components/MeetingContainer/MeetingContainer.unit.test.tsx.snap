@@ -864,7 +864,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
                       >
-                        <a
+                        <button
                           className="md-button-hyperlink-wrapper md-meeting-container-space-link"
                           data-disabled={false}
                           data-inverted={false}
@@ -882,11 +882,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                           onTouchEnd={[Function]}
                           onTouchMove={[Function]}
                           onTouchStart={[Function]}
-                          role="button"
-                          tabIndex={0}
+                          type="button"
                         >
                           Example Link
-                        </a>
+                        </button>
                       </FocusRing>
                     </FocusRing>
                   </ButtonHyperlink>
@@ -2059,7 +2058,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                         focusClass="md-focus-ring-wrapper children"
                         focusRingClass="md-focus-ring-wrapper children"
                       >
-                        <a
+                        <button
                           className="md-button-hyperlink-wrapper md-meeting-container-space-link"
                           data-disabled={false}
                           data-inverted={false}
@@ -2077,11 +2076,10 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                           onTouchEnd={[Function]}
                           onTouchMove={[Function]}
                           onTouchStart={[Function]}
-                          role="button"
-                          tabIndex={0}
+                          type="button"
                         >
                           Example Link
-                        </a>
+                        </button>
                       </FocusRing>
                     </FocusRing>
                   </ButtonHyperlink>
