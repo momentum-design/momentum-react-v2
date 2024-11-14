@@ -54,6 +54,11 @@ export interface Props<T> extends AriaMenuProps<T> {
    * Custom class for overriding this component's items CSS when selected.
    */
   classNameSelectedItem?: string;
+
+  /**
+   * Whether if the focus ring wrapping the list items should be inset.
+   */
+  shouldItemFocusBeInset?: boolean;
 }
 
 export interface MenuContextValue extends HTMLAttributes<HTMLElement> {

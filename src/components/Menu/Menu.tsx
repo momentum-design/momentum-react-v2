@@ -19,6 +19,7 @@ import MenuSection from '../MenuSection';
 import MenuSelectionGroup from '../MenuSelectionGroup';
 import ContentSeparator from '../ContentSeparator';
 import { defaults } from 'lodash';
+import { ListContext } from '../List/List.utils';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -48,6 +49,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
     ariaLabelledby,
+    shouldItemFocusBeInset,
   } = props;
 
   const contextProps = useMenuContext();
@@ -128,19 +130,21 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     <MenuAppearanceContext.Provider
       value={{ itemShape, itemSize, tickPosition, classNameSelectedItem }}
     >
-      <div
-        className={classnames(className, STYLE.wrapper)}
-        id={id}
-        style={style}
-        ref={ref}
-        aria-labelledby={ariaLabelledby}
-        {...menuProps}
-      >
-        {itemArray.map((key) => {
-          const item = state.collection.getItem(key) as Node<T>;
-          return renderItem(item, state);
-        })}
-      </div>
+      <ListContext.Provider value={{ shouldItemFocusBeInset: shouldItemFocusBeInset }}>
+        <div
+          className={classnames(className, STYLE.wrapper)}
+          id={id}
+          style={style}
+          ref={ref}
+          aria-labelledby={ariaLabelledby}
+          {...menuProps}
+        >
+          {itemArray.map((key) => {
+            const item = state.collection.getItem(key) as Node<T>;
+            return renderItem(item, state);
+          })}
+        </div>
+      </ListContext.Provider>
     </MenuAppearanceContext.Provider>
   );
 };

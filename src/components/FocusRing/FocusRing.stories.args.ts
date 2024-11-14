@@ -63,7 +63,7 @@ export default {
       },
     },
   },
-  within: {
+  isInset: {
     description:
       'Whether to show the focus ring when something inside the container element has focus (true), or only if the container itself has focus (false).',
     control: { type: 'boolean' },
