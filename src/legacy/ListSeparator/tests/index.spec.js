@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow, mount, render } from 'enzyme';
 import { ListSeparator } from '@momentum-ui/react-collaboration';
 
 describe('tests for <ListSeparator />', () => {
@@ -16,7 +16,7 @@ describe('tests for <ListSeparator />', () => {
   });
 
   it('should render text prop', () => {
-    const container = shallow(<ListSeparator text="Today" />);
+    const container = render(<ListSeparator text="Today" />);
 
     expect(container.find('.md-list-separator__text').length).toEqual(1);
     expect(container.find('.md-list-separator__text').text()).toEqual('Today');
