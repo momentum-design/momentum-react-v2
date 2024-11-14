@@ -7,3 +7,8 @@ type cases = [
   // Check that the AriaLabelRequired type is correct
   Expect<Equal<AriaLabelRequired, { 'aria-label': string } | { 'aria-labelledby': string }>>
 ];
+
+// This is required otherwise the test suite will fail due to no tests being defined.
+it('works', () => {
+  expect(true).toBe(true);
+});
