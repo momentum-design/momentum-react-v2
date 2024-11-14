@@ -150,4 +150,8 @@ export default {
       },
     },
   },
+  shouldItemFocusBeInset: {
+    description: 'Whether if the focus ring wrapping the list items should be inset',
+    control: 'boolean',
+  },
 };

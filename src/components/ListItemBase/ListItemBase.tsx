@@ -279,7 +279,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       return;
     }
     updateTabIndexes();
-  }, [currentFocus, updateTabIndexes, isFocusedWithin]);
+  }, [currentFocus, updateTabIndexes, isFocusedWithin, listContext]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 
