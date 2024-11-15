@@ -1,6 +1,5 @@
-/* eslint-disable import/extensions, import/no-unresolved, import/no-duplicates, import/namespace */
 import { CSSProperties, ReactNode } from 'react';
-import type { FontType } from '@momentum-design/components/dist/components/text/text.types';
+import type { TextType } from '@momentum-design/components';
 
 export type AllowedTagNames =
   | (keyof JSX.IntrinsicElements & 'h1')
@@ -62,4 +61,4 @@ export type FontStyle =
   | 'highlight-compact'
   | 'body-compact'
   | 'label-compact'
-  | FontType;
+  | TextType;
