@@ -279,7 +279,7 @@ describe('<SpaceListItem />', () => {
       const firstLine = 'firstLine';
 
       const element = (await mountAndWait(<SpaceListItem firstLine={firstLine} />))
-        .find(`[data-type="body-primary"]`)
+        .find(`[type="body-primary"]`)
         .getDOMNode();
 
       expect(element.textContent).toBe(firstLine);
@@ -294,7 +294,7 @@ describe('<SpaceListItem />', () => {
       const element = (
         await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
       )
-        .find(`[data-type="body-secondary"]`)
+        .find(`[type="body-secondary"]`)
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
@@ -309,7 +309,7 @@ describe('<SpaceListItem />', () => {
       const element = (
         await mountAndWait(<SpaceListItem firstLine="firstLine" secondLine={secondLine} />)
       )
-        .find(`[data-type="body-secondary"]`)
+        .find(`[type="body-secondary"]`)
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
@@ -324,7 +324,7 @@ describe('<SpaceListItem />', () => {
         <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
       );
 
-      expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
+      expect(container.find(DividerDot).filter(`[type="body-secondary"]`).length).toEqual(0);
     });
 
     it('should not have secondLine when secondLine is undefined', async () => {
@@ -336,7 +336,7 @@ describe('<SpaceListItem />', () => {
         <SpaceListItem firstLine="firstLine" secondLine={secondLine} />
       );
 
-      expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
+      expect(container.find(DividerDot).filter(`[type="body-secondary"]`).length).toEqual(0);
     });
 
     it('should have provided dot in compact mode', async () => {

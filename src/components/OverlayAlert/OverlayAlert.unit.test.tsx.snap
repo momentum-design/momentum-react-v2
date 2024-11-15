@@ -457,13 +457,19 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
                 id="test-ID"
                 type="body-primary"
               >
-                <p
+                <Text
                   className="md-text-wrapper md-overlay-alert-details"
-                  data-type="body-primary"
                   id="test-ID"
+                  tagname="p"
+                  type="body-large-regular"
                 >
-                  example-details
-                </p>
+                  <mdc-text
+                    class="md-text-wrapper md-overlay-alert-details"
+                    suppressHydrationWarning={true}
+                  >
+                    example-details
+                  </mdc-text>
+                </Text>
               </Text>
             </div>
             <div />
@@ -1168,13 +1174,19 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
                 id="test-ID"
                 type="title"
               >
-                <h2
+                <Text
                   className="md-text-wrapper md-overlay-alert-title"
-                  data-type="title"
                   id="test-ID"
+                  tagname="h2"
+                  type="heading-small-medium"
                 >
-                  example-title
-                </h2>
+                  <mdc-text
+                    class="md-text-wrapper md-overlay-alert-title"
+                    suppressHydrationWarning={true}
+                  >
+                    example-title
+                  </mdc-text>
+                </Text>
               </Text>
             </div>
             <div />

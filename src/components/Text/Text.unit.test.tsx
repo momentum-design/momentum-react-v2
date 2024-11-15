@@ -1,52 +1,66 @@
+/* eslint-disable import/extensions */
 import React from 'react';
-import { mount } from 'enzyme';
 import Text from '.';
 import { AllowedTagNames, FontStyle } from './Text.types';
 
 import { TYPES, STYLE } from './Text.constants';
+import { render, waitFor } from '@testing-library/react';
+import { FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
 
 describe('Text', () => {
   let container;
-  it('should match snapshot', () => {
-    expect.assertions(1);
 
-    container = mount(<Text>Hello</Text>);
+  const setup = async (component: any) => {
+    const {container} = render(component);
+
+    // we have to wait for the web component to be rendered
+    await waitFor(() => {
+      expect(container.querySelector('mdc-text')).toBeTruthy();
+    });
+
+    return container;
+  };
+
+  it('should match snapshot', async () => {
+    expect.assertions(2);
+
+    container = await setup(<Text>Hello</Text>);
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should match snapshot with className', () => {
-    expect.assertions(1);
+  it('should match snapshot with className', async () => {
+    expect.assertions(2);
 
     const className = 'example-class';
 
-    container = mount(<Text className={className} />);
+    container = await setup(<Text className={className} />);
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should match snapshot with id', () => {
-    expect.assertions(1);
+  it('should match snapshot with id', async () => {
+    expect.assertions(2);
 
     const id = 'example-id';
 
-    container = mount(<Text id={id} />);
+    container = await setup(<Text id={id} />);
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should match snapshot with style', () => {
-    expect.assertions(1);
+  it('should match snapshot with style', async () => {
+    expect.assertions(2);
 
     const style = { color: 'red' };
 
-    container = mount(<Text style={style} />);
+    container = await setup(<Text style={style} />);
 
     expect(container).toMatchSnapshot();
   });
 
   it(`should match snapshot with type`, async () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
     const texts = Object.values(TYPES).map((type, index) => {
       return (
@@ -55,7 +69,7 @@ describe('Text', () => {
         </Text>
       );
     });
-    container = await mount(<div>{texts}</div>);
+    container = await setup(<div>{texts}</div>);
 
     expect(container).toMatchSnapshot();
   });
@@ -63,7 +77,7 @@ describe('Text', () => {
   it.each(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'small', 'div', 'span'])(
     'should match snapshot with type and tagName override',
     async (tagName) => {
-      expect.assertions(1);
+      expect.assertions(2);
 
       const texts = Object.values(TYPES).map((type, index) => {
         return (
@@ -72,58 +86,52 @@ describe('Text', () => {
           </Text>
         );
       });
-      container = await mount(<div>{texts}</div>);
+      container = await setup(<div>{texts}</div>);
 
       expect(container).toMatchSnapshot();
     }
   );
 
   describe('attributes', () => {
-    it('should have its main class', () => {
-      expect.assertions(1);
+    it('should have its main class', async () => {
+      expect.assertions(2);
 
-      const element = mount(<Text />)
-        .find(Text)
-        .getDOMNode();
+      const container = await setup(<Text />);
 
-      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
+      expect(container.querySelector('mdc-text').classList.contains(STYLE.wrapper)).toBe(true);
     });
 
-    it('should have provided id when id is provided', () => {
-      expect.assertions(1);
+    it('should have provided id when id is provided', async () => {
+      expect.assertions(2);
 
       const id = 'example-id';
 
-      const element = mount(<Text id={id} />)
-        .find(Text)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
+      const container = await setup(<Text id={id} />);
+       
+      expect(container.querySelector('mdc-text').id).toBe(id);
     });
 
-    it('should have provided style when style is provided', () => {
-      expect.assertions(1);
+    it('should have provided style when style is provided', async () => {
+      expect.assertions(2);
 
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<Text style={style} />)
-        .find(Text)
-        .getDOMNode();
+      const container = await setup(<Text style={style} />);
 
-      expect(element.getAttribute('style')).toBe(styleString);
+      expect(container.querySelector('mdc-text').getAttribute('style')).toBe(styleString);
     });
 
-    it('should pass type prop', () => {
-      expect.assertions(1);
+    it('should pass type prop to MdcText web componet', async () => {
+      expect.assertions(2);
 
-      const type = TYPES[Object.keys(TYPES)[Object.keys(TYPES).length - 1]];
+      const type = TYPES.LABEL_COMPACT;
+      const expectedMdcTextType = FONT_TYPE.BODY_SMALL_MEDIUM;
 
-      const element = mount(<Text type={type} />)
-        .find(Text)
-        .getDOMNode();
+      const container = await setup(<Text type={type} />);
 
-      expect(element.getAttribute('data-type')).toBe(`${type}`);
+
+      expect(container.querySelector('mdc-text').getAttribute('type')).toBe(expectedMdcTextType);
     });
   });
 });

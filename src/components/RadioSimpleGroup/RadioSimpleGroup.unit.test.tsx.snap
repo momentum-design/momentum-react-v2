@@ -41,12 +41,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -64,12 +63,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -87,12 +85,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -124,12 +121,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -147,12 +143,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -170,12 +165,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -206,12 +200,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -229,12 +222,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -252,12 +244,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -289,12 +280,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -312,12 +302,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -335,12 +324,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -373,12 +361,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -397,12 +384,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -421,12 +407,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -457,12 +442,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -480,12 +464,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -503,12 +486,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -547,12 +529,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -570,12 +551,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -593,12 +573,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -629,12 +608,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with id 1`] = `
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -652,12 +630,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with id 1`] = `
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -675,12 +652,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with id 1`] = `
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
@@ -712,12 +688,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
           value="red"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Red
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -735,12 +710,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
           value="blue"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Blue
-      </p>
+      </mdc-text>
     </label>
     <label
       class="md-radio-simple-wrapper"
@@ -758,12 +732,11 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
           value="yellow"
         />
       </div>
-      <p
+      <mdc-text
         class="md-text-wrapper"
-        data-type="body-primary"
       >
         Yellow
-      </p>
+      </mdc-text>
     </label>
   </div>
 </DocumentFragment>
