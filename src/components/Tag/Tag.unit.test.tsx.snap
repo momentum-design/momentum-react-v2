@@ -11,9 +11,8 @@ Object {
         data-format="normal"
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -25,9 +24,8 @@ Object {
       data-format="normal"
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,
@@ -96,12 +94,11 @@ Object {
         data-format="normal"
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         >
           example-text
-        </h3>
+        </mdc-text>
       </button>
     </div>
   </body>,
@@ -112,12 +109,11 @@ Object {
       data-format="normal"
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       >
         example-text
-      </h3>
+      </mdc-text>
     </button>
   </div>,
   "debug": [Function],
@@ -185,9 +181,8 @@ Object {
         data-format="normal"
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -199,9 +194,8 @@ Object {
       data-format="normal"
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,
@@ -270,9 +264,8 @@ Object {
         data-format="normal"
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -284,9 +277,8 @@ Object {
       data-format="normal"
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,
@@ -356,9 +348,8 @@ Object {
         disabled=""
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -371,9 +362,8 @@ Object {
       disabled=""
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,
@@ -443,9 +433,8 @@ Object {
         disabled=""
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -458,9 +447,8 @@ Object {
       disabled=""
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,
@@ -530,9 +518,8 @@ Object {
         id="example-id"
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -545,9 +532,8 @@ Object {
       id="example-id"
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,
@@ -617,9 +603,8 @@ Object {
         style="color: pink;"
         type="button"
       >
-        <h3
+        <mdc-text
           class="md-text-wrapper"
-          data-type="subheader-secondary"
         />
       </button>
     </div>
@@ -632,9 +617,8 @@ Object {
       style="color: pink;"
       type="button"
     >
-      <h3
+      <mdc-text
         class="md-text-wrapper"
-        data-type="subheader-secondary"
       />
     </button>
   </div>,

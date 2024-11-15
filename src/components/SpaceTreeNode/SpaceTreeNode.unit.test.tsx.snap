@@ -96,14 +96,22 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
+                          tagname="div"
+                          type="body-large-regular"
                         >
-                          firstLine
-                        </div>
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          >
+                            firstLine
+                          </mdc-text>
+                        </Text>
                       </Text>
                       <DividerDot
                         data-test="compact-mode-divider-dot"
@@ -122,24 +130,37 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
                         }
                         type="body-secondary"
                       >
-                        <small
+                        <Text
                           aria-label="testteam"
                           className="md-text-wrapper"
                           data-test="list-item-second-line"
-                          data-type="body-secondary"
                           style={
                             Object {
                               "color": "var(--mds-color-theme-text-teamdefault-normal)",
                             }
                           }
+                          tagname="small"
+                          type="body-midsize-regular"
                         >
-                          <SecondLineElement
-                            key="second-line-item-0"
-                            showDividerDot={false}
+                          <mdc-text
+                            aria-label="testteam"
+                            class="md-text-wrapper"
+                            data-test="list-item-second-line"
+                            style={
+                              Object {
+                                "color": "var(--mds-color-theme-text-teamdefault-normal)",
+                              }
+                            }
+                            suppressHydrationWarning={true}
                           >
-                            testteam
-                          </SecondLineElement>
-                        </small>
+                            <SecondLineElement
+                              key="second-line-item-0"
+                              showDividerDot={false}
+                            >
+                              testteam
+                            </SecondLineElement>
+                          </mdc-text>
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -252,12 +273,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -380,12 +409,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -503,12 +540,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -623,14 +668,22 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
+                          tagname="div"
+                          type="body-large-regular"
                         >
-                          firstLine
-                        </div>
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          >
+                            firstLine
+                          </mdc-text>
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -745,12 +798,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -865,12 +926,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1016,12 +1085,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1166,12 +1243,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = 
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={true}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={true}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1286,12 +1371,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1437,12 +1530,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1588,12 +1689,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1739,12 +1848,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`]
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1859,12 +1976,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = 
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -1981,12 +2106,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -2132,12 +2265,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -2295,12 +2436,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                       <Text
                         aria-label="one, two, three"
@@ -2312,50 +2461,63 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
                         }
                         type="body-secondary"
                       >
-                        <small
+                        <Text
                           aria-label="one, two, three"
                           className="md-text-wrapper"
                           data-test="list-item-second-line"
-                          data-type="body-secondary"
                           style={
                             Object {
                               "color": "var(--mds-color-theme-text-teamdefault-normal)",
                             }
                           }
+                          tagname="small"
+                          type="body-midsize-regular"
                         >
-                          <SecondLineElement
-                            key="second-line-item-0"
-                            showDividerDot={false}
+                          <mdc-text
+                            aria-label="one, two, three"
+                            class="md-text-wrapper"
+                            data-test="list-item-second-line"
+                            style={
+                              Object {
+                                "color": "var(--mds-color-theme-text-teamdefault-normal)",
+                              }
+                            }
+                            suppressHydrationWarning={true}
                           >
-                            one
-                          </SecondLineElement>
-                          <SecondLineElement
-                            key="second-line-item-1"
-                            showDividerDot={true}
-                          >
-                            <DividerDot
-                              data-test="multiple-string-second-line-divider-dot"
+                            <SecondLineElement
+                              key="second-line-item-0"
+                              showDividerDot={false}
                             >
-                              <div
-                                className="md-divider-dot-wrapper"
-                              />
-                            </DividerDot>
-                            two
-                          </SecondLineElement>
-                          <SecondLineElement
-                            key="second-line-item-2"
-                            showDividerDot={true}
-                          >
-                            <DividerDot
-                              data-test="multiple-string-second-line-divider-dot"
+                              one
+                            </SecondLineElement>
+                            <SecondLineElement
+                              key="second-line-item-1"
+                              showDividerDot={true}
                             >
-                              <div
-                                className="md-divider-dot-wrapper"
-                              />
-                            </DividerDot>
-                            three
-                          </SecondLineElement>
-                        </small>
+                              <DividerDot
+                                data-test="multiple-string-second-line-divider-dot"
+                              >
+                                <div
+                                  className="md-divider-dot-wrapper"
+                                />
+                              </DividerDot>
+                              two
+                            </SecondLineElement>
+                            <SecondLineElement
+                              key="second-line-item-2"
+                              showDividerDot={true}
+                            >
+                              <DividerDot
+                                data-test="multiple-string-second-line-divider-dot"
+                              >
+                                <div
+                                  className="md-divider-dot-wrapper"
+                                />
+                              </DividerDot>
+                              three
+                            </SecondLineElement>
+                          </mdc-text>
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -2470,12 +2632,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                       <Text
                         aria-label="secondLine"
@@ -2487,24 +2657,37 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
                         }
                         type="body-secondary"
                       >
-                        <small
+                        <Text
                           aria-label="secondLine"
                           className="md-text-wrapper"
                           data-test="list-item-second-line"
-                          data-type="body-secondary"
                           style={
                             Object {
                               "color": "var(--mds-color-theme-text-teamdefault-normal)",
                             }
                           }
+                          tagname="small"
+                          type="body-midsize-regular"
                         >
-                          <SecondLineElement
-                            key="second-line-item-0"
-                            showDividerDot={false}
+                          <mdc-text
+                            aria-label="secondLine"
+                            class="md-text-wrapper"
+                            data-test="list-item-second-line"
+                            style={
+                              Object {
+                                "color": "var(--mds-color-theme-text-teamdefault-normal)",
+                              }
+                            }
+                            suppressHydrationWarning={true}
                           >
-                            secondLine
-                          </SecondLineElement>
-                        </small>
+                            <SecondLineElement
+                              key="second-line-item-0"
+                              showDividerDot={false}
+                            >
+                              secondLine
+                            </SecondLineElement>
+                          </mdc-text>
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -2632,12 +2815,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>
@@ -2752,12 +2943,20 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with teamColor 1`] = `
                         tagName="div"
                         type="body-primary"
                       >
-                        <div
+                        <Text
                           className="md-text-wrapper"
                           data-disabled={false}
                           data-test="list-item-first-line"
-                          data-type="body-primary"
-                        />
+                          tagname="div"
+                          type="body-large-regular"
+                        >
+                          <mdc-text
+                            class="md-text-wrapper"
+                            data-disabled={false}
+                            data-test="list-item-first-line"
+                            suppressHydrationWarning={true}
+                          />
+                        </Text>
                       </Text>
                     </div>
                   </ListItemBaseSection>

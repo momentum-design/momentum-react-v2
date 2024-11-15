@@ -144,12 +144,18 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <small
+              <Text
                 className="md-text-wrapper md-input-message--text"
-                data-type="body-secondary"
+                tagname="small"
+                type="body-midsize-regular"
               >
-                some input
-              </small>
+                <mdc-text
+                  class="md-text-wrapper md-input-message--text"
+                  suppressHydrationWarning={true}
+                >
+                  some input
+                </mdc-text>
+              </Text>
             </Text>
           </div>
         </div>
@@ -248,12 +254,18 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
                 className="md-input-message--text"
                 type="body-secondary"
               >
-                <small
+                <Text
                   className="md-text-wrapper md-input-message--text"
-                  data-type="body-secondary"
+                  tagname="small"
+                  type="body-midsize-regular"
                 >
-                  test
-                </small>
+                  <mdc-text
+                    class="md-text-wrapper md-input-message--text"
+                    suppressHydrationWarning={true}
+                  >
+                    test
+                  </mdc-text>
+                </Text>
               </Text>
             </div>
           </div>

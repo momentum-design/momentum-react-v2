@@ -19,12 +19,18 @@ exports[`Select snapshot should match snapshot 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -584,12 +590,18 @@ exports[`Select snapshot should match snapshot before and after opening select d
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -1149,12 +1161,18 @@ exports[`Select snapshot should match snapshot before and after opening select d
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -2247,12 +2265,18 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -2813,12 +2837,18 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -3379,12 +3409,18 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -3950,12 +3986,18 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -5055,12 +5097,18 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -5619,12 +5667,18 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <Popover
@@ -5950,12 +6004,18 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -7047,12 +7107,18 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -8141,12 +8207,18 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -9236,12 +9308,18 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -9808,12 +9886,18 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -10407,12 +10491,18 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -11618,12 +11708,18 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -12192,12 +12288,18 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
@@ -12756,12 +12858,18 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       onClick={[Function]}
     >
       <Text>
-        <p
+        <Text
           className="md-text-wrapper"
-          data-type="body-primary"
+          tagname="p"
+          type="body-large-regular"
         >
-          test
-        </p>
+          <mdc-text
+            class="md-text-wrapper"
+            suppressHydrationWarning={true}
+          >
+            test
+          </mdc-text>
+        </Text>
       </Text>
     </label>
     <HiddenSelect
