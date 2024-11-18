@@ -23,10 +23,7 @@ export interface Props {
    */
   children?: ReactNode;
   /**
-   * The token that defines the style (size, weight, line height) of the text
-   * 
-   * Supports old Webex tokens and new momentum-design tokens:
-   * https://momentum-design.github.io/momentum-design/en/tokens/font/#apps-body-small-regular
+   * the token that defines the style (size, weight, line height) of the text
    */
   type?: FontStyle;
   /**
