@@ -113,17 +113,6 @@ module.exports = {
     'react/prefer-es6-class': 1,
     'react/prop-types': 1,
     'react/react-in-jsx-scope': 1,
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
     'react/self-closing-comp': 1,
     'react/sort-comp': 1,
     'jsx-a11y/label-has-for': [
