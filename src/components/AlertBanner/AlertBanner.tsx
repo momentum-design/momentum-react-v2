@@ -20,6 +20,7 @@ const AlertBanner: FC<Props> = (props: Props) => {
     isStatic,
     size,
     style,
+    ...otherProps
   } = props;
 
   const mutatedButtons = Children.map(buttons, (button) =>
@@ -61,6 +62,7 @@ const AlertBanner: FC<Props> = (props: Props) => {
       data-static={isStatic || DEFAULTS.IS_STATIC}
       id={id}
       style={style}
+      {...otherProps}
     >
       {imageComponent}
       {labelComponent}
