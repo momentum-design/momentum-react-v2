@@ -1,7 +1,8 @@
+/* eslint-disable import/extensions, import/no-unresolved, import/no-duplicates, import/namespace */
 import { TYPES } from './Text.constants';
-import { TYPE as FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
 import type { AllowedTagNames, FontStyle } from './Text.types';
-import type { TextType } from '@momentum-design/components';
+import { FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
+import type { FontType } from '@momentum-design/components/dist/components/text/text.types';
 
 const inferTagName = (type: FontStyle): AllowedTagNames => {
   switch (type) {
@@ -40,7 +41,7 @@ const inferTagName = (type: FontStyle): AllowedTagNames => {
 
 // this is to map from the old types from the
 // old Web Specs to the new Momentum Global Web Library types
-const mapOldToNewType = (type: FontStyle): TextType => {
+const mapOldToNewType = (type: FontStyle): FontType => {
   switch (type) {
     case TYPES.DISPLAY:
       return FONT_TYPE.HEADING_XLARGE_MEDIUM;
@@ -79,7 +80,7 @@ const mapOldToNewType = (type: FontStyle): TextType => {
     case TYPES.LABEL_COMPACT:
       return FONT_TYPE.BODY_SMALL_MEDIUM;
     default:
-      return type as TextType;
+      return type as FontType;
   }
 };
 export { inferTagName, mapOldToNewType };
