@@ -59,12 +59,16 @@ NewMomentumDesignTypes.parameters = {
   ],
 };
 
-const TypesWithTagName = MultiTemplate<TextProps>(Text).bind({});
+const TypesWithTagNameSmall = MultiTemplate<TextProps>(Text).bind({});
 
-TypesWithTagName.argTypes = { ...argTypes };
-delete TypesWithTagName.argTypes.type;
+TypesWithTagNameSmall.argTypes = { ...argTypes };
+delete TypesWithTagNameSmall.argTypes.type;
+TypesWithTagNameSmall.argTypes.tagName = {
+  ...argTypes.tagName,
+  control: false,
+};
 
-TypesWithTagName.parameters = {
+TypesWithTagNameSmall.parameters = {
   variants: [
     ...Object.values(TYPES).map((type) => {
       return {
@@ -77,4 +81,4 @@ TypesWithTagName.parameters = {
 };
 
 
-export { Example, Types, NewMomentumDesignTypes, TypesWithTagName };
+export { Example, Types, NewMomentumDesignTypes, TypesWithTagNameSmall };

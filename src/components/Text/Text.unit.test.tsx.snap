@@ -173,6 +173,209 @@ exports[`Text should match snapshot with type 1`] = `
     >
       Example Text
     </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="headline-small-regular"
+    >
+      Example Text
+    </mdc-text>
   </div>
 </div>
 `;
@@ -303,6 +506,209 @@ exports[`Text should match snapshot with type and tagName override 1`] = `
       class="md-text-wrapper"
       tagname="h1"
       type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h1"
+      type="headline-small-regular"
     >
       Example Text
     </mdc-text>
@@ -439,6 +845,209 @@ exports[`Text should match snapshot with type and tagName override 2`] = `
     >
       Example Text
     </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h2"
+      type="headline-small-regular"
+    >
+      Example Text
+    </mdc-text>
   </div>
 </div>
 `;
@@ -569,6 +1178,209 @@ exports[`Text should match snapshot with type and tagName override 3`] = `
       class="md-text-wrapper"
       tagname="h3"
       type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h3"
+      type="headline-small-regular"
     >
       Example Text
     </mdc-text>
@@ -705,6 +1517,209 @@ exports[`Text should match snapshot with type and tagName override 4`] = `
     >
       Example Text
     </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h4"
+      type="headline-small-regular"
+    >
+      Example Text
+    </mdc-text>
   </div>
 </div>
 `;
@@ -835,6 +1850,209 @@ exports[`Text should match snapshot with type and tagName override 5`] = `
       class="md-text-wrapper"
       tagname="h5"
       type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h5"
+      type="headline-small-regular"
     >
       Example Text
     </mdc-text>
@@ -971,6 +2189,209 @@ exports[`Text should match snapshot with type and tagName override 6`] = `
     >
       Example Text
     </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="h6"
+      type="headline-small-regular"
+    >
+      Example Text
+    </mdc-text>
   </div>
 </div>
 `;
@@ -1101,6 +2522,209 @@ exports[`Text should match snapshot with type and tagName override 7`] = `
       class="md-text-wrapper"
       tagname="p"
       type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="p"
+      type="headline-small-regular"
     >
       Example Text
     </mdc-text>
@@ -1237,6 +2861,209 @@ exports[`Text should match snapshot with type and tagName override 8`] = `
     >
       Example Text
     </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="small"
+      type="headline-small-regular"
+    >
+      Example Text
+    </mdc-text>
   </div>
 </div>
 `;
@@ -1370,6 +3197,209 @@ exports[`Text should match snapshot with type and tagName override 9`] = `
     >
       Example Text
     </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="div"
+      type="headline-small-regular"
+    >
+      Example Text
+    </mdc-text>
   </div>
 </div>
 `;
@@ -1500,6 +3530,209 @@ exports[`Text should match snapshot with type and tagName override 10`] = `
       class="md-text-wrapper"
       tagname="span"
       type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-small-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-small-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-midsize-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-midsize-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-large-regular-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="body-large-medium-underline"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-small-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-small-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-small-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-midsize-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-midsize-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-midsize-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-large-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-large-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-large-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-xlarge-regular"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-xlarge-medium"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="heading-xlarge-bold"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="headline-small-light"
+    >
+      Example Text
+    </mdc-text>
+    <mdc-text
+      class="md-text-wrapper"
+      tagname="span"
+      type="headline-small-regular"
     >
       Example Text
     </mdc-text>
