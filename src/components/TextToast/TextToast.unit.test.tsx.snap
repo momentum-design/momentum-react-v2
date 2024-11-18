@@ -12,12 +12,18 @@ exports[`<TextToast /> snapshot should match snapshot 1`] = `
       className="md-text-toast-text"
       type="body-secondary"
     >
-      <small
+      <Text
         className="md-text-wrapper md-text-toast-text"
-        data-type="body-secondary"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
-      </small>
+        <mdc-text
+          class="md-text-wrapper md-text-toast-text"
+          suppressHydrationWarning={true}
+        >
+          Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+        </mdc-text>
+      </Text>
     </Text>
   </div>
 </TextToast>
@@ -36,12 +42,18 @@ exports[`<TextToast /> snapshot should match snapshot with className 1`] = `
       className="md-text-toast-text"
       type="body-secondary"
     >
-      <small
+      <Text
         className="md-text-wrapper md-text-toast-text"
-        data-type="body-secondary"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
-      </small>
+        <mdc-text
+          class="md-text-wrapper md-text-toast-text"
+          suppressHydrationWarning={true}
+        >
+          Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+        </mdc-text>
+      </Text>
     </Text>
   </div>
 </TextToast>
@@ -86,12 +98,18 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
       className="md-text-toast-text"
       type="body-secondary"
     >
-      <small
+      <Text
         className="md-text-wrapper md-text-toast-text"
-        data-type="body-secondary"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
-      </small>
+        <mdc-text
+          class="md-text-wrapper md-text-toast-text"
+          suppressHydrationWarning={true}
+        >
+          Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+        </mdc-text>
+      </Text>
     </Text>
   </div>
 </TextToast>
@@ -111,12 +129,18 @@ exports[`<TextToast /> snapshot should match snapshot with id 1`] = `
       className="md-text-toast-text"
       type="body-secondary"
     >
-      <small
+      <Text
         className="md-text-wrapper md-text-toast-text"
-        data-type="body-secondary"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
-      </small>
+        <mdc-text
+          class="md-text-wrapper md-text-toast-text"
+          suppressHydrationWarning={true}
+        >
+          Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+        </mdc-text>
+      </Text>
     </Text>
   </div>
 </TextToast>
@@ -144,12 +168,18 @@ exports[`<TextToast /> snapshot should match snapshot with style 1`] = `
       className="md-text-toast-text"
       type="body-secondary"
     >
-      <small
+      <Text
         className="md-text-wrapper md-text-toast-text"
-        data-type="body-secondary"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
-      </small>
+        <mdc-text
+          class="md-text-wrapper md-text-toast-text"
+          suppressHydrationWarning={true}
+        >
+          Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+        </mdc-text>
+      </Text>
     </Text>
   </div>
 </TextToast>
@@ -168,12 +198,18 @@ exports[`<TextToast /> snapshot should match snapshot with textAlignment \`left\
       className="md-text-toast-text"
       type="body-secondary"
     >
-      <small
+      <Text
         className="md-text-wrapper md-text-toast-text"
-        data-type="body-secondary"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
-      </small>
+        <mdc-text
+          class="md-text-wrapper md-text-toast-text"
+          suppressHydrationWarning={true}
+        >
+          Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte adipiscing elit nullam amarte.
+        </mdc-text>
+      </Text>
     </Text>
   </div>
 </TextToast>
