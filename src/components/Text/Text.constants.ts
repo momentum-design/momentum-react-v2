@@ -1,5 +1,5 @@
-import type { FontStyle } from './Text.types';
-import {TYPE} from '@momentum-design/components/dist/components/text/text.constants.js';
+import { FontStyle } from './Text.types';
+
 const CLASS_PREFIX = 'md-text';
 
 const DEFAULTS = {
@@ -28,7 +28,6 @@ const TYPES: Record<string, FontStyle> = {
   HIGHLIGHT_COMPACT: 'highlight-compact',
   BODY_COMPACT: 'body-compact',
   LABEL_COMPACT: 'label-compact',
-  ...TYPE
 };
 
 const STYLE = {
