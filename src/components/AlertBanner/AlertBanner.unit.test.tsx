@@ -275,5 +275,15 @@ describe('<AlertBanner />', () => {
 
       expect(element.getAttribute('data-size')).toBe(size);
     });
+
+    it('should have provided data-test when data-test is provided', () => {
+      expect.assertions(1);
+
+      const element = mount(<AlertBanner data-test='mock-data-test-id' />)
+        .find(AlertBanner)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-test')).toBe('mock-data-test-id');
+    });
   });
 });
