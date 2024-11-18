@@ -5,7 +5,7 @@ import { AllowedTagNames, FontStyle } from './Text.types';
 
 import { TYPES, STYLE } from './Text.constants';
 import { render, waitFor } from '@testing-library/react';
-import { TYPE as FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
+import { FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
 
 describe('Text', () => {
   let container;

@@ -7,7 +7,7 @@ import argTypes from './Text.stories.args';
 import Documentation from './Text.stories.docs.mdx';
 import { TYPES } from './Text.constants';
 import './Text.stories.css';
-import { TYPE as FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
+import { FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
 
 export default {
   title: 'Momentum UI/Text',
