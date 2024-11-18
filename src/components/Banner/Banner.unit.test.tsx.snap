@@ -83,52 +83,34 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
+          data-type="banner-primary"
         >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          >
-            Title
-          </mdc-text>
-        </Text>
+          Title
+        </h1>
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
+          data-type="subheader-secondary"
         >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          >
-            Description
-          </mdc-text>
-        </Text>
+          Description
+        </h3>
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
+          data-type="subheader-secondary"
         >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          >
-            (Details)
-          </mdc-text>
-        </Text>
+          (Details)
+        </h3>
       </Text>
       <ButtonGroup
         spaced={true}
@@ -315,46 +297,28 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -403,46 +367,28 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <ButtonGroup
         spaced={true}
@@ -631,46 +577,28 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -698,48 +626,30 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
+          data-type="subheader-secondary"
         >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          >
-            Description
-          </mdc-text>
-        </Text>
+          Description
+        </h3>
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -767,48 +677,30 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
+          data-type="subheader-secondary"
         >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          >
-            Details
-          </mdc-text>
-        </Text>
+          Details
+        </h3>
       </Text>
     </div>
   </ModalContainer>
@@ -838,46 +730,28 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -934,46 +808,28 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -1003,46 +859,28 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -1072,46 +910,28 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -1153,46 +973,28 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="banner-primary"
+        />
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>
@@ -1220,48 +1022,30 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
         className="md-banner-title"
         type="banner-primary"
       >
-        <Text
+        <h1
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
-          type="heading-midsize-medium"
+          data-type="banner-primary"
         >
-          <mdc-text
-            class="md-text-wrapper md-banner-title"
-            suppressHydrationWarning={true}
-          >
-            Title
-          </mdc-text>
-        </Text>
+          Title
+        </h1>
       </Text>
       <Text
         className="md-banner-description"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-description"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-description"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
       <Text
         className="md-banner-details"
         type="subheader-secondary"
       >
-        <Text
+        <h3
           className="md-text-wrapper md-banner-details"
-          tagname="h3"
-          type="body-midsize-medium"
-        >
-          <mdc-text
-            class="md-text-wrapper md-banner-details"
-            suppressHydrationWarning={true}
-          />
-        </Text>
+          data-type="subheader-secondary"
+        />
       </Text>
     </div>
   </ModalContainer>

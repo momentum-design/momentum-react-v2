@@ -18,11 +18,12 @@ exports[`<RadioSimple /> snapshot should match snapshot 1`] = `
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>
@@ -47,11 +48,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with ariaLabel 1`] = `
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>
@@ -76,11 +78,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with ariaLabelledBy 1`] 
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>
@@ -104,11 +107,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with className 1`] = `
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>
@@ -134,11 +138,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with id 1`] = `
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>
@@ -162,11 +167,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with isDisabled 1`] = `
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>
@@ -191,11 +197,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with style 1`] = `
       />
     </div>
     <div>
-      <mdc-text
+      <p
         class="md-text-wrapper"
+        data-type="body-primary"
       >
         Red
-      </mdc-text>
+      </p>
     </div>
   </label>
 </DocumentFragment>

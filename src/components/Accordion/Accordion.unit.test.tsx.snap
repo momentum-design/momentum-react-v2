@@ -64,18 +64,12 @@ exports[`<Accordion /> snapshot should match snapshot 1`] = `
                 <Text
                   type="body-secondary"
                 >
-                  <Text
+                  <small
                     className="md-text-wrapper"
-                    tagname="small"
-                    type="body-midsize-regular"
+                    data-type="body-secondary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      Heading text
-                    </mdc-text>
-                  </Text>
+                    Heading text
+                  </small>
                 </Text>
               </button>
             </FocusRing>
@@ -157,18 +151,12 @@ exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
                 <Text
                   type="body-secondary"
                 >
-                  <Text
+                  <small
                     className="md-text-wrapper"
-                    tagname="small"
-                    type="body-midsize-regular"
+                    data-type="body-secondary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      Heading text
-                    </mdc-text>
-                  </Text>
+                    Heading text
+                  </small>
                 </Text>
               </button>
             </FocusRing>
@@ -250,18 +238,12 @@ exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1
                 <Text
                   type="body-secondary"
                 >
-                  <Text
+                  <small
                     className="md-text-wrapper"
-                    tagname="small"
-                    type="body-midsize-regular"
+                    data-type="body-secondary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      Heading text
-                    </mdc-text>
-                  </Text>
+                    Heading text
+                  </small>
                 </Text>
               </button>
             </FocusRing>
@@ -343,18 +325,12 @@ exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
                 <Text
                   type="body-secondary"
                 >
-                  <Text
+                  <small
                     className="md-text-wrapper"
-                    tagname="small"
-                    type="body-midsize-regular"
+                    data-type="body-secondary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      Heading text
-                    </mdc-text>
-                  </Text>
+                    Heading text
+                  </small>
                 </Text>
               </button>
             </FocusRing>
@@ -445,18 +421,12 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
                 <Text
                   type="body-secondary"
                 >
-                  <Text
+                  <small
                     className="md-text-wrapper"
-                    tagname="small"
-                    type="body-midsize-regular"
+                    data-type="body-secondary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      Heading text
-                    </mdc-text>
-                  </Text>
+                    Heading text
+                  </small>
                 </Text>
               </button>
             </FocusRing>

@@ -26,18 +26,12 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>
@@ -75,18 +69,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`
           className="example-class md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper example-class md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper example-class md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>
@@ -135,18 +123,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
       <div
@@ -294,18 +276,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
           className="example-class md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper example-class md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper example-class md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>
@@ -342,18 +318,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>
@@ -422,18 +392,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>
@@ -508,18 +472,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
         <div
           className="md-toast-notification-close-button"
@@ -638,18 +596,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>
@@ -698,18 +650,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
           className="md-toast-notification-content"
           type="body-primary"
         >
-          <Text
+          <p
             className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            data-type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
-            >
-              Example text
-            </mdc-text>
-          </Text>
+            Example text
+          </p>
         </Text>
       </div>
     </div>

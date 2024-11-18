@@ -53,13 +53,12 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
               width="100%"
             />
           </div>
-          <mdc-text
+          <h3
             class="md-text-wrapper md-coachmark-title"
-            tagname="h3"
-            type="body-large-bold"
+            data-type="header-primary"
           >
             Title
-          </mdc-text>
+          </h3>
           <div
             class="md-button-group-wrapper"
             data-compressed="false"

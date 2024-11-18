@@ -181,13 +181,12 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       />
                     </div>
                   </div>
-                  <mdc-text
+                  <p
                     class="md-text-wrapper md-toast-notification-content"
-                    tagname="p"
-                    type="body-large-regular"
+                    data-type="body-primary"
                   >
                     This is a test
-                  </mdc-text>
+                  </p>
                   <div
                     class="md-toast-notification-close-button"
                   >

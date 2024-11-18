@@ -157,18 +157,12 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
             <Text
               type="body-primary"
             >
-              <Text
+              <p
                 className="md-text-wrapper"
-                tagname="p"
-                type="body-large-regular"
+                data-type="body-primary"
               >
-                <mdc-text
-                  class="md-text-wrapper"
-                  suppressHydrationWarning={true}
-                >
-                  Example Text
-                </mdc-text>
-              </Text>
+                Example Text
+              </p>
             </Text>
           </PrimitiveConverter>
         </button>

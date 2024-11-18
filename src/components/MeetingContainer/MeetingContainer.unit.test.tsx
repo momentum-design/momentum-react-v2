@@ -468,17 +468,19 @@ describe('attributes', () => {
       <MeetingContainer meetingTitle={meetingTitle} titleType={TEXT_CONSTANTS.TYPES.TITLE} />
     )
       .find(Text)
-      .at(0);
+      .at(0)
+      .getDOMNode();
 
-    expect(element.props().type).toBe(TEXT_CONSTANTS.TYPES.TITLE);
+    expect(element.getAttribute('data-type')).toBe(TEXT_CONSTANTS.TYPES.TITLE);
   });
 
   it('should use titleTagName when provided', () => {
     const element = mount(<MeetingContainer meetingTitle={meetingTitle} titleTagName={'p'} />)
       .find(Text)
-      .at(0);
+      .at(0)
+      .getDOMNode();
 
-    expect(element.props().tagName).toBe('p');
+    expect(element.tagName).toBe('P');
   });
   /* ...additional attribute tests... */
 
