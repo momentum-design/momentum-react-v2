@@ -219,7 +219,7 @@ describe('<SpaceRowContent />', () => {
       const firstLine = 'firstLine';
 
       const element = (await mountAndWait(<SpaceRowContent firstLine={firstLine} />))
-        .find(`[type="body-primary"]`)
+        .find(`[data-type="body-primary"]`)
         .getDOMNode();
 
       expect(element.textContent).toBe(firstLine);
@@ -234,7 +234,7 @@ describe('<SpaceRowContent />', () => {
       const element = (
         await mountAndWait(<SpaceRowContent firstLine="firstLine" secondLine={secondLine} />)
       )
-        .find(`[type="body-secondary"]`)
+        .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
@@ -249,7 +249,7 @@ describe('<SpaceRowContent />', () => {
       const element = (
         await mountAndWait(<SpaceRowContent firstLine="firstLine" secondLine={secondLine} />)
       )
-        .find(`[type="body-secondary"]`)
+        .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);

@@ -458,18 +458,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               id="1"
             >
               <Text>
-                <Text
+                <p
                   className="md-text-wrapper"
-                  tagname="p"
-                  type="body-large-regular"
+                  data-type="body-primary"
                 >
-                  <mdc-text
-                    class="md-text-wrapper"
-                    suppressHydrationWarning={true}
-                  >
-                    Example tooltip content
-                  </mdc-text>
-                </Text>
+                  Example tooltip content
+                </p>
               </Text>
             </div>
           </Tooltip>
@@ -956,18 +950,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               id="1"
             >
               <Text>
-                <Text
+                <p
                   className="md-text-wrapper"
-                  tagname="p"
-                  type="body-large-regular"
+                  data-type="body-primary"
                 >
-                  <mdc-text
-                    class="md-text-wrapper"
-                    suppressHydrationWarning={true}
-                  >
-                    Example tooltip content
-                  </mdc-text>
-                </Text>
+                  Example tooltip content
+                </p>
               </Text>
             </div>
           </Tooltip>
@@ -1454,18 +1442,12 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               id="1"
             >
               <Text>
-                <Text
+                <p
                   className="md-text-wrapper"
-                  tagname="p"
-                  type="body-large-regular"
+                  data-type="body-primary"
                 >
-                  <mdc-text
-                    class="md-text-wrapper"
-                    suppressHydrationWarning={true}
-                  >
-                    Example tooltip content
-                  </mdc-text>
-                </Text>
+                  Example tooltip content
+                </p>
               </Text>
             </div>
           </Tooltip>

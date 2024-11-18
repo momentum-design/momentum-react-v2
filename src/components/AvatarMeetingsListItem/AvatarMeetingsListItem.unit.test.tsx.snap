@@ -90,16 +90,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -260,16 +254,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -382,16 +370,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -508,16 +490,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -712,16 +688,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -921,16 +891,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -1126,18 +1090,12 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
+                    data-type="body-primary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      firstLine
-                    </mdc-text>
-                  </Text>
+                    firstLine
+                  </p>
                 </Text>
               </div>
             </div>
@@ -1252,16 +1210,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -1404,16 +1356,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -1556,16 +1502,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -1708,16 +1648,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -1860,16 +1794,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>
@@ -1982,32 +1910,20 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
                 <Text
                   type="body-secondary"
                 >
-                  <Text
+                  <small
                     className="md-text-wrapper"
-                    tagname="small"
-                    type="body-midsize-regular"
+                    data-type="body-secondary"
                   >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    >
-                      secondLine
-                    </mdc-text>
-                  </Text>
+                    secondLine
+                  </small>
                 </Text>
               </div>
             </div>
@@ -2134,16 +2050,10 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
                 <Text
                   type="body-primary"
                 >
-                  <Text
+                  <p
                     className="md-text-wrapper"
-                    tagname="p"
-                    type="body-large-regular"
-                  >
-                    <mdc-text
-                      class="md-text-wrapper"
-                      suppressHydrationWarning={true}
-                    />
-                  </Text>
+                    data-type="body-primary"
+                  />
                 </Text>
               </div>
             </div>

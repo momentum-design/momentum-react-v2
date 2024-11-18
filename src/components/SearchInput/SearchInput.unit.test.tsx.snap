@@ -68,16 +68,10 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -242,16 +236,10 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -331,16 +319,10 @@ exports[`<SearchInput /> snapshot should match snapshot when isCombobox is true 
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -452,16 +434,10 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -547,16 +523,10 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -635,16 +605,10 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -723,16 +687,10 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -811,16 +769,10 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>
@@ -908,16 +860,10 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
               className="md-input-message--text"
               type="body-secondary"
             >
-              <Text
+              <small
                 className="md-text-wrapper md-input-message--text"
-                tagname="small"
-                type="body-midsize-regular"
-              >
-                <mdc-text
-                  class="md-text-wrapper md-input-message--text"
-                  suppressHydrationWarning={true}
-                />
-              </Text>
+                data-type="body-secondary"
+              />
             </Text>
           </div>
         </div>

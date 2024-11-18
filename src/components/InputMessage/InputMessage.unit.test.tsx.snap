@@ -49,18 +49,12 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
         className="md-input-message--text"
         type="body-secondary"
       >
-        <Text
+        <small
           className="md-text-wrapper md-input-message--text"
-          tagname="small"
-          type="body-midsize-regular"
+          data-type="body-secondary"
         >
-          <mdc-text
-            class="md-text-wrapper md-input-message--text"
-            suppressHydrationWarning={true}
-          >
-            some message
-          </mdc-text>
-        </Text>
+          some message
+        </small>
       </Text>
     </div>
   </div>

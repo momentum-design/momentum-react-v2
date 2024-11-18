@@ -276,7 +276,7 @@ describe('<SpaceTreeNode />', () => {
       const firstLine = 'firstLine';
 
       const element = (await mount(<SpaceTreeNode nodeId="root" firstLine={firstLine} />))
-        .find(`[type="body-primary"]`)
+        .find(`[data-type="body-primary"]`)
         .getDOMNode();
 
       expect(element.textContent).toBe(firstLine);
@@ -291,7 +291,7 @@ describe('<SpaceTreeNode />', () => {
       const element = (
         await mount(<SpaceTreeNode nodeId="root" firstLine="firstLine" secondLine={secondLine} />)
       )
-        .find(`[type="body-secondary"]`)
+        .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
@@ -306,7 +306,7 @@ describe('<SpaceTreeNode />', () => {
       const element = (
         await mount(<SpaceTreeNode nodeId="root" firstLine="firstLine" secondLine={secondLine} />)
       )
-        .find(`[type="body-secondary"]`)
+        .find(`[data-type="body-secondary"]`)
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
@@ -321,7 +321,7 @@ describe('<SpaceTreeNode />', () => {
         <SpaceTreeNode nodeId="root" firstLine="firstLine" secondLine={secondLine} />
       );
 
-      expect(container.find(DividerDot).filter(`[type="body-secondary"]`).length).toEqual(0);
+      expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
     });
 
     it('should not have secondLine when secondLine is undefined', async () => {
@@ -333,7 +333,7 @@ describe('<SpaceTreeNode />', () => {
         <SpaceTreeNode nodeId="root" firstLine="firstLine" secondLine={secondLine} />
       );
 
-      expect(container.find(DividerDot).filter(`[type="body-secondary"]`).length).toEqual(0);
+      expect(container.find(DividerDot).filter(`[data-type="body-secondary"]`).length).toEqual(0);
     });
 
     it('should have provided dot in compact mode', async () => {

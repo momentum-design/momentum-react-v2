@@ -78,18 +78,12 @@ exports[`<TabList /> snapshot should match snapshot 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 1
-                      </mdc-text>
-                    </Text>
+                      Tab 1
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -147,18 +141,12 @@ exports[`<TabList /> snapshot should match snapshot 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 2
-                      </mdc-text>
-                    </Text>
+                      Tab 2
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -216,18 +204,12 @@ exports[`<TabList /> snapshot should match snapshot 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 3
-                      </mdc-text>
-                    </Text>
+                      Tab 3
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -319,18 +301,12 @@ exports[`<TabList /> snapshot should match snapshot with className 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 1
-                      </mdc-text>
-                    </Text>
+                      Tab 1
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -388,18 +364,12 @@ exports[`<TabList /> snapshot should match snapshot with className 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 2
-                      </mdc-text>
-                    </Text>
+                      Tab 2
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -457,18 +427,12 @@ exports[`<TabList /> snapshot should match snapshot with className 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 3
-                      </mdc-text>
-                    </Text>
+                      Tab 3
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -560,18 +524,12 @@ exports[`<TabList /> snapshot should match snapshot with hasBackground = true 1`
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 1
-                      </mdc-text>
-                    </Text>
+                      Tab 1
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -629,18 +587,12 @@ exports[`<TabList /> snapshot should match snapshot with hasBackground = true 1`
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 2
-                      </mdc-text>
-                    </Text>
+                      Tab 2
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -698,18 +650,12 @@ exports[`<TabList /> snapshot should match snapshot with hasBackground = true 1`
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 3
-                      </mdc-text>
-                    </Text>
+                      Tab 3
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -803,18 +749,12 @@ exports[`<TabList /> snapshot should match snapshot with id 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 1
-                      </mdc-text>
-                    </Text>
+                      Tab 1
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -872,18 +812,12 @@ exports[`<TabList /> snapshot should match snapshot with id 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 2
-                      </mdc-text>
-                    </Text>
+                      Tab 2
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -941,18 +875,12 @@ exports[`<TabList /> snapshot should match snapshot with id 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 3
-                      </mdc-text>
-                    </Text>
+                      Tab 3
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -1058,18 +986,12 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 1
-                      </mdc-text>
-                    </Text>
+                      Tab 1
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -1127,18 +1049,12 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 2
-                      </mdc-text>
-                    </Text>
+                      Tab 2
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -1196,18 +1112,12 @@ exports[`<TabList /> snapshot should match snapshot with style 1`] = `
                     tagName="span"
                     type="subheader-secondary"
                   >
-                    <Text
+                    <span
                       className="md-text-wrapper"
-                      tagname="span"
-                      type="body-midsize-medium"
+                      data-type="subheader-secondary"
                     >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        Tab 3
-                      </mdc-text>
-                    </Text>
+                      Tab 3
+                    </span>
                   </Text>
                 </PrimitiveConverter>
               </button>
@@ -1313,18 +1223,12 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot 1`] = `
                         tagName="span"
                         type="subheader-secondary"
                       >
-                        <Text
+                        <span
                           className="md-text-wrapper"
-                          tagname="span"
-                          type="body-midsize-medium"
+                          data-type="subheader-secondary"
                         >
-                          <mdc-text
-                            class="md-text-wrapper"
-                            suppressHydrationWarning={true}
-                          >
-                            Tab 1
-                          </mdc-text>
-                        </Text>
+                          Tab 1
+                        </span>
                       </Text>
                     </PrimitiveConverter>
                   </button>
@@ -1388,18 +1292,12 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot 1`] = `
                         tagName="span"
                         type="subheader-secondary"
                       >
-                        <Text
+                        <span
                           className="md-text-wrapper"
-                          tagname="span"
-                          type="body-midsize-medium"
+                          data-type="subheader-secondary"
                         >
-                          <mdc-text
-                            class="md-text-wrapper"
-                            suppressHydrationWarning={true}
-                          >
-                            Tab 2
-                          </mdc-text>
-                        </Text>
+                          Tab 2
+                        </span>
                       </Text>
                     </PrimitiveConverter>
                   </button>
@@ -1463,18 +1361,12 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot 1`] = `
                         tagName="span"
                         type="subheader-secondary"
                       >
-                        <Text
+                        <span
                           className="md-text-wrapper"
-                          tagname="span"
-                          type="body-midsize-medium"
+                          data-type="subheader-secondary"
                         >
-                          <mdc-text
-                            class="md-text-wrapper"
-                            suppressHydrationWarning={true}
-                          >
-                            Tab 3
-                          </mdc-text>
-                        </Text>
+                          Tab 3
+                        </span>
                       </Text>
                     </PrimitiveConverter>
                   </button>
@@ -1582,18 +1474,12 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot when defi
                         tagName="span"
                         type="subheader-secondary"
                       >
-                        <Text
+                        <span
                           className="md-text-wrapper"
-                          tagname="span"
-                          type="body-midsize-medium"
+                          data-type="subheader-secondary"
                         >
-                          <mdc-text
-                            class="md-text-wrapper"
-                            suppressHydrationWarning={true}
-                          >
-                            Tab 1
-                          </mdc-text>
-                        </Text>
+                          Tab 1
+                        </span>
                       </Text>
                     </PrimitiveConverter>
                   </button>
@@ -1659,18 +1545,12 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot when defi
                         tagName="span"
                         type="subheader-secondary"
                       >
-                        <Text
+                        <span
                           className="md-text-wrapper"
-                          tagname="span"
-                          type="body-midsize-medium"
+                          data-type="subheader-secondary"
                         >
-                          <mdc-text
-                            class="md-text-wrapper"
-                            suppressHydrationWarning={true}
-                          >
-                            Tab 2
-                          </mdc-text>
-                        </Text>
+                          Tab 2
+                        </span>
                       </Text>
                     </PrimitiveConverter>
                   </button>
@@ -1734,18 +1614,12 @@ exports[`<TabList /> within <TabsProvider /> snapshot matches snapshot when defi
                         tagName="span"
                         type="subheader-secondary"
                       >
-                        <Text
+                        <span
                           className="md-text-wrapper"
-                          tagname="span"
-                          type="body-midsize-medium"
+                          data-type="subheader-secondary"
                         >
-                          <mdc-text
-                            class="md-text-wrapper"
-                            suppressHydrationWarning={true}
-                          >
-                            Tab 3
-                          </mdc-text>
-                        </Text>
+                          Tab 3
+                        </span>
                       </Text>
                     </PrimitiveConverter>
                   </button>

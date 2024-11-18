@@ -9,7 +9,6 @@ import {
   THEME_CLASS_PREFIX_STABLE,
   THEMES,
 } from './ThemeProvider.constants';
-import { render, waitFor } from '@testing-library/react';
 
 describe('<ThemeProvider />', () => {
   let container;
@@ -59,20 +58,16 @@ describe('<ThemeProvider />', () => {
       expect(divInElement.classList.contains(STYLE.globals)).toBe(true);
     });
 
-    it('web component should have an abstracted theme class', async () => {
-      expect.assertions(3);
+    it('web component should have an abstracted theme class', () => {
+      expect.assertions(1);
 
       const themeName = THEMES[Object.keys(THEMES)[0]];
 
-      const {container} = render(<ThemeProvider theme={themeName} />);
+      const wrapper = mount(<ThemeProvider theme={themeName} />);
+      const element = wrapper
+        .find(ThemeProvider)
+        .getDOMNode();
 
-      await waitFor(() => {
-        expect(container.querySelector('mdc-themeprovider')).toBeTruthy();
-      });
-
-      const element = container.querySelector('mdc-themeprovider');
-
-      expect(element.classList.contains(`${THEME_CLASS_PREFIX_STABLE}-${themeName}`)).toBe(true);
       expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
     });
 
