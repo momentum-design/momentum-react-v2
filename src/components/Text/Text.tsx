@@ -1,66 +1,28 @@
 import React, { FC } from 'react';
 
-import { DEFAULTS, STYLE, TYPES } from './Text.constants';
-import { AllowedTagNames, Props } from './Text.types';
+import { DEFAULTS, STYLE } from './Text.constants';
+import { Props } from './Text.types';
 import './Text.style.scss';
 import classnames from 'classnames';
+import {Text as MdcText} from '@momentum-design/components/dist/react';
+import { inferTagName, mapOldToNewType } from './mappingUtils';
 
 const Text: FC<Props> = (props: Props) => {
   const { children, type = DEFAULTS.TYPE, className, id, style, tagName, ...rest } = props;
 
-  const getTagName = (): AllowedTagNames => {
-    switch (type) {
-      case TYPES.DISPLAY:
-      case TYPES.BANNER_TERTIARY:
-      case TYPES.BANNER_SECONDARY:
-      case TYPES.BANNER_PRIMARY:
-        return 'h1';
-
-      case TYPES.TITLE:
-        return 'h2';
-
-      case TYPES.HEADER_PRIMARY:
-      case TYPES.HIGHLIGHT_PRIMARY:
-      case TYPES.SUBHEADER_PRIMARY:
-      case TYPES.HEADER_SECONDARY:
-      case TYPES.HIGHLIGHT_SECONDARY:
-      case TYPES.SUBHEADER_SECONDARY:
-        return 'h3';
-
-      case TYPES.BODY_PRIMARY:
-      case TYPES.HYPERLINK_PRIMARY:
-        return 'p';
-
-      case TYPES.SPAN:
-        return 'span';
-
-      case TYPES.DIV:
-        return 'div';
-
-      case TYPES.BODY_SECONDARY:
-      case TYPES.HYPERLINK_SECONDARY:
-      case TYPES.HIGHLIGHT_COMPACT:
-      case TYPES.BODY_COMPACT:
-      case TYPES.LABEL_COMPACT:
-        return 'small';
-
-      default:
-        return 'p';
-    }
-  };
-
-  const TagName = tagName || getTagName();
+  const tagNameLocal = tagName || inferTagName(type);
 
   return (
-    <TagName
+    <MdcText
       className={classnames(STYLE.wrapper, className)}
-      data-type={type}
+      type={mapOldToNewType(type)}
       id={id}
+      tagname={tagNameLocal}
       style={style}
       {...rest}
     >
       {children}
-    </TagName>
+    </MdcText>
   );
 };
 

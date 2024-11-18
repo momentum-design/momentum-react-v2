@@ -48,10 +48,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -59,21 +65,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -172,10 +192,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -183,21 +209,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -274,12 +314,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
+                      tagname="h3"
+                      type="body-large-bold"
                     >
-                      Test Child
-                    </h3>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        Test Child
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -287,21 +333,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -410,12 +470,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
+                      tagname="h3"
+                      type="body-large-bold"
                     >
-                      TestMeeting
-                    </h3>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        TestMeeting
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -423,13 +489,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -440,13 +513,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      Mon, Jan 1, 2023
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        Mon, Jan 1, 2023
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -700,10 +780,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -711,21 +797,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -844,12 +944,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
+                      tagname="h3"
+                      type="body-large-bold"
                     >
-                      Test Meeting Title
-                    </h3>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        Test Meeting Title
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -896,21 +1002,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div
@@ -957,12 +1077,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                             <Text
                               type="subheader-secondary"
                             >
-                              <h3
+                              <Text
                                 className="md-text-wrapper"
-                                data-type="subheader-secondary"
+                                tagname="h3"
+                                type="body-midsize-medium"
                               >
-                                Messages
-                              </h3>
+                                <mdc-text
+                                  class="md-text-wrapper"
+                                  suppressHydrationWarning={true}
+                                >
+                                  Messages
+                                </mdc-text>
+                              </Text>
                             </Text>
                           </button>
                         </FocusRing>
@@ -1010,12 +1136,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                             <Text
                               type="subheader-secondary"
                             >
-                              <h3
+                              <Text
                                 className="md-text-wrapper"
-                                data-type="subheader-secondary"
+                                tagname="h3"
+                                type="body-midsize-medium"
                               >
-                                Recording
-                              </h3>
+                                <mdc-text
+                                  class="md-text-wrapper"
+                                  suppressHydrationWarning={true}
+                                >
+                                  Recording
+                                </mdc-text>
+                              </Text>
                             </Text>
                           </button>
                         </FocusRing>
@@ -1090,12 +1222,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               type="button"
                             >
                               <Text>
-                                <p
+                                <Text
                                   className="md-text-wrapper"
-                                  data-type="body-primary"
+                                  tagname="p"
+                                  type="body-large-regular"
                                 >
-                                  Message
-                                </p>
+                                  <mdc-text
+                                    class="md-text-wrapper"
+                                    suppressHydrationWarning={true}
+                                  >
+                                    Message
+                                  </mdc-text>
+                                </Text>
                               </Text>
                             </button>
                           </FocusRing>
@@ -1151,12 +1289,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               type="button"
                             >
                               <Text>
-                                <p
+                                <Text
                                   className="md-text-wrapper"
-                                  data-type="body-primary"
+                                  tagname="p"
+                                  type="body-large-regular"
                                 >
-                                  Join
-                                </p>
+                                  <mdc-text
+                                    class="md-text-wrapper"
+                                    suppressHydrationWarning={true}
+                                  >
+                                    Join
+                                  </mdc-text>
+                                </Text>
                               </Text>
                             </button>
                           </FocusRing>
@@ -1228,10 +1372,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -1239,21 +1389,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -1356,12 +1520,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
+                      tagname="h3"
+                      type="body-large-bold"
                     >
-                      TestMeeting
-                    </h3>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        TestMeeting
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -1369,13 +1539,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -1386,13 +1563,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      Mon, Jan 1, 2023
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        Mon, Jan 1, 2023
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -1461,12 +1645,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               type="button"
                             >
                               <Text>
-                                <p
+                                <Text
                                   className="md-text-wrapper"
-                                  data-type="body-primary"
+                                  tagname="p"
+                                  type="body-large-regular"
                                 >
-                                  Message
-                                </p>
+                                  <mdc-text
+                                    class="md-text-wrapper"
+                                    suppressHydrationWarning={true}
+                                  >
+                                    Message
+                                  </mdc-text>
+                                </Text>
                               </Text>
                             </button>
                           </FocusRing>
@@ -1522,12 +1712,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               type="button"
                             >
                               <Text>
-                                <p
+                                <Text
                                   className="md-text-wrapper"
-                                  data-type="body-primary"
+                                  tagname="p"
+                                  type="body-large-regular"
                                 >
-                                  Join
-                                </p>
+                                  <mdc-text
+                                    class="md-text-wrapper"
+                                    suppressHydrationWarning={true}
+                                  >
+                                    Join
+                                  </mdc-text>
+                                </Text>
                               </Text>
                             </button>
                           </FocusRing>
@@ -1596,10 +1792,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -1607,23 +1809,37 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -1703,10 +1919,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -1714,23 +1936,37 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                     data-color="success"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="success"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="success"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -1809,10 +2045,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -1820,11 +2062,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -1835,13 +2084,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -1921,10 +2177,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -1932,11 +2194,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -1947,13 +2216,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     data-color="success"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="success"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="success"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -2039,12 +2315,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
+                      tagname="h3"
+                      type="body-large-bold"
                     >
-                      TestMeeting
-                    </h3>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        TestMeeting
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -2091,13 +2373,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      10:00am-11:00am
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        10:00am-11:00am
+                      </mdc-text>
+                    </Text>
                   </Text>
                   <DividerDot>
                     <div
@@ -2108,13 +2397,20 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
                     >
-                      Mon, Jan 1, 2023
-                    </small>
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      >
+                        Mon, Jan 1, 2023
+                      </mdc-text>
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -2212,10 +2508,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -2223,21 +2525,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
               </div>
@@ -2325,10 +2641,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                   <Text
                     type="header-primary"
                   >
-                    <h3
+                    <Text
                       className="md-text-wrapper"
-                      data-type="header-primary"
-                    />
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div>
@@ -2336,21 +2658,35 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                   <Text
                     data-color="secondary"
                     type="body-secondary"
                   >
-                    <small
+                    <Text
                       className="md-text-wrapper"
                       data-color="secondary"
-                      data-type="body-secondary"
-                    />
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
                   </Text>
                 </div>
                 <div
@@ -2397,12 +2733,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                             <Text
                               type="subheader-secondary"
                             >
-                              <h3
+                              <Text
                                 className="md-text-wrapper"
-                                data-type="subheader-secondary"
+                                tagname="h3"
+                                type="body-midsize-medium"
                               >
-                                Messages
-                              </h3>
+                                <mdc-text
+                                  class="md-text-wrapper"
+                                  suppressHydrationWarning={true}
+                                >
+                                  Messages
+                                </mdc-text>
+                              </Text>
                             </Text>
                           </button>
                         </FocusRing>
@@ -2450,12 +2792,18 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                             <Text
                               type="subheader-secondary"
                             >
-                              <h3
+                              <Text
                                 className="md-text-wrapper"
-                                data-type="subheader-secondary"
+                                tagname="h3"
+                                type="body-midsize-medium"
                               >
-                                Recording
-                              </h3>
+                                <mdc-text
+                                  class="md-text-wrapper"
+                                  suppressHydrationWarning={true}
+                                >
+                                  Recording
+                                </mdc-text>
+                              </Text>
                             </Text>
                           </button>
                         </FocusRing>

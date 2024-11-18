@@ -458,12 +458,18 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               id="1"
             >
               <Text>
-                <p
+                <Text
                   className="md-text-wrapper"
-                  data-type="body-primary"
+                  tagname="p"
+                  type="body-large-regular"
                 >
-                  Example tooltip content
-                </p>
+                  <mdc-text
+                    class="md-text-wrapper"
+                    suppressHydrationWarning={true}
+                  >
+                    Example tooltip content
+                  </mdc-text>
+                </Text>
               </Text>
             </div>
           </Tooltip>
@@ -950,12 +956,18 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               id="1"
             >
               <Text>
-                <p
+                <Text
                   className="md-text-wrapper"
-                  data-type="body-primary"
+                  tagname="p"
+                  type="body-large-regular"
                 >
-                  Example tooltip content
-                </p>
+                  <mdc-text
+                    class="md-text-wrapper"
+                    suppressHydrationWarning={true}
+                  >
+                    Example tooltip content
+                  </mdc-text>
+                </Text>
               </Text>
             </div>
           </Tooltip>
@@ -1442,12 +1454,18 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               id="1"
             >
               <Text>
-                <p
+                <Text
                   className="md-text-wrapper"
-                  data-type="body-primary"
+                  tagname="p"
+                  type="body-large-regular"
                 >
-                  Example tooltip content
-                </p>
+                  <mdc-text
+                    class="md-text-wrapper"
+                    suppressHydrationWarning={true}
+                  >
+                    Example tooltip content
+                  </mdc-text>
+                </Text>
               </Text>
             </div>
           </Tooltip>

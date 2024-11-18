@@ -5318,12 +5318,18 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
         tagName="h2"
         type="label-compact"
       >
-        <h2
+        <Text
           className="md-text-wrapper md-toast-title"
-          data-type="label-compact"
+          tagname="h2"
+          type="body-small-medium"
         >
-          Title
-        </h2>
+          <mdc-text
+            class="md-text-wrapper md-toast-title"
+            suppressHydrationWarning={true}
+          >
+            Title
+          </mdc-text>
+        </Text>
       </Text>
       <div
         className="md-toast-controls"
