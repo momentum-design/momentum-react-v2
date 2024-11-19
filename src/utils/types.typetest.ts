@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { RequireOneOf } from './types';
-import { Equal, Expect } from './types.test.util';
+import { Equal, Expect } from './typetest.util';
 
 // NOTE: STATIC TYPE TESTS RUN ON LINT
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -36,8 +36,3 @@ type cases = [
     >
   >
 ];
-
-// This is required otherwise the test suite will fail due to no tests being defined.
-it('works', () => {
-  expect(true).toBe(true);
-});
