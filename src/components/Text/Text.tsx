@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 
 import { DEFAULTS, STYLE } from './Text.constants';
 import { Props } from './Text.types';
-import './Text.style.scss';
 import classnames from 'classnames';
 import { Text as MdcText } from '@momentum-design/components/dist/react';
 import { inferTagName, mapOldToNewType } from './mappingUtils';

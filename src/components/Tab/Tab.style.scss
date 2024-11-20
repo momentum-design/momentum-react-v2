@@ -1,7 +1,6 @@
 .md-tab-wrapper {
   border: var(--md-globals-border-clear);
   cursor: pointer;
-  font-family: var(--md-globals-font-default);
   outline: none !important;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
@@ -15,6 +14,7 @@
       background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,
+      .md-text-wrapper::part(text),
       .md-icon-wrapper {
         color: var(--mds-color-theme-text-secondary-normal);
       }
@@ -23,6 +23,7 @@
         background-color: var(--mds-color-theme-button-secondary-hover);
 
         .md-text-wrapper,
+        .md-text-wrapper::part(text),
         .md-icon-wrapper {
           color: var(--mds-color-theme-text-secondary-normal);
         }
@@ -32,6 +33,7 @@
         background-color: var(--mds-color-theme-button-secondary-pressed);
 
         .md-text-wrapper,
+        .md-text-wrapper::part(text),
         .md-icon-wrapper {
           color: var(--mds-color-theme-text-primary-normal);
         }
@@ -42,6 +44,7 @@
       background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,
+      .md-text-wrapper::part(text),
       .md-icon-wrapper {
         color: var(--mds-color-theme-text-primary-disabled);
       }
@@ -57,6 +60,7 @@
     }
 
     .md-text-wrapper,
+    .md-text-wrapper::part(text),
     .md-icon-wrapper {
       color: var(--mds-color-theme-text-primary-normal);
       font-weight: 700;
@@ -66,6 +70,7 @@
       background-color: var(--mds-color-theme-button-secondary-active-hover);
 
       .md-text-wrapper,
+      .md-text-wrapper::part(text),
       .md-icon-wrapper {
         color: var(--mds-color-theme-text-primary-normal);
       }
@@ -75,6 +80,7 @@
       background-color: var(--mds-color-theme-button-secondary-active-pressed);
 
       .md-text-wrapper,
+      .md-text-wrapper::part(text),
       .md-icon-wrapper {
         color: var(--mds-color-theme-text-primary-normal);
       }
@@ -90,6 +96,7 @@
       background-color: var(--mds-color-theme-button-secondary-active-normal);
 
       .md-text-wrapper,
+      .md-text-wrapper::part(text),
       .md-icon-wrapper {
         color: var(--mds-color-theme-text-primary-disabled);
       }
