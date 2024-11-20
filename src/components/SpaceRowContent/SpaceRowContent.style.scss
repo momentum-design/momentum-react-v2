@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: flex-start;
 
-    mdc-text[data-test="list-item-second-line"]::part(text) {
+    mdc-text[data-test='list-item-second-line']::part(text) {
       margin-top: 0;
       width: unset;
     }
@@ -21,17 +21,22 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    mdc-text[data-test='list-item-second-line'] {
+      margin: 0;
+      margin-top: -4px;
+    }
   }
 
   mdc-text {
     max-width: 100%;
   }
 
-  mdc-text[data-test="list-item-first-line"] {
+  mdc-text[data-test='list-item-first-line'] {
     color: var(--mds-color-theme-text-secondary-normal);
   }
 
-  mdc-text[data-test="list-item-first-line"]::part(text) {
+  mdc-text[data-test='list-item-first-line']::part(text) {
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -40,12 +45,11 @@
     max-width: 100%;
   }
 
-  mdc-text[data-test="list-item-second-line"] {
+  mdc-text[data-test='list-item-second-line'] {
     margin: 0;
-    margin-top: -4px;
   }
- 
-  mdc-text[data-test="list-item-second-line"]::part(text) {
+
+  mdc-text[data-test='list-item-second-line']::part(text) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -58,25 +62,28 @@
 }
 
 .md-space-row-content-is-new-activity {
-  mdc-text[data-test="list-item-first-line"]::part(text) {
+  mdc-text[data-test='list-item-first-line']::part(text) {
     font-weight: 750 !important;
     color: var(--mds-color-theme-text-primary-normal) !important;
   }
 
-  mdc-text[data-test="list-item-first-line"][data-disabled='true'] {
-      color: var(--mds-color-theme-text-primary-disabled) !important;
+  mdc-text[data-test='list-item-first-line'][data-disabled='true'] {
+    color: var(--mds-color-theme-text-primary-disabled) !important;
   }
 }
 
-.md-list-item-base-wrapper, .md-tree-node-base-wrapper {
+.md-list-item-base-wrapper,
+.md-tree-node-base-wrapper {
   .md-space-row-content-menu-trigger-wrapper {
     opacity: 0;
     position: absolute;
   }
 }
 
-.md-list-item-base-wrapper:hover, .md-list-item-base-wrapper:focus-within,
-.md-tree-node-base-wrapper:hover, .md-tree-node-base-wrapper:focus-within {
+.md-list-item-base-wrapper:hover,
+.md-list-item-base-wrapper:focus-within,
+.md-tree-node-base-wrapper:hover,
+.md-tree-node-base-wrapper:focus-within {
   .md-space-row-content-menu-trigger-wrapper {
     opacity: 1;
     position: initial;
