@@ -30,7 +30,8 @@
     .md-list-header-list-item-base {
       &[data-position='fill'],
       &[data-position='middle'] > *,
-      .md-text-wrapper {
+      .md-text-wrapper,
+      .md-text-wrapper::part(text) {
         font-weight: 750;
       }
     }

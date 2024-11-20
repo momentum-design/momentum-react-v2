@@ -4,7 +4,8 @@
   &[data-size='32'] {
     // All immediate children and any deep .md-text-wrapper child
     & > *,
-    .md-text-wrapper {
+    .md-text-wrapper,
+    .md-text-wrapper::part(text) {
       font-weight: 550;
       font-size: 0.75rem;
     }
