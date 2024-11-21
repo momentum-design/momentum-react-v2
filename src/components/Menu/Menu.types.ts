@@ -46,11 +46,6 @@ export interface Props<T> extends AriaMenuProps<T> {
   tickPosition?: TickPosition;
 
   /**
-   * aria-labelledby attribute to associate with the menu items
-   */
-  ariaLabelledby?: string;
-
-  /**
    * Custom class for overriding this component's items CSS when selected.
    */
   classNameSelectedItem?: string;
