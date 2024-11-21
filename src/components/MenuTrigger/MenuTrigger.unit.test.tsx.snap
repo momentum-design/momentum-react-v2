@@ -292,6 +292,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -366,6 +367,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -487,6 +489,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -1343,6 +1346,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -2494,6 +2498,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -2568,6 +2573,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -2689,6 +2695,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -3545,6 +3552,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -4696,6 +4704,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -4770,6 +4779,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -4891,6 +4901,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -5747,6 +5758,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -6900,6 +6912,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -6974,6 +6987,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -7097,6 +7111,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -7953,6 +7968,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -9104,6 +9120,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -9178,6 +9195,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -9299,6 +9317,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -10155,6 +10174,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -11306,6 +11326,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -11380,6 +11401,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -11532,6 +11554,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -12388,6 +12411,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -13584,6 +13608,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   style="color: pink;"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -13658,6 +13683,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -13789,6 +13815,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -14645,6 +14672,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -15796,6 +15824,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -15870,6 +15899,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -15991,6 +16021,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -16847,6 +16878,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -18002,6 +18034,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   role="generic"
                 >
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -18076,6 +18109,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     role="separator"
                   />
                   <div
+                    aria-labelledby="test-ID"
                     class="md-menu-wrapper"
                     id="test-ID"
                     role="menu"
@@ -18197,6 +18231,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     selectionMode="single"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
@@ -19053,6 +19088,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     selectionMode="multiple"
                   >
                     <div
+                      aria-labelledby="test-ID"
                       className="md-menu-wrapper"
                       id="test-ID"
                       onBlur={[Function]}
