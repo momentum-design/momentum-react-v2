@@ -48,7 +48,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     tickPosition = DEFAULTS.TICK_POSITION,
     itemShape = DEFAULTS.ITEM_SHAPE,
     itemSize = DEFAULTS.ITEM_SIZE,
-    ariaLabelledby,
     shouldItemFocusBeInset,
   } = props;
 
@@ -119,10 +118,11 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
     [state]
   );
 
-  // needs to be removed because when used in Menu Trigger, it will
-  // label it by the triggerComponent's id, and that doesn't really make
-  // sense especially when there are multiple menus inside.
-  delete menuProps['aria-labelledby'];
+  // the label can be specified as part of the props, or part of the menu context (e.g. provided by MenuTrigger)
+  if (!menuProps['aria-label'] && !menuProps['aria-labelledby']) {
+    // eslint-disable-next-line no-console
+    console.error('MRV2: Menu is missing aria-label or aria-labelledby.');
+  }
 
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
@@ -136,7 +136,6 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
           id={id}
           style={style}
           ref={ref}
-          aria-labelledby={ariaLabelledby}
           {...menuProps}
         >
           {itemArray.map((key) => {
