@@ -1,4 +1,6 @@
 {
+  "plugins": ["stylelint-rem-over-px"],
+  "ignoreFiles": ["node_modules/**"],
   "rules": {
     "at-rule-empty-line-before": [
       "always",
@@ -29,6 +31,13 @@
       {
         "ignore": ["after-comment", "first-nested"],
         "severity": "warning"
+      }
+    ],
+    "rem-over-px/rem-over-px": [
+      true,
+      {
+        "severity": "warning",
+        "disableFix": true
       }
     ]
   }
