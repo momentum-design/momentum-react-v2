@@ -54,6 +54,11 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
 
   const contextProps = useMenuContext();
 
+  // if an explicit arid-label is provided, discard the auto aria-labelledby provided by MenuTrigger
+  if (contextProps['aria-labelledby'] && props['aria-label']) {
+    delete contextProps['aria-labelledby'];
+  }
+
   const _props = {
     ...mergeProps(contextProps, props),
   };

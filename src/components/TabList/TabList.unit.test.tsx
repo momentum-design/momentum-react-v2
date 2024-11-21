@@ -183,13 +183,13 @@ describe('<TabList />', () => {
     });
 
     it('checks for a screen reader label', () => {
-      const useCheckForScreenReaderLabelSpy = jest.spyOn(a11yUtils, 'useCheckForScreenReaderLabel');
+      const useCheckAriaLabelSpy = jest.spyOn(a11yUtils, 'useCheckAriaLabel');
       mount(
         <TabList aria-label="asdf">
           <Tab key="one">Hello</Tab>
         </TabList>
       );
-      expect(useCheckForScreenReaderLabelSpy).toHaveBeenCalledWith('TabList', expect.any(Object));
+      expect(useCheckAriaLabelSpy).toHaveBeenCalledWith('TabList', expect.any(Object));
     });
   });
 
