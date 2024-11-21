@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useCheckForScreenReaderLabel } from './a11y';
+import { useCheckAriaLabel } from './a11y';
 
 describe('a11y utils', () => {
   describe('useCheckForScreenReaderLabel', () => {
@@ -15,8 +15,8 @@ describe('a11y utils', () => {
       unmount?.();
     });
 
-    const mountHook = (...args: Parameters<typeof useCheckForScreenReaderLabel>) => {
-      ({ unmount } = renderHook(() => useCheckForScreenReaderLabel(...args)));
+    const mountHook = (...args: Parameters<typeof useCheckAriaLabel>) => {
+      ({ unmount } = renderHook(() => useCheckAriaLabel(...args)));
     };
 
     it.each`
@@ -33,7 +33,7 @@ describe('a11y utils', () => {
 
         if (expectedWarn) {
           expect(consoleWarnSpy).toHaveBeenCalledWith(
-            `MRV2: ${componentName} requires aria-labelledby or aria-label.`
+            `MRV2: ${componentName} requires aria-label or aria-labelledby.`
           );
         } else {
           expect(consoleWarnSpy).not.toHaveBeenCalled();

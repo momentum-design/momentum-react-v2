@@ -4,16 +4,18 @@ import { RequireOneOf } from './types';
 export type AriaLabelRequired = RequireOneOf<AriaAttributes, ['aria-label', 'aria-labelledby']>;
 
 /**
- * Check if `aria-labelledby` or `aria-label` are defined and are truthy
+ * Check if `aria-label` or `aria-labelledby` are defined and are truthy
  *
  * @param componentName The name of the component
  * @param props The object of props passed to the component
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
-export function useCheckForScreenReaderLabel(componentName: string, props: any): void {
+export function useCheckAriaLabel(
+  componentName: string,
+  props: { 'aria-label'?: string; 'aria-labelledby'?: string }
+): void {
   useEffect(() => {
-    if (!props['aria-labelledby'] && !props['aria-label']) {
-      console.warn(`MRV2: ${componentName} requires aria-labelledby or aria-label.`);
+    if (!props['aria-label'] && !props['aria-labelledby']) {
+      console.warn(`MRV2: ${componentName} requires aria-label or aria-labelledby.`);
     }
   }, [componentName, props]);
 }
