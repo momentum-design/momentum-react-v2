@@ -154,6 +154,7 @@ export {
   List as ListNext,
   ListRefObject,
   Popover as PopoverNext,
+  PopoverInstance,
   Reaction,
   OnVideoReactionName,
   OriginalReactionName,
@@ -205,3 +206,4 @@ export {
 } from './components';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
+export { AriaLabelRequired } from './utils/a11y';

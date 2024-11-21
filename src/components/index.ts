@@ -56,6 +56,7 @@ export { default as MenuTrigger } from './MenuTrigger';
 export { default as Menu, SelectionGroup } from './Menu';
 export { default as DividerDot } from './DividerDot';
 export { default as Popover } from './Popover';
+export type { PopoverInstance } from './Popover';
 export { default as ListHeader } from './ListHeader';
 export { default as LoadingSpinner } from './LoadingSpinner';
 export { default as Tag } from './Tag';
