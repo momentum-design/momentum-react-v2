@@ -20,6 +20,7 @@ import MenuSelectionGroup from '../MenuSelectionGroup';
 import ContentSeparator from '../ContentSeparator';
 import { defaults } from 'lodash';
 import { ListContext } from '../List/List.utils';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 export const MenuContext = React.createContext<MenuContextValue>({});
 
@@ -119,10 +120,7 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
   );
 
   // the label can be specified as part of the props, or part of the menu context (e.g. provided by MenuTrigger)
-  if (!menuProps['aria-label'] && !menuProps['aria-labelledby']) {
-    // eslint-disable-next-line no-console
-    console.error('MRV2: Menu is missing aria-label or aria-labelledby.');
-  }
+  useCheckAriaLabel('Menu', menuProps);
 
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row

@@ -11,7 +11,7 @@ import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
 import { DEFAULTS, STYLE } from './TabList.constants';
 import './TabList.style.scss';
 import { Props } from './TabList.types';
-import { useCheckForScreenReaderLabel } from '../../utils/a11y';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 /**
  * The TabList component.
@@ -28,7 +28,7 @@ const TabList: FC<Props> = (props: Props) => {
     ? (_children as ReactElement<TabProps>[])
     : [_children];
 
-  useCheckForScreenReaderLabel('TabList', props);
+  useCheckAriaLabel('TabList', props);
 
   const buttonGroupProps = defaultsDeep({}, otherProps, {
     round: true,
