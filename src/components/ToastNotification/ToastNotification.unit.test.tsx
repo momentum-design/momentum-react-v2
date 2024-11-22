@@ -174,7 +174,6 @@ describe('<ToastNotification />', () => {
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
-
     it('should have provided id when id is provided', async () => {
       expect.assertions(1);
 

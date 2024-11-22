@@ -10,7 +10,6 @@ export type SupportedChildren = ToastContentProps | ToastDetailsProps;
 export type SupportedControlButtons = ButtonControlProps;
 
 export interface Props {
-
   /**
    * Aria-live prop as a string. This will be used by a screen reader for live changes.
    */
@@ -57,7 +56,7 @@ export interface Props {
   title?: string;
 
   /**
- * Override the tag used to surround the text
- */
+   * Override the tag used to surround the text
+   */
   titleTagName?: AllowedTagNames;
 }

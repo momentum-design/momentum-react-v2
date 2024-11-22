@@ -243,7 +243,7 @@ describe('Link', () => {
     it('should have tabIndex when tabIndex is provided', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<LinkNext tabIndex={0}/>);
+      const wrapper = await mountAndWait(<LinkNext tabIndex={0} />);
 
       const element = wrapper.find('a');
 

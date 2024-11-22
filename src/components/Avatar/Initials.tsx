@@ -29,7 +29,11 @@ const Initials: FC<InitialsProps> = (props: InitialsProps) => {
       );
   }
 
-  return <span className={className} aria-hidden="true">{initials}</span>;
+  return (
+    <span className={className} aria-hidden="true">
+      {initials}
+    </span>
+  );
 };
 
 export default Initials;

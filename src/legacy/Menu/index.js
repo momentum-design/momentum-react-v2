@@ -10,8 +10,8 @@ import ListContext from '../ListContext';
 import MenuContext from '../MenuContext';
 
 /**
-* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
-**/
+ * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+ **/
 class Menu extends React.Component {
   constructor(props) {
     super(props);

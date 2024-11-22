@@ -60,5 +60,5 @@ const swcLoaderOptions = (lang, mode, isHMROn = false) => {
 };
 
 module.exports = {
-    swcLoaderOptions
+  swcLoaderOptions,
 };

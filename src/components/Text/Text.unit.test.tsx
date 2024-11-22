@@ -11,7 +11,7 @@ describe('Text', () => {
   let container;
 
   const setup = async (component: any) => {
-    const {container} = render(component);
+    const { container } = render(component);
 
     // we have to wait for the web component to be rendered
     await waitFor(() => {
@@ -107,7 +107,7 @@ describe('Text', () => {
       const id = 'example-id';
 
       const container = await setup(<Text id={id} />);
-       
+
       expect(container.querySelector('mdc-text').id).toBe(id);
     });
 
@@ -129,7 +129,6 @@ describe('Text', () => {
       const expectedMdcTextType = FONT_TYPE.BODY_SMALL_MEDIUM;
 
       const container = await setup(<Text type={type} />);
-
 
       expect(container.querySelector('mdc-text').getAttribute('type')).toBe(expectedMdcTextType);
     });

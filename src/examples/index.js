@@ -10,7 +10,7 @@ import './styles.scss';
 render(
   <AppContainer>
     <BrowserRouter>
-        <App />
+      <App />
     </BrowserRouter>
   </AppContainer>,
   document.getElementById('app')
@@ -21,7 +21,7 @@ if (module.hot) {
     render(
       <AppContainer>
         <BrowserRouter>
-            <App />
+          <App />
         </BrowserRouter>
       </AppContainer>,
       document.getElementById('app')

@@ -278,7 +278,6 @@ describe('<Toast />', () => {
     });
 
     it('checks that default titleTagName is h2', async () => {
-
       const wrapper = await mountAndWait(
         <Toast controls={controls} title="Toast Title">
           {content}
@@ -290,14 +289,13 @@ describe('<Toast />', () => {
         tagName: 'h2',
         type: 'label-compact',
         className: 'md-toast-title',
-        children: 'Toast Title'
+        children: 'Toast Title',
       });
     });
 
     it('checks provided titleTagName', async () => {
-
       const wrapper = await mountAndWait(
-        <Toast controls={controls} title="Toast Title" titleTagName='h3'>
+        <Toast controls={controls} title="Toast Title" titleTagName="h3">
           {content}
           {details}
         </Toast>
@@ -307,7 +305,7 @@ describe('<Toast />', () => {
         tagName: 'h3',
         type: 'label-compact',
         className: 'md-toast-title',
-        children: 'Toast Title'
+        children: 'Toast Title',
       });
     });
 

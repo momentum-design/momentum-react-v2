@@ -1,13 +1,13 @@
 const CLASS_PREFIX = 'md-combo-box';
 
 const DEFAULTS = {
-  WIDTH:'16.25rem',
-  PLACEHOLDER:'',
-  NO_RESULT_TEXT:'No results found',
-  SHOULD_FILTER_ON_ARROW_BUTTON:true,
-  ERROR:false,
-  SELECTEDKEY:'',
-  DISABLEDKEYS:[],
+  WIDTH: '16.25rem',
+  PLACEHOLDER: '',
+  NO_RESULT_TEXT: 'No results found',
+  SHOULD_FILTER_ON_ARROW_BUTTON: true,
+  ERROR: false,
+  SELECTEDKEY: '',
+  DISABLEDKEYS: [],
 };
 
 const STYLE = {
@@ -31,20 +31,20 @@ const KEYS = {
 
 const ELEMENT = {
   PROPS: {
-    SELECTION_CONTAINER_MAX_HEIGHT:244,
+    SELECTION_CONTAINER_MAX_HEIGHT: 244,
   },
 };
 
 const EVENT = {
-  KEY:{
-    KEYCODE:{
+  KEY: {
+    KEYCODE: {
       ESCAPE: 'Escape',
       ENTER: 'Enter',
       TAB: 'Tab',
       ARROW_DOWN: 'ArrowDown',
       ARROW_UP: 'ArrowUp',
-    }
-  }
+    },
+  },
 };
 
-export{STYLE,DEFAULTS,KEYS,ELEMENT,EVENT};
+export { STYLE, DEFAULTS, KEYS, ELEMENT, EVENT };

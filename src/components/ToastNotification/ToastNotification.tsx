@@ -14,8 +14,17 @@ import Text from '../Text';
  * The ToastNotification component.
  */
 const ToastNotification: FC<Props> = (props: Props) => {
-  const { className, id, style, content, leadingVisual, buttonGroup, onClose, closeButtonLabel, ariaLabel } =
-    props;
+  const {
+    className,
+    id,
+    style,
+    content,
+    leadingVisual,
+    buttonGroup,
+    onClose,
+    closeButtonLabel,
+    ariaLabel,
+  } = props;
 
   return (
     <ModalContainer

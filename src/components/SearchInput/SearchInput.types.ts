@@ -3,7 +3,7 @@ import { AriaSearchFieldProps } from '@react-types/searchfield';
 import { HEIGHTS } from './SearchInput.constants';
 import { IconProps } from '../Icon';
 
-export type SearchFieldHeight = typeof HEIGHTS[number];
+export type SearchFieldHeight = (typeof HEIGHTS)[number];
 
 export interface SearchFilterTranslations {
   /**

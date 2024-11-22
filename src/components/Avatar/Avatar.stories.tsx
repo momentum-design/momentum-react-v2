@@ -14,9 +14,8 @@ import {
 
 import Documentation from './Avatar.documentation.mdx';
 import argTypes from './Avatar.stories.args';
-import { PresenceType , Props } from './Avatar.types';
+import { PresenceType, Props } from './Avatar.types';
 import { AVATAR_COLORS, SIZES } from './Avatar.constants';
-
 
 const DocsPage: FC = () => (
   <>
@@ -191,9 +190,9 @@ const onPressFunc = () => {
   return 'h1';
 };
 
-type simpleDataType = Props & {label:string}
+type simpleDataType = Props & { label: string };
 
-const simpleData:simpleDataType[] = [
+const simpleData: simpleDataType[] = [
   {
     label: 'Person typing case',
     type: 'person',
@@ -224,7 +223,7 @@ const simpleData:simpleDataType[] = [
     title: 'Person with icon avatar',
     presence: PresenceType.Active,
     presenceLabel: 'Active',
-    icon:'accessibility'
+    icon: 'accessibility',
   },
   {
     label: 'Person without avatar',
@@ -249,7 +248,7 @@ const simpleData:simpleDataType[] = [
     onPress: onPressFunc,
     mainLabel: 'Bot picture of Bot with icon avatar',
     title: 'Bot with icon avatar',
-    icon:'accessibility'
+    icon: 'accessibility',
   },
   {
     label: 'Bot without avatar',
@@ -263,14 +262,14 @@ const simpleData:simpleDataType[] = [
     type: 'space',
     mainLabel: 'Space picture of Space with src avatar',
     title: 'Space with src avatar',
-    src:'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~1eb65fdf-9643-417f-9974-ad72cae0e10f/V1~6dca4ec5f302164eaba2a84b9055d8d169508c4f615741e961874df6851726f8~d66e9b1ec2f747b18741cd8c29cffebd~40'
+    src: 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~1eb65fdf-9643-417f-9974-ad72cae0e10f/V1~6dca4ec5f302164eaba2a84b9055d8d169508c4f615741e961874df6851726f8~d66e9b1ec2f747b18741cd8c29cffebd~40',
   },
   {
     label: 'Space with icon avatar',
     type: 'space',
     mainLabel: 'Space picture of Space with src avatar',
     title: 'Space with icon avatar',
-    icon:'accessibility'
+    icon: 'accessibility',
   },
   {
     label: 'Space without avatar',
@@ -281,7 +280,7 @@ const simpleData:simpleDataType[] = [
 ];
 
 Accessibility.parameters = {
-  variants:simpleData
+  variants: simpleData,
 };
 
-export { Example, PresenceTypes, Color, Sizes, Icons, Common, Accessibility};
+export { Example, PresenceTypes, Color, Sizes, Icons, Common, Accessibility };

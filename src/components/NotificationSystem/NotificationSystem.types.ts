@@ -3,8 +3,8 @@ import { ATTENTION, POSITION } from './NotificationSystem.constants';
 import { dismiss, isActive, notify, update } from './NotificationSystem.utils';
 import type { ToastOptions, UpdateOptions } from 'react-toastify';
 
-export type AttentionType = typeof ATTENTION[keyof typeof ATTENTION];
-export type PositionType = typeof POSITION[keyof typeof POSITION];
+export type AttentionType = (typeof ATTENTION)[keyof typeof ATTENTION];
+export type PositionType = (typeof POSITION)[keyof typeof POSITION];
 
 type CustomOptions = {
   /**
@@ -138,5 +138,5 @@ export interface Props {
   /**
    * Required ariaLabel for the notification system container section to be a region (a11y requirement)
    */
-  ariaLabel: string
+  ariaLabel: string;
 }
