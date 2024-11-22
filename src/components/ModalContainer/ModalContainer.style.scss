@@ -6,7 +6,8 @@
   width: fit-content;
   list-style: none;
   margin: 0;
-  border: 0.0625rem var(--md-globals-border-style-solid) var(--mds-color-theme-outline-secondary-normal);
+  border: 0.0625rem var(--md-globals-border-style-solid)
+    var(--mds-color-theme-outline-secondary-normal);
   outline: none;
 
   /* Arrow placement (svg arrow size is 12px, that's why the following offsets are set like that) */
