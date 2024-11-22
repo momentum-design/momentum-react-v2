@@ -45,6 +45,12 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     isShowIcon = true;
   }
 
+  if (isShowIcon && !tooltipContent && !externalLinkIconProps?.['aria-label']) {
+    console.warn(
+      'MRV2: The external link icon is enabled but neither tooltipContent nor an aria-label is provided for the icon.'
+    );
+  }
+
   const commonProps = {
     ...linkProps,
     style,
