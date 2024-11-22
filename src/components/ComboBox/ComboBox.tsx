@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Item } from '@react-stately/collections';
 import TextInput from '../TextInput';
@@ -78,7 +79,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
 
   const handleFocusBackToInput = useCallback(() => {
     inputRef?.current?.focus();
-  }, [inputRef]);
+  }, [inputRef.current]);
 
   const handleFilter = useCallback(
     (currentInputValue = '') => {
@@ -106,7 +107,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       }
     }
     setShouldFocusItem(false);
-  }, []);
+  }, [containerRef.current]);
 
   // Used to prevent the bottom of the list from exceeding the window boundary.
   const handleSelectionContainerMaxHeight = useCallback(() => {
@@ -119,7 +120,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     } else {
       setSelectionContainerMaxHeight(ELEMENT.PROPS.SELECTION_CONTAINER_MAX_HEIGHT);
     }
-  }, [inputRef]);
+  }, [inputRef.current]);
 
   // Since the positioning of the list uses ‘fix’, it is necessary to calculate the height of all scroll bars of the list’s ancestor elements,
   // and then set the translate to prevent the positioning of the list from being affected by the scroll bars of the ancestor elements.
@@ -128,7 +129,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       const scrollTop = getSumScrollTopFunc(inputRef.current);
       selectionPositionRef.current.style.transform = `translateY(${-scrollTop}px)`;
     }
-  }, [inputRef, isOpen]);
+  }, [inputRef.current, isOpen]);
 
   // event
 
@@ -146,7 +147,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         }
       }
     },
-    [isOpen]
+    [containerRef.current, isOpen]
   );
 
   const handleTriggerOutsideForInput = useCallback(
@@ -158,7 +159,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         setInputValue(currentItem.label ?? '');
       }
     },
-    [selectedKey, originComboBoxGroups, handleFilter, searchItem]
+    [containerRef.current, selectedKey, originComboBoxGroups, handleFilter, searchItem]
   );
 
   const handleItemFocusChange = useCallback(
@@ -170,7 +171,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         item.scrollIntoView();
       }
     },
-    []
+    [menuRef.current]
   );
 
   const handlePreventScroll = useCallback(
@@ -181,7 +182,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         }
       }
     },
-    [isOpen]
+    [selectionPositionRef.current, isOpen]
   );
 
   const handleInputKeyDown = useCallback(
@@ -224,21 +225,21 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     (event) => {
       setIsFocused(containerRef?.current?.contains(event.target));
     },
-    []
+    [containerRef.current]
   );
 
   const handleGetPreFocusEle = useCallback(
     (event) => {
       setIsPreFocused(containerRef?.current?.contains(event.target));
     },
-    []
+    [containerRef.current]
   );
 
   const handleGetInputFocus = useCallback(
     (event) => {
       isInputFocused.current = inputRef?.current?.contains(event.target);
     },
-    [inputRef]
+    [inputRef.current]
   );
 
   const handleInputFocus = useCallback(() => {
@@ -296,7 +297,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       document.removeEventListener('focusin', handleGetFocusEle);
       containerRef?.current?.removeEventListener('focusout', handleGetPreFocusEle);
     };
-  }, [handleGetFocusEle, handleGetPreFocusEle]);
+  }, [containerRef.current, handleGetFocusEle, handleGetPreFocusEle]);
 
   useEffect(() => {
     // Fix the issue where focusing on the input in certain situations does not correctly filter the expanded items
@@ -304,7 +305,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     return () => {
       inputRef?.current?.removeEventListener('focus', handleInputFocus);
     };
-  }, [handleInputFocus, inputRef]);
+  }, [inputRef.current, handleInputFocus]);
 
   useEffect(() => {
     document.addEventListener('mousedown', handleTriggerOutsideForList);
@@ -332,7 +333,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     return () => {
       containerRef?.current?.removeEventListener('keydown', handlerStopPropagation);
     };
-  }, [handlerStopPropagation]);
+  }, [containerRef.current, handlerStopPropagation]);
 
   useEffect(() => {
     document.addEventListener('focusin', handleGetInputFocus);
@@ -347,7 +348,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     return () => {
       menuRef?.current?.removeEventListener('focusin', handleItemFocusChange);
     };
-  }, [handleItemFocusChange]);
+  }, [menuRef.current, handleItemFocusChange]);
 
   useEffect(() => {
     menuRef?.current?.addEventListener('keydown', handleMenuKeyDown);
@@ -355,14 +356,14 @@ const ComboBox: React.FC<Props> = (props: Props) => {
     return () => {
       menuRef?.current?.removeEventListener('keydown', handleMenuKeyDown);
     };
-  }, [handleMenuKeyDown]);
+  }, [menuRef.current, handleMenuKeyDown]);
 
   useEffect(() => {
     inputRef?.current?.addEventListener('keydown', handleInputKeyDown);
     return () => {
       inputRef?.current?.removeEventListener('keydown', handleInputKeyDown);
     };
-  }, [handleInputKeyDown, inputRef]);
+  }, [inputRef?.current, handleInputKeyDown]);
 
   useEffect(() => {
     if (shouldFocusItem && isOpen) {
@@ -385,7 +386,15 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         setIsOpen(false);
       }
     }
-  }, [isPreFocused, isFocused, selectedKey, originComboBoxGroups, searchItem, handleFilter]);
+  }, [
+    containerRef.current,
+    isPreFocused,
+    isFocused,
+    selectedKey,
+    originComboBoxGroups,
+    searchItem,
+    handleFilter,
+  ]);
 
   // subcomponent event
 
