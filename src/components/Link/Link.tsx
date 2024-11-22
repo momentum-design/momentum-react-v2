@@ -37,13 +37,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
 
   const { linkProps } = useLink({ ...mutatedProps, elementType: 'a' }, ref);
 
-  let isShowIcon = false;
-
-  if (hasExternalLinkIcon === undefined && isExternalLink) {
-    isShowIcon = true;
-  } else if (hasExternalLinkIcon) {
-    isShowIcon = true;
-  }
+  const isShowIcon = hasExternalLinkIcon || (hasExternalLinkIcon === undefined && isExternalLink);
 
   if (isShowIcon && !tooltipContent && !externalLinkIconProps?.['aria-label']) {
     console.warn(
@@ -63,34 +57,26 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     'data-inverted': inverted || DEFAULTS.INVERTED,
   };
 
+  const content = (
+    <a {...commonProps}>
+      <div className={STYLE.container}>
+        {props.children}
+        {isShowIcon && (
+          <Icon className={STYLE.icon} scale={16} name="pop-out" {...externalLinkIconProps} />
+        )}
+      </div>
+    </a>
+  );
+
   return (
     <FocusRing disabled={disabled}>
-      <>
-        {tooltipContent && (
-          <Tooltip
-            type={tooltipType}
-            placement="bottom"
-            triggerComponent={
-              <a {...commonProps}>
-                <div className={STYLE.container}>
-                  {props.children}
-                  {isShowIcon && (
-                    <Icon
-                      className={STYLE.icon}
-                      scale={16}
-                      name="pop-out"
-                      {...externalLinkIconProps}
-                    />
-                  )}
-                </div>
-              </a>
-            }
-          >
-            {tooltipContent}
-          </Tooltip>
-        )}
-        {!tooltipContent && <a {...commonProps}>{props.children}</a>}
-      </>
+      {tooltipContent ? (
+        <Tooltip type={tooltipType} placement="bottom" triggerComponent={content}>
+          {tooltipContent}
+        </Tooltip>
+      ) : (
+        content
+      )}
     </FocusRing>
   );
 });

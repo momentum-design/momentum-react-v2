@@ -98,7 +98,7 @@ describe('Link', () => {
 
       const wrapper = await mountAndWait(<LinkNext>{child}</LinkNext>);
 
-      const element = wrapper.find('a').getDOMNode();
+      const element = wrapper.find('a div').getDOMNode();
 
       expect(element.innerHTML).toBe(child);
     });
@@ -129,6 +129,9 @@ describe('Link', () => {
         placement: 'bottom',
         triggerComponent: expect.any(Object),
         children: tooltipContent,
+        className: '',
+        onBlur: expect.any(Function),
+        onFocus: expect.any(Function),
       });
     });
 
@@ -148,6 +151,9 @@ describe('Link', () => {
         placement: 'bottom',
         triggerComponent: expect.any(Object),
         children: tooltipContent,
+        className: '',
+        onBlur: expect.any(Function),
+        onFocus: expect.any(Function),
       });
     });
 
@@ -231,24 +237,29 @@ describe('Link', () => {
 
       expect(element.props()).toEqual({
         rel: 'noopener noreferrer',
-        children: undefined,
+        children: expect.any(Object),
         className: 'md-link-wrapper',
         'data-disabled': false,
         'data-inverted': false,
         target: '_blank',
         title: undefined,
+        onBlur: expect.any(Function),
+        onFocus: expect.any(Function),
+        onClick: undefined,
+        style: undefined,
+        tabIndex: undefined,
       });
     });
 
     it('should have tabIndex when tabIndex is provided', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<LinkNext tabIndex={0}/>);
+      const wrapper = await mountAndWait(<LinkNext tabIndex={0} />);
 
       const element = wrapper.find('a');
 
       expect(element.props()).toEqual({
-        children: undefined,
+        children: expect.any(Object),
         className: 'md-link-wrapper',
         'data-disabled': false,
         'data-inverted': false,
@@ -257,6 +268,8 @@ describe('Link', () => {
         onClick: undefined,
         title: undefined,
         rel: '',
+        onBlur: expect.any(Function),
+        onFocus: expect.any(Function),
       });
     });
   });
