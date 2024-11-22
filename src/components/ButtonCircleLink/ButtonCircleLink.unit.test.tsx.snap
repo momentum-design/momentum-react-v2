@@ -35,8 +35,14 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot 1`] = `
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
-        />
+        >
+          <div
+            className="md-link-container"
+          />
+        </a>
       </FocusRing>
     </FocusRing>
   </Link>
@@ -79,9 +85,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot when a ghost 1`] = 
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
         >
-          X
+          <div
+            className="md-link-container"
+          >
+            X
+          </div>
         </a>
       </FocusRing>
     </FocusRing>
@@ -130,9 +142,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot when a ghost and di
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
         >
-          X
+          <div
+            className="md-link-container"
+          >
+            X
+          </div>
         </a>
       </FocusRing>
     </FocusRing>
@@ -176,9 +194,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot when color is outli
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
         >
-          X
+          <div
+            className="md-link-container"
+          >
+            X
+          </div>
         </a>
       </FocusRing>
     </FocusRing>
@@ -224,8 +248,14 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot when color is outli
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
-        />
+        >
+          <div
+            className="md-link-container"
+          />
+        </a>
       </FocusRing>
     </FocusRing>
   </Link>
@@ -272,9 +302,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot when disabled 1`] =
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
         >
-          X
+          <div
+            className="md-link-container"
+          >
+            X
+          </div>
         </a>
       </FocusRing>
     </FocusRing>
@@ -318,8 +354,14 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with className 1`] 
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
-        />
+        >
+          <div
+            className="md-link-container"
+          />
+        </a>
       </FocusRing>
     </FocusRing>
   </Link>
@@ -362,9 +404,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with color 1`] = `
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
         >
-          X
+          <div
+            className="md-link-container"
+          >
+            X
+          </div>
         </a>
       </FocusRing>
     </FocusRing>
@@ -410,8 +458,14 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with id 1`] = `
           data-size={40}
           href="https://www.webex.com"
           id="example-id"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
-        />
+        >
+          <div
+            className="md-link-container"
+          />
+        </a>
       </FocusRing>
     </FocusRing>
   </Link>
@@ -454,9 +508,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with size 1`] = `
           data-shallow-disabled={false}
           data-size={64}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
         >
-          X
+          <div
+            className="md-link-container"
+          >
+            X
+          </div>
         </a>
       </FocusRing>
     </FocusRing>
@@ -509,13 +569,19 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with style 1`] = `
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
           style={
             Object {
               "color": "pink",
             }
           }
-        />
+        >
+          <div
+            className="md-link-container"
+          />
+        </a>
       </FocusRing>
     </FocusRing>
   </Link>
@@ -559,9 +625,15 @@ exports[`<ButtonCircleLink /> snapshot should match snapshot with title 1`] = `
           data-shallow-disabled={false}
           data-size={40}
           href="https://www.webex.com"
+          onBlur={[Function]}
+          onFocus={[Function]}
           rel=""
           title="Example Text"
-        />
+        >
+          <div
+            className="md-link-container"
+          />
+        </a>
       </FocusRing>
     </FocusRing>
   </Link>
