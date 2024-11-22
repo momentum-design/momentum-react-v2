@@ -13,7 +13,6 @@ import { Template } from '../../storybook/helper.stories.templates';
 import { IComboBoxGroup, IComboBoxItem, Props } from './ComboBox.types';
 import OverlayAlert from '../OverlayAlert';
 
-
 export default {
   title: 'Momentum UI/ComboBox',
   component: ComboBox,
@@ -25,60 +24,58 @@ export default {
   },
 };
 
-
-const ComboBoxWrapper = (props:Props) => {
+const ComboBoxWrapper = (props: Props) => {
   return (
-      <ComboBox {...props}>
-        {(group: IComboBoxGroup) => {
-          const itemsEle = group?.items?.map((menuItem: IComboBoxItem) => {
-            return (<Item key={menuItem.key} textValue={menuItem.label}>  
-                <div key={menuItem.key+'-label'}>{menuItem.label}</div>
-            </Item>);
-          });
-
-          return group.section ? (
-            <Section title={group.section} key={group.section}>
-              {itemsEle}
-            </Section>
-          ) : (
-            <Section key="withoutSection">{itemsEle}</Section>
+    <ComboBox {...props}>
+      {(group: IComboBoxGroup) => {
+        const itemsEle = group?.items?.map((menuItem: IComboBoxItem) => {
+          return (
+            <Item key={menuItem.key} textValue={menuItem.label}>
+              <div key={menuItem.key + '-label'}>{menuItem.label}</div>
+            </Item>
           );
-        }}
-      </ComboBox>
+        });
+
+        return group.section ? (
+          <Section title={group.section} key={group.section}>
+            {itemsEle}
+          </Section>
+        ) : (
+          <Section key="withoutSection">{itemsEle}</Section>
+        );
+      }}
+    </ComboBox>
   );
 };
 
-
-
-
 const withoutSection: IComboBoxGroup[] = [
   {
-    items:[
-      {key:'key1',label:'item1'},
-      {key:'key2',label:'item2'},
-      {key:'key3',label:'item3'},
-    ]
+    items: [
+      { key: 'key1', label: 'item1' },
+      { key: 'key2', label: 'item2' },
+      { key: 'key3', label: 'item3' },
+    ],
   },
 ];
 
 const withSection: IComboBoxGroup[] = [
   {
-    section:'section1',
-    items:[
-      {key:'key1',label:'item1'},
-      {key:'key2',label:'item2'},
-      {key:'key3',label:'item3'},
-      {key:'key4',label:'item4'}
-    ]
+    section: 'section1',
+    items: [
+      { key: 'key1', label: 'item1' },
+      { key: 'key2', label: 'item2' },
+      { key: 'key3', label: 'item3' },
+      { key: 'key4', label: 'item4' },
+    ],
   },
   {
-    section:'section2',
-    items:[
-      {key:'key5',label:'item5'},
-      {key:'key6',label:'item6'},
-      {key:'key7',label:'item7'},
-      {key:'key8',label:'item8'}
-    ]
+    section: 'section2',
+    items: [
+      { key: 'key5', label: 'item5' },
+      { key: 'key6', label: 'item6' },
+      { key: 'key7', label: 'item7' },
+      { key: 'key8', label: 'item8' },
+    ],
   },
 ];
 
@@ -88,8 +85,8 @@ Example.args = {
   placeholder: 'placeholder',
   comboBoxGroups: withoutSection,
   disabledKeys: ['key3'],
-  label:'WithoutSection',
-  description:'Description text',
+  label: 'WithoutSection',
+  description: 'Description text',
 };
 
 Example.argTypes = { ...argTypes };
@@ -99,19 +96,18 @@ const Sections = Template(ComboBoxWrapper).bind({});
 Sections.args = {
   comboBoxGroups: withSection,
   selectedKey: 'key1',
-  label:'WithSection',
-  description:'Description text',
-  disabledKeys: ['key3','key6'],
+  label: 'WithSection',
+  description: 'Description text',
+  disabledKeys: ['key3', 'key6'],
 };
-
 
 Sections.argTypes = { ...argTypes };
 
-const InListItemTemplate = (props:Props) => {
+const InListItemTemplate = (props: Props) => {
   return (
     <OverlayAlert>
-      <div style={{ overflowY: 'scroll', height:'100px'}}>
-          <ComboBoxWrapper {...props} />
+      <div style={{ overflowY: 'scroll', height: '100px' }}>
+        <ComboBoxWrapper {...props} />
       </div>
     </OverlayAlert>
   );
@@ -121,14 +117,13 @@ const InListItem = Template(InListItemTemplate).bind({});
 
 InListItem.args = {
   comboBoxGroups: withSection,
-  label:'InListItem',
-  placeholder:'long text overflow effect use case'
+  label: 'InListItem',
+  placeholder: 'long text overflow effect use case',
 };
-
 
 InListItem.argTypes = { ...argTypes };
 
-const MultipleComboBoxTemplate = (props:Props) => {
+const MultipleComboBoxTemplate = (props: Props) => {
   return (
     <>
       <ComboBoxWrapper {...props} />
@@ -141,58 +136,82 @@ const MultipleComboBoxTemplate = (props:Props) => {
 const MultipleComboBox = Template(MultipleComboBoxTemplate).bind({});
 
 MultipleComboBox.args = {
-  comboBoxGroups:withSection,
-  label:'MultipleComboBox',
+  comboBoxGroups: withSection,
+  label: 'MultipleComboBox',
 };
 
 MultipleComboBox.argTypes = { ...argTypes };
 
-const DynamicDataTemplate = (props:Props) => {
-  const mockDynamicData = [{section:'section1',items:[{key:'key-1',label:'label-1'}]},{section:'section2',items:[{key:'key-2',label:'label-2'}]}];
-  const [dynamicData,setDynamicData] = useState(mockDynamicData);
-  const [dynamicDataLength,setDynamicDataLength] = useState<number>(0);
-  const [comboBoxGroups,setComboBoxGroups] = useState<IComboBoxGroup[]>(dynamicData);
-  const [isListOpen,setIsListOpen] = useState<boolean>(false);
+const DynamicDataTemplate = (props: Props) => {
+  const mockDynamicData = [
+    { section: 'section1', items: [{ key: 'key-1', label: 'label-1' }] },
+    { section: 'section2', items: [{ key: 'key-2', label: 'label-2' }] },
+  ];
+  const [dynamicData, setDynamicData] = useState(mockDynamicData);
+  const [dynamicDataLength, setDynamicDataLength] = useState<number>(0);
+  const [comboBoxGroups, setComboBoxGroups] = useState<IComboBoxGroup[]>(dynamicData);
+  const [isListOpen, setIsListOpen] = useState<boolean>(false);
 
-  useEffect(()=>{
-    const timer = setInterval(()=>{
+  useEffect(() => {
+    const timer = setInterval(() => {
       const randomText = Math.random().toString(36).substr(2, 10);
-      mockDynamicData[Math.round(Math.random())].items.push({key:'key-'+randomText,label:'label-'+randomText});
+      mockDynamicData[Math.round(Math.random())].items.push({
+        key: 'key-' + randomText,
+        label: 'label-' + randomText,
+      });
       setDynamicData(JSON.parse(JSON.stringify(mockDynamicData)));
-    },2000);
-    return ()=>{
+    }, 2000);
+    return () => {
       clearInterval(timer);
     };
-  },[]);
+  }, [mockDynamicData]);
 
-  useEffect(()=>{
+  useEffect(() => {
     const length = dynamicData.reduce((total, current) => {
       return total + current.items.length;
     }, 0);
     setDynamicDataLength(length);
-  },[dynamicData]);
+  }, [dynamicData]);
 
-  const openStateChange = useCallback((isOpen)=>{
+  const openStateChange = useCallback((isOpen) => {
     setIsListOpen(isOpen);
-  },[]);
+  }, []);
 
-  const onInputChange = useCallback(()=>{
+  const onInputChange = useCallback(() => {
     setComboBoxGroups(dynamicData);
-  },[dynamicData]);
+  }, [dynamicData]);
 
-  useEffect(()=>{
-    if(!isListOpen){
+  useEffect(() => {
+    if (!isListOpen) {
       setComboBoxGroups(dynamicData);
     }
-  },[isListOpen,dynamicData]);
+  }, [isListOpen, dynamicData]);
 
   return (
     <>
-      <div style={{margin:'20px 12px'}}>DynamicDataLength:{dynamicDataLength}</div>
-      <div style={{margin:'20px 12px'}}>For dynamic data, it is relatively controllable to not re-render when the list is opened, and to re-render when input changes.</div>
-      <ComboBoxWrapper {...props} comboBoxGroups={comboBoxGroups} openStateChange={openStateChange} onInputChange={onInputChange}/>
-      <ComboBoxWrapper {...props} comboBoxGroups={comboBoxGroups} openStateChange={openStateChange} onInputChange={onInputChange}/>
-      <ComboBoxWrapper {...props} comboBoxGroups={comboBoxGroups} openStateChange={openStateChange} onInputChange={onInputChange}/>
+      <div style={{ margin: '20px 12px' }}>DynamicDataLength:{dynamicDataLength}</div>
+      <div style={{ margin: '20px 12px' }}>
+        For dynamic data, it is relatively controllable to not re-render when the list is opened,
+        and to re-render when input changes.
+      </div>
+      <ComboBoxWrapper
+        {...props}
+        comboBoxGroups={comboBoxGroups}
+        openStateChange={openStateChange}
+        onInputChange={onInputChange}
+      />
+      <ComboBoxWrapper
+        {...props}
+        comboBoxGroups={comboBoxGroups}
+        openStateChange={openStateChange}
+        onInputChange={onInputChange}
+      />
+      <ComboBoxWrapper
+        {...props}
+        comboBoxGroups={comboBoxGroups}
+        openStateChange={openStateChange}
+        onInputChange={onInputChange}
+      />
     </>
   );
 };
@@ -200,10 +219,9 @@ const DynamicDataTemplate = (props:Props) => {
 const DynamicData = Template(DynamicDataTemplate).bind({});
 
 DynamicData.args = {
-  label:'DynamicData',
+  label: 'DynamicData',
 };
 
 DynamicData.argTypes = { ...argTypes };
-
 
 export { Example, Sections, InListItem, MultipleComboBox, DynamicData };

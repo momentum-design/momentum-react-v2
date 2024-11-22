@@ -13,7 +13,18 @@ import './Toast.style.scss';
  * The `<Toast />` component.
  */
 const Toast: FC<Props> = (props: Props) => {
-  const { ariaLive, children, className, content, controls, details, id, style, title, titleTagName } = props;
+  const {
+    ariaLive,
+    children,
+    className,
+    content,
+    controls,
+    details,
+    id,
+    style,
+    title,
+    titleTagName,
+  } = props;
 
   const childrenArray = Children.toArray(children);
 
@@ -38,13 +49,24 @@ const Toast: FC<Props> = (props: Props) => {
 
   const titleComponent = title ? (
     <div className={STYLE.header}>
-      <Text tagName={titleTagName || DEFAULTS.HEADING_LEVEL_2} type="label-compact" className={STYLE.title}>{title}</Text>
+      <Text
+        tagName={titleTagName || DEFAULTS.HEADING_LEVEL_2}
+        type="label-compact"
+        className={STYLE.title}
+      >
+        {title}
+      </Text>
       {controlsComponent}
     </div>
   ) : null;
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} aria-live={ariaLive} id={id} style={style}>
+    <div
+      className={classnames(className, STYLE.wrapper)}
+      aria-live={ariaLive}
+      id={id}
+      style={style}
+    >
       {titleComponent}
       {mutatedDetails}
       {contentComponent}

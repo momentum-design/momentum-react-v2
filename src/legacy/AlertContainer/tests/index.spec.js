@@ -27,43 +27,51 @@ describe('tests for <AlertContainer />', () => {
   });
 
   it('should render a div in bottom-right by default', () => {
-    const container = shallow(<AlertContainer ariaLabel={alertAriaLabel}/>);
+    const container = shallow(<AlertContainer ariaLabel={alertAriaLabel} />);
 
     expect(container.find('.md-alert__container--bottom-right').length).toEqual(1);
   });
 
   it('should honor position prop when top-left is passed in', () => {
-    const container = shallow(<AlertContainer position={'top-left'} ariaLabel={alertAriaLabel}/>);
+    const container = shallow(<AlertContainer position={'top-left'} ariaLabel={alertAriaLabel} />);
 
     expect(container.find('.md-alert__container--top-left').length).toEqual(1);
   });
 
   it('should honor position prop when top-center is passed in', () => {
-    const container = shallow(<AlertContainer position={'top-center'} ariaLabel={alertAriaLabel}/>);
+    const container = shallow(
+      <AlertContainer position={'top-center'} ariaLabel={alertAriaLabel} />
+    );
 
     expect(container.find('.md-alert__container--top-center').length).toEqual(1);
   });
 
   it('should honor position prop when top-right is passed in', () => {
-    const container = shallow(<AlertContainer position={'top-right'} ariaLabel={alertAriaLabel}/>);
+    const container = shallow(<AlertContainer position={'top-right'} ariaLabel={alertAriaLabel} />);
 
     expect(container.find('.md-alert__container--top-right').length).toEqual(1);
   });
 
   it('should honor position prop when bottom-left is passed in', () => {
-    const container = shallow(<AlertContainer position={'bottom-left'} ariaLabel={alertAriaLabel}/>);
+    const container = shallow(
+      <AlertContainer position={'bottom-left'} ariaLabel={alertAriaLabel} />
+    );
 
     expect(container.find('.md-alert__container--bottom-left').length).toEqual(1);
   });
 
   it('should honor position prop when bottom-center is passed in', () => {
-    const container = shallow(<AlertContainer position={'bottom-center'} ariaLabel={alertAriaLabel}/>);
+    const container = shallow(
+      <AlertContainer position={'bottom-center'} ariaLabel={alertAriaLabel} />
+    );
 
     expect(container.find('.md-alert__container--bottom-center').length).toEqual(1);
   });
 
   it('should honor position prop when bottom-right is passed in', () => {
-    const container = shallow(<AlertContainer position={'bottom-right'} ariaLabel={alertAriaLabel}/>);
+    const container = shallow(
+      <AlertContainer position={'bottom-right'} ariaLabel={alertAriaLabel} />
+    );
 
     expect(container.find('.md-alert__container--bottom-right').length).toEqual(1);
   });
@@ -127,7 +135,7 @@ describe('tests for <AlertContainer />', () => {
   });
 
   it('should pass otherProps to container', () => {
-    const container = shallow(<AlertContainer id="testid" ariaLabel={alertAriaLabel}/>);
+    const container = shallow(<AlertContainer id="testid" ariaLabel={alertAriaLabel} />);
 
     expect(container.find('#testid').exists()).toEqual(true);
   });

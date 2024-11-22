@@ -9,7 +9,7 @@ import TooltipNext from '../../components/Tooltip';
 import IconNext from '../../components/Icon';
 import MomentumThemeProvider from '../../components/ThemeProvider';
 import LoadingSpinner from '../../components/LoadingSpinner';
-import {THEME_NAMES} from '../../components/ThemeProvider/ThemeProvider.constants';
+import { THEME_NAMES } from '../../components/ThemeProvider/ThemeProvider.constants';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -170,9 +170,10 @@ class Lightbox extends React.Component {
     const currentPage = pages[index];
     const showColumn = pages.length > 1;
 
-    const LightThemeStyle = this.props.theme === THEME_NAMES.LIGHT_WEBEX   
-    ? { color: 'var(--mds-color-theme-text-primary-normal)' }   
-    : {}; 
+    const LightThemeStyle =
+      this.props.theme === THEME_NAMES.LIGHT_WEBEX
+        ? { color: 'var(--mds-color-theme-text-primary-normal)' }
+        : {};
 
     const calculateAspectRatioFit = (srcWidth, srcHeight, maxWidth, maxHeight) => {
       let maxW, maxH;
@@ -402,7 +403,7 @@ class Lightbox extends React.Component {
     const viewportControls = () => {
       const downloadButton = (
         <TooltipNext
-        style={LightThemeStyle}
+          style={LightThemeStyle}
           type="label"
           placement="top"
           triggerComponent={
@@ -437,7 +438,7 @@ class Lightbox extends React.Component {
         pages.length > 1 ? (
           <div className="md-lightbox__controls md-lightbox__controls--center">
             <TooltipNext
-            style={LightThemeStyle}
+              style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -458,7 +459,7 @@ class Lightbox extends React.Component {
             </TooltipNext>
             <span className="md-lightbox__control-value">{`${index + 1} / ${pages.length}`}</span>
             <TooltipNext
-            style={LightThemeStyle}
+              style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -493,7 +494,7 @@ class Lightbox extends React.Component {
         >
           <div className="md-lightbox__controls" style={controlStyle}>
             <TooltipNext
-            style={LightThemeStyle}
+              style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -517,7 +518,7 @@ class Lightbox extends React.Component {
               {`${Math.round(((newHeight * 1.0) / height) * 100)}%`}
             </span>
             <TooltipNext
-            style={LightThemeStyle}
+              style={LightThemeStyle}
               type="label"
               placement="top"
               triggerComponent={
@@ -543,7 +544,7 @@ class Lightbox extends React.Component {
         </div>
       );
     };
-    
+
     return (
       <Modal
         includeDefaultStyles={false}

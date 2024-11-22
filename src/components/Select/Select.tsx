@@ -49,7 +49,18 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
-  const { buttonProps } = useButton({ ...triggerProps, isDisabled, ...(ariaLabelledBy === '' ? {'aria-labelledby': null} : ariaLabelledBy ? { 'aria-labelledby': ariaLabelledBy } : {})}, selectRef);
+  const { buttonProps } = useButton(
+    {
+      ...triggerProps,
+      isDisabled,
+      ...(ariaLabelledBy === ''
+        ? { 'aria-labelledby': null }
+        : ariaLabelledBy
+        ? { 'aria-labelledby': ariaLabelledBy }
+        : {}),
+    },
+    selectRef
+  );
   const ariaActivedesecendant =
     menuProps?.id &&
     state?.selectionManager?.focusedKey &&
@@ -79,14 +90,14 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         }
       }
     }
-  }, [state.isOpen, popoverInstance]);
+  }, [state.isOpen, popoverInstance, handleFocusBackOnTrigger]);
 
   /**
    * Handle closeOnSelect from @react-aria manually
    */
   const closePopover = useCallback(() => {
     state.close();
-  }, []);
+  }, [state]);
 
   /**
    * Handle onKeyDown from @react-aria manually
@@ -100,7 +111,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         state.open();
         break;
     }
-  }, []);
+  }, [state]);
 
   const otherProps = shallowDisabled
     ? {

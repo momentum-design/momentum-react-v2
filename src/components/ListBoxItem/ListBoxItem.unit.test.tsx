@@ -29,9 +29,9 @@ describe('ListBoxItem', () => {
   );
 
   const state = result.current;
-  
+
   const setup = (item: any) => {
-    (wrapper) = mount(
+    wrapper = mount(
       <ListBoxContext.Provider value={state}>
         <ListBoxItem key={item.key} item={item} />
       </ListBoxContext.Provider>

@@ -9,8 +9,8 @@ import ListContext from '../ListContext';
 import { UIDConsumer } from 'react-uid';
 
 /**
-* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
-**/
+ * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+ **/
 class SelectOption extends React.Component {
   render() {
     const { className, active, children, label, title, ...props } = this.props;

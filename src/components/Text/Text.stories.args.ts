@@ -1,6 +1,6 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
-import {VALID_TEXT_TAGS} from '@momentum-design/components/dist/components/text/text.constants.js';
+import { VALID_TEXT_TAGS } from '@momentum-design/components/dist/components/text/text.constants.js';
 import { TEXT_CONSTANTS as CONSTANTS } from '.';
 
 export default {
@@ -44,7 +44,8 @@ export default {
     },
   },
   tagName: {
-    description: 'Modifies the tagName of the text component. This should be used to set the appropriate tagName for headings etc. to follow accessibility.',
+    description:
+      'Modifies the tagName of the text component. This should be used to set the appropriate tagName for headings etc. to follow accessibility.',
     options: [undefined, ...Object.values(VALID_TEXT_TAGS)],
     control: { type: 'select' },
     table: {
@@ -55,5 +56,5 @@ export default {
         summary: 'depends on type property',
       },
     },
-  }
+  },
 };

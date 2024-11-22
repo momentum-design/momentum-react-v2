@@ -13,8 +13,7 @@ const radioSimpleGroupArgTypes = {
     },
   },
   description: {
-    description:
-      'The description is used to provide additional context to the user.',
+    description: 'The description is used to provide additional context to the user.',
     control: { type: 'ReactNode', required: false },
     table: {
       type: {
@@ -24,8 +23,7 @@ const radioSimpleGroupArgTypes = {
     },
   },
   label: {
-    description:
-      'The label is used to provide a title for the group of RadioSimpleGroup.',
+    description: 'The label is used to provide a title for the group of RadioSimpleGroup.',
     control: { type: 'ReactNode', required: false },
     table: {
       type: {
@@ -35,8 +33,7 @@ const radioSimpleGroupArgTypes = {
     },
   },
   value: {
-    description:
-      'The current value for the RadioSimpleGroup.',
+    description: 'The current value for the RadioSimpleGroup.',
     control: { type: 'text', required: false },
     table: {
       type: {
@@ -46,8 +43,7 @@ const radioSimpleGroupArgTypes = {
     },
   },
   defaultValue: {
-    description:
-      'The default value for the RadioSimpleGroup.',
+    description: 'The default value for the RadioSimpleGroup.',
     control: { type: 'text', required: false },
     table: {
       type: {

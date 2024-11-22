@@ -22,7 +22,7 @@ export enum PresenceType {
   OnHold = 'onHold',
 }
 
-export type AvatarSize = typeof SIZES[number];
+export type AvatarSize = (typeof SIZES)[number];
 export type AvatarColor = TeamColor | 'yellow';
 
 export interface Props extends Omit<AriaButtonProps, 'type'> {

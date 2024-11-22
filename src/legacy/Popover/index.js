@@ -8,8 +8,8 @@ import omit from 'lodash/omit';
 import { isMRv2Button } from '../../helpers/verifyTypes';
 
 /**
-* @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
-**/
+ * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
+ **/
 class Popover extends React.Component {
   state = {
     isOpen: this.props.startOpen || false,

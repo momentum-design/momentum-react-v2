@@ -24,7 +24,7 @@ const RadioSimple: FC<RadioSimpleProps> = (props: RadioSimpleProps) => {
     style,
     value,
   } = props;
-  const state  = useContext(RadioSimpleGroupContext);
+  const state = useContext(RadioSimpleGroupContext);
   const ref = useRef(null);
   const isSelected = state?.selectedValue === value;
   const { focusProps, isFocusVisible } = useFocusRing();

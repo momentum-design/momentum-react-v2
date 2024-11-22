@@ -13,8 +13,7 @@ const radioSimpleArgTypes = {
     },
   },
   value: {
-    description:
-      'The value is used to provide a value for the RadioSimple.',
+    description: 'The value is used to provide a value for the RadioSimple.',
     control: { type: 'text', required: true },
     table: {
       type: {
@@ -24,8 +23,7 @@ const radioSimpleArgTypes = {
     },
   },
   ariaLabel: {
-    description:
-      'The ariaLabel is used to provide an aria-label for the RadioSimple.',
+    description: 'The ariaLabel is used to provide an aria-label for the RadioSimple.',
     control: { type: 'text', required: false },
     table: {
       type: {
@@ -35,8 +33,7 @@ const radioSimpleArgTypes = {
     },
   },
   ariaLabelledBy: {
-    description:
-      'The ariaLabelledBy is used to provide an aria-labelledby for the RadioSimple.',
+    description: 'The ariaLabelledBy is used to provide an aria-labelledby for the RadioSimple.',
     control: { type: 'text', required: false },
     table: {
       type: {
@@ -46,8 +43,7 @@ const radioSimpleArgTypes = {
     },
   },
   isDisabled: {
-    description:
-      'The isDisabled is to set the disable state for the RadioSimple.',
+    description: 'The isDisabled is to set the disable state for the RadioSimple.',
     control: { type: 'boolean', required: false },
     table: {
       type: {

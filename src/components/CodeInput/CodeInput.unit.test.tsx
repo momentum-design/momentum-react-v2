@@ -162,7 +162,7 @@ describe('CodeInput', () => {
     });
 
     it('wont wipe the data when refocused when clearComplete is false', async () => {
-      const codeInput = mount(<CodeInput numDigits={2} clearComplete={false}/>);
+      const codeInput = mount(<CodeInput numDigits={2} clearComplete={false} />);
       codeInput.simulate('click');
 
       const testInput = async (value) => {
