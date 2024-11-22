@@ -11,9 +11,15 @@ exports[`Link snapshot should match snapshot 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
         rel=""
       >
-        LinkNext
+        <div
+          className="md-link-container"
+        >
+          LinkNext
+        </div>
       </a>
     </FocusRing>
   </FocusRing>
@@ -36,9 +42,15 @@ exports[`Link snapshot should match snapshot when disabled 1`] = `
         className="md-link-wrapper"
         data-disabled={true}
         data-inverted={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
         rel=""
       >
-        LinkNext
+        <div
+          className="md-link-container"
+        >
+          LinkNext
+        </div>
       </a>
     </FocusRing>
   </FocusRing>
@@ -58,9 +70,15 @@ exports[`Link snapshot should match snapshot when inverted 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={true}
+        onBlur={[Function]}
+        onFocus={[Function]}
         rel=""
       >
-        Hyperlink
+        <div
+          className="md-link-container"
+        >
+          Hyperlink
+        </div>
       </a>
     </FocusRing>
   </FocusRing>
@@ -80,9 +98,15 @@ exports[`Link snapshot should match snapshot with title 1`] = `
         className="md-link-wrapper"
         data-disabled={false}
         data-inverted={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
         rel=""
         title="Example Text"
-      />
+      >
+        <div
+          className="md-link-container"
+        />
+      </a>
     </FocusRing>
   </FocusRing>
 </Link>
