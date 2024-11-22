@@ -16,6 +16,7 @@ export default {
   component: TextInput,
   args: {
     label: 'Label',
+    clearAriaLabel: 'Clear',
     description: 'Description text for this input',
     initialValue: 'some input',
     placeholder: 'Input placeholder',
@@ -64,7 +65,7 @@ interface StoryProps extends TextInputProps {
   initialValue: string;
 }
 
-interface FormProps extends TextInputProps {
+interface FormProps {
   displayName?: boolean;
   emailAddress?: boolean;
   password?: boolean;
@@ -109,29 +110,35 @@ const FormExample: FC<FormProps> = (props: FormProps) => {
       {displayName && (
         <BetterExample
           initialValue=""
-          placeholder={'Display Name'}
+          label={'Display Name'}
+          clearAriaLabel="Clear"
           type="name"
           style={{ marginTop: '1rem', marginBottom: '1rem', width: '16.25rem' }}
+          autoComplete="nickname"
         />
       )}
       {emailAddress && (
         <BetterExample
           initialValue=""
-          placeholder={'Email address'}
+          label={'Email address'}
+          clearAriaLabel="Clear"
           type="email"
           style={{
             marginTop: !displayName ? '1rem' : '0',
             marginBottom: '1rem',
             width: '16.25rem',
           }}
+          autoComplete="email"
         />
       )}
       {password && (
         <BetterExample
           initialValue=""
           type="password"
-          placeholder={'Password'}
+          label={'Password'}
+          clearAriaLabel="Clear"
           style={{ marginBottom: '1rem', width: '16.25rem' }}
+          autoComplete="current-password"
         />
       )}
       <ButtonPill type="submit" size={32} grown style={{ marginBottom: '1rem', width: '16.25rem' }}>
