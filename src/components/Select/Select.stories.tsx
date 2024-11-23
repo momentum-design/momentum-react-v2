@@ -361,7 +361,7 @@ Common.parameters = {
 
 const InListItem: Story<any> = (args: any) => {
   return (
-    <OverlayAlert>
+    <OverlayAlert aria-label="Overlay alert" onClose={() => null}>
       <div style={{ overflowY: 'scroll' }}>
         <Select {...args} />
       </div>

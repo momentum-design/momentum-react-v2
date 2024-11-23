@@ -105,7 +105,7 @@ Sections.argTypes = { ...argTypes };
 
 const InListItemTemplate = (props: Props) => {
   return (
-    <OverlayAlert>
+    <OverlayAlert aria-label="Overlay alert" onClose={() => null}>
       <div style={{ overflowY: 'scroll', height: '100px' }}>
         <ComboBoxWrapper {...props} />
       </div>
