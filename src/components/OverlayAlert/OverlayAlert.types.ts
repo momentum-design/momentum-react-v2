@@ -7,7 +7,7 @@ import type { ButtonGroupProps } from '../ButtonGroup';
 import type { OverlayProps, OverlayColor } from '../Overlay';
 import type { ModalContainerColor } from '../ModalContainer';
 import { AriaLabelingProps } from '@react-types/shared';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type SupportedActions = ButtonSimpleProps | ButtonGroupProps;
 export type SupportedControls = ButtonControlProps;
