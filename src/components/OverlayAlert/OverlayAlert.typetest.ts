@@ -1,4 +1,4 @@
-import { Expect, ExpectExtends, ExpectFalse } from 'src/utils/typetest.util';
+import { Expect, ExpectExtends, ExpectFalse } from '../../utils/typetest.util';
 import { Props } from './OverlayAlert.types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
