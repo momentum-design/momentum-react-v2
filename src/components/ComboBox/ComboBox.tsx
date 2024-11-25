@@ -459,7 +459,7 @@ const ComboBox: React.FC<Props> = (props: Props) => {
         <div className={STYLE.inputSection}>
           <TextInput
             ref={inputRef}
-            aria-label={label}
+            aria-label={STYLE.input}
             clearAriaLabel=""
             placeholder={placeholder}
             value={inputValue}
