@@ -4,18 +4,14 @@ import { Props } from './AriaGroup.types';
 
 /**
  * The AriaGroup component.
+ *
+ * Requires aria-label or aria-labelledby
  */
 const AriaGroup: FC<Props> = (props: Props) => {
-  const { ariaLabel, ariaLabelledby, children, className, ...otherProps } = props;
+  const { children, className, ...otherProps } = props;
 
   return (
-    <div
-      aria-label={ariaLabel}
-      aria-labelledby={ariaLabelledby}
-      className={className}
-      role="group"
-      {...otherProps}
-    >
+    <div className={className} role="group" {...otherProps}>
       {children}
     </div>
   );

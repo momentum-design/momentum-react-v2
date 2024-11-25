@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
@@ -20,7 +20,7 @@ export default {
   },
 };
 
-const AriaGroupOfTextInput = () => {
+const AriaGroupOfTextInput: ReactNode = () => {
   const children = (
     <div
       style={{
@@ -52,10 +52,10 @@ const AriaGroupOfTextInput = () => {
     </div>
   );
 
-  return <AriaGroup ariaLabelledby="text-input-group-head" children={children} />;
+  return <AriaGroup aria-labelledby="text-input-group-head" children={children} />;
 };
 
-const AriaGroupOfCheckbox = () => {
+const AriaGroupOfCheckbox: ReactNode = () => {
   const children = (
     <div
       style={{
@@ -72,10 +72,10 @@ const AriaGroupOfCheckbox = () => {
     </div>
   );
 
-  return <AriaGroup ariaLabelledby="checkbox-group-head" children={children} />;
+  return <AriaGroup aria-labelledby="checkbox-group-head" children={children} />;
 };
 
-const AriaGroupOfToggles = () => {
+const AriaGroupOfToggles: ReactNode = () => {
   const children = (
     <div
       style={{
@@ -92,7 +92,7 @@ const AriaGroupOfToggles = () => {
     </div>
   );
 
-  return <AriaGroup ariaLabelledby="other-options-group-head" children={children} />;
+  return <AriaGroup aria-labelledby="other-options-group-head" children={children} />;
 };
 
 export { AriaGroupOfTextInput, AriaGroupOfCheckbox, AriaGroupOfToggles };

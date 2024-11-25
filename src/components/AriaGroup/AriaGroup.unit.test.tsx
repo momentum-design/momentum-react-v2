@@ -25,7 +25,7 @@ describe('<AriaGroup />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<AriaGroup />);
+      const container = mount(<AriaGroup aria-label="snapshot" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('<AriaGroup />', () => {
 
       const ariaLabel = 'example aria label';
 
-      const container = mount(<AriaGroup ariaLabel={ariaLabel} />);
+      const container = mount(<AriaGroup aria-label={ariaLabel} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -45,7 +45,7 @@ describe('<AriaGroup />', () => {
 
       const ariaLabelledby = 'example aria labelled by';
 
-      const container = mount(<AriaGroup ariaLabelledby={ariaLabelledby} />);
+      const container = mount(<AriaGroup aria-labelledby={ariaLabelledby} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -55,7 +55,7 @@ describe('<AriaGroup />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<AriaGroup className={className} />);
+      const container = mount(<AriaGroup aria-label="className" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -63,7 +63,7 @@ describe('<AriaGroup />', () => {
     it('should match snapshot with children', () => {
       expect.assertions(1);
 
-      const container = mount(<AriaGroup children={children} />);
+      const container = mount(<AriaGroup aria-label="children" children={children} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -73,7 +73,7 @@ describe('<AriaGroup />', () => {
     it('should have its role', () => {
       expect.assertions(1);
 
-      const element = mount(<AriaGroup children={children} />)
+      const element = mount(<AriaGroup aria-label="group" children={children} />)
         .find(AriaGroup)
         .getDOMNode();
 
@@ -85,7 +85,7 @@ describe('<AriaGroup />', () => {
 
       const ariaLabel = 'example aria label';
 
-      const element = mount(<AriaGroup ariaLabel={ariaLabel} children={children} />)
+      const element = mount(<AriaGroup aria-label={ariaLabel} children={children} />)
         .find(AriaGroup)
         .getDOMNode();
 
@@ -97,7 +97,7 @@ describe('<AriaGroup />', () => {
 
       const ariaLabelledby = 'example ariaLabelledby';
 
-      const element = mount(<AriaGroup ariaLabelledby={ariaLabelledby} children={children} />)
+      const element = mount(<AriaGroup aria-labelledby={ariaLabelledby} children={children} />)
         .find(AriaGroup)
         .getDOMNode();
 
@@ -109,7 +109,9 @@ describe('<AriaGroup />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<AriaGroup children={children} className={className} />)
+      const element = mount(
+        <AriaGroup aria-label="group" children={children} className={className} />
+      )
         .find(AriaGroup)
         .getDOMNode();
 
