@@ -458,13 +458,14 @@ const ComboBox: React.FC<Props> = (props: Props) => {
       <div {...wrapperProps} ref={containerRef}>
         <div className={STYLE.inputSection}>
           <TextInput
-            aria-label={STYLE.input}
+            ref={inputRef}
+            aria-label={label}
+            clearAriaLabel=""
             placeholder={placeholder}
             value={inputValue}
             className={STYLE.input}
             onInput={onInputChange}
             autoComplete="off"
-            ref={inputRef}
           />
           <div className={STYLE.divider} />
           <ButtonPill ghost onPress={onArrowButtonPress} className={STYLE.button}>
