@@ -1,6 +1,7 @@
 import type { AriaTextFieldProps } from '@react-types/textfield';
 import type { CSSProperties, ReactNode } from 'react';
 import type { Message } from '../InputMessage/InputMessage.types';
+import { RequireOneOf } from '../../utils/types';
 
 /**
  * @link https://html.spec.whatwg.org/#autofill-field
@@ -63,11 +64,7 @@ type AutocompleteOption =
   | 'impp'
   | (string & Record<never, never>);
 
-export interface Props extends Omit<AriaTextFieldProps, 'errorMessage'> {
-  /**
-   * The content to display as the label.
-   */
-  label: ReactNode;
+interface TextInputProps extends Omit<AriaTextFieldProps, 'errorMessage'> {
   /**
    * Optional css class name
    */
@@ -118,3 +115,6 @@ export interface Props extends Omit<AriaTextFieldProps, 'errorMessage'> {
    */
   autoComplete?: AutocompleteOption;
 }
+
+export type Props = TextInputProps &
+  RequireOneOf<TextInputProps, ['label', 'aria-label', 'aria-labelledby']>;
