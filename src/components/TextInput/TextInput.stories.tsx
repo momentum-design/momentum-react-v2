@@ -61,9 +61,9 @@ export default {
   },
 };
 
-interface StoryProps extends TextInputProps {
+type StoryProps = TextInputProps & {
   initialValue: string;
-}
+};
 
 interface FormProps {
   displayName?: boolean;
