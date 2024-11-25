@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AriaGroup /> snapshot should match snapshot 1`] = `
-<AriaGroup>
+<AriaGroup
+  aria-label="snapshot"
+>
   <div
+    aria-label="snapshot"
     role="group"
   />
 </AriaGroup>
@@ -10,7 +13,7 @@ exports[`<AriaGroup /> snapshot should match snapshot 1`] = `
 
 exports[`<AriaGroup /> snapshot should match snapshot with ariaLabel 1`] = `
 <AriaGroup
-  ariaLabel="example aria label"
+  aria-label="example aria label"
 >
   <div
     aria-label="example aria label"
@@ -21,7 +24,7 @@ exports[`<AriaGroup /> snapshot should match snapshot with ariaLabel 1`] = `
 
 exports[`<AriaGroup /> snapshot should match snapshot with ariaLabelledby 1`] = `
 <AriaGroup
-  ariaLabelledby="example aria labelled by"
+  aria-labelledby="example aria labelled by"
 >
   <div
     aria-labelledby="example aria labelled by"
@@ -31,8 +34,11 @@ exports[`<AriaGroup /> snapshot should match snapshot with ariaLabelledby 1`] = 
 `;
 
 exports[`<AriaGroup /> snapshot should match snapshot with children 1`] = `
-<AriaGroup>
+<AriaGroup
+  aria-label="children"
+>
   <div
+    aria-label="children"
     role="group"
   >
     <div
@@ -145,9 +151,11 @@ exports[`<AriaGroup /> snapshot should match snapshot with children 1`] = `
 
 exports[`<AriaGroup /> snapshot should match snapshot with className 1`] = `
 <AriaGroup
+  aria-label="className"
   className="example-class"
 >
   <div
+    aria-label="className"
     className="example-class"
     role="group"
   />
