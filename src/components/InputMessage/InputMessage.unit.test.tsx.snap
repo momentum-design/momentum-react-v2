@@ -46,6 +46,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
       </div>
       <Text
         className="md-input-message--text"
+        tagName="small"
         type="body-secondary"
       >
         <Text

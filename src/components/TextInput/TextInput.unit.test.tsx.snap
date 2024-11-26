@@ -219,6 +219,7 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
           >
             <Text
               className="md-input-message--text"
+              tagName="small"
               type="body-secondary"
             >
               <Text
@@ -355,6 +356,7 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
               </div>
               <Text
                 className="md-input-message--text"
+                tagName="small"
                 type="body-secondary"
               >
                 <Text
