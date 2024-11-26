@@ -6,6 +6,12 @@ import { mountAndWait } from '../../../test/utils';
 import { InferredIconName } from './Icon.types';
 import Tooltip from '../Tooltip';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<Icon />', () => {
   let container;
 

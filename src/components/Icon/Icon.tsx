@@ -103,7 +103,7 @@ const Icon: React.FC<Props> = (props: Props) => {
       title={title}
       role="img"
       aria-label={isTooltipWrapped ? undefined : accessibleName}
-      aria-hidden={!accessibleName && !isTooltipWrapped}
+      aria-hidden={accessibleName || isTooltipWrapped ? 'false' : 'true'}
       // icon must be focusable to trigger the tooltip
       // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
       tabIndex={isTooltipWrapped ? 0 : undefined}
