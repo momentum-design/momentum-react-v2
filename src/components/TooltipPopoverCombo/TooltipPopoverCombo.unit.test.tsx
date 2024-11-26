@@ -16,7 +16,7 @@ jest.mock('uuid', () => ({
 
 describe('<TooltipPopoverCombo />', () => {
   const triggerComponent = <button>Example button</button>;
-  const tooltipContent = <Text>Example tooltip content</Text>;
+  const tooltipContent = <Text tagName="p">Example tooltip content</Text>;
   const popoverContent = <button>Example popover content button</button>;
 
   describe('snapshot', () => {

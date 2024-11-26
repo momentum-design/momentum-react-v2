@@ -21,7 +21,7 @@ const CoachmarkWithHeader: FC<CoachmarkWithHeaderProps> = (props: CoachmarkWithH
         {icon && (
           <Icon data-testid={icon} name={icon} scale={18} weight={ICON_CONSTANTS.WEIGHTS.BOLD} />
         )}
-        <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.HEADER_PRIMARY}>
+        <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.HEADER_PRIMARY} tagName="h3">
           {title}
         </Text>
         <ButtonGroup round>

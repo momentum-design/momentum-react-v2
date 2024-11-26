@@ -35,7 +35,9 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   children: [
     <Icon key="1" name="accessibility" autoScale />,
-    <Text key="2">My value is 'red'</Text>,
+    <Text tagName="p" key="2">
+      My value is 'red'
+    </Text>,
   ],
   className: 'example-className',
   id: 'example-id',

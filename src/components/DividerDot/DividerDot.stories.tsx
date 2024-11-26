@@ -26,11 +26,13 @@ Example.argTypes = { ...argTypes };
 const WrappedDividerDot = () => {
   return (
     <>
-      <Text type="body-secondary" style={{ display: 'inline' }}>
+      <Text type="body-secondary" tagName="small" style={{ display: 'inline' }}>
         first part of text
       </Text>
       <DividerDot />
-      <Text type="body-secondary">second part of text</Text>
+      <Text type="body-secondary" tagName="small">
+        second part of text
+      </Text>
     </>
   );
 };

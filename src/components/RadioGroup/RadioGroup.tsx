@@ -45,6 +45,7 @@ const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
           id={descriptionId}
           className={STYLE.groupDescription}
           type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}
+          tagName="small"
         >
           {description}
         </Text>

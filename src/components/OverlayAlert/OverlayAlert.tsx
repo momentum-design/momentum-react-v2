@@ -71,7 +71,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         </div>
         {!!title && (
           <div className={classnames(STYLE.title)}>
-            <Text className={classnames(STYLE.title)} type="title" id={id.current}>
+            <Text className={classnames(STYLE.title)} type="title" tagName="h2" id={id.current}>
               {title}
             </Text>
           </div>
@@ -83,6 +83,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
                 <Text
                   className={classnames(STYLE.details)}
                   type="body-primary"
+                  tagName="p"
                   id={detailsId.current}
                 >
                   {details}

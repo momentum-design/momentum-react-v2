@@ -64,7 +64,7 @@ const Example: Story<TooltipPopoverComboProps> = () => {
     <TooltipPopoverCombo
       popoverContent={popoverContent}
       triggerComponent={triggerComponent}
-      tooltipContent={<Text>Press to show options</Text>}
+      tooltipContent={<Text tagName="p">Press to show options</Text>}
       otherTooltipProps={{ placement: 'top' }}
       otherPopoverProps={{ placement: 'top', setInstance: setPopoverInstance }}
     />

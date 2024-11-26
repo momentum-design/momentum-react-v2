@@ -15,7 +15,7 @@ export interface PrimativeConverterProps {
   className?: string;
 
   /**
-   * Allowed tag names to wrap the Text. Default depends on `fontStyle`
+   * Allowed tag names to wrap the Text. Default: 'p'
    */
   tagName?: AllowedTagNames;
 
@@ -33,7 +33,7 @@ export interface PrimativeConverterProps {
  * @returns - FC of provided child if needed.
  */
 const PrimitiveConverter: FC<PrimativeConverterProps> = (props: PrimativeConverterProps) => {
-  const { children, className, tagName, fontStyle = 'body-primary' } = props;
+  const { children, className, tagName = 'p', fontStyle = 'body-primary' } = props;
   const isElement = isValidElement(children);
 
   const addedProps: { className?: string } = {};

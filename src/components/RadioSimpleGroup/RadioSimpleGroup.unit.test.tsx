@@ -19,15 +19,21 @@ describe('<RadioSimpleGroup />', () => {
   const children = [
     <RadioSimple value="red" key="0">
       <Icon key="0" name="accessibility" autoScale />
-      <Text key="1">Red</Text>
+      <Text key="1" tagName="p">
+        Red
+      </Text>
     </RadioSimple>,
     <RadioSimple value="blue" key="1">
       <Icon key="0" name="search" autoScale />
-      <Text key="1">Blue</Text>
+      <Text key="1" tagName="p">
+        Blue
+      </Text>
     </RadioSimple>,
     <RadioSimple value="yellow" key="2">
       <Icon key="0" name="accessories" autoScale />
-      <Text key="1">Yellow</Text>
+      <Text key="1" tagName="p">
+        Yellow
+      </Text>
     </RadioSimple>,
   ];
   const label = <div>Select your favorite color</div>;
@@ -341,17 +347,17 @@ describe('<RadioSimpleGroup />', () => {
         <RadioSimpleGroup onChange={onChange}>
           <RadioSimple value="red" key="0" isDisabled={true}>
             <Icon name="accessibility" autoScale />
-            <Text>Red</Text>
+            <Text tagName="p">Red</Text>
           </RadioSimple>
           ,
           <RadioSimple value="blue" key="1">
             <Icon name="search" autoScale />
-            <Text>Blue</Text>
+            <Text tagName="p">Blue</Text>
           </RadioSimple>
           ,
           <RadioSimple value="yellow" key="2">
             <Icon name="accessories" autoScale />
-            <Text>Yellow</Text>
+            <Text tagName="p">Yellow</Text>
           </RadioSimple>
         </RadioSimpleGroup>
       );
