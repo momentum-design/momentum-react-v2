@@ -138,4 +138,15 @@ export default {
       },
     },
   },
+  tooltipProps: {
+    description:
+      'Optional. If defined, the icon will be wrapped by a tooltip. Props will be passed to the Tooltip component.',
+    defaultValue: undefined,
+    control: { type: 'object' },
+    table: {
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };
