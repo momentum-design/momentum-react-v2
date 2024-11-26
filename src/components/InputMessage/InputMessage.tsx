@@ -50,7 +50,7 @@ const InputMessage = (props: Props): ReactElement => {
             />
           </div>
         )}
-        <Text type="body-secondary" className={STYLE.text}>
+        <Text type="body-secondary" tagName="small" className={STYLE.text}>
           {message}
         </Text>
       </div>

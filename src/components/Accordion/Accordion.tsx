@@ -54,7 +54,13 @@ const Accordion: FC<Props> = forwardRef<HTMLButtonElement, Props>((props, provid
         <div className={STYLE.headerHeading} role="heading" aria-level={ariaLevel}>
           <ButtonSimple {...buttonCustomProps} {...buttonProps}>
             <Icon name={expanded ? 'arrow-down' : 'arrow-right'} scale={12} />
-            {typeof heading === 'string' ? <Text type="body-secondary">{heading}</Text> : heading}
+            {typeof heading === 'string' ? (
+              <Text type="body-secondary" tagName="small">
+                {heading}
+              </Text>
+            ) : (
+              heading
+            )}
           </ButtonSimple>
         </div>
         {headingRightContent}

@@ -12,7 +12,7 @@ describe('<RadioSimple />', () => {
   const children = (
     <div>
       <Icon name="accessibility" autoScale />
-      <Text>Red</Text>
+      <Text tagName="p">Red</Text>
     </div>
   );
 

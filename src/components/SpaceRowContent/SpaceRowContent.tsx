@@ -68,6 +68,7 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
           <Text
             style={{ color: secondLineColor }}
             type="body-secondary"
+            tagName="small"
             data-test="list-item-second-line"
             aria-label={secondLineArrayClean.join(', ')}
           >

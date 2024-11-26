@@ -260,10 +260,10 @@ describe('<MeetingListItem />', () => {
             color={MeetingMarker.AcceptedActive}
             image={<Avatar initials="TU" />}
           >
-            <Text type="body-primary" key="child1">
+            <Text type="body-primary" tagName="p" key="child1">
               Date
             </Text>
-            <Text type="body-secondary" key="child2">
+            <Text type="body-secondary" tagName="small" key="child2">
               Normal
             </Text>
           </MeetingListItem>

@@ -32,7 +32,9 @@ Example.args = {
         <Icon name="speaker" scale={16} weight="bold" strokeColor="none" />
       </ListItemBaseSection>
       <ListItemBaseSection position="fill">
-        <Text type="body-secondary">Label</Text>
+        <Text type="body-secondary" tagName="small">
+          Label
+        </Text>
       </ListItemBaseSection>
     </>
   ),
@@ -56,7 +58,9 @@ Common.parameters = {
       outlinePosition: OUTLINE_POSITION.BOTTOM,
       children: (
         <>
-          <Text type="body-secondary">Label and bottom outline</Text>
+          <Text type="body-secondary" tagName="small">
+            Label and bottom outline
+          </Text>
         </>
       ),
     },
@@ -65,7 +69,9 @@ Common.parameters = {
       outlinePosition: OUTLINE_POSITION.TOP,
       children: (
         <>
-          <Text type="body-secondary">Label and top outline</Text>
+          <Text type="body-secondary" tagName="small">
+            Label and top outline
+          </Text>
         </>
       ),
     },
@@ -76,7 +82,9 @@ Common.parameters = {
             <Icon name="speaker" scale={16} weight="bold" strokeColor="none" />
           </ListItemBaseSection>
           <ListItemBaseSection position="fill">
-            <Text type="body-secondary">Label and icon</Text>
+            <Text type="body-secondary" tagName="small">
+              Label and icon
+            </Text>
           </ListItemBaseSection>
         </>
       ),
@@ -85,7 +93,9 @@ Common.parameters = {
       bold: true,
       children: (
         <>
-          <Text type="header-secondary">Label and bold</Text>
+          <Text type="header-secondary" tagName="h3">
+            Label and bold
+          </Text>
         </>
       ),
     },
@@ -93,7 +103,9 @@ Common.parameters = {
       children: (
         <>
           <ListItemBaseSection position="start">
-            <Text type="body-secondary">Label and right ('end') icon (icon is changeable)</Text>
+            <Text type="body-secondary" tagName="small">
+              Label and right ('end') icon (icon is changeable)
+            </Text>
           </ListItemBaseSection>
           <ListItemBaseSection position="end">
             <Icon
@@ -112,7 +124,9 @@ Common.parameters = {
       outlineColor: OUTLINE_COLOR.PRIMARY,
       children: (
         <>
-          <Text type="body-secondary">Label and primary color outline</Text>
+          <Text type="body-secondary" tagName="small">
+            Label and primary color outline
+          </Text>
         </>
       ),
     },
@@ -121,7 +135,9 @@ Common.parameters = {
       outlineColor: OUTLINE_COLOR.SECONDARY,
       children: (
         <>
-          <Text type="body-secondary">Label and secondary color outline</Text>
+          <Text type="body-secondary" tagName="small">
+            Label and secondary color outline
+          </Text>
         </>
       ),
     },

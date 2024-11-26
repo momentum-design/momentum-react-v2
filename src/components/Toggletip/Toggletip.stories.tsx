@@ -114,7 +114,9 @@ Offset.args = {
   ),
   children: (
     <Flex style={{ width: '10rem', height: '10rem' }} justifyContent="center" alignItems="center">
-      <Text type="display">🏖</Text>
+      <Text type="display" tagName="h1">
+        🏖
+      </Text>
     </Flex>
   ),
 };

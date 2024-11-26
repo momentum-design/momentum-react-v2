@@ -26,7 +26,9 @@ const reactionChildren = [
       </AriaToolbarItem>
     }
   >
-    <Text type="body-compact">Celebrate!</Text>
+    <Text type="body-compact" tagName="small">
+      Celebrate!
+    </Text>
   </Tooltip>,
   <AriaToolbarItem itemIndex={1} key={'item-2'}>
     <ReactionButton key="2">

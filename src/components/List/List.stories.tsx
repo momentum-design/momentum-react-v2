@@ -91,7 +91,9 @@ Common.parameters = {
                 action={
                   <Flex alignItems="center" xgap="0.5rem">
                     <Flex alignItems="center" xgap="0.125rem">
-                      <Text type="body-secondary">23</Text>
+                      <Text type="body-secondary" tagName="small">
+                        23
+                      </Text>
                       <Icon name="participant-list" weight="bold" strokeColor="none" scale={16} />
                     </Flex>
                     <ButtonPill color="join" size={28}>
@@ -182,7 +184,9 @@ CalendarList.parameters = {
               <>
                 {(index % 3 === 0 || index % 7 == 0) && (
                   <ListItemBase isPadded interactive={false}>
-                    <Text type="header-primary">This is a header</Text>
+                    <Text type="header-primary" tagName="h3">
+                      This is a header
+                    </Text>
                   </ListItemBase>
                 )}
                 <MeetingListItem
@@ -196,8 +200,12 @@ CalendarList.parameters = {
                     </ButtonGroup>
                   }
                 >
-                  <Text type="header-primary">This is a meeting</Text>
-                  <Text type="body-secondary">10:00 - 11:00</Text>
+                  <Text type="header-primary" tagName="h3">
+                    This is a meeting
+                  </Text>
+                  <Text type="body-secondary" tagName="small">
+                    10:00 - 11:00
+                  </Text>
                 </MeetingListItem>
               </>
             );
@@ -278,7 +286,7 @@ const DynamicListWrapper = () => {
 
   return (
     <>
-      <Text type="body-primary">
+      <Text type="body-primary" tagName="p">
         List will update in:
         <Badge size={18} style={{ display: 'inline' }}>{`${INTERVAL_COUNT - time}`}</Badge>
       </Text>
@@ -330,7 +338,7 @@ const ListWithAriaToolbarWrapper = () => {
       <List listSize={2}>
         <ListItemBase size="auto" itemIndex={0} key={0}>
           <ListItemBaseSection position="fill">
-            <Text>List Item 0</Text>
+            <Text tagName="p">List Item 0</Text>
             <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
               <AriaToolbarItem itemIndex={0}>
                 <ButtonPill>Toolbar Button 1</ButtonPill>
@@ -342,7 +350,7 @@ const ListWithAriaToolbarWrapper = () => {
           </ListItemBaseSection>
         </ListItemBase>
         <ListItemBase itemIndex={1} key={1}>
-          <Text>List Item 1</Text>
+          <Text tagName="p">List Item 1</Text>
         </ListItemBase>
       </List>
       <ButtonPill>After</ButtonPill>
