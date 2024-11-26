@@ -53,10 +53,10 @@ Example.args = {
   ),
   children: (
     <>
-      <Text type="body-primary" key="child1">
+      <Text type="body-primary" tagName="p" key="child1">
         Date
       </Text>
-      <Text type="body-secondary" key="child2">
+      <Text type="body-secondary" tagName="small" key="child2">
         Normal
       </Text>
     </>
@@ -96,10 +96,10 @@ Common.parameters = {
       ),
       children: (
         <>
-          <Text type="header-primary" key="first-line">
+          <Text type="header-primary" tagName="h3" key="first-line">
             Today
           </Text>
-          <Text type="body-secondary" key="second-line">
+          <Text type="body-secondary" tagName="small" key="second-line">
             11:00 - 12:00
           </Text>
         </>
@@ -125,10 +125,10 @@ Common.parameters = {
       ),
       children: (
         <>
-          <Text type="header-primary" key="first-line">
+          <Text type="header-primary" tagName="h3" key="first-line">
             Today
           </Text>
-          <Text type="body-secondary" key="second-line">
+          <Text type="body-secondary" tagName="small" key="second-line">
             11:00 - 12:00
           </Text>
         </>
@@ -155,10 +155,10 @@ Common.parameters = {
       ),
       children: (
         <>
-          <Text type="header-primary" key="child1">
+          <Text type="header-primary" tagName="h3" key="child1">
             Date
           </Text>
-          <Text type="body-secondary" key="child2">
+          <Text type="body-secondary" tagName="small" key="child2">
             Normal
           </Text>
         </>
@@ -176,10 +176,10 @@ Common.parameters = {
       ),
       children: (
         <>
-          <Text type="body-primary" key="child1">
+          <Text type="body-primary" tagName="p" key="child1">
             Date
           </Text>
-          <Text type="body-secondary" key="child2">
+          <Text type="body-secondary" tagName="small" key="child2">
             Normal
           </Text>
         </>
@@ -197,10 +197,10 @@ Common.parameters = {
       ),
       children: (
         <>
-          <Text type="body-primary" key="child1">
+          <Text type="body-primary" tagName="p" key="child1">
             Date
           </Text>
-          <Text type="body-secondary" key="child2">
+          <Text type="body-secondary" tagName="small" key="child2">
             Normal
           </Text>
         </>
@@ -213,10 +213,10 @@ Common.parameters = {
       children: (
         <div key="child-1" style={{ display: 'flex' }}>
           <div key="first-line-group" style={{ display: 'flex', flexDirection: 'column' }}>
-            <Text key="first-line" type="body-primary">
+            <Text key="first-line" type="body-primary" tagName="p">
               Date
             </Text>
-            <Text key="second-line" type="body-secondary">
+            <Text key="second-line" type="body-secondary" tagName="small">
               Time - Time
             </Text>
           </div>
@@ -238,13 +238,13 @@ Common.parameters = {
       label: 'Three-line item',
       children: (
         <>
-          <Text type="body-primary" key="first-line">
+          <Text type="body-primary" tagName="p" key="first-line">
             Primary
           </Text>
-          <Text type="body-secondary" key="second-line">
+          <Text type="body-secondary" tagName="small" key="second-line">
             Name
           </Text>
-          <Text type="body-secondary" key="third-line">
+          <Text type="body-secondary" tagName="small" key="third-line">
             Date
           </Text>
         </>
@@ -285,7 +285,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.AcceptedActive}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.AcceptedActive}
+        </Text>
+      ),
       color: MeetingMarker.AcceptedActive,
       image: <Avatar initials="TU" />,
     },
@@ -295,7 +299,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.AcceptedInactive}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.AcceptedInactive}
+        </Text>
+      ),
       color: MeetingMarker.AcceptedInactive,
       image: <Avatar initials="TU" />,
     },
@@ -305,7 +313,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.TentativeActive}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.TentativeActive}
+        </Text>
+      ),
       color: MeetingMarker.TentativeActive,
       image: <Avatar initials="TU" />,
     },
@@ -315,7 +327,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.TentativeInactive}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.TentativeInactive}
+        </Text>
+      ),
       color: MeetingMarker.TentativeInactive,
       image: <Avatar initials="TU" />,
     },
@@ -325,7 +341,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.Transparent}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.Transparent}
+        </Text>
+      ),
       color: MeetingMarker.Transparent,
       image: <Avatar initials="TU" />,
     },
@@ -335,7 +355,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.Gray}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.Gray}
+        </Text>
+      ),
       color: MeetingMarker.Gray,
       image: <Avatar initials="TU" />,
     },
@@ -345,7 +369,11 @@ Colors.parameters = {
           <ButtonHyperlink>Link</ButtonHyperlink>
         </ButtonGroup>
       ),
-      children: <Text type="body-primary">{MeetingMarker.GrayStatic}</Text>,
+      children: (
+        <Text type="body-primary" tagName="p">
+          {MeetingMarker.GrayStatic}
+        </Text>
+      ),
       color: MeetingMarker.GrayStatic,
       image: <Avatar initials="TU" />,
     },

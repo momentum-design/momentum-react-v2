@@ -89,12 +89,20 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
     if (secondLine) {
       return (
         <>
-          <Text type="body-primary">{firstLine}</Text>
-          <Text type="body-secondary">{secondLine}</Text>
+          <Text type="body-primary" tagName="p">
+            {firstLine}
+          </Text>
+          <Text type="body-secondary" tagName="small">
+            {secondLine}
+          </Text>
         </>
       );
     } else {
-      return <Text type="body-primary">{firstLine}</Text>;
+      return (
+        <Text type="body-primary" tagName="p">
+          {firstLine}
+        </Text>
+      );
     }
   };
 

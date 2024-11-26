@@ -144,7 +144,7 @@ describe('<Tab />', () => {
         const container = mount(
           <Tab>
             {[
-              <Text key="1" type="subheader-secondary">
+              <Text key="1" type="subheader-secondary" tagName="h3">
                 Example Text
               </Text>,
             ]}
@@ -162,7 +162,7 @@ describe('<Tab />', () => {
         const container = mount(
           <Tab className={className}>
             {[
-              <Text key="2" type="subheader-secondary">
+              <Text key="2" type="subheader-secondary" tagName="h3">
                 Example Text
               </Text>,
             ]}
@@ -180,7 +180,7 @@ describe('<Tab />', () => {
         const container = mount(
           <Tab id={id}>
             {[
-              <Text key="3" type="subheader-secondary">
+              <Text key="3" type="subheader-secondary" tagName="h3">
                 Example Text
               </Text>,
             ]}
@@ -198,7 +198,7 @@ describe('<Tab />', () => {
         const container = mount(
           <Tab style={style}>
             {[
-              <Text key="4" type="subheader-secondary">
+              <Text key="4" type="subheader-secondary" tagName="h3">
                 Example Text
               </Text>,
             ]}
@@ -215,7 +215,7 @@ describe('<Tab />', () => {
         const container = mount(
           <Tab active={active}>
             {[
-              <Text key="5" type="subheader-secondary">
+              <Text key="5" type="subheader-secondary" tagName="h3">
                 Example Text
               </Text>,
             ]}
@@ -232,7 +232,7 @@ describe('<Tab />', () => {
         const container = mount(
           <Tab disabled={disabled}>
             {[
-              <Text key="6" type="subheader-secondary">
+              <Text key="6" type="subheader-secondary" tagName="h3">
                 Example Text
               </Text>,
             ]}
@@ -501,7 +501,7 @@ describe('<Tab />', () => {
         const element = mount(
           <Tab>
             {[
-              <Text key="1" type="subheader-secondary">
+              <Text key="1" type="subheader-secondary" tagName="h3">
                 Icon and Label
               </Text>,
             ]}
@@ -521,7 +521,7 @@ describe('<Tab />', () => {
         const element = mount(
           <Tab className={className}>
             {[
-              <Text key="2" type="subheader-secondary">
+              <Text key="2" type="subheader-secondary" tagName="h3">
                 Icon and Label
               </Text>,
             ]}
@@ -541,7 +541,7 @@ describe('<Tab />', () => {
         const element = mount(
           <Tab id={id}>
             {[
-              <Text key="3" type="subheader-secondary">
+              <Text key="3" type="subheader-secondary" tagName="h3">
                 Icon and Label
               </Text>,
             ]}
@@ -562,7 +562,7 @@ describe('<Tab />', () => {
         const element = mount(
           <Tab style={style}>
             {[
-              <Text key="4" type="subheader-secondary">
+              <Text key="4" type="subheader-secondary" tagName="h3">
                 Icon and Label
               </Text>,
             ]}
@@ -582,7 +582,7 @@ describe('<Tab />', () => {
         const element = mount(
           <Tab active={active}>
             {[
-              <Text key="5" type="subheader-secondary">
+              <Text key="5" type="subheader-secondary" tagName="h3">
                 Icon and Label
               </Text>,
             ]}
@@ -602,7 +602,7 @@ describe('<Tab />', () => {
         const element = mount(
           <Tab disabled={disabled}>
             {[
-              <Text key="6" type="subheader-secondary">
+              <Text key="6" type="subheader-secondary" tagName="h3">
                 Icon and Label
               </Text>,
             ]}

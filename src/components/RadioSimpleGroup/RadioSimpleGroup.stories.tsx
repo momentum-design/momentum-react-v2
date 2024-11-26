@@ -42,8 +42,8 @@ Example.args = {
         }}
       >
         <Icon name="accessibility" autoScale />
-        <Text>Red</Text>
-        <Text>My value is 'red'</Text>
+        <Text tagName="p">Red</Text>
+        <Text tagName="p">My value is 'red'</Text>
       </RadioSimple>
       <RadioSimple
         value="blue"
@@ -58,8 +58,8 @@ Example.args = {
         }}
       >
         <Icon name="search" autoScale />
-        <Text>Blue</Text>
-        <Text>My value is 'blue'</Text>
+        <Text tagName="p">Blue</Text>
+        <Text tagName="p">My value is 'blue'</Text>
       </RadioSimple>
       <RadioSimple
         value="yellow"
@@ -74,8 +74,8 @@ Example.args = {
         }}
       >
         <Icon name="search" autoScale />
-        <Text>Yellow</Text>
-        <Text>My value is 'yellow'</Text>
+        <Text tagName="p">Yellow</Text>
+        <Text tagName="p">My value is 'yellow'</Text>
       </RadioSimple>
     </div>
   ),
@@ -109,8 +109,8 @@ Layout.parameters = {
             }}
           >
             <Icon name="video-layout-equal" autoScale />
-            <Text>Grid</Text>
-            <Text>My value is 'grid'</Text>
+            <Text tagName="p">Grid</Text>
+            <Text tagName="p">My value is 'grid'</Text>
           </RadioSimple>
           <RadioSimple
             value="stack"
@@ -126,8 +126,8 @@ Layout.parameters = {
             }}
           >
             <Icon name="video-layout-stack" autoScale />
-            <Text>Stack</Text>
-            <Text>My value is 'stack'</Text>
+            <Text tagName="p">Stack</Text>
+            <Text tagName="p">My value is 'stack'</Text>
           </RadioSimple>
           <RadioSimple
             value="sideBySide"
@@ -143,8 +143,8 @@ Layout.parameters = {
             }}
           >
             <Icon name="layout-side-by-side-vertical" autoScale />
-            <Text>SideBySide</Text>
-            <Text>My value is 'sideBySide'</Text>
+            <Text tagName="p">SideBySide</Text>
+            <Text tagName="p">My value is 'sideBySide'</Text>
           </RadioSimple>
         </div>
       ),

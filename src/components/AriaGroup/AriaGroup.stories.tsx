@@ -30,7 +30,9 @@ const AriaGroupOfTextInput: ReactNode = () => {
         flexDirection: 'column',
       }}
     >
-      <Text id="text-input-group-head">{'Please enter your information'}</Text>
+      <Text id="text-input-group-head" tagName="p">
+        {'Please enter your information'}
+      </Text>
       <TextInput
         aria-label={'first name'}
         label={'First Name'}
@@ -65,7 +67,9 @@ const AriaGroupOfCheckbox: ReactNode = () => {
         flexDirection: 'column',
       }}
     >
-      <Text id="checkbox-group-head">{'Counties you have visited'}</Text>
+      <Text id="checkbox-group-head" tagName="p">
+        {'Counties you have visited'}
+      </Text>
       <Checkbox label={'United States of America'} />
       <Checkbox label={'United Kingdom'} />
       <Checkbox label={'France'} />
@@ -85,7 +89,9 @@ const AriaGroupOfToggles: ReactNode = () => {
         flexDirection: 'column',
       }}
     >
-      <Text id="other-options-group-head">{'Other options'}</Text>
+      <Text id="other-options-group-head" tagName="p">
+        {'Other options'}
+      </Text>
       <Toggle aria-label={'Option A'} />
       <Toggle aria-label={'Option B'} />
       <Toggle aria-label={'Option C'} />
