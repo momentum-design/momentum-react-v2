@@ -5,74 +5,84 @@
   flex-direction: column;
 
   > .md-radio-wrapper {
-    display: flex;
-    justify-content: start;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 1rem;
-    height: 1.75rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    > .md-radio-label {
+      display: flex;
+      justify-content: start;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 1rem;
+      height: 1.75rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
 
-    > .md-radio-button {
-      appearance: none;
-      -webkit-appearance: none;
-      height: 1rem;
-      width: 1rem;
-      border-radius: 0.5rem;
-      outline: none;
+      > .md-radio-button {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+      }
+    }
+
+    > .md-radio-description {
+      margin-left: 2rem;
     }
 
     &[data-disabled='false'] {
+      color: var(--mds-color-theme-text-primary-normal);
+
       > .md-radio-label {
-        color: var(--mds-color-theme-text-primary-normal);
-      }
-
-      > .md-radio-button {
-        &:checked {
-          border: 5px solid var(--mds-color-theme-control-active-normal);
-        }
-
-        &:not(:checked) {
-          background-color: var(--mds-color-theme-control-inactive-normal);
-          border-style: solid;
-          border-color: var(--mds-color-theme-outline-input-normal);
-          border-width: 0.0625rem;
-        }
-
-        &.focus {
-          box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
-        }
-      }
-
-      &:hover,
-      &.hover {
-        color: var(--mds-color-theme-text-primary-normal);
-
         > .md-radio-button {
           &:checked {
-            border: 5px solid var(--mds-color-theme-control-active-hover);
+            border: 5px solid var(--mds-color-theme-control-active-normal);
           }
 
           &:not(:checked) {
-            background-color: var(--mds-color-theme-control-inactive-hover);
+            background-color: var(--mds-color-theme-control-inactive-normal);
+            border-style: solid;
+            border-color: var(--mds-color-theme-outline-input-normal);
+            border-width: 0.0625rem;
+          }
+
+          &.focus {
+            box-shadow: var(--md-globals-focus-ring-box-shadow-accent);
+          }
+        }
+
+        &:hover,
+        &.hover {
+          color: var(--mds-color-theme-text-primary-normal);
+
+          > .md-radio-button {
+            &:checked {
+              border: 5px solid var(--mds-color-theme-control-active-hover);
+            }
+
+            &:not(:checked) {
+              background-color: var(--mds-color-theme-control-inactive-hover);
+            }
+          }
+        }
+
+        &:active,
+        &.active {
+          color: var(--mds-color-theme-text-primary-normal);
+
+          > .md-radio-button {
+            &:checked {
+              border: 5px solid var(--mds-color-theme-control-active-pressed);
+            }
+
+            &:not(:checked) {
+              background-color: var(--mds-color-theme-control-inactive-pressed);
+            }
           }
         }
       }
 
-      &:active,
-      &.active {
-        color: var(--mds-color-theme-text-primary-normal);
-
-        > .md-radio-button {
-          &:checked {
-            border: 5px solid var(--mds-color-theme-control-active-pressed);
-          }
-
-          &:not(:checked) {
-            background-color: var(--mds-color-theme-control-inactive-pressed);
-          }
-        }
+      > .md-radio-description {
+        color: var(--mds-color-theme-text-secondary-normal);
       }
     }
 
@@ -80,15 +90,21 @@
     &.disable {
       color: var(--mds-color-theme-text-primary-disabled);
 
-      > .md-radio-button {
-        &:checked {
-          border: 5px solid var(--mds-color-theme-control-active-disabled);
-        }
+      > .md-radio-label {
+        > .md-radio-button {
+          &:checked {
+            border: 5px solid var(--mds-color-theme-control-active-disabled);
+          }
 
-        &:not(:checked) {
-          background-color: var(--mds-color-theme-control-inactive-disabled);
-          border-style: none;
+          &:not(:checked) {
+            background-color: var(--mds-color-theme-control-inactive-disabled);
+            border-style: none;
+          }
         }
+      }
+
+      > .md-radio-description {
+        color: var(--mds-color-theme-text-primary-disabled);
       }
     }
   }

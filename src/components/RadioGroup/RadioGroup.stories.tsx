@@ -45,6 +45,31 @@ Example.args = {
   label: 'Example',
 };
 
+const WithDescription = Template<RadioGroupProps>(RadioGroup).bind({});
+
+WithDescription.argTypes = { ...argTypes };
+
+WithDescription.args = {
+  options: [
+    {
+      label: 'Option 1',
+      description: 'Subtext',
+      value: 'option1',
+    },
+    {
+      label: 'Option 2',
+      description: 'Subtext',
+      value: 'option2',
+    },
+    {
+      label: 'Option 3',
+      description: 'Subtext',
+      value: 'option3',
+    },
+  ],
+  label: 'Example',
+};
+
 const Common = MultiTemplate(RadioGroup).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -110,4 +135,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Common };
+export { Example, WithDescription, Common };

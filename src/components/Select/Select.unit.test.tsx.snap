@@ -180,7 +180,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-id"
+            id="test-ID"
             role="combobox"
             type="button"
           >
@@ -292,7 +292,7 @@ exports[`Select snapshot should match snapshot 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
-          id="test-id"
+          id="test-ID"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -500,7 +500,7 @@ exports[`Select snapshot should match snapshot 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-id"
+              id="test-ID"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -2426,7 +2426,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input borderLess"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -2538,7 +2538,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input borderLess"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -2746,7 +2746,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input borderLess"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -2998,7 +2998,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -3110,7 +3110,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -3318,7 +3318,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -3570,7 +3570,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -3682,7 +3682,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -3890,7 +3890,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -4152,7 +4152,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -4264,7 +4264,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -4472,7 +4472,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -4536,7 +4536,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     hidden=""
                   />
                   <div
-                    aria-labelledby="test-ID"
+                    aria-labelledby="test-id"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -4550,7 +4550,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       aria-labelledby="test-ID"
                       class="md-select-menu-listbox md-menu-list-background-wrapper"
                       data-color="primary"
-                      id="test-ID"
+                      id="test-id"
                       role="listbox"
                       tabindex="-1"
                     >
@@ -4608,7 +4608,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
               }
             >
               <ModalContainer
-                aria-labelledby="test-ID"
+                aria-labelledby="test-id"
                 ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
@@ -4641,7 +4641,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     hidden={true}
                   />
                   <div
-                    aria-labelledby="test-ID"
+                    aria-labelledby="test-id"
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -4812,7 +4812,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                         aria-labelledby="test-ID"
                         className="md-select-menu-listbox"
                         color="primary"
-                        id="test-ID"
+                        id="test-id"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onKeyDown={[Function]}
@@ -4830,7 +4830,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                               aria-labelledby="test-ID"
                               className="md-select-menu-listbox md-menu-list-background-wrapper"
                               data-color="primary"
-                              id="test-ID"
+                              id="test-id"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onKeyDown={[Function]}
@@ -6166,7 +6166,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-open"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -6278,7 +6278,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-open"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -6486,7 +6486,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-open"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -6550,7 +6550,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     hidden=""
                   />
                   <div
-                    aria-labelledby="test-ID"
+                    aria-labelledby="test-id"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -6564,7 +6564,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       aria-labelledby="test-ID"
                       class="md-select-menu-listbox md-menu-list-background-wrapper"
                       data-color="primary"
-                      id="test-ID"
+                      id="test-id"
                       role="listbox"
                       tabindex="-1"
                     >
@@ -6622,7 +6622,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
               }
             >
               <ModalContainer
-                aria-labelledby="test-ID"
+                aria-labelledby="test-id"
                 ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
@@ -6655,7 +6655,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     hidden={true}
                   />
                   <div
-                    aria-labelledby="test-ID"
+                    aria-labelledby="test-id"
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -6822,7 +6822,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                         aria-labelledby="test-ID"
                         className="md-select-menu-listbox"
                         color="primary"
-                        id="test-ID"
+                        id="test-id"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onKeyDown={[Function]}
@@ -6840,7 +6840,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                               aria-labelledby="test-ID"
                               className="md-select-menu-listbox md-menu-list-background-wrapper"
                               data-color="primary"
-                              id="test-ID"
+                              id="test-id"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onKeyDown={[Function]}
@@ -9469,7 +9469,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -9583,7 +9583,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -9793,7 +9793,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -10676,7 +10676,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input md-select-selected md-select-open"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -10791,7 +10791,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input md-select-selected md-select-open"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -11002,7 +11002,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input md-select-selected md-select-open"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}
@@ -11069,7 +11069,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     hidden=""
                   />
                   <div
-                    aria-labelledby="test-ID"
+                    aria-labelledby="test-id"
                     class="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -11083,7 +11083,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       aria-labelledby="test-ID"
                       class="md-select-menu-listbox md-menu-list-background-wrapper"
                       data-color="primary"
-                      id="test-ID"
+                      id="test-id"
                       role="listbox"
                       tabindex="-1"
                     >
@@ -11163,7 +11163,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
               }
             >
               <ModalContainer
-                aria-labelledby="test-ID"
+                aria-labelledby="test-id"
                 ariaModal={true}
                 arrowId="arrow1"
                 className="md-select-popover"
@@ -11196,7 +11196,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     hidden={true}
                   />
                   <div
-                    aria-labelledby="test-ID"
+                    aria-labelledby="test-id"
                     className="md-select-popover md-modal-container-wrapper"
                     data-arrow-orientation="vertical"
                     data-color="primary"
@@ -11386,7 +11386,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                         aria-labelledby="test-ID"
                         className="md-select-menu-listbox"
                         color="primary"
-                        id="test-ID"
+                        id="test-id"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onKeyDown={[Function]}
@@ -11404,7 +11404,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                               aria-labelledby="test-ID"
                               className="md-select-menu-listbox md-menu-list-background-wrapper"
                               data-color="primary"
-                              id="test-ID"
+                              id="test-id"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onKeyDown={[Function]}
@@ -12449,7 +12449,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="test-ID test-ID"
             class="md-select-dropdown-input"
-            id="test-ID"
+            id="test-id"
             role="combobox"
             type="button"
           >
@@ -12561,7 +12561,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="test-ID test-ID"
           className="md-select-dropdown-input"
-          id="test-ID"
+          id="test-id"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -12769,7 +12769,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="test-ID test-ID"
               className="md-select-dropdown-input"
-              id="test-ID"
+              id="test-id"
               onBlur={[Function]}
               onClick={[Function]}
               onDragStart={[Function]}

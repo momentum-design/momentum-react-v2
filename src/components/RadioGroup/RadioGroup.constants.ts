@@ -11,10 +11,12 @@ const DEFAULTS = {
 
 const STYLE = {
   group: `${CLASS_PREFIX}-group`,
-  description: `${CLASS_PREFIX}-group-description`,
+  groupDescription: `${CLASS_PREFIX}-group-description`,
   wrapper: `${CLASS_PREFIX}-wrapper`,
   button: `${CLASS_PREFIX}-button`,
   focus: `${CLASS_PREFIX}-focus`,
+  label: `${CLASS_PREFIX}-label`,
+  radioDescription: `${CLASS_PREFIX}-description`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE };
