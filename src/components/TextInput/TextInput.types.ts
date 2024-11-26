@@ -1,5 +1,5 @@
 import type { AriaTextFieldProps } from '@react-types/textfield';
-import type { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties } from 'react';
 import type { Message } from '../InputMessage/InputMessage.types';
 import { RequireOneOf } from '../../utils/types';
 
