@@ -88,6 +88,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot 1`] = `
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -258,6 +259,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with avatarPr
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -380,6 +382,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with classNam
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -506,6 +509,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -710,6 +714,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -919,6 +924,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1124,6 +1130,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with firstLin
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1250,6 +1257,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with id 1`] =
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1402,6 +1410,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               </Icon>
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1554,6 +1563,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               </Icon>
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1706,6 +1716,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               </Icon>
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1858,6 +1869,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with schedule
               </Icon>
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1980,6 +1992,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text
@@ -1994,6 +2007,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with secondLi
                   </Text>
                 </Text>
                 <Text
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -2132,6 +2146,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with style 1`
             >
               <div>
                 <Text
+                  tagName="p"
                   type="body-primary"
                 >
                   <Text

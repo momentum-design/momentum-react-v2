@@ -62,6 +62,7 @@ exports[`<Accordion /> snapshot should match snapshot 1`] = `
                   scale={12}
                 />
                 <Text
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -155,6 +156,7 @@ exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
                   scale={12}
                 />
                 <Text
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -248,6 +250,7 @@ exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1
                   scale={12}
                 />
                 <Text
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -341,6 +344,7 @@ exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
                   scale={12}
                 />
                 <Text
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -443,6 +447,7 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
                   scale={12}
                 />
                 <Text
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
