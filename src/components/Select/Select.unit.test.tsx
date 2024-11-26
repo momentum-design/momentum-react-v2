@@ -399,13 +399,13 @@ describe('Select', () => {
       expect(button.getAttribute('title')).toBe(title);
     });
 
-    it('should have provided aria-labelledby when ariaLabelledBy is provided', async () => {
+    it('should have provided aria-labelledby when aria-labelledby is provided', async () => {
       expect.assertions(1);
 
       const ariaLabelledBy = 'test';
 
       const wrapper = await mountAndWait(
-        <Select ariaLabelledBy={ariaLabelledBy} label="test">
+        <Select aria-labelledby={ariaLabelledBy} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>
@@ -415,13 +415,13 @@ describe('Select', () => {
       expect(button.getAttribute('aria-labelledby')).toBe(ariaLabelledBy);
     });
 
-    it('should have removed aria-labelledby when ariaLabelledBy is provided as an empty string', async () => {
+    it('should have removed aria-labelledby when aria-labelledby is provided as an empty string', async () => {
       expect.assertions(1);
 
       const ariaLabelledBy = '';
 
       const wrapper = await mountAndWait(
-        <Select ariaLabelledBy={ariaLabelledBy} label="test">
+        <Select aria-labelledby={ariaLabelledBy} label="test">
           <Item>Item 1</Item>
           <Item>Item 2</Item>
         </Select>

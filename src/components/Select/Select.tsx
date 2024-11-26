@@ -7,6 +7,8 @@ import React, {
   forwardRef,
   useState,
   useEffect,
+  MouseEvent,
+  KeyboardEvent,
 } from 'react';
 import classnames from 'classnames';
 
@@ -25,7 +27,7 @@ import Text from '../Text';
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
   const {
-    ariaLabelledBy,
+    'aria-labelledby': ariaLabelledBy,
     className,
     style,
     id,
@@ -102,25 +104,28 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
   /**
    * Handle onKeyDown from @react-aria manually
    */
-  const onKeyDown = useCallback((e) => {
-    switch (e.key) {
-      // useButton already provides Keyboard event support for Enter and Space
-      case 'ArrowUp':
-      case 'ArrowDown':
-        e.preventDefault();
-        state.open();
-        break;
-    }
-  }, [state]);
+  const onKeyDown = useCallback(
+    (e) => {
+      switch (e.key) {
+        // useButton already provides Keyboard event support for Enter and Space
+        case 'ArrowUp':
+        case 'ArrowDown':
+          e.preventDefault();
+          state.open();
+          break;
+      }
+    },
+    [state]
+  );
 
   const otherProps = shallowDisabled
     ? {
         'aria-disabled': true,
         'data-shallow-disabled': true,
-        onMouseDown: (e: any) => {
+        onMouseDown: (e: MouseEvent<HTMLButtonElement>) => {
           e.currentTarget.focus();
         },
-        onKeyDown: (e: any) => {
+        onKeyDown: (e: KeyboardEvent<HTMLButtonElement>) => {
           if (e.key !== 'Tab') {
             e.preventDefault();
           }
