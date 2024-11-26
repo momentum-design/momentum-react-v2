@@ -217,6 +217,7 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
       >
         <input
           aria-describedby="desc-test-ID"
+          aria-invalid={true}
           aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
