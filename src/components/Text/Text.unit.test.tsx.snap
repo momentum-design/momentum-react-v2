@@ -49,56 +49,56 @@ exports[`Text should match snapshot with type 1`] = `
   <div>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h1"
+      tagname="p"
       type="heading-xlarge-medium"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h1"
+      tagname="p"
       type="heading-midsize-bold"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h1"
+      tagname="p"
       type="heading-midsize-medium"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h1"
+      tagname="p"
       type="heading-midsize-regular"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h2"
+      tagname="p"
       type="heading-small-medium"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h3"
+      tagname="p"
       type="body-large-bold"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h3"
+      tagname="p"
       type="body-large-bold"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h3"
+      tagname="p"
       type="body-large-medium"
     >
       Example Text
@@ -119,56 +119,56 @@ exports[`Text should match snapshot with type 1`] = `
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h3"
+      tagname="p"
       type="body-midsize-medium"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h3"
+      tagname="p"
       type="body-midsize-bold"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="h3"
+      tagname="p"
       type="body-midsize-bold"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="small"
+      tagname="p"
       type="body-midsize-regular"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="small"
+      tagname="p"
       type="body-midsize-regular-underline"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="small"
+      tagname="p"
       type="body-small-bold"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="small"
+      tagname="p"
       type="body-small-regular"
     >
       Example Text
     </mdc-text>
     <mdc-text
       class="md-text-wrapper"
-      tagname="small"
+      tagname="p"
       type="body-small-medium"
     >
       Example Text
@@ -380,7 +380,7 @@ exports[`Text should match snapshot with type 1`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 1`] = `
+exports[`Text should match snapshot with type and each tagName 1`] = `
 <div>
   <div>
     <mdc-text
@@ -716,7 +716,7 @@ exports[`Text should match snapshot with type and tagName override 1`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 2`] = `
+exports[`Text should match snapshot with type and each tagName 2`] = `
 <div>
   <div>
     <mdc-text
@@ -1052,7 +1052,7 @@ exports[`Text should match snapshot with type and tagName override 2`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 3`] = `
+exports[`Text should match snapshot with type and each tagName 3`] = `
 <div>
   <div>
     <mdc-text
@@ -1388,7 +1388,7 @@ exports[`Text should match snapshot with type and tagName override 3`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 4`] = `
+exports[`Text should match snapshot with type and each tagName 4`] = `
 <div>
   <div>
     <mdc-text
@@ -1724,7 +1724,7 @@ exports[`Text should match snapshot with type and tagName override 4`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 5`] = `
+exports[`Text should match snapshot with type and each tagName 5`] = `
 <div>
   <div>
     <mdc-text
@@ -2060,7 +2060,7 @@ exports[`Text should match snapshot with type and tagName override 5`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 6`] = `
+exports[`Text should match snapshot with type and each tagName 6`] = `
 <div>
   <div>
     <mdc-text
@@ -2396,7 +2396,7 @@ exports[`Text should match snapshot with type and tagName override 6`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 7`] = `
+exports[`Text should match snapshot with type and each tagName 7`] = `
 <div>
   <div>
     <mdc-text
@@ -2732,7 +2732,7 @@ exports[`Text should match snapshot with type and tagName override 7`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 8`] = `
+exports[`Text should match snapshot with type and each tagName 8`] = `
 <div>
   <div>
     <mdc-text
@@ -3068,7 +3068,7 @@ exports[`Text should match snapshot with type and tagName override 8`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 9`] = `
+exports[`Text should match snapshot with type and each tagName 9`] = `
 <div>
   <div>
     <mdc-text
@@ -3404,7 +3404,7 @@ exports[`Text should match snapshot with type and tagName override 9`] = `
 </div>
 `;
 
-exports[`Text should match snapshot with type and tagName override 10`] = `
+exports[`Text should match snapshot with type and each tagName 10`] = `
 <div>
   <div>
     <mdc-text

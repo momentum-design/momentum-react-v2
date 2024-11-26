@@ -63,6 +63,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -80,6 +81,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -207,6 +209,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -224,6 +227,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -331,6 +335,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -348,6 +353,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -487,6 +493,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -511,6 +518,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                   </DividerDot>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -795,6 +803,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -812,6 +821,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -864,7 +874,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
         outline={true}
         size={28}
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Message
         </Text>
       </ButtonPill>,
@@ -872,7 +884,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
         color="join"
         size={28}
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Join
         </Text>
       </ButtonPill>,
@@ -1000,6 +1014,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1017,6 +1032,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1075,6 +1091,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                             type="button"
                           >
                             <Text
+                              tagName="h3"
                               type="subheader-secondary"
                             >
                               <Text
@@ -1134,6 +1151,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                             type="button"
                           >
                             <Text
+                              tagName="h3"
                               type="subheader-secondary"
                             >
                               <Text
@@ -1221,7 +1239,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              <Text>
+                              <Text
+                                tagName="p"
+                              >
                                 <Text
                                   className="md-text-wrapper"
                                   tagname="p"
@@ -1288,7 +1308,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              <Text>
+                              <Text
+                                tagName="p"
+                              >
                                 <Text
                                   className="md-text-wrapper"
                                   tagname="p"
@@ -1387,6 +1409,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1404,6 +1427,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1456,7 +1480,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
         outline={true}
         size={28}
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Message
         </Text>
       </ButtonPill>,
@@ -1464,7 +1490,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
         color="join"
         size={28}
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Join
         </Text>
       </ButtonPill>,
@@ -1537,6 +1565,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1561,6 +1590,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                   </DividerDot>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1644,7 +1674,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              <Text>
+                              <Text
+                                tagName="p"
+                              >
                                 <Text
                                   className="md-text-wrapper"
                                   tagname="p"
@@ -1711,7 +1743,9 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               onTouchStart={[Function]}
                               type="button"
                             >
-                              <Text>
+                              <Text
+                                tagName="p"
+                              >
                                 <Text
                                   className="md-text-wrapper"
                                   tagname="p"
@@ -1807,6 +1841,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1826,6 +1861,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1934,6 +1970,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                 <div>
                   <Text
                     data-color="success"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -1953,6 +1990,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2060,6 +2098,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2082,6 +2121,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                   </DividerDot>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2192,6 +2232,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2214,6 +2255,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                   </DividerDot>
                   <Text
                     data-color="success"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2371,6 +2413,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2395,6 +2438,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                   </DividerDot>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2523,6 +2567,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2540,6 +2585,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2656,6 +2702,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                 <div>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2673,6 +2720,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                   </Text>
                   <Text
                     data-color="secondary"
+                    tagName="small"
                     type="body-secondary"
                   >
                     <Text
@@ -2731,6 +2779,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                             type="button"
                           >
                             <Text
+                              tagName="h3"
                               type="subheader-secondary"
                             >
                               <Text
@@ -2790,6 +2839,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                             type="button"
                           >
                             <Text
+                              tagName="h3"
                               type="subheader-secondary"
                             >
                               <Text
