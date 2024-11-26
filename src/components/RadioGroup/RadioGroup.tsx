@@ -41,7 +41,11 @@ const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
     >
       <span {...labelProps}>{label}</span>
       {description && (
-        <Text id={descriptionId} type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}>
+        <Text
+          id={descriptionId}
+          className={STYLE.groupDescription}
+          type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}
+        >
           {description}
         </Text>
       )}

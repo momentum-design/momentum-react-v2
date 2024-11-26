@@ -427,7 +427,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const radio = screen.getByText('Option 1');
+      const radio = screen.getByText('Option 1').parentElement;
 
       expect(radio).toHaveClass(className);
     });
@@ -449,7 +449,7 @@ describe('<RadioGroup />', () => {
           ]}
         />
       );
-      const radio = screen.getByRole('radio');
+      const radio = screen.getByText('Option 1');
 
       expect(radio.id).toBe(id);
     });
@@ -472,7 +472,7 @@ describe('<RadioGroup />', () => {
           ]}
         />
       );
-      const radio = screen.getByText('Option 1');
+      const radio = screen.getByText('Option 1').parentElement;
 
       expect(radio).toHaveStyle(styleString);
     });
