@@ -4,19 +4,17 @@ import { DEFAULTS, STYLE } from './Text.constants';
 import { Props } from './Text.types';
 import classnames from 'classnames';
 import { Text as MdcText } from '@momentum-design/components/dist/react';
-import { inferTagName, mapOldToNewType } from './mappingUtils';
+import { mapOldToNewType } from './mappingUtils';
 
 const Text: FC<Props> = (props: Props) => {
   const { children, type = DEFAULTS.TYPE, className, id, style, tagName, ...rest } = props;
-
-  const tagNameLocal = tagName || inferTagName(type);
 
   return (
     <MdcText
       className={classnames(STYLE.wrapper, className)}
       type={mapOldToNewType(type)}
       id={id}
-      tagname={tagNameLocal}
+      tagname={tagName}
       style={style}
       {...rest}
     >

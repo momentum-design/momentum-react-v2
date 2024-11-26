@@ -1,42 +1,7 @@
 import { TYPES } from './Text.constants';
 import { TYPE as FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
-import type { AllowedTagNames, FontStyle } from './Text.types';
+import type { FontStyle } from './Text.types';
 import type { TextType } from '@momentum-design/components';
-
-const inferTagName = (type: FontStyle): AllowedTagNames => {
-  switch (type) {
-    case TYPES.DISPLAY:
-    case TYPES.BANNER_TERTIARY:
-    case TYPES.BANNER_SECONDARY:
-    case TYPES.BANNER_PRIMARY:
-      return 'h1';
-
-    case TYPES.TITLE:
-      return 'h2';
-
-    case TYPES.HEADER_PRIMARY:
-    case TYPES.HIGHLIGHT_PRIMARY:
-    case TYPES.SUBHEADER_PRIMARY:
-    case TYPES.HEADER_SECONDARY:
-    case TYPES.HIGHLIGHT_SECONDARY:
-    case TYPES.SUBHEADER_SECONDARY:
-      return 'h3';
-
-    case TYPES.BODY_PRIMARY:
-    case TYPES.HYPERLINK_PRIMARY:
-      return 'p';
-
-    case TYPES.BODY_SECONDARY:
-    case TYPES.HYPERLINK_SECONDARY:
-    case TYPES.HIGHLIGHT_COMPACT:
-    case TYPES.BODY_COMPACT:
-    case TYPES.LABEL_COMPACT:
-      return 'small';
-
-    default:
-      return 'p';
-  }
-};
 
 // this is to map from the old types from the
 // old Web Specs to the new Momentum Global Web Library types
@@ -82,4 +47,4 @@ const mapOldToNewType = (type: FontStyle): TextType => {
       return type as TextType;
   }
 };
-export { inferTagName, mapOldToNewType };
+export { mapOldToNewType };
