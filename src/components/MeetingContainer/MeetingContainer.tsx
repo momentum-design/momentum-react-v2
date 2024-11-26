@@ -28,7 +28,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
     isDisabled,
     statusColor,
     titleType = DEFAULTS.TITLE_TYPE,
-    titleTagName,
+    titleTagName = DEFAULTS.TITLE_TAG_NAME,
     ...otherProps
   } = props;
   const title = meetingTitle || children;

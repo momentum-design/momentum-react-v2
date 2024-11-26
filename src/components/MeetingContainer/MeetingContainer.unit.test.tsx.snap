@@ -46,6 +46,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot 1`] = `
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -192,6 +193,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with avatar supplie
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -316,6 +318,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with children suppl
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -474,6 +477,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -786,6 +790,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -956,6 +961,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -1392,6 +1398,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with id 1`] = `
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -1546,6 +1553,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -1824,6 +1832,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -1953,6 +1962,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoFi
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -2081,6 +2091,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -2215,6 +2226,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -2355,6 +2367,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -2550,6 +2563,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
@@ -2685,6 +2699,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
               >
                 <div>
                   <Text
+                    tagName="h3"
                     type="header-primary"
                   >
                     <Text
