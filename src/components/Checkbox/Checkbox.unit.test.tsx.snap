@@ -1,507 +1,639 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox /> snapshot should match snapshot 1`] = `
-<Checkbox>
-  <label
+<Checkbox
+  aria-label="Checkbox"
+>
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
-      >
-        <input
-          aria-checked={false}
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-  </label>
+        >
+          <input
+            aria-checked={false}
+            aria-label="Checkbox"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with className 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   className="example-class"
 >
-  <label
+  <div
     className="md-checkbox-wrapper example-class"
     data-disabled={false}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
-      >
-        <input
-          aria-checked={false}
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-  </label>
+        >
+          <input
+            aria-checked={false}
+            aria-label="Checkbox"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with disabled checkbox 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   isDisabled={true}
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={true}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
-      >
-        <input
-          aria-checked={false}
-          checked={false}
-          disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-  </label>
+        >
+          <input
+            aria-checked={false}
+            aria-label="Checkbox"
+            checked={false}
+            disabled={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with id 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   id="example-id"
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
-    id="example-id"
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+      id="example-id"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
-      >
-        <input
-          aria-checked={false}
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-  </label>
+        >
+          <input
+            aria-checked={false}
+            aria-label="Checkbox"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   isIndeterminate={true}
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
-          }
-        }
-      >
-        <input
-          aria-checked="mixed"
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-selected checkbox"
+    <label
+      className="md-checkbox-label"
     >
-      <Icon
-        className="md-checkbox-icon"
-        name="minus"
-        scale={12}
-        weight="bold"
-      >
+      <VisuallyHidden>
         <div
-          aria-hidden="true"
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
-          role="img"
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
+          }
         >
-          <svg
-            aria-hidden="true"
-            className=""
-            data-autoscale={false}
-            data-scale={12}
-            data-test="minus"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
+          <input
+            aria-checked="mixed"
+            aria-label="Checkbox"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
           />
         </div>
-      </Icon>
-    </div>
-  </label>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-selected checkbox"
+      >
+        <Icon
+          className="md-checkbox-icon"
+          name="minus"
+          scale={12}
+          weight="bold"
+        >
+          <div
+            aria-hidden="true"
+            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-autoscale={false}
+              data-scale={12}
+              data-test="minus"
+              fill="currentColor"
+              height="100%"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   label="Example text"
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
+        >
+          <input
+            aria-checked={false}
+            aria-label="Example text"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+      Example text
+    </label>
+  </div>
+</Checkbox>
+`;
+
+exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox and description 1`] = `
+<Checkbox
+  aria-label="Checkbox"
+  description="Description"
+  label="Example text"
+>
+  <div
+    className="md-checkbox-wrapper"
+    data-disabled={false}
+  >
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
+          }
+        >
+          <input
+            aria-checked={false}
+            aria-describedby="checkbox-description-test-ID"
+            aria-label="Example text"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+      Example text
+    </label>
+    <Text
+      className="md-checkbox-description"
+      id="checkbox-description-test-ID"
+      type="body-secondary"
+    >
+      <Text
+        className="md-text-wrapper md-checkbox-description"
+        id="checkbox-description-test-ID"
+        tagname="small"
+        type="body-midsize-regular"
       >
-        <input
-          aria-checked={false}
-          aria-label="Example text"
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-    Example text
-  </label>
+        <mdc-text
+          class="md-text-wrapper md-checkbox-description"
+          suppressHydrationWarning={true}
+        >
+          Description
+        </mdc-text>
+      </Text>
+    </Text>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with not selected checkbox 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   isSelected={false}
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
-      >
-        <input
-          aria-checked={false}
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-  </label>
+        >
+          <input
+            aria-checked={false}
+            aria-label="Checkbox"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   isSelected={true}
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
-          }
-        }
-      >
-        <input
-          aria-checked={true}
-          checked={true}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-selected checkbox"
+    <label
+      className="md-checkbox-label"
     >
-      <Icon
-        className="md-checkbox-icon"
-        name="check"
-        scale={12}
-        weight="bold"
-      >
+      <VisuallyHidden>
         <div
-          aria-hidden="true"
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
-          role="img"
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
+          }
         >
-          <svg
-            aria-hidden="true"
-            className=""
-            data-autoscale={false}
-            data-scale={12}
-            data-test="check"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
+          <input
+            aria-checked={true}
+            aria-label="Checkbox"
+            checked={true}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
           />
         </div>
-      </Icon>
-    </div>
-  </label>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-selected checkbox"
+      >
+        <Icon
+          className="md-checkbox-icon"
+          name="check"
+          scale={12}
+          weight="bold"
+        >
+          <div
+            aria-hidden="true"
+            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-autoscale={false}
+              data-scale={12}
+              data-test="check"
+              fill="currentColor"
+              height="100%"
+              style={Object {}}
+              viewBox="0, 0, 32, 32"
+              width="100%"
+            />
+          </div>
+        </Icon>
+      </div>
+    </label>
+  </div>
 </Checkbox>
 `;
 
 exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
 <Checkbox
+  aria-label="Checkbox"
   style={
     Object {
       "color": "pink",
     }
   }
 >
-  <label
+  <div
     className="md-checkbox-wrapper"
     data-disabled={false}
     style={
@@ -510,49 +642,54 @@ exports[`<Checkbox /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <VisuallyHidden>
-      <div
-        style={
-          Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "clipPath": "inset(50%)",
-            "height": 1,
-            "margin": "0 -1px -1px 0",
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "whiteSpace": "nowrap",
-            "width": 1,
+    <label
+      className="md-checkbox-label"
+    >
+      <VisuallyHidden>
+        <div
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": 1,
+              "margin": "0 -1px -1px 0",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": 1,
+            }
           }
-        }
-      >
-        <input
-          aria-checked={false}
-          checked={false}
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="checkbox"
-        />
-      </div>
-    </VisuallyHidden>
-    <div
-      className="md-checkbox-not-selected checkbox"
-    />
-  </label>
+        >
+          <input
+            aria-checked={false}
+            aria-label="Checkbox"
+            checked={false}
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="checkbox"
+          />
+        </div>
+      </VisuallyHidden>
+      <div
+        className="md-checkbox-not-selected checkbox"
+      />
+    </label>
+  </div>
 </Checkbox>
 `;
