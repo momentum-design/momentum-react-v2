@@ -12,6 +12,7 @@ import {
 } from './Icon.constants';
 import classnames from 'classnames';
 import { getResolvedSVGName } from './Icon.utils';
+import Tooltip from '../Tooltip';
 
 /**
  * Icon component that can dynamically display SVG icons with a valid name.
@@ -31,6 +32,7 @@ const Icon: React.FC<Props> = (props: Props) => {
     weight,
     weightless = DEFAULTS.WEIGHTLESS,
     ariaLabel,
+    tooltipProps,
     ...otherProps
   } = props;
   const resolvedSVGName = getResolvedSVGName(name, weight, weightless);
@@ -51,6 +53,10 @@ const Icon: React.FC<Props> = (props: Props) => {
         </div>
       </div>
     );
+  }
+
+  if (!SvgIcon) {
+    return null;
   }
 
   const getColors = () => {
@@ -85,40 +91,51 @@ const Icon: React.FC<Props> = (props: Props) => {
 
   delete otherProps['aria-label'];
 
-  if (SvgIcon) {
-    return (
-      <div
-        className={classnames(STYLE.wrapper, STYLE.autoScales, STYLE.scales, className, {
-          [STYLE.noShrink]: scale,
-        })}
-        id={id}
-        style={style}
-        title={title}
-        role="img"
-        aria-label={accessibleName}
-        aria-hidden={accessibleName ? 'false' : 'true'}
-      >
-        <SvgIcon
-          // coloured class is added to avoid theming the fixed colours inside coloured icons
-          data-test={name}
-          className={classnames({ [STYLE.coloured]: isColoredIcon })}
-          aria-hidden="true"
-          style={{ ...styleColors }}
-          {...inheritedColors}
-          viewBox={
-            EXCEPTION_ICONS_LIST.includes(name) ? VIEW_BOX_SPECS.SMALL : VIEW_BOX_SPECS.NORMAL
-          }
-          width="100%"
-          height="100%"
-          data-scale={!autoScale && (scale || DEFAULTS.SCALE)}
-          data-autoscale={autoScale || DEFAULTS.AUTO_SCALE}
-          {...otherProps}
-        />
-      </div>
-    );
-  }
+  const isTooltipWrapped = tooltipProps?.children;
 
-  return null;
+  const content = (
+    <div
+      className={classnames(STYLE.wrapper, STYLE.autoScales, STYLE.scales, className, {
+        [STYLE.noShrink]: scale,
+      })}
+      id={id}
+      style={style}
+      title={title}
+      role="img"
+      aria-label={isTooltipWrapped ? undefined : accessibleName}
+      aria-hidden={!accessibleName && !isTooltipWrapped}
+      // icon must be focusable to trigger the tooltip
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex={isTooltipWrapped ? 0 : undefined}
+    >
+      <SvgIcon
+        // coloured class is added to avoid theming the fixed colours inside coloured icons
+        data-test={name}
+        className={classnames({ [STYLE.coloured]: isColoredIcon })}
+        aria-hidden="true"
+        style={{ ...styleColors }}
+        {...inheritedColors}
+        viewBox={EXCEPTION_ICONS_LIST.includes(name) ? VIEW_BOX_SPECS.SMALL : VIEW_BOX_SPECS.NORMAL}
+        width="100%"
+        height="100%"
+        data-scale={!autoScale && (scale || DEFAULTS.SCALE)}
+        data-autoscale={autoScale || DEFAULTS.AUTO_SCALE}
+        {...otherProps}
+      />
+    </div>
+  );
+
+  return isTooltipWrapped ? (
+    <Tooltip
+      placement="top"
+      strategy="fixed"
+      type="label"
+      triggerComponent={content}
+      {...tooltipProps}
+    />
+  ) : (
+    content
+  );
 };
 
 export default Icon;

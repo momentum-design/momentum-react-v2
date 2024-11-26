@@ -409,6 +409,569 @@ exports[`<Icon /> snapshot should match snapshot with title 1`] = `
 </Icon>
 `;
 
+exports[`<Icon /> snapshot should match snapshot with tooltip (children and placement) 1`] = `
+<Icon
+  name="accessibility"
+  tooltipProps={
+    Object {
+      "children": "Test",
+      "placement": "bottom",
+    }
+  }
+>
+  <Tooltip
+    placement="bottom"
+    strategy="fixed"
+    triggerComponent={
+      <div
+        aria-hidden="false"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+        role="img"
+        tabIndex={0}
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          data-autoscale={false}
+          data-scale={32}
+          data-test="accessibility"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    }
+    type="label"
+  >
+    <Popover
+      addBackdrop={false}
+      aria-hidden={false}
+      boundary="scrollParent"
+      color="primary"
+      interactive={false}
+      offsetDistance={5}
+      offsetSkidding={0}
+      placement="bottom"
+      role="tooltip"
+      setInstance={[Function]}
+      showArrow={true}
+      strategy="fixed"
+      trigger="mouseenter focus"
+      triggerComponent={
+        <div
+          aria-hidden="false"
+          aria-labelledby="test-ID"
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+          role="img"
+          tabIndex={0}
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-autoscale={false}
+            data-scale={32}
+            data-test="accessibility"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      }
+      variant="small"
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={true}
+        interactive={false}
+        offset={
+          Array [
+            0,
+            17,
+          ]
+        }
+        onHidden={[Function]}
+        placement="bottom"
+        plugins={
+          Array [
+            Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": true,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow95828b76-fd96-4a6f-b781-3469b7925ca5",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "fixed",
+          }
+        }
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="mouseenter focus"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={true}
+          interactive={false}
+          offset={
+            Array [
+              0,
+              17,
+            ]
+          }
+          onHidden={[Function]}
+          placement="bottom"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": true,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow95828b76-fd96-4a6f-b781-3469b7925ca5",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "fixed",
+            }
+          }
+          render={[Function]}
+          trigger="mouseenter focus"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={true}
+            interactive={false}
+            offset={
+              Array [
+                0,
+                17,
+              ]
+            }
+            onHidden={[Function]}
+            placement="bottom"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": true,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow95828b76-fd96-4a6f-b781-3469b7925ca5",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "fixed",
+              }
+            }
+            render={[Function]}
+            trigger="mouseenter focus"
+          >
+            <div
+              aria-hidden="false"
+              aria-labelledby="test-ID"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
+              tabIndex={0}
+            >
+              <svg
+                aria-hidden="true"
+                className=""
+                data-autoscale={false}
+                data-scale={32}
+                data-test="accessibility"
+                fill="currentColor"
+                height="100%"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-2"
+                  style="pointer-events: none; z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+    <div
+      className="md-tooltip-label"
+      id="test-ID"
+    >
+      Test
+    </div>
+  </Tooltip>
+</Icon>
+`;
+
+exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
+<Icon
+  name="accessibility"
+  tooltipProps={
+    Object {
+      "children": "Test",
+    }
+  }
+>
+  <Tooltip
+    placement="top"
+    strategy="fixed"
+    triggerComponent={
+      <div
+        aria-hidden="false"
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+        role="img"
+        tabIndex={0}
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          data-autoscale={false}
+          data-scale={32}
+          data-test="accessibility"
+          fill="currentColor"
+          height="100%"
+          style={Object {}}
+          viewBox="0, 0, 32, 32"
+          width="100%"
+        />
+      </div>
+    }
+    type="label"
+  >
+    <Popover
+      addBackdrop={false}
+      aria-hidden={false}
+      boundary="scrollParent"
+      color="primary"
+      interactive={false}
+      offsetDistance={5}
+      offsetSkidding={0}
+      placement="top"
+      role="tooltip"
+      setInstance={[Function]}
+      showArrow={true}
+      strategy="fixed"
+      trigger="mouseenter focus"
+      triggerComponent={
+        <div
+          aria-hidden="false"
+          aria-labelledby="test-ID"
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+          role="img"
+          tabIndex={0}
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-autoscale={false}
+            data-scale={32}
+            data-test="accessibility"
+            fill="currentColor"
+            height="100%"
+            style={Object {}}
+            viewBox="0, 0, 32, 32"
+            width="100%"
+          />
+        </div>
+      }
+      variant="small"
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={true}
+        interactive={false}
+        offset={
+          Array [
+            0,
+            17,
+          ]
+        }
+        onHidden={[Function]}
+        placement="top"
+        plugins={
+          Array [
+            Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": true,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow42dd5e55-398c-4d19-bf7d-e7a77cd5f785",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "fixed",
+          }
+        }
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="mouseenter focus"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={true}
+          interactive={false}
+          offset={
+            Array [
+              0,
+              17,
+            ]
+          }
+          onHidden={[Function]}
+          placement="top"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": true,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow42dd5e55-398c-4d19-bf7d-e7a77cd5f785",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "fixed",
+            }
+          }
+          render={[Function]}
+          trigger="mouseenter focus"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={true}
+            interactive={false}
+            offset={
+              Array [
+                0,
+                17,
+              ]
+            }
+            onHidden={[Function]}
+            placement="top"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": true,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow42dd5e55-398c-4d19-bf7d-e7a77cd5f785",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "fixed",
+              }
+            }
+            render={[Function]}
+            trigger="mouseenter focus"
+          >
+            <div
+              aria-hidden="false"
+              aria-labelledby="test-ID"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+              role="img"
+              tabIndex={0}
+            >
+              <svg
+                aria-hidden="true"
+                className=""
+                data-autoscale={false}
+                data-scale={32}
+                data-test="accessibility"
+                fill="currentColor"
+                height="100%"
+                style={Object {}}
+                viewBox="0, 0, 32, 32"
+                width="100%"
+              />
+            </div>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-1"
+                  style="pointer-events: none; z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+    <div
+      className="md-tooltip-label"
+      id="test-ID"
+    >
+      Test
+    </div>
+  </Tooltip>
+</Icon>
+`;
+
 exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
 <Icon
   name="accessibility"
