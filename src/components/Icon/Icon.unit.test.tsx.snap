@@ -512,7 +512,7 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children and plac
                 "enabled": true,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow95828b76-fd96-4a6f-b781-3469b7925ca5",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -570,7 +570,7 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children and plac
                   "enabled": true,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow95828b76-fd96-4a6f-b781-3469b7925ca5",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -627,7 +627,7 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children and plac
                     "enabled": true,
                     "name": "arrow",
                     "options": Object {
-                      "element": "#arrow95828b76-fd96-4a6f-b781-3469b7925ca5",
+                      "element": "#arrow1",
                       "padding": 5,
                     },
                   },
@@ -793,7 +793,7 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
                 "enabled": true,
                 "name": "arrow",
                 "options": Object {
-                  "element": "#arrow42dd5e55-398c-4d19-bf7d-e7a77cd5f785",
+                  "element": "#arrow1",
                   "padding": 5,
                 },
               },
@@ -851,7 +851,7 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
                   "enabled": true,
                   "name": "arrow",
                   "options": Object {
-                    "element": "#arrow42dd5e55-398c-4d19-bf7d-e7a77cd5f785",
+                    "element": "#arrow1",
                     "padding": 5,
                   },
                 },
@@ -908,7 +908,7 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
                     "enabled": true,
                     "name": "arrow",
                     "options": Object {
-                      "element": "#arrow42dd5e55-398c-4d19-bf7d-e7a77cd5f785",
+                      "element": "#arrow1",
                       "padding": 5,
                     },
                   },
