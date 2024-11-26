@@ -13,6 +13,16 @@ const checkboxArgTypes = {
       defaultValue: CONSTANTS.DEFAULTS.LABEL,
     },
   },
+  description: {
+    description: 'The description that the checkbox should have.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: undefined,
+    },
+  },
   isSelected: {
     description: 'Whether the checkbox is selected or not',
     control: { type: 'boolean' },
