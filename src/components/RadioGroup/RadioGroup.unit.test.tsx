@@ -477,6 +477,21 @@ describe('<RadioGroup />', () => {
       expect(radio).toHaveStyle(styleString);
     });
 
+    it('should have a child description when description is provided to child', () => {
+      render(
+        <RadioGroup
+          aria-label="Radio"
+          options={[{ label: 'Option 1', value: 'test', description: 'Description' }]}
+        />
+      );
+
+      const describedby = screen.getByRole('radio').getAttribute('aria-describedby');
+
+      const description = document.getElementById(describedby);
+      expect(description).not.toBeNull();
+      expect(description.textContent).toBe('Description');
+    });
+
     it('should give only the select element the selected style', () => {
       expect.assertions(2);
 
