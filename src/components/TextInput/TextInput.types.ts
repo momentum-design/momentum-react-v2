@@ -74,7 +74,7 @@ interface TextInputProps extends Omit<AriaTextFieldProps, 'errorMessage'> {
    */
   style?: CSSProperties;
   /**
-   * Optional aria label on the clear button
+   * Aria label on the clear button
    */
   clearAriaLabel: string;
   /**
