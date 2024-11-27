@@ -86,6 +86,7 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
           className={classnames(STYLE.description)}
           id={`checkbox-description-${checkboxId}`}
           type="body-secondary"
+          tagName="small"
         >
           {description}
         </Text>

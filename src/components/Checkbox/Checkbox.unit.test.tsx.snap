@@ -456,6 +456,7 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox and 
     <Text
       className="md-checkbox-description"
       id="checkbox-description-test-ID"
+      tagName="small"
       type="body-secondary"
     >
       <Text
