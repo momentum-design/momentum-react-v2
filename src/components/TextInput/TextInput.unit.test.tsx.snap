@@ -75,7 +75,7 @@ exports[`<TextInput/> snapshot should match snapshot with clearAriaLabel 1`] = `
       onClick={[Function]}
     >
       <label
-        htmlFor="example-id"
+        htmlFor="test-ID"
         id="desc-test-ID"
       >
         Password
@@ -384,7 +384,7 @@ exports[`<TextInput/> snapshot should match snapshot with label 1`] = `
       onClick={[Function]}
     >
       <label
-        htmlFor="example-id"
+        htmlFor="test-ID"
         id="desc-test-ID"
       >
         Password
