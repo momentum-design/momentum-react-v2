@@ -7,6 +7,10 @@ import { mountAndWait } from '../../../test/utils';
 import Checkbox, { CHECKBOX_CONSTANTS as CONSTANTS } from './';
 import Text from '../Text';
 
+jest.mock('uuid', () => ({
+  v4: () => '1',
+}));
+
 describe('<Checkbox />', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
