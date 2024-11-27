@@ -39,6 +39,7 @@ const Radio: FC<RadioProps> = (props: RadioProps) => {
       </label>
       {description && (
         <Text
+          tagName="small"
           type="body-secondary"
           className={STYLE.radioDescription}
           id={`radio-description-${radioId}`}
