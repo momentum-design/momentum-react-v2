@@ -425,7 +425,7 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox and 
         >
           <input
             aria-checked={false}
-            aria-describedby="checkbox-description-test-ID"
+            aria-describedby="checkbox-description-01739c27-740d-465d-a0de-a12f9faf1864"
             aria-label="Example text"
             checked={false}
             disabled={false}
@@ -455,13 +455,13 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox and 
     </label>
     <Text
       className="md-checkbox-description"
-      id="checkbox-description-test-ID"
+      id="checkbox-description-01739c27-740d-465d-a0de-a12f9faf1864"
       tagName="small"
       type="body-secondary"
     >
       <Text
         className="md-text-wrapper md-checkbox-description"
-        id="checkbox-description-test-ID"
+        id="checkbox-description-01739c27-740d-465d-a0de-a12f9faf1864"
         tagname="small"
         type="body-midsize-regular"
       >
