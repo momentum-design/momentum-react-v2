@@ -22,8 +22,14 @@ const Radio: FC<RadioProps> = (props: RadioProps) => {
 
   const radioProps = {
     'aria-label': label,
-    ...(description ? { 'aria-describedby': `radio-description-${radioId}` } : {}),
     ...props,
+    ...(description
+      ? {
+          'aria-describedby': `radio-description-${radioId} ${
+            props['aria-describedby'] || ''
+          }`.trimEnd(),
+        }
+      : {}),
   };
   const { inputProps } = useRadio(radioProps, state, ref);
 
