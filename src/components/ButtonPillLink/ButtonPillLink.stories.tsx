@@ -50,15 +50,29 @@ Tooltip.args = {
 
 const Overflow = Template<ButtonPillLinkProps>(ButtonPillLink).bind({});
 
+Overflow.decorators = [
+  // eslint-disable-next-line react/display-name
+  (Story) => (
+    <div>
+      <style>
+        {`.md-button-pill-link-wrapper .md-link-container {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        width: 100%;
+      }`}
+      </style>
+      <Story />
+    </div>
+  ),
+];
+
 Overflow.args = {
   children: 'This is a very long label',
   title: 'This is a very long label',
   style: {
     width: '12rem',
-    display: 'inline-block',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
   },
 };
 
