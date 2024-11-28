@@ -460,8 +460,8 @@ const ComboBox: React.FC<Props> = (props: Props) => {
           <TextInput
             ref={inputRef}
             aria-label={STYLE.input}
-            // ComboBox hides the clear button from the input therefore set the clear aria label to undefined
-            clearAriaLabel={undefined}
+            // ComboBox hides the clear button from the input therefore set the clear aria label to empty string
+            clearAriaLabel={''}
             placeholder={placeholder}
             value={inputValue}
             className={STYLE.input}
