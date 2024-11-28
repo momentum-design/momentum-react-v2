@@ -25,11 +25,13 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
 
   const checkboxProps = {
     ...props,
-    ...(!description || props['aria-describedby'] !== undefined
-      ? {}
-      : {
-          'aria-describedby': `checkbox-description-${checkboxId}`,
-        }),
+    ...(description
+      ? {
+          'aria-describedby': `checkbox-description-${checkboxId} ${
+            props['aria-describedby'] || ''
+          }`.trimEnd(),
+        }
+      : {}),
   };
 
   const state = useToggleState(props);

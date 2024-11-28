@@ -208,11 +208,20 @@ describe('<Checkbox />', () => {
 
     it('should set the aria-describedby prop to aria-describedby given if provided', async () => {
       const wrapper = await mountAndWait(
-        <Checkbox label="Checkbox Label" description="Description" aria-describedby="test-id" />
+        <Checkbox label="Checkbox Label" aria-describedby="test-id" />
       );
 
       const input = wrapper.find('input');
       expect(input.prop('aria-describedby')).toBe('test-id');
+    });
+
+    it('should merge description and aria-describedby if not are provided', async () => {
+      const wrapper = await mountAndWait(
+        <Checkbox label="Checkbox Label" description="Description" aria-describedby="test-id" />
+      );
+
+      const input = wrapper.find('input');
+      expect(input.prop('aria-describedby')).toBe('checkbox-description-1 test-id');
     });
   });
 
