@@ -117,5 +117,6 @@ export interface Props {
    * If provided, a tooltip will be added to the icon and these props will be passed to the tooltip component.
    * `triggerComponent` is controlled by the Icon component and cannot be specified.
    */
-  tooltipProps?: Omit<TooltipProps, 'triggerComponent'>;
+  tooltipProps?: Omit<TooltipProps, 'triggerComponent' | 'type'> &
+    Partial<Pick<TooltipProps, 'type'>>;
 }
