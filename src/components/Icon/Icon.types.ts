@@ -113,9 +113,9 @@ export interface Props {
   weightless?: boolean;
 
   /**
-   * Optional. If defined, the icon will be wrapped by a tooltip.
-   * Props will be passed to the Tooltip component.
-   * `triggerComponent` and `type` is controlled by the Icon component and cannot be specified.
+   * For accessibility, meaningful standalone icons needs to be labelled by a tooltip.
+   * If provided, a tooltip will be added to the icon and these props will be passed to the tooltip component.
+   * `triggerComponent` is controlled by the Icon component and cannot be specified.
    */
-  tooltipProps?: Omit<TooltipProps, 'triggerComponent' | 'type'>;
+  tooltipProps?: Omit<TooltipProps, 'triggerComponent'>;
 }
