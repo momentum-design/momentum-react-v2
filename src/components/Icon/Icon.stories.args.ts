@@ -140,7 +140,7 @@ export default {
   },
   tooltipProps: {
     description:
-      'Optional. If defined, the icon will be wrapped by a tooltip. Props will be passed to the Tooltip component.',
+      'For accessibility, meaningful standalone icons needs to be labelled by a tooltip. If provided, a tooltip will be added to the icon and these props will be passed to the tooltip component.',
     defaultValue: undefined,
     control: { type: 'object' },
     table: {

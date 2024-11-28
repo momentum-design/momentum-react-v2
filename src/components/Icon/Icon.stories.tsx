@@ -66,11 +66,11 @@ Weights.parameters = {
   ],
 };
 
-const Tooltip = Template<IconProps>(Icon).bind({});
+const WithTooltip = Template<IconProps>(Icon).bind({});
 
-Tooltip.argTypes = { ...argTypes };
+WithTooltip.argTypes = { ...argTypes };
 
-Tooltip.args = {
+WithTooltip.args = {
   name: 'accessibility',
   tooltipProps: {
     children: 'Tooltip content!',
@@ -99,4 +99,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, Sizes, Weights, Tooltip, Common };
+export { Example, Sizes, Weights, WithTooltip, Common };
