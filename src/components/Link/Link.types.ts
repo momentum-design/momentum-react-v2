@@ -18,7 +18,7 @@ export interface Props extends AriaLinkProps {
    * Custom class to be able to override the component's CSS
    */
   className?: string;
-  
+
   /**
    * Child components of this component. This prop replaces primaryText.
    */
