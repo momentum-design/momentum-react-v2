@@ -38,7 +38,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -57,7 +56,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 2"
@@ -94,7 +92,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -113,7 +110,6 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 2"
@@ -150,7 +146,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -187,7 +182,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -262,7 +256,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -299,7 +292,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -336,7 +328,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -374,7 +365,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -474,7 +464,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -493,7 +482,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 2"
@@ -512,7 +500,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 3"
@@ -550,7 +537,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -569,7 +555,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 2"
@@ -588,7 +573,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 3"
@@ -625,7 +609,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -644,7 +627,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 2"
@@ -663,7 +645,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 3"
@@ -700,7 +681,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 1"
@@ -720,7 +700,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 2"
@@ -739,7 +718,6 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       <label
         class="md-radio-label"
-        id="1"
       >
         <input
           aria-label="Option 3"
