@@ -23,7 +23,6 @@ const ButtonPillLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnch
     href,
     target,
     tooltipContent,
-    tooltipType,
     onPress,
     ...otherProps
   } = props;
@@ -44,7 +43,6 @@ const ButtonPillLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnch
       onPress={onPress}
       disabled={disabled}
       inverted={inverted}
-      tooltipType={tooltipType}
       hasExternalLinkIcon={false}
       tooltipContent={tooltipContent}
       data-color={color || DEFAULTS.COLOR}

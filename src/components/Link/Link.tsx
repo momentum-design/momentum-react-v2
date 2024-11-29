@@ -15,7 +15,6 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     hasExternalLinkIcon,
     externalLinkIconProps,
     tooltipContent,
-    tooltipType,
     disabled,
     inverted,
     style,
@@ -39,9 +38,9 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
 
   const isShowIcon = hasExternalLinkIcon || (hasExternalLinkIcon === undefined && isExternalLink);
 
-  if (isShowIcon && !tooltipContent && !externalLinkIconProps?.['aria-label']) {
+  if (isShowIcon && !tooltipContent) {
     console.warn(
-      'MRV2: The external link icon is enabled but neither tooltipContent nor an aria-label is provided for the icon.'
+      'MRV2: The external link icon is enabled but tooltipContent is not provided for the icon. For accessibility reasons, a tooltip must be provided for external links.'
     );
   }
 
@@ -71,7 +70,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
   return (
     <FocusRing disabled={disabled}>
       {tooltipContent ? (
-        <Tooltip type={tooltipType} placement="bottom" triggerComponent={content}>
+        <Tooltip type="description" placement="bottom" triggerComponent={content}>
           {tooltipContent}
         </Tooltip>
       ) : (
