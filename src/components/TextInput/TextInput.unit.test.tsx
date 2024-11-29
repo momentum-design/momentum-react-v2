@@ -23,7 +23,9 @@ describe('<TextInput/>', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<TextInput aria-label="text-input" />);
+      const container = await mountComponent(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -34,7 +36,7 @@ describe('<TextInput/>', () => {
       const className = 'example-class';
 
       const container = await mountComponent(
-        <TextInput aria-label="text-input" className={className} />
+        <TextInput clearAriaLabel="Clear this input" label="text-input" className={className} />
       );
 
       expect(container).toMatchSnapshot();
@@ -45,17 +47,9 @@ describe('<TextInput/>', () => {
 
       const id = 'example-id';
 
-      const container = await mountComponent(<TextInput aria-label="text-input" id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with label', async () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = await mountComponent(<TextInput label="Password" id={id} />);
+      const container = await mountComponent(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" id={id} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -77,7 +71,9 @@ describe('<TextInput/>', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountComponent(<TextInput aria-label="text-input" style={style} />);
+      const container = await mountComponent(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" style={style} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -88,7 +84,7 @@ describe('<TextInput/>', () => {
       const message: Message = { message: 'test', level: 'error' };
 
       const container = await mountComponent(
-        <TextInput aria-label="text-input" messageArr={[message]} />
+        <TextInput clearAriaLabel="Clear this input" label="text-input" messageArr={[message]} />
       );
 
       expect(container).toMatchSnapshot();
@@ -98,7 +94,7 @@ describe('<TextInput/>', () => {
       expect.assertions(1);
 
       const container = await mountComponent(
-        <TextInput aria-label="text-input" description="some input" />
+        <TextInput clearAriaLabel="Clear this input" label="text-input" description="some input" />
       );
 
       expect(container).toMatchSnapshot();
@@ -107,7 +103,9 @@ describe('<TextInput/>', () => {
     it('should match snapshot with inputMaxLen', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<TextInput aria-label="text-input" inputMaxLen={4} />);
+      const container = await mountComponent(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" inputMaxLen={4} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -115,7 +113,9 @@ describe('<TextInput/>', () => {
     it('should match snapshot with isDisabled', async () => {
       expect.assertions(1);
 
-      const container = await mountComponent(<TextInput aria-label="text-input" isDisabled />);
+      const container = await mountComponent(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" isDisabled />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -125,7 +125,9 @@ describe('<TextInput/>', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<TextInput aria-label="text-input" />))
+      const element = (
+        await mountAndWait(<TextInput clearAriaLabel="Clear this input" label="text-input" />)
+      )
         .find(TextInput)
         .getDOMNode();
 
@@ -138,7 +140,9 @@ describe('<TextInput/>', () => {
       const className = 'example-class';
 
       const element = (
-        await mountAndWait(<TextInput aria-label="text-input" className={className} />)
+        await mountAndWait(
+          <TextInput clearAriaLabel="Clear this input" label="text-input" className={className} />
+        )
       )
         .find(TextInput)
         .getDOMNode();
@@ -151,11 +155,13 @@ describe('<TextInput/>', () => {
 
       const id = 'example-id-2';
 
-      const element = (await mountAndWait(<TextInput aria-label="text-input" id={id} />)).find(
-        TextInput
-      );
+      const element = (
+        await mountAndWait(
+          <TextInput clearAriaLabel="Clear this input" label="text-input" id={id} />
+        )
+      ).find(TextInput);
 
-      expect(element.props()).toMatchObject({ 'aria-label': 'text-input', id: 'example-id-2' });
+      expect(element.props()).toMatchObject({ label: 'text-input', id: 'example-id-2' });
     });
 
     it('should have provided style when style is provided', async () => {
@@ -164,7 +170,11 @@ describe('<TextInput/>', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = (await mountAndWait(<TextInput aria-label="text-input" style={style} />))
+      const element = (
+        await mountAndWait(
+          <TextInput clearAriaLabel="Clear this input" label="text-input" style={style} />
+        )
+      )
         .find(TextInput)
         .getDOMNode();
 
@@ -180,7 +190,8 @@ describe('<TextInput/>', () => {
       const element = (
         await mountAndWait(
           <TextInput
-            aria-label="text-input"
+            clearAriaLabel="Clear this input"
+            label="text-input"
             inputMaxLen={inputMaxLen}
             inputClassName={inputClassName}
           />
@@ -196,7 +207,13 @@ describe('<TextInput/>', () => {
       expect.assertions(2);
 
       const textInputComponent = (
-        await mountAndWait(<TextInput aria-label="text-input" aria-describedby={'desc-test-ID'} />)
+        await mountAndWait(
+          <TextInput
+            clearAriaLabel="Clear this input"
+            label="text-input"
+            aria-describedby={'desc-test-ID'}
+          />
+        )
       ).find(TextInput);
 
       const inputMessageComponent = (
@@ -205,24 +222,26 @@ describe('<TextInput/>', () => {
 
       expect(inputMessageComponent.props().id).toStrictEqual('desc-test-ID');
       expect(textInputComponent.props()).toMatchObject({
-        'aria-label': 'text-input',
+        label: 'text-input',
         'aria-describedby': 'desc-test-ID',
       });
     });
 
-    it('should not have aria-labelledby when message is not provided', async () => {
+    it('should not have labelledby when message is not provided', async () => {
       expect.assertions(1);
 
-      const textInputComponent = (await mountAndWait(<TextInput aria-label="text-input" />)).find(
-        TextInput
-      );
+      const textInputComponent = (
+        await mountAndWait(<TextInput clearAriaLabel="Clear this input" label="text-input" />)
+      ).find(TextInput);
 
       expect(textInputComponent.props()['aria-describedby']).toBe(undefined);
     });
 
     it('should not have the clear input button displayed when value is empty', async () => {
       const textInputComponent = (
-        await mountAndWait(<TextInput aria-label="text-input" value="" />)
+        await mountAndWait(
+          <TextInput clearAriaLabel="Clear this input" label="text-input" value="" />
+        )
       ).find(TextInput);
 
       expect(textInputComponent.find('.clear-icon').exists()).toBe(false);
@@ -232,7 +251,9 @@ describe('<TextInput/>', () => {
       'should have the clear input button displayed when not disabled (value = "%s")',
       async (value) => {
         const textInputComponent = (
-          await mountAndWait(<TextInput aria-label="text-input" value={value} />)
+          await mountAndWait(
+            <TextInput clearAriaLabel="Clear this input" label="text-input" value={value} />
+          )
         ).find(TextInput);
 
         expect(textInputComponent.find('.clear-icon').exists()).toBe(true);
@@ -243,7 +264,14 @@ describe('<TextInput/>', () => {
       'should not have the clear input button displayed when isDisabled (value = "%s")',
       async (value) => {
         const textInputComponent = (
-          await mountAndWait(<TextInput aria-label="text-input" value={value} isDisabled />)
+          await mountAndWait(
+            <TextInput
+              clearAriaLabel="Clear this input"
+              label="text-input"
+              value={value}
+              isDisabled
+            />
+          )
         ).find(TextInput);
 
         expect(textInputComponent.find('.clear-icon').exists()).toBe(false);
@@ -255,7 +283,9 @@ describe('<TextInput/>', () => {
     it('clicking on another part of the component gives focus to the input', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<TextInput aria-label="text-input" />);
+      const wrapper = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" />
+      );
 
       const inputElement = wrapper.find('input');
       const inputWrapper = wrapper.find(`.${CONSTANTS.STYLE.wrapper}`);

@@ -19,7 +19,7 @@ export default {
   },
   direction: {
     defaultValue: CONSTANTS.DIRECTIONS.bottom,
-    description: 'Text to display inside the dropdown when there is no selection.',
+    description: 'Direction in which the option list will display.',
     control: { type: 'select' },
     options: [...Object.values(CONSTANTS.DIRECTIONS)],
     table: {

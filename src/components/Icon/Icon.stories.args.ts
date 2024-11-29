@@ -138,4 +138,15 @@ export default {
       },
     },
   },
+  tooltipProps: {
+    description:
+      'For accessibility, meaningful standalone icons needs to be labelled by a tooltip. If provided, a tooltip will be added to the icon and these props will be passed to the tooltip component.',
+    defaultValue: undefined,
+    control: { type: 'object' },
+    table: {
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
 };

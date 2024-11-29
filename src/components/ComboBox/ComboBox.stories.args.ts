@@ -1,12 +1,10 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import { ComboBox_CONSTANTS as CONSTANTS } from '.';
 
-
 export default {
   ...commonStyles,
   width: {
-    description:
-      'To override the ComboBox container and selection list width.',
+    description: 'To override the ComboBox container and selection list width.',
     control: { type: 'text' },
     table: {
       type: {
@@ -44,8 +42,7 @@ export default {
   },
   onInputChange: {
     defaultValue: undefined,
-    description:
-      'Handler that is called when the InputValue changes.',
+    description: 'Handler that is called when the InputValue changes.',
     control: { type: 'function' },
     table: {
       category: 'React Aria - Input',
@@ -59,8 +56,7 @@ export default {
   },
   onArrowButtonPress: {
     defaultValue: undefined,
-    description:
-      'Handler that is called when the press is released over the arrowButton.',
+    description: 'Handler that is called when the press is released over the arrowButton.',
     control: { type: 'function' },
     table: {
       category: 'React Aria - Button',
@@ -70,7 +66,7 @@ export default {
       defaultValue: {
         summary: 'undefined',
       },
-    },  
+    },
   },
   shouldFilterOnArrowButton: {
     description:
@@ -84,7 +80,7 @@ export default {
       defaultValue: {
         summary: CONSTANTS.DEFAULTS.SHOULD_FILTER_ON_ARROW_BUTTON,
       },
-    },  
+    },
   },
   selectedKey: {
     description:
@@ -101,8 +97,7 @@ export default {
     },
   },
   disabledKeys: {
-    description:
-      'List with disabled keys. (They must be exact type as the key)',
+    description: 'List with disabled keys. (They must be exact type as the key)',
     control: { type: 'array' },
     table: {
       category: 'React Aria - Select',
@@ -115,8 +110,7 @@ export default {
     },
   },
   comboBoxGroups: {
-    description:
-      'The options for this selection list element.',
+    description: 'The options for this selection list element.',
     control: { type: 'array' },
     table: {
       category: 'React Aria - Select',
@@ -156,8 +150,7 @@ export default {
     },
   },
   openStateChange: {
-    description:
-      'Handler that is called when the selection list is expanded or collapsed.',
+    description: 'Handler that is called when the selection list is expanded or collapsed.',
     control: { type: 'function' },
     table: {
       category: 'React Aria - Select',

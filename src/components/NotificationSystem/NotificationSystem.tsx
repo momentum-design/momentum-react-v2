@@ -28,7 +28,7 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     toastClassName,
     bodyClassName,
     containerClassName,
-    ariaLabel
+    ariaLabel,
   } = props;
 
   const slideAndBlur = cssTransition({

@@ -6,14 +6,14 @@
 
   &[data-orientation='horizontal'] {
     flex-direction: row;
-    [dir="rtl"] & {
+
+    [dir='rtl'] & {
       flex-direction: row-reverse;
     }
   }
 
   &[data-orientation='vertical'] {
     flex-direction: column;
-    
   }
 
   &[data-separator='true'] {

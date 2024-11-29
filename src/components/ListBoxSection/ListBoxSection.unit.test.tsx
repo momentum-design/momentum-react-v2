@@ -33,7 +33,7 @@ describe('ListBoxSection', () => {
   const state = result.current;
 
   const setup = (item: any) => {
-    (wrapper) = mount(
+    wrapper = mount(
       <ListBoxContext.Provider value={state}>
         <ListBoxSection key={item.key} section={item} />
       </ListBoxContext.Provider>

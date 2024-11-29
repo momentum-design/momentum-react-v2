@@ -74,8 +74,6 @@ ExampleWithTagName.args = {
   titleTagName: 'h3',
 };
 
-
-
 const Example = Template<ToastProps>(Toast).bind({});
 
 Example.argTypes = { ...argTypes };

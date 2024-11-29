@@ -427,7 +427,7 @@ describe('<RadioGroup />', () => {
         />
       );
 
-      const radio = screen.getByText('Option 1');
+      const radio = screen.getByText('Option 1').parentElement;
 
       expect(radio).toHaveClass(className);
     });
@@ -449,7 +449,7 @@ describe('<RadioGroup />', () => {
           ]}
         />
       );
-      const radio = screen.getByRole('radio');
+      const radio = screen.getByText('Option 1');
 
       expect(radio.id).toBe(id);
     });
@@ -472,9 +472,55 @@ describe('<RadioGroup />', () => {
           ]}
         />
       );
-      const radio = screen.getByText('Option 1');
+      const radio = screen.getByText('Option 1').parentElement;
 
       expect(radio).toHaveStyle(styleString);
+    });
+
+    it('should have a child description when description is provided to child', () => {
+      render(
+        <RadioGroup
+          aria-label="Radio"
+          options={[{ label: 'Option 1', value: 'test', description: 'Description' }]}
+        />
+      );
+
+      const describedby = screen.getByRole('radio').getAttribute('aria-describedby');
+
+      const description = document.getElementById(describedby);
+      expect(description).not.toBeNull();
+      expect(description.textContent).toBe('Description');
+    });
+
+    it('should have a child describedby when describedby is provided to child', () => {
+      render(
+        <RadioGroup
+          aria-label="Radio"
+          options={[{ label: 'Option 1', value: 'test', 'aria-describedby': 'test 1' }]}
+        />
+      );
+
+      const describedby = screen.getByRole('radio').getAttribute('aria-describedby');
+      expect(describedby).toBe('test 1');
+    });
+
+    it('should merge child description and describedby into one aria-describedby', () => {
+      render(
+        <RadioGroup
+          aria-label="Radio"
+          options={[
+            {
+              label: 'Option 1',
+              value: 'test',
+              description: 'Hello World',
+              'aria-describedby': 'test 1',
+            },
+          ]}
+        />
+      );
+
+      const describedby = screen.getByRole('radio').getAttribute('aria-describedby');
+      expect(describedby).toBe('radio-description-1 test 1');
     });
 
     it('should give only the select element the selected style', () => {

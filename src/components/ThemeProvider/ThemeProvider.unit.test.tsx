@@ -64,7 +64,7 @@ describe('<ThemeProvider />', () => {
 
       const themeName = THEMES[Object.keys(THEMES)[0]];
 
-      const {container} = render(<ThemeProvider theme={themeName} />);
+      const { container } = render(<ThemeProvider theme={themeName} />);
 
       await waitFor(() => {
         expect(container.querySelector('mdc-themeprovider')).toBeTruthy();
@@ -94,7 +94,6 @@ describe('<ThemeProvider />', () => {
       expect.assertions(1);
 
       const children = [<div key="0" />, <div key="1" />, <div key="2" />];
-
 
       const divInElement = mount(<ThemeProvider>{children}</ThemeProvider>)
         .find(ThemeProvider)

@@ -8,26 +8,19 @@ export default class KitchenSink extends React.PureComponent {
     return (
       <>
         <h1>React Kitchen Sink</h1>
-        <div className='row'>
+        <div className="row">
           <Switch>
-            {
-              Object.entries(KitchenSinkComponents).map(ele =>
-                {
-                  const Component = ele[1];
-                  return (
-                      <Route
-                        key={ele[0]}
-                        exact
-                        path={`/${snakeCase(ele[0])}`}
-                        render={()=> (
-                          <Component
-                          />
-                        )}
-                      />
-                    );
-                  }
-              )
-            }
+            {Object.entries(KitchenSinkComponents).map((ele) => {
+              const Component = ele[1];
+              return (
+                <Route
+                  key={ele[0]}
+                  exact
+                  path={`/${snakeCase(ele[0])}`}
+                  render={() => <Component />}
+                />
+              );
+            })}
           </Switch>
         </div>
       </>

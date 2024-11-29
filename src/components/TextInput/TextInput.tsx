@@ -80,6 +80,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           ref={inputRef}
           maxLength={inputMaxLen}
           aria-describedby={messages && !!messages.length ? messageId.current : undefined}
+          aria-invalid={messageType === 'error' ? true : undefined}
         />
         {!!state.value && !isDisabled && (
           <ButtonSimple

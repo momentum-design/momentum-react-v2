@@ -1,16 +1,8 @@
+import { AriaLabelingProps } from '@react-types/shared';
 import { ReactNode } from 'react';
+import { AriaLabelRequired } from '../../utils/a11y';
 
-export interface Props {
-  /**
-   * aria-label attribute for the AriaGroup
-   */
-  ariaLabel?: string;
-
-  /**
-   * aria-labelledby attribute for the AriaGroup
-   */
-  ariaLabelledby?: string;
-
+interface AriaGroupProps extends AriaLabelingProps {
   /**
    * Child components of this AriaGroup.
    */
@@ -21,3 +13,5 @@ export interface Props {
    */
   className?: string;
 }
+
+export type Props = AriaGroupProps & AriaLabelRequired;

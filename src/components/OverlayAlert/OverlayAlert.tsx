@@ -28,9 +28,9 @@ const OverlayAlert: FC<Props> = (props: Props) => {
     title,
     focusLockProps = DEFAULTS.FOCUS_LOCK_PROPS,
     onClose,
-    ariaLabel,
-    ariaLabelledby,
-    ariaDescribedby,
+    'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledby,
+    'aria-describedby': ariaDescribedby,
     ...other
   } = props;
   const id = useRef(uuidV4());

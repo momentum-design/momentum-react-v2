@@ -80,5 +80,4 @@ TypesWithTagNameSmall.parameters = {
   ],
 };
 
-
 export { Example, Types, NewMomentumDesignTypes, TypesWithTagNameSmall };

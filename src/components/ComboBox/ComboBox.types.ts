@@ -2,7 +2,6 @@ import { CollectionChildren } from '@react-types/shared';
 import { PressEvent } from '@react-types/shared/src/events';
 import { CSSProperties, RefObject } from 'react';
 
-
 export type IComboBoxItem = {
   key: string;
   label: string;
@@ -85,7 +84,7 @@ export interface Props {
   /**
    * The currently selected key in the collection.
    */
-  selectedKey?: string; 
+  selectedKey?: string;
   /**
    * Used to get the input DOM within the component.
    */

@@ -32,34 +32,44 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="Option 1"
-      />
-      Option 1
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="Option 1"
+        />
+        Option 1
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option2"
-      />
-      Option 2
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 2"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+        Option 2
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -78,34 +88,44 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="Option 1"
-      />
-      Option 1
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="Option 1"
+        />
+        Option 1
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="Option 2"
-      />
-      Option 2
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 2"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="Option 2"
+        />
+        Option 2
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -124,20 +144,25 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -156,20 +181,25 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper example-class"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -188,22 +218,25 @@ exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
-      id="example-id"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
+      <label
+        class="md-radio-label"
         id="example-id"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -222,21 +255,26 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
       style="color: pink;"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -255,20 +293,25 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="true"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        disabled=""
-        name="test-ID"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          disabled=""
+          name="test-ID"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -287,21 +330,26 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="true"
     >
-      <input
-        aria-label="Option 1"
-        checked=""
-        class="md-radio-button"
-        disabled=""
-        name="test-ID"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          checked=""
+          class="md-radio-button"
+          disabled=""
+          name="test-ID"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -320,21 +368,26 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        checked=""
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          checked=""
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -374,7 +427,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with description 1`] = `
       Test Radio Group
     </span>
     <mdc-text
-      class="md-text-wrapper"
+      class="md-text-wrapper md-radio-group-description"
       id="radio-group-description-example-id"
     >
       The radio group description
@@ -415,48 +468,63 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option2"
-      />
-      Option 2
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 2"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+        Option 2
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 3"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option3"
-      />
-      Option 3
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 3"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option3"
+        />
+        Option 3
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -476,48 +544,63 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="true"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        disabled=""
-        name="test-ID"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          disabled=""
+          name="test-ID"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="true"
     >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        disabled=""
-        name="test-ID"
-        type="radio"
-        value="option2"
-      />
-      Option 2
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 2"
+          class="md-radio-button"
+          disabled=""
+          name="test-ID"
+          type="radio"
+          value="option2"
+        />
+        Option 2
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="true"
     >
-      <input
-        aria-label="Option 3"
-        class="md-radio-button"
-        disabled=""
-        name="test-ID"
-        type="radio"
-        value="option3"
-      />
-      Option 3
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 3"
+          class="md-radio-button"
+          disabled=""
+          name="test-ID"
+          type="radio"
+          value="option3"
+        />
+        Option 3
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -536,48 +619,63 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option2"
-      />
-      Option 2
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 2"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+        Option 2
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="true"
     >
-      <input
-        aria-label="Option 3"
-        class="md-radio-button"
-        disabled=""
-        name="test-ID"
-        type="radio"
-        value="option3"
-      />
-      Option 3
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 3"
+          class="md-radio-button"
+          disabled=""
+          name="test-ID"
+          type="radio"
+          value="option3"
+        />
+        Option 3
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -596,49 +694,64 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     >
       Test Radio Group
     </span>
-    <label
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 1"
-        checked=""
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option1"
-      />
-      Option 1
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 1"
+          checked=""
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option1"
+        />
+        Option 1
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 2"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option2"
-      />
-      Option 2
-    </label>
-    <label
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 2"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option2"
+        />
+        Option 2
+      </label>
+    </div>
+    <div
       class="md-radio-wrapper"
       data-disabled="false"
     >
-      <input
-        aria-label="Option 3"
-        class="md-radio-button"
-        name="test-ID"
-        tabindex="0"
-        type="radio"
-        value="option3"
-      />
-      Option 3
-    </label>
+      <label
+        class="md-radio-label"
+        id="1"
+      >
+        <input
+          aria-label="Option 3"
+          class="md-radio-button"
+          name="test-ID"
+          tabindex="0"
+          type="radio"
+          value="option3"
+        />
+        Option 3
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 import { CSSProperties } from 'react';
 import { AriaRadioGroupProps, AriaRadioProps } from '@react-types/radio';
+import { RequireOneOf } from '../../utils/types';
 
-export interface RadioGroupProps extends Omit<AriaRadioGroupProps, 'children'> {
+interface _RadioGroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -24,6 +25,9 @@ export interface RadioGroupProps extends Omit<AriaRadioGroupProps, 'children'> {
   description?: string;
 }
 
+export type RadioGroupProps = _RadioGroupProps &
+  RequireOneOf<_RadioGroupProps, ['label', 'aria-label', 'aria-labelledby']>;
+
 export interface RadioProps extends Omit<AriaRadioProps, 'children'> {
   /**
    * Custom style for overriding this component's CSS.
@@ -38,5 +42,11 @@ export interface RadioProps extends Omit<AriaRadioProps, 'children'> {
   /**
    * The label for the radio button.
    */
-  label?: string;
+  label: string;
+
+  /**
+   * The description for the radio button.
+   */
+
+  description?: string;
 }

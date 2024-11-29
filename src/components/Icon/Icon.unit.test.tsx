@@ -4,6 +4,13 @@ import { STYLE, EXCEPTION_ICONS_LIST, VIEW_BOX_SPECS } from './Icon.constants';
 
 import { mountAndWait } from '../../../test/utils';
 import { InferredIconName } from './Icon.types';
+import Tooltip from '../Tooltip';
+
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
 
 describe('<Icon />', () => {
   let container;
@@ -157,6 +164,26 @@ describe('<Icon />', () => {
       expect.assertions(1);
 
       container = await mountAndWait(<Icon name="info-badge" scale={14} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with tooltip (children)', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Icon name="accessibility" tooltipProps={{ children: 'Test' }} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with tooltip (children and placement)', async () => {
+      expect.assertions(1);
+
+      container = await mountAndWait(
+        <Icon name="accessibility" tooltipProps={{ children: 'Test', placement: 'bottom' }} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -438,6 +465,30 @@ describe('<Icon />', () => {
       const icon = wrapper.find('svg').getDOMNode();
 
       expect(icon.getAttribute('viewBox')).toBe(VIEW_BOX_SPECS.NORMAL);
+    });
+
+    it('does not wrap icon in a tooltip if tooltipProps is not specified', async () => {
+      const wrapper = await mountAndWait(<Icon name="accessibility" />);
+
+      expect(wrapper.find(Tooltip).exists()).toBe(false);
+    });
+
+    it('does wraps icon in a tooltip if tooltipProps is specified', async () => {
+      const wrapper = await mountAndWait(
+        <Icon name="accessibility" tooltipProps={{ children: 'Tooltip content!' }} />
+      );
+
+      const tooltip = wrapper.find(Tooltip);
+
+      expect(tooltip.props()).toStrictEqual({
+        placement: 'top',
+        strategy: 'fixed',
+        type: 'label',
+        triggerComponent: expect.any(Object),
+        children: 'Tooltip content!',
+      });
+
+      expect(wrapper.find(Icon).exists()).toBe(true);
     });
   });
 

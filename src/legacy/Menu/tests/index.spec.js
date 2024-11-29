@@ -100,13 +100,11 @@ describe('tests for <Menu />', () => {
       <Menu onSelect={onSelect}>
         <SubMenu label="one" eventKey="test-1">
           <MenuItem label="one-one" key="0" eventKey="test-1-1" />
-          <MenuItem eventKey="customized-submenu-item" >
-            <ListItemBaseSection position="left">
-              customized subMenu item
-            </ListItemBaseSection> 
+          <MenuItem eventKey="customized-submenu-item">
+            <ListItemBaseSection position="left">customized subMenu item</ListItemBaseSection>
             <ListItemBaseSection position="middle">
               <Icon name="pop-out" scale={16} />
-            </ListItemBaseSection>  
+            </ListItemBaseSection>
           </MenuItem>
         </SubMenu>
         <MenuItem label="two" eventKey="test-2" />

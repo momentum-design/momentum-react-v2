@@ -22,11 +22,13 @@ jest.mock('uuid', () => {
 });
 
 describe('<OverlayAlert />', () => {
+  const defaultProps = { 'aria-label': 'Overlay alert', onClose: () => null };
+
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<OverlayAlert />);
+      const container = mount(<OverlayAlert {...defaultProps} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -36,7 +38,7 @@ describe('<OverlayAlert />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<OverlayAlert className={className} />);
+      const container = mount(<OverlayAlert {...defaultProps} className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -46,7 +48,7 @@ describe('<OverlayAlert />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<OverlayAlert id={id} />);
+      const container = mount(<OverlayAlert {...defaultProps} id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -56,7 +58,7 @@ describe('<OverlayAlert />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<OverlayAlert style={style} />);
+      const container = mount(<OverlayAlert {...defaultProps} style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -66,7 +68,7 @@ describe('<OverlayAlert />', () => {
 
       const title = 'example-title';
 
-      const container = mount(<OverlayAlert title={title} />);
+      const container = mount(<OverlayAlert {...defaultProps} title={title} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -76,7 +78,7 @@ describe('<OverlayAlert />', () => {
 
       const details = 'example-details';
 
-      const container = mount(<OverlayAlert details={details} />);
+      const container = mount(<OverlayAlert {...defaultProps} details={details} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -86,7 +88,7 @@ describe('<OverlayAlert />', () => {
 
       const actions = <ButtonPill>Button Pill</ButtonPill>;
 
-      const container = mount(<OverlayAlert actions={actions} />);
+      const container = mount(<OverlayAlert {...defaultProps} actions={actions} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -101,7 +103,7 @@ describe('<OverlayAlert />', () => {
         </>
       );
 
-      const container = mount(<OverlayAlert actions={actions} />);
+      const container = mount(<OverlayAlert {...defaultProps} actions={actions} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -111,7 +113,7 @@ describe('<OverlayAlert />', () => {
 
       const controls = <ButtonControl control="close" />;
 
-      const container = mount(<OverlayAlert controls={controls} />);
+      const container = mount(<OverlayAlert {...defaultProps} controls={controls} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -127,7 +129,7 @@ describe('<OverlayAlert />', () => {
         </>
       );
 
-      const container = mount(<OverlayAlert controls={controls} />);
+      const container = mount(<OverlayAlert {...defaultProps} controls={controls} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -138,7 +140,11 @@ describe('<OverlayAlert />', () => {
       const details = 'example-details';
       const children = 'example-children';
 
-      const container = mount(<OverlayAlert details={details}>{children}</OverlayAlert>);
+      const container = mount(
+        <OverlayAlert {...defaultProps} details={details}>
+          {children}
+        </OverlayAlert>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -153,9 +159,10 @@ describe('<OverlayAlert />', () => {
 
       const container = mount(
         <OverlayAlert
-          ariaLabel={ariaLabel}
-          ariaLabelledby={ariaLabelledby}
-          ariaDescribedby={ariaDescribedby}
+          {...defaultProps}
+          aria-label={ariaLabel}
+          aria-labelledby={ariaLabelledby}
+          aria-describedby={ariaDescribedby}
         >
           {children}
         </OverlayAlert>
@@ -169,7 +176,7 @@ describe('<OverlayAlert />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<OverlayAlert />)
+      const element = mount(<OverlayAlert {...defaultProps} />)
         .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes its class names to Overlay
         .getDOMNode();
 
@@ -181,7 +188,7 @@ describe('<OverlayAlert />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<OverlayAlert className={className} />)
+      const element = mount(<OverlayAlert {...defaultProps} className={className} />)
         .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes its class names to Overlay
         .getDOMNode();
 
@@ -193,7 +200,7 @@ describe('<OverlayAlert />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<OverlayAlert id={id} />)
+      const element = mount(<OverlayAlert {...defaultProps} id={id} />)
         .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes other props to Overlay
         .getDOMNode();
 
@@ -206,7 +213,7 @@ describe('<OverlayAlert />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<OverlayAlert style={style} />)
+      const element = mount(<OverlayAlert {...defaultProps} style={style} />)
         .find(`.${OVERLAY_STYLE.wrapper}`) // OverlayAlert passes other props to Overlay
         .getDOMNode();
 
@@ -218,7 +225,7 @@ describe('<OverlayAlert />', () => {
 
       const overlayColor = OVERLAY_ALERT_CONSTANTS.DEFAULTS.OVERLAY_COLOR;
 
-      const element = mount(<OverlayAlert />).find(Overlay);
+      const element = mount(<OverlayAlert {...defaultProps} />).find(Overlay);
 
       expect(element.props().color).toBe(overlayColor);
     });
@@ -228,7 +235,9 @@ describe('<OverlayAlert />', () => {
 
       const overlayColor = Object.values(OVERLAY_CONSTANTS.COLORS).shift();
 
-      const element = mount(<OverlayAlert overlayColor={overlayColor} />).find(Overlay);
+      const element = mount(<OverlayAlert {...defaultProps} overlayColor={overlayColor} />).find(
+        Overlay
+      );
 
       expect(element.props().color).toBe(overlayColor);
     });
@@ -238,7 +247,9 @@ describe('<OverlayAlert />', () => {
 
       const modalColor = Object.values(MODAL_CONTAINER_CONSTANTS.COLORS).pop();
 
-      const element = mount(<OverlayAlert modalColor={modalColor} />).find(ModalContainer);
+      const element = mount(<OverlayAlert {...defaultProps} modalColor={modalColor} />).find(
+        ModalContainer
+      );
 
       expect(element.props().color).toBe(modalColor);
     });
@@ -249,7 +260,9 @@ describe('<OverlayAlert />', () => {
       const innerHTML = 'Button Pill';
       const actions = <ButtonPill>{innerHTML}</ButtonPill>;
 
-      const component = mount(<OverlayAlert actions={actions} />).find(OverlayAlert);
+      const component = mount(<OverlayAlert {...defaultProps} actions={actions} />).find(
+        OverlayAlert
+      );
 
       const target = component.find(ButtonPill).html();
 
@@ -262,7 +275,9 @@ describe('<OverlayAlert />', () => {
       const control = 'close';
       const controls = <ButtonControl control={control} />;
 
-      const component = mount(<OverlayAlert controls={controls} />).find(OverlayAlert);
+      const component = mount(<OverlayAlert {...defaultProps} controls={controls} />).find(
+        OverlayAlert
+      );
 
       const target = component.find(ButtonControl);
 
@@ -274,7 +289,9 @@ describe('<OverlayAlert />', () => {
 
       const details = 'details-example';
 
-      const component = mount(<OverlayAlert details={details} />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} details={details} />).find(
+        `.${OVERLAY_STYLE.wrapper}`
+      );
 
       const target = component
         .getDOMNode()
@@ -288,7 +305,9 @@ describe('<OverlayAlert />', () => {
 
       const title = 'title-example';
 
-      const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} title={title} />).find(
+        `.${OVERLAY_STYLE.wrapper}`
+      );
 
       const target = component
         .getDOMNode()
@@ -302,7 +321,9 @@ describe('<OverlayAlert />', () => {
 
       const title = 'title-example';
 
-      const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} title={title} />).find(
+        `.${OVERLAY_STYLE.wrapper}`
+      );
 
       const titleComponent = component
         .find(Text)
@@ -316,7 +337,9 @@ describe('<OverlayAlert />', () => {
 
       const title = 'title-example';
 
-      const component = mount(<OverlayAlert title={title} />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} title={title} />).find(
+        `.${OVERLAY_STYLE.wrapper}`
+      );
 
       const titleComponent = component.find(Text).filter({ type: 'title' });
 
@@ -329,7 +352,7 @@ describe('<OverlayAlert />', () => {
     it('should not have aria-labelledby when title is not provided', () => {
       expect.assertions(1);
 
-      const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const modalContainerComponent = component.find(ModalContainer);
 
@@ -341,7 +364,9 @@ describe('<OverlayAlert />', () => {
 
       const details = 'details-example';
 
-      const component = mount(<OverlayAlert details={details} />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} details={details} />).find(
+        `.${OVERLAY_STYLE.wrapper}`
+      );
 
       const detailsComponent = component.find(Text).filter({ type: 'body-primary' });
 
@@ -354,7 +379,7 @@ describe('<OverlayAlert />', () => {
     it('should not have aria-labelledby when details is not provided', () => {
       expect.assertions(1);
 
-      const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const modalContainerComponent = component.find(ModalContainer);
 
@@ -366,7 +391,11 @@ describe('<OverlayAlert />', () => {
       const children = 'children-example';
       const details = 'details-example';
 
-      const component = mount(<OverlayAlert details={details}>{children}</OverlayAlert>);
+      const component = mount(
+        <OverlayAlert {...defaultProps} details={details}>
+          {children}
+        </OverlayAlert>
+      );
 
       const modalContainerComponent = component.find(ModalContainer);
 
@@ -378,7 +407,7 @@ describe('<OverlayAlert />', () => {
 
       const ariaLabel = 'test-aria-label';
 
-      const component = mount(<OverlayAlert ariaLabel={ariaLabel} />).find(
+      const component = mount(<OverlayAlert {...defaultProps} aria-label={ariaLabel} />).find(
         `.${OVERLAY_STYLE.wrapper}`
       );
 
@@ -390,7 +419,7 @@ describe('<OverlayAlert />', () => {
     it('should not render an empty div when no title is provided', () => {
       expect.assertions(1);
 
-      const component = mount(<OverlayAlert />).find(`.${OVERLAY_STYLE.wrapper}`);
+      const component = mount(<OverlayAlert {...defaultProps} />).find(`.${OVERLAY_STYLE.wrapper}`);
 
       const target = component
         .getDOMNode()
@@ -405,7 +434,11 @@ describe('<OverlayAlert />', () => {
       const children = 'children-example';
       const details = 'details-example';
 
-      const tree = mount(<OverlayAlert details={details}>{children}</OverlayAlert>)
+      const tree = mount(
+        <OverlayAlert {...defaultProps} details={details}>
+          {children}
+        </OverlayAlert>
+      )
         .find(OverlayAlert)
         .html();
 
@@ -422,7 +455,7 @@ describe('<OverlayAlert />', () => {
       const user = userEvent.setup();
 
       render(
-        <OverlayAlert onClose={onCloseFn}>
+        <OverlayAlert {...defaultProps} onClose={onCloseFn}>
           <button>{contentText}</button>
         </OverlayAlert>
       );
@@ -436,7 +469,7 @@ describe('<OverlayAlert />', () => {
         return (
           <>
             <button>button3</button>
-            <OverlayAlert>
+            <OverlayAlert {...defaultProps}>
               <button>button1</button>
               <button>button2</button>
             </OverlayAlert>
@@ -472,7 +505,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert {...defaultProps} onClose={onCloseMock}>
               <Tooltip triggerComponent={<button>button1</button>} type="none">
                 Tooltip text
               </Tooltip>
@@ -522,7 +555,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert {...defaultProps} onClose={onCloseMock}>
               <Popover
                 triggerComponent={<button>button1</button>}
                 hideOnEsc={false}
@@ -570,7 +603,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert {...defaultProps} onClose={onCloseMock}>
               <Popover triggerComponent={<button>button1</button>} interactive>
                 <button>button2</button>
               </Popover>
@@ -625,7 +658,7 @@ describe('<OverlayAlert />', () => {
       const Component = () => {
         return (
           <>
-            <OverlayAlert onClose={onCloseMock}>
+            <OverlayAlert {...defaultProps} onClose={onCloseMock}>
               <Popover triggerComponent={<button>button1</button>} interactive hideOnEsc={false}>
                 <button>button2</button>
               </Popover>

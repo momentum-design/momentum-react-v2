@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react';
 import IconKeys from '@momentum-design/icons/dist/types/types';
+import { Props as TooltipProps } from '../Tooltip/Tooltip.types';
 
 export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 
@@ -110,4 +111,12 @@ export interface Props {
    * An example would be brand icons.
    */
   weightless?: boolean;
+
+  /**
+   * For accessibility, meaningful standalone icons needs to be labelled by a tooltip.
+   * If provided, a tooltip will be added to the icon and these props will be passed to the tooltip component.
+   * `triggerComponent` is controlled by the Icon component and cannot be specified.
+   */
+  tooltipProps?: Omit<TooltipProps, 'triggerComponent' | 'type'> &
+    Partial<Pick<TooltipProps, 'type'>>;
 }

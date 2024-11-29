@@ -1,13 +1,10 @@
 import type { AriaSelectProps } from '@react-types/select';
 import { CSSProperties } from 'react';
+import { RequireOneOf } from '../../utils/types';
 
 export type SelectDirection = 'top' | 'bottom';
 
-export interface Props<T> extends AriaSelectProps<T> {
-  /**
-   * Aria labelled by for the button component.
-   */
-  ariaLabelledBy?: string;
+interface SelectProps<T> extends AriaSelectProps<T> {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -68,3 +65,6 @@ export interface Props<T> extends AriaSelectProps<T> {
    */
   shallowDisabled?: boolean;
 }
+
+export type Props<T> = SelectProps<T> &
+  RequireOneOf<SelectProps<T>, ['label', 'aria-label', 'aria-labelledby']>;

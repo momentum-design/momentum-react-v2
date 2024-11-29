@@ -3,7 +3,8 @@
 exports[`<TextInput/> snapshot should match snapshot 1`] = `
 <SSRProvider>
   <TextInput
-    aria-label="text-input"
+    clearAriaLabel="Clear this input"
+    label="text-input"
   >
     <div
       className="md-text-input-wrapper"
@@ -11,11 +12,17 @@ exports[`<TextInput/> snapshot should match snapshot 1`] = `
       data-level="none"
       onClick={[Function]}
     >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
       <div
         className="md-text-input-container"
       >
         <input
-          aria-label="text-input"
+          aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -33,8 +40,9 @@ exports[`<TextInput/> snapshot should match snapshot 1`] = `
 exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
 <SSRProvider>
   <TextInput
-    aria-label="text-input"
     className="example-class"
+    clearAriaLabel="Clear this input"
+    label="text-input"
   >
     <div
       className="md-text-input-wrapper example-class"
@@ -42,11 +50,17 @@ exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
       data-level="none"
       onClick={[Function]}
     >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
       <div
         className="md-text-input-container"
       >
         <input
-          aria-label="text-input"
+          aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -102,8 +116,9 @@ exports[`<TextInput/> snapshot should match snapshot with clearAriaLabel 1`] = `
 exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
 <SSRProvider>
   <TextInput
-    aria-label="text-input"
+    clearAriaLabel="Clear this input"
     description="some input"
+    label="text-input"
   >
     <div
       className="md-text-input-wrapper"
@@ -111,11 +126,17 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
       data-level="none"
       onClick={[Function]}
     >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
       <div
         className="md-text-input-container"
       >
         <input
-          aria-label="text-input"
+          aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -168,7 +189,8 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
 exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
 <SSRProvider>
   <TextInput
-    aria-label="text-input"
+    clearAriaLabel="Clear this input"
+    label="text-input"
     messageArr={
       Array [
         Object {
@@ -184,12 +206,19 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
       data-level="error"
       onClick={[Function]}
     >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
       <div
         className="md-text-input-container"
       >
         <input
           aria-describedby="desc-test-ID"
-          aria-label="text-input"
+          aria-invalid={true}
+          aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}
@@ -279,103 +308,9 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
 exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
 <SSRProvider>
   <TextInput
-    aria-label="text-input"
+    clearAriaLabel="Clear this input"
     id="example-id"
-  >
-    <div
-      className="md-text-input-wrapper"
-      data-focus={false}
-      data-level="none"
-      onClick={[Function]}
-    >
-      <div
-        className="md-text-input-container"
-      >
-        <input
-          aria-label="text-input"
-          disabled={false}
-          id="example-id"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          readOnly={false}
-          type="text"
-        />
-      </div>
-    </div>
-  </TextInput>
-</SSRProvider>
-`;
-
-exports[`<TextInput/> snapshot should match snapshot with inputMaxLen 1`] = `
-<SSRProvider>
-  <TextInput
-    aria-label="text-input"
-    inputMaxLen={4}
-  >
-    <div
-      className="md-text-input-wrapper"
-      data-focus={false}
-      data-level="none"
-      onClick={[Function]}
-    >
-      <div
-        className="md-text-input-container"
-      >
-        <input
-          aria-label="text-input"
-          disabled={false}
-          id="test-ID"
-          maxLength={4}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          readOnly={false}
-          type="text"
-        />
-      </div>
-    </div>
-  </TextInput>
-</SSRProvider>
-`;
-
-exports[`<TextInput/> snapshot should match snapshot with isDisabled 1`] = `
-<SSRProvider>
-  <TextInput
-    aria-label="text-input"
-    isDisabled={true}
-  >
-    <div
-      className="md-text-input-wrapper"
-      data-disabled={true}
-      data-focus={false}
-      data-level="none"
-      onClick={[Function]}
-    >
-      <div
-        className="md-text-input-container"
-      >
-        <input
-          aria-label="text-input"
-          disabled={true}
-          id="test-ID"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          readOnly={false}
-          type="text"
-        />
-      </div>
-    </div>
-  </TextInput>
-</SSRProvider>
-`;
-
-exports[`<TextInput/> snapshot should match snapshot with label 1`] = `
-<SSRProvider>
-  <TextInput
-    id="example-id"
-    label="Password"
+    label="text-input"
   >
     <div
       className="md-text-input-wrapper"
@@ -387,7 +322,7 @@ exports[`<TextInput/> snapshot should match snapshot with label 1`] = `
         htmlFor="test-ID"
         id="desc-test-ID"
       >
-        Password
+        text-input
       </label>
       <div
         className="md-text-input-container"
@@ -408,10 +343,89 @@ exports[`<TextInput/> snapshot should match snapshot with label 1`] = `
 </SSRProvider>
 `;
 
+exports[`<TextInput/> snapshot should match snapshot with inputMaxLen 1`] = `
+<SSRProvider>
+  <TextInput
+    clearAriaLabel="Clear this input"
+    inputMaxLen={4}
+    label="text-input"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-labelledby="test-ID"
+          disabled={false}
+          id="test-ID"
+          maxLength={4}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
+exports[`<TextInput/> snapshot should match snapshot with isDisabled 1`] = `
+<SSRProvider>
+  <TextInput
+    clearAriaLabel="Clear this input"
+    isDisabled={true}
+    label="text-input"
+  >
+    <div
+      className="md-text-input-wrapper"
+      data-disabled={true}
+      data-focus={false}
+      data-level="none"
+      onClick={[Function]}
+    >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
+      <div
+        className="md-text-input-container"
+      >
+        <input
+          aria-labelledby="test-ID"
+          disabled={true}
+          id="test-ID"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          type="text"
+        />
+      </div>
+    </div>
+  </TextInput>
+</SSRProvider>
+`;
+
 exports[`<TextInput/> snapshot should match snapshot with style 1`] = `
 <SSRProvider>
   <TextInput
-    aria-label="text-input"
+    clearAriaLabel="Clear this input"
+    label="text-input"
     style={
       Object {
         "color": "pink",
@@ -429,11 +443,17 @@ exports[`<TextInput/> snapshot should match snapshot with style 1`] = `
         }
       }
     >
+      <label
+        htmlFor="test-ID"
+        id="desc-test-ID"
+      >
+        text-input
+      </label>
       <div
         className="md-text-input-container"
       >
         <input
-          aria-label="text-input"
+          aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}

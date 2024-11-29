@@ -33,15 +33,16 @@ const Example: Story<TooltipPopoverComboProps> = () => {
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        margin: '10rem auto', 
-        display: 'flex'
+        margin: '10rem auto',
+        display: 'flex',
       }}
       id="storybook-id-example"
     >
-      <Icon name='cancel' weight='bold' strokeColor="transparent" />
-    </ButtonCircle>);
+      <Icon name="cancel" weight="bold" strokeColor="transparent" />
+    </ButtonCircle>
+  );
 
-    const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
+  const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
   const onItemPress = (key: string) => {
     switch (key) {
@@ -51,20 +52,20 @@ const Example: Story<TooltipPopoverComboProps> = () => {
   };
 
   const popoverContent = (
-    <Menu onAction={onItemPress} style={{width: '15rem'}}>
-      <Item key="option-1" >Option 1</Item>
-      <Item key="option-2" >Option 2</Item>
-      </Menu>
+    <Menu onAction={onItemPress} style={{ width: '15rem' }}>
+      <Item key="option-1">Option 1</Item>
+      <Item key="option-2">Option 2</Item>
+    </Menu>
   );
 
   return (
-    <TooltipPopoverCombo 
-      popoverContent={popoverContent} 
-      triggerComponent={triggerComponent} 
-      tooltipContent={<Text>Press to show options</Text>} 
-      otherTooltipProps={{placement: 'top'}}
-      otherPopoverProps={{placement: 'top', setInstance: setPopoverInstance}}
-  />
+    <TooltipPopoverCombo
+      popoverContent={popoverContent}
+      triggerComponent={triggerComponent}
+      tooltipContent={<Text>Press to show options</Text>}
+      otherTooltipProps={{ placement: 'top' }}
+      otherPopoverProps={{ placement: 'top', setInstance: setPopoverInstance }}
+    />
   );
 };
 

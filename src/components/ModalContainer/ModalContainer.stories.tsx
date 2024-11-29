@@ -130,14 +130,18 @@ Common.parameters = {
   ],
 };
 
-
 const WithFocusLock = Template<ModalContainerProps>(ModalContainer).bind({});
 
 WithFocusLock.argTypes = { ...argTypes };
 WithFocusLock.args = {
-  children: <div><ButtonPill>Test1</ButtonPill><ButtonPill>Test2</ButtonPill></div>,
+  children: (
+    <div>
+      <ButtonPill>Test1</ButtonPill>
+      <ButtonPill>Test2</ButtonPill>
+    </div>
+  ),
   isPadded: true,
-  focusLockProps: { returnFocus: true }
+  focusLockProps: { returnFocus: true },
 };
 
 export { Example, Colors, Elevations, Padding, Rounding, WithFocusLock, Common };
