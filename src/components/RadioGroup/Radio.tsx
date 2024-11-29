@@ -38,7 +38,7 @@ const Radio: FC<RadioProps> = (props: RadioProps) => {
 
   return (
     <div data-disabled={isDisabled} className={classnames(STYLE.wrapper, className)} style={style}>
-      <label id={radioId} className={STYLE.label}>
+      <label id={id} className={STYLE.label}>
         <FocusRing>
           <input {...inputProps} className={STYLE.button} ref={ref} />
         </FocusRing>
