@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import { v4 as uuidV4 } from 'uuid';
+import { useId } from '@react-aria/utils';
 import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
 
@@ -28,7 +28,7 @@ const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
 
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
-  const radioGroupId = id || uuidV4();
+  const radioGroupId = useId(id);
   const descriptionId = description ? `radio-group-description-${radioGroupId}` : undefined;
 
   return (

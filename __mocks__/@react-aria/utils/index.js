@@ -3,5 +3,5 @@ const utils = require('@react-aria/utils/dist/main');
 
 module.exports = {
   ...utils,
-  useId: () => 'test-ID',
+  useId: (id) => id || 'test-ID',
 };
