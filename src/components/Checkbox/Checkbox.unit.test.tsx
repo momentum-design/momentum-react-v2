@@ -7,10 +7,6 @@ import { mountAndWait } from '../../../test/utils';
 import Checkbox, { CHECKBOX_CONSTANTS as CONSTANTS } from './';
 import Text from '../Text';
 
-jest.mock('uuid', () => ({
-  v4: () => '1',
-}));
-
 describe('<Checkbox />', () => {
   describe('snapshot', () => {
     it('should match snapshot', async () => {
@@ -221,7 +217,7 @@ describe('<Checkbox />', () => {
       );
 
       const input = wrapper.find('input');
-      expect(input.prop('aria-describedby')).toBe('checkbox-description-1 test-id');
+      expect(input.prop('aria-describedby')).toBe('checkbox-description-test-ID test-id');
     });
   });
 

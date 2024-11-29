@@ -1,15 +1,15 @@
-import React, { RefObject, useRef, forwardRef, useState } from 'react';
+import React, { RefObject, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { useFocusRing } from '@react-aria/focus';
+import { useId } from '@react-aria/utils';
 
 import { Props } from './Checkbox.types';
 import { STYLE, DEFAULTS } from './Checkbox.constants';
 import './Checkbox.style.scss';
 import { useCheckbox } from '@react-aria/checkbox';
 import { useToggleState } from '@react-stately/toggle';
-import { v4 as uuidv4 } from 'uuid';
 
 import Icon from '../Icon';
 import Text from '../Text';
@@ -20,8 +20,7 @@ import Text from '../Text';
 const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
   const { className, isDisabled, label, description, isIndeterminate, id, style } = props;
 
-  const [checkboxUuid] = useState(uuidv4);
-  const checkboxId = id || checkboxUuid;
+  const checkboxId = useId(id);
 
   const checkboxProps = {
     ...props,
