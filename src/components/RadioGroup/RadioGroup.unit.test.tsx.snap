@@ -6,7 +6,7 @@ exports[`<RadioGroup /> snapshot should match snapshot 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -24,7 +24,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with a mix 
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -78,7 +78,7 @@ exports[`<RadioGroup /> snapshot should match snapshot when rendered with list o
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -132,7 +132,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -168,7 +168,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child className 1`] 
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -204,7 +204,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child id 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -241,7 +241,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child style 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -278,7 +278,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -314,7 +314,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats disabled
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -351,7 +351,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child thats selected
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -388,7 +388,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with className 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="example-class md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -450,7 +450,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children 1`
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -523,7 +523,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -595,7 +595,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -667,7 +667,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with multiple children wi
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
   >
     <span
@@ -740,7 +740,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with style 1`] = `
     aria-labelledby="test-ID"
     aria-orientation="vertical"
     class="md-radio-group"
-    id="1"
+    id="test-ID"
     role="radiogroup"
     style="color: pink;"
   >

@@ -6,12 +6,6 @@ import userEvent from '@testing-library/user-event';
 import RadioGroup from './';
 import { STYLE } from './RadioGroup.constants';
 
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
-
 describe('<RadioGroup />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
@@ -486,6 +480,7 @@ describe('<RadioGroup />', () => {
       );
 
       const describedby = screen.getByRole('radio').getAttribute('aria-describedby');
+      expect(describedby).toBe('radio-description-test-ID');
 
       const description = document.getElementById(describedby);
       expect(description).not.toBeNull();
@@ -520,7 +515,7 @@ describe('<RadioGroup />', () => {
       );
 
       const describedby = screen.getByRole('radio').getAttribute('aria-describedby');
-      expect(describedby).toBe('radio-description-1 test 1');
+      expect(describedby).toBe('radio-description-test-ID test 1');
     });
 
     it('should give only the select element the selected style', () => {
