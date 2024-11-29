@@ -1,7 +1,7 @@
-import React, { FC, useContext, useRef, useState } from 'react';
+import React, { FC, useContext, useRef } from 'react';
 import { FocusRing } from '@react-aria/focus';
 import { useRadio } from '@react-aria/radio';
-import { v4 as uuidv4 } from 'uuid';
+import { useId } from '@react-aria/utils';
 import classnames from 'classnames';
 
 import { STYLE, DEFAULTS } from './RadioGroup.constants';
@@ -17,8 +17,7 @@ const Radio: FC<RadioProps> = (props: RadioProps) => {
   const state = useContext(RadioContext);
   const ref = useRef(null);
 
-  const [radioUuid] = useState(uuidv4);
-  const radioId = id || radioUuid;
+  const radioId = useId(id);
 
   const radioProps = {
     'aria-label': label,
