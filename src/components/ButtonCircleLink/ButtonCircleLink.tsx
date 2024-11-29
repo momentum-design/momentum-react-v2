@@ -21,7 +21,6 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
     href,
     target,
     tooltipContent,
-    tooltipType,
     onPress,
     ...otherProps
   } = props;
@@ -44,7 +43,6 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
       onPress={onPress}
       disabled={disabled}
       inverted={inverted}
-      tooltipType={tooltipType}
       hasExternalLinkIcon={false}
       tooltipContent={tooltipContent}
       data-color={color || DEFAULTS.COLOR}

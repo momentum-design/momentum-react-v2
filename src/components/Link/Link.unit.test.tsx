@@ -125,28 +125,6 @@ describe('Link', () => {
       const element = wrapper.find(TooltipNext);
 
       expect(element.props()).toEqual({
-        type: undefined,
-        placement: 'bottom',
-        triggerComponent: expect.any(Object),
-        children: tooltipContent,
-        className: '',
-        onBlur: expect.any(Function),
-        onFocus: expect.any(Function),
-      });
-    });
-
-    it('should have Tooltip when tooltipContent and tooltipType is provided', async () => {
-      expect.assertions(1);
-
-      const tooltipContent = 'open a new window';
-
-      const wrapper = await mountAndWait(
-        <LinkNext tooltipContent={tooltipContent} tooltipType={'description'} />
-      );
-
-      const element = wrapper.find(TooltipNext);
-
-      expect(element.props()).toEqual({
         type: 'description',
         placement: 'bottom',
         triggerComponent: expect.any(Object),
@@ -193,6 +171,19 @@ describe('Link', () => {
       });
     });
 
+    it('should warn if is external link with no tooltipContent', async () => {
+      expect.assertions(1);
+
+      const spyWarn = jest.spyOn(console, 'warn').mockImplementation(() => null);
+      await mountAndWait(<LinkNext target="_blank" />);
+
+      expect(spyWarn).toHaveBeenCalledWith(
+        'MRV2: The external link icon is enabled but tooltipContent is not provided for the icon. For accessibility reasons, a tooltip must be provided for external links.'
+      );
+
+      spyWarn.mockRestore();
+    });
+
     it('should not have icon when target is _blank and hasExternalLinkIcon is false', async () => {
       expect.assertions(1);
 
@@ -231,7 +222,11 @@ describe('Link', () => {
     it('should have rel when target is provided', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<LinkNext target={'_blank'} />);
+      const tooltipContent = 'open a new window';
+
+      const wrapper = await mountAndWait(
+        <LinkNext target={'_blank'} tooltipContent={tooltipContent} />
+      );
 
       const element = wrapper.find('a');
 
@@ -243,11 +238,10 @@ describe('Link', () => {
         'data-inverted': false,
         target: '_blank',
         title: undefined,
-        onBlur: expect.any(Function),
-        onFocus: expect.any(Function),
         onClick: undefined,
         style: undefined,
         tabIndex: undefined,
+        'aria-describedby': expect.any(String), // added by tooltip
       });
     });
 

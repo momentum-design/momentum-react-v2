@@ -57,12 +57,6 @@ export interface Props extends AriaLinkProps {
   tooltipContent?: string;
 
   /**
-   * Determines, whether the tooltip is the description or the label of the trigger component, or none
-   * `label`、`description`、`none`
-   */
-  tooltipType?: TooltipTypes;
-
-  /**
    * tabIndex for <a> tag
    */
   tabIndex?: number;
