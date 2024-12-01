@@ -135,6 +135,28 @@ describe('Link', () => {
       });
     });
 
+    it('should have Tooltip when tooltipContent and tooltipType is provided', async () => {
+      expect.assertions(1);
+
+      const tooltipContent = 'open a new window';
+
+      const wrapper = await mountAndWait(
+        <LinkNext tooltipContent={tooltipContent} tooltipType={'description'} />
+      );
+
+      const element = wrapper.find(TooltipNext);
+
+      expect(element.props()).toEqual({
+        type: 'description',
+        placement: 'bottom',
+        triggerComponent: expect.any(Object),
+        children: tooltipContent,
+        className: '',
+        onBlur: expect.any(Function),
+        onFocus: expect.any(Function),
+      });
+    });
+
     it('should have icon when hasExternalLinkIcon is provided', async () => {
       expect.assertions(1);
 
