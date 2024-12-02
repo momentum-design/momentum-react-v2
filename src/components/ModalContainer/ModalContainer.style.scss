@@ -10,6 +10,12 @@
     var(--mds-color-theme-outline-secondary-normal);
   outline: none;
 
+  .md-modal-container-title {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   /* Arrow placement (svg arrow size is 12px, that's why the following offsets are set like that) */
   &[data-placement^='top'] > .md-modal-container-arrow-wrapper {
     bottom: -12px;

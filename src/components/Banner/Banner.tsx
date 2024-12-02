@@ -40,10 +40,11 @@ const Banner: FC<Props> = (props: Props) => {
       round={75}
       data-shape={shape}
       style={style}
+      aria-label={title}
       {...mutatedOtherProps}
     >
       {image}
-      <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.BANNER_PRIMARY}>
+      <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.BANNER_PRIMARY} tagName="h2">
         {title}
       </Text>
       <Text className={STYLE.description} type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY}>

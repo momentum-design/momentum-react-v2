@@ -45,6 +45,7 @@ const DEFAULTS = {
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   arrowWrapper: `${CLASS_PREFIX}-arrow-wrapper`,
+  title: `${CLASS_PREFIX}-title`,
 };
 
 const ARROW_ID = 'arrow';

@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import Text from '../Text';
 
 import ModalContainer, { MODAL_CONTAINER_CONSTANTS as CONSTANTS } from './';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
@@ -12,7 +13,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer />);
+      const container = mount(<ModalContainer aria-label="some modal" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -22,7 +23,7 @@ describe('<ModalContainer />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<ModalContainer className={className} />);
+      const container = mount(<ModalContainer aria-label="some modal" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -32,7 +33,7 @@ describe('<ModalContainer />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<ModalContainer id={id} />);
+      const container = mount(<ModalContainer aria-label="some modal" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -42,7 +43,7 @@ describe('<ModalContainer />', () => {
 
       const role = 'tooltip';
 
-      const container = mount(<ModalContainer role={role} />);
+      const container = mount(<ModalContainer aria-label="some modal" role={role} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -52,7 +53,7 @@ describe('<ModalContainer />', () => {
 
       const ariaModal = false;
 
-      const container = mount(<ModalContainer aria-modal={ariaModal} />);
+      const container = mount(<ModalContainer aria-label="some modal" aria-modal={ariaModal} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -62,7 +63,7 @@ describe('<ModalContainer />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<ModalContainer style={style} />);
+      const container = mount(<ModalContainer aria-label="some modal" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -72,7 +73,7 @@ describe('<ModalContainer />', () => {
 
       const color = Object.values(CONSTANTS.COLORS).pop();
 
-      const container = mount(<ModalContainer color={color} />);
+      const container = mount(<ModalContainer aria-label="some modal" color={color} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -82,7 +83,7 @@ describe('<ModalContainer />', () => {
 
       const elevation = Object.values(CONSTANTS.ELEVATIONS).pop();
 
-      const container = mount(<ModalContainer elevation={elevation} />);
+      const container = mount(<ModalContainer aria-label="some modal" elevation={elevation} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -90,7 +91,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with isPadded', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer isPadded />);
+      const container = mount(<ModalContainer aria-label="some modal" isPadded />);
 
       expect(container).toMatchSnapshot();
     });
@@ -100,7 +101,7 @@ describe('<ModalContainer />', () => {
 
       const round = Object.values(CONSTANTS.ROUNDS).pop();
 
-      const container = mount(<ModalContainer round={round} />);
+      const container = mount(<ModalContainer aria-label="some modal" round={round} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -108,7 +109,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with arrow', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer showArrow />);
+      const container = mount(<ModalContainer aria-label="some modal" showArrow />);
 
       expect(container).toMatchSnapshot();
     });
@@ -118,7 +119,7 @@ describe('<ModalContainer />', () => {
 
       const arrowId = 'example-id';
 
-      const container = mount(<ModalContainer arrowId={arrowId} />);
+      const container = mount(<ModalContainer aria-label="some modal" arrowId={arrowId} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -128,7 +129,7 @@ describe('<ModalContainer />', () => {
 
       const children = <div>Example Text</div>;
 
-      const container = mount(<ModalContainer>{children}</ModalContainer>);
+      const container = mount(<ModalContainer aria-label="some modal">{children}</ModalContainer>);
 
       expect(container).toMatchSnapshot();
     });
@@ -136,7 +137,17 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with focusLockProps', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer focusLockProps={{ restoreFocus: true }} />);
+      const container = mount(
+        <ModalContainer aria-label="some modal" focusLockProps={{ restoreFocus: true }} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with title', () => {
+      expect.assertions(1);
+
+      const container = mount(<ModalContainer title="some title" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -146,7 +157,7 @@ describe('<ModalContainer />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<ModalContainer />)
+      const element = mount(<ModalContainer aria-label="some modal" />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -158,7 +169,7 @@ describe('<ModalContainer />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<ModalContainer className={className} />)
+      const element = mount(<ModalContainer aria-label="some modal" className={className} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -170,7 +181,7 @@ describe('<ModalContainer />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<ModalContainer id={id} />)
+      const element = mount(<ModalContainer aria-label="some modal" id={id} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -183,7 +194,7 @@ describe('<ModalContainer />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ModalContainer style={style} />)
+      const element = mount(<ModalContainer aria-label="some modal" style={style} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -195,7 +206,7 @@ describe('<ModalContainer />', () => {
 
       const color = Object.values(CONSTANTS.COLORS).pop();
 
-      const element = mount(<ModalContainer color={color} />)
+      const element = mount(<ModalContainer aria-label="some modal" color={color} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -207,7 +218,7 @@ describe('<ModalContainer />', () => {
 
       const elevation = Object.values(CONSTANTS.ELEVATIONS).pop();
 
-      const element = mount(<ModalContainer elevation={elevation} />)
+      const element = mount(<ModalContainer aria-label="some modal" elevation={elevation} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -219,7 +230,7 @@ describe('<ModalContainer />', () => {
 
       const isPadded = true;
 
-      const element = mount(<ModalContainer isPadded={isPadded} />)
+      const element = mount(<ModalContainer aria-label="some modal" isPadded={isPadded} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -231,7 +242,7 @@ describe('<ModalContainer />', () => {
 
       const round = Object.values(CONSTANTS.ROUNDS).pop();
 
-      const element = mount(<ModalContainer round={round} />)
+      const element = mount(<ModalContainer aria-label="some modal" round={round} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -243,7 +254,7 @@ describe('<ModalContainer />', () => {
 
       const placement = Object.values(PLACEMENTS).pop();
 
-      const element = mount(<ModalContainer placement={placement} />)
+      const element = mount(<ModalContainer aria-label="some modal" placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -255,7 +266,7 @@ describe('<ModalContainer />', () => {
 
       const placement = PLACEMENTS.BOTTOM_START;
 
-      const element = mount(<ModalContainer placement={placement} />)
+      const element = mount(<ModalContainer aria-label="some modal" placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -267,7 +278,7 @@ describe('<ModalContainer />', () => {
 
       const placement = PLACEMENTS.LEFT_END;
 
-      const element = mount(<ModalContainer placement={placement} />)
+      const element = mount(<ModalContainer aria-label="some modal" placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -278,12 +289,25 @@ describe('<ModalContainer />', () => {
       expect.assertions(1);
 
       const arrowId = 'example-id';
-      const element = mount(<ModalContainer arrowId={arrowId} showArrow />)
+      const element = mount(<ModalContainer aria-label="some modal" arrowId={arrowId} showArrow />)
         .find('div')
         .filter({ className: 'md-modal-container-arrow-wrapper' })
         .getDOMNode();
 
       expect(element.getAttribute('id')).toBe(arrowId);
+    });
+
+    it('should have provided title in an h2 tag when a title is provided', () => {
+      expect.assertions(1);
+
+      const title = 'Some visible title';
+
+      const wrapper = mount(<ModalContainer title={title} />)
+        .find(ModalContainer)
+        .find(Text)
+        .filter({ tagName: 'h2' });
+
+      expect(wrapper.exists()).toBe(true);
     });
   });
 
@@ -295,7 +319,7 @@ describe('<ModalContainer />', () => {
         return (
           <>
             <button>button</button>
-            <ModalContainer>
+            <ModalContainer aria-label="some modal">
               <button>button</button>
               <button>button</button>
             </ModalContainer>
@@ -335,7 +359,7 @@ describe('<ModalContainer />', () => {
         return (
           <>
             <button>button</button>
-            <ModalContainer focusLockProps={{}}>
+            <ModalContainer aria-label="some modal" focusLockProps={{}}>
               <button>button</button>
               <button>button</button>
             </ModalContainer>

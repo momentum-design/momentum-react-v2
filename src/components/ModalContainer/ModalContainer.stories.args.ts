@@ -5,6 +5,18 @@ import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import { DEFAULTS } from './ModalContainer.constants';
 
 const modalContainerArgTypes = {
+  title: {
+    description: 'Provides de visible titlefor this modal container',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
   showArrow: {
     description: `Whether the arrow should be shown
     <br/><br/>

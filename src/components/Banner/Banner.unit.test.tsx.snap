@@ -37,12 +37,14 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
   title="Title"
 >
   <ModalContainer
+    aria-label="Title"
     className="md-banner-wrapper"
     data-alert={true}
     data-shape="square"
     round={75}
   >
     <div
+      aria-label="Title"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
@@ -81,11 +83,12 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
       </Avatar>
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -313,11 +316,12 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -401,11 +405,12 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -629,11 +634,12 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -696,11 +702,12 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -765,11 +772,12 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -836,11 +844,12 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -932,11 +941,12 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
       </Avatar>
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -1001,11 +1011,12 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -1070,11 +1081,12 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -1151,11 +1163,12 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
@@ -1204,10 +1217,12 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
   title="Title"
 >
   <ModalContainer
+    aria-label="Title"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Title"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -1218,11 +1233,12 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
     >
       <Text
         className="md-banner-title"
+        tagName="h2"
         type="banner-primary"
       >
         <Text
           className="md-text-wrapper md-banner-title"
-          tagname="h1"
+          tagname="h2"
           type="heading-midsize-medium"
         >
           <mdc-text
