@@ -2,10 +2,6 @@ import { ReactElement } from 'react';
 import { PopoverProps } from '../Popover';
 import { TooltipProps } from '../Tooltip';
 
-type OtherTooltipProps = Omit<TooltipProps, 'id' | 'type'> & {
-  type: Exclude<TooltipProps['type'], 'description'>;
-};
-
 export interface Props {
   /**
    * The content of the Popover.
@@ -30,5 +26,5 @@ export interface Props {
   /**
    * An object of Tooltip props to be passed through to the Tooltip component.
    */
-  otherTooltipProps?: Partial<OtherTooltipProps>;
+  otherTooltipProps?: Partial<Omit<TooltipProps, 'id'>>;
 }

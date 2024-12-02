@@ -10,11 +10,9 @@ import userEvent from '@testing-library/user-event';
 import { getByText, queryByText, render, screen, waitFor } from '@testing-library/react';
 import Popover from '../Popover';
 
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
+jest.mock('uuid', () => ({
+  v4: () => '1',
+}));
 
 describe('<TooltipPopoverCombo />', () => {
   const triggerComponent = <button>Example button</button>;
@@ -65,6 +63,21 @@ describe('<TooltipPopoverCombo />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snaphshot with otherTooltipsProps.type = "description"', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ placement: 'bottom', type: 'description' }}
+        />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -82,7 +95,7 @@ describe('<TooltipPopoverCombo />', () => {
       const popover = comboElement.find(Popover).first();
 
       expect(popover.props()).toStrictEqual({
-        'aria-labelledby': '1',
+        'aria-labelledby': 'test-ID',
         children: popoverContent,
         interactive: true,
         onHide: expect.any(Function),
@@ -101,7 +114,7 @@ describe('<TooltipPopoverCombo />', () => {
         triggerComponent: triggerComponent,
         type: 'label',
         'aria-haspopup': 'dialog',
-        labelOrDescriptionId: '1',
+        labelOrDescriptionId: 'test-ID',
       });
     });
 
@@ -120,7 +133,7 @@ describe('<TooltipPopoverCombo />', () => {
       const popover = comboElement.find(Popover).first();
 
       expect(popover.props()).toStrictEqual({
-        'aria-labelledby': '1',
+        'aria-labelledby': 'test-ID',
         children: popoverContent,
         interactive: true,
         onHide: expect.any(Function),
@@ -153,9 +166,39 @@ describe('<TooltipPopoverCombo />', () => {
         triggerComponent: triggerComponent,
         type: 'label',
         'aria-haspopup': 'dialog',
-        labelOrDescriptionId: '1',
+        labelOrDescriptionId: 'test-ID',
         placement: 'top',
       });
+    });
+
+    it('should have given an id to the triggerComponent if otherTooltipProps.type = "description"', () => {
+      const comboElement = mount(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ placement: 'top', type: 'description' }}
+        />
+      ).find(TooltipPopoverCombo);
+
+      const button = comboElement.find('button');
+      expect(button.prop('id')).not.toBeUndefined();
+      expect(comboElement.children(Popover).prop('aria-labelledby')).toBe(button.prop('id'));
+    });
+
+    it('should not give an id to the triggerComponent when otherTooltipProps.type = "description" if the triggerComponent has an id', () => {
+      const comboElement = mount(
+        <TooltipPopoverCombo
+          triggerComponent={<button id="this-is-an-id">This is a button</button>}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ placement: 'top', type: 'description' }}
+        />
+      ).find(TooltipPopoverCombo);
+
+      const button = comboElement.find('button');
+      expect(button.prop('id')).toBe('this-is-an-id');
+      expect(comboElement.children(Popover).prop('aria-labelledby')).toBe('this-is-an-id');
     });
   });
 
