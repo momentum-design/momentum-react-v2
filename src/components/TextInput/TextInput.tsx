@@ -1,6 +1,14 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef, useRef } from 'react';
+import React, {
+  ReactElement,
+  InputHTMLAttributes,
+  RefObject,
+  forwardRef,
+  useRef,
+  useEffect,
+  useState,
+} from 'react';
 import { useTextField } from '@react-aria/textfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
 import classnames from 'classnames';
@@ -8,10 +16,11 @@ import classnames from 'classnames';
 import './TextInput.style.scss';
 import { Props } from './TextInput.types';
 import InputMessage, { getFilteredMessages } from '../InputMessage';
-import { ButtonSimple, Icon } from '..';
+import { ButtonSimple, Icon, ScreenReaderAnnouncer } from '..';
 import { STYLE } from './TextInput.constants';
 import { useFocusState } from '../../hooks/useFocusState';
 import { v4 as uuidV4 } from 'uuid';
+import { useId } from '@react-aria/utils';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
@@ -31,6 +40,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const inputRef = ref || componentRef;
 
   const [messageType, messages] = getFilteredMessages(messageArr);
+  const [messagesToAnnounces] = useState(messages);
   const errorMessage = messageType === 'error' ? messages[0] : undefined;
 
   const { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
@@ -44,6 +54,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const messageId = useRef(uuidV4());
   const labelId = useRef(uuidV4());
   const clearButtonId = useRef(uuidV4());
+  const announcerId = useId(id);
 
   const onClearButtonPress = () => {
     state.setValue('');
@@ -57,6 +68,13 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       inputRef.current.focus();
     }
   };
+
+  useEffect(() => {
+    // Automatically SR-announce the input message as soon as it appears visibly on the screen to comply with a11y rules
+    if (messagesToAnnounces && !!messagesToAnnounces.length) {
+      ScreenReaderAnnouncer.announce({ body: messagesToAnnounces.join() }, announcerId);
+    }
+  }, [announcerId, messagesToAnnounces]);
 
   return (
     <div
@@ -124,6 +142,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           ))}
         </div>
       )}
+      <ScreenReaderAnnouncer identity={announcerId} />
     </div>
   );
 };
