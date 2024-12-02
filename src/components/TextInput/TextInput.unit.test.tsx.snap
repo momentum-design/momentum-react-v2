@@ -32,6 +32,25 @@ exports[`<TextInput/> snapshot should match snapshot 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -70,6 +89,25 @@ exports[`<TextInput/> snapshot should match snapshot with className 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -108,6 +146,25 @@ exports[`<TextInput/> snapshot should match snapshot with clearAriaLabel 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -181,6 +238,25 @@ exports[`<TextInput/> snapshot should match snapshot with description 1`] = `
           </div>
         </div>
       </InputMessage>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -300,6 +376,25 @@ exports[`<TextInput/> snapshot should match snapshot with error text 1`] = `
           </div>
         </InputMessage>
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -338,6 +433,25 @@ exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -377,6 +491,25 @@ exports[`<TextInput/> snapshot should match snapshot with inputMaxLen 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -416,6 +549,25 @@ exports[`<TextInput/> snapshot should match snapshot with isDisabled 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>
@@ -463,6 +615,25 @@ exports[`<TextInput/> snapshot should match snapshot with style 1`] = `
           type="text"
         />
       </div>
+      <ScreenReaderAnnouncer
+        identity="test-ID"
+      >
+        <div
+          className="md-screen-reader-announcer-wrapper"
+          data-testid="screen-reader-announcer"
+          style={
+            Object {
+              "clip": "rect(0 0 0 0)",
+              "clipPath": "inset(50%)",
+              "height": "1px",
+              "overflow": "hidden",
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+            }
+          }
+        />
+      </ScreenReaderAnnouncer>
     </div>
   </TextInput>
 </SSRProvider>

@@ -6,6 +6,7 @@ import TextInput, { TEXT_INPUT_CONSTANTS as CONSTANTS } from './';
 import { act } from 'react-dom/test-utils';
 import { Message } from '../InputMessage/InputMessage.types';
 import InputMessage from '../InputMessage';
+import * as screenReaderAnnouncer from '../ScreenReaderAnnouncer';
 
 jest.mock('uuid', () => {
   return {
@@ -14,9 +15,21 @@ jest.mock('uuid', () => {
 });
 
 describe('<TextInput/>', () => {
+  let announceSpy;
+  let container;
+
+  beforeEach(() => {
+    announceSpy = jest.spyOn(screenReaderAnnouncer.default, 'announce').mockReturnValue();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+    container.unmount();
+  });
+
   describe('snapshot', () => {
     const mountComponent = async (component) => {
-      const container = await mountAndWait(<SSRProvider>{component}</SSRProvider>);
+      container = await mountAndWait(<SSRProvider>{component}</SSRProvider>);
       return container;
     };
 
@@ -125,11 +138,11 @@ describe('<TextInput/>', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = (
-        await mountAndWait(<TextInput clearAriaLabel="Clear this input" label="text-input" />)
-      )
-        .find(TextInput)
-        .getDOMNode();
+      container = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" />
+      );
+
+      const element = container.find(TextInput).getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
@@ -139,13 +152,11 @@ describe('<TextInput/>', () => {
 
       const className = 'example-class';
 
-      const element = (
-        await mountAndWait(
-          <TextInput clearAriaLabel="Clear this input" label="text-input" className={className} />
-        )
-      )
-        .find(TextInput)
-        .getDOMNode();
+      container = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" className={className} />
+      );
+
+      const element = container.find(TextInput).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -155,11 +166,11 @@ describe('<TextInput/>', () => {
 
       const id = 'example-id-2';
 
-      const element = (
-        await mountAndWait(
-          <TextInput clearAriaLabel="Clear this input" label="text-input" id={id} />
-        )
-      ).find(TextInput);
+      container = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" id={id} />
+      );
+
+      const element = container.find(TextInput);
 
       expect(element.props()).toMatchObject({ label: 'text-input', id: 'example-id-2' });
     });
@@ -170,13 +181,11 @@ describe('<TextInput/>', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = (
-        await mountAndWait(
-          <TextInput clearAriaLabel="Clear this input" label="text-input" style={style} />
-        )
-      )
-        .find(TextInput)
-        .getDOMNode();
+      container = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" style={style} />
+      );
+
+      const element = container.find(TextInput).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
@@ -187,18 +196,16 @@ describe('<TextInput/>', () => {
       const inputMaxLen = 8;
       const inputClassName = 'fake-class-name';
 
-      const element = (
-        await mountAndWait(
-          <TextInput
-            clearAriaLabel="Clear this input"
-            label="text-input"
-            inputMaxLen={inputMaxLen}
-            inputClassName={inputClassName}
-          />
-        )
-      )
-        .find(`.${inputClassName}`)
-        .getDOMNode();
+      container = await mountAndWait(
+        <TextInput
+          clearAriaLabel="Clear this input"
+          label="text-input"
+          inputMaxLen={inputMaxLen}
+          inputClassName={inputClassName}
+        />
+      );
+
+      const element = container.find(`.${inputClassName}`).getDOMNode();
 
       expect(element.getAttribute('maxLength')).toBe(`${inputMaxLen}`);
     });
@@ -206,22 +213,22 @@ describe('<TextInput/>', () => {
     it('should have aria-describedby and id when message is provided', async () => {
       expect.assertions(2);
 
-      const textInputComponent = (
-        await mountAndWait(
-          <TextInput
-            clearAriaLabel="Clear this input"
-            label="text-input"
-            aria-describedby={'desc-test-ID'}
-          />
-        )
-      ).find(TextInput);
+      container = await mountAndWait(
+        <TextInput
+          clearAriaLabel="Clear this input"
+          label="text-input"
+          aria-describedby={'desc-test-ID'}
+        />
+      );
+
+      const element = container.find(TextInput);
 
       const inputMessageComponent = (
         await mountAndWait(<InputMessage className="error" level="error" id={'desc-test-ID'} />)
       ).find(InputMessage);
 
       expect(inputMessageComponent.props().id).toStrictEqual('desc-test-ID');
-      expect(textInputComponent.props()).toMatchObject({
+      expect(element.props()).toMatchObject({
         label: 'text-input',
         'aria-describedby': 'desc-test-ID',
       });
@@ -230,51 +237,53 @@ describe('<TextInput/>', () => {
     it('should not have labelledby when message is not provided', async () => {
       expect.assertions(1);
 
-      const textInputComponent = (
-        await mountAndWait(<TextInput clearAriaLabel="Clear this input" label="text-input" />)
-      ).find(TextInput);
+      container = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" />
+      );
 
-      expect(textInputComponent.props()['aria-describedby']).toBe(undefined);
+      const element = container.find(TextInput);
+
+      expect(element.props()['aria-describedby']).toBe(undefined);
     });
 
     it('should not have the clear input button displayed when value is empty', async () => {
-      const textInputComponent = (
-        await mountAndWait(
-          <TextInput clearAriaLabel="Clear this input" label="text-input" value="" />
-        )
-      ).find(TextInput);
+      container = await mountAndWait(
+        <TextInput clearAriaLabel="Clear this input" label="text-input" value="" />
+      );
 
-      expect(textInputComponent.find('.clear-icon').exists()).toBe(false);
+      const element = container.find(TextInput);
+
+      expect(element.find('.clear-icon').exists()).toBe(false);
     });
 
     it.each(['hello world', '0', '123', ' '])(
       'should have the clear input button displayed when not disabled (value = "%s")',
       async (value) => {
-        const textInputComponent = (
-          await mountAndWait(
-            <TextInput clearAriaLabel="Clear this input" label="text-input" value={value} />
-          )
-        ).find(TextInput);
+        container = await mountAndWait(
+          <TextInput clearAriaLabel="Clear this input" label="text-input" value={value} />
+        );
 
-        expect(textInputComponent.find('.clear-icon').exists()).toBe(true);
+        const element = container.find(TextInput);
+
+        expect(element.find('.clear-icon').exists()).toBe(true);
       }
     );
 
     it.each(['', 'hello world', '0', '123', ' '])(
       'should not have the clear input button displayed when isDisabled (value = "%s")',
       async (value) => {
-        const textInputComponent = (
-          await mountAndWait(
-            <TextInput
-              clearAriaLabel="Clear this input"
-              label="text-input"
-              value={value}
-              isDisabled
-            />
-          )
-        ).find(TextInput);
+        container = await mountAndWait(
+          <TextInput
+            clearAriaLabel="Clear this input"
+            label="text-input"
+            value={value}
+            isDisabled
+          />
+        );
 
-        expect(textInputComponent.find('.clear-icon').exists()).toBe(false);
+        const element = container.find(TextInput);
+
+        expect(element.find('.clear-icon').exists()).toBe(false);
       }
     );
   });
@@ -283,12 +292,12 @@ describe('<TextInput/>', () => {
     it('clicking on another part of the component gives focus to the input', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(
+      container = await mountAndWait(
         <TextInput clearAriaLabel="Clear this input" label="text-input" />
       );
 
-      const inputElement = wrapper.find('input');
-      const inputWrapper = wrapper.find(`.${CONSTANTS.STYLE.wrapper}`);
+      const inputElement = container.find('input');
+      const inputWrapper = container.find(`.${CONSTANTS.STYLE.wrapper}`);
 
       const domNode = inputElement.getDOMNode() as HTMLInputElement;
       const focusSpy = jest.spyOn(domNode, 'focus');
@@ -298,6 +307,23 @@ describe('<TextInput/>', () => {
       });
 
       expect(focusSpy).toBeCalledWith();
+    });
+
+    it('input messages get announced by SR', async () => {
+      expect.assertions(1);
+
+      const message1: Message = { message: 'test1', level: 'error' };
+      const message2: Message = { message: 'test2', level: 'error' };
+
+      container = await mountAndWait(
+        <TextInput
+          clearAriaLabel="Clear this input"
+          label="text-input"
+          messageArr={[message1, message2]}
+        />
+      );
+
+      expect(announceSpy).toHaveBeenCalledWith({ body: 'test1,test2' }, 'test-ID');
     });
   });
 });
