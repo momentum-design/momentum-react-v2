@@ -37,7 +37,7 @@ export interface Props {
    */
   style?: CSSProperties;
   /**
-   * The tag used to surround the text
+   * The tag used to surround the text (NB 'small' included for legacy reasons, it no longer affects the style)
    */
   tagName: AllowedTagNames;
 }
