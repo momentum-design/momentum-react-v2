@@ -84,7 +84,7 @@ const AsDescription: Story<TooltipPopoverComboProps> = () => {
     >
       <Flex xgap="0.5rem" alignItems="center">
         <Icon name="plus" />
-        <Text>Create</Text>
+        <Text tagName="p">Create</Text>
       </Flex>
     </ButtonPill>
   );
@@ -103,7 +103,7 @@ const AsDescription: Story<TooltipPopoverComboProps> = () => {
       <Item key="option-1">
         <Flex xgap="0.5rem" alignItems="center">
           <Icon name="chat" scale={24} />
-          <Text>Space</Text>
+          <Text tagName="p">Space</Text>
         </Flex>
       </Item>
     </Menu>
@@ -113,7 +113,7 @@ const AsDescription: Story<TooltipPopoverComboProps> = () => {
     <TooltipPopoverCombo
       popoverContent={popoverContent}
       triggerComponent={triggerComponent}
-      tooltipContent={<Text>Press to see options</Text>}
+      tooltipContent={<Text tagName="p">Press to see options</Text>}
       otherTooltipProps={{ placement: 'top', type: 'description' }}
       otherPopoverProps={{ placement: 'top', setInstance: setPopoverInstance }}
     />
