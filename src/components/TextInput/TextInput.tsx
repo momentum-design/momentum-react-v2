@@ -7,7 +7,6 @@ import React, {
   forwardRef,
   useRef,
   useEffect,
-  useState,
 } from 'react';
 import { useTextField } from '@react-aria/textfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
@@ -40,7 +39,6 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const inputRef = ref || componentRef;
 
   const [messageType, messages] = getFilteredMessages(messageArr);
-  const [messagesToAnnounces] = useState(messages);
   const errorMessage = messageType === 'error' ? messages[0] : undefined;
 
   const { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
@@ -70,11 +68,11 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   };
 
   useEffect(() => {
-    // Automatically SR-announce the input message as soon as it appears visibly on the screen to comply with a11y rules
-    if (messagesToAnnounces && !!messagesToAnnounces.length) {
-      ScreenReaderAnnouncer.announce({ body: messagesToAnnounces.join() }, announcerId);
+    // Automatically SR-announce the error message as soon as it appears visibly on the screen to comply with a11y rules
+    if (errorMessage) {
+      ScreenReaderAnnouncer.announce({ body: errorMessage }, announcerId);
     }
-  }, [announcerId, messagesToAnnounces]);
+  }, [announcerId, errorMessage]);
 
   return (
     <div
