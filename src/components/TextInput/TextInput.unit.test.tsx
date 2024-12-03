@@ -323,7 +323,7 @@ describe('<TextInput/>', () => {
         />
       );
 
-      expect(announceSpy).toHaveBeenCalledWith({ body: 'test1,test2' }, 'test-ID');
+      expect(announceSpy).toHaveBeenCalledWith({ body: 'test1' }, 'test-ID');
     });
   });
 });
