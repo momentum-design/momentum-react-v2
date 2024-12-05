@@ -43,13 +43,19 @@ const Example: Story<OverlayProps> = (args: OverlayProps) => {
     >
       {isOpen && (
         <Overlay {...args}>
-          <ModalContainer color="tertiary" elevation={2} round={50} isPadded>
+          <ModalContainer
+            color="tertiary"
+            elevation={2}
+            round={50}
+            isPadded
+            title="Some visible title again"
+          >
             <div style={{ marginRight: '1rem' }}>Foreground Container</div>
             <button onClick={toggleOpen}>Close Overlay</button>
           </ModalContainer>
         </Overlay>
       )}
-      <ModalContainer color="tertiary" elevation={2} round={50} isPadded>
+      <ModalContainer color="tertiary" elevation={2} round={50} isPadded title="Some visible title">
         <div style={{ marginRight: '1rem' }}>Background Container</div>
         <button onClick={toggleOpen}>Open Overlay</button>
       </ModalContainer>

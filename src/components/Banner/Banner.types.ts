@@ -9,7 +9,7 @@ export type Shape = 'rectangle' | 'square';
 export type SupportedImage = AvatarProps;
 export type SupportedActions = ButtonGroupProps;
 
-export interface Props extends ModalContainerProps {
+export type Props = ModalContainerProps & {
   /**
    * Actions associated with this Banner.
    */
@@ -59,4 +59,4 @@ export interface Props extends ModalContainerProps {
    * Title of this Banner. Appears below the Image.
    */
   title?: string;
-}
+};

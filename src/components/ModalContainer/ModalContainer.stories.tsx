@@ -26,6 +26,7 @@ const Example = Template<ModalContainerProps>(ModalContainer).bind({});
 
 Example.argTypes = { ...argTypes };
 Example.args = {
+  title: 'Some visible title',
   children: 'Example Children',
   isPadded: true,
 };
