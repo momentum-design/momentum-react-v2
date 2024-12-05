@@ -37,7 +37,7 @@ const Reaction: FC<Props> = (props: Props) => {
         animation.destroy();
       }
     };
-  }, [svgContainer, animationData, autoPlay, loop]);
+  }, [svgContainer, animationData, autoPlay, loop, name, onComplete]);
 
   if (error) {
     return (
@@ -60,7 +60,7 @@ const Reaction: FC<Props> = (props: Props) => {
     );
   }
   if (!animationData) {
-    return <LoadingSpinner scale={size} />;
+    return <LoadingSpinner scale={size} aria-hidden />;
   }
 };
 
