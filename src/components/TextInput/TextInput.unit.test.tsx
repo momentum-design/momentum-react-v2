@@ -7,6 +7,7 @@ import { act } from 'react-dom/test-utils';
 import { Message } from '../InputMessage/InputMessage.types';
 import InputMessage from '../InputMessage';
 import * as screenReaderAnnouncer from '../ScreenReaderAnnouncer';
+import { ReactWrapper } from 'enzyme';
 
 jest.mock('uuid', () => {
   return {
@@ -15,8 +16,8 @@ jest.mock('uuid', () => {
 });
 
 describe('<TextInput/>', () => {
-  let announceSpy;
-  let container;
+  let announceSpy: jest.SpiedFunction<(typeof screenReaderAnnouncer)['default']['announce']>;
+  let container: ReactWrapper;
 
   beforeEach(() => {
     announceSpy = jest.spyOn(screenReaderAnnouncer.default, 'announce').mockReturnValue();
