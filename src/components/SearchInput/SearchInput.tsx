@@ -119,7 +119,11 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
       )}
       <div>
         {searching ? (
-          <LoadingSpinner scale={ICON_HEIGHT_MAPPING[height]} className={STYLE.searching} />
+          <LoadingSpinner
+            aria-hidden
+            scale={ICON_HEIGHT_MAPPING[height]}
+            className={STYLE.searching}
+          />
         ) : (
           <Icon
             weight="bold"
