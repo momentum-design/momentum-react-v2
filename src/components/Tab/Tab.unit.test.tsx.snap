@@ -780,6 +780,7 @@ exports[`<Tab /> snapshot Text children should match snapshot 1`] = `
         >
           <Text
             key="1"
+            tagName="h3"
             type="subheader-secondary"
           >
             <Text
@@ -838,6 +839,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with active 1`] = 
         >
           <Text
             key="5"
+            tagName="h3"
             type="subheader-secondary"
           >
             <Text
@@ -896,6 +898,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with className 1`]
         >
           <Text
             key="2"
+            tagName="h3"
             type="subheader-secondary"
           >
             <Text
@@ -959,6 +962,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
         >
           <Text
             key="6"
+            tagName="h3"
             type="subheader-secondary"
           >
             <Text
@@ -1019,6 +1023,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
         >
           <Text
             key="3"
+            tagName="h3"
             type="subheader-secondary"
           >
             <Text
@@ -1091,6 +1096,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
         >
           <Text
             key="4"
+            tagName="h3"
             type="subheader-secondary"
           >
             <Text

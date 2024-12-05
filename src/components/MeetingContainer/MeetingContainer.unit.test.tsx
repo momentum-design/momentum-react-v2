@@ -22,10 +22,10 @@ const tags = [<Tag key={0}>Messages</Tag>, <Tag key={1}>Recording</Tag>];
 
 const pillButtons = [
   <ButtonPill key={0} outline ghost={true} color="join" size={28}>
-    <Text>Message</Text>
+    <Text tagName="p">Message</Text>
   </ButtonPill>,
   <ButtonPill key={1} color="join" size={28}>
-    <Text>Join</Text>
+    <Text tagName="p">Join</Text>
   </ButtonPill>,
 ];
 

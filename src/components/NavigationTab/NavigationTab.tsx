@@ -20,7 +20,7 @@ const NavigationTab: FC<Props> = (props: Props) => {
 
   const labelComponent =
     size == 200 && label ? (
-      <Text className={STYLE.label} type="subheader-secondary">
+      <Text className={STYLE.label} type="subheader-secondary" tagName="h3">
         {label}
       </Text>
     ) : null;

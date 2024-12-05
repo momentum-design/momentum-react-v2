@@ -86,7 +86,7 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
             {!nodeDetails.isLeaf && (
               <Icon name={nodeDetails.isOpen ? 'arrow-down' : 'arrow-right'} scale={12} />
             )}
-            <Text>Node {node.id}</Text>
+            <Text tagName="p">Node {node.id}</Text>
           </div>
           {nodeDetails.isLeaf && (
             <MenuTrigger
@@ -227,7 +227,7 @@ const SelectableTree = ({
           </ButtonPill>
         )}
       </Flex>
-      {showSelectedItems && <Text>Selected nodes: [{selected}]</Text>}
+      {showSelectedItems && <Text tagName="p">Selected nodes: [{selected}]</Text>}
       <hr />
       <Tree
         ref={ref as any}
@@ -286,7 +286,7 @@ const ControlledSelection = Template(() => {
   return (
     <>
       <h2>Sync selection between trees</h2>
-      <Text>Selected nodes: [{selected.join(', ')}]</Text>
+      <Text tagName="p">Selected nodes: [{selected.join(', ')}]</Text>
       <Flex justifyContent="space-around">
         <SelectableTree
           templateTitle="Tree A"

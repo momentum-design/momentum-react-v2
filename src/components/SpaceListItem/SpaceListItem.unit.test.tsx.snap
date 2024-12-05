@@ -105,6 +105,7 @@ exports[`<SpaceListItem /> snapshot checks divider dot position in compact mode 
                       "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -2022,6 +2023,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with multiple string s
                       "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text
@@ -2192,6 +2194,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with secondLine 1`] = 
                       "color": "var(--mds-color-theme-text-teamdefault-normal)",
                     }
                   }
+                  tagName="small"
                   type="body-secondary"
                 >
                   <Text

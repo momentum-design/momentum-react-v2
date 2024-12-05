@@ -52,6 +52,7 @@ const Chip: FC<Props> = (props: Props) => {
       )}
       <Text
         type={secondaryStyle ? 'subheader-secondary' : 'body-primary'}
+        tagName={secondaryStyle ? 'h3' : 'p'}
         data-search={search}
         data-multiline={multiline}
         className={STYLE.centerSection}

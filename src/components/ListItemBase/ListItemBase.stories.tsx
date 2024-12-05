@@ -247,7 +247,7 @@ const ListItemWithChangingContent = () => {
         gap: '0.5rem',
       }}
     >
-      <Text>Example with changing context - try it out!</Text>
+      <Text tagName="p">Example with changing context - try it out!</Text>
       <ListItemBase size={40} isPadded>
         <div
           style={{
@@ -283,7 +283,7 @@ const ListItemWithChangingContent = () => {
               Toggle text
             </ButtonPill>
           )}
-          {showText && <Text>Unfocusable text</Text>}
+          {showText && <Text tagName="p">Unfocusable text</Text>}
           <ButtonPill size={20} ghost outline onPress={handleChange}>
             Change button
           </ButtonPill>

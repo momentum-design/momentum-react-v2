@@ -188,7 +188,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     >
       {label && (
         <label htmlFor={name} {...labelProps}>
-          <Text>{label}</Text>
+          <Text tagName="p">{label}</Text>
         </label>
       )}
       {isInForm && (

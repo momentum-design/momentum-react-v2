@@ -14,7 +14,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snaphshot with otherToolt
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -46,7 +48,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snaphshot with otherToolt
         }
         type="description"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -471,7 +475,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snaphshot with otherToolt
               className="md-tooltip-label"
               id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"
@@ -513,7 +519,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -542,7 +550,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         }
         type="label"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -962,7 +972,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               className="md-tooltip-label"
               id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"
@@ -1009,7 +1021,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -1039,7 +1053,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         }
         type="label"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -1460,7 +1476,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               className="md-tooltip-label"
               id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"
@@ -1507,7 +1525,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -1537,7 +1557,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         }
         type="label"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -1958,7 +1980,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               className="md-tooltip-label"
               id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"

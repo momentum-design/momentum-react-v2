@@ -42,7 +42,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
           <div className={classnames(className, STYLE.leadingVisual)}>{leadingVisual}</div>
         )}
         {isString(content) ? (
-          <Text className={classnames(className, STYLE.content)} type="body-primary">
+          <Text className={classnames(className, STYLE.content)} type="body-primary" tagName="p">
             {content}
           </Text>
         ) : (

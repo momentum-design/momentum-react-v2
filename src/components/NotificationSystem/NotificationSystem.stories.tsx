@@ -154,7 +154,7 @@ const UpdateContent = Template<NotificationSystemProps>((args: NotificationSyste
         toastId.current = NotificationSystem.notify(Notification);
       }
     }
-  }, [numberRaisedHand]);
+  }, [Notification, numberRaisedHand]);
 
   return (
     <>
@@ -198,7 +198,7 @@ const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemPr
       onClose: handleClose,
     });
     setNotificationIsShown(true);
-  }, []);
+  }, [Notification, handleClose]);
 
   const resetTimer = React.useCallback(() => {
     NotificationSystem.update(toastId.current, {
@@ -212,8 +212,8 @@ const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemPr
         Show Notification for 5 seconds
       </ButtonPill>
       <ButtonPill onPress={resetTimer}>Reset Timer</ButtonPill>
-      <Text>Verify the reset with the help of this clock:</Text>
-      <Text>{currentTime.toLocaleTimeString()}</Text>
+      <Text tagName="p">Verify the reset with the help of this clock:</Text>
+      <Text tagName="p">{currentTime.toLocaleTimeString()}</Text>
       <NotificationSystem {...args} />
     </>
   );
