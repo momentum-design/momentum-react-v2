@@ -412,7 +412,7 @@ class Lightbox extends React.Component {
               onPress={this.handleDownload}
             >
               {downloading ? (
-                <LoadingSpinner />
+                <LoadingSpinner aria-hidden />
               ) : (
                 <IconNext
                   name="download"

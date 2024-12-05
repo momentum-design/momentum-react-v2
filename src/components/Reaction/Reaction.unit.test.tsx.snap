@@ -456,10 +456,13 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
   size={16}
 >
   <LoadingSpinner
+    aria-hidden={true}
     scale={16}
   >
     <div
+      aria-hidden={true}
       className="md-loading-spinner-wrapper"
+      role="img"
     >
       <Icon
         name="spinner"
