@@ -23,6 +23,8 @@ const ButtonHyperlink = forwardRef((props: Props, providedRef: RefObject<HTMLAnc
 
   const { buttonProps } = useButton({ ...mutatedProps, elementType: 'a' }, ref);
 
+  delete buttonProps.role; // remove role="button" from the anchor element
+
   return (
     <FocusRing disabled={props.disabled}>
       <a

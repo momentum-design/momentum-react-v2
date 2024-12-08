@@ -25,7 +25,6 @@ exports[`ButtonHyperlink snapshot should match snapshot 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role="button"
         tabIndex={0}
       >
         Hyperlink
@@ -66,7 +65,6 @@ exports[`ButtonHyperlink snapshot should match snapshot when disabled 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role="button"
       >
         Hyperlink
       </a>
@@ -102,7 +100,6 @@ exports[`ButtonHyperlink snapshot should match snapshot when inverted 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role="button"
         tabIndex={0}
       >
         Hyperlink
@@ -139,7 +136,6 @@ exports[`ButtonHyperlink snapshot should match snapshot with title 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role="button"
         tabIndex={0}
         title="Example Text"
       />
