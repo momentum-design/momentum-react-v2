@@ -988,7 +988,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                           onTouchEnd={[Function]}
                           onTouchMove={[Function]}
                           onTouchStart={[Function]}
-                          role="button"
                           tabIndex={0}
                         >
                           Example Link
@@ -2359,7 +2358,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                           onTouchEnd={[Function]}
                           onTouchMove={[Function]}
                           onTouchStart={[Function]}
-                          role="button"
                           tabIndex={0}
                         >
                           Example Link
