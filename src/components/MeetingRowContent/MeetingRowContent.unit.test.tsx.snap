@@ -126,7 +126,6 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
                   onTouchEnd={[Function]}
                   onTouchMove={[Function]}
                   onTouchStart={[Function]}
-                  role="button"
                   tabIndex={0}
                 >
                   Link
