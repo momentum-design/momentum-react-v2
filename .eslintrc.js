@@ -63,6 +63,13 @@ module.exports = {
     },
   ],
   rules: {
+    'no-restricted-syntax': [
+      'warn',
+      {
+        'selector': "JSXAttribute > JSXExpressionContainer > MemberExpression[property.name='current']",
+        'message': 'Do not read ref.current on render. Either use useState instead of useRef to store the value, or read ref.current in a useEffect or event handler.'
+      }
+    ],
     quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
     'no-console': ['error', { allow: ['warn'] }],
     'no-debugger': 1,
