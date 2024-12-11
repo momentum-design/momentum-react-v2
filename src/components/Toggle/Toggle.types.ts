@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { AriaSwitchBase } from '@react-types/switch';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type Props = Omit<AriaSwitchBase, 'children'> & {
   /**
