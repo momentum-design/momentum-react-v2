@@ -365,11 +365,14 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
     >
       <div>
         <LoadingSpinner
+          aria-hidden={true}
           className="md-search-input-searching"
           scale={16}
         >
           <div
+            aria-hidden={true}
             className="md-search-input-searching md-loading-spinner-wrapper"
+            role="img"
           >
             <Icon
               name="spinner"

@@ -8,7 +8,7 @@ describe('<LoadingSpinner />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<LoadingSpinner />);
+      const container = await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -18,7 +18,9 @@ describe('<LoadingSpinner />', () => {
 
       const className = 'example-class';
 
-      const container = await mountAndWait(<LoadingSpinner className={className} />);
+      const container = await mountAndWait(
+        <LoadingSpinner aria-label="Loading, please wait" className={className} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +30,9 @@ describe('<LoadingSpinner />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<LoadingSpinner id={id} />);
+      const container = await mountAndWait(
+        <LoadingSpinner aria-label="Loading, please wait" id={id} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -38,7 +42,9 @@ describe('<LoadingSpinner />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<LoadingSpinner style={style} />);
+      const container = await mountAndWait(
+        <LoadingSpinner aria-label="Loading, please wait" style={style} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -48,7 +54,17 @@ describe('<LoadingSpinner />', () => {
 
       const scale = 32 as const;
 
-      const container = await mountAndWait(<LoadingSpinner scale={scale} />);
+      const container = await mountAndWait(
+        <LoadingSpinner aria-label="Loading, please wait" scale={scale} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-hidden', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(<LoadingSpinner aria-hidden />);
 
       expect(container).toMatchSnapshot();
     });
@@ -58,7 +74,9 @@ describe('<LoadingSpinner />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = (await mountAndWait(<LoadingSpinner />)).find(LoadingSpinner).getDOMNode();
+      const element = (await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" />))
+        .find(LoadingSpinner)
+        .getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
@@ -68,7 +86,11 @@ describe('<LoadingSpinner />', () => {
 
       const className = 'example-class';
 
-      const element = (await mountAndWait(<LoadingSpinner className={className} />))
+      const element = (
+        await mountAndWait(
+          <LoadingSpinner aria-label="Loading, please wait" className={className} />
+        )
+      )
         .find(LoadingSpinner)
         .getDOMNode();
 
@@ -80,7 +102,9 @@ describe('<LoadingSpinner />', () => {
 
       const id = 'example-id';
 
-      const element = (await mountAndWait(<LoadingSpinner id={id} />))
+      const element = (
+        await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" id={id} />)
+      )
         .find(LoadingSpinner)
         .getDOMNode();
 
@@ -93,7 +117,9 @@ describe('<LoadingSpinner />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = (await mountAndWait(<LoadingSpinner style={style} />))
+      const element = (
+        await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" style={style} />)
+      )
         .find(LoadingSpinner)
         .getDOMNode();
 
@@ -105,9 +131,21 @@ describe('<LoadingSpinner />', () => {
 
       const scale = 32 as const;
 
-      (await mountAndWait(<LoadingSpinner scale={scale} />)).find('svg').forEach((icon) => {
-        expect(icon.getDOMNode().getAttribute('data-scale')).toBe(`${scale}`);
-      });
+      (await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" scale={scale} />))
+        .find('svg')
+        .forEach((icon) => {
+          expect(icon.getDOMNode().getAttribute('data-scale')).toBe(`${scale}`);
+        });
+    });
+
+    it('should have provided aria-hidden when aria-hidden is provided', async () => {
+      expect.assertions(1);
+
+      const element = (await mountAndWait(<LoadingSpinner aria-hidden />))
+        .find(LoadingSpinner)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-hidden')).toBe('true');
     });
   });
 });

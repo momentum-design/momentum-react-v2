@@ -10,7 +10,13 @@ const LoadingSpinner: FC<Props> = (props: Props) => {
   const { className, id, style, scale = DEFAULTS.SCALE, ...rest } = props;
 
   return (
-    <div className={classnames(className, STYLE.wrapper)} id={id} style={style} {...rest}>
+    <div
+      className={classnames(className, STYLE.wrapper)}
+      id={id}
+      style={style}
+      {...rest}
+      role="img"
+    >
       <Icon scale={scale} name="spinner" weight="regular" />
       <Icon scale={scale} className={STYLE.arch} name="spinner-in-progress" weight="regular" />
     </div>
