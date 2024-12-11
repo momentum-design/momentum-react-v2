@@ -1,7 +1,8 @@
 import { CSSProperties } from 'react';
 import { AriaSwitchBase } from '@react-types/switch';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
-export interface Props extends Omit<AriaSwitchBase, 'children'> {
+export type Props = Omit<AriaSwitchBase, 'children'> & {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -16,4 +17,4 @@ export interface Props extends Omit<AriaSwitchBase, 'children'> {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
-}
+} & AriaLabelRequired;
