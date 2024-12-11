@@ -147,7 +147,7 @@ exports[`<TextInput/> snapshot should match snapshot with clearAriaLabel 1`] = `
         />
       </div>
       <ScreenReaderAnnouncer
-        identity="test-ID"
+        identity="example-id"
       >
         <div
           className="md-screen-reader-announcer-wrapper"
@@ -434,7 +434,7 @@ exports[`<TextInput/> snapshot should match snapshot with id 1`] = `
         />
       </div>
       <ScreenReaderAnnouncer
-        identity="test-ID"
+        identity="example-id"
       >
         <div
           className="md-screen-reader-announcer-wrapper"
