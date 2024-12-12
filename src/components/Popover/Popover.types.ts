@@ -83,6 +83,9 @@ export type PopoverCommonStyleProps = {
    */
   hideOnBlur?: boolean;
 
+  /**
+   * Used when provided by a select which renders a popover. This is used to ensure only one popover is open at a time.
+   */
   singleOpenGroupId?: string;
 
   /**
