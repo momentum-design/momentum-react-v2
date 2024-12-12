@@ -47,6 +47,8 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
       data-elevation={elevation}
       data-padded={isPadded}
       data-round={round}
+      // Allow the "no focused element" state to have the focus set to the dialog instead of trying to set it to the body
+      tabIndex={-1}
       {...otherProps}
     >
       {children}
