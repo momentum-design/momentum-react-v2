@@ -141,7 +141,11 @@ describe('<Popover />', () => {
       const user = userEvent.setup();
 
       const { container } = render(
-        <Popover triggerComponent={<button>Click Me!</button>} closeButtonPlacement="top-right">
+        <Popover
+          triggerComponent={<button>Click Me!</button>}
+          closeButtonPlacement="top-right"
+          closeButtonProps={{ 'aria-label': 'abc' }}
+        >
           <p>Content</p>
         </Popover>
       );
@@ -1415,6 +1419,7 @@ describe('<Popover />', () => {
               triggerComponent={<button>Hover Me!</button>}
               interactive={false}
               closeButtonPlacement="top-right"
+              closeButtonProps={{ 'aria-label': 'abc' }}
               trigger="mouseenter"
               hideOnEsc={false}
             >

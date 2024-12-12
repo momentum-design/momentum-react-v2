@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { PopoverProps } from '../Popover';
 import { TooltipProps } from '../Tooltip';
+import { PopoverCloseButtonProps } from '../Popover/Popover.types';
 
 export interface Props {
   /**
@@ -21,7 +22,7 @@ export interface Props {
   /**
    * An object of Popover props to be passed through to the Popover component.
    */
-  otherPopoverProps?: Partial<Omit<PopoverProps, 'id'>>;
+  otherPopoverProps?: Partial<Omit<PopoverProps, 'id'>> & PopoverCloseButtonProps;
 
   /**
    * An object of Tooltip props to be passed through to the Tooltip component.

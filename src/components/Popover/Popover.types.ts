@@ -8,6 +8,7 @@ import { ButtonCircleProps } from '../ButtonCircle';
 export type VariantType = 'small' | 'medium';
 export type BoundaryType = 'parent' | 'viewport' | 'window' | HTMLElement;
 export type CloseButtonPlacement = 'top-left' | 'top-right' | 'none';
+export type CloseButtonProps = ButtonCircleProps & { 'aria-label': string };
 
 export type PlacementType = TippyProps['placement'];
 export type TriggerType = TippyProps['trigger'];
@@ -111,142 +112,159 @@ export type PopoverCommonStyleProps = {
   zIndex?: number;
 };
 
-export interface Props extends PopoverCommonStyleProps, Partial<LifecycleHooks> {
-  /**
-   * Child components of this Popover (what will be shown within the Popover)
-   */
-  children: ReactNode;
+export type PopoverCloseButtonProps =
+  | {
+      /**
+       * Position of the close button
+       * @default `none`
+       */
+      closeButtonPlacement?: 'none';
 
-  /**
-   * Determines the events that cause the Popover to show. Multiple event names should be separated by spaces.
-   * For example to allow both click and hover, use `click mouseenter` as the trigger.
-   *
-   * Possible event names: `click`, `mouseenter`, `focusin`, `manual` (to programmatically trigger the popover)
-   *
-   * @default `click`
-   */
-  trigger?: TriggerType;
+      /**
+       * Props that are passed down to the close button. Required if close button exists.
+       */
+      closeButtonProps?: CloseButtonProps;
+    }
+  | {
+      /**
+       * Position of the close button
+       * @default `none`
+       */
+      closeButtonPlacement: Exclude<CloseButtonPlacement, 'none'>;
 
-  /**
-   * The component which triggers the Popover
-   */
-  triggerComponent: ReactElement;
+      /**
+       * Props that are passed down to the close button. Required if close button exists.
+       */
+      closeButtonProps: CloseButtonProps;
+    };
 
-  /**
-   * Determines if the Popover has interactive content inside of it,
-   * so that it can be hovered over and clicked inside without hiding.
-   *
-   * @default false
-   */
-  interactive?: boolean;
+export type Props = PopoverCommonStyleProps &
+  PopoverCloseButtonProps &
+  Partial<LifecycleHooks> & {
+    /**
+     * Child components of this Popover (what will be shown within the Popover)
+     */
+    children: ReactNode;
 
-  /**
-   * setInstance - this function should be passed in when the instance
-   * of the popover should be available on the parent of the Popover.
-   *
-   * With the instance of the popover the parent component can `show()` or `hide()` the Popover programmatically.
-   *
-   * setInstance is the setter function of a useState hook
-   */
-  setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance | undefined>>;
+    /**
+     * Determines the events that cause the Popover to show. Multiple event names should be separated by spaces.
+     * For example to allow both click and hover, use `click mouseenter` as the trigger.
+     *
+     * Possible event names: `click`, `mouseenter`, `focusin`, `manual` (to programmatically trigger the popover)
+     *
+     * @default `click`
+     */
+    trigger?: TriggerType;
 
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
+    /**
+     * The component which triggers the Popover
+     */
+    triggerComponent: ReactElement;
 
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
+    /**
+     * Determines if the Popover has interactive content inside of it,
+     * so that it can be hovered over and clicked inside without hiding.
+     *
+     * @default false
+     */
+    interactive?: boolean;
 
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
+    /**
+     * setInstance - this function should be passed in when the instance
+     * of the popover should be available on the parent of the Popover.
+     *
+     * With the instance of the popover the parent component can `show()` or `hide()` the Popover programmatically.
+     *
+     * setInstance is the setter function of a useState hook
+     */
+    setInstance?: React.Dispatch<React.SetStateAction<PopoverInstance | undefined>>;
 
-  /**
-   * Position of the close button
-   * @default `none`
-   */
-  closeButtonPlacement?: CloseButtonPlacement;
+    /**
+     * Custom class for overriding this component's CSS.
+     */
+    className?: string;
 
-  /**
-   * Props that are passed down to the close button.
-   */
-  closeButtonProps?: ButtonCircleProps;
+    /**
+     * Custom id for overriding this component's CSS.
+     */
+    id?: string;
 
-  /**
-   * Determines if the component will focus back on the trigger when the Popover is hidden.
-   * @default `false`
-   */
-  focusBackOnTrigger?: boolean;
+    /**
+     * Custom style for overriding this component's CSS.
+     */
+    style?: CSSProperties;
 
-  /**
-   * Describes the positioning strategy to use.
-   * @default `absolute`
-   */
-  strategy?: PositioningStrategy;
+    /**
+     * Determines if the component will focus back on the trigger when the Popover is hidden.
+     * @default `false`
+     */
+    focusBackOnTrigger?: boolean;
 
-  /**
-   * The offset distance (in px) from the reference.
-   * @default 'undefined'
-   */
-  offsetDistance?: number;
+    /**
+     * Describes the positioning strategy to use.
+     * @default `absolute`
+     */
+    strategy?: PositioningStrategy;
 
-  /**
-   * The offset skidding (in px) along the reference.
-   * @default 'undefined'
-   */
-  offsetSkidding?: number;
+    /**
+     * The offset distance (in px) from the reference.
+     * @default 'undefined'
+     */
+    offsetDistance?: number;
 
-  /**
-   * The element used to focus on when the popover opens
-   * See PopoverWithFirstFocus in storybook for example usage
-   * @default 'undefined'
-   */
-  firstFocusElement?: HTMLElement;
+    /**
+     * The offset skidding (in px) along the reference.
+     * @default 'undefined'
+     */
+    offsetSkidding?: number;
 
-  /**
-   * Whether to auto focus the first focusable element in the focus scope of the Popover on mount.
-   *
-   * Example: set to false if the Popover Content itself wants to handle the auto focusing (i.e. MenuTrigger)
-   *
-   * Defaults: true
-   */
-  autoFocus?: boolean;
+    /**
+     * The element used to focus on when the popover opens
+     * See PopoverWithFirstFocus in storybook for example usage
+     * @default 'undefined'
+     */
+    firstFocusElement?: HTMLElement;
 
-  /**
-   * Role of the popover content
-   */
-  role?: AriaRole;
+    /**
+     * Whether to auto focus the first focusable element in the focus scope of the Popover on mount.
+     *
+     * Example: set to false if the Popover Content itself wants to handle the auto focusing (i.e. MenuTrigger)
+     *
+     * Defaults: true
+     */
+    autoFocus?: boolean;
 
-  /**
-   * The element to append the popover to.
-   */
-  appendTo?: AppendToType;
+    /**
+     * Role of the popover content
+     */
+    role?: AriaRole;
 
-  /**
-   * Whether to allow the trigger event to continue to propagate after the Popover is triggered.
-   */
-  continuePropagationOnTrigger?: boolean;
+    /**
+     * The element to append the popover to.
+     */
+    appendTo?: AppendToType;
 
-  /**
-   * aria-labelledby for an interactive popover only, defaults to the trigger component id.
-   * Used in nested cases where the triggerComponent isn't the actual button.
-   */
-  'aria-labelledby'?: string;
+    /**
+     * Whether to allow the trigger event to continue to propagate after the Popover is triggered.
+     */
+    continuePropagationOnTrigger?: boolean;
 
-  /**
-   * aria-label for an interactive popover only. By default, it will be labelled by the triggerComponent.
-   * Only required in the unusual circumstance where the popover label cannot match the trigger.
-   */
-  'aria-label'?: string;
+    /**
+     * aria-labelledby for an interactive popover only, defaults to the trigger component id.
+     * Used in nested cases where the triggerComponent isn't the actual button.
+     */
+    'aria-labelledby'?: string;
 
-  /**
-   * If true, the focus lock will be disabled for the Popover content.
-   * This is useful when you want to handle focus lock mechanism yourself, and to avoid having multiple focus locks.
-   * @default `false`
-   */
-  disableFocusLock?: boolean;
-}
+    /**
+     * aria-label for an interactive popover only. By default, it will be labelled by the triggerComponent.
+     * Only required in the unusual circumstance where the popover label cannot match the trigger.
+     */
+    'aria-label'?: string;
+
+    /**
+     * If true, the focus lock will be disabled for the Popover content.
+     * This is useful when you want to handle focus lock mechanism yourself, and to avoid having multiple focus locks.
+     * @default `false`
+     */
+    disableFocusLock?: boolean;
+  };

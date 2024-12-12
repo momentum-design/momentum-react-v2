@@ -2,9 +2,9 @@ import type { Plugin } from 'tippy.js';
 import { PopoverInstance } from '..';
 import { Props } from '../Popover.types';
 
-export interface PopperBlurPluginProps extends Props {
+export type PopperBlurPluginProps = Props & {
   isChildPopoverOpen?: boolean;
-}
+};
 
 export const hideOnBlurPlugin: Plugin = {
   name: 'isChildPopoverOpen',
