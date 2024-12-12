@@ -290,6 +290,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-placement="bottom-start"
                   data-round="75"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -483,6 +484,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-round={75}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -2496,6 +2498,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-placement="bottom-start"
                   data-round="75"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -2689,6 +2692,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-round={75}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -4702,6 +4706,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-placement="bottom-start"
                   data-round="75"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -4895,6 +4900,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-round={75}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -6910,6 +6916,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   data-round="75"
                   id="example-id"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -7105,6 +7112,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   id="example-id"
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -9118,6 +9126,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-placement="top"
                   data-round="75"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -9311,6 +9320,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-round={75}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -11324,6 +11334,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-placement="bottom-start"
                   data-round="75"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -11548,6 +11559,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-round={75}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -13606,6 +13618,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   data-round="75"
                   role="generic"
                   style="color: pink;"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -13809,6 +13822,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       "color": "pink",
                     }
                   }
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -15822,6 +15836,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-placement="bottom-start"
                   data-round="50"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -16015,6 +16030,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-round={50}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"
@@ -18032,6 +18048,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-placement="bottom-start"
                   data-round="75"
                   role="generic"
+                  tabindex="-1"
                 >
                   <div
                     aria-labelledby="test-ID"
@@ -18225,6 +18242,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-round={75}
                   onKeyDown={[Function]}
                   role="generic"
+                  tabIndex={-1}
                 >
                   <_Menu
                     key=".$2"

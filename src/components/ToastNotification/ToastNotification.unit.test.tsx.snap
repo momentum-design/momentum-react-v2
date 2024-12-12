@@ -18,6 +18,7 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -68,6 +69,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -129,6 +131,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -289,6 +292,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -338,6 +342,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
       data-round={50}
       id="example-id"
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -391,6 +396,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -469,6 +475,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -506,6 +513,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -637,6 +645,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
       data-padded={true}
       data-round={50}
       role="generic"
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
@@ -698,6 +707,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
           "color": "pink",
         }
       }
+      tabIndex={-1}
     >
       <div
         className="md-toast-notification-body"
