@@ -814,6 +814,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
       role="dialog"
     >
       <button
+        aria-label="abc"
         class="md-button-circle-wrapper md-popover-close-button md-button-simple-wrapper"
         data-color="primary"
         data-disabled="false"

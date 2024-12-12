@@ -38,9 +38,10 @@ export interface CoachmarkWithHeaderProps extends CoachmarkWithoutHeaderProps {
   title?: string;
 }
 
-export interface Props extends PopoverProps, CoachmarkWithHeaderProps {
-  /**
-   * Whether or not this Coachmark is to be visible.
-   */
-  isVisible?: boolean;
-}
+export type Props = PopoverProps &
+  CoachmarkWithHeaderProps & {
+    /**
+     * Whether or not this Coachmark is to be visible.
+     */
+    isVisible?: boolean;
+  };
