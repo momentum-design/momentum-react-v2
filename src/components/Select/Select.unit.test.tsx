@@ -463,6 +463,44 @@ describe('Select', () => {
       });
     });
 
+    it('should have expected props on Popover with groupId', async () => {
+      expect.assertions(1);
+
+      const direction = 'top';
+      const popoverSingleOpenGroupId = 'test-group';
+
+      const wrapper = await mountAndWait(
+        <Select
+          direction={direction}
+          popoverSingleOpenGroupId={popoverSingleOpenGroupId}
+          label="test"
+        >
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
+
+      expect(wrapper.find(Popover).props()).toEqual({
+        interactive: true,
+        role: null,
+        showArrow: false,
+        singleOpenGroupId: 'test-group',
+        triggerComponent: expect.any(Object),
+        trigger: 'manual',
+        setInstance: expect.any(Function),
+        placement: direction,
+        onClickOutside: expect.any(Function),
+        onHide: expect.any(Function),
+        hideOnEsc: false,
+        style: { maxHeight: 'none' },
+        className: 'md-select-popover',
+        children: expect.any(Object),
+        onKeyDown: expect.any(Function),
+        onKeyUp: undefined,
+        strategy: 'absolute',
+      });
+    });
+
     it('should have expected attributes set when listboxWidth is passed in', async () => {
       expect.assertions(2);
 
@@ -501,8 +539,6 @@ describe('Select', () => {
 
     it('should have expected attributes set when shallowDisabled', async () => {
       expect.assertions(2);
-
-      const direction = 'top';
 
       const wrapper = await mountAndWait(
         <Select shallowDisabled={true} label="test">
