@@ -18,7 +18,9 @@ exports[`Select snapshot should match snapshot 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -589,7 +591,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -1160,7 +1164,9 @@ exports[`Select snapshot should match snapshot before and after opening select d
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -2264,7 +2270,9 @@ exports[`Select snapshot should match snapshot with border 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -2836,7 +2844,9 @@ exports[`Select snapshot should match snapshot with className 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -3408,7 +3418,9 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -3985,7 +3997,9 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -5096,7 +5110,9 @@ exports[`Select snapshot should match snapshot with id 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -5666,7 +5682,9 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -6003,7 +6021,9 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -7106,7 +7126,9 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -8206,7 +8228,9 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -9307,7 +9331,9 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -9885,7 +9911,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -10490,7 +10518,9 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -11707,7 +11737,9 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -12287,7 +12319,9 @@ exports[`Select snapshot should match snapshot with style 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"
@@ -12857,7 +12891,9 @@ exports[`Select snapshot should match snapshot with title 1`] = `
       id="test-ID"
       onClick={[Function]}
     >
-      <Text>
+      <Text
+        tagName="p"
+      >
         <Text
           className="md-text-wrapper"
           tagname="p"

@@ -87,6 +87,25 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div
@@ -258,6 +277,25 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div
@@ -429,6 +467,25 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div
@@ -600,6 +657,25 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div
@@ -776,6 +852,25 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div
@@ -947,6 +1042,25 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div
@@ -1131,6 +1245,25 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
               value=""
             />
           </div>
+          <ScreenReaderAnnouncer
+            identity="test-ID"
+          >
+            <div
+              className="md-screen-reader-announcer-wrapper"
+              data-testid="screen-reader-announcer"
+              style={
+                Object {
+                  "clip": "rect(0 0 0 0)",
+                  "clipPath": "inset(50%)",
+                  "height": "1px",
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                }
+              }
+            />
+          </ScreenReaderAnnouncer>
         </div>
       </TextInput>
       <div

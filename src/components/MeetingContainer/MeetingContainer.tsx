@@ -28,7 +28,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
     isDisabled,
     statusColor,
     titleType = DEFAULTS.TITLE_TYPE,
-    titleTagName,
+    titleTagName = DEFAULTS.TITLE_TAG_NAME,
     ...otherProps
   } = props;
   const title = meetingTitle || children;
@@ -74,6 +74,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
           <div>
             <Text
               type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}
+              tagName="small"
               data-color={isDisabled ? DEFAULTS.SCHEDULE_INFO_COLOR : scheduleInfoFirstColor}
             >
               {scheduleInfoFirst}
@@ -81,6 +82,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
             {scheduleInfoSecond && <DividerDot />}
             <Text
               type={TEXT_CONSTANTS.TYPES.BODY_SECONDARY}
+              tagName="small"
               data-color={isDisabled ? DEFAULTS.SCHEDULE_INFO_COLOR : scheduleInfoSecondColor}
             >
               {scheduleInfoSecond}

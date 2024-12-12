@@ -37,9 +37,9 @@ export interface Props {
    */
   style?: CSSProperties;
   /**
-   * Override the tag used to surround the text
+   * The tag used to surround the text (NB 'small' included for legacy reasons, it no longer affects the style)
    */
-  tagName?: AllowedTagNames;
+  tagName: AllowedTagNames;
 }
 
 export type FontStyle =

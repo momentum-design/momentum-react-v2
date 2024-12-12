@@ -39,7 +39,7 @@ const InputMessage = (props: Props): ReactElement => {
 
   return (
     <div className={classnames(STYLE.wrapper, className)} id={id}>
-      <div className={STYLE.message} role="alert" message-level={level}>
+      <div className={STYLE.message} message-level={level}>
         {(level == 'error' || level == 'warning') && (
           <div className={STYLE.icon}>
             <Icon
@@ -50,7 +50,7 @@ const InputMessage = (props: Props): ReactElement => {
             />
           </div>
         )}
-        <Text type="body-secondary" className={STYLE.text}>
+        <Text type="body-secondary" tagName="small" className={STYLE.text}>
           {message}
         </Text>
       </div>

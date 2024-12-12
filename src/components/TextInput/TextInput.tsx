@@ -1,6 +1,13 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { ReactElement, InputHTMLAttributes, RefObject, forwardRef, useRef } from 'react';
+import React, {
+  ReactElement,
+  InputHTMLAttributes,
+  RefObject,
+  forwardRef,
+  useRef,
+  useEffect,
+} from 'react';
 import { useTextField } from '@react-aria/textfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
 import classnames from 'classnames';
@@ -8,10 +15,11 @@ import classnames from 'classnames';
 import './TextInput.style.scss';
 import { Props } from './TextInput.types';
 import InputMessage, { getFilteredMessages } from '../InputMessage';
-import { ButtonSimple, Icon } from '..';
+import { ButtonSimple, Icon, ScreenReaderAnnouncer } from '..';
 import { STYLE } from './TextInput.constants';
 import { useFocusState } from '../../hooks/useFocusState';
 import { v4 as uuidV4 } from 'uuid';
+import { useId } from '@react-aria/utils';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
@@ -44,6 +52,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const messageId = useRef(uuidV4());
   const labelId = useRef(uuidV4());
   const clearButtonId = useRef(uuidV4());
+  const announcerId = useId(id);
 
   const onClearButtonPress = () => {
     state.setValue('');
@@ -57,6 +66,13 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       inputRef.current.focus();
     }
   };
+
+  useEffect(() => {
+    // Automatically SR-announce the error message as soon as it appears visibly on the screen to comply with a11y rules
+    if (errorMessage) {
+      ScreenReaderAnnouncer.announce({ body: errorMessage }, announcerId);
+    }
+  }, [announcerId, errorMessage]);
 
   return (
     <div
@@ -124,6 +140,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
           ))}
         </div>
       )}
+      <ScreenReaderAnnouncer identity={announcerId} />
     </div>
   );
 };

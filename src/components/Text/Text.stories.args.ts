@@ -45,15 +45,15 @@ export default {
   },
   tagName: {
     description:
-      'Modifies the tagName of the text component. This should be used to set the appropriate tagName for headings etc. to follow accessibility.',
-    options: [undefined, ...Object.values(VALID_TEXT_TAGS)],
+      'Required. Provides the tagName of the text component. This should be set according to page structure accessibility rules, not for styling.',
+    options: Object.values(VALID_TEXT_TAGS),
     control: { type: 'select' },
     table: {
       type: {
         summary: 'string',
       },
       defaultValue: {
-        summary: 'depends on type property',
+        summary: 'p',
       },
     },
   },
