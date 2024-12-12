@@ -106,6 +106,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content 1
@@ -205,6 +206,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content 2
@@ -398,6 +400,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content 1
@@ -497,6 +500,7 @@ exports[`<Tooltip type"description /> snapshot should display only one tooltip a
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content 2
@@ -634,6 +638,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with aria-h
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -722,6 +727,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with classN
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -810,6 +816,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with color 
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -899,6 +906,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with id 2`]
       data-round="50"
       id="example-id"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -987,6 +995,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with labelO
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1075,6 +1084,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with labelO
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1163,6 +1173,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1251,6 +1262,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1339,6 +1351,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with offset
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1427,6 +1440,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with strate
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1516,6 +1530,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with style 
       data-round="50"
       role="tooltip"
       style="color: pink;"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1604,6 +1619,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type d
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1692,6 +1708,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type l
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1760,6 +1777,7 @@ exports[`<Tooltip type"description /> snapshot should match snapshot with type n
       data-placement="top"
       data-round="50"
       role="tooltip"
+      tabindex="-1"
     >
       <p>
         Content

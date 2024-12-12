@@ -27,6 +27,7 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <div
         class="md-coachmark-container"
@@ -221,6 +222,7 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <div
         class="md-coachmark-container"

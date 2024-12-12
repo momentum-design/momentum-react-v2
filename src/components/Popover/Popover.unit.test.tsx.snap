@@ -71,6 +71,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 2`] = 
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 1
@@ -157,6 +158,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 3`] = 
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 2
@@ -301,6 +303,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 6`] = 
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 1
@@ -387,6 +390,7 @@ exports[`<Popover /> snapshot should display only one popover at all time 7`] = 
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 2
@@ -490,6 +494,7 @@ exports[`<Popover /> snapshot should match snapshot 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -573,6 +578,7 @@ exports[`<Popover /> snapshot should match snapshot with aria-label 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -660,6 +666,7 @@ exports[`<Popover /> snapshot should match snapshot with aria-labelledby 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -738,6 +745,7 @@ exports[`<Popover /> snapshot should match snapshot with className 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -812,6 +820,7 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <button
         class="md-button-circle-wrapper md-popover-close-button md-button-simple-wrapper"
@@ -917,6 +926,7 @@ exports[`<Popover /> snapshot should match snapshot with color 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -992,6 +1002,7 @@ exports[`<Popover /> snapshot should match snapshot with id 2`] = `
       data-round="50"
       id="example-id"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1066,6 +1077,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetDistance 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1140,6 +1152,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1214,6 +1227,7 @@ exports[`<Popover /> snapshot should match snapshot with offsetSkidding and offs
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1288,6 +1302,7 @@ exports[`<Popover /> snapshot should match snapshot with strategy = fixed 2`] = 
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1363,6 +1378,7 @@ exports[`<Popover /> snapshot should match snapshot with style 2`] = `
       data-round="50"
       role="dialog"
       style="color: pink;"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1437,6 +1453,7 @@ exports[`<Popover /> snapshot should match snapshot with zIndex 2`] = `
       data-placement="top"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content

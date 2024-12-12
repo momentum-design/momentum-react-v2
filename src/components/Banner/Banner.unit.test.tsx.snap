@@ -52,6 +52,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
       data-round={75}
       data-shape="square"
       role="dialog"
+      tabIndex={-1}
     >
       <Avatar
         initials="CW"
@@ -313,6 +314,7 @@ exports[`<Banner /> snapshot should match snapshot 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -404,6 +406,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -635,6 +638,7 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -705,6 +709,7 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -777,6 +782,7 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -851,6 +857,7 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
       data-round={75}
       id="example-id"
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -925,6 +932,7 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Avatar
         initials="CW"
@@ -1022,6 +1030,7 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -1094,6 +1103,7 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
       data-round={75}
       data-shape="square"
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -1178,6 +1188,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
           "color": "pink",
         }
       }
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"
@@ -1248,6 +1259,7 @@ exports[`<Banner /> snapshot should match snapshot with title 1`] = `
       data-padded={false}
       data-round={75}
       role="dialog"
+      tabIndex={-1}
     >
       <Text
         className="md-banner-title"

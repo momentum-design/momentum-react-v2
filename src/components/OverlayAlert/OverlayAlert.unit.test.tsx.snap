@@ -44,6 +44,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -111,6 +112,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -234,6 +236,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with aria props 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -299,6 +302,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with className 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -366,6 +370,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div>
@@ -471,6 +476,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -555,6 +561,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details and childr
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -622,6 +629,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with id 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -700,6 +708,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -950,6 +959,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div>
@@ -1152,6 +1162,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with style 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />
@@ -1217,6 +1228,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
             data-padded={false}
             data-round={75}
             role="dialog"
+            tabIndex={-1}
           >
             <div>
               <div />

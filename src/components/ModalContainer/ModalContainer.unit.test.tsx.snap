@@ -10,6 +10,7 @@ exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -26,6 +27,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with aria-modal 1`] =
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -42,6 +44,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   >
     <div
       className="md-modal-container-arrow-wrapper"
@@ -93,6 +96,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrowId 1`] = `
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -107,6 +111,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   >
     <div>
       Example Text
@@ -127,6 +132,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = 
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -143,6 +149,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -159,6 +166,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = 
     data-padded={false}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -188,6 +196,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1
       data-padded={false}
       data-round={0}
       role="dialog"
+      tabIndex={-1}
     />
     <span
       data-focus-scope-end={true}
@@ -210,6 +219,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
     data-round={0}
     id="example-id"
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -226,6 +236,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
     data-padded={true}
     data-round={0}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -242,6 +253,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
     data-padded={false}
     data-round={150}
     role="dialog"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -257,6 +269,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
     data-padded={false}
     data-round={0}
     role="tooltip"
+    tabIndex={-1}
   />
 </ModalContainer>
 `;
@@ -282,6 +295,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
         "color": "pink",
       }
     }
+    tabIndex={-1}
   />
 </ModalContainer>
 `;

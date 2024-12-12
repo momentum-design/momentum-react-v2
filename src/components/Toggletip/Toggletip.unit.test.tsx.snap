@@ -107,6 +107,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 2`
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 1
@@ -217,6 +218,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 3`
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 2
@@ -417,6 +419,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 6`
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 1
@@ -527,6 +530,7 @@ exports[`<Toggletip /> snapshot should display only one toggletip at all time 7`
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content 2
@@ -671,6 +675,7 @@ exports[`<Toggletip /> snapshot should match snapshot 2`] = `
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -770,6 +775,7 @@ exports[`<Toggletip /> snapshot should match snapshot with className 2`] = `
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -869,6 +875,7 @@ exports[`<Toggletip /> snapshot should match snapshot with color 2`] = `
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -969,6 +976,7 @@ exports[`<Toggletip /> snapshot should match snapshot with id 2`] = `
       data-round="50"
       id="example-id"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1068,6 +1076,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetDistance 2`] = 
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1167,6 +1176,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding 2`] = 
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1266,6 +1276,7 @@ exports[`<Toggletip /> snapshot should match snapshot with offsetSkidding and of
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1365,6 +1376,7 @@ exports[`<Toggletip /> snapshot should match snapshot with strategy = fixed 2`] 
       data-placement="bottom"
       data-round="50"
       role="dialog"
+      tabindex="-1"
     >
       <p>
         Content
@@ -1465,6 +1477,7 @@ exports[`<Toggletip /> snapshot should match snapshot with style 2`] = `
       data-round="50"
       role="dialog"
       style="color: pink;"
+      tabindex="-1"
     >
       <p>
         Content

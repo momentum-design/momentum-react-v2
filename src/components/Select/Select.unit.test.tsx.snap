@@ -1722,6 +1722,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     data-placement="bottom"
                     data-round="50"
                     style="max-height: none;"
+                    tabindex="-1"
                   >
                     <ul
                       aria-labelledby="test-ID"
@@ -1833,6 +1834,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                         "maxHeight": "none",
                       }
                     }
+                    tabIndex={-1}
                   >
                     <ListBoxBase
                       aria-labelledby="test-ID"
@@ -4559,6 +4561,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     data-placement="bottom"
                     data-round="50"
                     style="max-height: none;"
+                    tabindex="-1"
                   >
                     <ul
                       aria-labelledby="test-ID"
@@ -4670,6 +4673,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                         "maxHeight": "none",
                       }
                     }
+                    tabIndex={-1}
                   >
                     <ListBoxBase
                       aria-labelledby="test-ID"
@@ -6579,6 +6583,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     data-placement="bottom"
                     data-round="50"
                     style="max-height: none;"
+                    tabindex="-1"
                   >
                     <ul
                       aria-labelledby="test-ID"
@@ -6690,6 +6695,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                         "maxHeight": "none",
                       }
                     }
+                    tabIndex={-1}
                   >
                     <ListBoxBase
                       aria-labelledby="test-ID"
@@ -7681,6 +7687,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                     data-placement="bottom"
                     data-round="50"
                     style="max-height: 50px;"
+                    tabindex="-1"
                   >
                     <ul
                       aria-labelledby="test-ID"
@@ -7792,6 +7799,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                         "maxHeight": "50px",
                       }
                     }
+                    tabIndex={-1}
                   >
                     <ListBoxBase
                       aria-labelledby="test-ID"
@@ -8783,6 +8791,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                     data-placement="bottom"
                     data-round="50"
                     style="max-height: none;"
+                    tabindex="-1"
                   >
                     <ul
                       aria-labelledby="test-ID"
@@ -8894,6 +8903,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                         "maxHeight": "none",
                       }
                     }
+                    tabIndex={-1}
                   >
                     <ListBoxBase
                       aria-labelledby="test-ID"
@@ -11108,6 +11118,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     data-placement="bottom"
                     data-round="50"
                     style="max-height: none;"
+                    tabindex="-1"
                   >
                     <ul
                       aria-labelledby="test-ID"
@@ -11241,6 +11252,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                         "maxHeight": "none",
                       }
                     }
+                    tabIndex={-1}
                   >
                     <ListBoxBase
                       aria-labelledby="test-ID"
