@@ -5,6 +5,7 @@ import ButtonSimple from '../ButtonSimple';
 import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 import { Props } from './ButtonCircle.types';
 import './ButtonCircle.style.scss';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const {
@@ -23,6 +24,8 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButton
   if (ghost && inverted) {
     console.warn('MRV2: Momentum does not support a ghost inverted ButtonCircle.');
   }
+
+  useCheckAriaLabel('ButtonCircle', props);
 
   const multipleChildren = Children.count(children) > 1;
 

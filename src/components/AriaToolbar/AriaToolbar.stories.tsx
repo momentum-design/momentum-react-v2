@@ -35,8 +35,8 @@ const Horizontal = (props: Partial<Props>) => {
   return (
     <>
       <AriaToolbar
-        ariaLabel="toolbar 1"
-        ariaControls="textInput"
+        aria-label="toolbar 1"
+        aria-controls="textInput"
         style={{ display: 'flex', columnGap: '0.5rem', marginBottom: '1rem' }}
         ariaToolbarItemsSize={3}
         {...props}
@@ -63,8 +63,8 @@ const Vertical = () => {
     <>
       <AriaToolbar
         orientation="vertical"
-        ariaControls="textInput"
-        ariaLabel="toolbar 1"
+        aria-controls="textInput"
+        aria-label="toolbar 1"
         style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
         ariaToolbarItemsSize={3}
       >
@@ -82,8 +82,8 @@ const Vertical = () => {
       </AriaToolbar>
       <AriaToolbar
         orientation="vertical"
-        ariaControls="textInput"
-        ariaLabel="toolbar 2"
+        aria-controls="textInput"
+        aria-label="toolbar 2"
         style={{
           display: 'flex',
           rowGap: '0.5rem',
@@ -122,8 +122,8 @@ const WithinPopover = () => {
       >
         <AriaToolbar
           orientation="vertical"
-          ariaControls="textInput"
-          ariaLabel="toolbar 1"
+          aria-controls="textInput"
+          aria-label="toolbar 1"
           style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
           ariaToolbarItemsSize={3}
         >
@@ -141,8 +141,8 @@ const WithinPopover = () => {
         </AriaToolbar>
         <AriaToolbar
           orientation="vertical"
-          ariaControls="textInput"
-          ariaLabel="toolbar 2"
+          aria-controls="textInput"
+          aria-label="toolbar 2"
           style={{
             display: 'flex',
             rowGap: '0.5rem',
@@ -175,8 +175,8 @@ const IncludesPopoverAndTooltips = () => {
     <>
       <AriaToolbar
         orientation="vertical"
-        ariaControls="textInput"
-        ariaLabel="toolbar 1"
+        aria-controls="textInput"
+        aria-label="toolbar 1"
         style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
         ariaToolbarItemsSize={3}
       >

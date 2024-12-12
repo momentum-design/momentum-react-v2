@@ -8,7 +8,6 @@ import { useSliderSideEffects } from './Slider.hooks';
 
 const Slider: FC<SliderProps> = (props: SliderProps) => {
   const {
-    ariaLabel,
     isDisabled = DEFAULTS.DISABLED,
     step = DEFAULTS.STEP,
     minValue = DEFAULTS.MIN,
@@ -35,7 +34,8 @@ const Slider: FC<SliderProps> = (props: SliderProps) => {
       value={value}
       min={minValue}
       max={maxValue}
-      aria-label={ariaLabel}
+      aria-label={props['aria-label']}
+      aria-labelledby={props['aria-labelledby']}
       onChange={handleChange}
       step={step}
       className={classnames(className, STYLE.wrapper)}

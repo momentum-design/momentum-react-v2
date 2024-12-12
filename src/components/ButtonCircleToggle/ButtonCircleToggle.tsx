@@ -9,6 +9,7 @@ import { Size as ButtonCircleSize } from '../ButtonCircle/ButtonCircle.types';
 import { Props } from './ButtonCircleToggle.types';
 import './ButtonCircleToggle.style.scss';
 import { chain } from '@react-aria/utils';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const {
@@ -22,6 +23,8 @@ const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTML
     onPress,
     ...otherProps
   } = props;
+
+  useCheckAriaLabel('ButtonCircleToggle', props);
 
   const internalRef = useRef();
   const ref = providedRef || internalRef;

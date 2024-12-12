@@ -5,6 +5,7 @@ import { DEFAULTS } from '../ButtonCircle/ButtonCircle.constants';
 import { Props } from './ButtonCircleLink.types';
 import './ButtonCircleLink.style.scss';
 import Link from '../Link';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
   const {
@@ -25,6 +26,8 @@ const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAn
     onPress,
     ...otherProps
   } = props;
+
+  useCheckAriaLabel('ButtonCircleLink', props);
 
   const buttonCircleRef = useRef();
   const ref = providedRef || buttonCircleRef;

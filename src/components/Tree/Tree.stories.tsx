@@ -55,6 +55,9 @@ export default {
       source: { type: 'code' },
     },
   },
+  args: {
+    'aria-label': 'Tree',
+  },
 };
 
 interface ExampleTreeNodeProps {

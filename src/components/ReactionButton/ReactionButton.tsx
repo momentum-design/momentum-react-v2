@@ -5,6 +5,7 @@ import ButtonCircle, { ButtonCircleSize } from '../ButtonCircle';
 import { DEFAULTS, STYLE } from './ReactionButton.constants';
 import { Props } from './ReactionButton.types';
 import './ReactionButton.style.scss';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 /**
  * Button within the ReactionPicker
@@ -12,6 +13,9 @@ import './ReactionButton.style.scss';
 const ReactionButton = forwardRef((props: Props, ref: RefObject<HTMLButtonElement>) => {
   const { className, children, id, reacted, style, ...otherProps } = props;
   delete otherProps.size;
+
+  useCheckAriaLabel('ReactionButton', props);
+
   return (
     <ButtonCircle
       ref={ref}

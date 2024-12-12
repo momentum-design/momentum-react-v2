@@ -1,6 +1,8 @@
+import { AriaLabelingProps } from '@react-types/shared';
 import type { CSSProperties } from 'react';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
-export interface SliderProps {
+interface Props extends AriaLabelingProps {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -51,6 +53,8 @@ export interface SliderProps {
    */
   ariaLabel?: string;
 }
+
+export type SliderProps = Props & AriaLabelRequired;
 
 export type SliderHookArgs = Pick<
   SliderProps,

@@ -3,6 +3,8 @@ import { CSSProperties } from 'react';
 import { IconScale } from '../Icon/Icon.types';
 
 import { ON_VIDEO_PATH } from './Reaction.constants';
+import { AriaLabelingProps } from '@react-types/shared';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
 type OnVideoPrefix = typeof ON_VIDEO_PATH;
 
@@ -46,7 +48,7 @@ export type OnVideoReactionName = OnVideoReactionWithoutSkinTone | OnVideoReacti
 // ALL
 export type ReactionName = OriginalReactionName | OnVideoReactionName;
 
-export interface Props {
+interface ReactionProps extends AriaLabelingProps {
   /**
    * Custom boolean to autoplay SVG or not.
    */
@@ -89,3 +91,5 @@ export interface Props {
    */
   onComplete?: AnimationEventCallback;
 }
+
+export type Props = ReactionProps & AriaLabelRequired;

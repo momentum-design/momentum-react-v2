@@ -2,7 +2,7 @@
 
 exports[`<AriaToolbar /> snapshot should match snapshot 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={0}
 >
   <div
@@ -16,7 +16,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot 1`] = `
 
 exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button group render 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={0}
   shouldRenderAsButtonGroup={true}
   style={
@@ -59,7 +59,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button
 
 exports[`<AriaToolbar /> snapshot should match snapshot with className 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={0}
   className="example-class"
 >
@@ -74,7 +74,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with className 1`] = `
 
 exports[`<AriaToolbar /> snapshot should match snapshot with data-test 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={0}
   data-test="data-test"
 >
@@ -90,7 +90,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with data-test 1`] = `
 
 exports[`<AriaToolbar /> snapshot should match snapshot with id 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={0}
   id="example-id"
 >
@@ -106,7 +106,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with id 1`] = `
 
 exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={0}
   style={
     Object {
@@ -130,7 +130,7 @@ exports[`<AriaToolbar /> snapshot should match snapshot with style 1`] = `
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
 >
   <div
@@ -258,7 +258,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 2`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
 >
   <div
@@ -386,7 +386,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 3`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
 >
   <div
@@ -514,7 +514,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizontal orientation 4`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
 >
   <div
@@ -642,7 +642,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - horizonta
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 1`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
   orientation="vertical"
 >
@@ -771,7 +771,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 2`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
   orientation="vertical"
 >
@@ -900,7 +900,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 3`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
   orientation="vertical"
 >
@@ -1029,7 +1029,7 @@ exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical 
 
 exports[`<AriaToolbar /> snapshot should set tab index appropriately - vertical orientation 4`] = `
 <AriaToolbar
-  ariaLabel="test"
+  aria-label="test"
   ariaToolbarItemsSize={3}
   orientation="vertical"
 >

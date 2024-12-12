@@ -21,7 +21,7 @@ const reactionChildren = [
     triggerComponent={
       <AriaToolbarItem itemIndex={0}>
         <ReactionButton key="1">
-          <Reaction name="celebrate" autoPlay />
+          <Reaction aria-label="Celebrate reaction" name="celebrate" autoPlay />
         </ReactionButton>
       </AriaToolbarItem>
     }
@@ -31,34 +31,34 @@ const reactionChildren = [
     </Text>
   </Tooltip>,
   <AriaToolbarItem itemIndex={1} key={'item-2'}>
-    <ReactionButton key="2">
-      <Reaction name="heart" autoPlay />
+    <ReactionButton aria-label="Send reaction" key="2">
+      <Reaction aria-label="Celebrate reaction" name="heart" autoPlay />
     </ReactionButton>
   </AriaToolbarItem>,
 
   <AriaToolbarItem itemIndex={2} key={'item-3'}>
-    <ReactionButton key="3">
-      <Reaction name="thumb_up_yellow" autoPlay />
+    <ReactionButton aria-label="Send reaction" key="3">
+      <Reaction aria-label="Celebrate reaction" name="thumb_up_yellow" autoPlay />
     </ReactionButton>
   </AriaToolbarItem>,
   <AriaToolbarItem itemIndex={3} key={'item-4'}>
-    <ReactionButton reacted key="4">
-      <Reaction name="smile" autoPlay />
+    <ReactionButton aria-label="Send reaction" reacted key="4">
+      <Reaction aria-label="Celebrate reaction" name="smile" autoPlay />
     </ReactionButton>
   </AriaToolbarItem>,
   <AriaToolbarItem itemIndex={4} key={'item-5'}>
-    <ReactionButton key="5">
-      <Reaction name="haha" autoPlay />
+    <ReactionButton aria-label="Send reaction" key="5">
+      <Reaction aria-label="Celebrate reaction" name="haha" autoPlay />
     </ReactionButton>
   </AriaToolbarItem>,
   <AriaToolbarItem itemIndex={5} key={'item-6'}>
-    <ReactionButton key="6">
-      <Reaction name="wow" autoPlay />
+    <ReactionButton aria-label="Send reaction" key="6">
+      <Reaction aria-label="Celebrate reaction" name="wow" autoPlay />
     </ReactionButton>
   </AriaToolbarItem>,
   <AriaToolbarItem itemIndex={6} key={'item-7'}>
-    <ReactionButton key="7">
-      <Reaction name="sad" autoPlay />
+    <ReactionButton aria-label="Send reaction" key="7">
+      <Reaction aria-label="Celebrate reaction" name="sad" autoPlay />
     </ReactionButton>
   </AriaToolbarItem>,
 ];
@@ -77,6 +77,7 @@ export default {
     children: reactionChildren,
     // 7 because there are 7 reactions at the top.
     ariaToolbarItemsSize: 7,
+    'aria-label': 'Choose a reaction',
   },
 };
 

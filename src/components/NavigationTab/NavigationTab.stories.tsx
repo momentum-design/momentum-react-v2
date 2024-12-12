@@ -15,6 +15,9 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
+  args: {
+    icon: 'chat',
+  },
 };
 
 const Example = Template<NavigationTabProps>(NavigationTab).bind({});
@@ -39,4 +42,4 @@ Active.parameters = {
   variants: [{ active: undefined }, { active: true }, { active: false }],
 };
 
-export { Example, Sizes };
+export { Example, Sizes, Active };

@@ -6,10 +6,14 @@ import { DEFAULTS, STYLE } from './AddReactionButton.constants';
 import { Props } from './AddReactionButton.types';
 import './AddReactionButton.style.scss';
 import Icon, { IconScale } from '../Icon';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 const AddReactionButton = forwardRef((props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
   const { className, id, style, ...otherProps } = props;
   delete otherProps.size;
+
+  useCheckAriaLabel('AddReactionButton', props);
+
   return (
     <ButtonCircle
       ref={ref}

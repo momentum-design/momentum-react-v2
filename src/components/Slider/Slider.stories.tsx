@@ -16,6 +16,9 @@ export default {
     },
   },
   actions: { argTypesRegex: '^on.*' },
+  args: {
+    'aria-label': 'Slider',
+  },
 };
 
 // NOTE: Primary story. This renders a single component with all external props.

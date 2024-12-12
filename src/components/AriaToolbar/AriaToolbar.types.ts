@@ -1,8 +1,10 @@
 import { CSSProperties, MutableRefObject, ReactElement } from 'react';
 import { ButtonGroupProps } from '../ButtonGroup';
 import { SupportedComponents } from '../ButtonGroup/ButtonGroup.types';
+import { AriaLabelingProps } from '@react-types/shared';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
-export interface Props {
+interface AriaToolbarProps extends AriaLabelingProps {
   /**
    * Child components of this AriaToolbar.
    */
@@ -35,16 +37,6 @@ export interface Props {
   orientation?: 'horizontal' | 'vertical';
 
   /**
-   * The HTML ID of the element that this toolbar relates to
-   */
-  ariaControls?: string;
-
-  /**
-   * aria-label attribute for the toolbar
-   */
-  ariaLabel: string;
-
-  /**
    * This handler is called when tab is pressed by one of the elements
    * within the toolbar.
    */
@@ -66,6 +58,8 @@ export interface Props {
    */
   ariaToolbarItemsSize: number;
 }
+
+export type Props = AriaToolbarProps & AriaLabelRequired;
 
 export interface AriaToolbarContextValue {
   currentFocus?: number;
