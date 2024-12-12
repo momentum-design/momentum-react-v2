@@ -20,6 +20,7 @@ import SearchInput from '../SearchInput';
 import List from '../List';
 import AriaToolbarItem from '../AriaToolbarItem';
 import ListItemBase from '../ListItemBase';
+import Select from '../Select';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -302,6 +303,84 @@ NestedPopover.args = {
     <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
       Hover or click me!
     </ButtonSimple>
+  ),
+};
+
+const MultipleSelectPopoversInsidePopoverInteractiveContentManaged = Template<PopoverProps>(
+  Popover
+).bind({});
+
+MultipleSelectPopoversInsidePopoverInteractiveContentManaged.argTypes = { ...argTypes };
+
+MultipleSelectPopoversInsidePopoverInteractiveContentManaged.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
+  ),
+  children: (
+    <>
+      <Select popoverSingleOpenGroupId="select1" aria-label="select1">
+        <Item>
+          <Text tagName="p">option1</Text>
+        </Item>
+        <Item>
+          <Text tagName="p">option2</Text>
+        </Item>
+      </Select>
+      <Select popoverSingleOpenGroupId="select1" aria-label="select2">
+        <Item>
+          <Text tagName="p">option3</Text>
+        </Item>
+        <Item>
+          <Text tagName="p">option4</Text>
+        </Item>
+      </Select>
+    </>
+  ),
+};
+
+const MultipleSelectPopoversInsidePopoverInteractiveContentUnmanaged = Template<PopoverProps>(
+  Popover
+).bind({});
+
+MultipleSelectPopoversInsidePopoverInteractiveContentUnmanaged.argTypes = { ...argTypes };
+
+MultipleSelectPopoversInsidePopoverInteractiveContentUnmanaged.args = {
+  trigger: 'click',
+  placement: PLACEMENTS.BOTTOM,
+  showArrow: true,
+  interactive: true,
+  variant: 'small',
+  color: COLORS.TERTIARY,
+  delay: [0, 0],
+  triggerComponent: (
+    <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
+  ),
+  children: (
+    <>
+      <Select aria-label="select1">
+        <Item>
+          <Text tagName="p">option1</Text>
+        </Item>
+        <Item>
+          <Text tagName="p">option2</Text>
+        </Item>
+      </Select>
+      <Select aria-label="select2">
+        <Item>
+          <Text tagName="p">option3</Text>
+        </Item>
+        <Item>
+          <Text tagName="p">option4</Text>
+        </Item>
+      </Select>
+    </>
   ),
 };
 
@@ -591,6 +670,8 @@ export {
   WithCloseButton,
   Offset,
   MultiplePopovers,
+  MultipleSelectPopoversInsidePopoverInteractiveContentManaged,
+  MultipleSelectPopoversInsidePopoverInteractiveContentUnmanaged,
   NestedPopover,
   AvatarExample,
   Common,
