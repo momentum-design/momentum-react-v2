@@ -11,7 +11,7 @@ describe('<ReactionPicker />', () => {
       expect.assertions(1);
 
       const container = mount(
-        <ReactionPicker ariaToolbarItemsSize={0} ariaLabel="test-aria-label" />
+        <ReactionPicker ariaToolbarItemsSize={0} aria-label="test-aria-label" />
       );
 
       expect(container).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe('<ReactionPicker />', () => {
         <ReactionPicker
           className={className}
           ariaToolbarItemsSize={0}
-          ariaLabel="test-aria-label"
+          aria-label="test-aria-label"
         />
       );
 
@@ -39,7 +39,7 @@ describe('<ReactionPicker />', () => {
       const id = 'example-id';
 
       const container = mount(
-        <ReactionPicker id={id} ariaToolbarItemsSize={0} ariaLabel="test-aria-label" />
+        <ReactionPicker id={id} ariaToolbarItemsSize={0} aria-label="test-aria-label" />
       );
 
       expect(container).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('<ReactionPicker />', () => {
       const style = { color: 'pink' };
 
       const container = mount(
-        <ReactionPicker style={style} ariaToolbarItemsSize={0} ariaLabel="test-aria-label" />
+        <ReactionPicker style={style} ariaToolbarItemsSize={0} aria-label="test-aria-label" />
       );
 
       expect(container).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe('<ReactionPicker />', () => {
       );
 
       const container = mount(
-        <ReactionPicker ariaToolbarItemsSize={1} ariaLabel="test-aria-label">
+        <ReactionPicker ariaToolbarItemsSize={1} aria-label="test-aria-label">
           {children}
         </ReactionPicker>
       );
@@ -80,7 +80,9 @@ describe('<ReactionPicker />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<ReactionPicker ariaToolbarItemsSize={0} ariaLabel="test-aria-label" />)
+      const element = mount(
+        <ReactionPicker ariaToolbarItemsSize={0} aria-label="test-aria-label" />
+      )
         .find(ReactionPicker)
         .getDOMNode();
 
@@ -96,7 +98,7 @@ describe('<ReactionPicker />', () => {
         <ReactionPicker
           className={className}
           ariaToolbarItemsSize={0}
-          ariaLabel="test-aria-label"
+          aria-label="test-aria-label"
         />
       )
         .find(ReactionPicker)
@@ -111,7 +113,7 @@ describe('<ReactionPicker />', () => {
       const id = 'example-id';
 
       const element = mount(
-        <ReactionPicker id={id} ariaToolbarItemsSize={0} ariaLabel="test-aria-label" />
+        <ReactionPicker id={id} ariaToolbarItemsSize={0} aria-label="test-aria-label" />
       )
         .find(ReactionPicker)
         .getDOMNode();
@@ -126,7 +128,7 @@ describe('<ReactionPicker />', () => {
       const styleString = 'color: pink;';
 
       const element = mount(
-        <ReactionPicker style={style} ariaToolbarItemsSize={0} ariaLabel="test-aria-label" />
+        <ReactionPicker style={style} ariaToolbarItemsSize={0} aria-label="test-aria-label" />
       )
         .find(ReactionPicker)
         .getDOMNode();

@@ -9,7 +9,7 @@ import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json'
 import ButtonSimple from '../ButtonSimple';
 
 describe('<ReactionBadge name="haha" />', () => {
-  const reactionProp = <Reaction name="haha" />;
+  const reactionProp = <Reaction aria-label="Laughing reaction" name="haha" />;
   describe('snapshot', () => {
     beforeEach(() => {
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
@@ -150,7 +150,9 @@ describe('<ReactionBadge name="haha" />', () => {
       const name = 'haha';
       const reactionName = 'haha';
 
-      const wrapper = await mountAndWait(<ReactionBadge reaction={<Reaction name={name} />} />);
+      const wrapper = await mountAndWait(
+        <ReactionBadge reaction={<Reaction aria-label="Laughing reaction" name={name} />} />
+      );
       const child = wrapper.find(Reaction);
 
       expect(child.props().name).toBe(reactionName);

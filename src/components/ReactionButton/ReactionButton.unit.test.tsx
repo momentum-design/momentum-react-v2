@@ -13,7 +13,7 @@ describe('<ReactionButton />', () => {
 
   beforeEach(() => {
     jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-    children = <Reaction name={REACTIONS.haha} />;
+    children = <Reaction aria-label="Laughing reaction" name={REACTIONS.haha} />;
   });
 
   describe('snapshot', () => {

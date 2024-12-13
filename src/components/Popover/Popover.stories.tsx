@@ -142,7 +142,7 @@ const PopoverWithFirstFocus = (props) => {
 
   return (
     <Popover firstFocusElement={ref} {...props}>
-      <AriaToolbar ariaToolbarItemsSize={4} ariaLabel="toolbar">
+      <AriaToolbar ariaToolbarItemsSize={4} aria-label="toolbar">
         <AriaToolbarItem itemIndex={0}>
           <ButtonPill key={1}>1</ButtonPill>
         </AriaToolbarItem>
