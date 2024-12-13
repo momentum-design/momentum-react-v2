@@ -12,6 +12,8 @@ import argTypes from './Tooltip.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
 import Flex from '../Flex';
 import Popover from '../Popover';
+import ButtonCircle from '../ButtonCircle';
+import Icon from '../Icon';
 
 export default {
   title: 'Momentum UI/Tooltip',
@@ -25,6 +27,20 @@ export default {
 };
 
 const Example = Template<TooltipProps>(Tooltip).bind({});
+
+Example.argTypes = { ...argTypes };
+
+Example.args = {
+  placement: PLACEMENTS.AUTO,
+  variant: 'small',
+  color: COLORS.PRIMARY,
+  delay: [0, 0],
+  children: <p>Tooltip</p>,
+  type: 'description',
+  triggerComponent: (
+    <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Hover me!</ButtonSimple>
+  ),
+};
 
 Example.argTypes = { ...argTypes };
 
@@ -63,9 +79,7 @@ Common.parameters = {
       children: <p>Label tooltip, without label overwriteTERTIARY color, variant medium</p>,
       type: 'none',
       triggerComponent: (
-        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>
-          Hover me for label!
-        </ButtonSimple>
+        <ButtonSimple style={{ margin: '10rem auto', display: 'flex' }}>Hover me</ButtonSimple>
       ),
       placement: PLACEMENTS.RIGHT,
       variant: 'medium',
@@ -95,6 +109,23 @@ Common.parameters = {
       delay: [500],
       variant: 'medium',
       color: COLORS.SECONDARY,
+    },
+    {
+      children: (
+        <>
+          <p>Label tooltip triggered by ButtonCircle.</p>
+          <small>
+            It does not console any MRV2 type warning because the type of the tooltip is label, so
+            ButtonCircle receives an accessible name
+          </small>
+        </>
+      ),
+      type: 'label',
+      triggerComponent: (
+        <ButtonCircle>
+          <Icon name="chat" scale={24} />
+        </ButtonCircle>
+      ),
     },
   ],
 };

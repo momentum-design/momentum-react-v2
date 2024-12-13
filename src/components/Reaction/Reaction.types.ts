@@ -48,7 +48,7 @@ export type OnVideoReactionName = OnVideoReactionWithoutSkinTone | OnVideoReacti
 // ALL
 export type ReactionName = OriginalReactionName | OnVideoReactionName;
 
-interface ReactionProps extends AriaLabelingProps {
+export interface Props {
   /**
    * Custom boolean to autoplay SVG or not.
    */
@@ -77,6 +77,11 @@ interface ReactionProps extends AriaLabelingProps {
   name: ReactionName;
 
   /**
+   * Translated label of the reaction
+   */
+  'aria-label': string;
+
+  /**
    * Size index of this Reaction.
    */
   size?: IconScale;
@@ -91,5 +96,3 @@ interface ReactionProps extends AriaLabelingProps {
    */
   onComplete?: AnimationEventCallback;
 }
-
-export type Props = ReactionProps & AriaLabelRequired;

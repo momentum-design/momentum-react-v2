@@ -24,6 +24,9 @@ const Reaction: FC<Props> = (props: Props) => {
         autoplay: autoPlay,
         animationData: animationData,
         name,
+        rendererSettings: {
+          title: props['aria-label'], // adds aria-label to the svg
+        },
       });
       if (onComplete) {
         animation.addEventListener('complete', onComplete);
@@ -37,7 +40,7 @@ const Reaction: FC<Props> = (props: Props) => {
         animation.destroy();
       }
     };
-  }, [svgContainer, animationData, autoPlay, loop]);
+  }, [svgContainer, animationData, autoPlay, loop, name, onComplete, props]);
 
   if (error) {
     return (
