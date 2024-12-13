@@ -487,12 +487,6 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
       data-height={32}
       onClick={[Function]}
     >
-      <label
-        htmlFor="test-ID"
-        id="test-ID"
-      >
-        search
-      </label>
       <div>
         <Icon
           className="md-search-input-search"
@@ -525,7 +519,6 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
       >
         <input
           aria-label="search"
-          aria-labelledby="test-ID"
           disabled={false}
           id="test-ID"
           onBlur={[Function]}

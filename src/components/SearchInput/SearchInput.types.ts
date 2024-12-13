@@ -82,11 +82,6 @@ export interface Props extends AriaSearchFieldProps {
   clearButtonAriaLabel: string;
 
   /**
-   * Initial text for accessible label
-   */
-  initialLabel?: string;
-
-  /**
    * Height of the search field
    * @default 32
    */
@@ -119,4 +114,10 @@ export interface Props extends AriaSearchFieldProps {
    * Props to be passed to the search icon
    */
   searchIconProps?: Partial<IconProps>;
+
+  /**
+   * Override label prop from react-aria since we won't render a label directly.
+   * It has to be string to be passed into aria-label instead.
+   */
+  label?: string;
 }
