@@ -286,6 +286,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -479,6 +480,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
@@ -2494,6 +2496,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -2687,6 +2690,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
@@ -4702,6 +4706,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-arrow-orientation="vertical"
                   data-color="secondary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -4895,6 +4900,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                   data-arrow-orientation="vertical"
                   data-color="secondary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
@@ -6911,6 +6917,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -7106,6 +7113,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
@@ -9122,6 +9130,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="top"
                   data-round="75"
@@ -9315,6 +9324,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="top"
                   data-round={75}
@@ -11330,6 +11340,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -11554,6 +11565,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
@@ -13613,6 +13625,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -13812,6 +13825,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
@@ -15832,6 +15846,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="50"
@@ -16025,6 +16040,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={50}
@@ -18044,6 +18060,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation="3"
+                  data-exclude-focus="true"
                   data-padded="true"
                   data-placement="bottom-start"
                   data-round="75"
@@ -18237,6 +18254,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                   data-arrow-orientation="vertical"
                   data-color="primary"
                   data-elevation={3}
+                  data-exclude-focus={true}
                   data-padded={true}
                   data-placement="bottom-start"
                   data-round={75}
