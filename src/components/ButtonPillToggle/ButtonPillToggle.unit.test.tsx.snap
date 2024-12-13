@@ -17,6 +17,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -40,6 +41,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot 1`] = `
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -92,6 +94,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -116,6 +119,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -168,6 +172,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -192,6 +197,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ariaStateKey b
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -242,6 +248,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={false}
       data-grown={false}
       data-inverted={false}
@@ -265,6 +272,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being fa
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={false}
             data-grown={false}
             data-inverted={false}
@@ -315,6 +323,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -338,6 +347,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with ghost being tr
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -389,6 +399,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -413,6 +424,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -464,6 +476,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -488,6 +501,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with isSelected bei
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -539,6 +553,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -562,6 +577,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}
@@ -613,6 +629,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
       className="md-button-pill-wrapper md-button-pill-toggle-wrapper"
       data-color="primary"
       data-disabled={false}
+      data-disabled-outline={false}
       data-ghost={true}
       data-grown={false}
       data-inverted={false}
@@ -636,6 +653,7 @@ exports[`<ButtonPillToggle /> snapshot should match snapshot with outline being 
             className="md-button-pill-wrapper md-button-pill-toggle-wrapper md-button-simple-wrapper"
             data-color="primary"
             data-disabled={false}
+            data-disabled-outline={false}
             data-ghost={true}
             data-grown={false}
             data-inverted={false}

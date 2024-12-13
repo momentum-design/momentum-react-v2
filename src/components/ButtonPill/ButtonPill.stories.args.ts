@@ -62,6 +62,20 @@ export default {
       },
     },
   },
+  disabledOutline: {
+    description:
+      'Whether to render the `<ButtonPill />` with an outline even when disabled/shallowDisabled. Respects existing outline prop and will not display outline if outline is false.',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+      },
+    },
+  },
   ghost: {
     description: 'Whether this component has a transparent background.',
     options: [true, false],
