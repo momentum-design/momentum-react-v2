@@ -7,6 +7,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -23,6 +24,7 @@ exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -64,6 +66,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={true}
     data-grown={false}
     data-inverted={false}
@@ -80,6 +83,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={true}
           data-grown={false}
           data-inverted={false}
@@ -122,6 +126,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={true}
+    data-disabled-outline={false}
     data-ghost={true}
     data-grown={false}
     data-inverted={false}
@@ -142,6 +147,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={true}
+          data-disabled-outline={false}
           data-ghost={true}
           data-grown={false}
           data-inverted={false}
@@ -184,6 +190,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -200,6 +207,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -242,6 +250,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined an
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={true}
@@ -258,6 +267,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when color is outlined an
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={true}
@@ -299,6 +309,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={true}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -319,10 +330,136 @@ exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={true}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
           data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <span>
+            Example Text
+          </span>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</ButtonPill>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot when disabledOutline 1`] = `
+<ButtonPill
+  disabledOutline={true}
+>
+  <ButtonSimple
+    aria-disabled={false}
+    className="md-button-pill-wrapper"
+    data-color="primary"
+    data-disabled={false}
+    data-disabled-outline={true}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={false}
+    data-shallow-disabled={false}
+    data-size={40}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-button-pill-wrapper md-button-simple-wrapper"
+          data-color="primary"
+          data-disabled={false}
+          data-disabled-outline={true}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={false}
+          data-shallow-disabled={false}
+          data-size={40}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <span>
+            Example Text
+          </span>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</ButtonPill>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot when disabledOutline and disabled and outline 1`] = `
+<ButtonPill
+  disabled={true}
+  disabledOutline={true}
+  outline={true}
+>
+  <ButtonSimple
+    aria-disabled={false}
+    className="md-button-pill-wrapper"
+    data-color="primary"
+    data-disabled={true}
+    data-disabled-outline={true}
+    data-ghost={false}
+    data-grown={false}
+    data-inverted={false}
+    data-outline={true}
+    data-shallow-disabled={false}
+    data-size={40}
+    isDisabled={true}
+  >
+    <FocusRing
+      disabled={true}
+    >
+      <FocusRing
+        disabled={true}
+        focusClass="md-focus-ring-wrapper-disabled"
+        focusRingClass="md-focus-ring-wrapper-disabled"
+      >
+        <button
+          className="md-button-pill-wrapper md-button-simple-wrapper"
+          data-color="primary"
+          data-disabled={true}
+          data-disabled-outline={true}
+          data-ghost={false}
+          data-grown={false}
+          data-inverted={false}
+          data-outline={true}
           data-shallow-disabled={false}
           data-size={40}
           disabled={true}
@@ -361,6 +498,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`]
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -378,6 +516,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`]
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -419,6 +558,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] =
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={true}
     data-inverted={false}
@@ -435,6 +575,7 @@ exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] =
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={true}
           data-inverted={false}
@@ -476,6 +617,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
     className="md-button-pill-wrapper example-class"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -492,6 +634,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
           className="md-button-pill-wrapper example-class md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -529,6 +672,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
     className="md-button-pill-wrapper"
     data-color="message"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -545,6 +689,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="message"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -586,6 +731,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -603,6 +749,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -641,6 +788,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -657,6 +805,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -702,6 +851,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -723,6 +873,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}
@@ -765,6 +916,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
     className="md-button-pill-wrapper"
     data-color="primary"
     data-disabled={false}
+    data-disabled-outline={false}
     data-ghost={false}
     data-grown={false}
     data-inverted={false}
@@ -782,6 +934,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
           className="md-button-pill-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
+          data-disabled-outline={false}
           data-ghost={false}
           data-grown={false}
           data-inverted={false}

@@ -88,6 +88,32 @@ describe('<ButtonPill />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot when disabledOutline', () => {
+      expect.assertions(1);
+
+      const disabledOutline = !DEFAULTS.DISABLED_OUTLINE;
+
+      container = mount(<ButtonPill disabledOutline={disabledOutline}>Example Text</ButtonPill>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when disabledOutline and disabled and outline', () => {
+      expect.assertions(1);
+
+      const disabledOutline = !DEFAULTS.DISABLED_OUTLINE;
+      const outline = !DEFAULTS.OUTLINE;
+      const disabled = !DEFAULTS.DISABLED;
+
+      container = mount(
+        <ButtonPill outline={outline} disabled={disabled} disabledOutline={disabledOutline}>
+          Example Text
+        </ButtonPill>
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot when a ghost', () => {
       expect.assertions(1);
 
@@ -230,6 +256,18 @@ describe('<ButtonPill />', () => {
 
       expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
       expect(element.getAttribute('aria-disabled')).toBe('true');
+    });
+
+    it('should pass disabled outline prop', () => {
+      expect.assertions(1);
+
+      const disabledOutline = !DEFAULTS.DISABLED_OUTLINE;
+
+      const element = mount(<ButtonPill disabledOutline={disabledOutline} />)
+        .find(ButtonPill)
+        .getDOMNode();
+
+      expect(element.getAttribute('data-disabled-outline')).toBe(`${disabledOutline}`);
     });
 
     it('should pass ghost prop', () => {

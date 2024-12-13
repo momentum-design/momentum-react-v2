@@ -211,7 +211,15 @@ AudioVideoControls.parameters = {
     },
     {
       children: [
-        <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '6.8rem' }}>
+        <ButtonPill
+          disabled
+          outline
+          disabledOutline
+          ghost
+          key="0"
+          size={40}
+          style={{ minWidth: '6.8rem' }}
+        >
           <Icon
             key="0"
             name="microphone-muted"
@@ -247,7 +255,15 @@ AudioVideoControls.parameters = {
     },
     {
       children: [
-        <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
+        <ButtonPill
+          outline
+          disabled
+          disabledOutline
+          ghost
+          key="0"
+          size={40}
+          style={{ minWidth: '8.3rem' }}
+        >
           <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
           <div key="1">Start Video</div>
         </ButtonPill>,
@@ -261,7 +277,7 @@ AudioVideoControls.parameters = {
     {
       children: [
         <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
-          <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
+          <Icon key="0" name="camera-on" autoScale={125} />
           <div key="1">Long Label Possibly German</div>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>
@@ -275,7 +291,7 @@ AudioVideoControls.parameters = {
       children: [
         <div key="0" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }} data-compressed>
           <ButtonPill outline ghost size={40} style={{ minWidth: '8.3rem' }}>
-            <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
+            <Icon key="0" name="camera-on" autoScale={125} />
             <div key="1">Long Label Possibly German</div>
           </ButtonPill>
         </div>,

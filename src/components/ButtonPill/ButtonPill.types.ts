@@ -18,6 +18,11 @@ export interface Props extends ButtonSimpleProps {
   disabled?: boolean;
 
   /**
+   * Whether or not this ButtonPill has an outline even when disabled. Respects existing outline prop and will not display outline if outline is false.
+   */
+  disabledOutline?: boolean;
+
+  /**
    * Whether or not this ButtonPill should look disabled, but allowing actions like onPress to be passed.
    */
   shallowDisabled?: boolean;
