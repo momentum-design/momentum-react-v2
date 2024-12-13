@@ -33,6 +33,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     searching,
     clearButtonAriaLabel,
     label,
+    'aria-label': ariaLabel,
     isDisabled,
     height = DEFAULTS.HEIGHT,
     ariaControls,
@@ -41,6 +42,14 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     onKeyDown: providedKeydown,
     searchIconProps,
   } = props;
+
+  // due to how the prop types are defined, both label and aria-label are valid inputs
+  // as this component does not actually have a label component, we should not pass the label prop to the useSearchField hook
+  const cleanedProps = {
+    ...props,
+    label: undefined,
+    'aria-label': ariaLabel || label,
+  };
 
   if (isCombobox && isComboboxExpanded === undefined) {
     console.warn(WARNINGS.ISCOMBOBOX_1_ISEXPANDED_0);
@@ -52,10 +61,10 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     console.warn(WARNINGS.ISCOMBOBOX_0_ISEXPANDED_1);
   }
 
-  const state = useSearchFieldState(props);
+  const state = useSearchFieldState(cleanedProps);
 
   const inputRef = useProvidedRef<HTMLInputElement>(providedRef, null);
-  const { focusProps, isFocused } = useFocusState(props);
+  const { focusProps, isFocused } = useFocusState(cleanedProps);
 
   const containerRef = useRef(null);
 
@@ -63,7 +72,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
     inputProps: ariaInputProps,
     clearButtonProps,
     labelProps,
-  } = useSearchField(props, state, inputRef);
+  } = useSearchField(cleanedProps, state, inputRef);
 
   const { onKeyDown, ...otherAriaInputProps } = ariaInputProps;
 
@@ -112,11 +121,6 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
       data-height={height}
       ref={containerRef}
     >
-      {label && (
-        <label htmlFor={labelProps.htmlFor} {...labelProps}>
-          {label}
-        </label>
-      )}
       <div>
         {searching ? (
           <LoadingSpinner scale={ICON_HEIGHT_MAPPING[height]} className={STYLE.searching} />
