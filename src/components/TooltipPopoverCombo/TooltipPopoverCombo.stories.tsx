@@ -13,6 +13,8 @@ import Icon from '../Icon';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { PopoverInstance } from '../Popover/Popover.types';
+import ButtonPill from '../ButtonPill';
+import Flex from '../Flex';
 
 export default {
   title: 'Momentum UI/TooltipPopoverCombo',
@@ -62,11 +64,60 @@ const Example: Story<TooltipPopoverComboProps> = () => {
     <TooltipPopoverCombo
       popoverContent={popoverContent}
       triggerComponent={triggerComponent}
-      tooltipContent={<Text>Press to show options</Text>}
+      tooltipContent={<Text tagName="p">Press to show options</Text>}
       otherTooltipProps={{ placement: 'top' }}
       otherPopoverProps={{ placement: 'top', setInstance: setPopoverInstance }}
     />
   );
 };
 
-export { Example };
+const AsDescription: Story<TooltipPopoverComboProps> = () => {
+  const triggerComponent = (
+    <ButtonPill
+      style={{
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '10rem auto',
+        display: 'flex',
+      }}
+      id="storybook-id-example"
+    >
+      <Flex xgap="0.5rem" alignItems="center">
+        <Icon name="plus" />
+        <Text tagName="p">Create</Text>
+      </Flex>
+    </ButtonPill>
+  );
+
+  const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
+
+  const onItemPress = (key: string) => {
+    switch (key) {
+      default:
+        popoverInstance?.hide();
+    }
+  };
+
+  const popoverContent = (
+    <Menu onAction={onItemPress} style={{ width: '15rem' }}>
+      <Item key="option-1">
+        <Flex xgap="0.5rem" alignItems="center">
+          <Icon name="chat" scale={24} />
+          <Text tagName="p">Space</Text>
+        </Flex>
+      </Item>
+    </Menu>
+  );
+
+  return (
+    <TooltipPopoverCombo
+      popoverContent={popoverContent}
+      triggerComponent={triggerComponent}
+      tooltipContent={<Text tagName="p">Press to see options</Text>}
+      otherTooltipProps={{ placement: 'top', type: 'description' }}
+      otherPopoverProps={{ placement: 'top', setInstance: setPopoverInstance }}
+    />
+  );
+};
+
+export { Example, AsDescription };

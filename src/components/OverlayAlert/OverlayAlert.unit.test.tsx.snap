@@ -477,6 +477,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with details 1`] = `
               <Text
                 className="md-overlay-alert-details"
                 id="test-ID"
+                tagName="p"
                 type="body-primary"
               >
                 <Text
@@ -1218,6 +1219,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with title 1`] = `
               <Text
                 className="md-overlay-alert-title"
                 id="test-ID"
+                tagName="h2"
                 type="title"
               >
                 <Text

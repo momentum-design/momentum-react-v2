@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
+exports[`<TooltipPopoverCombo /> snapshot should match snaphshot with otherTooltipsProps.type = "description" 1`] = `
 <TooltipPopoverCombo
+  otherTooltipProps={
+    Object {
+      "placement": "bottom",
+      "type": "description",
+    }
+  }
   popoverContent={
     <button>
       Example popover content button
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -19,25 +27,30 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
   }
 >
   <Popover
-    aria-labelledby="1"
+    aria-labelledby="test-ID"
     interactive={true}
     onHide={[Function]}
     onShow={[Function]}
     trigger="click"
     triggerComponent={
       <Tooltip
-        labelOrDescriptionId="1"
+        labelOrDescriptionId="test-ID"
         onHide={[Function]}
         onShow={[Function]}
+        placement="bottom"
         setInstance={[Function]}
         triggerComponent={
-          <button>
+          <button
+            id="test-ID"
+          >
             Example button
           </button>
         }
-        type="label"
+        type="description"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -226,7 +239,509 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
         >
           <Tooltip
             aria-haspopup="dialog"
-            labelOrDescriptionId="1"
+            labelOrDescriptionId="test-ID"
+            onHide={[Function]}
+            onShow={[Function]}
+            placement="bottom"
+            setInstance={[Function]}
+            triggerComponent={
+              <button
+                id="test-ID"
+              >
+                Example button
+              </button>
+            }
+            type="description"
+          >
+            <Popover
+              addBackdrop={false}
+              aria-hidden={true}
+              boundary="scrollParent"
+              color="primary"
+              interactive={false}
+              offsetDistance={5}
+              offsetSkidding={0}
+              onHide={[Function]}
+              onShow={[Function]}
+              placement="bottom"
+              role="tooltip"
+              setInstance={[Function]}
+              showArrow={true}
+              strategy="absolute"
+              trigger="mouseenter focus"
+              triggerComponent={
+                <button
+                  aria-describedby="test-ID"
+                  aria-haspopup="dialog"
+                  id="test-ID"
+                >
+                  Example button
+                </button>
+              }
+              variant="small"
+            >
+              <LazyTippy
+                animation={false}
+                appendTo="parent"
+                hideOnClick={true}
+                interactive={false}
+                offset={
+                  Array [
+                    0,
+                    17,
+                  ]
+                }
+                onHidden={[Function]}
+                onHide={[Function]}
+                onShow={[Function]}
+                placement="bottom"
+                plugins={
+                  Array [
+                    Object {
+                      "defaultValue": true,
+                      "fn": [Function],
+                      "name": "hideOnEsc",
+                    },
+                  ]
+                }
+                popperOptions={
+                  Object {
+                    "modifiers": Array [
+                      Object {
+                        "enabled": true,
+                        "name": "arrow",
+                        "options": Object {
+                          "element": "#arrow1",
+                          "padding": 5,
+                        },
+                      },
+                      Object {
+                        "name": "preventOverflow",
+                        "options": Object {
+                          "altAxis": true,
+                          "boundariesElement": "scrollParent",
+                          "padding": 8,
+                        },
+                      },
+                    ],
+                    "strategy": "absolute",
+                  }
+                }
+                render={[Function]}
+                setInstance={[Function]}
+                trigger="mouseenter focus"
+              >
+                <ForwardRef(TippyWrapper)
+                  animation={false}
+                  appendTo="parent"
+                  hideOnClick={true}
+                  interactive={false}
+                  offset={
+                    Array [
+                      0,
+                      17,
+                    ]
+                  }
+                  onHidden={[Function]}
+                  onHide={[Function]}
+                  onShow={[Function]}
+                  placement="bottom"
+                  plugins={
+                    Array [
+                      Object {
+                        "fn": [Function],
+                      },
+                      Object {
+                        "fn": [Function],
+                      },
+                      Object {
+                        "fn": [Function],
+                      },
+                      Object {
+                        "defaultValue": true,
+                        "fn": [Function],
+                        "name": "hideOnEsc",
+                      },
+                    ]
+                  }
+                  popperOptions={
+                    Object {
+                      "modifiers": Array [
+                        Object {
+                          "enabled": true,
+                          "name": "arrow",
+                          "options": Object {
+                            "element": "#arrow1",
+                            "padding": 5,
+                          },
+                        },
+                        Object {
+                          "name": "preventOverflow",
+                          "options": Object {
+                            "altAxis": true,
+                            "boundariesElement": "scrollParent",
+                            "padding": 8,
+                          },
+                        },
+                      ],
+                      "strategy": "absolute",
+                    }
+                  }
+                  render={[Function]}
+                  trigger="mouseenter focus"
+                >
+                  <Tippy
+                    animation={false}
+                    appendTo="parent"
+                    hideOnClick={true}
+                    interactive={false}
+                    offset={
+                      Array [
+                        0,
+                        17,
+                      ]
+                    }
+                    onHidden={[Function]}
+                    onHide={[Function]}
+                    onShow={[Function]}
+                    placement="bottom"
+                    plugins={
+                      Array [
+                        Object {
+                          "fn": [Function],
+                        },
+                        Object {
+                          "fn": [Function],
+                        },
+                        Object {
+                          "fn": [Function],
+                        },
+                        Object {
+                          "defaultValue": true,
+                          "fn": [Function],
+                          "name": "hideOnEsc",
+                        },
+                      ]
+                    }
+                    popperOptions={
+                      Object {
+                        "modifiers": Array [
+                          Object {
+                            "enabled": true,
+                            "name": "arrow",
+                            "options": Object {
+                              "element": "#arrow1",
+                              "padding": 5,
+                            },
+                          },
+                          Object {
+                            "name": "preventOverflow",
+                            "options": Object {
+                              "altAxis": true,
+                              "boundariesElement": "scrollParent",
+                              "padding": 8,
+                            },
+                          },
+                        ],
+                        "strategy": "absolute",
+                      }
+                    }
+                    render={[Function]}
+                    trigger="mouseenter focus"
+                  >
+                    <button
+                      aria-describedby="test-ID"
+                      aria-haspopup="dialog"
+                      id="test-ID"
+                    >
+                      Example button
+                    </button>
+                    <Portal
+                      containerInfo={
+                        <div
+                          data-tippy-root=""
+                          id="tippy-7"
+                          style="pointer-events: none; z-index: 9999;"
+                        >
+                          
+                        </div>
+                      }
+                    />
+                  </Tippy>
+                </ForwardRef(TippyWrapper)>
+              </LazyTippy>
+            </Popover>
+            <div
+              className="md-tooltip-label"
+              id="test-ID"
+            >
+              <Text
+                tagName="p"
+              >
+                <Text
+                  className="md-text-wrapper"
+                  tagname="p"
+                  type="body-large-regular"
+                >
+                  <mdc-text
+                    class="md-text-wrapper"
+                    suppressHydrationWarning={true}
+                  >
+                    Example tooltip content
+                  </mdc-text>
+                </Text>
+              </Text>
+            </div>
+          </Tooltip>
+          <Portal
+            containerInfo={
+              <div
+                data-tippy-root=""
+                id="tippy-8"
+                style="z-index: 9999;"
+              >
+                
+              </div>
+            }
+          />
+        </Tippy>
+      </ForwardRef(TippyWrapper)>
+    </LazyTippy>
+  </Popover>
+</TooltipPopoverCombo>
+`;
+
+exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
+<TooltipPopoverCombo
+  popoverContent={
+    <button>
+      Example popover content button
+    </button>
+  }
+  tooltipContent={
+    <Text
+      tagName="p"
+    >
+      Example tooltip content
+    </Text>
+  }
+  triggerComponent={
+    <button>
+      Example button
+    </button>
+  }
+>
+  <Popover
+    aria-labelledby="test-ID"
+    interactive={true}
+    onHide={[Function]}
+    onShow={[Function]}
+    trigger="click"
+    triggerComponent={
+      <Tooltip
+        labelOrDescriptionId="test-ID"
+        onHide={[Function]}
+        onShow={[Function]}
+        setInstance={[Function]}
+        triggerComponent={
+          <button>
+            Example button
+          </button>
+        }
+        type="label"
+      >
+        <Text
+          tagName="p"
+        >
+          Example tooltip content
+        </Text>
+      </Tooltip>
+    }
+  >
+    <LazyTippy
+      animation={false}
+      appendTo="parent"
+      hideOnClick={true}
+      interactive={true}
+      offset={
+        Array [
+          0,
+          17,
+        ]
+      }
+      onHidden={[Function]}
+      onHide={[Function]}
+      onShow={[Function]}
+      placement="auto"
+      plugins={
+        Array [
+          Object {
+            "defaultValue": true,
+            "fn": [Function],
+            "name": "hideOnEsc",
+          },
+          Object {
+            "fn": [Function],
+            "name": "addBackdropPlugin",
+          },
+        ]
+      }
+      popperOptions={
+        Object {
+          "modifiers": Array [
+            Object {
+              "enabled": true,
+              "name": "arrow",
+              "options": Object {
+                "element": "#arrow1",
+                "padding": 5,
+              },
+            },
+            Object {
+              "name": "preventOverflow",
+              "options": Object {
+                "altAxis": true,
+                "boundariesElement": "scrollParent",
+                "padding": 8,
+              },
+            },
+          ],
+          "strategy": "absolute",
+        }
+      }
+      render={[Function]}
+      setInstance={[Function]}
+      trigger="click"
+    >
+      <ForwardRef(TippyWrapper)
+        animation={false}
+        appendTo="parent"
+        hideOnClick={true}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            17,
+          ]
+        }
+        onHidden={[Function]}
+        onHide={[Function]}
+        onShow={[Function]}
+        placement="auto"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
+            },
+            Object {
+              "fn": [Function],
+            },
+            Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": true,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        render={[Function]}
+        trigger="click"
+      >
+        <Tippy
+          animation={false}
+          appendTo="parent"
+          hideOnClick={true}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              17,
+            ]
+          }
+          onHidden={[Function]}
+          onHide={[Function]}
+          onShow={[Function]}
+          placement="auto"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": true,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="click"
+        >
+          <Tooltip
+            aria-haspopup="dialog"
+            labelOrDescriptionId="test-ID"
             onHide={[Function]}
             onShow={[Function]}
             setInstance={[Function]}
@@ -256,7 +771,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
-                  aria-labelledby="1"
+                  aria-labelledby="test-ID"
                 >
                   Example button
                 </button>
@@ -434,7 +949,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
                   >
                     <button
                       aria-haspopup="dialog"
-                      aria-labelledby="1"
+                      aria-labelledby="test-ID"
                     >
                       Example button
                     </button>
@@ -455,9 +970,11 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot 1`] = `
             </Popover>
             <div
               className="md-tooltip-label"
-              id="1"
+              id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"
@@ -504,7 +1021,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -515,14 +1034,14 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
   }
 >
   <Popover
-    aria-labelledby="1"
+    aria-labelledby="test-ID"
     interactive={true}
     onHide={[Function]}
     onShow={[Function]}
     trigger="click"
     triggerComponent={
       <Tooltip
-        labelOrDescriptionId="1"
+        labelOrDescriptionId="test-ID"
         onHide={[Function]}
         onShow={[Function]}
         placement="bottom"
@@ -534,7 +1053,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         }
         type="label"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -723,7 +1244,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
         >
           <Tooltip
             aria-haspopup="dialog"
-            labelOrDescriptionId="1"
+            labelOrDescriptionId="test-ID"
             onHide={[Function]}
             onShow={[Function]}
             placement="bottom"
@@ -754,7 +1275,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
-                  aria-labelledby="1"
+                  aria-labelledby="test-ID"
                 >
                   Example button
                 </button>
@@ -932,7 +1453,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
                   >
                     <button
                       aria-haspopup="dialog"
-                      aria-labelledby="1"
+                      aria-labelledby="test-ID"
                     >
                       Example button
                     </button>
@@ -953,9 +1474,11 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherPopove
             </Popover>
             <div
               className="md-tooltip-label"
-              id="1"
+              id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"
@@ -1002,7 +1525,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
     </button>
   }
   tooltipContent={
-    <Text>
+    <Text
+      tagName="p"
+    >
       Example tooltip content
     </Text>
   }
@@ -1013,14 +1538,14 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
   }
 >
   <Popover
-    aria-labelledby="1"
+    aria-labelledby="test-ID"
     interactive={true}
     onHide={[Function]}
     onShow={[Function]}
     trigger="click"
     triggerComponent={
       <Tooltip
-        labelOrDescriptionId="1"
+        labelOrDescriptionId="test-ID"
         onHide={[Function]}
         onShow={[Function]}
         placement="top"
@@ -1032,7 +1557,9 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         }
         type="label"
       >
-        <Text>
+        <Text
+          tagName="p"
+        >
           Example tooltip content
         </Text>
       </Tooltip>
@@ -1221,7 +1748,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
         >
           <Tooltip
             aria-haspopup="dialog"
-            labelOrDescriptionId="1"
+            labelOrDescriptionId="test-ID"
             onHide={[Function]}
             onShow={[Function]}
             placement="top"
@@ -1252,7 +1779,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
               triggerComponent={
                 <button
                   aria-haspopup="dialog"
-                  aria-labelledby="1"
+                  aria-labelledby="test-ID"
                 >
                   Example button
                 </button>
@@ -1430,7 +1957,7 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
                   >
                     <button
                       aria-haspopup="dialog"
-                      aria-labelledby="1"
+                      aria-labelledby="test-ID"
                     >
                       Example button
                     </button>
@@ -1451,9 +1978,11 @@ exports[`<TooltipPopoverCombo /> snapshot should match snapshot with otherToolti
             </Popover>
             <div
               className="md-tooltip-label"
-              id="1"
+              id="test-ID"
             >
-              <Text>
+              <Text
+                tagName="p"
+              >
                 <Text
                   className="md-text-wrapper"
                   tagname="p"

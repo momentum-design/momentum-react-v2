@@ -24,7 +24,7 @@ describe('Text', () => {
   it('should match snapshot', async () => {
     expect.assertions(2);
 
-    container = await setup(<Text>Hello</Text>);
+    container = await setup(<Text tagName="p">Hello</Text>);
 
     expect(container).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('Text', () => {
 
     const className = 'example-class';
 
-    container = await setup(<Text className={className} />);
+    container = await setup(<Text tagName="p" className={className} />);
 
     expect(container).toMatchSnapshot();
   });
@@ -44,7 +44,7 @@ describe('Text', () => {
 
     const id = 'example-id';
 
-    container = await setup(<Text id={id} />);
+    container = await setup(<Text tagName="p" id={id} />);
 
     expect(container).toMatchSnapshot();
   });
@@ -54,7 +54,7 @@ describe('Text', () => {
 
     const style = { color: 'red' };
 
-    container = await setup(<Text style={style} />);
+    container = await setup(<Text tagName="p" style={style} />);
 
     expect(container).toMatchSnapshot();
   });
@@ -64,7 +64,7 @@ describe('Text', () => {
 
     const texts = Object.values(TYPES).map((type, index) => {
       return (
-        <Text key={index} type={type as FontStyle}>
+        <Text tagName="p" key={index} type={type as FontStyle}>
           Example Text
         </Text>
       );
@@ -75,7 +75,7 @@ describe('Text', () => {
   });
 
   it.each(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'small', 'div', 'span'])(
-    'should match snapshot with type and tagName override',
+    'should match snapshot with type and each tagName',
     async (tagName) => {
       expect.assertions(2);
 
@@ -96,7 +96,7 @@ describe('Text', () => {
     it('should have its main class', async () => {
       expect.assertions(2);
 
-      const container = await setup(<Text />);
+      const container = await setup(<Text tagName="p" />);
 
       expect(container.querySelector('mdc-text').classList.contains(STYLE.wrapper)).toBe(true);
     });
@@ -106,7 +106,7 @@ describe('Text', () => {
 
       const id = 'example-id';
 
-      const container = await setup(<Text id={id} />);
+      const container = await setup(<Text tagName="p" id={id} />);
 
       expect(container.querySelector('mdc-text').id).toBe(id);
     });
@@ -117,7 +117,7 @@ describe('Text', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const container = await setup(<Text style={style} />);
+      const container = await setup(<Text tagName="p" style={style} />);
 
       expect(container.querySelector('mdc-text').getAttribute('style')).toBe(styleString);
     });
@@ -128,7 +128,7 @@ describe('Text', () => {
       const type = TYPES.LABEL_COMPACT;
       const expectedMdcTextType = FONT_TYPE.BODY_SMALL_MEDIUM;
 
-      const container = await setup(<Text type={type} />);
+      const container = await setup(<Text tagName="p" type={type} />);
 
       expect(container.querySelector('mdc-text').getAttribute('type')).toBe(expectedMdcTextType);
     });

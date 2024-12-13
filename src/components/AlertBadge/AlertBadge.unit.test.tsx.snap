@@ -155,6 +155,7 @@ exports[`<AlertBadge /> snapshot should match snapshot with color 1`] = `
         >
           <PrimitiveConverter>
             <Text
+              tagName="p"
               type="body-primary"
             >
               <Text

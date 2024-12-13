@@ -60,30 +60,42 @@ Children.args = {
 Children.argTypes = { ...argTypes };
 delete Children.argTypes.children;
 
-const labelOnly = <Text type="subheader-secondary">Only Label</Text>;
+const labelOnly = (
+  <Text type="subheader-secondary" tagName="h3">
+    Only Label
+  </Text>
+);
 const iconAndLabel = (
   <>
     <Icon name="plus" scale={12} weight="bold" />
-    <Text type="subheader-secondary">Icon and Label</Text>
+    <Text type="subheader-secondary" tagName="h3">
+      Icon and Label
+    </Text>
   </>
 );
 const LabelAndIcon = (
   <>
-    <Text type="subheader-secondary">Label and Icon</Text>
+    <Text type="subheader-secondary" tagName="h3">
+      Label and Icon
+    </Text>
     <Icon name="arrow-down" scale={12} weight="filled" />
   </>
 );
 const smallBadgeAndLabel = (
   <>
     <Badge size={12} />
-    <Text type="subheader-secondary">Small badge and Label</Text>
+    <Text type="subheader-secondary" tagName="h3">
+      Small badge and Label
+    </Text>
   </>
 );
 
 const bigBadgeAndLabel = (
   <>
     <Badge size={18}>2</Badge>
-    <Text type="subheader-secondary">Big badge and Label</Text>
+    <Text type="subheader-secondary" tagName="h3">
+      Big badge and Label
+    </Text>
   </>
 );
 
@@ -91,7 +103,9 @@ const twoIconsAndLabel = (
   <>
     <Icon name="plus" scale={12} weight="bold" />
     <Icon name="plus" scale={12} weight="bold" />
-    <Text type="subheader-secondary">Two icons and Label</Text>
+    <Text type="subheader-secondary" tagName="h3">
+      Two icons and Label
+    </Text>
   </>
 );
 

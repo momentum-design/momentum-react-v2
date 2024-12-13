@@ -37,7 +37,9 @@ const Tag: FC<Props> = (props: Props) => {
       isDisabled={disabled}
       {...otherProps}
     >
-      <Text type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY}>{children}</Text>
+      <Text type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY} tagName="h3">
+        {children}
+      </Text>
     </ButtonSimple>
   );
 };

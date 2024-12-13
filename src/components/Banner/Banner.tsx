@@ -44,13 +44,17 @@ const Banner: FC<Props> = (props: Props) => {
       {...mutatedOtherProps}
     >
       {image}
-      <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.BANNER_PRIMARY} tagName="h2">
+      <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.BANNER_PRIMARY} tagName="h1">
         {title}
       </Text>
-      <Text className={STYLE.description} type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY}>
+      <Text
+        className={STYLE.description}
+        type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY}
+        tagName="h3"
+      >
         {description}
       </Text>
-      <Text className={STYLE.details} type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY}>
+      <Text className={STYLE.details} type={TEXT_CONSTANTS.TYPES.SUBHEADER_SECONDARY} tagName="h3">
         {details}
       </Text>
       {actions}

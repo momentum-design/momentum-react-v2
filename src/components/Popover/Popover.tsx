@@ -44,6 +44,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
     boundary = DEFAULTS.BOUNDARY,
     hideOnEsc = DEFAULTS.HIDE_ON_ESC,
     hideOnBlur = DEFAULTS.HIDE_ON_BLUR,
+    singleOpenGroupId = undefined,
     isChildPopoverOpen = DEFAULTS.IS_CHILD_POPOVER_OPEN,
     addBackdrop = DEFAULTS.ADD_BACKDROP,
     focusBackOnTrigger: focusBackOnTriggerFromProps,
@@ -239,7 +240,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
       }}
       animation={false}
       delay={delay}
-      plugins={addTippyPlugins(hideOnEsc, hideOnBlur, addBackdrop)}
+      plugins={addTippyPlugins(hideOnEsc, hideOnBlur, addBackdrop, singleOpenGroupId)}
       // add arrow height to default offset if arrow is shown:
       offset={[offsetSkidding, showArrow ? ARROW_HEIGHT + offsetDistance : offsetDistance]}
       {...{

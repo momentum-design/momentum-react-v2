@@ -42,6 +42,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     isInForm = DEFAULTS.IS_IN_FORM,
     listboxWidth,
     shallowDisabled,
+    popoverSingleOpenGroupId,
   } = props;
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
   const hasBeenOpened = useRef<boolean>(false);
@@ -188,7 +189,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     >
       {label && (
         <label htmlFor={name} {...labelProps}>
-          <Text>{label}</Text>
+          <Text tagName="p">{label}</Text>
         </label>
       )}
       {isInForm && (
@@ -219,6 +220,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         style={{ maxHeight: listboxMaxHeight || 'none' }}
         className={STYLE.popover}
         strategy={listboxWidth ? 'fixed' : 'absolute'}
+        singleOpenGroupId={popoverSingleOpenGroupId}
       >
         <ListBoxBase
           {...menuProps}

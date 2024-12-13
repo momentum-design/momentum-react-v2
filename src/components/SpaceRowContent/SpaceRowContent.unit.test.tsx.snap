@@ -59,6 +59,7 @@ exports[`<SpaceRowContent /> snapshot checks divider dot position in compact mod
             "color": "var(--mds-color-theme-text-teamdefault-normal)",
           }
         }
+        tagName="small"
         type="body-secondary"
       >
         <Text
@@ -1408,6 +1409,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with multiple string
             "color": "var(--mds-color-theme-text-teamdefault-normal)",
           }
         }
+        tagName="small"
         type="body-secondary"
       >
         <Text
@@ -1528,6 +1530,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with secondLine 1`] 
             "color": "var(--mds-color-theme-text-teamdefault-normal)",
           }
         }
+        tagName="small"
         type="body-secondary"
       >
         <Text

@@ -26,6 +26,7 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
     {
       autoFocus: props.autoFocus,
       ...mutatedProps,
+      shouldSelectOnPressUp: false,
       id,
     },
     state,

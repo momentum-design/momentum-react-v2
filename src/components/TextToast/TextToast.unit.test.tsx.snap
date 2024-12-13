@@ -10,6 +10,7 @@ exports[`<TextToast /> snapshot should match snapshot 1`] = `
   >
     <Text
       className="md-text-toast-text"
+      tagName="small"
       type="body-secondary"
     >
       <Text
@@ -40,6 +41,7 @@ exports[`<TextToast /> snapshot should match snapshot with className 1`] = `
   >
     <Text
       className="md-text-toast-text"
+      tagName="small"
       type="body-secondary"
     >
       <Text
@@ -96,6 +98,7 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
     </Icon>
     <Text
       className="md-text-toast-text"
+      tagName="small"
       type="body-secondary"
     >
       <Text
@@ -127,6 +130,7 @@ exports[`<TextToast /> snapshot should match snapshot with id 1`] = `
   >
     <Text
       className="md-text-toast-text"
+      tagName="small"
       type="body-secondary"
     >
       <Text
@@ -166,6 +170,7 @@ exports[`<TextToast /> snapshot should match snapshot with style 1`] = `
   >
     <Text
       className="md-text-toast-text"
+      tagName="small"
       type="body-secondary"
     >
       <Text
@@ -196,6 +201,7 @@ exports[`<TextToast /> snapshot should match snapshot with textAlignment \`left\
   >
     <Text
       className="md-text-toast-text"
+      tagName="small"
       type="body-secondary"
     >
       <Text

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import React, { ReactElement, useContext } from 'react';
 
 import './ListBoxItem.style.scss';
@@ -24,7 +23,6 @@ function ListBoxItem<T>(props: Props<T>): ReactElement {
       isDisabled,
       'aria-label': item['aria-label'],
       isSelected,
-      shouldSelectOnPressUp: true,
       shouldFocusOnHover: false,
     },
     state,
