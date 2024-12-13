@@ -828,6 +828,41 @@ describe('<Popover />', () => {
     expect(modalContainer).toBeInTheDocument();
   });
 
+  describe('singleOpenGroupId functionality', () => {
+    it('should only allow one popover to be open within the same group', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <Popover
+            triggerComponent={<ButtonSimple>Popover 1</ButtonSimple>}
+            singleOpenGroupId="group1"
+          >
+            <p>Content 1</p>
+          </Popover>
+          <Popover
+            triggerComponent={<ButtonSimple>Popover 2</ButtonSimple>}
+            singleOpenGroupId="group1"
+          >
+            <p>Content 2</p>
+          </Popover>
+        </>
+      );
+
+      // Open first popover
+      await openPopoverByClickingOnTriggerAndCheckContent(user, /Popover 1/i, /Content 1/i);
+
+      // Ensure first popover is open
+      expect(screen.queryByText('Content 2')).not.toBeInTheDocument();
+
+      // Open second popover
+      await openPopoverByClickingOnTriggerAndCheckContent(user, /Popover 2/i, /Content 2/i);
+
+      // Ensure first popover is closed and second is open
+      expect(screen.queryByText('Content 1')).not.toBeInTheDocument();
+    });
+  });
+
   const nullRef = null;
   const callbackRef = jest.fn();
   const mutableRef = { current: null };
