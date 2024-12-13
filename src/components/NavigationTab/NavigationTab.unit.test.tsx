@@ -11,7 +11,7 @@ describe('<NavigationTab />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<NavigationTab />);
+      const container = await mountAndWait(<NavigationTab aria-label="chat" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -21,7 +21,9 @@ describe('<NavigationTab />', () => {
 
       const className = 'example-class';
 
-      const container = await mountAndWait(<NavigationTab className={className} />);
+      const container = await mountAndWait(
+        <NavigationTab aria-label="chat" className={className} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -31,7 +33,7 @@ describe('<NavigationTab />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<NavigationTab id={id} />);
+      const container = await mountAndWait(<NavigationTab aria-label="chat" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -41,7 +43,7 @@ describe('<NavigationTab />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<NavigationTab style={style} />);
+      const container = await mountAndWait(<NavigationTab aria-label="chat" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -50,7 +52,7 @@ describe('<NavigationTab />', () => {
       expect.assertions(1);
 
       const sizes = Object.values(SIZES).map((size, index) => {
-        return <NavigationTab key={index} size={size as NavTabSize} />;
+        return <NavigationTab aria-label="chat" key={index} size={size as NavTabSize} />;
       });
       const container = await mountAndWait(<div>{sizes}</div>);
 
@@ -72,7 +74,7 @@ describe('<NavigationTab />', () => {
 
       const icon = 'contacts';
 
-      const container = await mountAndWait(<NavigationTab icon={icon} />);
+      const container = await mountAndWait(<NavigationTab aria-label="chat" icon={icon} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -82,7 +84,7 @@ describe('<NavigationTab />', () => {
 
       const count = 100;
 
-      const container = await mountAndWait(<NavigationTab count={count} />);
+      const container = await mountAndWait(<NavigationTab aria-label="chat" count={count} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -92,7 +94,7 @@ describe('<NavigationTab />', () => {
 
       const active = true;
 
-      const container = await mountAndWait(<NavigationTab active={active} />);
+      const container = await mountAndWait(<NavigationTab aria-label="chat" active={active} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -130,7 +132,7 @@ describe('<NavigationTab />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<NavigationTab />);
+      const wrapper = await mountAndWait(<NavigationTab aria-label="chat" />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
@@ -141,7 +143,7 @@ describe('<NavigationTab />', () => {
 
       const className = 'example-class';
 
-      const wrapper = await mountAndWait(<NavigationTab className={className} />);
+      const wrapper = await mountAndWait(<NavigationTab aria-label="chat" className={className} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -152,7 +154,7 @@ describe('<NavigationTab />', () => {
 
       const id = 'example-id';
 
-      const wrapper = mount(<NavigationTab id={id} />);
+      const wrapper = mount(<NavigationTab aria-label="chat" id={id} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.id).toBe(id);
@@ -164,7 +166,7 @@ describe('<NavigationTab />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const wrapper = await mountAndWait(<NavigationTab style={style} />);
+      const wrapper = await mountAndWait(<NavigationTab aria-label="chat" style={style} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -175,7 +177,7 @@ describe('<NavigationTab />', () => {
 
       const size = CONSTANTS.DEFAULTS.SIZE;
 
-      const wrapper = await mountAndWait(<NavigationTab size={size} />);
+      const wrapper = await mountAndWait(<NavigationTab aria-label="chat" size={size} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.getAttribute('data-size')).toBe(`${size}`);
@@ -199,7 +201,7 @@ describe('<NavigationTab />', () => {
 
       const count = 1;
 
-      const wrapper = await mountAndWait(<NavigationTab count={count} />);
+      const wrapper = await mountAndWait(<NavigationTab aria-label="chat" count={count} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       const target = element.getElementsByClassName(STYLE.count)[0];
@@ -212,7 +214,7 @@ describe('<NavigationTab />', () => {
 
       const active = CONSTANTS.DEFAULTS.ACTIVE;
 
-      const wrapper = await mountAndWait(<NavigationTab active={active} />);
+      const wrapper = await mountAndWait(<NavigationTab aria-label="chat" active={active} />);
       const element = wrapper.find(NavigationTab).getDOMNode();
 
       expect(element.getAttribute('data-active')).toBe(`${active}`);
@@ -225,7 +227,9 @@ describe('<NavigationTab />', () => {
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(<NavigationTab onPress={mockCallback} />);
+      const wrapper = await mountAndWait(
+        <NavigationTab aria-label="chat" onPress={mockCallback} />
+      );
       const component = wrapper.find(NavigationTab);
 
       component.props().onPress({
