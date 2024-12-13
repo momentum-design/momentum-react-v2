@@ -239,7 +239,7 @@ describe('<MeetingListItem />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={1}>
+        <List aria-label="My list" listSize={1}>
           <MeetingListItem
             itemIndex={0}
             data-testid="meeting-list-item"

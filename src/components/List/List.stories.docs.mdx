@@ -15,7 +15,7 @@ The container can be used with virtualised lists (see Cantina code), static list
 To create a simple sattic List your code should look like this.
 
 ```javascript
-<List listSize={5}>
+<List aria-label="My list" listSize={5}>
   <ListItemBase itemIndex={0}>Item 1</ListItemBase>
   <ListItemBase itemIndex={1}>Item 2</ListItemBase>
   <ListItemBase itemIndex={2}>Item 3</ListItemBase>
@@ -43,7 +43,7 @@ const data = [
   {key: uuid(), data: 2},
   {key: uuid(), data: 3},
 ]
-<List listSize={data.length}>
+<List aria-label="My list" listSize={data.length}>
   {data.map((item, index) => (
     <ListItemBase key={item.key} itemIndex={index}>{item.data}</ListItemBase>
   )})}

@@ -237,7 +237,7 @@ const ListSearchWrapper = () => {
   return (
     <>
       <SearchInput value={query} onChange={setQuery} clearButtonAriaLabel="Clear" />
-      <List shouldItemFocusBeInset listSize={filtered.length}>
+      <List aria-label="My list" shouldItemFocusBeInset listSize={filtered.length}>
         {filtered &&
           filtered.map((item, index) => (
             <ListItemBase itemIndex={index} key={item.key} isPadded>
@@ -290,7 +290,7 @@ const DynamicListWrapper = () => {
         List will update in:
         <Badge size={18} style={{ display: 'inline' }}>{`${INTERVAL_COUNT - time}`}</Badge>
       </Text>
-      <List listSize={list.length}>
+      <List aria-label="My list" listSize={list.length}>
         {list.map((item, index) => (
           <ListItemBase itemIndex={index} key={item.key} isPadded>
             {`Item ${item.data}`}
@@ -320,7 +320,7 @@ const ProgramaticFocus = Template<ListProps>((args) => {
         ))}
       </Flex>
 
-      <List {...args} listSize={10} ref={ref} shouldFocusOnPress>
+      <List {...args} aria-label="My list" listSize={10} ref={ref} shouldFocusOnPress>
         {Array.from(Array(10).keys()).map((index) => (
           <ListItemBase itemIndex={index} key={index} isPadded>
             {`Item ${index}`}
@@ -335,11 +335,11 @@ const ListWithAriaToolbarWrapper = () => {
   return (
     <>
       <ButtonPill>Before</ButtonPill>
-      <List listSize={2}>
+      <List aria-label="My list" listSize={2}>
         <ListItemBase size="auto" itemIndex={0} key={0}>
           <ListItemBaseSection position="fill">
             <Text tagName="p">List Item 0</Text>
-            <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+            <AriaToolbar aria-label="toolbar" ariaToolbarItemsSize={2}>
               <AriaToolbarItem itemIndex={0}>
                 <ButtonPill>Toolbar Button 1</ButtonPill>
               </AriaToolbarItem>
@@ -362,7 +362,7 @@ const ListWithAriaToolbar = Template<unknown>(ListWithAriaToolbarWrapper).bind({
 const ListWithButtonsWrapper = () => {
   return (
     <>
-      <List shouldFocusOnPress listSize={3}>
+      <List aria-label="My list" shouldFocusOnPress listSize={3}>
         <ListItemBase itemIndex={0} key={0}>
           <ButtonPill>0</ButtonPill>
         </ListItemBase>
@@ -386,7 +386,7 @@ const ListWithButtons = Template<unknown>(ListWithButtonsWrapper).bind({});
 const ListWithNonFocusableChildrenWrapper = () => {
   return (
     <>
-      <List shouldFocusOnPress listSize={2}>
+      <List aria-label="My list" shouldFocusOnPress listSize={2}>
         <ListItemBase size="auto" itemIndex={0} key={0}>
           <ButtonPill data-preserve-tabindex tabIndex={-1}>
             Non-focusable button
@@ -432,6 +432,7 @@ const ListWithInitialFocusWrapper = () => {
     <>
       {toggleButton}
       <List
+        aria-label="My list"
         id={'mylist 2'}
         shouldFocusOnPress
         initialFocus={listOne ? 1 : 4}
@@ -452,7 +453,7 @@ const ListWithFocusHandlingWrapper = () => {
 
   return (
     <>
-      <List listSize={3}>
+      <List aria-label="My list" listSize={3}>
         <ListItemBase
           onFocusWithin={() => {
             logMessage('on focus within');
@@ -510,7 +511,7 @@ const DynamicListWithInitialFocusWrapper = () => {
   });
 
   return (
-    <List initialFocus={numItems - 1} listSize={numItems}>
+    <List aria-label="My list" initialFocus={numItems - 1} listSize={numItems}>
       {Array.from(Array(numItems).keys()).map((index) => (
         <ListItemBase itemIndex={index} key={index}>
           {`Item ${index}`}
@@ -539,7 +540,7 @@ const DynamicListWithInitialFocusWrapper2 = () => {
   }
 
   return (
-    <List listSize={showBefore ? 6 : 5}>
+    <List aria-label="My list" listSize={showBefore ? 6 : 5}>
       {showBefore && (
         <ListItemBase itemIndex={0} key={3}>
           Item 2
@@ -585,7 +586,7 @@ const DynamicListWithInitialFocusWrapper3 = () => {
   }
 
   return (
-    <List listSize={showBefore ? 7 : 5}>
+    <List aria-label="My list" listSize={showBefore ? 7 : 5}>
       {showBefore && (
         <ListItemBase itemIndex={0} key={0}>
           Item 0
@@ -621,7 +622,7 @@ const DynamicListWithInitialFocus3 = Template<unknown>(DynamicListWithInitialFoc
 
 const SingleItemListWrapper = () => {
   return (
-    <List listSize={1}>
+    <List aria-label="My list" listSize={1}>
       <ListItemBase itemIndex={0} key={0}>
         Item 0
       </ListItemBase>
@@ -633,7 +634,7 @@ const SingleItemList = Template<unknown>(SingleItemListWrapper).bind({});
 
 const ListWithTextSelectWrapper = () => {
   return (
-    <List shouldFocusOnPress listSize={3}>
+    <List aria-label="My list" shouldFocusOnPress listSize={3}>
       <ListItemBase allowTextSelection itemIndex={0} key={0}>
         Item 0
       </ListItemBase>

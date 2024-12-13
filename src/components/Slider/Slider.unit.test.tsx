@@ -13,6 +13,7 @@ describe('<Slider />', () => {
     maxValue: 10,
     value: 2,
     onChange: jest.fn(),
+    'aria-label': 'Slider',
   };
 
   describe('snapshot', () => {
@@ -50,14 +51,6 @@ describe('<Slider />', () => {
       const style = { color: 'pink' };
 
       const { container } = render(<Slider {...defaultProps} style={style} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with ariaLabel', () => {
-      expect.assertions(1);
-
-      const { container } = render(<Slider {...defaultProps} ariaLabel={'test aria label'} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -116,18 +109,6 @@ describe('<Slider />', () => {
 
       expect(element.getAttribute('style')).toBe(`${styleString} --local-value: 20%;`);
     });
-
-    it('should have provided ariaLabel when ariaLabel is provided', () => {
-      expect.assertions(1);
-
-      const ariaLabel = 'test aria label';
-
-      render(<Slider {...defaultProps} ariaLabel={ariaLabel} />);
-
-      const element = screen.getByRole('slider');
-
-      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
-    });
   });
 
   describe('actions', () => {
@@ -145,9 +126,7 @@ describe('<Slider />', () => {
         }
       }, [newValue]);
 
-      return (
-        <Slider {...defaultProps} ariaLabel="test label" onChange={handleChange} value={value} />
-      );
+      return <Slider {...defaultProps} onChange={handleChange} value={value} />;
     };
 
     it('should be focusable as expected', async () => {

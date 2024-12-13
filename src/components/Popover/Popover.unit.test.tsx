@@ -1924,7 +1924,7 @@ describe('<Popover />', () => {
         const user = userEvent.setup();
 
         render(
-          <List listSize={1}>
+          <List aria-label="My list" listSize={1}>
             <Popover
               triggerComponent={<MeetingListItem>list item content</MeetingListItem>}
               interactive

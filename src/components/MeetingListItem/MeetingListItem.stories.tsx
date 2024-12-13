@@ -38,7 +38,7 @@ export default {
 
 const Wrapper = (args) => {
   return (
-    <List listSize={1}>
+    <List aria-label="My list" listSize={1}>
       <MeetingListItem itemIndex={0} {...args} />
     </List>
   );
