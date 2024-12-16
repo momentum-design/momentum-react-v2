@@ -6,7 +6,7 @@ import { DEFAULTS } from './ModalContainer.constants';
 
 const modalContainerArgTypes = {
   title: {
-    description: 'Provides de visible titlefor this modal container',
+    description: 'Provides de visible title for this modal container',
     control: { type: 'text' },
     table: {
       type: {
