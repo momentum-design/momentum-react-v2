@@ -217,6 +217,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -240,6 +241,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -2423,6 +2425,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -2446,6 +2449,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -4629,6 +4633,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -4652,6 +4657,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -6836,6 +6842,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -6859,6 +6866,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -9045,6 +9053,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -9068,6 +9077,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -11251,6 +11261,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -11274,6 +11285,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -13532,6 +13544,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -13555,6 +13568,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -15749,6 +15763,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -15772,6 +15787,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}
@@ -17959,6 +17975,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
               className="md-button-pill-wrapper"
               data-color="primary"
               data-disabled={false}
+              data-disabled-outline={false}
               data-ghost={false}
               data-grown={false}
               data-inverted={false}
@@ -17982,6 +17999,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     className="md-button-pill-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}
+                    data-disabled-outline={false}
                     data-ghost={false}
                     data-grown={false}
                     data-inverted={false}

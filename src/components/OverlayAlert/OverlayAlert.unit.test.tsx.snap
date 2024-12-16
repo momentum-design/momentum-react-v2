@@ -123,6 +123,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
+                  data-disabled-outline={false}
                   data-ghost={false}
                   data-grown={false}
                   data-inverted={false}
@@ -139,6 +140,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with actions 1`] = `
                         className="md-button-pill-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={false}
                         data-grown={false}
                         data-inverted={false}
@@ -712,6 +714,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
+                  data-disabled-outline={false}
                   data-ghost={false}
                   data-grown={false}
                   data-inverted={false}
@@ -728,6 +731,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                         className="md-button-pill-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={false}
                         data-grown={false}
                         data-inverted={false}
@@ -767,6 +771,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
+                  data-disabled-outline={false}
                   data-ghost={false}
                   data-grown={false}
                   data-inverted={false}
@@ -783,6 +788,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                         className="md-button-pill-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={false}
                         data-grown={false}
                         data-inverted={false}
@@ -822,6 +828,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                   className="md-button-pill-wrapper"
                   data-color="primary"
                   data-disabled={false}
+                  data-disabled-outline={false}
                   data-ghost={false}
                   data-grown={false}
                   data-inverted={false}
@@ -838,6 +845,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple actions 1
                         className="md-button-pill-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={false}
                         data-grown={false}
                         data-inverted={false}
