@@ -44,7 +44,7 @@ const Banner: FC<Props> = (props: Props) => {
       {...mutatedOtherProps}
     >
       {image}
-      <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.BANNER_PRIMARY} tagName="h1">
+      <Text className={STYLE.title} type={TEXT_CONSTANTS.TYPES.BANNER_PRIMARY} tagName="h2">
         {title}
       </Text>
       <Text
