@@ -1207,6 +1207,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={true}
                         data-grown={false}
                         data-inverted={false}
@@ -1223,6 +1224,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               className="md-button-pill-wrapper md-button-simple-wrapper"
                               data-color="join"
                               data-disabled={false}
+                              data-disabled-outline={false}
                               data-ghost={true}
                               data-grown={false}
                               data-inverted={false}
@@ -1276,6 +1278,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={false}
                         data-grown={false}
                         data-inverted={false}
@@ -1292,6 +1295,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                               className="md-button-pill-wrapper md-button-simple-wrapper"
                               data-color="join"
                               data-disabled={false}
+                              data-disabled-outline={false}
                               data-ghost={false}
                               data-grown={false}
                               data-inverted={false}
@@ -1644,6 +1648,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={true}
                         data-grown={false}
                         data-inverted={false}
@@ -1660,6 +1665,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               className="md-button-pill-wrapper md-button-simple-wrapper"
                               data-color="join"
                               data-disabled={false}
+                              data-disabled-outline={false}
                               data-ghost={true}
                               data-grown={false}
                               data-inverted={false}
@@ -1713,6 +1719,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                         className="md-button-pill-wrapper"
                         data-color="join"
                         data-disabled={false}
+                        data-disabled-outline={false}
                         data-ghost={false}
                         data-grown={false}
                         data-inverted={false}
@@ -1729,6 +1736,7 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                               className="md-button-pill-wrapper md-button-simple-wrapper"
                               data-color="join"
                               data-disabled={false}
+                              data-disabled-outline={false}
                               data-ghost={false}
                               data-grown={false}
                               data-inverted={false}
