@@ -9,10 +9,10 @@ export type Props = AriaLabelingProps &
         /**
          * Whether this loading spinner should be hidden from SR as it's meaning is redundant
          */
-        'aria-hidden': boolean;
+        'aria-hidden': true;
       }
-    | ({ 'aria-hidden'?: never } & AriaLabelRequired)
-  ) & { // if aria-hidden is not provided, a label is required
+    | ({ 'aria-hidden'?: false } & AriaLabelRequired)
+  ) & { // if aria-hidden is false or undefined, a label is required
     /**
      * Child components of this LoadingSpinner.
      */
