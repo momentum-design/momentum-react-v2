@@ -72,7 +72,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+        summary: CONSTANTS.DEFAULTS.DISABLED_OUTLINE,
       },
     },
   },
