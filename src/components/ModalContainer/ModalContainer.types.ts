@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode, ComponentProps, AriaRole } from 'react';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import { FocusScope } from '@react-aria/focus';
 import { AriaLabelingProps } from '@react-types/shared';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
@@ -17,7 +17,8 @@ export type Props = AriaLabelingProps &
         title: string;
       }
     | ({ title?: never } & AriaLabelRequired)
-  ) & { // if a title is not provided, a label is required
+  ) & {
+    // if a title is not provided, a label is required
     /**
      * Whether the arrow should be shown
      *
