@@ -10,21 +10,27 @@
     var(--mds-color-theme-outline-secondary-normal);
   outline: none;
 
-  /* Arrow placement (svg arrow size is 12px, that's why the following offsets are set like that) */
+  .md-modal-container-title {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Arrow placement (svg arrow size is 12px (0.75rem), that's why the following offsets are set like that) */
   &[data-placement^='top'] > .md-modal-container-arrow-wrapper {
-    bottom: -12px;
+    bottom: -0.75rem;
   }
 
   &[data-placement^='right'] > .md-modal-container-arrow-wrapper {
-    left: -12px;
+    left: -0.75rem;
   }
 
   &[data-placement^='bottom'] > .md-modal-container-arrow-wrapper {
-    top: -12px;
+    top: -0.75rem;
   }
 
   &[data-placement^='left'] > .md-modal-container-arrow-wrapper {
-    right: -12px;
+    right: -0.75rem;
   }
 
   &[data-padded='true'] {

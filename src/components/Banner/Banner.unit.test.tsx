@@ -14,7 +14,7 @@ describe('<Banner />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<Banner />);
+      const container = mount(<Banner aria-label="Some banner" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -24,7 +24,7 @@ describe('<Banner />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<Banner className={className} />);
+      const container = mount(<Banner aria-label="Some banner" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -34,7 +34,7 @@ describe('<Banner />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<Banner id={id} />);
+      const container = mount(<Banner aria-label="Some banner" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -44,7 +44,7 @@ describe('<Banner />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<Banner style={style} />);
+      const container = mount(<Banner aria-label="Some banner" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -63,7 +63,7 @@ describe('<Banner />', () => {
         </ButtonGroup>
       );
 
-      const container = await mountAndWait(<Banner actions={actions} />);
+      const container = await mountAndWait(<Banner aria-label="Some banner" actions={actions} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -73,7 +73,7 @@ describe('<Banner />', () => {
 
       const description = 'Description';
 
-      const container = mount(<Banner description={description} />);
+      const container = mount(<Banner aria-label="Some banner" description={description} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -83,7 +83,7 @@ describe('<Banner />', () => {
 
       const details = 'Details';
 
-      const container = mount(<Banner details={details} />);
+      const container = mount(<Banner aria-label="Some banner" details={details} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -93,7 +93,7 @@ describe('<Banner />', () => {
 
       const image = <Avatar initials="CW" />;
 
-      const container = await mountAndWait(<Banner image={image} />);
+      const container = await mountAndWait(<Banner aria-label="Some banner" image={image} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -103,7 +103,7 @@ describe('<Banner />', () => {
 
       const isAlert = true;
 
-      const container = mount(<Banner isAlert={isAlert} />);
+      const container = mount(<Banner aria-label="Some banner" isAlert={isAlert} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -113,7 +113,7 @@ describe('<Banner />', () => {
 
       const shape = Object.values(CONSTANTS.SHAPES).pop();
 
-      const container = mount(<Banner shape={shape} />);
+      const container = mount(<Banner aria-label="Some banner" shape={shape} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -123,7 +123,7 @@ describe('<Banner />', () => {
 
       const title = 'Title';
 
-      const container = mount(<Banner title={title} />);
+      const container = mount(<Banner aria-label="Some banner" title={title} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -150,7 +150,7 @@ describe('<Banner />', () => {
         title: 'Title',
       };
 
-      const container = await mountAndWait(<Banner {...props} />);
+      const container = await mountAndWait(<Banner aria-label="Some banner" {...props} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -160,7 +160,7 @@ describe('<Banner />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<Banner />)
+      const element = mount(<Banner aria-label="Some banner" />)
         .find(Banner)
         .getDOMNode();
 
@@ -172,7 +172,7 @@ describe('<Banner />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<Banner className={className} />)
+      const element = mount(<Banner aria-label="Some banner" className={className} />)
         .find(Banner)
         .getDOMNode();
 
@@ -184,7 +184,7 @@ describe('<Banner />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<Banner id={id} />)
+      const element = mount(<Banner aria-label="Some banner" id={id} />)
         .find(Banner)
         .getDOMNode();
 
@@ -197,7 +197,7 @@ describe('<Banner />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<Banner style={style} />)
+      const element = mount(<Banner aria-label="Some banner" style={style} />)
         .find(Banner)
         .getDOMNode();
 
@@ -218,7 +218,7 @@ describe('<Banner />', () => {
         </ButtonGroup>
       );
 
-      const container = await mountAndWait(<Banner actions={actions} />);
+      const container = await mountAndWait(<Banner aria-label="Some banner" actions={actions} />);
 
       expect(container.contains(actions)).toBe(true);
     });
@@ -228,7 +228,7 @@ describe('<Banner />', () => {
 
       const description = 'Description';
 
-      const container = mount(<Banner description={description} />);
+      const container = mount(<Banner aria-label="Some banner" description={description} />);
       const target = container.getDOMNode().getElementsByClassName(CONSTANTS.STYLE.description)[0];
 
       expect(target.innerHTML).toBe(description);
@@ -239,7 +239,7 @@ describe('<Banner />', () => {
 
       const details = 'Details';
 
-      const container = mount(<Banner details={details} />);
+      const container = mount(<Banner aria-label="Some banner" details={details} />);
       const target = container.getDOMNode().getElementsByClassName(CONSTANTS.STYLE.details)[0];
 
       expect(target.innerHTML).toBe(details);
@@ -250,7 +250,7 @@ describe('<Banner />', () => {
 
       const image = <Avatar initials="CW" />;
 
-      const container = await mountAndWait(<Banner image={image} />);
+      const container = await mountAndWait(<Banner aria-label="Some banner" image={image} />);
 
       expect(container.contains(image)).toBe(true);
     });
@@ -260,7 +260,7 @@ describe('<Banner />', () => {
 
       const isAlert = true;
 
-      const container = mount(<Banner isAlert={isAlert} />);
+      const container = mount(<Banner aria-label="Some banner" isAlert={isAlert} />);
       const target = container.find(Banner).getDOMNode();
 
       expect(target.getAttribute('data-alert')).toBe(`${isAlert}`);
@@ -271,7 +271,7 @@ describe('<Banner />', () => {
 
       const shape = Object.values(CONSTANTS.SHAPES).pop();
 
-      const container = mount(<Banner shape={shape} />);
+      const container = mount(<Banner aria-label="Some banner" shape={shape} />);
       const target = container.find(Banner).getDOMNode();
 
       expect(target.getAttribute('data-shape')).toBe(shape);

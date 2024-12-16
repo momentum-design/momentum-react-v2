@@ -1,89 +1,102 @@
 import { CSSProperties, ReactNode, ComponentProps, AriaRole } from 'react';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
 import { FocusScope } from '@react-aria/focus';
+import { AriaLabelingProps } from '@react-types/shared';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type Elevation = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 export type Round = 0 | 25 | 50 | 75 | 100 | 125 | 150;
 
-export interface Props {
-  /**
-   * Whether the arrow should be shown
-   *
-   * @default false
-   */
-  showArrow?: boolean;
+export type Props = AriaLabelingProps &
+  (
+    | {
+        /**
+         * Visible for this Modal Container.
+         */
+        title: string;
+      }
+    | ({ title?: never } & AriaLabelRequired)
+  ) & {
+    // if a title is not provided, a label is required
 
-  /**
-   * Placement of the Modal relative to the trigger component. The
-   * arrow will be placed accordingly.
-   *
-   * Possible values: `top`, `top-start`, `top-end`, `right`, `right-start`, `right-end`, `bottom`, `bottom-start`, `bottom-end`,
-   * `left`, `left-start`, `left-end`, `auto`, `auto-start`, `auto-end`
-   *
-   * @default `bottom`
-   */
-  placement?: PlacementType;
+    /**
+     * Whether the arrow should be shown
+     *
+     * @default false
+     */
+    showArrow?: boolean;
 
-  /**
-   * Child components of this ModalContainer.
-   */
-  children?: ReactNode;
+    /**
+     * Placement of the Modal relative to the trigger component. The
+     * arrow will be placed accordingly.
+     *
+     * Possible values: `top`, `top-start`, `top-end`, `right`, `right-start`, `right-end`, `bottom`, `bottom-start`, `bottom-end`,
+     * `left`, `left-start`, `left-end`, `auto`, `auto-start`, `auto-end`
+     *
+     * @default `bottom`
+     */
+    placement?: PlacementType;
 
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
+    /**
+     * Child components of this ModalContainer.
+     */
+    children?: ReactNode;
 
-  /**
-   * Color of this ModalContainer.
-   */
-  color?: Color;
+    /**
+     * Custom class for overriding this component's CSS.
+     */
+    className?: string;
 
-  /**
-   * The elevation of this ModalContainer.
-   */
-  elevation?: Elevation;
+    /**
+     * Color of this ModalContainer.
+     */
+    color?: Color;
 
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
+    /**
+     * The elevation of this ModalContainer.
+     */
+    elevation?: Elevation;
 
-  /**
-   * If this ModalContainer is padded.
-   */
-  isPadded?: boolean;
+    /**
+     * Custom id for overriding this component's CSS.
+     */
+    id?: string;
 
-  /**
-   * If this ModalContainer is round and to what degree.
-   *
-   * Can be 0 | 25 | 50 | 75 | 100 | 125 | 150
-   */
-  round?: Round;
+    /**
+     * If this ModalContainer is padded.
+     */
+    isPadded?: boolean;
 
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
+    /**
+     * If this ModalContainer is round and to what degree.
+     *
+     * Can be 0 | 25 | 50 | 75 | 100 | 125 | 150
+     */
+    round?: Round;
 
-  /**
-   * Custom id for the arrow.
-   */
-  arrowId?: string;
+    /**
+     * Custom style for overriding this component's CSS.
+     */
+    style?: CSSProperties;
 
-  /**
-   * Role for this modal.
-   */
-  role?: AriaRole;
+    /**
+     * Custom id for the arrow.
+     */
+    arrowId?: string;
 
-  /**
-   * Boolean for aria modal.
-   */
-  ariaModal?: boolean;
+    /**
+     * Role for this modal.
+     */
+    role?: AriaRole;
 
-  /**
-   * Props to be passed to FocusLock
-   */
-  focusLockProps?: Omit<ComponentProps<typeof FocusScope>, 'children' | 'key' | 'css'>;
-}
+    /**
+     * Boolean for aria modal.
+     */
+    ariaModal?: boolean;
+
+    /**
+     * Props to be passed to FocusLock
+     */
+    focusLockProps?: Omit<ComponentProps<typeof FocusScope>, 'children' | 'key' | 'css'>;
+  };

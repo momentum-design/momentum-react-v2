@@ -40,6 +40,7 @@ const Banner: FC<Props> = (props: Props) => {
       round={75}
       data-shape={shape}
       style={style}
+      aria-label={title}
       {...mutatedOtherProps}
     >
       {image}

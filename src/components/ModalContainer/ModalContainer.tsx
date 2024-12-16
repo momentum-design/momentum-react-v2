@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { FocusScope } from '@react-aria/focus';
 
 import ModalArrow from '../ModalArrow';
+import Text from '../Text';
 
 import { ARROW_ID, DEFAULTS, STYLE } from './ModalContainer.constants';
 import type { Props } from './ModalContainer.types';
@@ -25,6 +26,7 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
     className,
     style,
     focusLockProps,
+    title,
     ...otherProps
   } = props;
 
@@ -41,6 +43,7 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}
+      aria-label={props['aria-label'] || title}
       data-placement={placement}
       data-arrow-orientation={arrowOrientation}
       data-color={color}
@@ -49,6 +52,13 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
       data-round={round}
       {...otherProps}
     >
+      {!!title && (
+        <div className={classnames(STYLE.title)}>
+          <Text className={classnames(STYLE.title)} type="title" tagName="h2">
+            {title}
+          </Text>
+        </div>
+      )}
       {children}
       {
         /*arrow has to be wrapped in HTML element to allow Popover to style it*/
