@@ -47,11 +47,6 @@ interface Props extends AriaLabelingProps {
    * Max value of the slider
    */
   maxValue?: number;
-
-  /**
-   * aria-label to be passed to slider group
-   */
-  ariaLabel?: string;
 }
 
 export type SliderProps = Props & AriaLabelRequired;

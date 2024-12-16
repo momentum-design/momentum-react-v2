@@ -212,7 +212,7 @@ RenderedAsButtonGroup.argTypes = { ...argTypes };
 RenderedAsButtonGroup.args = {
   ariaToolbarItemsSize: 3,
   orientation: 'horizontal',
-  ariaLabel: 'Example aria toolbar rendered as button group.',
+  'aria-label': 'Example aria toolbar rendered as button group.',
   shouldRenderAsButtonGroup: true,
   buttonGroupProps: {
     round: true,
