@@ -35,6 +35,14 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     inputMaxLen,
   } = props;
 
+  const ariaLabel = props['aria-label'];
+
+  if (ariaLabel && label && ariaLabel === label) {
+    console.warn(
+      `MRV2: The aria-label and visible label of the Text Input are the same, making SR read it twice. Please provide only 1. Aria-label: ${ariaLabel}. Visible label: ${label}`
+    );
+  }
+
   const componentRef = React.useRef<HTMLInputElement>();
   const inputRef = ref || componentRef;
 

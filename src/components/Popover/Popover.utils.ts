@@ -2,11 +2,13 @@ import type { Plugin } from 'tippy.js';
 import { hideOnEscPlugin } from './tippy-plugins/hideOnEscPlugin';
 import { addBackdropPlugin } from './tippy-plugins/backdropPlugin';
 import { hideOnBlurPlugin } from './tippy-plugins/hideOnBlurPlugin';
+import { getSingleOpenPlugin } from './tippy-plugins/singleOpenPlugin';
 
 export const addTippyPlugins = (
   hideOnEsc: boolean,
   hideOnBlur: boolean,
-  addBackdrop: boolean
+  addBackdrop: boolean,
+  singleOpenGroupId?: string
 ): Array<Plugin> => {
   const plugins = [];
   if (hideOnEsc) {
@@ -17,6 +19,9 @@ export const addTippyPlugins = (
   }
   if (hideOnBlur) {
     plugins.push(hideOnBlurPlugin);
+  }
+  if (singleOpenGroupId) {
+    plugins.push(getSingleOpenPlugin(singleOpenGroupId));
   }
   return plugins;
 };

@@ -64,6 +64,11 @@ interface SelectProps<T> extends AriaSelectProps<T> {
    * Whether or not this Select should look disabled, but allow focus, etc.
    */
   shallowDisabled?: boolean;
+
+  /**
+   * Used to ensure only one select popover group is open at a time. Pass a unique string to this prop to group selects together.
+   */
+  popoverSingleOpenGroupId?: string;
 }
 
 export type Props<T> = SelectProps<T> &
