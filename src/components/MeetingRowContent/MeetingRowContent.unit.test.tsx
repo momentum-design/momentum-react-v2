@@ -123,7 +123,7 @@ describe('<MeetingRowContent />', () => {
           buttonGroup={
             <ButtonGroup>
               <ButtonPill key="1" />
-              <ButtonCircle key="2" />
+              <ButtonCircle aria-label="2" key="2" />
               <Avatar key="4" />
             </ButtonGroup>
           }

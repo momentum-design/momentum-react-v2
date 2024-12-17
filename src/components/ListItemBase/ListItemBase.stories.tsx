@@ -264,7 +264,13 @@ const ListItemWithChangingContent = () => {
               trigger="mouseenter"
               placement="bottom"
               triggerComponent={
-                <ButtonCircle size={20} ghost outline onPress={handleShowTextInstead}>
+                <ButtonCircle
+                  aria-label="some label"
+                  size={20}
+                  ghost
+                  outline
+                  onPress={handleShowTextInstead}
+                >
                   <Icon name="plus" weight="bold" scale={16} />
                 </ButtonCircle>
               }

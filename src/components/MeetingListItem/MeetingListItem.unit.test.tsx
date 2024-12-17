@@ -166,7 +166,9 @@ describe('<MeetingListItem />', () => {
           isDisabled={isDisabled}
           buttonGroup={
             <ButtonGroup>
-              <ButtonCircle key="1">Test</ButtonCircle>
+              <ButtonCircle aria-label="Test" key="1">
+                Test
+              </ButtonCircle>
               <ButtonPill key="2">Test</ButtonPill>
             </ButtonGroup>
           }

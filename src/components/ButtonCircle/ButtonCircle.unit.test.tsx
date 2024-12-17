@@ -12,7 +12,7 @@ describe('<ButtonCircle />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<ButtonCircle />);
+      const container = mount(<ButtonCircle aria-label="some label" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('<ButtonCircle />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<ButtonCircle className={className} />);
+      const container = mount(<ButtonCircle aria-label="some label" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -45,7 +45,7 @@ describe('<ButtonCircle />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<ButtonCircle id={id} />);
+      const container = mount(<ButtonCircle aria-label="some label" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -55,7 +55,7 @@ describe('<ButtonCircle />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<ButtonCircle style={style} />);
+      const container = mount(<ButtonCircle aria-label="some label" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -65,7 +65,11 @@ describe('<ButtonCircle />', () => {
 
       const color = COLORS[Object.keys(COLORS)[Object.keys(COLORS).length - 1]];
 
-      const container = mount(<ButtonCircle color={color}>X</ButtonCircle>);
+      const container = mount(
+        <ButtonCircle aria-label="some label" color={color}>
+          X
+        </ButtonCircle>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -75,7 +79,11 @@ describe('<ButtonCircle />', () => {
 
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
-      const container = mount(<ButtonCircle size={size}>X</ButtonCircle>);
+      const container = mount(
+        <ButtonCircle aria-label="some label" size={size}>
+          X
+        </ButtonCircle>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -85,7 +93,11 @@ describe('<ButtonCircle />', () => {
 
       const disabled = !DEFAULTS.DISABLED;
 
-      const container = mount(<ButtonCircle disabled={disabled}>X</ButtonCircle>);
+      const container = mount(
+        <ButtonCircle aria-label="some label" disabled={disabled}>
+          X
+        </ButtonCircle>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -95,7 +107,11 @@ describe('<ButtonCircle />', () => {
 
       const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
 
-      const container = mount(<ButtonCircle shallowDisabled={shallowDisabled}>X</ButtonCircle>);
+      const container = mount(
+        <ButtonCircle aria-label="some label" shallowDisabled={shallowDisabled}>
+          X
+        </ButtonCircle>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -105,7 +121,11 @@ describe('<ButtonCircle />', () => {
 
       const ghost = !DEFAULTS.GHOST;
 
-      const container = mount(<ButtonCircle ghost={ghost}>X</ButtonCircle>);
+      const container = mount(
+        <ButtonCircle aria-label="some label" ghost={ghost}>
+          X
+        </ButtonCircle>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -117,7 +137,7 @@ describe('<ButtonCircle />', () => {
       const disabled = !DEFAULTS.DISABLED;
 
       const container = mount(
-        <ButtonCircle ghost={ghost} disabled={disabled}>
+        <ButtonCircle aria-label="some label" ghost={ghost} disabled={disabled}>
           X
         </ButtonCircle>
       );
@@ -130,7 +150,11 @@ describe('<ButtonCircle />', () => {
 
       const outline = !DEFAULTS.OUTLINE;
 
-      const container = mount(<ButtonCircle outline={outline}>X</ButtonCircle>);
+      const container = mount(
+        <ButtonCircle aria-label="some label" outline={outline}>
+          X
+        </ButtonCircle>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -140,7 +164,7 @@ describe('<ButtonCircle />', () => {
 
       const title = 'Example Text';
 
-      const container = mount(<ButtonCircle title={title} />);
+      const container = mount(<ButtonCircle aria-label="some label" title={title} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -151,7 +175,9 @@ describe('<ButtonCircle />', () => {
       const outline = !DEFAULTS.OUTLINE;
       const inverted = !DEFAULTS.INVERTED;
 
-      const container = mount(<ButtonCircle outline={outline} inverted={inverted} />);
+      const container = mount(
+        <ButtonCircle aria-label="some label" outline={outline} inverted={inverted} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -161,7 +187,7 @@ describe('<ButtonCircle />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonCircle />)
+      const element = mount(<ButtonCircle aria-label="some label" />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -173,7 +199,7 @@ describe('<ButtonCircle />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<ButtonCircle className={className} />)
+      const element = mount(<ButtonCircle aria-label="some label" className={className} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -185,7 +211,7 @@ describe('<ButtonCircle />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<ButtonCircle id={id} />)
+      const element = mount(<ButtonCircle aria-label="some label" id={id} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -198,7 +224,7 @@ describe('<ButtonCircle />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ButtonCircle style={style} />)
+      const element = mount(<ButtonCircle aria-label="some label" style={style} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -210,7 +236,7 @@ describe('<ButtonCircle />', () => {
 
       const disabled = !DEFAULTS.DISABLED;
 
-      const element = mount(<ButtonCircle disabled={disabled} />)
+      const element = mount(<ButtonCircle aria-label="some label" disabled={disabled} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -222,7 +248,9 @@ describe('<ButtonCircle />', () => {
 
       const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
 
-      const element = mount(<ButtonCircle shallowDisabled={shallowDisabled} />)
+      const element = mount(
+        <ButtonCircle aria-label="some label" shallowDisabled={shallowDisabled} />
+      )
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -235,7 +263,7 @@ describe('<ButtonCircle />', () => {
 
       const ghost = !DEFAULTS.GHOST;
 
-      const element = mount(<ButtonCircle ghost={ghost} />)
+      const element = mount(<ButtonCircle aria-label="some label" ghost={ghost} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -247,7 +275,7 @@ describe('<ButtonCircle />', () => {
 
       const outline = !DEFAULTS.OUTLINE;
 
-      const element = mount(<ButtonCircle outline={outline} />)
+      const element = mount(<ButtonCircle aria-label="some label" outline={outline} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -259,7 +287,7 @@ describe('<ButtonCircle />', () => {
 
       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
 
-      const element = mount(<ButtonCircle size={size} />)
+      const element = mount(<ButtonCircle aria-label="some label" size={size} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -271,7 +299,7 @@ describe('<ButtonCircle />', () => {
 
       const color = COLORS[Object.keys(COLORS)[Object.keys(COLORS).length - 1]];
 
-      const element = mount(<ButtonCircle color={color} />)
+      const element = mount(<ButtonCircle aria-label="some label" color={color} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -283,7 +311,7 @@ describe('<ButtonCircle />', () => {
 
       const title = 'Example Text';
 
-      const element = mount(<ButtonCircle title={title} />)
+      const element = mount(<ButtonCircle aria-label="some label" title={title} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -295,7 +323,7 @@ describe('<ButtonCircle />', () => {
 
       const inverted = !DEFAULTS.INVERTED;
 
-      const element = mount(<ButtonCircle inverted={inverted} />)
+      const element = mount(<ButtonCircle aria-label="some label" inverted={inverted} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -305,7 +333,7 @@ describe('<ButtonCircle />', () => {
     it('should render ButtonSimple', () => {
       expect.assertions(1);
 
-      const container = mount(<ButtonCircle />);
+      const container = mount(<ButtonCircle aria-label="some label" />);
 
       expect(container.find(ButtonSimple).exists()).toBe(true);
     });
@@ -317,7 +345,9 @@ describe('<ButtonCircle />', () => {
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ButtonCircle onPress={mockCallback} />).find(ButtonCircle);
+      const component = mount(<ButtonCircle aria-label="some label" onPress={mockCallback} />).find(
+        ButtonCircle
+      );
 
       component.props().onPress({
         type: 'press',
@@ -337,9 +367,9 @@ describe('<ButtonCircle />', () => {
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ButtonCircle shallowDisabled onPress={mockCallback} />).find(
-        ButtonCircle
-      );
+      const component = mount(
+        <ButtonCircle aria-label="some label" shallowDisabled onPress={mockCallback} />
+      ).find(ButtonCircle);
 
       component.props().onPress({
         type: 'press',

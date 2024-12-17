@@ -50,7 +50,7 @@ function Template(): Story<OverlayAlertProps> {
         <ButtonPill onPress={close} size={28}>
           Grouped Button
         </ButtonPill>
-        <ButtonCircle onPress={close} size={28}>
+        <ButtonCircle onPress={close} size={28} aria-label="accessibility">
           <Icon name="accessibility" autoScale />
         </ButtonCircle>
       </ButtonGroup>,

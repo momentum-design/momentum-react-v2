@@ -33,7 +33,7 @@ Example.args = {
   actionColor: 'success',
   actions: (
     <ButtonGroup spaced>
-      <ButtonCircle outline size={28}>
+      <ButtonCircle outline size={28} aria-label="alarm">
         <Icon name="alarm" weight="bold" autoScale={125} />
       </ButtonCircle>
       <ButtonPill color="message" size={28}>
@@ -84,7 +84,7 @@ Common.parameters = {
       actionColor: 'join',
       actions: (
         <ButtonGroup spaced>
-          <ButtonCircle outline inverted size={28}>
+          <ButtonCircle outline inverted size={28} aria-label="alarm">
             <Icon name="alarm" weight="bold" autoScale={125} />
           </ButtonCircle>
           <ButtonPill color="message" size={28}>
@@ -108,7 +108,7 @@ Common.parameters = {
       info: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing.',
       actions: (
         <ButtonGroup spaced>
-          <ButtonCircle outline inverted size={28}>
+          <ButtonCircle outline inverted size={28} aria-label="alarm">
             <Icon name="alarm" weight="bold" autoScale={125} />
           </ButtonCircle>
           <ButtonPill color="join" size={28}>

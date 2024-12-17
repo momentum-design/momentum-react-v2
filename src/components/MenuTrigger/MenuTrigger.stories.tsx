@@ -67,7 +67,7 @@ Common.parameters = {
     {
       label: 'Circle Button Trigger',
       triggerComponent: (
-        <ButtonCircle key="1">
+        <ButtonCircle key="1" aria-label="favorite">
           <Icon name="favorite" weight="filled" autoScale={150} />
         </ButtonCircle>
       ),
@@ -169,7 +169,7 @@ Common.parameters = {
     {
       label: 'Default selected Keys',
       triggerComponent: (
-        <ButtonCircle key="1" color="message">
+        <ButtonCircle key="1" color="message" aria-label="message">
           <Icon name="chat" weight="filled" autoScale={150} />
         </ButtonCircle>
       ),
@@ -185,7 +185,7 @@ Common.parameters = {
       label: 'With People',
       overlayRadius: 24,
       triggerComponent: (
-        <ButtonCircle key="1" color="join">
+        <ButtonCircle key="1" color="join" aria-label="join">
           <Icon name="chat" weight="filled" autoScale={150} />
         </ButtonCircle>
       ),

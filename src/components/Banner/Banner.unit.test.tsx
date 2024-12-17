@@ -54,10 +54,10 @@ describe('<Banner />', () => {
 
       const actions = (
         <ButtonGroup spaced>
-          <ButtonCircle color="join">
+          <ButtonCircle aria-label="camera" color="join">
             <Icon name="camera" autoScale={125} />
           </ButtonCircle>
-          <ButtonCircle color="cancel">
+          <ButtonCircle aria-label="cancel" color="cancel">
             <Icon name="cancel" autoScale={125} />
           </ButtonCircle>
         </ButtonGroup>
@@ -134,10 +134,10 @@ describe('<Banner />', () => {
       const props = {
         actions: (
           <ButtonGroup spaced>
-            <ButtonCircle color="join">
+            <ButtonCircle aria-label="camera" color="join">
               <Icon name="camera" autoScale={125} />
             </ButtonCircle>
-            <ButtonCircle color="cancel">
+            <ButtonCircle aria-label="cancel" color="cancel">
               <Icon name="cancel" autoScale={125} />
             </ButtonCircle>
           </ButtonGroup>
@@ -209,10 +209,10 @@ describe('<Banner />', () => {
 
       const actions = (
         <ButtonGroup spaced>
-          <ButtonCircle color="join">
+          <ButtonCircle aria-label="camera" color="join">
             <Icon name="camera" autoScale={125} />
           </ButtonCircle>
-          <ButtonCircle color="cancel">
+          <ButtonCircle aria-label="cancel" color="cancel">
             <Icon name="cancel" autoScale={125} />
           </ButtonCircle>
         </ButtonGroup>

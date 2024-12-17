@@ -42,6 +42,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
         itemIndex={0}
       >
         <ReactionButton
+          aria-label="Send reaction"
           onFocus={[Function]}
           onKeyDown={[Function]}
           onPress={[Function]}
@@ -49,6 +50,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
           useNativeKeyDown={true}
         >
           <ButtonCircle
+            aria-label="Send reaction"
             className="md-reaction-button-wrapper"
             data-reacted={false}
             ghost={true}
@@ -61,6 +63,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
           >
             <ButtonSimple
               aria-disabled={false}
+              aria-label="Send reaction"
               className="md-button-circle-wrapper md-reaction-button-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -83,6 +86,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-label="Send reaction"
                     className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
                     data-color="primary"
                     data-disabled={false}

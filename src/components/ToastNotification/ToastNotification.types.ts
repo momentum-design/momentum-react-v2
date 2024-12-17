@@ -10,7 +10,31 @@ import { ButtonCircleProps } from '../ButtonCircle';
 export type SupportedLeadingVisuals = AvatarProps | IconProps | BadgeProps;
 export type SupportedButtonGroup = ButtonPillProps | ButtonCircleProps;
 
-export interface Props {
+export type ToastNotificationCloseProps =
+  | {
+      /**
+       * Callback when user clicks on the close button. If defined, please also pass closeButtonLabel property.
+       */
+      onClose: (event: PressEvent) => void;
+
+      /**
+       * Close button's aria-label
+       */
+      closeButtonLabel: string;
+    }
+  | {
+      /**
+       * Callback when user clicks on the close button. If defined, please also pass closeButtonLabel property.
+       */
+      onClose?: never;
+
+      /**
+       * Close button's aria-label
+       */
+      closeButtonLabel?: string;
+    };
+
+export type Props = ToastNotificationCloseProps & {
   /**
    * The free string or a ReactElement that appears inside the Notification toast.
    */
@@ -41,16 +65,7 @@ export interface Props {
   style?: CSSProperties;
 
   /**
-   * Callback when user clicks on the close button. If defined, please also pass closeButtonLabel property.
-   */
-  onClose?: (event: PressEvent) => void;
-
-  /**
-   * Close button's aria-label
-   */
-  closeButtonLabel?: string;
-  /**
    * aria-label used for the toast notification.
    */
   ariaLabel?: string;
-}
+};

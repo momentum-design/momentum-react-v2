@@ -62,7 +62,7 @@ describe('<ReactionPicker />', () => {
 
       const children = (
         <AriaToolbarItem itemIndex={0}>
-          <ReactionButton />
+          <ReactionButton aria-label="Send reaction" />
         </AriaToolbarItem>
       );
 

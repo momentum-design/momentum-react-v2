@@ -109,13 +109,13 @@ Common.parameters = {
       label: 'Recording with buttons',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonCircle key="btn-info" ghost={true}>
+          <ButtonCircle aria-label="info" key="btn-info" ghost={true}>
             <Icon name="info-circle" />
           </ButtonCircle>
-          <ButtonCircle key="btn-share" ghost={true}>
+          <ButtonCircle aria-label="share" key="btn-share" ghost={true}>
             <Icon name="share-c-native-iph" />
           </ButtonCircle>
-          <ButtonCircle key="btn-chat" ghost={true}>
+          <ButtonCircle aria-label="chat" key="btn-chat" ghost={true}>
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>
@@ -141,10 +141,10 @@ Common.parameters = {
       buttonGroup: (
         <ButtonGroup spaced>
           <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
-          <ButtonCircle key="btn-info" ghost={true}>
+          <ButtonCircle aria-label="info" key="btn-info" ghost={true}>
             <Icon name="info-circle" />
           </ButtonCircle>
-          <ButtonCircle key="btn-chat" ghost={true}>
+          <ButtonCircle aria-label="chat" key="btn-chat" ghost={true}>
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>
@@ -283,10 +283,10 @@ Common.parameters = {
       buttonGroup: (
         <ButtonGroup spaced>
           <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
-          <ButtonCircle key="button-copy" ghost={true}>
+          <ButtonCircle aria-label="copy" key="button-copy" ghost={true}>
             <Icon name="copy" />
           </ButtonCircle>
-          <ButtonCircle key="button-chat" ghost={true}>
+          <ButtonCircle aria-label="chat" key="button-chat" ghost={true}>
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>

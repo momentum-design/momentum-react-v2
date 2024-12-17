@@ -199,19 +199,6 @@ describe('<ToastNotification />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should wrap the onClose inside when onClose is provided and closeButtonLabel is undefined', async () => {
-      expect.assertions(2);
-
-      const wrapper = await mountAndWait(
-        <ToastNotification onClose={onClose} content={exampleContent} />
-      );
-      const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
-      const button = wrapper.find('.md-toast-notification-close-button button');
-
-      expect(element).toBeDefined();
-      expect(button.props()['aria-label']).toBe(undefined);
-    });
-
     it('should have label of the close button when both onClose and closeButtonLabel defined', async () => {
       expect.assertions(2);
 
@@ -278,7 +265,11 @@ describe('<ToastNotification />', () => {
       const mockCallback = jest.fn();
 
       const wrapper = await mountAndWait(
-        <ToastNotification onClose={mockCallback} content={exampleContent} />
+        <ToastNotification
+          onClose={mockCallback}
+          closeButtonLabel="close"
+          content={exampleContent}
+        />
       );
       const component = wrapper.find(ButtonCircle);
 

@@ -7,6 +7,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
       spaced={true}
     >
       <ButtonCircle
+        aria-label="camera"
         color="join"
       >
         <Icon
@@ -15,6 +16,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
         />
       </ButtonCircle>
       <ButtonCircle
+        aria-label="cancel"
         color="cancel"
       >
         <Icon
@@ -145,10 +147,12 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
           data-spaced={true}
         >
           <ButtonCircle
+            aria-label="camera"
             color="join"
           >
             <ButtonSimple
               aria-disabled={false}
+              aria-label="camera"
               className="md-button-circle-wrapper"
               data-color="join"
               data-disabled={false}
@@ -165,6 +169,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-label="camera"
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="join"
                     data-disabled={false}
@@ -219,10 +224,12 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
             </ButtonSimple>
           </ButtonCircle>
           <ButtonCircle
+            aria-label="cancel"
             color="cancel"
           >
             <ButtonSimple
               aria-disabled={false}
+              aria-label="cancel"
               className="md-button-circle-wrapper"
               data-color="cancel"
               data-disabled={false}
@@ -239,6 +246,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-label="cancel"
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="cancel"
                     data-disabled={false}
@@ -374,6 +382,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
       spaced={true}
     >
       <ButtonCircle
+        aria-label="camera"
         color="join"
       >
         <Icon
@@ -382,6 +391,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
         />
       </ButtonCircle>
       <ButtonCircle
+        aria-label="cancel"
         color="cancel"
       >
         <Icon
@@ -465,10 +475,12 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
           data-spaced={true}
         >
           <ButtonCircle
+            aria-label="camera"
             color="join"
           >
             <ButtonSimple
               aria-disabled={false}
+              aria-label="camera"
               className="md-button-circle-wrapper"
               data-color="join"
               data-disabled={false}
@@ -485,6 +497,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-label="camera"
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="join"
                     data-disabled={false}
@@ -539,10 +552,12 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
             </ButtonSimple>
           </ButtonCircle>
           <ButtonCircle
+            aria-label="cancel"
             color="cancel"
           >
             <ButtonSimple
               aria-disabled={false}
+              aria-label="cancel"
               className="md-button-circle-wrapper"
               data-color="cancel"
               data-disabled={false}
@@ -559,6 +574,7 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
                   focusRingClass="md-focus-ring-wrapper children"
                 >
                   <button
+                    aria-label="cancel"
                     className="md-button-circle-wrapper md-button-simple-wrapper"
                     data-color="cancel"
                     data-disabled={false}

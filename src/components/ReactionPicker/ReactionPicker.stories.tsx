@@ -20,7 +20,7 @@ const reactionChildren = [
     variant="small"
     triggerComponent={
       <AriaToolbarItem itemIndex={0}>
-        <ReactionButton key="1">
+        <ReactionButton aria-label="Send reaction" key="1">
           <Reaction aria-label="Celebrate reaction" name="celebrate" autoPlay />
         </ReactionButton>
       </AriaToolbarItem>

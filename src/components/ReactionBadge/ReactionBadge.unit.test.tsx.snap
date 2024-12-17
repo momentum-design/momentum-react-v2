@@ -4,6 +4,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
 <ReactionBadge
   reaction={
     <Reaction
+      aria-label="Laughing reaction"
       name="haha"
     />
   }
@@ -62,9 +63,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -86,6 +89,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
   className="example-class"
   reaction={
     <Reaction
+      aria-label="Laughing reaction"
       name="haha"
     />
   }
@@ -144,9 +148,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -168,6 +174,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
   count={1}
   reaction={
     <Reaction
+      aria-label="Laughing reaction"
       name="haha"
     />
   }
@@ -226,9 +233,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -252,6 +261,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
   id="example-id"
   reaction={
     <Reaction
+      aria-label="Laughing reaction"
       name="haha"
     />
   }
@@ -313,9 +323,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -337,6 +349,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
   reacted={true}
   reaction={
     <Reaction
+      aria-label="Laughing reaction"
       name="haha"
     />
   }
@@ -395,9 +408,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -418,6 +433,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
 <ReactionBadge
   reaction={
     <Reaction
+      aria-label="Laughing reaction"
       name="haha"
     />
   }
@@ -496,9 +512,11 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}

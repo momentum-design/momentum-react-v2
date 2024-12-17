@@ -32,6 +32,7 @@ const Example: Story<TooltipPopoverComboProps> = () => {
     <ButtonCircle
       size={40}
       color="cancel"
+      aria-label="cancel"
       style={{
         alignItems: 'center',
         justifyContent: 'center',
