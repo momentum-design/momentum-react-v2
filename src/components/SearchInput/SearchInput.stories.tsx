@@ -21,7 +21,6 @@ export default {
     placeholder: 'Search',
     label: 'This is a search',
     initialText: 'message',
-    initialLabel: 'Search messages by person or space',
     clearButtonAriaLabel: 'CLEAR',
     initialFilters: [
       {
@@ -57,11 +56,7 @@ interface SearchInputExampleProps extends SearchInputProps {
 }
 
 const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExampleProps) => {
-  const { initialText, initialFilters, initialLabel } = props;
-
-  const mutatedProps = { ...props };
-  delete mutatedProps.initialText;
-  delete mutatedProps.initialFilters;
+  const { initialText, initialFilters, ...rest } = props;
 
   const [val, setVal] = useState(initialText);
   const [filters, setFilters] = useState(initialFilters);
@@ -109,9 +104,8 @@ const BetterExample: FC<SearchInputExampleProps> = (props: SearchInputExamplePro
       filters={filters}
       onFiltersChange={handleFiltersChange}
       onChange={handleChange}
-      label={initialLabel}
       clearButtonAriaLabel="Clear"
-      {...mutatedProps}
+      {...rest}
       searching={searching}
     />
   );
