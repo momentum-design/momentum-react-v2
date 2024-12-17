@@ -68,11 +68,11 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
 
   const containerRef = useRef(null);
 
-  const {
-    inputProps: ariaInputProps,
-    clearButtonProps,
-    labelProps,
-  } = useSearchField(cleanedProps, state, inputRef);
+  const { inputProps: ariaInputProps, clearButtonProps } = useSearchField(
+    cleanedProps,
+    state,
+    inputRef
+  );
 
   const { onKeyDown, ...otherAriaInputProps } = ariaInputProps;
 
