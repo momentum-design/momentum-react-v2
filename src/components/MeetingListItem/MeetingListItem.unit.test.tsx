@@ -166,7 +166,9 @@ describe('<MeetingListItem />', () => {
           isDisabled={isDisabled}
           buttonGroup={
             <ButtonGroup>
-              <ButtonCircle key="1">Test</ButtonCircle>
+              <ButtonCircle aria-label="Test" key="1">
+                Test
+              </ButtonCircle>
               <ButtonPill key="2">Test</ButtonPill>
             </ButtonGroup>
           }
@@ -239,7 +241,7 @@ describe('<MeetingListItem />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={1}>
+        <List aria-label="My list" listSize={1}>
           <MeetingListItem
             itemIndex={0}
             data-testid="meeting-list-item"

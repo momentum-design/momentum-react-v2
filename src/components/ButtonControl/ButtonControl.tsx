@@ -8,12 +8,15 @@ import { ICONS, STYLE } from './ButtonControl.constants';
 import { Props } from './ButtonControl.types';
 import './ButtonControl.style.scss';
 import { InferredIconName } from '../Icon/Icon.types';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 /**
  * `<ControlButtons />` are used to control [close, maximize, minimize, etc] components [usually panels] they are assigned to.
  */
 const ButtonControl = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, control, isCircular, ...otherProps } = props;
+
+  useCheckAriaLabel('ButtonControl', props);
 
   const iconName = (ICONS[control] || 'not-found') as InferredIconName;
   const iconProps: IconProps = {

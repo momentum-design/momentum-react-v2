@@ -13,7 +13,7 @@ const ariaToolbarArgTypes = {
       },
     },
   },
-  ariaLabel: {
+  'aria-label': {
     description: 'The aria-label for the toolbar',
     control: { type: 'text' },
     table: {

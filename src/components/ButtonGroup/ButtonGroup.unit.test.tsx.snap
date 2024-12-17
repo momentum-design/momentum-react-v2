@@ -67,10 +67,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -87,6 +89,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -193,10 +196,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -213,6 +218,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -320,10 +326,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with aria-label 1`] = `
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -340,6 +348,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with aria-label 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -379,10 +388,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with aria-label 1`] = `
 
 exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
 <ButtonCircle
+  aria-label="some label"
   className="example-class"
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper example-class"
     data-color="primary"
     data-disabled={false}
@@ -399,6 +410,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper example-class md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -432,10 +444,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
 
 exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
 <ButtonCircle
+  aria-label="some label"
   id="example-id"
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -453,6 +467,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -554,10 +569,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -574,6 +591,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -613,9 +631,11 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
 
 exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
 <ButtonGroup
+  aria-label="some label"
   role="tablist"
 >
   <div
+    aria-label="some label"
     className="md-button-group-wrapper"
     data-compressed={false}
     data-orientation="horizontal"
@@ -681,10 +701,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -701,6 +723,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -807,10 +830,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -827,6 +852,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}
@@ -933,10 +959,12 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
       </ButtonSimple>
     </ButtonPill>
     <ButtonCircle
+      aria-label="some label"
       key="1"
     >
       <ButtonSimple
         aria-disabled={false}
+        aria-label="some label"
         className="md-button-circle-wrapper"
         data-color="primary"
         data-disabled={false}
@@ -953,6 +981,7 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="some label"
               className="md-button-circle-wrapper md-button-simple-wrapper"
               data-color="primary"
               data-disabled={false}

@@ -13,9 +13,6 @@ import AriaButtonDocs from '../../storybook/docs.stories.aria-button.mdx';
 import HTMLGlobalAttributes from '../../storybook/docs.stories.common-html-attributes.mdx';
 
 import ButtonCircle, { ButtonCircleProps } from './';
-import { Story } from '@storybook/react';
-import Tooltip from '../Tooltip';
-import Flex from '../Flex';
 import argTypes from './ButtonCircle.stories.args';
 import Documentation from './ButtonCircle.stories.docs.mdx';
 

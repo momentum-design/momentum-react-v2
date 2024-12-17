@@ -3,6 +3,8 @@ import { CSSProperties } from 'react';
 import { IconScale } from '../Icon/Icon.types';
 
 import { ON_VIDEO_PATH } from './Reaction.constants';
+import { AriaLabelingProps } from '@react-types/shared';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
 type OnVideoPrefix = typeof ON_VIDEO_PATH;
 
@@ -73,6 +75,11 @@ export interface Props {
    * in the @momentum-design/animations repo. Path starts under /animations/reactions;
    */
   name: ReactionName;
+
+  /**
+   * Translated label of the reaction
+   */
+  'aria-label': string;
 
   /**
    * Size index of this Reaction.

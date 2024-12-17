@@ -5,9 +5,12 @@ import { DEFAULTS, STYLE } from './ReactionBadge.constants';
 import { Props } from './ReactionBadge.types';
 import './ReactionBadge.style.scss';
 import ButtonPill from '../ButtonPill';
+import { useCheckAriaLabel } from '../../utils/a11y';
 
 const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, count, reacted, reaction, ...otherProps } = props;
+
+  useCheckAriaLabel('ReactionBadge', props);
 
   return (
     <ButtonPill

@@ -20,7 +20,7 @@ export default {
     },
   },
   args: {
-    children: <Reaction name={REACTIONS.haha} />,
+    children: <Reaction aria-label="Laughing reaction" name={REACTIONS.haha} />,
   },
 };
 
@@ -36,14 +36,14 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      children: <Reaction name={REACTIONS.haha} />,
+      children: <Reaction aria-label="Laughing reaction" name={REACTIONS.haha} />,
       reacted: true,
     },
     {
-      children: <Reaction name={REACTIONS.wow} />,
+      children: <Reaction aria-label="Laughing reaction" name={REACTIONS.wow} />,
     },
     {
-      children: <Reaction name={REACTIONS.smile} />,
+      children: <Reaction aria-label="Laughing reaction" name={REACTIONS.smile} />,
     },
   ],
 };

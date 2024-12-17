@@ -6,6 +6,8 @@ import {
   ReactNode,
 } from 'react';
 import { ItemSelection, UseItemSelectedProps } from '../../hooks/useItemSelected';
+import { AriaLabelingProps } from '@react-types/shared';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
 /**
  * The key codes used to navigate the tree.
@@ -98,9 +100,10 @@ export type TreeIdNodeMap = Map<TreeNodeId, TreeNodeRecord>;
 /**
  * The props of the Tree component.
  */
-export interface Props
+interface TreeProps
   extends Partial<UseItemSelectedProps<TreeNodeId>>,
-    DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+    AriaLabelingProps {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -197,6 +200,8 @@ export interface Props
    */
   onToggleNode?: (id: TreeNodeId, isOpen: boolean) => void;
 }
+
+export type Props = TreeProps & AriaLabelRequired;
 
 /**
  * Props of the virtualized tree hook

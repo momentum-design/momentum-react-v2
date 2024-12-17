@@ -3,21 +3,7 @@
 exports[`<Slider /> snapshot should match snapshot 1`] = `
 <div>
   <input
-    class="md-slider-wrapper"
-    max="10"
-    min="0"
-    step="1"
-    style="--local-value: 20%;"
-    type="range"
-    value="2"
-  />
-</div>
-`;
-
-exports[`<Slider /> snapshot should match snapshot with ariaLabel 1`] = `
-<div>
-  <input
-    aria-label="test aria label"
+    aria-label="Slider"
     class="md-slider-wrapper"
     max="10"
     min="0"
@@ -32,6 +18,7 @@ exports[`<Slider /> snapshot should match snapshot with ariaLabel 1`] = `
 exports[`<Slider /> snapshot should match snapshot with className 1`] = `
 <div>
   <input
+    aria-label="Slider"
     class="example-class md-slider-wrapper"
     max="10"
     min="0"
@@ -46,6 +33,7 @@ exports[`<Slider /> snapshot should match snapshot with className 1`] = `
 exports[`<Slider /> snapshot should match snapshot with id 1`] = `
 <div>
   <input
+    aria-label="Slider"
     class="md-slider-wrapper"
     id="example-id"
     max="10"
@@ -61,6 +49,7 @@ exports[`<Slider /> snapshot should match snapshot with id 1`] = `
 exports[`<Slider /> snapshot should match snapshot with isDisabled 1`] = `
 <div>
   <input
+    aria-label="Slider"
     class="md-slider-wrapper"
     disabled=""
     max="10"
@@ -76,6 +65,7 @@ exports[`<Slider /> snapshot should match snapshot with isDisabled 1`] = `
 exports[`<Slider /> snapshot should match snapshot with style 1`] = `
 <div>
   <input
+    aria-label="Slider"
     class="md-slider-wrapper"
     max="10"
     min="0"

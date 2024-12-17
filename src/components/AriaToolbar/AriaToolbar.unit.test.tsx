@@ -14,7 +14,7 @@ describe('<AriaToolbar />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<AriaToolbar ariaLabel="test" ariaToolbarItemsSize={0} />);
+      const container = mount(<AriaToolbar aria-label="test" ariaToolbarItemsSize={0} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -25,7 +25,7 @@ describe('<AriaToolbar />', () => {
       const className = 'example-class';
 
       const container = mount(
-        <AriaToolbar ariaLabel="test" className={className} ariaToolbarItemsSize={0} />
+        <AriaToolbar aria-label="test" className={className} ariaToolbarItemsSize={0} />
       );
 
       expect(container).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe('<AriaToolbar />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<AriaToolbar ariaLabel="test" id={id} ariaToolbarItemsSize={0} />);
+      const container = mount(<AriaToolbar aria-label="test" id={id} ariaToolbarItemsSize={0} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -47,7 +47,7 @@ describe('<AriaToolbar />', () => {
       const style = { color: 'pink' };
 
       const container = mount(
-        <AriaToolbar ariaLabel="test" style={style} ariaToolbarItemsSize={0} />
+        <AriaToolbar aria-label="test" style={style} ariaToolbarItemsSize={0} />
       );
 
       expect(container).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe('<AriaToolbar />', () => {
       const container = mount(
         <AriaToolbar
           shouldRenderAsButtonGroup={true}
-          ariaLabel="test"
+          aria-label="test"
           style={style}
           ariaToolbarItemsSize={0}
         />
@@ -74,7 +74,7 @@ describe('<AriaToolbar />', () => {
       expect.assertions(4);
 
       const container = mount(
-        <AriaToolbar ariaLabel="test" ariaToolbarItemsSize={3}>
+        <AriaToolbar aria-label="test" ariaToolbarItemsSize={3}>
           <AriaToolbarItem itemIndex={0}>
             <ButtonSimple />
           </AriaToolbarItem>
@@ -106,7 +106,7 @@ describe('<AriaToolbar />', () => {
       expect.assertions(4);
 
       const container = mount(
-        <AriaToolbar orientation="vertical" ariaLabel="test" ariaToolbarItemsSize={3}>
+        <AriaToolbar orientation="vertical" aria-label="test" ariaToolbarItemsSize={3}>
           <AriaToolbarItem itemIndex={0}>
             <ButtonSimple />
           </AriaToolbarItem>
@@ -138,7 +138,7 @@ describe('<AriaToolbar />', () => {
       expect.assertions(7);
       const user = userEvent.setup();
       const { getAllByRole, container } = render(
-        <AriaToolbar orientation="vertical" ariaLabel="test" ariaToolbarItemsSize={3}>
+        <AriaToolbar orientation="vertical" aria-label="test" ariaToolbarItemsSize={3}>
           <AriaToolbarItem itemIndex={0}>
             <ButtonSimple />
           </AriaToolbarItem>
@@ -177,7 +177,7 @@ describe('<AriaToolbar />', () => {
       const dataTest = 'data-test';
 
       const container = mount(
-        <AriaToolbar ariaLabel="test" data-test={dataTest} ariaToolbarItemsSize={0} />
+        <AriaToolbar aria-label="test" data-test={dataTest} ariaToolbarItemsSize={0} />
       );
 
       expect(container).toMatchSnapshot();
@@ -188,7 +188,7 @@ describe('<AriaToolbar />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<AriaToolbar ariaLabel="test" ariaToolbarItemsSize={0} />)
+      const element = mount(<AriaToolbar aria-label="test" ariaToolbarItemsSize={0} />)
         .find(AriaToolbar)
         .getDOMNode();
 
@@ -201,7 +201,7 @@ describe('<AriaToolbar />', () => {
       const className = 'example-class';
 
       const element = mount(
-        <AriaToolbar ariaLabel="test" className={className} ariaToolbarItemsSize={0} />
+        <AriaToolbar aria-label="test" className={className} ariaToolbarItemsSize={0} />
       )
         .find(AriaToolbar)
         .getDOMNode();
@@ -214,7 +214,7 @@ describe('<AriaToolbar />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<AriaToolbar ariaLabel="test" id={id} ariaToolbarItemsSize={0} />)
+      const element = mount(<AriaToolbar aria-label="test" id={id} ariaToolbarItemsSize={0} />)
         .find(AriaToolbar)
         .getDOMNode();
 
@@ -227,25 +227,13 @@ describe('<AriaToolbar />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<AriaToolbar ariaLabel="test" style={style} ariaToolbarItemsSize={0} />)
-        .find(AriaToolbar)
-        .getDOMNode();
-
-      expect(element.getAttribute('style')).toBe(styleString);
-    });
-
-    it('should have provided aria-controls when ariaControls is provided', () => {
-      expect.assertions(1);
-
-      const ariaControls = 'testid';
-
       const element = mount(
-        <AriaToolbar ariaLabel="test" ariaControls={ariaControls} ariaToolbarItemsSize={0} />
+        <AriaToolbar aria-label="test" style={style} ariaToolbarItemsSize={0} />
       )
         .find(AriaToolbar)
         .getDOMNode();
 
-      expect(element.getAttribute('aria-controls')).toBe(ariaControls);
+      expect(element.getAttribute('style')).toBe(styleString);
     });
 
     it('should have provided aria-label when ariaLabel is provided', () => {
@@ -253,7 +241,7 @@ describe('<AriaToolbar />', () => {
 
       const ariaLabel = 'test label';
 
-      const element = mount(<AriaToolbar ariaLabel={ariaLabel} ariaToolbarItemsSize={0} />)
+      const element = mount(<AriaToolbar aria-label={ariaLabel} ariaToolbarItemsSize={0} />)
         .find(AriaToolbar)
         .getDOMNode();
 
@@ -266,7 +254,7 @@ describe('<AriaToolbar />', () => {
       const ariaLabel = 'test label';
 
       const element = mount(
-        <AriaToolbar shouldRenderAsButtonGroup ariaLabel={ariaLabel} ariaToolbarItemsSize={0} />
+        <AriaToolbar shouldRenderAsButtonGroup aria-label={ariaLabel} ariaToolbarItemsSize={0} />
       )
         .find(AriaToolbar)
         .getDOMNode();
@@ -287,7 +275,7 @@ describe('<AriaToolbar />', () => {
         const element = mount(
           <AriaToolbar
             shouldRenderAsButtonGroup
-            ariaLabel="test"
+            aria-label="test"
             orientation={orientation}
             ariaToolbarItemsSize={0}
           />
@@ -307,7 +295,7 @@ describe('<AriaToolbar />', () => {
       const onTabPress = jest.fn();
 
       const element = mount(
-        <AriaToolbar ariaLabel="test" onTabPress={onTabPress} ariaToolbarItemsSize={1}>
+        <AriaToolbar aria-label="test" onTabPress={onTabPress} ariaToolbarItemsSize={1}>
           <AriaToolbarItem itemIndex={0}>
             <ButtonSimple>test button</ButtonSimple>
           </AriaToolbarItem>
@@ -325,7 +313,7 @@ describe('<AriaToolbar />', () => {
       const onPress = jest.fn();
 
       const element = mount(
-        <AriaToolbar ariaLabel="test" ariaToolbarItemsSize={1}>
+        <AriaToolbar aria-label="test" ariaToolbarItemsSize={1}>
           <AriaToolbarItem itemIndex={0}>
             <ButtonSimple onPress={onPress}>test button</ButtonSimple>
           </AriaToolbarItem>
@@ -343,7 +331,7 @@ describe('<AriaToolbar />', () => {
       const element = mount(
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <div onKeyDown={onKeyDown}>
-          <AriaToolbar ariaLabel="test" ariaToolbarItemsSize={1}>
+          <AriaToolbar aria-label="test" ariaToolbarItemsSize={1}>
             <AriaToolbarItem itemIndex={0}>
               <ButtonSimple>test button</ButtonSimple>
             </AriaToolbarItem>

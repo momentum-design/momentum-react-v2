@@ -535,11 +535,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
               data-position="end"
             >
               <ButtonCircle
+                aria-label="more"
                 ghost={true}
                 size={28}
               >
                 <ButtonSimple
                   aria-disabled={false}
+                  aria-label="more"
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -556,6 +558,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
+                        aria-label="more"
                         className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
@@ -740,11 +743,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
               data-position="end"
             >
               <ButtonCircle
+                aria-label="microphone"
                 ghost={true}
                 size={28}
               >
                 <ButtonSimple
                   aria-disabled={false}
+                  aria-label="microphone"
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -761,6 +766,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
+                        aria-label="microphone"
                         className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}
@@ -950,11 +956,13 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
               data-position="end"
             >
               <ButtonCircle
+                aria-label="microphone"
                 ghost={true}
                 size={28}
               >
                 <ButtonSimple
                   aria-disabled={false}
+                  aria-label="microphone"
                   className="md-button-circle-wrapper"
                   data-color="primary"
                   data-disabled={false}
@@ -971,6 +979,7 @@ exports[`<AvatarMeetingsListItem /> snapshot should match snapshot with displayM
                       focusRingClass="md-focus-ring-wrapper children"
                     >
                       <button
+                        aria-label="microphone"
                         className="md-button-circle-wrapper md-button-simple-wrapper"
                         data-color="primary"
                         data-disabled={false}

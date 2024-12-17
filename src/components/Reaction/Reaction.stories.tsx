@@ -25,6 +25,7 @@ export default {
     autoPlay: true,
     onComplete: action('onComplete'),
     size: 'auto',
+    'aria-label': 'Some reaction label',
   },
 };
 

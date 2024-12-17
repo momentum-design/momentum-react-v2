@@ -29,10 +29,10 @@ export default {
 
 const commonChildren = [
   <ButtonPill key="0">Example</ButtonPill>,
-  <ButtonCircle key="1">
+  <ButtonCircle aria-label="redo" key="1">
     <Icon name="redo" autoScale={150} />
   </ButtonCircle>,
-  <ButtonCircle key="2">
+  <ButtonCircle aria-label="cancel" key="2">
     <Icon name="cancel" autoScale={150} />
   </ButtonCircle>,
 ];
@@ -77,23 +77,23 @@ const separatorCommonChildren = [
   <ButtonPill ghost key="0">
     Example
   </ButtonPill>,
-  <ButtonCircle ghost key="1">
+  <ButtonCircle aria-label="redo" ghost key="1">
     <Icon name="redo" autoScale={150} />
   </ButtonCircle>,
-  <ButtonCircle ghost key="2">
+  <ButtonCircle aria-label="cancel" ghost key="2">
     <Icon name="cancel" autoScale={150} />
   </ButtonCircle>,
 ];
 
 const callControlsCommonChildren = [
-  <ButtonCircle key="0" ghost size={40}>
+  <ButtonCircle aria-label="raise hand" key="0" ghost size={40}>
     <Icon key="0" name="raise-hand" autoScale={125} />
   </ButtonCircle>,
   <MenuTrigger
     key="1"
     placement="top-end"
     triggerComponent={
-      <ButtonCircle ghost size={40}>
+      <ButtonCircle aria-label="options" ghost size={40}>
         <Icon name="reactions" autoScale={125} />
       </ButtonCircle>
     }
@@ -108,7 +108,7 @@ const callControlsCommonChildren = [
 
 const callControlsCommonChildrenWithDiv = [
   <div key="0" {...ButtonGroup.CHILD_PROPS}>
-    <ButtonCircle ghost size={40}>
+    <ButtonCircle aria-label="raise hand" ghost size={40}>
       <Icon key="0" name="raise-hand" autoScale={125} />
     </ButtonCircle>
   </div>,
@@ -117,7 +117,7 @@ const callControlsCommonChildrenWithDiv = [
       key="2"
       placement="top-end"
       triggerComponent={
-        <ButtonCircle ghost size={40}>
+        <ButtonCircle aria-label="reactions" ghost size={40}>
           <Icon name="reactions" autoScale={125} />
         </ButtonCircle>
       }
@@ -132,10 +132,10 @@ const callControlsCommonChildrenWithDiv = [
 ];
 
 const paginationCommonChildren = [
-  <ButtonCircle inverted disabled key="0" size={28}>
+  <ButtonCircle aria-label="some label" inverted disabled key="0" size={28}>
     <Icon name="arrow-up" autoScale={150} />
   </ButtonCircle>,
-  <ButtonCircle inverted key="1" size={28}>
+  <ButtonCircle aria-label="some label" inverted key="1" size={28}>
     <Icon name="arrow-down" autoScale={150} />
   </ButtonCircle>,
 ];
@@ -194,7 +194,7 @@ AudioVideoControls.parameters = {
           key="2"
           placement="top-end"
           triggerComponent={
-            <ButtonCircle outline ghost key="1" size={40}>
+            <ButtonCircle aria-label="some label" outline ghost key="1" size={40}>
               <Icon name="arrow-down" autoScale={100} />
             </ButtonCircle>
           }
@@ -231,7 +231,7 @@ AudioVideoControls.parameters = {
             Unmute
           </div>
         </ButtonPill>,
-        <ButtonCircle outline ghost key="1" size={40}>
+        <ButtonCircle aria-label="some label" outline ghost key="1" size={40}>
           <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
@@ -246,7 +246,7 @@ AudioVideoControls.parameters = {
             Stop Video
           </div>
         </ButtonPill>,
-        <ButtonCircle outline ghost key="1" size={40}>
+        <ButtonCircle aria-label="some label" outline ghost key="1" size={40}>
           <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
@@ -267,7 +267,7 @@ AudioVideoControls.parameters = {
           <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
           <div key="1">Start Video</div>
         </ButtonPill>,
-        <ButtonCircle outline ghost key="1" size={40}>
+        <ButtonCircle aria-label="some label" outline ghost key="1" size={40}>
           <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
@@ -280,7 +280,7 @@ AudioVideoControls.parameters = {
           <Icon key="0" name="camera-on" autoScale={125} />
           <div key="1">Long Label Possibly German</div>
         </ButtonPill>,
-        <ButtonCircle outline ghost key="1" size={40}>
+        <ButtonCircle aria-label="some label" outline ghost key="1" size={40}>
           <Icon name="arrow-down" autoScale={100} />
         </ButtonCircle>,
       ],
@@ -296,7 +296,7 @@ AudioVideoControls.parameters = {
           </ButtonPill>
         </div>,
         <div key="1" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }} data-compressed>
-          <ButtonCircle outline ghost size={40}>
+          <ButtonCircle aria-label="some label" outline ghost size={40}>
             <Icon name="arrow-down" scale={16} />
           </ButtonCircle>
         </div>,
@@ -319,10 +319,10 @@ Common.parameters = {
     {
       children: [
         <ButtonPill key="0">Example</ButtonPill>,
-        <ButtonCircle key="1">
+        <ButtonCircle aria-label="redo" key="1">
           <Icon name="redo" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="2">
+        <ButtonCircle aria-label="cancel" key="2">
           <Icon name="cancel" autoScale={150} />
         </ButtonCircle>,
       ],
@@ -333,7 +333,7 @@ Common.parameters = {
         <ButtonPill color="message" key="0">
           Message
         </ButtonPill>,
-        <ButtonCircle color="message" key="1">
+        <ButtonCircle aria-label="send" color="message" key="1">
           <Icon name="send" autoScale={150} />
         </ButtonCircle>,
       ],
@@ -344,7 +344,7 @@ Common.parameters = {
         <ButtonPill color="join" key="0">
           Join
         </ButtonPill>,
-        <ButtonCircle color="join" key="1">
+        <ButtonCircle aria-label="enter room" color="join" key="1">
           <Icon name="enter-room" autoScale={150} />
         </ButtonCircle>,
       ],
@@ -355,7 +355,7 @@ Common.parameters = {
         <ButtonPill color="cancel" key="0">
           Cancel
         </ButtonPill>,
-        <ButtonCircle color="cancel" key="1">
+        <ButtonCircle aria-label="cancel" color="cancel" key="1">
           <Icon name="cancel" autoScale={150} />
         </ButtonCircle>,
       ],
@@ -363,19 +363,19 @@ Common.parameters = {
     },
     {
       children: [
-        <ButtonCircle key="0" ghost size={64}>
+        <ButtonCircle aria-label="exit room" key="0" ghost size={64}>
           <Icon name="exit-room" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="1" ghost size={64}>
+        <ButtonCircle aria-label="location" key="1" ghost size={64}>
           <Icon name="location" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="2" ghost size={64}>
+        <ButtonCircle aria-label="room calendar" key="2" ghost size={64}>
           <Icon name="room-calendar" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="3" ghost size={64}>
+        <ButtonCircle aria-label="assign host" key="3" ghost size={64}>
           <Icon name="assign-host" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="4" ghost size={64}>
+        <ButtonCircle aria-label="settings" key="4" ghost size={64}>
           <Icon name="settings" autoScale={150} />
         </ButtonCircle>,
       ],
@@ -387,19 +387,19 @@ Common.parameters = {
     },
     {
       children: [
-        <ButtonCircle key="0" ghost size={32}>
+        <ButtonCircle aria-label="camera on" key="0" ghost size={32}>
           <Icon name="camera-presence" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="1" ghost size={32}>
+        <ButtonCircle aria-label="quiet hours" key="1" ghost size={32}>
           <Icon name="quiet-hours-presence" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="2" ghost size={32}>
+        <ButtonCircle aria-label="call" key="2" ghost size={32}>
           <Icon name="handset" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="3" ghost size={32}>
+        <ButtonCircle aria-label="meetings" key="3" ghost size={32}>
           <Icon name="meetings-presence" autoScale={150} />
         </ButtonCircle>,
-        <ButtonCircle key="4" ghost size={32}>
+        <ButtonCircle aria-label="pto" key="4" ghost size={32}>
           <Icon name="pto-presence" autoScale={150} />
         </ButtonCircle>,
       ],
@@ -412,27 +412,27 @@ Common.parameters = {
     {
       children: [
         <div key="0" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
-          <ButtonCircle ghost size={32}>
+          <ButtonCircle aria-label="camera" ghost size={32}>
             <Icon name="camera-presence" autoScale={150} />
           </ButtonCircle>
         </div>,
         <div key="1" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
-          <ButtonCircle ghost size={32}>
+          <ButtonCircle aria-label="quiet hours" ghost size={32}>
             <Icon name="quiet-hours-presence" autoScale={150} />
           </ButtonCircle>
         </div>,
         <div key="2" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
-          <ButtonCircle ghost size={32}>
+          <ButtonCircle aria-label="call" ghost size={32}>
             <Icon name="handset" autoScale={150} />
           </ButtonCircle>
         </div>,
         <div key="3" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
-          <ButtonCircle ghost size={32}>
+          <ButtonCircle aria-label="meeting" ghost size={32}>
             <Icon name="meetings-presence" autoScale={150} />
           </ButtonCircle>
         </div>,
         <div key="4" {...ButtonGroup.CHILD_PROPS} style={{ fontSize: '0.8rem' }}>
-          <ButtonCircle ghost size={32}>
+          <ButtonCircle aria-label="pto" ghost size={32}>
             <Icon name="pto-presence" autoScale={150} />
           </ButtonCircle>
         </div>,

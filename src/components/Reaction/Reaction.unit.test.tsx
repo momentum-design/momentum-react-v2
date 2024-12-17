@@ -19,7 +19,7 @@ describe('<Reaction/>', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<Reaction name="haha" />);
+      const container = await mountAndWait(<Reaction aria-label="Laughing reaction" name="haha" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -29,7 +29,9 @@ describe('<Reaction/>', () => {
 
       const className = 'example-class';
 
-      const container = await mountAndWait(<Reaction name="haha" className={className} />);
+      const container = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" className={className} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -39,7 +41,9 @@ describe('<Reaction/>', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<Reaction name="haha" id={id} />);
+      const container = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" id={id} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -49,7 +53,9 @@ describe('<Reaction/>', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<Reaction name="haha" style={style} />);
+      const container = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" style={style} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -59,7 +65,9 @@ describe('<Reaction/>', () => {
 
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ error: new Error('error') });
 
-      const container = await mountAndWait(<Reaction name="haha" size={16} />);
+      const container = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" size={16} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -69,7 +77,9 @@ describe('<Reaction/>', () => {
 
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: undefined });
 
-      const container = await mountAndWait(<Reaction name="haha" size={16} />);
+      const container = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" size={16} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -94,7 +104,7 @@ describe('<Reaction/>', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<Reaction name="haha" />);
+      const wrapper = await mountAndWait(<Reaction aria-label="Laughing reaction" name="haha" />);
       const element = wrapper.find(Reaction).getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -105,7 +115,9 @@ describe('<Reaction/>', () => {
 
       const className = 'example-class';
 
-      const wrapper = await mountAndWait(<Reaction name="haha" className={className} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" className={className} />
+      );
       const element = wrapper.find(Reaction).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
@@ -116,7 +128,9 @@ describe('<Reaction/>', () => {
 
       const id = 'example-id';
 
-      const wrapper = await mountAndWait(<Reaction name="haha" id={id} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" id={id} />
+      );
       const element = wrapper.find(Reaction).getDOMNode();
 
       expect(element.id).toBe(id);
@@ -128,7 +142,9 @@ describe('<Reaction/>', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const wrapper = await mountAndWait(<Reaction name="haha" style={style} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" style={style} />
+      );
       const element = wrapper.find(Reaction).getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -139,7 +155,9 @@ describe('<Reaction/>', () => {
 
       const size = 16;
 
-      const wrapper = await mountAndWait(<Reaction name="haha" size={size} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" size={size} />
+      );
       const element = wrapper.find(Reaction).getDOMNode();
 
       expect(element.getAttribute('data-scale')).toBe(`${size}`);
@@ -158,7 +176,7 @@ describe('<Reaction/>', () => {
         .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
       const wrapper = await mountAndWait(
-        <Reaction name="haha" size={16} onComplete={onComplete} />
+        <Reaction aria-label="Laughing reaction" name="haha" size={16} onComplete={onComplete} />
       );
 
       expect(addEventListener).toHaveBeenCalledWith('complete', onComplete);
@@ -179,7 +197,9 @@ describe('<Reaction/>', () => {
         .spyOn(lottie, 'loadAnimation')
         .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" size={16} />
+      );
 
       expect(addEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
       expect(removeEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
@@ -193,7 +213,9 @@ describe('<Reaction/>', () => {
     it('should render glyph not found if error', async () => {
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ error: new Error('error') });
 
-      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" size={16} />
+      );
 
       expect(wrapper.find(`.${STYLE.notFound}`).text()).toEqual(GLYPH_NOT_FOUND);
     });
@@ -201,7 +223,9 @@ describe('<Reaction/>', () => {
     it('should render spinner while animation data is not defined', async () => {
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: undefined });
 
-      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
+      const wrapper = await mountAndWait(
+        <Reaction aria-label="Laughing reaction" name="haha" size={16} />
+      );
 
       expect(wrapper.find(LoadingSpinner)).toBeDefined();
     });

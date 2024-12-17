@@ -14,12 +14,14 @@ import './NavigationTab.style.scss';
 const NavigationTab: FC<Props> = (props: Props) => {
   const { icon, label, count = 0, className, id, size, style, active, ...otherProps } = props;
 
+  const isExpanded = size == 200;
+
   const iconComponent = icon ? (
     <Icon className={STYLE.icon} name={icon} scale={24} weight={'filled'} strokeColor={'none'} />
   ) : null;
 
   const labelComponent =
-    size == 200 && label ? (
+    isExpanded && label ? (
       <Text className={STYLE.label} type="subheader-secondary" tagName="h3">
         {label}
       </Text>
@@ -45,6 +47,7 @@ const NavigationTab: FC<Props> = (props: Props) => {
         data-size={size || DEFAULTS.SIZE}
         id={id}
         style={style}
+        aria-label={label && !isExpanded ? props['aria-label'] || label : props['aria-label']}
         {...otherProps}
       >
         {iconComponent}

@@ -40,13 +40,13 @@ const meetingTitle = 'Test Meeting Title';
 const children = 'Test Child';
 
 const circleButtons = [
-  <ButtonCircle key={0} outline ghost={true} color="join" size={28}>
+  <ButtonCircle aria-label="some label" key={0} outline ghost={true} color="join" size={28}>
     T
   </ButtonCircle>,
-  <ButtonCircle key={1} outline ghost={true} color="join" size={28}>
+  <ButtonCircle aria-label="some label" key={1} outline ghost={true} color="join" size={28}>
     T
   </ButtonCircle>,
-  <ButtonCircle key={2} outline ghost={true} color="join" size={28}>
+  <ButtonCircle aria-label="some label" key={2} outline ghost={true} color="join" size={28}>
     T
   </ButtonCircle>,
 ];

@@ -1,8 +1,10 @@
+import { AriaLabelingProps } from '@react-types/shared';
 import { AriaRole, CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
 export type ListOrientation = 'horizontal' | 'vertical';
 
-export interface Props {
+interface ListProps extends AriaLabelingProps {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -66,6 +68,8 @@ export interface Props {
    */
   initialFocus?: number;
 }
+
+export type Props = ListProps & AriaLabelRequired;
 
 export interface ListContextValue {
   currentFocus?: number;

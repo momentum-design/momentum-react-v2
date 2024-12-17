@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
-<ButtonCircle>
+<ButtonCircle
+  aria-label="some label"
+>
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -20,6 +23,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -53,10 +57,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
 <ButtonCircle
+  aria-label="some label"
   ghost={true}
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -73,6 +79,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -110,11 +117,13 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabled 1`] = `
 <ButtonCircle
+  aria-label="some label"
   disabled={true}
   ghost={true}
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={true}
@@ -135,6 +144,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
         focusRingClass="md-focus-ring-wrapper-disabled"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={true}
@@ -173,10 +183,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot when a ghost and disabl
 
 exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 1`] = `
 <ButtonCircle
+  aria-label="some label"
   outline={true}
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -193,6 +205,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -230,11 +243,13 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
 
 exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined and inverted is set 1`] = `
 <ButtonCircle
+  aria-label="some label"
   inverted={true}
   outline={true}
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -251,6 +266,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -284,10 +300,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot when color is outlined 
 
 exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
 <ButtonCircle
+  aria-label="some label"
   disabled={true}
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={true}
@@ -308,6 +326,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
         focusRingClass="md-focus-ring-wrapper-disabled"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={true}
@@ -346,10 +365,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot when disabled 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1`] = `
 <ButtonCircle
+  aria-label="some label"
   shallowDisabled={true}
 >
   <ButtonSimple
     aria-disabled={true}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -367,6 +388,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
       >
         <button
           aria-disabled={true}
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -404,10 +426,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot when shallow disabled 1
 
 exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
 <ButtonCircle
+  aria-label="some label"
   className="example-class"
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper example-class"
     data-color="primary"
     data-disabled={false}
@@ -424,6 +448,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper example-class md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -457,10 +482,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot with className 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
 <ButtonCircle
+  aria-label="some label"
   color="message"
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="message"
     data-disabled={false}
@@ -477,6 +504,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="message"
           data-disabled={false}
@@ -514,10 +542,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot with color 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
 <ButtonCircle
+  aria-label="some label"
   id="example-id"
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -535,6 +565,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with id 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -627,10 +658,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot with multiple children 
 
 exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
 <ButtonCircle
+  aria-label="some label"
   size={64}
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -647,6 +680,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -684,6 +718,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with size 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
 <ButtonCircle
+  aria-label="some label"
   style={
     Object {
       "color": "pink",
@@ -692,6 +727,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -713,6 +749,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}
@@ -751,10 +788,12 @@ exports[`<ButtonCircle /> snapshot should match snapshot with style 1`] = `
 
 exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
 <ButtonCircle
+  aria-label="some label"
   title="Example Text"
 >
   <ButtonSimple
     aria-disabled={false}
+    aria-label="some label"
     className="md-button-circle-wrapper"
     data-color="primary"
     data-disabled={false}
@@ -772,6 +811,7 @@ exports[`<ButtonCircle /> snapshot should match snapshot with title 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <button
+          aria-label="some label"
           className="md-button-circle-wrapper md-button-simple-wrapper"
           data-color="primary"
           data-disabled={false}

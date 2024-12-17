@@ -54,9 +54,11 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -126,9 +128,11 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -201,9 +205,11 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -273,9 +279,11 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}
@@ -364,9 +372,11 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
             type="button"
           >
             <Reaction
+              aria-label="Laughing reaction"
               name="haha"
             >
               <div
+                aria-label="Laughing reaction"
                 className="md-reaction-wrapper md-icon-scales"
                 data-name="haha"
                 data-scale={12}

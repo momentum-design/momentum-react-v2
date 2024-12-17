@@ -21,7 +21,7 @@ export default {
     },
   },
   args: {
-    reaction: <Reaction name={REACTIONS.haha} autoPlay loop />,
+    reaction: <Reaction aria-label="Laughing reaction" name={REACTIONS.haha} autoPlay loop />,
     count: '1',
   },
 };
@@ -33,6 +33,10 @@ const Example = Template<ReactionBadgeProps>(ReactionBadge).bind({});
 
 Example.argTypes = { ...argTypes };
 
+Example.args = {
+  'aria-label': 'Add reaction',
+};
+
 const Common = MultiTemplate<ReactionBadgeProps>(ReactionBadge).bind({});
 
 Common.argTypes = { ...argTypes };
@@ -42,16 +46,21 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      reaction: <Reaction name={REACTIONS.celebrate} autoPlay loop />,
+      reaction: (
+        <Reaction aria-label="Laughing reaction" name={REACTIONS.celebrate} autoPlay loop />
+      ),
       count: 1,
+      'aria-label': 'Add reaction',
     },
     {
-      reaction: <Reaction name={REACTIONS.heart} autoPlay loop />,
+      reaction: <Reaction aria-label="Laughing reaction" name={REACTIONS.heart} autoPlay loop />,
       count: 1,
+      'aria-label': 'Add reaction',
     },
     {
-      reaction: <Reaction name={REACTIONS.sad} autoPlay loop />,
+      reaction: <Reaction aria-label="Laughing reaction" name={REACTIONS.sad} autoPlay loop />,
       count: 1,
+      'aria-label': 'Add reaction',
     },
   ],
 };

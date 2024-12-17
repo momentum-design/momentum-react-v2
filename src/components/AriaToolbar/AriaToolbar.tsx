@@ -13,7 +13,6 @@ import { getKeyboardFocusableElements } from '../../utils/navigation';
  */
 const AriaToolbar: FC<Props> = (props: Props) => {
   const {
-    ariaLabel,
     className,
     id,
     style,
@@ -21,7 +20,6 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     orientation = DEFAULTS.ORIENTATION,
     shouldRenderAsButtonGroup = DEFAULTS.SHOULD_RENDER_AS_BUTTON_GROUP,
     onTabPress,
-    ariaControls,
     buttonGroupProps,
     ariaToolbarItemsSize,
     ...rest
@@ -52,8 +50,6 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     className: classnames(className, STYLE.wrapper),
     id: id,
     style: style,
-    'aria-label': ariaLabel,
-    'aria-controls': ariaControls,
     role: 'toolbar',
     'aria-orientation': orientation,
     ...rest,

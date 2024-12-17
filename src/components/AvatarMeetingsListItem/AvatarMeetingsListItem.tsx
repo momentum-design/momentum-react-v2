@@ -126,17 +126,22 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
       </ListItemBaseSection>
       <ListItemBaseSection position="end" className={STYLE.actionsWrapper}>
         {isHovered && displayHoverAction && (
-          <ButtonCircle color="cancel" size={28} onPress={onHoverActionCallback}>
+          <ButtonCircle
+            aria-label="cancel"
+            color="cancel"
+            size={28}
+            onPress={onHoverActionCallback}
+          >
             <Icon name="cancel" weight="bold" scale={16} />
           </ButtonCircle>
         )}
         {displayMoreAction && (
-          <ButtonCircle ghost size={28}>
+          <ButtonCircle aria-label="more" ghost size={28}>
             <Icon name="more" weight="bold" scale={16} />
           </ButtonCircle>
         )}
         {displayMuteAction && (
-          <ButtonCircle onPress={onPressMuteAction} ghost size={28}>
+          <ButtonCircle aria-label="microphone" onPress={onPressMuteAction} ghost size={28}>
             <Icon
               name={isMuted ? 'microphone-muted' : 'microphone-on'}
               weight="bold"

@@ -22,7 +22,7 @@ describe('<Toast />', () => {
   beforeEach(() => {
     actions = (
       <ButtonGroup spaced>
-        <ButtonCircle outline size={28}>
+        <ButtonCircle outline size={28} aria-label="alarm">
           <Icon name="alarm" weight="bold" autoScale={125} />
         </ButtonCircle>
         <ButtonPill color="message" size={28}>

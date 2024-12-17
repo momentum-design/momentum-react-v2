@@ -1,8 +1,8 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 const sliderArgTypes = {
-  ariaLabel: {
-    description: 'ariaLabel attribute for the slider',
+  'aria-label': {
+    description: 'aria-label attribute for the slider',
     control: { type: 'text' },
     table: {
       type: {

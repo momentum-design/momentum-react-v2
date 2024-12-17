@@ -11,6 +11,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -350,6 +351,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -418,11 +420,13 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -439,6 +443,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -684,6 +689,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -1024,6 +1030,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -1092,11 +1099,13 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -1113,6 +1122,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -1358,6 +1368,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -1697,6 +1708,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -1765,11 +1777,13 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -1786,6 +1800,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -2326,6 +2341,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -2395,11 +2411,13 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -2416,6 +2434,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -2943,6 +2962,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -3012,11 +3032,13 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -3033,6 +3055,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -3277,6 +3300,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -3603,6 +3627,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -3671,11 +3696,13 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -3692,6 +3719,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -3936,6 +3964,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -4277,6 +4306,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -4345,11 +4375,13 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -4366,6 +4398,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -4610,6 +4643,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -4959,6 +4993,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -5027,11 +5062,13 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -5048,6 +5085,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}
@@ -5292,6 +5330,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -5632,6 +5671,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
           spaced={true}
         >
           <ButtonCircle
+            aria-label="alarm"
             outline={true}
             size={28}
           >
@@ -5700,11 +5740,13 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             data-spaced={true}
           >
             <ButtonCircle
+              aria-label="alarm"
               outline={true}
               size={28}
             >
               <ButtonSimple
                 aria-disabled={false}
+                aria-label="alarm"
                 className="md-button-circle-wrapper"
                 data-color="primary"
                 data-disabled={false}
@@ -5721,6 +5763,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     focusRingClass="md-focus-ring-wrapper children"
                   >
                     <button
+                      aria-label="alarm"
                       className="md-button-circle-wrapper md-button-simple-wrapper"
                       data-color="primary"
                       data-disabled={false}

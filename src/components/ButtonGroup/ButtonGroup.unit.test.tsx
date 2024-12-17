@@ -11,7 +11,9 @@ import { DEFAULTS, STYLE } from './ButtonGroup.constants';
 describe('<ButtonGroup />', () => {
   const childrenTemplate = [
     <ButtonPill key="0">Example A</ButtonPill>,
-    <ButtonCircle key="1">A</ButtonCircle>,
+    <ButtonCircle aria-label="some label" key="1">
+      A
+    </ButtonCircle>,
   ];
   let container;
 
@@ -59,7 +61,7 @@ describe('<ButtonGroup />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<ButtonCircle className={className} />);
+      const container = mount(<ButtonCircle aria-label="some label" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -69,7 +71,7 @@ describe('<ButtonGroup />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<ButtonCircle id={id} />);
+      const container = mount(<ButtonCircle aria-label="some label" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -89,7 +91,11 @@ describe('<ButtonGroup />', () => {
 
       const role = 'tablist';
 
-      container = mount(<ButtonGroup role={role}>{childrenTemplate}</ButtonGroup>);
+      container = mount(
+        <ButtonGroup aria-label="some label" role={role}>
+          {childrenTemplate}
+        </ButtonGroup>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -131,7 +137,7 @@ describe('<ButtonGroup />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<ButtonCircle className={className} />)
+      const element = mount(<ButtonCircle aria-label="some label" className={className} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -143,7 +149,7 @@ describe('<ButtonGroup />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<ButtonCircle id={id} />)
+      const element = mount(<ButtonCircle aria-label="some label" id={id} />)
         .find(ButtonCircle)
         .getDOMNode();
 
@@ -156,7 +162,7 @@ describe('<ButtonGroup />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ButtonCircle style={style} />)
+      const element = mount(<ButtonCircle aria-label="some label" style={style} />)
         .find(ButtonCircle)
         .getDOMNode();
 

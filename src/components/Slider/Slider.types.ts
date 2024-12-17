@@ -1,6 +1,8 @@
+import { AriaLabelingProps } from '@react-types/shared';
 import type { CSSProperties } from 'react';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
-export interface SliderProps {
+interface Props extends AriaLabelingProps {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -45,12 +47,9 @@ export interface SliderProps {
    * Max value of the slider
    */
   maxValue?: number;
-
-  /**
-   * aria-label to be passed to slider group
-   */
-  ariaLabel?: string;
 }
+
+export type SliderProps = Props & AriaLabelRequired;
 
 export type SliderHookArgs = Pick<
   SliderProps,
