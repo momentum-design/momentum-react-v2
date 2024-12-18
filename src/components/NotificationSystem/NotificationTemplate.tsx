@@ -64,7 +64,7 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
       content={content}
       onClose={handleClose}
       closeButtonLabel={toastCloseButtonLabel}
-      ariaLabel={ariaLabel}
+      aria-label={ariaLabel}
       leadingVisual={
         <Icon
           name="info-circle"

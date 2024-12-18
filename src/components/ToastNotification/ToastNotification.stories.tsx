@@ -20,6 +20,9 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
+  args: {
+    'aria-label': 'Some label',
+  },
 };
 
 const Example = Template<ToastNotificationProps>(ToastNotification).bind({});
