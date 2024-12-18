@@ -23,7 +23,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
     buttonGroup,
     onClose,
     closeButtonLabel,
-    ariaLabel,
+    ...rest
   } = props;
 
   return (
@@ -35,7 +35,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
       round={50}
       role="generic"
       ariaModal={false}
-      aria-label={ariaLabel}
+      {...rest}
     >
       <div className={STYLE.body}>
         {leadingVisual && (

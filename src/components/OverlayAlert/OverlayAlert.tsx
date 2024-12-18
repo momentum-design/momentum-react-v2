@@ -61,7 +61,7 @@ const OverlayAlert: FC<Props> = (props: Props) => {
         className={classnames(STYLE.modalContainer)}
         round={75}
         color={modalColor}
-        aria-label={ariaLabel}
+        aria-label={ariaLabel || title}
         aria-labelledby={ariaLabelledbyProp}
         aria-describedby={ariaDescribedbyProp}
         focusLockProps={focusLockProps}

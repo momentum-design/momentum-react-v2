@@ -17,6 +17,9 @@ export default {
     docs: {
       page: DocumentationPage(Documentation, StyleDocs),
     },
+    args: {
+      'aria-label': 'Some label',
+    },
   },
 };
 
