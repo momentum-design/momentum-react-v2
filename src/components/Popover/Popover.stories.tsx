@@ -448,7 +448,7 @@ WithMeetingListItemWithButtonsWithPopover.args = {
 
 const PopoverInList = (props: PopoverProps) => {
   return (
-    <List listSize={3}>
+    <List aria-label="some list" listSize={3}>
       <Popover {...props} />
     </List>
   );
@@ -634,7 +634,7 @@ const WithHideOnBlur = Template<PopoverProps>((args) => {
           hideOnBlur
           disableFocusLock
         >
-          <List listSize={3}>
+          <List aria-label="some list" listSize={3}>
             <ListItemBase itemIndex={0}>test 4</ListItemBase>
             <ListItemBase itemIndex={1}>test 5</ListItemBase>
             <ListItemBase itemIndex={2}>test 6</ListItemBase>
@@ -651,7 +651,7 @@ const WithHideOnBlur = Template<PopoverProps>((args) => {
           hideOnBlur
           disableFocusLock
         >
-          <List listSize={3}>
+          <List aria-label="some list" listSize={3}>
             <ListItemBase itemIndex={0}>test 4</ListItemBase>
             <ListItemBase itemIndex={1}>test 5</ListItemBase>
             <ListItemBase itemIndex={2}>test 6</ListItemBase>

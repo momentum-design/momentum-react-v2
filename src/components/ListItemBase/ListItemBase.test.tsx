@@ -384,7 +384,7 @@ describe('ListItemBase', () => {
   describe('keydown', () => {
     const renderWithNButtons = (n: number) => {
       return render(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase data-testid="list-item-1" key="0" itemIndex={0}>
             <ListItemBaseSection position="end">
               {n > 0 ? (
@@ -523,7 +523,7 @@ describe('ListItemBase', () => {
 
   it('should focus on press when shouldFocusOnPress is set', async () => {
     const { getByTestId } = render(
-      <List shouldFocusOnPress listSize={1}>
+      <List aria-label="some list" shouldFocusOnPress listSize={1}>
         <ListItemBase data-testid="list-item-1" itemIndex={0}>
           <ButtonPill>1</ButtonPill>
         </ListItemBase>
@@ -537,7 +537,7 @@ describe('ListItemBase', () => {
 
   it('should not focus on press with focusChild even if shouldFocusOnPress is set', async () => {
     const { getByTestId } = render(
-      <List shouldFocusOnPress listSize={1}>
+      <List aria-label="some list" shouldFocusOnPress listSize={1}>
         <ListItemBase focusChild data-testid="list-item-1" itemIndex={0}>
           <ButtonPill>1</ButtonPill>
         </ListItemBase>
@@ -553,7 +553,7 @@ describe('ListItemBase', () => {
     const user = userEvent.setup();
 
     const { getByTestId } = render(
-      <List shouldFocusOnPress listSize={2}>
+      <List aria-label="some list" shouldFocusOnPress listSize={2}>
         <ListItemBase data-testid="list-item-0" itemIndex={0}>
           <ListItemBaseSection position="fill">
             <ButtonPill>0</ButtonPill>
@@ -608,7 +608,7 @@ describe('ListItemBase', () => {
 
     const { getByTestId } = render(
       <>
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase
             onBlur={onBlur}
             onFocus={onFocus}

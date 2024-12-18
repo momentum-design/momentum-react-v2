@@ -1,8 +1,9 @@
 import { AriaRole, CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
 export type ListOrientation = 'horizontal' | 'vertical';
 
-export interface Props {
+export type Props = AriaLabelRequired & {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -65,7 +66,7 @@ export interface Props {
    * The index of the item that should be focused initially
    */
   initialFocus?: number;
-}
+};
 
 export interface ListContextValue {
   currentFocus?: number;

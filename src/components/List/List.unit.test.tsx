@@ -168,10 +168,10 @@ describe('<List />', () => {
     it('should have provided aria-label when aria-label is provided', () => {
       expect.assertions(1);
 
-      const label = 'test';
+      const label = 'abc';
 
       const element = mount(
-        <List aria-label={label} {...commonProps}>
+        <List {...commonProps} aria-label={label}>
           <ListItemBase key="1">ListItemBase 1</ListItemBase>
           <ListItemBase key="2">ListItemBase 2</ListItemBase>
         </List>
@@ -179,7 +179,7 @@ describe('<List />', () => {
         .find(List)
         .getDOMNode();
 
-      expect(element.getAttribute('aria-label')).toBe('test');
+      expect(element.getAttribute('aria-label')).toBe('abc');
     });
 
     it('should have provided aria-labelledby when aria-labelledby is provided', () => {
@@ -207,7 +207,7 @@ describe('<List />', () => {
       const { getByRole } = render(
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <div onKeyDown={keyDownHandler}>
-          <List listSize={1}>
+          <List aria-label="some list" listSize={1}>
             <ListItemBase key="0" itemIndex={0}>
               ListItemBase 1
             </ListItemBase>
@@ -229,7 +229,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -275,7 +275,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -306,7 +306,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3} noLoop orientation="vertical">
+        <List aria-label="some list" listSize={3} noLoop orientation="vertical">
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -343,7 +343,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3} orientation="horizontal">
+        <List aria-label="some list" listSize={3} orientation="horizontal">
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -388,7 +388,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={3} noLoop orientation="horizontal">
+        <List aria-label="some list" listSize={3} noLoop orientation="horizontal">
           <ListItemBase key="0" itemIndex={0}>
             ListItemBase 1
           </ListItemBase>
@@ -424,7 +424,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole } = render(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase key="0" itemIndex={0}>
             <ListItemBaseSection position="fill">
               <input type="text" id="1" />
@@ -494,7 +494,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getAllByRole, findAllByText } = render(
-        <List listSize={1}>
+        <List aria-label="some list" listSize={1}>
           <ListItemBase key="0" itemIndex={0}>
             <MenuTrigger triggerComponent={<ButtonPill size={28}>Menu</ButtonPill>}>
               <Menu selectionMode="single" key="2">
@@ -534,7 +534,7 @@ describe('<List />', () => {
       };
 
       const { getAllByRole, findAllByText } = render(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase key="0" itemIndex={0}>
             <button>Button 1</button>
           </ListItemBase>
@@ -591,7 +591,7 @@ describe('<List />', () => {
             >
               focus on 2
             </button>
-            <List listSize={3} ref={listRef}>
+            <List aria-label="some list" listSize={3} ref={listRef}>
               <ListItemBase key="0" itemIndex={0}>
                 <p>list item 1</p>
               </ListItemBase>
@@ -635,7 +635,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3} initialFocus={1}>
+        <List aria-label="some list" listSize={3} initialFocus={1}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -658,7 +658,7 @@ describe('<List />', () => {
       // focus should not change the current focused position
 
       rerender(
-        <List listSize={3} initialFocus={1}>
+        <List aria-label="some list" listSize={3} initialFocus={1}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -685,7 +685,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3} initialFocus={1}>
+        <List aria-label="some list" listSize={3} initialFocus={1}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -701,7 +701,7 @@ describe('<List />', () => {
       expect(document.body).toHaveFocus();
 
       rerender(
-        <List listSize={4} initialFocus={2}>
+        <List aria-label="some list" listSize={4} initialFocus={2}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -726,7 +726,7 @@ describe('<List />', () => {
 
     it('should not autofocus when a new item is added to the list', async () => {
       const { rerender } = render(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase data-testid="list-item-1" key="1" itemIndex={0}>
             1
           </ListItemBase>
@@ -739,7 +739,7 @@ describe('<List />', () => {
       expect(document.body).toHaveFocus();
 
       rerender(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -759,7 +759,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -779,7 +779,7 @@ describe('<List />', () => {
       expect(getByTestId('list-item-0')).toHaveFocus();
 
       rerender(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={0}>
             1
           </ListItemBase>
@@ -796,7 +796,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -820,7 +820,7 @@ describe('<List />', () => {
       expect(getByTestId('list-item-1')).toHaveFocus();
 
       rerender(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={0}>
             1
           </ListItemBase>
@@ -837,7 +837,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -863,7 +863,7 @@ describe('<List />', () => {
       expect(getByTestId('list-item-2')).toHaveFocus();
 
       rerender(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -878,7 +878,7 @@ describe('<List />', () => {
 
     it('should not autofocus when the last item is removed from the list', async () => {
       const { rerender } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -894,7 +894,7 @@ describe('<List />', () => {
       expect(document.body).toHaveFocus();
 
       rerender(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -911,7 +911,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -933,7 +933,7 @@ describe('<List />', () => {
       expect(getByTestId('list-item-1')).toHaveFocus();
 
       rerender(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -950,7 +950,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={2}>
+        <List aria-label="some list" listSize={2}>
           <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
             1
           </ListItemBase>
@@ -963,7 +963,7 @@ describe('<List />', () => {
       expect(document.body).toHaveFocus();
 
       rerender(
-        <List listSize={3}>
+        <List aria-label="some list" listSize={3}>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -985,7 +985,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={1} shouldFocusOnPress>
+        <List aria-label="some list" listSize={1} shouldFocusOnPress>
           <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
             text selection
           </ListItemBase>
@@ -1007,7 +1007,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={1} shouldFocusOnPress>
+        <List aria-label="some list" listSize={1} shouldFocusOnPress>
           <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
             textselection
           </ListItemBase>
@@ -1028,7 +1028,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={2} shouldFocusOnPress>
+        <List aria-label="some list" listSize={2} shouldFocusOnPress>
           <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
             text selection
           </ListItemBase>
@@ -1057,7 +1057,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={2} shouldFocusOnPress>
+        <List aria-label="some list" listSize={2} shouldFocusOnPress>
           <ListItemBase allowTextSelection data-testid="list-item-0" key="0" itemIndex={0}>
             text selection
           </ListItemBase>
@@ -1082,7 +1082,7 @@ describe('<List />', () => {
       const user = userEvent.setup();
 
       const { getByTestId } = render(
-        <List listSize={3} shouldFocusOnPress>
+        <List aria-label="some list" listSize={3} shouldFocusOnPress>
           <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
             0
           </ListItemBase>
@@ -1116,7 +1116,7 @@ describe('<List />', () => {
       const { getByTestId } = render(
         <>
           <ButtonPill data-testid="before">Before</ButtonPill>
-          <List listSize={2}>
+          <List aria-label="some list" listSize={2}>
             <ListItemBase data-testid="list-item-0" size="auto" itemIndex={0} key={0}>
               <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
                 <AriaToolbarItem itemIndex={0}>
