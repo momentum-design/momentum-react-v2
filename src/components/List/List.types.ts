@@ -1,5 +1,5 @@
 import { AriaRole, CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type ListOrientation = 'horizontal' | 'vertical';
 
