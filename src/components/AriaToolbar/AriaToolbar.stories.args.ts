@@ -13,18 +13,6 @@ const ariaToolbarArgTypes = {
       },
     },
   },
-  ariaLabel: {
-    description: 'The aria-label for the toolbar',
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'aria toolbar',
-      },
-    },
-  },
   ariaToolbarItemsSize: {
     description: 'The number of items in the toolbar',
     control: { type: 'number' },

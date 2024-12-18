@@ -1,8 +1,9 @@
 import { CSSProperties, MutableRefObject, ReactElement } from 'react';
 import { ButtonGroupProps } from '../ButtonGroup';
 import { SupportedComponents } from '../ButtonGroup/ButtonGroup.types';
+import { AriaLabelRequired } from '../../utils/a11y';
 
-export interface Props {
+export type Props = AriaLabelRequired & {
   /**
    * Child components of this AriaToolbar.
    */
@@ -37,12 +38,7 @@ export interface Props {
   /**
    * The HTML ID of the element that this toolbar relates to
    */
-  ariaControls?: string;
-
-  /**
-   * aria-label attribute for the toolbar
-   */
-  ariaLabel: string;
+  'aria-controls'?: string;
 
   /**
    * This handler is called when tab is pressed by one of the elements
@@ -65,7 +61,7 @@ export interface Props {
    * to calculate the correct item focus.
    */
   ariaToolbarItemsSize: number;
-}
+};
 
 export interface AriaToolbarContextValue {
   currentFocus?: number;
