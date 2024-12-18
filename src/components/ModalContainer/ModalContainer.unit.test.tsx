@@ -12,7 +12,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer />);
+      const container = mount(<ModalContainer aria-label="Some label" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -22,7 +22,7 @@ describe('<ModalContainer />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<ModalContainer className={className} />);
+      const container = mount(<ModalContainer aria-label="Some label" className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe('<ModalContainer />', () => {
 
       const id = 'example-id';
 
-      const container = mount(<ModalContainer id={id} />);
+      const container = mount(<ModalContainer aria-label="Some label" id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe('<ModalContainer />', () => {
 
       const role = 'tooltip';
 
-      const container = mount(<ModalContainer role={role} />);
+      const container = mount(<ModalContainer aria-label="Some label" role={role} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -52,7 +52,7 @@ describe('<ModalContainer />', () => {
 
       const ariaModal = false;
 
-      const container = mount(<ModalContainer aria-modal={ariaModal} />);
+      const container = mount(<ModalContainer aria-label="Some label" aria-modal={ariaModal} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -62,7 +62,7 @@ describe('<ModalContainer />', () => {
 
       const style = { color: 'pink' };
 
-      const container = mount(<ModalContainer style={style} />);
+      const container = mount(<ModalContainer aria-label="Some label" style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -72,7 +72,7 @@ describe('<ModalContainer />', () => {
 
       const color = Object.values(CONSTANTS.COLORS).pop();
 
-      const container = mount(<ModalContainer color={color} />);
+      const container = mount(<ModalContainer aria-label="Some label" color={color} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -82,7 +82,7 @@ describe('<ModalContainer />', () => {
 
       const elevation = Object.values(CONSTANTS.ELEVATIONS).pop();
 
-      const container = mount(<ModalContainer elevation={elevation} />);
+      const container = mount(<ModalContainer aria-label="Some label" elevation={elevation} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -90,7 +90,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with isPadded', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer isPadded />);
+      const container = mount(<ModalContainer aria-label="Some label" isPadded />);
 
       expect(container).toMatchSnapshot();
     });
@@ -100,7 +100,7 @@ describe('<ModalContainer />', () => {
 
       const round = Object.values(CONSTANTS.ROUNDS).pop();
 
-      const container = mount(<ModalContainer round={round} />);
+      const container = mount(<ModalContainer aria-label="Some label" round={round} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -108,7 +108,7 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with arrow', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer showArrow />);
+      const container = mount(<ModalContainer aria-label="Some label" showArrow />);
 
       expect(container).toMatchSnapshot();
     });
@@ -118,7 +118,7 @@ describe('<ModalContainer />', () => {
 
       const arrowId = 'example-id';
 
-      const container = mount(<ModalContainer arrowId={arrowId} />);
+      const container = mount(<ModalContainer aria-label="Some label" arrowId={arrowId} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -128,7 +128,7 @@ describe('<ModalContainer />', () => {
 
       const children = <div>Example Text</div>;
 
-      const container = mount(<ModalContainer>{children}</ModalContainer>);
+      const container = mount(<ModalContainer aria-label="Some label">{children}</ModalContainer>);
 
       expect(container).toMatchSnapshot();
     });
@@ -136,7 +136,9 @@ describe('<ModalContainer />', () => {
     it('should match snapshot with focusLockProps', () => {
       expect.assertions(1);
 
-      const container = mount(<ModalContainer focusLockProps={{ restoreFocus: true }} />);
+      const container = mount(
+        <ModalContainer aria-label="Some label" focusLockProps={{ restoreFocus: true }} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -146,7 +148,7 @@ describe('<ModalContainer />', () => {
     it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      const element = mount(<ModalContainer />)
+      const element = mount(<ModalContainer aria-label="Some label" />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -158,7 +160,7 @@ describe('<ModalContainer />', () => {
 
       const className = 'example-class';
 
-      const element = mount(<ModalContainer className={className} />)
+      const element = mount(<ModalContainer aria-label="Some label" className={className} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -170,7 +172,7 @@ describe('<ModalContainer />', () => {
 
       const id = 'example-id';
 
-      const element = mount(<ModalContainer id={id} />)
+      const element = mount(<ModalContainer aria-label="Some label" id={id} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -183,7 +185,7 @@ describe('<ModalContainer />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<ModalContainer style={style} />)
+      const element = mount(<ModalContainer aria-label="Some label" style={style} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -195,7 +197,7 @@ describe('<ModalContainer />', () => {
 
       const color = Object.values(CONSTANTS.COLORS).pop();
 
-      const element = mount(<ModalContainer color={color} />)
+      const element = mount(<ModalContainer aria-label="Some label" color={color} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -207,7 +209,7 @@ describe('<ModalContainer />', () => {
 
       const elevation = Object.values(CONSTANTS.ELEVATIONS).pop();
 
-      const element = mount(<ModalContainer elevation={elevation} />)
+      const element = mount(<ModalContainer aria-label="Some label" elevation={elevation} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -219,7 +221,7 @@ describe('<ModalContainer />', () => {
 
       const isPadded = true;
 
-      const element = mount(<ModalContainer isPadded={isPadded} />)
+      const element = mount(<ModalContainer aria-label="Some label" isPadded={isPadded} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -231,7 +233,7 @@ describe('<ModalContainer />', () => {
 
       const round = Object.values(CONSTANTS.ROUNDS).pop();
 
-      const element = mount(<ModalContainer round={round} />)
+      const element = mount(<ModalContainer aria-label="Some label" round={round} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -243,7 +245,7 @@ describe('<ModalContainer />', () => {
 
       const placement = Object.values(PLACEMENTS).pop();
 
-      const element = mount(<ModalContainer placement={placement} />)
+      const element = mount(<ModalContainer aria-label="Some label" placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -255,7 +257,7 @@ describe('<ModalContainer />', () => {
 
       const placement = PLACEMENTS.BOTTOM_START;
 
-      const element = mount(<ModalContainer placement={placement} />)
+      const element = mount(<ModalContainer aria-label="Some label" placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -267,7 +269,7 @@ describe('<ModalContainer />', () => {
 
       const placement = PLACEMENTS.LEFT_END;
 
-      const element = mount(<ModalContainer placement={placement} />)
+      const element = mount(<ModalContainer aria-label="Some label" placement={placement} />)
         .find(ModalContainer)
         .getDOMNode();
 
@@ -278,7 +280,7 @@ describe('<ModalContainer />', () => {
       expect.assertions(1);
 
       const arrowId = 'example-id';
-      const element = mount(<ModalContainer arrowId={arrowId} showArrow />)
+      const element = mount(<ModalContainer aria-label="Some label" arrowId={arrowId} showArrow />)
         .find('div')
         .filter({ className: 'md-modal-container-arrow-wrapper' })
         .getDOMNode();
@@ -295,7 +297,7 @@ describe('<ModalContainer />', () => {
         return (
           <>
             <button>button</button>
-            <ModalContainer>
+            <ModalContainer aria-label="Some label">
               <button>button</button>
               <button>button</button>
             </ModalContainer>
@@ -335,7 +337,7 @@ describe('<ModalContainer />', () => {
         return (
           <>
             <button>button</button>
-            <ModalContainer focusLockProps={{}}>
+            <ModalContainer aria-label="Some label" focusLockProps={{}}>
               <button>button</button>
               <button>button</button>
             </ModalContainer>
