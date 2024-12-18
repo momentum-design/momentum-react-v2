@@ -18,7 +18,7 @@
 }
 
 .md-popover-close-button {
-  position: absolute;
+  position: absolute !important; // override focus ring wrapper's relative position
   z-index: 1000;
   top: 0.5rem;
 
