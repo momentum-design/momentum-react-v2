@@ -40,6 +40,7 @@ Example.argTypes = {
 
 Example.args = {
   content: 'Example text',
+  closeButtonLabel: 'Close notification',
 };
 
 const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
@@ -50,29 +51,35 @@ LeadingVisual.parameters = {
   variants: [
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Avatar initials="CW" size={32} />,
     },
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Avatar initials="CW" size={32} />,
     },
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
     },
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
     },
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Icon name="info-circle" scale={14} weight="filled" fillColor="yellow" />,
     },
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Icon name="info-circle" scale={14} weight="filled" fillColor="yellow" />,
     },
   ],
@@ -86,6 +93,7 @@ ButtonGroup.parameters = {
   variants: [
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       buttonGroup: (
         <ButtonPill outline ghost size={28}>
           Button
@@ -95,6 +103,7 @@ ButtonGroup.parameters = {
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       buttonGroup: (
         <ButtonPill outline ghost size={28}>
           Button
@@ -103,6 +112,7 @@ ButtonGroup.parameters = {
     },
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       buttonGroup: (
         <>
           <ButtonPill size={28}>Button</ButtonPill>
@@ -115,6 +125,7 @@ ButtonGroup.parameters = {
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       buttonGroup: (
         <>
           <ButtonPill size={28}>Button</ButtonPill>
@@ -135,6 +146,7 @@ Common.parameters = {
   variants: [
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Avatar initials="CW" size={32} />,
       buttonGroup: (
         <ButtonPill outline size={28}>
@@ -145,6 +157,7 @@ Common.parameters = {
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Avatar initials="CW" size={32} />,
       buttonGroup: (
         <ButtonPill outline size={28}>
@@ -154,6 +167,7 @@ Common.parameters = {
     },
     {
       content: 'Example text',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
       buttonGroup: (
         <>
@@ -167,6 +181,7 @@ Common.parameters = {
     {
       content:
         'Very long text that can occupy two, three or even more lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      closeButtonLabel: 'Close notification',
       leadingVisual: <Icon name="help-circle" scale={24} weight="bold" />,
       buttonGroup: (
         <>

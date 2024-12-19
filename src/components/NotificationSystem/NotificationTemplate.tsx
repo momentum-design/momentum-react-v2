@@ -38,22 +38,32 @@ interface NotificationTemplateProps {
    * aria-label used for the toast notification.
    */
   ariaLabel?: string;
+
+  /**
+   * aria-label used for the toast close (x) button.
+   */
+  toastCloseButtonLabel: string;
 }
 
 /**
  * NOTE: this component is only used for the stories
  */
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
-  const { content, closeToast, closeButtonText, className, ariaLabel } = props;
+  const { content, closeToast, closeButtonText, className, ariaLabel, toastCloseButtonLabel } =
+    props;
 
-  const handleClose = React.useCallback((e: PressEvent) => {
-    closeToast?.(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
-  }, [closeToast]);
+  const handleClose = React.useCallback(
+    (e: PressEvent) => {
+      closeToast?.(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
+    },
+    [closeToast]
+  );
 
   return (
     <ToastNotification
       content={content}
       onClose={handleClose}
+      closeButtonLabel={toastCloseButtonLabel}
       ariaLabel={ariaLabel}
       leadingVisual={
         <Icon
