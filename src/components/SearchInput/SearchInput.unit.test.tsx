@@ -375,17 +375,37 @@ describe('<SearchInput />', () => {
       expect(element.getAttribute('role')).toBe('combobox');
     });
 
-    it('should pass label to the label', async () => {
+    it('should pass label to the input as aria-label', async () => {
       expect.assertions(2);
 
       const wrapper = await mountAndWait(
-        <SearchInput aria-label="search" label="a label" clearButtonAriaLabel="Clear" />
+        <SearchInput label="a label" clearButtonAriaLabel="Clear" />
       );
-      const label = wrapper.find('label');
-      const realInputId = wrapper.find('input').getDOMNode().getAttribute('id');
 
-      expect((label.getDOMNode() as HTMLLabelElement).htmlFor).toBe(realInputId);
-      expect(label.text()).toBe('a label');
+      expect(wrapper.find('input').prop('aria-label')).toBe('a label');
+      expect(wrapper.find('label').exists()).toBe(false);
+    });
+
+    it('should pass aria-label to the input as aria-label', async () => {
+      expect.assertions(2);
+
+      const wrapper = await mountAndWait(
+        <SearchInput aria-label="a label" clearButtonAriaLabel="Clear" />
+      );
+
+      expect(wrapper.find('input').prop('aria-label')).toBe('a label');
+      expect(wrapper.find('label').exists()).toBe(false);
+    });
+
+    it('should drop label and only pass aria-label to the input if both are specified', async () => {
+      expect.assertions(2);
+
+      const wrapper = await mountAndWait(
+        <SearchInput aria-label="a label" label="another label" clearButtonAriaLabel="Clear" />
+      );
+
+      expect(wrapper.find('input').prop('aria-label')).toBe('a label');
+      expect(wrapper.find('label').exists()).toBe(false);
     });
 
     it('should forward a ref if provided', async () => {
