@@ -121,6 +121,7 @@ Example.args = {
   children: mapTree(exampleTreeMap, (node) => (
     <ExampleTreeNode key={node.id.toString()} node={node} />
   )),
+  'aria-label': 'some tree',
 };
 
 const WithRoot = Template<ComponentProps<typeof Tree>>(Tree).bind({});
@@ -137,6 +138,7 @@ WithRoot.args = {
     (node) => <ExampleTreeNode key={node.id.toString()} node={node} />,
     { excludeRootNode: false }
   ),
+  'aria-label': 'some tree',
 };
 const TreeWithScroll = Template<ComponentProps<typeof Tree>>(Tree).bind({});
 
@@ -153,6 +155,7 @@ TreeWithScroll.args = {
     (node) => <ExampleTreeNode key={node.id.toString()} node={node} />,
     { excludeRootNode: false }
   ),
+  'aria-label': 'some tree',
 };
 
 const DynamicTree = Template(() => {
@@ -180,6 +183,7 @@ const DynamicTree = Template(() => {
         isRenderedFlat={true}
         shouldNodeFocusBeInset={true}
         excludeTreeRoot={true}
+        aria-label="some tree"
       >
         {mapTree(
           mappedTree,

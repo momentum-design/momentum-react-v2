@@ -362,6 +362,7 @@ exports[`TreeNodeBase snapshot should match snapshot without tree context 1`] = 
 
 exports[`TreeNodeBase snapshot should not render the content of the hidden nodes 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
@@ -384,6 +385,7 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -468,6 +470,7 @@ exports[`TreeNodeBase snapshot should not render the content of the hidden nodes
 
 exports[`TreeNodeBase snapshot should not render the content when the node details are not available 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
@@ -490,6 +493,7 @@ exports[`TreeNodeBase snapshot should not render the content when the node detai
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -517,6 +521,7 @@ exports[`TreeNodeBase snapshot should not render the content when the node detai
 
 exports[`TreeNodeBase snapshot should render grouping element when the tree is flat 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   isRenderedFlat={true}
   treeStructure={
@@ -539,6 +544,7 @@ exports[`TreeNodeBase snapshot should render grouping element when the tree is f
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
