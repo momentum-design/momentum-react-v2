@@ -14,31 +14,21 @@ exports[`<AriaToolbar /> snapshot should match snapshot 1`] = `
 </AriaToolbar>
 `;
 
-exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button group render 1`] = `
+exports[`<AriaToolbar /> snapshot should match snapshot with aria-label + button group render 1`] = `
 <AriaToolbar
-  aria-label="test"
+  aria-label="test-id"
   ariaToolbarItemsSize={0}
   shouldRenderAsButtonGroup={true}
-  style={
-    Object {
-      "color": "pink",
-    }
-  }
 >
   <ButtonGroup
-    aria-label="test"
+    aria-label="test-id"
     aria-orientation="horizontal"
     className="md-aria-toolbar-wrapper"
     orientation="horizontal"
     role="toolbar"
-    style={
-      Object {
-        "color": "pink",
-      }
-    }
   >
     <div
-      aria-label="test"
+      aria-label="test-id"
       aria-orientation="horizontal"
       className="md-button-group-wrapper md-aria-toolbar-wrapper"
       data-compressed={false}
@@ -47,13 +37,64 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria label + button
       data-separator={false}
       data-spaced={false}
       role="toolbar"
-      style={
-        Object {
-          "color": "pink",
-        }
-      }
     />
   </ButtonGroup>
+</AriaToolbar>
+`;
+
+exports[`<AriaToolbar /> snapshot should match snapshot with aria-label + button group render 2`] = `
+<AriaToolbar
+  aria-labelledby="tes-id"
+  ariaToolbarItemsSize={0}
+  shouldRenderAsButtonGroup={true}
+>
+  <ButtonGroup
+    aria-labelledby="tes-id"
+    aria-orientation="horizontal"
+    className="md-aria-toolbar-wrapper"
+    orientation="horizontal"
+    role="toolbar"
+  >
+    <div
+      aria-labelledby="tes-id"
+      aria-orientation="horizontal"
+      className="md-button-group-wrapper md-aria-toolbar-wrapper"
+      data-compressed={false}
+      data-orientation="horizontal"
+      data-round={false}
+      data-separator={false}
+      data-spaced={false}
+      role="toolbar"
+    />
+  </ButtonGroup>
+</AriaToolbar>
+`;
+
+exports[`<AriaToolbar /> snapshot should match snapshot with aria-label 1`] = `
+<AriaToolbar
+  aria-label="test"
+  ariaToolbarItemsSize={0}
+>
+  <div
+    aria-label="test"
+    aria-orientation="horizontal"
+    className="md-aria-toolbar-wrapper"
+    role="toolbar"
+  />
+</AriaToolbar>
+`;
+
+exports[`<AriaToolbar /> snapshot should match snapshot with aria-labelledby 1`] = `
+<AriaToolbar
+  aria-labelledby="test"
+  ariaToolbarItemsSize={0}
+>
+  <div
+    aria-labelledby="test"
+    aria-orientation="horizontal"
+    className="md-aria-toolbar-wrapper"
+    role="toolbar"
+  />
 </AriaToolbar>
 `;
 

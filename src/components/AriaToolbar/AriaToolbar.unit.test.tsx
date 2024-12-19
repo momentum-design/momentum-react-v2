@@ -53,16 +53,43 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with aria label + button group render', () => {
+    it('should match snapshot with aria-label', () => {
       expect.assertions(1);
 
-      const style = { color: 'pink' };
+      const container = mount(<AriaToolbar aria-label="test" ariaToolbarItemsSize={0} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-labelledby', () => {
+      expect.assertions(1);
+
+      const container = mount(<AriaToolbar aria-labelledby="test" ariaToolbarItemsSize={0} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-label + button group render', () => {
+      expect.assertions(1);
 
       const container = mount(
         <AriaToolbar
           shouldRenderAsButtonGroup={true}
-          aria-label="test"
-          style={style}
+          aria-label="test-id"
+          ariaToolbarItemsSize={0}
+        />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-label + button group render', () => {
+      expect.assertions(1);
+
+      const container = mount(
+        <AriaToolbar
+          shouldRenderAsButtonGroup={true}
+          aria-labelledby="tes-id"
           ariaToolbarItemsSize={0}
         />
       );
@@ -236,7 +263,7 @@ describe('<AriaToolbar />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should have provided aria-controls when ariaControls is provided', () => {
+    it('should have provided aria-controls when aria-controls is provided', () => {
       expect.assertions(1);
 
       const ariaControls = 'testid';
@@ -250,7 +277,7 @@ describe('<AriaToolbar />', () => {
       expect(element.getAttribute('aria-controls')).toBe(ariaControls);
     });
 
-    it('should have provided aria-label when ariaLabel is provided', () => {
+    it('should have provided aria-label when aria-label is provided', () => {
       expect.assertions(1);
 
       const ariaLabel = 'test label';
@@ -262,7 +289,7 @@ describe('<AriaToolbar />', () => {
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
-    it('should have provided aria-label when ariaLabel is provided for button group render', () => {
+    it('should have provided aria-label when aria-label is provided for button group render', () => {
       expect.assertions(1);
 
       const ariaLabel = 'test label';
@@ -274,6 +301,38 @@ describe('<AriaToolbar />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'some-id';
+
+      const element = mount(
+        <AriaToolbar aria-labelledby={ariaLabelledby} ariaToolbarItemsSize={0} />
+      )
+        .find(AriaToolbar)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe(ariaLabelledby);
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided for button group render', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'test-id';
+
+      const element = mount(
+        <AriaToolbar
+          shouldRenderAsButtonGroup
+          aria-labelledby={ariaLabelledby}
+          ariaToolbarItemsSize={0}
+        />
+      )
+        .find(AriaToolbar)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe(ariaLabelledby);
     });
 
     it.each`
