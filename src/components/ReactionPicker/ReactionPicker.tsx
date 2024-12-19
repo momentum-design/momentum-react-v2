@@ -7,11 +7,10 @@ import './ReactionPicker.style.scss';
 import AriaToolbar from '../AriaToolbar';
 
 const ReactionPicker: FC<Props> = (props: Props) => {
-  const { children, className, id, style, ariaLabel, ...other } = props;
+  const { children, className, id, style, ...other } = props;
 
   return (
     <AriaToolbar
-      ariaLabel={ariaLabel}
       className={classnames(className, STYLE.wrapper)}
       id={id}
       style={style}

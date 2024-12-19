@@ -2,11 +2,11 @@
 
 exports[`<ReactionPicker /> snapshot should match snapshot 1`] = `
 <ReactionPicker
-  ariaLabel="test-aria-label"
+  aria-label="test-aria-label"
   ariaToolbarItemsSize={0}
 >
   <AriaToolbar
-    ariaLabel="test-aria-label"
+    aria-label="test-aria-label"
     ariaToolbarItemsSize={0}
     className="md-reaction-picker-wrapper"
     orientation="horizontal"
@@ -23,11 +23,11 @@ exports[`<ReactionPicker /> snapshot should match snapshot 1`] = `
 
 exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
 <ReactionPicker
-  ariaLabel="test-aria-label"
+  aria-label="test-aria-label"
   ariaToolbarItemsSize={1}
 >
   <AriaToolbar
-    ariaLabel="test-aria-label"
+    aria-label="test-aria-label"
     ariaToolbarItemsSize={1}
     className="md-reaction-picker-wrapper"
     orientation="horizontal"
@@ -122,12 +122,12 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
 
 exports[`<ReactionPicker /> snapshot should match snapshot with className 1`] = `
 <ReactionPicker
-  ariaLabel="test-aria-label"
+  aria-label="test-aria-label"
   ariaToolbarItemsSize={0}
   className="example-class"
 >
   <AriaToolbar
-    ariaLabel="test-aria-label"
+    aria-label="test-aria-label"
     ariaToolbarItemsSize={0}
     className="example-class md-reaction-picker-wrapper"
     orientation="horizontal"
@@ -144,12 +144,12 @@ exports[`<ReactionPicker /> snapshot should match snapshot with className 1`] = 
 
 exports[`<ReactionPicker /> snapshot should match snapshot with id 1`] = `
 <ReactionPicker
-  ariaLabel="test-aria-label"
+  aria-label="test-aria-label"
   ariaToolbarItemsSize={0}
   id="example-id"
 >
   <AriaToolbar
-    ariaLabel="test-aria-label"
+    aria-label="test-aria-label"
     ariaToolbarItemsSize={0}
     className="md-reaction-picker-wrapper"
     id="example-id"
@@ -168,7 +168,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with id 1`] = `
 
 exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
 <ReactionPicker
-  ariaLabel="test-aria-label"
+  aria-label="test-aria-label"
   ariaToolbarItemsSize={0}
   style={
     Object {
@@ -177,7 +177,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with style 1`] = `
   }
 >
   <AriaToolbar
-    ariaLabel="test-aria-label"
+    aria-label="test-aria-label"
     ariaToolbarItemsSize={0}
     className="md-reaction-picker-wrapper"
     orientation="horizontal"

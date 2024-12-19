@@ -339,7 +339,7 @@ const ListWithAriaToolbarWrapper = () => {
         <ListItemBase size="auto" itemIndex={0} key={0}>
           <ListItemBaseSection position="fill">
             <Text tagName="p">List Item 0</Text>
-            <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+            <AriaToolbar aria-label="toolbar" ariaToolbarItemsSize={2}>
               <AriaToolbarItem itemIndex={0}>
                 <ButtonPill>Toolbar Button 1</ButtonPill>
               </AriaToolbarItem>

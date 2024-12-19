@@ -1118,7 +1118,7 @@ describe('<List />', () => {
           <ButtonPill data-testid="before">Before</ButtonPill>
           <List listSize={2}>
             <ListItemBase data-testid="list-item-0" size="auto" itemIndex={0} key={0}>
-              <AriaToolbar ariaLabel="toolbar" ariaToolbarItemsSize={2}>
+              <AriaToolbar aria-label="toolbar" ariaToolbarItemsSize={2}>
                 <AriaToolbarItem itemIndex={0}>
                   <ButtonPill data-testid="button-1">Button 1</ButtonPill>
                 </AriaToolbarItem>

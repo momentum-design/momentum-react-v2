@@ -1,5 +1,3 @@
-import { CSSProperties, ReactElement } from 'react';
-
 import { ReactionButtonProps } from '../ReactionButton';
 import { AriaToolbarProps } from '../AriaToolbar';
 
