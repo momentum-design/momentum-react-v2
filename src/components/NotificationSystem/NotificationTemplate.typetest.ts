@@ -4,18 +4,26 @@ import { NotificationTemplateProps } from './NotificationTemplate';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type cases = [
   Expect<
-    ExpectExtends<NotificationTemplateProps, { content: 'Some content'; 'aria-label': 'abc' }>
-  >,
-  Expect<
     ExpectExtends<
       NotificationTemplateProps,
-      { content: 'Some content'; 'aria-labelledby': 'some-id' }
+      { content: 'Some content'; toastCloseButtonLabel: 'Close'; 'aria-label': 'abc' }
     >
   >,
   Expect<
     ExpectExtends<
       NotificationTemplateProps,
-      { content: 'Some content'; 'aria-label': 'abc'; 'aria-labelledby': 'some-id' }
+      { content: 'Some content'; toastCloseButtonLabel: 'Close'; 'aria-labelledby': 'some-id' }
+    >
+  >,
+  Expect<
+    ExpectExtends<
+      NotificationTemplateProps,
+      {
+        content: 'Some content';
+        toastCloseButtonLabel: 'Close';
+        'aria-label': 'abc';
+        'aria-labelledby': 'some-id';
+      }
     >
   >,
 
@@ -26,6 +34,7 @@ type cases = [
   >,
 
   ExpectFalse<ExpectExtends<NotificationTemplateProps, { content: 'Some content' }>>,
+  ExpectFalse<ExpectExtends<NotificationTemplateProps, { toastCloseButtonLabel: 'Close' }>>,
 
   ExpectFalse<ExpectExtends<NotificationTemplateProps, Record<string, never>>>
 ];
