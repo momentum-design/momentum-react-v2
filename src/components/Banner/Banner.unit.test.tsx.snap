@@ -24,6 +24,7 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
       </ButtonCircle>
     </ButtonGroup>
   }
+  aria-label="Some banner"
   description="Description"
   details="(Details)"
   image={
@@ -37,12 +38,14 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
   title="Title"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     data-alert={true}
     data-shape="square"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
@@ -302,12 +305,16 @@ exports[`<Banner /> snapshot should match a complex snapshot 1`] = `
 `;
 
 exports[`<Banner /> snapshot should match snapshot 1`] = `
-<Banner>
+<Banner
+  aria-label="Some banner"
+>
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -395,12 +402,15 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
       </ButtonCircle>
     </ButtonGroup>
   }
+  aria-label="Some banner"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -625,15 +635,166 @@ exports[`<Banner /> snapshot should match snapshot with actions 1`] = `
 </Banner>
 `;
 
+exports[`<Banner /> snapshot should match snapshot with aria-label 1`] = `
+<Banner
+  aria-label="Some banner"
+>
+  <ModalContainer
+    aria-label="Some banner"
+    className="md-banner-wrapper"
+    round={75}
+  >
+    <div
+      aria-label="Some banner"
+      aria-modal={true}
+      className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-exclude-focus={true}
+      data-padded={false}
+      data-round={75}
+      role="dialog"
+      tabIndex={-1}
+    >
+      <Text
+        className="md-banner-title"
+        tagName="h1"
+        type="banner-primary"
+      >
+        <Text
+          className="md-text-wrapper md-banner-title"
+          tagname="h1"
+          type="heading-midsize-medium"
+        >
+          <mdc-text
+            class="md-text-wrapper md-banner-title"
+            suppressHydrationWarning={true}
+          />
+        </Text>
+      </Text>
+      <Text
+        className="md-banner-description"
+        tagName="h3"
+        type="subheader-secondary"
+      >
+        <Text
+          className="md-text-wrapper md-banner-description"
+          tagname="h3"
+          type="body-midsize-medium"
+        >
+          <mdc-text
+            class="md-text-wrapper md-banner-description"
+            suppressHydrationWarning={true}
+          />
+        </Text>
+      </Text>
+      <Text
+        className="md-banner-details"
+        tagName="h3"
+        type="subheader-secondary"
+      >
+        <Text
+          className="md-text-wrapper md-banner-details"
+          tagname="h3"
+          type="body-midsize-medium"
+        >
+          <mdc-text
+            class="md-text-wrapper md-banner-details"
+            suppressHydrationWarning={true}
+          />
+        </Text>
+      </Text>
+    </div>
+  </ModalContainer>
+</Banner>
+`;
+
+exports[`<Banner /> snapshot should match snapshot with aria-labelledby 1`] = `
+<Banner
+  aria-labelledby="example-id"
+>
+  <ModalContainer
+    aria-labelledby="example-id"
+    className="md-banner-wrapper"
+    round={75}
+  >
+    <div
+      aria-labelledby="example-id"
+      aria-modal={true}
+      className="md-banner-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-exclude-focus={true}
+      data-padded={false}
+      data-round={75}
+      role="dialog"
+      tabIndex={-1}
+    >
+      <Text
+        className="md-banner-title"
+        tagName="h1"
+        type="banner-primary"
+      >
+        <Text
+          className="md-text-wrapper md-banner-title"
+          tagname="h1"
+          type="heading-midsize-medium"
+        >
+          <mdc-text
+            class="md-text-wrapper md-banner-title"
+            suppressHydrationWarning={true}
+          />
+        </Text>
+      </Text>
+      <Text
+        className="md-banner-description"
+        tagName="h3"
+        type="subheader-secondary"
+      >
+        <Text
+          className="md-text-wrapper md-banner-description"
+          tagname="h3"
+          type="body-midsize-medium"
+        >
+          <mdc-text
+            class="md-text-wrapper md-banner-description"
+            suppressHydrationWarning={true}
+          />
+        </Text>
+      </Text>
+      <Text
+        className="md-banner-details"
+        tagName="h3"
+        type="subheader-secondary"
+      >
+        <Text
+          className="md-text-wrapper md-banner-details"
+          tagname="h3"
+          type="body-midsize-medium"
+        >
+          <mdc-text
+            class="md-text-wrapper md-banner-details"
+            suppressHydrationWarning={true}
+          />
+        </Text>
+      </Text>
+    </div>
+  </ModalContainer>
+</Banner>
+`;
+
 exports[`<Banner /> snapshot should match snapshot with className 1`] = `
 <Banner
+  aria-label="Some banner"
   className="example-class"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="example-class md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="example-class md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -699,13 +860,16 @@ exports[`<Banner /> snapshot should match snapshot with className 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with description 1`] = `
 <Banner
+  aria-label="Some banner"
   description="Description"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -773,13 +937,16 @@ exports[`<Banner /> snapshot should match snapshot with description 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with details 1`] = `
 <Banner
+  aria-label="Some banner"
   details="Details"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -847,14 +1014,17 @@ exports[`<Banner /> snapshot should match snapshot with details 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with id 1`] = `
 <Banner
+  aria-label="Some banner"
   id="example-id"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     id="example-id"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -921,6 +1091,7 @@ exports[`<Banner /> snapshot should match snapshot with id 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with image 1`] = `
 <Banner
+  aria-label="Some banner"
   image={
     <Avatar
       initials="CW"
@@ -928,10 +1099,12 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
   }
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -1022,14 +1195,17 @@ exports[`<Banner /> snapshot should match snapshot with image 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
 <Banner
+  aria-label="Some banner"
   isAlert={true}
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     data-alert={true}
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-alert={true}
@@ -1096,14 +1272,17 @@ exports[`<Banner /> snapshot should match snapshot with isAlert 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
 <Banner
+  aria-label="Some banner"
   shape="square"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     data-shape="square"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -1170,6 +1349,7 @@ exports[`<Banner /> snapshot should match snapshot with shape 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with style 1`] = `
 <Banner
+  aria-label="Some banner"
   style={
     Object {
       "color": "pink",
@@ -1177,6 +1357,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
     style={
@@ -1186,6 +1367,7 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
     }
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"
@@ -1256,13 +1438,16 @@ exports[`<Banner /> snapshot should match snapshot with style 1`] = `
 
 exports[`<Banner /> snapshot should match snapshot with title 1`] = `
 <Banner
+  aria-label="Some banner"
   title="Title"
 >
   <ModalContainer
+    aria-label="Some banner"
     className="md-banner-wrapper"
     round={75}
   >
     <div
+      aria-label="Some banner"
       aria-modal={true}
       className="md-banner-wrapper md-modal-container-wrapper"
       data-color="primary"

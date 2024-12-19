@@ -27,6 +27,26 @@ describe('<ModalContainer />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aria-label', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'Some modal';
+
+      const container = mount(<ModalContainer aria-label={ariaLabel} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-labelledby', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'test-id';
+
+      const container = mount(<ModalContainer aria-labelledby={ariaLabelledby} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with id', () => {
       expect.assertions(1);
 
@@ -165,6 +185,30 @@ describe('<ModalContainer />', () => {
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
+    });
+
+    it('should have provided aria-label when aria-label is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'Some modal';
+
+      const element = mount(<ModalContainer aria-label={ariaLabel} />)
+        .find(ModalContainer)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'example-id';
+
+      const element = mount(<ModalContainer aria-labelledby={ariaLabelledby} />)
+        .find(ModalContainer)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe(ariaLabelledby);
     });
 
     it('should have provided id when id is provided', () => {
