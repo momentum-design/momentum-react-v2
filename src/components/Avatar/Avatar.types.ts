@@ -38,7 +38,7 @@ export interface Props extends Omit<AriaButtonProps, 'type'> {
 
   /**
    * Size of the avatar
-   * @default 32
+   * @default 24
    */
   size?: AvatarSize;
 
