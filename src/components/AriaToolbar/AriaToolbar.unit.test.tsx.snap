@@ -42,7 +42,21 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria-label + button
 </AriaToolbar>
 `;
 
-exports[`<AriaToolbar /> snapshot should match snapshot with aria-label + button group render 2`] = `
+exports[`<AriaToolbar /> snapshot should match snapshot with aria-label 1`] = `
+<AriaToolbar
+  aria-label="test"
+  ariaToolbarItemsSize={0}
+>
+  <div
+    aria-label="test"
+    aria-orientation="horizontal"
+    className="md-aria-toolbar-wrapper"
+    role="toolbar"
+  />
+</AriaToolbar>
+`;
+
+exports[`<AriaToolbar /> snapshot should match snapshot with aria-labelledby + button group render 1`] = `
 <AriaToolbar
   aria-labelledby="tes-id"
   ariaToolbarItemsSize={0}
@@ -67,20 +81,6 @@ exports[`<AriaToolbar /> snapshot should match snapshot with aria-label + button
       role="toolbar"
     />
   </ButtonGroup>
-</AriaToolbar>
-`;
-
-exports[`<AriaToolbar /> snapshot should match snapshot with aria-label 1`] = `
-<AriaToolbar
-  aria-label="test"
-  ariaToolbarItemsSize={0}
->
-  <div
-    aria-label="test"
-    aria-orientation="horizontal"
-    className="md-aria-toolbar-wrapper"
-    role="toolbar"
-  />
 </AriaToolbar>
 `;
 
