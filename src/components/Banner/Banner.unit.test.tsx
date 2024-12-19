@@ -29,6 +29,26 @@ describe('<Banner />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with aria-label', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'Some banner';
+
+      const container = mount(<Banner aria-label={ariaLabel} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-labelledby', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'example-id';
+
+      const container = mount(<Banner aria-labelledby={ariaLabelledby} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with id', () => {
       expect.assertions(1);
 
@@ -178,6 +198,30 @@ describe('<Banner />', () => {
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
+    });
+
+    it('should have provided aria-label when aria-label is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'Some banner';
+
+      const element = mount(<Banner aria-label={ariaLabel} />)
+        .find(Banner)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-label')).toBe(`${ariaLabel}`);
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided', () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'test-id';
+
+      const element = mount(<Banner aria-labelledby={ariaLabelledby} />)
+        .find(Banner)
+        .getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe(`${ariaLabelledby}`);
     });
 
     it('should have provided id when id is provided', () => {

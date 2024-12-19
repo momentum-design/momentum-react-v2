@@ -19,6 +19,44 @@ exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
 </ModalContainer>
 `;
 
+exports[`<ModalContainer /> snapshot should match snapshot with aria-label 1`] = `
+<ModalContainer
+  aria-label="Some modal"
+>
+  <div
+    aria-label="Some modal"
+    aria-modal={true}
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-exclude-focus={true}
+    data-padded={false}
+    data-round={0}
+    role="dialog"
+    tabIndex={-1}
+  />
+</ModalContainer>
+`;
+
+exports[`<ModalContainer /> snapshot should match snapshot with aria-labelledby 1`] = `
+<ModalContainer
+  aria-labelledby="test-id"
+>
+  <div
+    aria-labelledby="test-id"
+    aria-modal={true}
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-exclude-focus={true}
+    data-padded={false}
+    data-round={0}
+    role="dialog"
+    tabIndex={-1}
+  />
+</ModalContainer>
+`;
+
 exports[`<ModalContainer /> snapshot should match snapshot with aria-modal 1`] = `
 <ModalContainer
   aria-label="Some label"

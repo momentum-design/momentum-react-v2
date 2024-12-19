@@ -54,20 +54,19 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
 exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`] = `
 <ToastNotification
   aria-label="test"
-  className="example-class"
   content="Example text"
 >
   <ModalContainer
     aria-label="test"
     ariaModal={false}
-    className="example-class md-toast-notification-wrapper"
+    className="md-toast-notification-wrapper"
     isPadded={true}
     role="generic"
     round={50}
   >
     <div
       aria-label="test"
-      className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-exclude-focus={true}
@@ -80,17 +79,68 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`
         className="md-toast-notification-body"
       >
         <Text
-          className="example-class md-toast-notification-content"
+          className="md-toast-notification-content"
           tagName="p"
           type="body-primary"
         >
           <Text
-            className="md-text-wrapper example-class md-toast-notification-content"
+            className="md-text-wrapper md-toast-notification-content"
             tagname="p"
             type="body-large-regular"
           >
             <mdc-text
-              class="md-text-wrapper example-class md-toast-notification-content"
+              class="md-text-wrapper md-toast-notification-content"
+              suppressHydrationWarning={true}
+            >
+              Example text
+            </mdc-text>
+          </Text>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with aria-labelledby 1`] = `
+<ToastNotification
+  aria-labelledby="test-id"
+  content="Example text"
+>
+  <ModalContainer
+    aria-labelledby="test-id"
+    ariaModal={false}
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    role="generic"
+    round={50}
+  >
+    <div
+      aria-labelledby="test-id"
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-exclude-focus={true}
+      data-padded={true}
+      data-round={50}
+      role="generic"
+      tabIndex={-1}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <Text
+          className="md-toast-notification-content"
+          tagName="p"
+          type="body-primary"
+        >
+          <Text
+            className="md-text-wrapper md-toast-notification-content"
+            tagname="p"
+            type="body-large-regular"
+          >
+            <mdc-text
+              class="md-text-wrapper md-toast-notification-content"
               suppressHydrationWarning={true}
             >
               Example text

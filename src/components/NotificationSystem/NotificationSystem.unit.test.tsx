@@ -67,7 +67,7 @@ describe('<NotificationSystem />', () => {
 
     act(() => {
       NotificationSystem.notify(
-        <NotificationTemplate content={content} toastCloseButtonLabel="Close notification" />,
+        <NotificationTemplate aria-label="Some notification" content={content} toastCloseButtonLabel="Close notification" />,
         {
           toastId: fixedToastId,
           notificationSystemId: id,
@@ -328,6 +328,7 @@ describe('<NotificationSystem />', () => {
           <NotificationTemplate
             content="creating additional toast to meet the toast limit"
             toastCloseButtonLabel="Close notification"
+            aria-label="Some notification"
           />,
           {
             toastId: '12345890',
@@ -341,6 +342,7 @@ describe('<NotificationSystem />', () => {
           <NotificationTemplate
             content="additional toast to test the limit works"
             toastCloseButtonLabel="Close notification"
+            aria-label="Some notification"
           />,
           {
             toastId: '1234589012',
@@ -367,7 +369,7 @@ describe('<NotificationSystem />', () => {
       const toastId = '12345';
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate content={textContent} toastCloseButtonLabel="Close notification" />,
+          <NotificationTemplate aria-label="Some label" content={textContent} toastCloseButtonLabel="Close notification" />,
           {
             autoClose: false,
             toastId,
@@ -406,6 +408,7 @@ describe('<NotificationSystem />', () => {
             content={textContent}
             closeButtonText={closeButtonText}
             toastCloseButtonLabel="Close notification"
+            aria-label="Some notification"
           />,
           {
             autoClose: false,
@@ -440,7 +443,7 @@ describe('<NotificationSystem />', () => {
       const newcontent = 'this is a new text';
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate content={textContent} toastCloseButtonLabel="Close notification" />,
+          <NotificationTemplate aria-label="Some label" content={textContent} toastCloseButtonLabel="Close notification" />,
           {
             autoClose: false,
             toastId,
@@ -458,7 +461,7 @@ describe('<NotificationSystem />', () => {
       act(() => {
         NotificationSystem.update(toastId, {
           render: (
-            <NotificationTemplate content={newcontent} toastCloseButtonLabel="Close notification" />
+            <NotificationTemplate aria-label="Some label" content={newcontent} toastCloseButtonLabel="Close notification" />
           ),
         });
       });
@@ -485,6 +488,7 @@ describe('<NotificationSystem />', () => {
           <NotificationTemplate
             content={textContent + firstSystemId}
             toastCloseButtonLabel="Close notification"
+            aria-label="Some notification"
           />,
           {
             autoClose: false,
@@ -505,6 +509,7 @@ describe('<NotificationSystem />', () => {
           <NotificationTemplate
             content={textContent + secondSystemId}
             toastCloseButtonLabel="Close notification"
+            aria-label="Some notification"
           />,
           {
             autoClose: false,

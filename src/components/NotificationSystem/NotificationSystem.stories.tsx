@@ -33,6 +33,7 @@ const Example = Template<NotificationSystemProps>((args: NotificationSystemProps
             <NotificationTemplate
               content="I'm a low attention notification"
               toastCloseButtonLabel="Close notification"
+              aria-label="Some notification"
             />
           )
         }
@@ -58,6 +59,7 @@ const Important = Template<NotificationSystemProps>((args: NotificationSystemPro
         onPress={() =>
           NotificationSystem.notify(
             <NotificationTemplate
+              aria-label="Some notification"
               content="I'm a medium attention notification, which does stay here permanently and requires an action."
               closeButtonText="Close"
               toastCloseButtonLabel="Close notification"
@@ -89,6 +91,7 @@ const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) 
             <NotificationTemplate
               content="I'm a low attention notification"
               toastCloseButtonLabel="Close notification"
+              aria-label="Some notification"
             />
           )
         }
@@ -99,6 +102,7 @@ const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) 
         onPress={() =>
           NotificationSystem.notify(
             <NotificationTemplate
+              aria-label="Some notification"
               content="I'm a medium attention notification, which does stay here permanently and requires an action."
               closeButtonText="Close"
               toastCloseButtonLabel="Close notification"
@@ -129,6 +133,7 @@ const UpdateContent = Template<NotificationSystemProps>((args: NotificationSyste
 
   const Notification = (
     <NotificationTemplate
+      aria-label="Some notification"
       content={
         numberRaisedHand > 1
           ? `${numberRaisedHand} have their hand raised.`
@@ -199,6 +204,7 @@ const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemPr
     <NotificationTemplate
       content={`I am disappearing in 5 seconds`}
       toastCloseButtonLabel="Close notification"
+      aria-label="Some notification"
     />
   );
 
@@ -248,6 +254,7 @@ const MultipleSystems = Template<NotificationSystemProps>((args: NotificationSys
       <NotificationTemplate
         content={`I'm a notification on the ${position} position`}
         toastCloseButtonLabel="Close notification"
+        aria-label="Some notification"
       />,
       {
         autoClose: 5000,
