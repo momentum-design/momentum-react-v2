@@ -6,7 +6,7 @@ import type { CloseButtonProps } from 'react-toastify';
 import type { PressEvent } from '@react-types/shared';
 
 import './NotificationTemplate.style.scss';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type NotificationTemplateProps = AriaLabelRequired & {
   /**
