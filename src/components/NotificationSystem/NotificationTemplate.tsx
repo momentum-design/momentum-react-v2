@@ -6,8 +6,9 @@ import type { CloseButtonProps } from 'react-toastify';
 import type { PressEvent } from '@react-types/shared';
 
 import './NotificationTemplate.style.scss';
+import { AriaLabelRequired } from '../../utils/a11y';
 
-interface NotificationTemplateProps {
+export type NotificationTemplateProps = AriaLabelRequired & {
   /**
    * The content to be shown in notification
    */
@@ -35,11 +36,6 @@ interface NotificationTemplateProps {
   className?: string;
 
   /**
-   * aria-label used for the toast notification.
-   */
-  ariaLabel?: string;
-
-  /**
    * aria-label used for the toast close (x) button.
    */
   toastCloseButtonLabel: string;
@@ -49,7 +45,7 @@ interface NotificationTemplateProps {
  * NOTE: this component is only used for the stories
  */
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
-  const { content, closeToast, closeButtonText, className, ariaLabel, toastCloseButtonLabel } =
+  const { content, closeToast, closeButtonText, className, toastCloseButtonLabel, ...rest } =
     props;
 
   const handleClose = React.useCallback(
@@ -64,7 +60,6 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
       content={content}
       onClose={handleClose}
       closeButtonLabel={toastCloseButtonLabel}
-      ariaLabel={ariaLabel}
       leadingVisual={
         <Icon
           name="info-circle"
@@ -82,6 +77,7 @@ const NotificationTemplate: FC<NotificationTemplateProps> = (props: Notification
         )
       }
       className={className}
+      {...rest}
     />
   );
 };

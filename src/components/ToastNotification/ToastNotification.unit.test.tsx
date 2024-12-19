@@ -34,7 +34,9 @@ describe('<ToastNotification />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ToastNotification content={exampleContent} />);
+      const container = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={exampleContent} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -45,7 +47,7 @@ describe('<ToastNotification />', () => {
       const className = 'example-class';
 
       const container = await mountAndWait(
-        <ToastNotification className={className} content={exampleContent} />
+        <ToastNotification aria-label="Some label" className={className} content={exampleContent} />
       );
 
       expect(container).toMatchSnapshot();
@@ -53,11 +55,21 @@ describe('<ToastNotification />', () => {
 
     it('should match snapshot with aria-label', async () => {
       expect.assertions(1);
-      const className = 'example-class';
       const ariaLabel = 'test';
 
       const container = await mountAndWait(
-        <ToastNotification className={className} content={exampleContent} ariaLabel={ariaLabel} />
+        <ToastNotification aria-label={ariaLabel} content={exampleContent} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with aria-labelledby', async () => {
+      expect.assertions(1);
+      const ariaLabelledby = 'test-id';
+
+      const container = await mountAndWait(
+        <ToastNotification aria-labelledby={ariaLabelledby} content={exampleContent} />
       );
 
       expect(container).toMatchSnapshot();
@@ -68,7 +80,9 @@ describe('<ToastNotification />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<ToastNotification id={id} content={exampleContent} />);
+      const container = await mountAndWait(
+        <ToastNotification aria-label="Some label" id={id} content={exampleContent} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -79,7 +93,7 @@ describe('<ToastNotification />', () => {
       const style = { color: 'pink' };
 
       const container = await mountAndWait(
-        <ToastNotification style={style} content={exampleContent} />
+        <ToastNotification aria-label="Some label" style={style} content={exampleContent} />
       );
 
       expect(container).toMatchSnapshot();
@@ -88,7 +102,9 @@ describe('<ToastNotification />', () => {
     it('should match snapshot with string content', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ToastNotification content={exampleContent} />);
+      const container = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={exampleContent} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -98,7 +114,9 @@ describe('<ToastNotification />', () => {
 
       const content = <button>{exampleContent}</button>;
 
-      const container = await mountAndWait(<ToastNotification content={content} />);
+      const container = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={content} />
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -107,7 +125,11 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const container = await mountAndWait(
-        <ToastNotification content={exampleContent} leadingVisual={leadingVisual} />
+        <ToastNotification
+          aria-label="Some label"
+          content={exampleContent}
+          leadingVisual={leadingVisual}
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -117,7 +139,11 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const container = await mountAndWait(
-        <ToastNotification content={exampleContent} buttonGroup={buttonGroup} />
+        <ToastNotification
+          aria-label="Some label"
+          content={exampleContent}
+          buttonGroup={buttonGroup}
+        />
       );
 
       expect(container).toMatchSnapshot();
@@ -128,6 +154,7 @@ describe('<ToastNotification />', () => {
 
       const container = await mountAndWait(
         <ToastNotification
+          aria-label="Some label"
           content={exampleContent}
           onClose={onClose}
           closeButtonLabel={closeButtonLabel}
@@ -142,7 +169,9 @@ describe('<ToastNotification />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<ToastNotification content={exampleContent} />);
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={exampleContent} />
+      );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -154,24 +183,37 @@ describe('<ToastNotification />', () => {
       const className = 'example-class';
 
       const wrapper = await mountAndWait(
-        <ToastNotification className={className} content={exampleContent} />
+        <ToastNotification aria-label="Some label" className={className} content={exampleContent} />
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
     });
 
-    it('should have provided aria-label when ariaLabel is provided', async () => {
+    it('should have provided aria-label when aria-label is provided', async () => {
       expect.assertions(1);
 
       const ariaLabel = 'test';
 
       const wrapper = await mountAndWait(
-        <ToastNotification ariaLabel={ariaLabel} content={exampleContent} />
+        <ToastNotification aria-label={ariaLabel} content={exampleContent} />
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+    });
+
+    it('should have provided aria-labelledby when aria-labelledby is provided', async () => {
+      expect.assertions(1);
+
+      const ariaLabelledby = 'test-id';
+
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-labelledby={ariaLabelledby} content={exampleContent} />
+      );
+      const element = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(element.getAttribute('aria-labelledby')).toBe(ariaLabelledby);
     });
 
     it('should have provided id when id is provided', async () => {
@@ -179,7 +221,9 @@ describe('<ToastNotification />', () => {
 
       const id = 'example-id';
 
-      const wrapper = await mountAndWait(<ToastNotification id={id} content={exampleContent} />);
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" id={id} content={exampleContent} />
+      );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
       expect(element.id).toBe(id);
@@ -192,7 +236,7 @@ describe('<ToastNotification />', () => {
       const styleString = 'color: pink;';
 
       const wrapper = await mountAndWait(
-        <ToastNotification style={style} content={exampleContent} />
+        <ToastNotification aria-label="Some label" style={style} content={exampleContent} />
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
@@ -203,7 +247,7 @@ describe('<ToastNotification />', () => {
       expect.assertions(2);
 
       const wrapper = await mountAndWait(
-        <ToastNotification onClose={onClose} content={exampleContent} />
+        <ToastNotification aria-label="Some label" onClose={onClose} content={exampleContent} />
       );
       const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
       const button = wrapper.find('.md-toast-notification-close-button button');
@@ -216,7 +260,12 @@ describe('<ToastNotification />', () => {
       expect.assertions(2);
 
       const wrapper = await mountAndWait(
-        <ToastNotification onClose={onClose} closeButtonLabel={'close'} content={exampleContent} />
+        <ToastNotification
+          aria-label="Some label"
+          onClose={onClose}
+          closeButtonLabel={'close'}
+          content={exampleContent}
+        />
       );
       const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
       const button = wrapper.find('.md-toast-notification-close-button button');
@@ -229,7 +278,11 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(
-        <ToastNotification leadingVisual={leadingVisual} content={exampleContent} />
+        <ToastNotification
+          aria-label="Some label"
+          leadingVisual={leadingVisual}
+          content={exampleContent}
+        />
       );
       const element = wrapper.find(Icon).getDOMNode();
 
@@ -240,7 +293,11 @@ describe('<ToastNotification />', () => {
       expect.assertions(2);
 
       const wrapper = await mountAndWait(
-        <ToastNotification buttonGroup={buttonGroup} content={exampleContent} />
+        <ToastNotification
+          aria-label="Some label"
+          buttonGroup={buttonGroup}
+          content={exampleContent}
+        />
       );
       const element1 = wrapper.find(ButtonPill).at(0).getDOMNode();
       const element2 = wrapper.find(ButtonPill).at(1).getDOMNode();
@@ -252,7 +309,9 @@ describe('<ToastNotification />', () => {
     it('should wrap notification content inside Text component if content is a free string', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<ToastNotification content={exampleContent} />);
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={exampleContent} />
+      );
       const textComponent = wrapper
         .find(Text)
         .filter({ className: 'md-toast-notification-content' });
@@ -263,7 +322,9 @@ describe('<ToastNotification />', () => {
       expect.assertions(1);
 
       const notificationContent = <button>{exampleContent}</button>;
-      const wrapper = await mountAndWait(<ToastNotification content={notificationContent} />);
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={notificationContent} />
+      );
       const textComponent = wrapper
         .find(Text)
         .filter({ className: 'md-toast-notification-content' });
@@ -279,6 +340,7 @@ describe('<ToastNotification />', () => {
 
       const wrapper = await mountAndWait(
         <ToastNotification
+          aria-label='Some label'
           onClose={mockCallback}
           content={exampleContent}
           closeButtonLabel="Close notification"

@@ -2,9 +2,11 @@
 
 exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
 <ToastNotification
+  aria-label="Some label"
   content="Example text"
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -12,6 +14,7 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -50,21 +53,20 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
 
 exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`] = `
 <ToastNotification
-  ariaLabel="test"
-  className="example-class"
+  aria-label="test"
   content="Example text"
 >
   <ModalContainer
     aria-label="test"
     ariaModal={false}
-    className="example-class md-toast-notification-wrapper"
+    className="md-toast-notification-wrapper"
     isPadded={true}
     role="generic"
     round={50}
   >
     <div
       aria-label="test"
-      className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
       data-exclude-focus={true}
@@ -77,17 +79,68 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`
         className="md-toast-notification-body"
       >
         <Text
-          className="example-class md-toast-notification-content"
+          className="md-toast-notification-content"
           tagName="p"
           type="body-primary"
         >
           <Text
-            className="md-text-wrapper example-class md-toast-notification-content"
+            className="md-text-wrapper md-toast-notification-content"
             tagname="p"
             type="body-large-regular"
           >
             <mdc-text
-              class="md-text-wrapper example-class md-toast-notification-content"
+              class="md-text-wrapper md-toast-notification-content"
+              suppressHydrationWarning={true}
+            >
+              Example text
+            </mdc-text>
+          </Text>
+        </Text>
+      </div>
+    </div>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with aria-labelledby 1`] = `
+<ToastNotification
+  aria-labelledby="test-id"
+  content="Example text"
+>
+  <ModalContainer
+    aria-labelledby="test-id"
+    ariaModal={false}
+    className="md-toast-notification-wrapper"
+    isPadded={true}
+    role="generic"
+    round={50}
+  >
+    <div
+      aria-labelledby="test-id"
+      className="md-toast-notification-wrapper md-modal-container-wrapper"
+      data-color="primary"
+      data-elevation={0}
+      data-exclude-focus={true}
+      data-padded={true}
+      data-round={50}
+      role="generic"
+      tabIndex={-1}
+    >
+      <div
+        className="md-toast-notification-body"
+      >
+        <Text
+          className="md-toast-notification-content"
+          tagName="p"
+          type="body-primary"
+        >
+          <Text
+            className="md-text-wrapper md-toast-notification-content"
+            tagname="p"
+            type="body-large-regular"
+          >
+            <mdc-text
+              class="md-text-wrapper md-toast-notification-content"
               suppressHydrationWarning={true}
             >
               Example text
@@ -102,6 +155,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`
 
 exports[`<ToastNotification /> snapshot should match snapshot with button group 1`] = `
 <ToastNotification
+  aria-label="Some label"
   buttonGroup={
     <React.Fragment>
       <ButtonPill
@@ -120,6 +174,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
   content="Example text"
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -127,6 +182,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -282,10 +338,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
 
 exports[`<ToastNotification /> snapshot should match snapshot with className 1`] = `
 <ToastNotification
+  aria-label="Some label"
   className="example-class"
   content="Example text"
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="example-class md-toast-notification-wrapper"
     isPadded={true}
@@ -293,6 +351,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
     round={50}
   >
     <div
+      aria-label="Some label"
       className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -331,10 +390,12 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
 
 exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
 <ToastNotification
+  aria-label="Some label"
   content="Example text"
   id="example-id"
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     id="example-id"
@@ -343,6 +404,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -382,6 +444,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
 
 exports[`<ToastNotification /> snapshot should match snapshot with leading visual 1`] = `
 <ToastNotification
+  aria-label="Some label"
   content="Example text"
   leadingVisual={
     <Icon
@@ -392,6 +455,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
   }
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -399,6 +463,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -465,6 +530,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
 
 exports[`<ToastNotification /> snapshot should match snapshot with non string content 1`] = `
 <ToastNotification
+  aria-label="Some label"
   content={
     <button>
       Example text
@@ -472,6 +538,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
   }
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -479,6 +546,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -506,11 +574,13 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
 
 exports[`<ToastNotification /> snapshot should match snapshot with onClose and closeButtonLabel 1`] = `
 <ToastNotification
+  aria-label="Some label"
   closeButtonLabel="Close toast"
   content="Example text"
   onClose={[Function]}
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -518,6 +588,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -641,9 +712,11 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
 
 exports[`<ToastNotification /> snapshot should match snapshot with string content 1`] = `
 <ToastNotification
+  aria-label="Some label"
   content="Example text"
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -651,6 +724,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
     round={50}
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}
@@ -689,6 +763,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
 
 exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
 <ToastNotification
+  aria-label="Some label"
   content="Example text"
   style={
     Object {
@@ -697,6 +772,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ModalContainer
+    aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
     isPadded={true}
@@ -709,6 +785,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
     }
   >
     <div
+      aria-label="Some label"
       className="md-toast-notification-wrapper md-modal-container-wrapper"
       data-color="primary"
       data-elevation={0}

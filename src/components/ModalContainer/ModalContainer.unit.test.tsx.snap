@@ -1,8 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
-<ModalContainer>
+<ModalContainer
+  aria-label="Some label"
+>
   <div
+    aria-label="Some label"
+    aria-modal={true}
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-exclude-focus={true}
+    data-padded={false}
+    data-round={0}
+    role="dialog"
+    tabIndex={-1}
+  />
+</ModalContainer>
+`;
+
+exports[`<ModalContainer /> snapshot should match snapshot with aria-label 1`] = `
+<ModalContainer
+  aria-label="Some modal"
+>
+  <div
+    aria-label="Some modal"
+    aria-modal={true}
+    className="md-modal-container-wrapper"
+    data-color="primary"
+    data-elevation={0}
+    data-exclude-focus={true}
+    data-padded={false}
+    data-round={0}
+    role="dialog"
+    tabIndex={-1}
+  />
+</ModalContainer>
+`;
+
+exports[`<ModalContainer /> snapshot should match snapshot with aria-labelledby 1`] = `
+<ModalContainer
+  aria-labelledby="test-id"
+>
+  <div
+    aria-labelledby="test-id"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -18,9 +59,11 @@ exports[`<ModalContainer /> snapshot should match snapshot 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with aria-modal 1`] = `
 <ModalContainer
+  aria-label="Some label"
   aria-modal={false}
 >
   <div
+    aria-label="Some label"
     aria-modal={false}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -36,9 +79,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with aria-modal 1`] =
 
 exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
 <ModalContainer
+  aria-label="Some label"
   showArrow={true}
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -89,9 +134,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrow 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with arrowId 1`] = `
 <ModalContainer
+  aria-label="Some label"
   arrowId="example-id"
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -106,8 +153,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with arrowId 1`] = `
 `;
 
 exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
-<ModalContainer>
+<ModalContainer
+  aria-label="Some label"
+>
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -127,9 +177,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with children 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = `
 <ModalContainer
+  aria-label="Some label"
   className="example-class"
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="example-class md-modal-container-wrapper"
     data-color="primary"
@@ -145,9 +197,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with className 1`] = 
 
 exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
 <ModalContainer
+  aria-label="Some label"
   color="quaternary"
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="quaternary"
@@ -163,9 +217,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with color 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = `
 <ModalContainer
+  aria-label="Some label"
   elevation={8}
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -181,6 +237,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with elevation 1`] = 
 
 exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1`] = `
 <ModalContainer
+  aria-label="Some label"
   focusLockProps={
     Object {
       "restoreFocus": true,
@@ -197,6 +254,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1
       hidden={true}
     />
     <div
+      aria-label="Some label"
       aria-modal={true}
       className="md-modal-container-wrapper"
       data-color="primary"
@@ -217,9 +275,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with focusLockProps 1
 
 exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
 <ModalContainer
+  aria-label="Some label"
   id="example-id"
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -236,9 +296,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with id 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
 <ModalContainer
+  aria-label="Some label"
   isPadded={true}
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -254,9 +316,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with isPadded 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
 <ModalContainer
+  aria-label="Some label"
   round={150}
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
@@ -272,9 +336,11 @@ exports[`<ModalContainer /> snapshot should match snapshot with radius 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
 <ModalContainer
+  aria-label="Some label"
   role="tooltip"
 >
   <div
+    aria-label="Some label"
     className="md-modal-container-wrapper"
     data-color="primary"
     data-elevation={0}
@@ -289,6 +355,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with role 1`] = `
 
 exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
 <ModalContainer
+  aria-label="Some label"
   style={
     Object {
       "color": "pink",
@@ -296,6 +363,7 @@ exports[`<ModalContainer /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
+    aria-label="Some label"
     aria-modal={true}
     className="md-modal-container-wrapper"
     data-color="primary"
