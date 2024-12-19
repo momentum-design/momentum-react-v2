@@ -195,7 +195,12 @@ describe('TreeNodeBase', () => {
       const tree: TreeNode = tNode('root', true, [tNode('1'), tNode('2')]);
 
       container = mount(
-        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+        <Tree
+          treeStructure={tree}
+          isRenderedFlat={true}
+          excludeTreeRoot={false}
+          aria-label="some tree"
+        >
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (
@@ -255,7 +260,12 @@ describe('TreeNodeBase', () => {
       const tree: TreeNode = tNode('root', true, [tNode('1'), tNode('2')]);
 
       container = mount(
-        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+        <Tree
+          treeStructure={tree}
+          isRenderedFlat={true}
+          excludeTreeRoot={false}
+          aria-label="some tree"
+        >
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (
@@ -285,7 +295,7 @@ describe('TreeNodeBase', () => {
       const tree: TreeNode = tNode('root', false, [tNode('1'), tNode('2')]);
       // prettier-ignore
       container = mount(
-        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false} aria-label='some tree'>
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (
@@ -310,7 +320,7 @@ describe('TreeNodeBase', () => {
       const tree: TreeNode = tNode('root', false, [tNode('1'), tNode('2')]);
       // prettier-ignore
       container = mount(
-        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false}>
+        <Tree treeStructure={tree} isRenderedFlat={true} excludeTreeRoot={false} aria-label='some tree'>
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (
@@ -547,7 +557,7 @@ describe('TreeNodeBase', () => {
       const tree = getSampleTree();
       // prettier-ignore
       return render(
-        <Tree treeStructure={tree}>
+        <Tree treeStructure={tree} aria-label='some tree'>
           {mapTree(convertNestedTree2MappedTree(tree), (node) => (
             <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>
               {() =>(<ListItemBaseSection position="end">
@@ -609,7 +619,11 @@ describe('TreeNodeBase', () => {
       const user = userEvent.setup();
 
       render(
-        <Tree treeStructure={{ id: 'root', children: [] }} excludeTreeRoot={false}>
+        <Tree
+          treeStructure={{ id: 'root', children: [] }}
+          excludeTreeRoot={false}
+          aria-label="some tree"
+        >
           <TreeNodeBase data-testid="list-item-1" key="1" nodeId="root" onPress={mockCallback} />
         </Tree>
       );

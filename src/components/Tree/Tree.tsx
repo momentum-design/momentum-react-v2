@@ -50,6 +50,11 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
     ...rest
   } = props;
 
+  // aria-label or aria-labelledby is required on the Props type, but union type enforcement doesn't work properly with forwardRef
+  if (!rest['aria-label'] && !rest['aria-labelledby']) {
+    console.warn('MRV2: Tree must have aria-label or aria-labelledby');
+  }
+
   const treeRef = useRef<HTMLDivElement>();
 
   const itemSelection = useItemSelected<TreeNodeId>({
