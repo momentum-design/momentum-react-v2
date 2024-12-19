@@ -278,7 +278,11 @@ describe('<ToastNotification />', () => {
       const mockCallback = jest.fn();
 
       const wrapper = await mountAndWait(
-        <ToastNotification onClose={mockCallback} content={exampleContent} />
+        <ToastNotification
+          onClose={mockCallback}
+          content={exampleContent}
+          closeButtonLabel="Close notification"
+        />
       );
       const component = wrapper.find(ButtonCircle);
 
