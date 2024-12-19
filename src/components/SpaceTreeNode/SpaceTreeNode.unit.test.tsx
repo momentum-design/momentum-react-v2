@@ -13,7 +13,11 @@ import Tree from '../Tree';
 describe('<SpaceTreeNode />', () => {
   const mount = async (component) => {
     return mountAndWait(
-      <Tree excludeTreeRoot={false} treeStructure={createTreeNode('root', true, [])}>
+      <Tree
+        excludeTreeRoot={false}
+        treeStructure={createTreeNode('root', true, [])}
+        aria-label="some tree"
+      >
         {component}
       </Tree>
     );

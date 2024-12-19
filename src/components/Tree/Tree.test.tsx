@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import '@testing-library/jest-dom';
 import { render, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { omit } from 'lodash';
 
 import Tree, { TREE_CONSTANTS, TreeProps } from './index';
 import { createTreeNode as tNode } from './test.utils';
@@ -36,6 +37,7 @@ const getSampleTree = () => {
 describe('<Tree />', () => {
   const commonProps = {
     treeStructure: tNode('root', true, [tNode('1'), tNode('2')]),
+    'aria-label': 'some tree',
   };
 
   afterAll(() => {
@@ -162,7 +164,7 @@ describe('<Tree />', () => {
       expect.assertions(1);
 
       const label = 'test';
-      const container = mount(<Tree aria-label={label} {...commonProps} />);
+      const container = mount(<Tree aria-label={label} {...omit(commonProps, ['aria-label'])} />);
       const element = container.find(Tree).getDOMNode();
 
       expect(element.getAttribute('aria-label')).toBe('test');
@@ -172,7 +174,9 @@ describe('<Tree />', () => {
       expect.assertions(1);
 
       const labelBy = 'label-id';
-      const container = mount(<Tree aria-labelledby={labelBy} {...commonProps} />);
+      const container = mount(
+        <Tree aria-labelledby={labelBy} {...omit(commonProps, ['aria-label'])} />
+      );
       const element = container.find(Tree).getDOMNode();
 
       expect(element.getAttribute('aria-labelledby')).toBe(labelBy);
@@ -200,7 +204,7 @@ describe('<Tree />', () => {
     it.each(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'])(
       'should do nothing when tree structure is empty and user presses %s',
       async (key) => {
-        render(<Tree treeStructure={{}} excludeTreeRoot={false} />);
+        render(<Tree treeStructure={{}} excludeTreeRoot={false} aria-label="some tree" />);
         const focusedElement = document.activeElement;
 
         await userEvent.keyboard(`{${key}}`);
@@ -215,7 +219,7 @@ describe('<Tree />', () => {
       const { getByRole } = render(
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
         <div onKeyDown={keyDownHandler}>
-          <Tree treeStructure={getSampleTree()} excludeTreeRoot={false}>
+          <Tree treeStructure={getSampleTree()} excludeTreeRoot={false} aria-label="some tree">
             <TreeNodeBase key="0" nodeId="root">
               {() => 'TreeNodeBase 1'}
             </TreeNodeBase>
@@ -238,7 +242,7 @@ describe('<Tree />', () => {
       const tree = getSampleTree();
 
       const { getByTestId } = render(
-        <Tree treeStructure={tree} excludeTreeRoot={false}>
+        <Tree treeStructure={tree} excludeTreeRoot={false} aria-label="some tree">
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (
@@ -316,6 +320,7 @@ describe('<Tree />', () => {
             scrollToNode,
           }}
           onToggleNode={onToggleNode}
+          aria-label="some tree"
         >
           {mapTree(
             convertNestedTree2MappedTree(tree),
@@ -385,7 +390,11 @@ describe('<Tree />', () => {
       const user = userEvent.setup();
 
       const { getByTestId, getByText } = render(
-        <Tree treeStructure={{ id: 'root', children: [] }} excludeTreeRoot={false}>
+        <Tree
+          treeStructure={{ id: 'root', children: [] }}
+          excludeTreeRoot={false}
+          aria-label="some tree"
+        >
           <TreeNodeBase nodeId="root" data-testid="root">
             {() => (
               <>
@@ -422,6 +431,7 @@ describe('<Tree />', () => {
           treeStructure={tree}
           excludeTreeRoot={false}
           virtualTreeConnector={virtualTreeConnector}
+          aria-label="some tree"
         >
           {mapTree(
             convertNestedTree2MappedTree(tree),
@@ -668,7 +678,7 @@ describe('<Tree />', () => {
   describe('dynamically changing tree', () => {
     const getTreeComponent = (tree, excludeTreeRoot = false) => {
       return (
-        <Tree treeStructure={tree} excludeTreeRoot={excludeTreeRoot}>
+        <Tree treeStructure={tree} excludeTreeRoot={excludeTreeRoot} aria-label="some tree">
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) =>
@@ -883,7 +893,13 @@ describe('<Tree />', () => {
   describe('selection', () => {
     const getTreeComponent = (tree, { ref, ...props }: Partial<TreeProps> = {}) => {
       return (
-        <Tree treeStructure={tree} excludeTreeRoot={false} {...props} ref={ref as any}>
+        <Tree
+          treeStructure={tree}
+          excludeTreeRoot={false}
+          aria-label="some tree"
+          {...props}
+          ref={ref as any}
+        >
           {mapTree(
             convertNestedTree2MappedTree(tree),
             (node) => (

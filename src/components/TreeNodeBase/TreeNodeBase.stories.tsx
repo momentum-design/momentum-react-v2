@@ -36,7 +36,7 @@ export default {
 };
 
 const TreeWrapper = ({ children }) => (
-  <Tree excludeTreeRoot={false} treeStructure={tNode('root', true, [])}>
+  <Tree excludeTreeRoot={false} treeStructure={tNode('root', true, [])} aria-label="some tree">
     {children}
   </Tree>
 );
