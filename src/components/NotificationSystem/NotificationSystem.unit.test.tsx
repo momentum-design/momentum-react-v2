@@ -66,11 +66,14 @@ describe('<NotificationSystem />', () => {
     );
 
     act(() => {
-      NotificationSystem.notify(<NotificationTemplate content={content} />, {
-        toastId: fixedToastId,
-        notificationSystemId: id,
-        attention,
-      });
+      NotificationSystem.notify(
+        <NotificationTemplate content={content} toastCloseButtonLabel="Close notification" />,
+        {
+          toastId: fixedToastId,
+          notificationSystemId: id,
+          attention,
+        }
+      );
     });
 
     // wait till the toast shows up on the screen:
@@ -322,7 +325,10 @@ describe('<NotificationSystem />', () => {
 
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate content="creating additional toast to meet the toast limit" />,
+          <NotificationTemplate
+            content="creating additional toast to meet the toast limit"
+            toastCloseButtonLabel="Close notification"
+          />,
           {
             toastId: '12345890',
             notificationSystemId: '1234567',
@@ -332,7 +338,10 @@ describe('<NotificationSystem />', () => {
 
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate content="additional toast to test the limit works" />,
+          <NotificationTemplate
+            content="additional toast to test the limit works"
+            toastCloseButtonLabel="Close notification"
+          />,
           {
             toastId: '1234589012',
             notificationSystemId: '1234567',
@@ -357,10 +366,13 @@ describe('<NotificationSystem />', () => {
 
       const toastId = '12345';
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
-          autoClose: false,
-          toastId,
-        });
+        NotificationSystem.notify(
+          <NotificationTemplate content={textContent} toastCloseButtonLabel="Close notification" />,
+          {
+            autoClose: false,
+            toastId,
+          }
+        );
       });
 
       // wait till the toast shows up on the screen:
@@ -390,7 +402,11 @@ describe('<NotificationSystem />', () => {
       const toastId = '12345';
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate content={textContent} closeButtonText={closeButtonText} />,
+          <NotificationTemplate
+            content={textContent}
+            closeButtonText={closeButtonText}
+            toastCloseButtonLabel="Close notification"
+          />,
           {
             autoClose: false,
             toastId,
@@ -423,10 +439,13 @@ describe('<NotificationSystem />', () => {
       const toastId = '12345';
       const newcontent = 'this is a new text';
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={textContent} />, {
-          autoClose: false,
-          toastId,
-        });
+        NotificationSystem.notify(
+          <NotificationTemplate content={textContent} toastCloseButtonLabel="Close notification" />,
+          {
+            autoClose: false,
+            toastId,
+          }
+        );
       });
 
       // wait till the toast shows up on the screen:
@@ -438,7 +457,9 @@ describe('<NotificationSystem />', () => {
 
       act(() => {
         NotificationSystem.update(toastId, {
-          render: <NotificationTemplate content={newcontent} />,
+          render: (
+            <NotificationTemplate content={newcontent} toastCloseButtonLabel="Close notification" />
+          ),
         });
       });
 
@@ -460,10 +481,16 @@ describe('<NotificationSystem />', () => {
       );
 
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={textContent + firstSystemId} />, {
-          autoClose: false,
-          notificationSystemId: firstSystemId,
-        });
+        NotificationSystem.notify(
+          <NotificationTemplate
+            content={textContent + firstSystemId}
+            toastCloseButtonLabel="Close notification"
+          />,
+          {
+            autoClose: false,
+            notificationSystemId: firstSystemId,
+          }
+        );
       });
 
       // wait till the first toast shows up on the screen:
@@ -474,10 +501,16 @@ describe('<NotificationSystem />', () => {
 
       // trigger second notification
       act(() => {
-        NotificationSystem.notify(<NotificationTemplate content={textContent + secondSystemId} />, {
-          autoClose: false,
-          notificationSystemId: secondSystemId,
-        });
+        NotificationSystem.notify(
+          <NotificationTemplate
+            content={textContent + secondSystemId}
+            toastCloseButtonLabel="Close notification"
+          />,
+          {
+            autoClose: false,
+            notificationSystemId: secondSystemId,
+          }
+        );
       });
 
       // wait till the 2 toasts shows up on the screen:
