@@ -83,7 +83,7 @@ describe('<AriaToolbar />', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with aria-label + button group render', () => {
+    it('should match snapshot with aria-labelledby + button group render', () => {
       expect.assertions(1);
 
       const container = mount(
