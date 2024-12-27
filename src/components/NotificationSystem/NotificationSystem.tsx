@@ -8,6 +8,7 @@ import type { CompoundProps, Props } from './NotificationSystem.types';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './NotificationSystem.style.scss';
+import ScreenReaderAnnouncer from '../ScreenReaderAnnouncer';
 
 /**
  * The `<NotificationSystem />` component allows consumers to trigger notifications on the defined position on the screen.
@@ -55,25 +56,28 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     : [ATTENTION.LOW, ATTENTION.MEDIUM];
 
   return (
-    <section
-      data-position={position}
-      className={classnames(STYLE.wrapper, className)}
-      style={{ ...style, zIndex: zIndex }}
-      aria-label={ariaLabel}
-    >
-      <ToastContainer
-        {...commonProps}
-        position={position}
-        limit={limit}
-        containerId={getContainerID(id, attentionOrder[0])}
-      />
-      <ToastContainer
-        {...commonProps}
-        position={position}
-        limit={limit}
-        containerId={getContainerID(id, attentionOrder[1])}
-      />
-    </section>
+    <>
+      <section
+        data-position={position}
+        className={classnames(STYLE.wrapper, className)}
+        style={{ ...style, zIndex: zIndex }}
+        aria-label={ariaLabel}
+      >
+        <ToastContainer
+          {...commonProps}
+          position={position}
+          limit={limit}
+          containerId={getContainerID(id, attentionOrder[0])}
+        />
+        <ToastContainer
+          {...commonProps}
+          position={position}
+          limit={limit}
+          containerId={getContainerID(id, attentionOrder[1])}
+        />
+      </section>
+      <ScreenReaderAnnouncer identity={id} />
+    </>
   );
 };
 

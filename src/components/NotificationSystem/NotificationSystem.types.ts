@@ -20,7 +20,11 @@ type CustomOptions = {
    *
    * Can be used to trigger multiple notifications at different positions on the screen at the same time
    */
-  notificationSystemId?: string;
+  notificationSystemId: string;
+  /**
+   * Screen reader announcement to be made
+   */
+  screenReaderAnnouncement?: string;
 };
 
 export type UpdateOptionsType = UpdateOptions & CustomOptions;
@@ -97,7 +101,7 @@ export interface Props {
   /**
    * Custom id for overriding this component's CSS.
    */
-  id?: string;
+  id: string;
 
   /**
    * Custom style for overriding this component's CSS.
