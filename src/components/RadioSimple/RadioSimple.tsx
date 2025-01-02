@@ -14,25 +14,12 @@ import { RadioSimpleGroupContext } from '../RadioSimpleGroup';
  * The RadioSimple component.
  */
 const RadioSimple: FC<RadioSimpleProps> = (props: RadioSimpleProps) => {
-  const {
-    ariaLabel,
-    ariaLabelledBy,
-    children,
-    className,
-    id,
-    isDisabled = DEFAULTS.DISABLED,
-    style,
-    value,
-  } = props;
+  const { children, className, id, isDisabled = DEFAULTS.DISABLED, style, value } = props;
   const state = useContext(RadioSimpleGroupContext);
   const ref = useRef(null);
   const isSelected = state?.selectedValue === value;
   const { focusProps, isFocusVisible } = useFocusRing();
-  const { inputProps } = useRadio(
-    { 'aria-label': ariaLabel, 'aria-labelledby': ariaLabelledBy, ...props },
-    state,
-    ref
-  );
+  const { inputProps } = useRadio(props, state, ref);
 
   return (
     <label

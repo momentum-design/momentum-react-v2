@@ -22,26 +22,6 @@ const radioSimpleArgTypes = {
       defaultValue: undefined,
     },
   },
-  ariaLabel: {
-    description: 'The ariaLabel is used to provide an aria-label for the RadioSimple.',
-    control: { type: 'text', required: false },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: 'example-ariaLabel',
-    },
-  },
-  ariaLabelledBy: {
-    description: 'The ariaLabelledBy is used to provide an aria-labelledby for the RadioSimple.',
-    control: { type: 'text', required: false },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: 'example-ariaLabelledBy',
-    },
-  },
   isDisabled: {
     description: 'The isDisabled is to set the disable state for the RadioSimple.',
     control: { type: 'boolean', required: false },
