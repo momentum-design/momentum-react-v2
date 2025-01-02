@@ -49,6 +49,7 @@ Example.args = {
     padding: '8px',
     margin: '8px 8px',
   },
+  'aria-label': 'Some label',
 };
 
 export { Example };

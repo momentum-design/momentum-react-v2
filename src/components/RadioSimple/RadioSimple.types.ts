@@ -1,17 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
-import { AriaRadioProps } from '@react-types/radio';
+import { AriaLabelRequired } from '../../utils/a11y';
 
-export interface RadioSimpleProps extends AriaRadioProps {
-  /**
-   * Optional ariaLabel on the RadioSimple component.
-   */
-  ariaLabel?: string;
-
-  /**
-   * Optional ariaLabelledBy on the RadioSimple component.
-   */
-  ariaLabelledBy?: string;
-
+export type RadioSimpleProps = AriaLabelRequired & {
   /**
    * Child components of this RadioSimple.
    */
@@ -41,4 +31,4 @@ export interface RadioSimpleProps extends AriaRadioProps {
    * The value of the RadioSimple component.
    */
   value: string;
-}
+};

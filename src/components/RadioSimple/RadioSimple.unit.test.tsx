@@ -22,7 +22,7 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" />
+          <RadioSimple aria-label="Some label" children={children} value="red" />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -36,7 +36,7 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" ariaLabel={ariaLabel} />
+          <RadioSimple children={children} value="red" aria-label={ariaLabel} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -50,7 +50,7 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" ariaLabelledBy={ariaLabelledBy} />
+          <RadioSimple children={children} value="red" aria-labelledby={ariaLabelledBy} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -64,7 +64,12 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" className={className} />
+          <RadioSimple
+            aria-label="Some label"
+            children={children}
+            value="red"
+            className={className}
+          />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -78,7 +83,7 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" id={id} />
+          <RadioSimple aria-label="Some label" children={children} value="red" id={id} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -92,7 +97,12 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" isDisabled={isDisabled} />
+          <RadioSimple
+            aria-label="Some label"
+            children={children}
+            value="red"
+            isDisabled={isDisabled}
+          />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -106,7 +116,7 @@ describe('<RadioSimple />', () => {
 
       const { asFragment } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" style={style} />
+          <RadioSimple aria-label="Some label" children={children} value="red" style={style} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -120,7 +130,7 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" />
+          <RadioSimple aria-label="Some label" children={children} value="red" />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -136,7 +146,7 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" ariaLabel={ariaLabel} />
+          <RadioSimple children={children} value="red" aria-label={ariaLabel} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -152,7 +162,7 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" ariaLabelledBy={ariaLabelledBy} />
+          <RadioSimple children={children} value="red" aria-labelledby={ariaLabelledBy} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -168,7 +178,12 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" className={className} />
+          <RadioSimple
+            aria-label="Some label"
+            children={children}
+            value="red"
+            className={className}
+          />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -184,7 +199,7 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" id={id} />
+          <RadioSimple aria-label="Some label" children={children} value="red" id={id} />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -200,7 +215,12 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" isDisabled={isDisabled} />
+          <RadioSimple
+            aria-label="Some label"
+            children={children}
+            value="red"
+            isDisabled={isDisabled}
+          />
         </RadioSimpleGroupContext.Provider>
       );
 
@@ -216,7 +236,7 @@ describe('<RadioSimple />', () => {
 
       const { container } = render(
         <RadioSimpleGroupContext.Provider value={'red'}>
-          <RadioSimple children={children} value="red" style={style} />
+          <RadioSimple aria-label="Some label" children={children} value="red" style={style} />
         </RadioSimpleGroupContext.Provider>
       );
 
