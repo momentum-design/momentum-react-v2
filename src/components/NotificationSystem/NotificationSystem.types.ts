@@ -22,7 +22,8 @@ type CustomOptions = {
    */
   notificationSystemId: string;
   /**
-   * Screen reader announcement to be made
+   * Screen reader announcement to be made.
+   * No announcement will be made if this is not provided.
    */
   screenReaderAnnouncement?: string;
 };
