@@ -30,7 +30,11 @@ export default {
 };
 
 const TreeWrapper = (Story) => (
-  <Tree excludeTreeRoot={false} treeStructure={createTreeNode('root', true, [])}>
+  <Tree
+    excludeTreeRoot={false}
+    treeStructure={createTreeNode('root', true, [])}
+    aria-label="some tree"
+  >
     <Story />
   </Tree>
 );

@@ -2,6 +2,7 @@
 
 exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -12,6 +13,7 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -185,6 +187,7 @@ exports[`<SpaceTreeNode /> snapshot checks divider dot position in compact mode 
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -195,6 +198,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -311,6 +315,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -321,6 +326,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -451,6 +457,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with action 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -461,6 +468,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -578,6 +586,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with className 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -588,6 +597,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -708,6 +718,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with firstLine 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -718,6 +729,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -836,6 +848,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with id 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -846,6 +859,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -995,6 +1009,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlert 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1005,6 +1020,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1154,6 +1170,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isAlertMuted 1`] 
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1164,6 +1181,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = 
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1281,6 +1299,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isDisabled 1`] = 
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1291,6 +1310,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1440,6 +1460,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isEnterRoom 1`] =
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1450,6 +1471,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1599,6 +1621,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isError 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1609,6 +1632,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1758,6 +1782,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isMention 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1768,6 +1793,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`]
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -1886,6 +1912,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isNewActivity 1`]
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -1896,6 +1923,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = 
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -2014,6 +2042,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected 1`] = 
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and draft 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -2024,6 +2053,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -2175,6 +2205,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isSelected and dr
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -2185,6 +2216,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -2334,6 +2366,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with isUnread 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string secondLine 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -2344,6 +2377,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -2543,6 +2577,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with multiple string s
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -2553,6 +2588,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -2714,6 +2750,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with secondLine 1`] = 
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -2724,6 +2761,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -2855,6 +2893,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with style 1`] = `
 
 exports[`<SpaceTreeNode /> snapshot should match snapshot with teamColor 1`] = `
 <Tree
+  aria-label="some tree"
   excludeTreeRoot={false}
   treeStructure={
     Object {
@@ -2865,6 +2904,7 @@ exports[`<SpaceTreeNode /> snapshot should match snapshot with teamColor 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}

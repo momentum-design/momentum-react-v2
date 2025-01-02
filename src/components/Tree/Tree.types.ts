@@ -6,6 +6,7 @@ import {
   ReactNode,
 } from 'react';
 import { ItemSelection, UseItemSelectedProps } from '../../hooks/useItemSelected';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 /**
  * The key codes used to navigate the tree.
@@ -97,106 +98,107 @@ export type TreeIdNodeMap = Map<TreeNodeId, TreeNodeRecord>;
 
 /**
  * The props of the Tree component.
+ * aria-label or aria-labelledby is required, but union type enforcement doesn't work properly with forwardRef
  */
-export interface Props
-  extends Partial<UseItemSelectedProps<TreeNodeId>>,
-    DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
-
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
-
-  /**
-   * Child components of this component.
-   */
-  children?: ReactNode;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
-
-  /**
-   * Determines whether the focus ring around tree nodes should be inset or outset
-   * It has only visual effect.
-   */
-  shouldNodeFocusBeInset?: boolean;
-
-  /**
-   * The initial tree structure
-   *
-   * It is used to build an internal tree for navigation and follow open/close states.
-   *
-   * The tree can be updated dynamically via `treeStructure`, but `isOpen` will be migrated from the old tree:
-   * If the node exists the both old and new tree then the value used from the old tree otherwise
-   * falls back to the `isOpenByDefault ?? true`
-   */
-  treeStructure: TreeRoot;
-
-  /**
-   * Tree structure can be rendered 2 ways in the DOM:
-   * 1) Nested: The tree is rendered as a nested list where the structure reflect the semantic structure of the tree
-   * 2) Flat: The tree is rendered as a single level list where the DOM does not reflect the semantic structure of the tree, and
-   *    we need to provide additional aria attributes to re-build it for the accessibility tree.
-   *    Virtualized trees are usually rendered flat.
-   * @default true
-   */
-  isRenderedFlat?: boolean;
-
-  /**
-   * Determines if the tree root should be excluded from the tree keyboard navigation.
-   *
-   * In many case we want to hide the root of the tree, for example when the tree used for grouping some list items.
-   *
-   * Note: it does not change the visibility of the root node.
-   * @default true
-   */
-  excludeTreeRoot?: boolean;
-
-  /**
-   * The selection mode of the tree nodes.
-   *
-   * Note: When user click to select a node and `selectableNodes` is `any` and the node is not a leaf node, the node will be opened/closed.
-   * WCAG Tree patter sample implementation has the same behavior.
-   *
-   * @see {@link https://www.w3.org/WAI/ARIA/apg/patterns/treeview/ WCAG Tree Pattern}
-   */
-  selectableNodes?: 'leafOnly' | 'any';
-
-  /**
-   * Set of functions to communicate with virtualized tree and sync states.
-   */
-  virtualTreeConnector?: {
+export type Props = Partial<UseItemSelectedProps<TreeNodeId>> &
+  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> &
+  AriaLabelRequired & {
     /**
-     * External function to scroll to a node.
-     * This is used when the tree is rendered in a virtualized tree.
-     *
-     * @param id
+     * Custom class for overriding this component's CSS.
      */
-    scrollToNode: (id: TreeNodeId) => void;
+    className?: string;
 
     /**
-     * Toggle open/close state of the tree node.
+     * Custom id for overriding this component's CSS.
+     */
+    id?: string;
+
+    /**
+     * Child components of this component.
+     */
+    children?: ReactNode;
+
+    /**
+     * Custom style for overriding this component's CSS.
+     */
+    style?: CSSProperties;
+
+    /**
+     * Determines whether the focus ring around tree nodes should be inset or outset
+     * It has only visual effect.
+     */
+    shouldNodeFocusBeInset?: boolean;
+
+    /**
+     * The initial tree structure
+     *
+     * It is used to build an internal tree for navigation and follow open/close states.
+     *
+     * The tree can be updated dynamically via `treeStructure`, but `isOpen` will be migrated from the old tree:
+     * If the node exists the both old and new tree then the value used from the old tree otherwise
+     * falls back to the `isOpenByDefault ?? true`
+     */
+    treeStructure: TreeRoot;
+
+    /**
+     * Tree structure can be rendered 2 ways in the DOM:
+     * 1) Nested: The tree is rendered as a nested list where the structure reflect the semantic structure of the tree
+     * 2) Flat: The tree is rendered as a single level list where the DOM does not reflect the semantic structure of the tree, and
+     *    we need to provide additional aria attributes to re-build it for the accessibility tree.
+     *    Virtualized trees are usually rendered flat.
+     * @default true
+     */
+    isRenderedFlat?: boolean;
+
+    /**
+     * Determines if the tree root should be excluded from the tree keyboard navigation.
+     *
+     * In many case we want to hide the root of the tree, for example when the tree used for grouping some list items.
+     *
+     * Note: it does not change the visibility of the root node.
+     * @default true
+     */
+    excludeTreeRoot?: boolean;
+
+    /**
+     * The selection mode of the tree nodes.
+     *
+     * Note: When user click to select a node and `selectableNodes` is `any` and the node is not a leaf node, the node will be opened/closed.
+     * WCAG Tree patter sample implementation has the same behavior.
+     *
+     * @see {@link https://www.w3.org/WAI/ARIA/apg/patterns/treeview/ WCAG Tree Pattern}
+     */
+    selectableNodes?: 'leafOnly' | 'any';
+
+    /**
+     * Set of functions to communicate with virtualized tree and sync states.
+     */
+    virtualTreeConnector?: {
+      /**
+       * External function to scroll to a node.
+       * This is used when the tree is rendered in a virtualized tree.
+       *
+       * @param id
+       */
+      scrollToNode: (id: TreeNodeId) => void;
+
+      /**
+       * Toggle open/close state of the tree node.
+       *
+       * @param id
+       * @param isOpen
+       */
+      setNodeOpen?: (id: TreeNodeId, isOpen: boolean) => void | Promise<void>;
+    };
+
+    /**
+     * Called when a node's open / close state is toggled.
      *
      * @param id
      * @param isOpen
      */
-    setNodeOpen?: (id: TreeNodeId, isOpen: boolean) => void | Promise<void>;
+    onToggleNode?: (id: TreeNodeId, isOpen: boolean) => void;
   };
-
-  /**
-   * Called when a node's open / close state is toggled.
-   *
-   * @param id
-   * @param isOpen
-   */
-  onToggleNode?: (id: TreeNodeId, isOpen: boolean) => void;
-}
 
 /**
  * Props of the virtualized tree hook

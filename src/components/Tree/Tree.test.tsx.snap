@@ -2,6 +2,7 @@
 
 exports[`<Tree /> snapshot should match snapshot 1`] = `
 <Tree
+  aria-label="some tree"
   treeStructure={
     Object {
       "children": Array [
@@ -22,6 +23,7 @@ exports[`<Tree /> snapshot should match snapshot 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -33,6 +35,7 @@ exports[`<Tree /> snapshot should match snapshot 1`] = `
 
 exports[`<Tree /> snapshot should match snapshot with className 1`] = `
 <Tree
+  aria-label="some tree"
   className="example-class"
   treeStructure={
     Object {
@@ -54,6 +57,7 @@ exports[`<Tree /> snapshot should match snapshot with className 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="example-class md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -65,6 +69,7 @@ exports[`<Tree /> snapshot should match snapshot with className 1`] = `
 
 exports[`<Tree /> snapshot should match snapshot with id 1`] = `
 <Tree
+  aria-label="some tree"
   id="example-id"
   treeStructure={
     Object {
@@ -86,6 +91,7 @@ exports[`<Tree /> snapshot should match snapshot with id 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     id="example-id"
     onBlur={[Function]}
@@ -98,6 +104,7 @@ exports[`<Tree /> snapshot should match snapshot with id 1`] = `
 
 exports[`<Tree /> snapshot should match snapshot with style 1`] = `
 <Tree
+  aria-label="some tree"
   style={
     Object {
       "color": "pink",
@@ -123,6 +130,7 @@ exports[`<Tree /> snapshot should match snapshot with style 1`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -139,6 +147,7 @@ exports[`<Tree /> snapshot should match snapshot with style 1`] = `
 
 exports[`<Tree /> snapshot should match snapshot with style 2`] = `
 <Tree
+  aria-label="some tree"
   style={
     Object {
       "color": "pink",
@@ -164,6 +173,7 @@ exports[`<Tree /> snapshot should match snapshot with style 2`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -180,6 +190,7 @@ exports[`<Tree /> snapshot should match snapshot with style 2`] = `
 
 exports[`<Tree /> snapshot should match snapshot with style 3`] = `
 <Tree
+  aria-label="some tree"
   style={
     Object {
       "color": "pink",
@@ -205,6 +216,7 @@ exports[`<Tree /> snapshot should match snapshot with style 3`] = `
   }
 >
   <div
+    aria-label="some tree"
     className="md-tree-wrapper"
     onBlur={[Function]}
     onFocus={[Function]}
