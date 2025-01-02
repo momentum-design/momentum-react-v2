@@ -36,7 +36,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
 
   const role = props.role || (isInteractiveDialog ? 'alertdialog' : 'generic');
 
-  const isAriaHidden = !isInteractiveDialog;
+  const ariaHiddenProps = !isInteractiveDialog ? { 'aria-hidden': true } : {};
 
   return (
     <ModalContainer
@@ -46,7 +46,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
       style={style}
       round={50}
       role={role}
-      aria-hidden={isAriaHidden}
+      {...ariaHiddenProps}
       ariaModal={false}
       {...rest}
     >

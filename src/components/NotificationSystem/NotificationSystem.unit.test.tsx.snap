@@ -30,7 +30,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -157,7 +156,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -284,7 +282,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -411,7 +408,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -538,7 +534,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -665,7 +660,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -792,7 +786,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -919,7 +912,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1042,7 +1034,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1162,7 +1153,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1293,7 +1283,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1420,7 +1409,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1547,7 +1535,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1674,7 +1661,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1801,7 +1787,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -1928,7 +1913,6 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
           >
             <div>
               <div
-                aria-hidden="false"
                 aria-label="Some notification"
                 aria-modal="false"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"

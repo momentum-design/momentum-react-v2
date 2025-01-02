@@ -180,7 +180,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
   content="Example text"
 >
   <ModalContainer
-    aria-hidden={false}
     aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
@@ -189,7 +188,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
     round={50}
   >
     <div
-      aria-hidden={false}
       aria-label="Some label"
       aria-modal={false}
       className="md-toast-notification-wrapper md-modal-container-wrapper"
@@ -597,7 +595,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
   onClose={[Function]}
 >
   <ModalContainer
-    aria-hidden={false}
     aria-label="Some label"
     ariaModal={false}
     className="md-toast-notification-wrapper"
@@ -606,7 +603,6 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
     round={50}
   >
     <div
-      aria-hidden={false}
       aria-label="Some label"
       aria-modal={false}
       className="md-toast-notification-wrapper md-modal-container-wrapper"
