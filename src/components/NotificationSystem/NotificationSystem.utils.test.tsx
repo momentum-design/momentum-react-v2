@@ -23,61 +23,49 @@ describe('NotificationSystem utils', () => {
     jest.clearAllMocks();
   });
   describe('getContainerID', () => {
-    it('should return the right container id if an id is passed in', () => {
-      const id = '12345';
+    const id = '12345';
+    it('should return the right container id if attention is low', () => {
       expect(getContainerID(id, ATTENTION.LOW)).toBe('12345_low_notification_container');
     });
 
-    it('should return the right container id if no id is passed in', () => {
-      expect(getContainerID(undefined, ATTENTION.MEDIUM)).toBe('medium_notification_container');
+    it('should return the right container id if attention is medium', () => {
+      expect(getContainerID(id, ATTENTION.MEDIUM)).toBe('12345_medium_notification_container');
     });
 
-    it('should return the right container id if no id is passed in', () => {
-      expect(getContainerID(undefined, undefined)).toBe('notification_container');
+    it('should return the right container id if attention is undefined', () => {
+      expect(getContainerID(id, undefined)).toBe('12345__notification_container');
     });
   });
 
   describe('calculateAutoClose', () => {
     it('should return the DEFAULT timeout if no option is provided', () => {
-      expect(calculateAutoClose({})).toBe(DEFAULTS.AUTOCLOSE_TIMEOUT);
+      expect(calculateAutoClose({ notificationSystemId: 'id' })).toBe(DEFAULTS.AUTOCLOSE_TIMEOUT);
     });
 
     it('should return the DEFAULT timeout if no custom autoClose is provided and ATTENTION is low', () => {
-      expect(calculateAutoClose({ attention: ATTENTION.LOW })).toBe(DEFAULTS.AUTOCLOSE_TIMEOUT);
+      expect(calculateAutoClose({ attention: ATTENTION.LOW, notificationSystemId: 'id' })).toBe(
+        DEFAULTS.AUTOCLOSE_TIMEOUT
+      );
     });
 
     it('should return the right autoClose timeout if an custom autoClose is provided', () => {
       const autoClose = 3500;
-      expect(calculateAutoClose({ autoClose })).toBe(3500);
+      expect(calculateAutoClose({ autoClose, notificationSystemId: 'id' })).toBe(3500);
     });
 
     it('should return false if no custom autoClose is provided', () => {
-      expect(calculateAutoClose({ autoClose: false })).toBe(false);
+      expect(calculateAutoClose({ autoClose: false, notificationSystemId: 'id' })).toBe(false);
     });
 
     it('should return false if no custom autoClose is provided and ATTENTION is medium', () => {
-      expect(calculateAutoClose({ attention: ATTENTION.MEDIUM })).toBe(false);
+      expect(calculateAutoClose({ attention: ATTENTION.MEDIUM, notificationSystemId: 'id' })).toBe(
+        false
+      );
     });
   });
 
   describe('notify', () => {
-    it('should fire the right functions and returns correctly when firing the toast function without any options passed in', () => {
-      const autoCloseSpy = jest.spyOn(utils, 'calculateAutoClose');
-      const getContainerIDSpy = jest.spyOn(utils, 'getContainerID');
-
-      expect(notify(<div />)).toStrictEqual(expect.any(String));
-
-      expect(toast).toHaveBeenCalledWith(<div />, {
-        autoClose: 3000,
-        containerId: 'low_notification_container',
-        onClose: undefined,
-        toastId: undefined,
-      });
-      expect(autoCloseSpy).toHaveBeenCalledWith(undefined);
-      expect(getContainerIDSpy).toHaveBeenCalledWith(undefined, 'low');
-    });
-
-    it('should fire the right functions and returns correctly when firing the toast function with custom options passed in', () => {
+    it('should fire the right functions and returns correctly when firing the toast function', () => {
       const autoCloseSpy = jest.spyOn(utils, 'calculateAutoClose');
       const getContainerIDSpy = jest.spyOn(utils, 'getContainerID');
       const toastId = 'test';
@@ -102,22 +90,27 @@ describe('NotificationSystem utils', () => {
 
   describe('update', () => {
     it('should fire the right functions when updating an existing toast', () => {
-      const toastId = notify(<div />);
+      const toastId = notify(<div />, { notificationSystemId: 'id' });
       const getContainerIDSpy = jest.spyOn(utils, 'getContainerID');
 
-      update(toastId, { toastId: 'new', render: <p />, attention: ATTENTION.MEDIUM });
+      update(toastId, {
+        toastId: 'new',
+        render: <p />,
+        attention: ATTENTION.MEDIUM,
+        notificationSystemId: 'id',
+      });
       expect(toast.update).toHaveBeenCalledWith(toastId, {
-        containerId: 'medium_notification_container',
+        containerId: 'id_medium_notification_container',
         toastId: 'new',
         render: <p />,
       });
-      expect(getContainerIDSpy).toHaveBeenCalledWith(undefined, 'low');
+      expect(getContainerIDSpy).toHaveBeenCalledWith('id', 'medium');
     });
   });
 
   describe('dismiss', () => {
     it('should fire the right functions when dismissing an existing toast', () => {
-      const toastId = notify(<div />);
+      const toastId = notify(<div />, { notificationSystemId: ' id' });
 
       dismiss(toastId);
       expect(toast.dismiss).toHaveBeenCalledWith(toastId);
