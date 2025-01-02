@@ -34,13 +34,14 @@ const Example = Template<NotificationSystemProps>((args: NotificationSystemProps
               content="I'm a low attention notification"
               toastCloseButtonLabel="Close notification"
               aria-label="Some notification"
-            />
+            />,
+            { notificationSystemId: 'id' }
           )
         }
       >
         Trigger a new low attention notification
       </ButtonPill>
-      <NotificationSystem {...args} limit={3} />
+      <NotificationSystem {...args} limit={3} id="id" />
     </>
   );
 }).bind({});
@@ -64,13 +65,13 @@ const Important = Template<NotificationSystemProps>((args: NotificationSystemPro
               closeButtonText="Close"
               toastCloseButtonLabel="Close notification"
             />,
-            { attention: ATTENTION.MEDIUM }
+            { attention: ATTENTION.MEDIUM, notificationSystemId: 'id' }
           )
         }
       >
         Trigger a new medium attention notification
       </ButtonPill>
-      <NotificationSystem {...args} />
+      <NotificationSystem {...args} id="id" />
     </>
   );
 }).bind({});
@@ -92,7 +93,8 @@ const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) 
               content="I'm a low attention notification"
               toastCloseButtonLabel="Close notification"
               aria-label="Some notification"
-            />
+            />,
+            { notificationSystemId: 'id' }
           )
         }
       >
@@ -109,13 +111,14 @@ const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) 
             />,
             {
               attention: ATTENTION.MEDIUM,
+              notificationSystemId: 'id',
             }
           )
         }
       >
         Trigger a new medium attention notification
       </ButtonPill>
-      <NotificationSystem {...args} />
+      <NotificationSystem {...args} id="id" />
     </>
   );
 }).bind({});
@@ -160,12 +163,13 @@ const UpdateContent = Template<NotificationSystemProps>((args: NotificationSyste
         // if toast active and numberRaisedHand higher than 0, update the existing toast
         NotificationSystem.update(toastId.current, {
           render: Notification,
+          notificationSystemId: 'id',
         });
       }
     } else {
       if (numberRaisedHand > 0) {
         // if no toast is there and number of raised hand is higher than 0, show new notification
-        toastId.current = NotificationSystem.notify(Notification);
+        toastId.current = NotificationSystem.notify(Notification, { notificationSystemId: 'id' });
       }
     }
   }, [Notification, numberRaisedHand]);
@@ -174,7 +178,7 @@ const UpdateContent = Template<NotificationSystemProps>((args: NotificationSyste
     <>
       <ButtonPill onPress={increaseCount}>Increase number raised hand</ButtonPill>
       <ButtonPill onPress={decreaseCount}>Decrease number raised hand</ButtonPill>
-      <NotificationSystem {...args} />
+      <NotificationSystem {...args} id="id" />
     </>
   );
 }).bind({});
@@ -216,6 +220,7 @@ const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemPr
     toastId.current = NotificationSystem.notify(Notification, {
       autoClose: 5000,
       onClose: handleClose,
+      notificationSystemId: 'id',
     });
     setNotificationIsShown(true);
   }, [Notification, handleClose]);
@@ -223,6 +228,7 @@ const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemPr
   const resetTimer = React.useCallback(() => {
     NotificationSystem.update(toastId.current, {
       autoClose: 5000,
+      notificationSystemId: 'id',
     });
   }, []);
 
@@ -234,7 +240,7 @@ const ResetTimer = Template<NotificationSystemProps>((args: NotificationSystemPr
       <ButtonPill onPress={resetTimer}>Reset Timer</ButtonPill>
       <Text tagName="p">Verify the reset with the help of this clock:</Text>
       <Text tagName="p">{currentTime.toLocaleTimeString()}</Text>
-      <NotificationSystem {...args} />
+      <NotificationSystem {...args} id="id" />
     </>
   );
 }).bind({});
