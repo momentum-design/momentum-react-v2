@@ -34,33 +34,39 @@ export type ToastNotificationCloseButtonProps =
       closeButtonLabel: string;
     };
 
-export type Props = ToastNotificationCloseButtonProps & AriaLabelRequired & {
-  /**
-   * The free string or a ReactElement that appears inside the Notification toast.
-   */
-  content: ReactNode;
-  /**
-   * Leading visual of this notification toast. It can be an Icon, Avatar or Badge.
-   */
-  leadingVisual?: ReactElement<SupportedLeadingVisuals>;
+export type Props = ToastNotificationCloseButtonProps &
+  AriaLabelRequired & {
+    /**
+     * The free string or a ReactElement that appears inside the Notification toast.
+     */
+    content: ReactNode;
+    /**
+     * Leading visual of this notification toast. It can be an Icon, Avatar or Badge.
+     */
+    leadingVisual?: ReactElement<SupportedLeadingVisuals>;
 
-  /**
-   * Button group that appears on the bottom of this Notification toast.
-   */
-  buttonGroup?: ReactElement<SupportedButtonGroup>;
+    /**
+     * Button group that appears on the bottom of this Notification toast.
+     */
+    buttonGroup?: ReactElement<SupportedButtonGroup>;
 
-  /**
-   * Custom class for overriding this component's CSS.
-   */
-  className?: string;
+    /**
+     * Custom class for overriding this component's CSS.
+     */
+    className?: string;
 
-  /**
-   * Custom id for overriding this component's CSS.
-   */
-  id?: string;
+    /**
+     * Custom id for overriding this component's CSS.
+     */
+    id?: string;
 
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
-};
+    /**
+     * Custom style for overriding this component's CSS.
+     */
+    style?: CSSProperties;
+
+    /**
+     * Custom role for overriding this component's role. Use 'alertdialog' for interactive dialogs if onClose and buttonGroup are provided are undefined.
+     */
+    role?: string;
+  };

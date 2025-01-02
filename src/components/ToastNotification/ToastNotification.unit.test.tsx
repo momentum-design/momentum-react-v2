@@ -87,6 +87,18 @@ describe('<ToastNotification />', () => {
       expect(container).toMatchSnapshot();
     });
 
+    it('should match snapshot with role', async () => {
+      expect.assertions(1);
+
+      const role = 'example-id';
+
+      const container = await mountAndWait(
+        <ToastNotification aria-label="Some label" role={role} content={exampleContent} />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+
     it('should match snapshot with style', async () => {
       expect.assertions(1);
 
@@ -229,6 +241,19 @@ describe('<ToastNotification />', () => {
       expect(element.id).toBe(id);
     });
 
+    it('should have provided role when role is provided', async () => {
+      expect.assertions(1);
+
+      const role = 'some-fake-role';
+
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" role={role} content={exampleContent} />
+      );
+      const element = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(element.getAttribute('role')).toBe(role);
+    });
+
     it('should have provided style when style is provided', async () => {
       expect.assertions(1);
 
@@ -274,6 +299,22 @@ describe('<ToastNotification />', () => {
       expect(button.props()['aria-label']).toBe('close');
     });
 
+    it('should assign role="alertdialog" when onClose is defined', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(
+        <ToastNotification
+          aria-label="Some label"
+          onClose={onClose}
+          closeButtonLabel={'close'}
+          content={exampleContent}
+        />
+      );
+      const modalContainer = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(modalContainer.getAttribute('role')).toBe('alertdialog');
+    });
+
     it('should wrap Icon inside leadingVisual when Icon is provided', async () => {
       expect.assertions(1);
 
@@ -304,6 +345,33 @@ describe('<ToastNotification />', () => {
 
       expect(element1).toBeDefined();
       expect(element2).toBeDefined();
+    });
+
+    it('should assign role="alertdialog" when buttons are provided', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(
+        <ToastNotification
+          aria-label="Some label"
+          buttonGroup={buttonGroup}
+          content={exampleContent}
+        />
+      );
+      const modalContainer = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(modalContainer.getAttribute('role')).toBe('alertdialog');
+    });
+
+    it('should assign role="generic" and aria-hidden="true" when no onClose and no buttons are provided', async () => {
+      expect.assertions(2);
+
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={exampleContent} />
+      );
+      const modalContainer = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(modalContainer.getAttribute('role')).toBe('generic');
+      expect(modalContainer.getAttribute('aria-hidden')).toBe('true');
     });
 
     it('should wrap notification content inside Text component if content is a free string', async () => {
@@ -340,7 +408,7 @@ describe('<ToastNotification />', () => {
 
       const wrapper = await mountAndWait(
         <ToastNotification
-          aria-label='Some label'
+          aria-label="Some label"
           onClose={mockCallback}
           content={exampleContent}
           closeButtonLabel="Close notification"

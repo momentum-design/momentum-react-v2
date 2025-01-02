@@ -26,6 +26,18 @@ const ToastNotification: FC<Props> = (props: Props) => {
     ...rest
   } = props;
 
+  const isInteractiveDialog = !!onClose || !!buttonGroup;
+
+  // According to: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
+  // "The alertdialog role should only be used for alert messages that have associated interactive controls.
+  // If an alert dialog only contains static content and has no interactive controls at all, use alert instead."
+  // However, we have decided not to use role="alert" and use solely ScreenReaderAnnouncer instaed.
+  // So for non-interactive ToastNotifications, we are adding role="generic" and aria-hidden="true"
+
+  const role = props.role || (isInteractiveDialog ? 'alertdialog' : 'generic');
+
+  const isAriaHidden = !isInteractiveDialog;
+
   return (
     <ModalContainer
       className={classnames(className, STYLE.wrapper)}
@@ -33,7 +45,8 @@ const ToastNotification: FC<Props> = (props: Props) => {
       id={id}
       style={style}
       round={50}
-      role="generic"
+      role={role}
+      aria-hidden={isAriaHidden}
       ariaModal={false}
       {...rest}
     >
