@@ -63,7 +63,11 @@ const ToastNotification: FC<Props> = (props: Props) => {
           <div className={classnames(className, STYLE.leadingVisual)}>{leadingVisual}</div>
         )}
         {isString(content) ? (
-          <Text className={classnames(className, STYLE.content)} type="body-primary" tagName="p">
+          <Text
+            className={classnames(className, STYLE.content)}
+            type="body-primary"
+            tagName={interruptsUserFlow ? 'h1' : 'p'}
+          >
             {content}
           </Text>
         ) : (

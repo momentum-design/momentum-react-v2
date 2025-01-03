@@ -175,6 +175,20 @@ describe('<ToastNotification />', () => {
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with interruptsUserFlow', async () => {
+      expect.assertions(1);
+
+      const container = await mountAndWait(
+        <ToastNotification
+          aria-label="Some label"
+          content={exampleContent}
+          interruptsUserFlow={true}
+        />
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('attributes', () => {
@@ -186,7 +200,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
+      expect(element[1].classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
 
     it('should have provided class when className is provided', async () => {
@@ -199,7 +213,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.classList.contains(className)).toBe(true);
+      expect(element[1].classList.contains(className)).toBe(true);
     });
 
     it('should have provided aria-label when aria-label is provided', async () => {
@@ -212,7 +226,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.getAttribute('aria-label')).toBe(ariaLabel);
+      expect(element[1].getAttribute('aria-label')).toBe(ariaLabel);
     });
 
     it('should have provided aria-labelledby when aria-labelledby is provided', async () => {
@@ -225,7 +239,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.getAttribute('aria-labelledby')).toBe(ariaLabelledby);
+      expect(element[1].getAttribute('aria-labelledby')).toBe(ariaLabelledby);
     });
 
     it('should have provided id when id is provided', async () => {
@@ -238,7 +252,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.id).toBe(id);
+      expect(element[1].id).toBe(id);
     });
 
     it('should have provided role when role is provided', async () => {
@@ -251,7 +265,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.getAttribute('role')).toBe(role);
+      expect(element[1].getAttribute('role')).toBe(role);
     });
 
     it('should have provided style when style is provided', async () => {
@@ -265,7 +279,7 @@ describe('<ToastNotification />', () => {
       );
       const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(element.getAttribute('style')).toBe(styleString);
+      expect(element[1].getAttribute('style')).toBe(styleString);
     });
 
     it('should wrap the onClose inside when onClose is provided and closeButtonLabel is undefined', async () => {
@@ -299,7 +313,7 @@ describe('<ToastNotification />', () => {
       expect(button.props()['aria-label']).toBe('close');
     });
 
-    it('should assign role="alertdialog" when onClose is defined', async () => {
+    it('should assign role="alertdialog" when it interruptsUserFlow', async () => {
       expect.assertions(1);
 
       const wrapper = await mountAndWait(
@@ -308,11 +322,39 @@ describe('<ToastNotification />', () => {
           onClose={onClose}
           closeButtonLabel={'close'}
           content={exampleContent}
+          interruptsUserFlow={true}
         />
       );
-      const modalContainer = wrapper.find(ToastNotification).getDOMNode();
+      const element = wrapper.find(ToastNotification).getDOMNode();
 
-      expect(modalContainer.getAttribute('role')).toBe('alertdialog');
+      expect(element[1].getAttribute('role')).toBe('alertdialog');
+    });
+
+    it('should assign role="status" when it does not interruptUserFlow and buttons are provided', async () => {
+      expect.assertions(1);
+
+      const wrapper = await mountAndWait(
+        <ToastNotification
+          aria-label="Some label"
+          buttonGroup={buttonGroup}
+          content={exampleContent}
+        />
+      );
+      const element = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(element[1].getAttribute('role')).toBe('status');
+    });
+
+    it('should assign role="alert" and aria-hidden="true" when it does not interruptUserFlow and no no buttons are provided', async () => {
+      expect.assertions(2);
+
+      const wrapper = await mountAndWait(
+        <ToastNotification aria-label="Some label" content={exampleContent} />
+      );
+      const element = wrapper.find(ToastNotification).getDOMNode();
+
+      expect(element[1].getAttribute('role')).toBe('alert');
+      expect(element[1].getAttribute('aria-hidden')).toBe('true');
     });
 
     it('should wrap Icon inside leadingVisual when Icon is provided', async () => {
@@ -345,33 +387,6 @@ describe('<ToastNotification />', () => {
 
       expect(element1).toBeDefined();
       expect(element2).toBeDefined();
-    });
-
-    it('should assign role="alertdialog" when buttons are provided', async () => {
-      expect.assertions(1);
-
-      const wrapper = await mountAndWait(
-        <ToastNotification
-          aria-label="Some label"
-          buttonGroup={buttonGroup}
-          content={exampleContent}
-        />
-      );
-      const modalContainer = wrapper.find(ToastNotification).getDOMNode();
-
-      expect(modalContainer.getAttribute('role')).toBe('alertdialog');
-    });
-
-    it('should assign role="generic" and aria-hidden="true" when no onClose and no buttons are provided', async () => {
-      expect.assertions(2);
-
-      const wrapper = await mountAndWait(
-        <ToastNotification aria-label="Some label" content={exampleContent} />
-      );
-      const modalContainer = wrapper.find(ToastNotification).getDOMNode();
-
-      expect(modalContainer.getAttribute('role')).toBe('generic');
-      expect(modalContainer.getAttribute('aria-hidden')).toBe('true');
     });
 
     it('should wrap notification content inside Text component if content is a free string', async () => {

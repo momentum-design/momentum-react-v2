@@ -8,47 +8,66 @@ exports[`<ToastNotification /> snapshot should match snapshot 1`] = `
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -61,47 +80,66 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-label 1`
   <ModalContainer
     aria-hidden={true}
     aria-label="test"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="test"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="test"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -114,47 +152,66 @@ exports[`<ToastNotification /> snapshot should match snapshot with aria-labelled
   <ModalContainer
     aria-hidden={true}
     aria-labelledby="test-id"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-labelledby="test-id"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-labelledby="test-id"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -181,164 +238,182 @@ exports[`<ToastNotification /> snapshot should match snapshot with button group 
 >
   <ModalContainer
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="alertdialog"
+    role="status"
     round={50}
   >
-    <div
-      aria-label="Some label"
-      aria-modal={false}
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="alertdialog"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="status"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
-      </div>
-      <div
-        className="md-toast-notification-button-group"
-      >
-        <ButtonPill
-          size={28}
+        </div>
+        <div
+          className="md-toast-notification-button-group"
         >
-          <ButtonSimple
-            aria-disabled={false}
-            className="md-button-pill-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-disabled-outline={false}
-            data-ghost={false}
-            data-grown={false}
-            data-inverted={false}
-            data-outline={false}
-            data-shallow-disabled={false}
-            data-size={28}
+          <ButtonPill
+            size={28}
           >
-            <FocusRing>
-              <FocusRing
-                focusClass="md-focus-ring-wrapper children"
-                focusRingClass="md-focus-ring-wrapper children"
-              >
-                <button
-                  className="md-button-pill-wrapper md-button-simple-wrapper"
-                  data-color="primary"
-                  data-disabled={false}
-                  data-disabled-outline={false}
-                  data-ghost={false}
-                  data-grown={false}
-                  data-inverted={false}
-                  data-outline={false}
-                  data-shallow-disabled={false}
-                  data-size={28}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDragStart={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchCancel={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  type="button"
+            <ButtonSimple
+              aria-disabled={false}
+              className="md-button-pill-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-disabled-outline={false}
+              data-ghost={false}
+              data-grown={false}
+              data-inverted={false}
+              data-outline={false}
+              data-shallow-disabled={false}
+              data-size={28}
+            >
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
                 >
-                  <span>
-                    Button
-                  </span>
-                </button>
+                  <button
+                    className="md-button-pill-wrapper md-button-simple-wrapper"
+                    data-color="primary"
+                    data-disabled={false}
+                    data-disabled-outline={false}
+                    data-ghost={false}
+                    data-grown={false}
+                    data-inverted={false}
+                    data-outline={false}
+                    data-shallow-disabled={false}
+                    data-size={28}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      Button
+                    </span>
+                  </button>
+                </FocusRing>
               </FocusRing>
-            </FocusRing>
-          </ButtonSimple>
-        </ButtonPill>
-        <ButtonPill
-          outline={true}
-          size={28}
-        >
-          <ButtonSimple
-            aria-disabled={false}
-            className="md-button-pill-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-disabled-outline={false}
-            data-ghost={false}
-            data-grown={false}
-            data-inverted={false}
-            data-outline={true}
-            data-shallow-disabled={false}
-            data-size={28}
+            </ButtonSimple>
+          </ButtonPill>
+          <ButtonPill
+            outline={true}
+            size={28}
           >
-            <FocusRing>
-              <FocusRing
-                focusClass="md-focus-ring-wrapper children"
-                focusRingClass="md-focus-ring-wrapper children"
-              >
-                <button
-                  className="md-button-pill-wrapper md-button-simple-wrapper"
-                  data-color="primary"
-                  data-disabled={false}
-                  data-disabled-outline={false}
-                  data-ghost={false}
-                  data-grown={false}
-                  data-inverted={false}
-                  data-outline={true}
-                  data-shallow-disabled={false}
-                  data-size={28}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onDragStart={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchCancel={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  type="button"
+            <ButtonSimple
+              aria-disabled={false}
+              className="md-button-pill-wrapper"
+              data-color="primary"
+              data-disabled={false}
+              data-disabled-outline={false}
+              data-ghost={false}
+              data-grown={false}
+              data-inverted={false}
+              data-outline={true}
+              data-shallow-disabled={false}
+              data-size={28}
+            >
+              <FocusRing>
+                <FocusRing
+                  focusClass="md-focus-ring-wrapper children"
+                  focusRingClass="md-focus-ring-wrapper children"
                 >
-                  <span>
-                    Button
-                  </span>
-                </button>
+                  <button
+                    className="md-button-pill-wrapper md-button-simple-wrapper"
+                    data-color="primary"
+                    data-disabled={false}
+                    data-disabled-outline={false}
+                    data-ghost={false}
+                    data-grown={false}
+                    data-inverted={false}
+                    data-outline={true}
+                    data-shallow-disabled={false}
+                    data-size={28}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onDragStart={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchCancel={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    onTouchStart={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      Button
+                    </span>
+                  </button>
+                </FocusRing>
               </FocusRing>
-            </FocusRing>
-          </ButtonSimple>
-        </ButtonPill>
+            </ButtonSimple>
+          </ButtonPill>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -352,47 +427,66 @@ exports[`<ToastNotification /> snapshot should match snapshot with className 1`]
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="example-class md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="example-class md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
-        <Text
-          className="example-class md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper example-class md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="example-class md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper example-class md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper example-class md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper example-class md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -406,49 +500,140 @@ exports[`<ToastNotification /> snapshot should match snapshot with id 1`] = `
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     id="example-id"
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      id="example-id"
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        id="example-id"
+        role="alert"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
+  </ModalContainer>
+</ToastNotification>
+`;
+
+exports[`<ToastNotification /> snapshot should match snapshot with interruptsUserFlow 1`] = `
+<ToastNotification
+  aria-label="Some label"
+  content="Example text"
+  interruptsUserFlow={true}
+>
+  <ModalContainer
+    aria-label="Some label"
+    aria-live="off"
+    className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": true,
+      }
+    }
+    isPadded={true}
+    role="alertdialog"
+    round={50}
+  >
+    <FocusScope
+      autoFocus={true}
+      contain={true}
+    >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
+      <div
+        aria-label="Some label"
+        aria-live="off"
+        aria-modal={true}
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alertdialog"
+        tabIndex={-1}
+      >
+        <div
+          className="md-toast-notification-body"
+        >
+          <Text
+            className="md-toast-notification-content"
+            tagName="h1"
+            type="body-primary"
+          >
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="h1"
+              type="body-large-regular"
+            >
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
+          </Text>
+        </div>
+      </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -468,75 +653,94 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
         <div
-          className="md-toast-notification-leading-visual"
+          className="md-toast-notification-body"
         >
-          <Icon
-            name="help-circle"
-            scale={24}
-            weight="bold"
+          <div
+            className="md-toast-notification-leading-visual"
           >
-            <div
-              aria-hidden="true"
-              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+            <Icon
+              name="help-circle"
+              scale={24}
+              weight="bold"
             >
-              <svg
+              <div
                 aria-hidden="true"
-                className=""
-                data-autoscale={false}
-                data-scale={24}
-                data-test="help-circle"
-                fill="currentColor"
-                height="100%"
-                style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
-          </Icon>
-        </div>
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
-        >
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  className=""
+                  data-autoscale={false}
+                  data-scale={24}
+                  data-test="help-circle"
+                  fill="currentColor"
+                  height="100%"
+                  style={Object {}}
+                  viewBox="0, 0, 32, 32"
+                  width="100%"
+                />
+              </div>
+            </Icon>
+          </div>
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -553,36 +757,55 @@ exports[`<ToastNotification /> snapshot should match snapshot with non string co
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
         <div
-          className="md-toast-notification-content"
+          className="md-toast-notification-body"
         >
-          <button>
-            Example text
-          </button>
+          <div
+            className="md-toast-notification-content"
+          >
+            <button>
+              Example text
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -596,132 +819,150 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
 >
   <ModalContainer
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="alertdialog"
+    role="status"
     round={50}
   >
-    <div
-      aria-label="Some label"
-      aria-modal={false}
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="alertdialog"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="status"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
-        <div
-          className="md-toast-notification-close-button"
-        >
-          <ButtonCircle
-            aria-label="Close toast"
-            ghost={true}
-            onPress={[Function]}
-            size={20}
+          <div
+            className="md-toast-notification-close-button"
           >
-            <ButtonSimple
-              aria-disabled={false}
+            <ButtonCircle
               aria-label="Close toast"
-              className="md-button-circle-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={true}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={20}
+              ghost={true}
               onPress={[Function]}
+              size={20}
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-label="Close toast"
-                    className="md-button-circle-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={true}
-                    data-inverted={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={20}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+              <ButtonSimple
+                aria-disabled={false}
+                aria-label="Close toast"
+                className="md-button-circle-wrapper"
+                data-color="primary"
+                data-disabled={false}
+                data-ghost={true}
+                data-inverted={false}
+                data-multiple-children={false}
+                data-outline={false}
+                data-shallow-disabled={false}
+                data-size={20}
+                onPress={[Function]}
+              >
+                <FocusRing>
+                  <FocusRing
+                    focusClass="md-focus-ring-wrapper children"
+                    focusRingClass="md-focus-ring-wrapper children"
                   >
-                    <Icon
-                      name="cancel"
-                      scale={16}
-                      weight="bold"
+                    <button
+                      aria-label="Close toast"
+                      className="md-button-circle-wrapper md-button-simple-wrapper"
+                      data-color="primary"
+                      data-disabled={false}
+                      data-ghost={true}
+                      data-inverted={false}
+                      data-multiple-children={false}
+                      data-outline={false}
+                      data-shallow-disabled={false}
+                      data-size={20}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragStart={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchCancel={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      type="button"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
+                      <Icon
+                        name="cancel"
+                        scale={16}
+                        weight="bold"
                       >
-                        <svg
+                        <div
                           aria-hidden="true"
-                          className=""
-                          data-autoscale={false}
-                          data-scale={16}
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
-                    </Icon>
-                  </button>
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          role="img"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className=""
+                            data-autoscale={false}
+                            data-scale={16}
+                            data-test="cancel"
+                            fill="currentColor"
+                            height="100%"
+                            style={Object {}}
+                            viewBox="0, 0, 32, 32"
+                            width="100%"
+                          />
+                        </div>
+                      </Icon>
+                    </button>
+                  </FocusRing>
                 </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
-          </ButtonCircle>
+              </ButtonSimple>
+            </ButtonCircle>
+          </div>
         </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -735,47 +976,66 @@ exports[`<ToastNotification /> snapshot should match snapshot with role 1`] = `
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
     role="example-id"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="example-id"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="example-id"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -788,47 +1048,66 @@ exports[`<ToastNotification /> snapshot should match snapshot with string conten
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
@@ -846,10 +1125,15 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
   <ModalContainer
     aria-hidden={true}
     aria-label="Some label"
-    ariaModal={false}
+    aria-live="off"
     className="md-toast-notification-wrapper"
+    focusLockProps={
+      Object {
+        "autoFocus": false,
+      }
+    }
     isPadded={true}
-    role="generic"
+    role="alert"
     round={50}
     style={
       Object {
@@ -857,46 +1141,60 @@ exports[`<ToastNotification /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <div
-      aria-hidden={true}
-      aria-label="Some label"
-      className="md-toast-notification-wrapper md-modal-container-wrapper"
-      data-color="primary"
-      data-elevation={0}
-      data-exclude-focus={true}
-      data-padded={true}
-      data-round={50}
-      role="generic"
-      style={
-        Object {
-          "color": "pink",
-        }
-      }
-      tabIndex={-1}
+    <FocusScope
+      autoFocus={false}
+      contain={true}
     >
+      <span
+        data-focus-scope-start={true}
+        hidden={true}
+      />
       <div
-        className="md-toast-notification-body"
+        aria-hidden={true}
+        aria-label="Some label"
+        aria-live="off"
+        className="md-toast-notification-wrapper md-modal-container-wrapper"
+        data-color="primary"
+        data-elevation={0}
+        data-exclude-focus={true}
+        data-padded={true}
+        data-round={50}
+        role="alert"
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+        tabIndex={-1}
       >
-        <Text
-          className="md-toast-notification-content"
-          tagName="p"
-          type="body-primary"
+        <div
+          className="md-toast-notification-body"
         >
           <Text
-            className="md-text-wrapper md-toast-notification-content"
-            tagname="p"
-            type="body-large-regular"
+            className="md-toast-notification-content"
+            tagName="p"
+            type="body-primary"
           >
-            <mdc-text
-              class="md-text-wrapper md-toast-notification-content"
-              suppressHydrationWarning={true}
+            <Text
+              className="md-text-wrapper md-toast-notification-content"
+              tagname="p"
+              type="body-large-regular"
             >
-              Example text
-            </mdc-text>
+              <mdc-text
+                class="md-text-wrapper md-toast-notification-content"
+                suppressHydrationWarning={true}
+              >
+                Example text
+              </mdc-text>
+            </Text>
           </Text>
-        </Text>
+        </div>
       </div>
-    </div>
+      <span
+        data-focus-scope-end={true}
+        hidden={true}
+      />
+    </FocusScope>
   </ModalContainer>
 </ToastNotification>
 `;
