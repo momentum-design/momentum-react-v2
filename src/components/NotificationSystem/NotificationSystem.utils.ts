@@ -5,6 +5,7 @@ import type {
   NotifyOptionsType,
   UpdateOptionsType,
 } from './NotificationSystem.types';
+import ScreenReaderAnnouncer from '../ScreenReaderAnnouncer';
 
 /**
  * Generates the container id for the notifications to be placed in
@@ -20,10 +21,10 @@ export const getContainerID = (id: string, attention: AttentionType): string =>
  * @param options notify options, which will decide about what value the autoClose will have
  * @returns a number or false, depended on the passed in options
  */
-export const calculateAutoClose = (options?: NotifyOptionsType): number | false => {
+export const calculateAutoClose = (options: NotifyOptionsType): number | false => {
   const defaultAutoClose =
-    options?.attention === ATTENTION.MEDIUM ? false : DEFAULTS.AUTOCLOSE_TIMEOUT;
-  return options?.autoClose === false || options?.autoClose > 0
+    options.attention === ATTENTION.MEDIUM ? false : DEFAULTS.AUTOCLOSE_TIMEOUT;
+  return options.autoClose === false || options.autoClose > 0
     ? options.autoClose
     : defaultAutoClose;
 };
@@ -37,14 +38,20 @@ export const calculateAutoClose = (options?: NotifyOptionsType): number | false 
  * @param options several options to pass in (for details check type)
  * @returns the toastId of the triggered notification
  */
-export const notify = (content: ToastContent, options?: NotifyOptionsType): Id =>
-  toast(content, {
-    toastId: options?.toastId,
+export const notify = (content: ToastContent, options: NotifyOptionsType): Id => {
+  const { notificationSystemId, screenReaderAnnouncement, toastId, attention, onClose, role } =
+    options;
+  if (screenReaderAnnouncement) {
+    ScreenReaderAnnouncer.announce({ body: screenReaderAnnouncement }, notificationSystemId);
+  }
+  return toast(content, {
+    toastId: toastId,
     autoClose: calculateAutoClose(options),
-    containerId: getContainerID(options?.notificationSystemId, options?.attention || ATTENTION.LOW),
-    onClose: options?.onClose,
-    role: options?.role,
+    containerId: getContainerID(notificationSystemId, attention || ATTENTION.LOW),
+    onClose: onClose,
+    role: role,
   });
+};
 
 /**
  * **update** utility function, to update an existing notification in the defined notification system (`notificationSystemId`)
@@ -52,8 +59,11 @@ export const notify = (content: ToastContent, options?: NotifyOptionsType): Id =
  * @param toastId id of the notification to update
  * @param options several options to pass in (for details check type)
  */
-export const update = (toastId: Id, options?: UpdateOptionsType): void => {
-  const { notificationSystemId, attention, ...updateOptions } = options;
+export const update = (toastId: Id, options: UpdateOptionsType): void => {
+  const { notificationSystemId, attention, screenReaderAnnouncement, ...updateOptions } = options;
+  if (screenReaderAnnouncement) {
+    ScreenReaderAnnouncer.announce({ body: screenReaderAnnouncement }, notificationSystemId);
+  }
   toast.update(toastId, {
     ...updateOptions,
     containerId: getContainerID(notificationSystemId, attention || ATTENTION.LOW),

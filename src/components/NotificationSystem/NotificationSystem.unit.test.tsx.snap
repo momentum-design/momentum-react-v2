@@ -123,6 +123,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -249,6 +254,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -375,6 +385,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -501,6 +516,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -627,6 +647,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -753,6 +778,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -879,6 +909,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1005,6 +1040,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1124,6 +1164,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
       id="low_notification_container"
     />
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1250,6 +1295,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
       id="medium_notification_container"
     />
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1376,6 +1426,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1502,6 +1557,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1628,6 +1688,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1754,6 +1819,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -1880,6 +1950,11 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;
 
@@ -2006,5 +2081,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
       </div>
     </div>
   </section>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
 </div>
 `;

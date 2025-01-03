@@ -67,7 +67,11 @@ describe('<NotificationSystem />', () => {
 
     act(() => {
       NotificationSystem.notify(
-        <NotificationTemplate aria-label="Some notification" content={content} toastCloseButtonLabel="Close notification" />,
+        <NotificationTemplate
+          aria-label="Some notification"
+          content={content}
+          toastCloseButtonLabel="Close notification"
+        />,
         {
           toastId: fixedToastId,
           notificationSystemId: id,
@@ -364,15 +368,20 @@ describe('<NotificationSystem />', () => {
     it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
       expect.assertions(4);
 
-      render(<NotificationSystem ariaLabel="test" />);
+      render(<NotificationSystem id="id" ariaLabel="test" />);
 
       const toastId = '12345';
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate aria-label="Some label" content={textContent} toastCloseButtonLabel="Close notification" />,
+          <NotificationTemplate
+            aria-label="Some label"
+            content={textContent}
+            toastCloseButtonLabel="Close notification"
+          />,
           {
             autoClose: false,
             toastId,
+            notificationSystemId: 'id',
           }
         );
       });
@@ -398,7 +407,7 @@ describe('<NotificationSystem />', () => {
       expect.assertions(5);
       const user = userEvent.setup();
 
-      render(<NotificationSystem ariaLabel="test" />);
+      render(<NotificationSystem id="id" ariaLabel="test" />);
 
       const closeButtonText = 'Close';
       const toastId = '12345';
@@ -414,6 +423,7 @@ describe('<NotificationSystem />', () => {
             autoClose: false,
             toastId,
             attention: NotificationSystem.ATTENTION.MEDIUM,
+            notificationSystemId: 'id',
           }
         );
       });
@@ -437,16 +447,21 @@ describe('<NotificationSystem />', () => {
     });
 
     it('should update an existing notification', async () => {
-      render(<NotificationSystem ariaLabel="test" />);
+      render(<NotificationSystem id="id" ariaLabel="test" />);
 
       const toastId = '12345';
       const newcontent = 'this is a new text';
       act(() => {
         NotificationSystem.notify(
-          <NotificationTemplate aria-label="Some label" content={textContent} toastCloseButtonLabel="Close notification" />,
+          <NotificationTemplate
+            aria-label="Some label"
+            content={textContent}
+            toastCloseButtonLabel="Close notification"
+          />,
           {
             autoClose: false,
             toastId,
+            notificationSystemId: 'id',
           }
         );
       });
@@ -461,8 +476,13 @@ describe('<NotificationSystem />', () => {
       act(() => {
         NotificationSystem.update(toastId, {
           render: (
-            <NotificationTemplate aria-label="Some label" content={newcontent} toastCloseButtonLabel="Close notification" />
+            <NotificationTemplate
+              aria-label="Some label"
+              content={newcontent}
+              toastCloseButtonLabel="Close notification"
+            />
           ),
+          notificationSystemId: 'id',
         });
       });
 
