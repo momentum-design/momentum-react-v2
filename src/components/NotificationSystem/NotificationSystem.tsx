@@ -48,6 +48,7 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     toastClassName,
     bodyClassName,
     className: containerClassName,
+    role: 'generic',
   };
 
   // get an attention order array to position the toastContainers correctly based on the `position` prop

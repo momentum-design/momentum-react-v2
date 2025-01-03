@@ -36,10 +36,8 @@ const ToastNotification: FC<Props> = (props: Props) => {
   }
 
   // If an alert toast interrupts a user's workflow to communicate an important message and require a response, then it should have role="alertdialog".
-  // Otherwise, if the toast has interactive controls, it should have role="status", otherwise it should have role="alert".
-  // If an alert dialog only contains static content and has no interactive controls at all, use alert instead."
-  // However, we have decided not to use role="alert" and use solely ScreenReaderAnnouncer instaed.
-  // So for non-interactive ToastNotifications, we are adding role="generic" and aria-hidden="true"
+  // Otherwise, if the toast has interactive controls, it should have role="status".
+  // Otherwise it should have role="alert".
 
   const role =
     props.role || (interruptsUserFlow ? 'alertdialog' : isInteractiveDialog ? 'status' : 'alert');
@@ -56,7 +54,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
       round={50}
       role={role}
       focusLockProps={{ autoFocus: interruptsUserFlow }}
-      aria-live="off"
+      aria-live="off" // SR announcement is controlled by the NotificationSystem.announce() method
       {...ariaHiddenProps}
       {...rest}
     >
