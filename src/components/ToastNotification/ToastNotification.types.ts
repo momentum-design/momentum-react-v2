@@ -69,4 +69,9 @@ export type Props = ToastNotificationCloseButtonProps &
      * Custom role for overriding this component's role. Use 'alertdialog' for interactive dialogs if onClose and buttonGroup are provided are undefined.
      */
     role?: string;
+
+    /**
+     * Whether this notification toast interrupts user flow. Default is false.
+     */
+    interruptsUserFlow?: boolean;
   };

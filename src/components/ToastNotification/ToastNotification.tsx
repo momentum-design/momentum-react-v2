@@ -5,7 +5,7 @@ import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
 
-import { STYLE } from './ToastNotification.constants';
+import { STYLE, DEFAULTS } from './ToastNotification.constants';
 import { Props } from './ToastNotification.types';
 import './ToastNotification.style.scss';
 import Text from '../Text';
@@ -23,20 +23,29 @@ const ToastNotification: FC<Props> = (props: Props) => {
     buttonGroup,
     onClose,
     closeButtonLabel,
+    interruptsUserFlow = DEFAULTS.INTERRUPTS_USER_FLOW,
     ...rest
   } = props;
 
   const isInteractiveDialog = !!onClose || !!buttonGroup;
 
-  // According to: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
-  // "The alertdialog role should only be used for alert messages that have associated interactive controls.
+  if (interruptsUserFlow && !isInteractiveDialog) {
+    console.warn(
+      'MRV2 ToastNotification: If a ToastNotification interrupts user flow, please make sure it has at least one interactive element inside for the user to act and continue the flow.'
+    );
+  }
+
+  // If an alert toast interrupts a user's workflow to communicate an important message and require a response, then it should have role="alertdialog".
+  // Otherwise, if the toast has interactive controls, it should have role="status", otherwise it should have role="alert".
   // If an alert dialog only contains static content and has no interactive controls at all, use alert instead."
   // However, we have decided not to use role="alert" and use solely ScreenReaderAnnouncer instaed.
   // So for non-interactive ToastNotifications, we are adding role="generic" and aria-hidden="true"
 
-  const role = props.role || (isInteractiveDialog ? 'alertdialog' : 'generic');
+  const role =
+    props.role || (interruptsUserFlow ? 'alertdialog' : isInteractiveDialog ? 'status' : 'alert');
 
-  const ariaHiddenProps = !isInteractiveDialog ? { 'aria-hidden': true } : {};
+  const ariaHiddenProps =
+    !interruptsUserFlow && !isInteractiveDialog ? { 'aria-hidden': true } : {};
 
   return (
     <ModalContainer
@@ -46,8 +55,9 @@ const ToastNotification: FC<Props> = (props: Props) => {
       style={style}
       round={50}
       role={role}
+      focusLockProps={{ autoFocus: interruptsUserFlow }}
+      aria-live="off"
       {...ariaHiddenProps}
-      ariaModal={false}
       {...rest}
     >
       <div className={STYLE.body}>
