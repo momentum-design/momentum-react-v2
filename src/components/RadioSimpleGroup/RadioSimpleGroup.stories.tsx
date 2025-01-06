@@ -32,6 +32,7 @@ Example.args = {
       <RadioSimple
         value="red"
         key="0"
+        aria-label="Red"
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -48,6 +49,7 @@ Example.args = {
       <RadioSimple
         value="blue"
         key="1"
+        aria-label="Blue"
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -64,6 +66,7 @@ Example.args = {
       <RadioSimple
         value="yellow"
         key="2"
+        aria-label="Yellow"
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -98,6 +101,7 @@ Layout.parameters = {
           <RadioSimple
             value="grid"
             key="0"
+            aria-label="Grid"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -115,6 +119,7 @@ Layout.parameters = {
           <RadioSimple
             value="stack"
             key="1"
+            aria-label="Stack"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -132,6 +137,7 @@ Layout.parameters = {
           <RadioSimple
             value="sideBySide"
             key="2"
+            aria-label="Side by Side"
             style={{
               display: 'flex',
               flexDirection: 'column',
