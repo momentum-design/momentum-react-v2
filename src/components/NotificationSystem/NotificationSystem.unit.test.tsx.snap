@@ -26,19 +26,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -110,6 +114,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -157,19 +165,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -241,6 +253,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -288,19 +304,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -372,6 +392,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -419,19 +443,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -503,6 +531,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -550,19 +582,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -634,6 +670,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -681,19 +721,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
         >
           <div
             class="Toastify__toast-body body-toast"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -765,6 +809,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -812,19 +860,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -896,6 +948,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -943,19 +999,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
         >
           <div
             class="Toastify__toast-body container"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1027,6 +1087,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1070,19 +1134,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1154,6 +1222,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
         </div>
@@ -1194,19 +1266,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1278,6 +1354,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1329,19 +1409,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1413,6 +1497,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1460,19 +1548,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1544,6 +1636,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1591,19 +1687,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1675,6 +1775,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1722,19 +1826,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1806,6 +1914,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1853,19 +1965,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -1937,6 +2053,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
@@ -1984,19 +2104,23 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
         >
           <div
             class="Toastify__toast-body"
-            role="alert"
+            role="generic"
           >
             <div>
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
               <div
                 aria-label="Some notification"
-                aria-modal="false"
+                aria-live="off"
                 class="md-toast-notification-wrapper md-modal-container-wrapper"
                 data-color="primary"
                 data-elevation="0"
                 data-exclude-focus="true"
                 data-padded="true"
                 data-round="50"
-                role="alertdialog"
+                role="status"
                 tabindex="-1"
                 toastprops="[object Object]"
               >
@@ -2068,6 +2192,10 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                   </div>
                 </div>
               </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
             </div>
           </div>
           <div
