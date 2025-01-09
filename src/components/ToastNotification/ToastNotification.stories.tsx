@@ -50,11 +50,11 @@ const NonInteractive = Template<ToastNotificationProps>(ToastNotification).bind(
 
 NonInteractive.argTypes = {
   ...argTypes,
-  content: 'Some announcements that has no buttons',
+  content: 'Some announcement with no buttons',
 };
 
 NonInteractive.args = {
-  content: 'Some announcements that has no buttons',
+  content: 'Some announcement with no buttons',
 };
 
 const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});

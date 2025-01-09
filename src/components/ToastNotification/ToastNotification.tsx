@@ -35,13 +35,11 @@ const ToastNotification: FC<Props> = (props: Props) => {
     );
   }
 
-  // If an alert toast interrupts a user's workflow to communicate an important message and require a response, then it should have role="alertdialog".
+  // If an alert toast interrupts a user's workflow to communicate an important message and require a response, then it should have role="alertdialog", it will be treated as a modal dialog.
   // Otherwise, if the toast has interactive controls, it should have role="status".
-  // Otherwise it should have role="alert".
-
+  // Otherwise, it should have role="alert" and aria-hidden="true".
   const role =
     props.role || (interruptsUserFlow ? 'alertdialog' : isInteractiveDialog ? 'status' : 'alert');
-
   const ariaHiddenProps =
     !interruptsUserFlow && !isInteractiveDialog ? { 'aria-hidden': true } : {};
 
@@ -53,8 +51,8 @@ const ToastNotification: FC<Props> = (props: Props) => {
       style={style}
       round={50}
       role={role}
-      focusLockProps={{ autoFocus: interruptsUserFlow }}
-      aria-live="off" // SR announcement is controlled by the NotificationSystem.announce() method
+      focusLockProps={{ autoFocus: interruptsUserFlow }} // modal dialogs should lock focus on themselves until user has taken action about them
+      aria-live="off" // no need for aria-live as SR announcement is controlled by the NotificationSystem.announce({screenReaderAnnouncement?: string}) method
       {...ariaHiddenProps}
       {...rest}
     >
@@ -66,7 +64,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
           <Text
             className={classnames(className, STYLE.content)}
             type="body-primary"
-            tagName={interruptsUserFlow ? 'h1' : 'p'}
+            tagName={interruptsUserFlow ? 'h2' : 'p'} // any modal dialog (which locks the focus) must have a heading level 2 on its visible title
           >
             {content}
           </Text>

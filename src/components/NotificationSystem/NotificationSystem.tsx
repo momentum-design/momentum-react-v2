@@ -48,7 +48,7 @@ const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
     toastClassName,
     bodyClassName,
     className: containerClassName,
-    role: 'generic',
+    role: 'generic', // role="alert" (which is the default role for react-toastify's ToastContainer ) is not needed as the SR announcement of each notification is handled by the ScreenReaderAnnouncer component below.
   };
 
   // get an attention order array to position the toastContainers correctly based on the `position` prop
