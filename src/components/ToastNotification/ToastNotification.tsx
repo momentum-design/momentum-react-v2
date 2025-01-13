@@ -38,8 +38,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
   // If an alert toast interrupts a user's workflow to communicate an important message and require a response, then it should have role="alertdialog", it will be treated as a modal dialog.
   // Otherwise, if the toast has interactive controls, it should have role="status".
   // Otherwise, it should have role="alert" and aria-hidden="true".
-  const role =
-    props.role || (interruptsUserFlow ? 'alertdialog' : isInteractiveDialog ? 'status' : 'alert');
+  const role = props.role || (interruptsUserFlow ? 'alertdialog' : 'status');
   const ariaHiddenProps =
     !interruptsUserFlow && !isInteractiveDialog ? { 'aria-hidden': true } : {};
 
