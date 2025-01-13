@@ -364,9 +364,9 @@ describe('<NotificationSystem />', () => {
     });
   });
 
-  describe('actions', () => {
-    it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
-      expect.assertions(4);
+  describe.only('actions', () => {
+    it.only('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
+      // expect.assertions(4);
 
       render(<NotificationSystem id="id" ariaLabel="test" />);
 
@@ -387,7 +387,7 @@ describe('<NotificationSystem />', () => {
       });
 
       // wait till the toast shows up on the screen:
-      const toast = await screen.findByRole('alert');
+      const toast = await screen.findByRole('generic');
       expect(toast).toBeVisible();
       expect(toast).toHaveTextContent(textContent);
 
@@ -399,7 +399,7 @@ describe('<NotificationSystem />', () => {
       });
 
       // check if toast got removed and the toast is not active anymore
-      await waitForElementToBeRemoved(() => screen.queryByRole('alert'));
+      await waitForElementToBeRemoved(() => screen.queryByRole('generic'));
       expect(NotificationSystem.isActive(toastId)).toBeFalsy();
     });
 

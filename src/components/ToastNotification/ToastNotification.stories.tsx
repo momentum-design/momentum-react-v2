@@ -46,6 +46,17 @@ Example.args = {
   closeButtonLabel: 'Close notification',
 };
 
+const NonInteractive = Template<ToastNotificationProps>(ToastNotification).bind({});
+
+NonInteractive.argTypes = {
+  ...argTypes,
+  content: 'Some announcement with no buttons',
+};
+
+NonInteractive.args = {
+  content: 'Some announcement with no buttons',
+};
+
 const LeadingVisual = MultiTemplate<ToastNotificationProps>(ToastNotification).bind({});
 
 LeadingVisual.argTypes = { ...argTypes, onClose: { action: 'closed' } };
@@ -198,4 +209,4 @@ Common.parameters = {
   ],
 };
 
-export { Example, LeadingVisual, ButtonGroup, Common };
+export { Example, NonInteractive, LeadingVisual, ButtonGroup, Common };

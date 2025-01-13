@@ -35,7 +35,11 @@ const Example = Template<NotificationSystemProps>((args: NotificationSystemProps
               toastCloseButtonLabel="Close notification"
               aria-label="Some notification"
             />,
-            { notificationSystemId: 'id' }
+            {
+              notificationSystemId: 'id',
+              screenReaderAnnouncement:
+                "I'm a low attention notification screen reader announcement",
+            }
           )
         }
       >
@@ -65,7 +69,12 @@ const Important = Template<NotificationSystemProps>((args: NotificationSystemPro
               closeButtonText="Close"
               toastCloseButtonLabel="Close notification"
             />,
-            { attention: ATTENTION.MEDIUM, notificationSystemId: 'id' }
+            {
+              attention: ATTENTION.MEDIUM,
+              notificationSystemId: 'id',
+              screenReaderAnnouncement:
+                "I'm a medium attention notification screen reader announcement",
+            }
           )
         }
       >
@@ -94,7 +103,11 @@ const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) 
               toastCloseButtonLabel="Close notification"
               aria-label="Some notification"
             />,
-            { notificationSystemId: 'id' }
+            {
+              notificationSystemId: 'id',
+              screenReaderAnnouncement:
+                "I'm a low attention notification screen reader announcement",
+            }
           )
         }
       >
@@ -112,6 +125,8 @@ const Mixed = Template<NotificationSystemProps>((args: NotificationSystemProps) 
             {
               attention: ATTENTION.MEDIUM,
               notificationSystemId: 'id',
+              screenReaderAnnouncement:
+                "I'm a medium attention notification screen reader announcement",
             }
           )
         }
