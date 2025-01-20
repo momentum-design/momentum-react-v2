@@ -8,6 +8,7 @@ const createTippyInstance = () => {
 
 describe('hideOnEscPlugin', () => {
   let popoverEventsDispatchEventSpy;
+  const eventCommon = { preventDefault: jest.fn(), stopImmediatePropagation: jest.fn() };
 
   beforeEach(() => {
     popoverEventsDispatchEventSpy = jest.spyOn(PopoverEvents, 'dispatchEvent');
@@ -52,7 +53,7 @@ describe('hideOnEscPlugin', () => {
     popoverEventsDispatchEventSpy.mockReset();
 
     plugin2.onShow(tippy2);
-    expect(addEventListenerSpy).toBeCalledTimes(0);
+    expect(addEventListenerSpy).toHaveBeenCalledTimes(0);
     expect(eventHandlers.keydown.length).toBe(1);
     await waitFor(() => {
       expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
@@ -65,7 +66,7 @@ describe('hideOnEscPlugin', () => {
     popoverEventsDispatchEventSpy.mockReset();
 
     plugin1.onHide(tippy1);
-    expect(removeEventListenerSpy).toBeCalledTimes(0);
+    expect(removeEventListenerSpy).toHaveBeenCalledTimes(0);
     await waitFor(() => {
       expect(popoverEventsDispatchEventSpy).toHaveBeenNthCalledWith(
         1,
@@ -96,7 +97,7 @@ describe('hideOnEscPlugin', () => {
     const plugin = hideOnEscPlugin.fn(tippy);
     plugin.onShow(tippy);
 
-    eventHandlers.keydown[0]({ key: 'Escape' } as any);
+    eventHandlers.keydown[0]({ key: 'Escape', ...eventCommon } as any);
 
     expect(tippy.hide).toHaveBeenNthCalledWith(1);
   });
@@ -115,14 +116,41 @@ describe('hideOnEscPlugin', () => {
     const plugin2 = hideOnEscPlugin.fn(tippy2);
     plugin2.onShow(tippy2);
 
-    eventHandlers.keydown[0]({ key: 'Escape' } as any);
+    eventHandlers.keydown[0]({ key: 'Escape', ...eventCommon } as any);
     expect(tippy2.hide).toHaveBeenNthCalledWith(1);
-    expect(tippy1.hide).toBeCalledTimes(0);
+    expect(tippy1.hide).toHaveBeenCalledTimes(0);
 
     // hide is mocked so call onHide manually
     plugin2.onHide(tippy2);
 
-    eventHandlers.keydown[0]({ key: 'Escape' } as any);
+    eventHandlers.keydown[0]({ key: 'Escape', ...eventCommon } as any);
     expect(tippy1.hide).toHaveBeenNthCalledWith(1);
+  });
+
+  describe('setHideKeys', () => {
+    it('should overwrite the original hide key(s)', async () => {
+      jest.resetModules();
+
+      const { hideOnEscPlugin, setHideKeys } = await import('./hideOnEscPlugin');
+      const { eventHandlers } = sypOnEventListener(window, ['keydown']);
+
+      setHideKeys(['GoBack', 'someRandomKey']);
+
+      const tippy = createTippyInstance() as any;
+      const plugin = hideOnEscPlugin.fn(tippy);
+      plugin.onShow(tippy);
+
+      eventHandlers.keydown[0]({ key: 'Escape', ...eventCommon } as any);
+      expect(tippy.hide).toHaveBeenCalledTimes(0);
+
+      eventHandlers.keydown[0]({ key: 'GoBack', ...eventCommon } as any);
+      expect(tippy.hide).toHaveBeenCalledTimes(1);
+
+      tippy.hide.mockReset();
+      plugin.onShow(tippy);
+
+      eventHandlers.keydown[0]({ key: 'someRandomKey', ...eventCommon } as any);
+      expect(tippy.hide).toHaveBeenCalledTimes(1);
+    });
   });
 });

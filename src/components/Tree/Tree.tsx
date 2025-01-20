@@ -237,8 +237,16 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         case 'ArrowLeft': {
           evt.preventDefault();
           if (activeNode) {
-            const next = getNextActiveNode(tree, activeNode, key, excludeTreeRoot, toggleTreeNode);
-            setActiveNodeId(next);
+            const next = getNextActiveNode(tree, activeNode, key, excludeTreeRoot);
+            if (next.action !== 'noop') {
+              evt.preventDefault();
+              evt.nativeEvent.stopImmediatePropagation();
+              if (next.action === 'move') {
+                setActiveNodeId(next.nextNodeId);
+              } else if (next.action === 'open' || next.action === 'close') {
+                toggleTreeNode(next.nodeId);
+              }
+            }
           }
           break;
         }
