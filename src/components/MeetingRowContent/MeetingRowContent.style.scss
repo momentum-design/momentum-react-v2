@@ -79,6 +79,36 @@
   }
 }
 
+.md-meeting-list-item-wrapper {
+  display: grid;
+  grid-template-columns: 2rem auto auto;
+  grid-column-gap: 0.75rem;
+  justify-content: unset;
+
+  div[data-position='middle'] {
+    > * {
+      width: 100%;
+    }
+  }
+
+  div[data-position='end'] {
+    width: 100% !important;
+    justify-content: end;
+    justify-self: end;
+
+    .md-button-group-wrapper {
+      width: auto;
+      justify-content: end;
+    }
+
+    a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
 .md-meeting-row-content-end-section {
   .md-button-group-wrapper > .md-icon-wrapper > svg {
     path {
