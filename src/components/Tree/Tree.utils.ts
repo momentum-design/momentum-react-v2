@@ -2,12 +2,12 @@ import React, { MutableRefObject, useContext } from 'react';
 import {
   TreeIdNodeMap,
   TreeNodeRecord,
-  ToggleTreeNode,
   TreeContextValue,
   TreeNavKeyCodes,
   TreeNode,
   TreeNodeId,
   TreeRoot,
+  TreeNodeAction,
 } from './Tree.types';
 import { NODE_ID_ATTRIBUTE_NAME } from '../TreeNodeBase/TreeNodeBase.constants';
 import { DEFAULTS } from './Tree.constants';
@@ -58,12 +58,12 @@ export const isEmptyTree = (tree: unknown): boolean => {
  * @param activeNodeId
  * @internal
  */
-const findNextTreeNode = (tree: TreeIdNodeMap, activeNodeId: TreeNodeId): TreeNodeId => {
+const findNextTreeNode = (tree: TreeIdNodeMap, activeNodeId: TreeNodeId): TreeNodeAction => {
   let current = tree.get(activeNodeId);
 
   // Step into an open node
   if (!current.isLeaf && current.isOpen) {
-    return current.children[0];
+    return { action: 'move', nextNodeId: current.children[0] };
   }
 
   const loopCheck = new Set<TreeNodeId>();
@@ -76,16 +76,16 @@ const findNextTreeNode = (tree: TreeIdNodeMap, activeNodeId: TreeNodeId): TreeNo
 
     // Reached the last node of the tree
     if (!parent) {
-      return activeNodeId;
+      return { action: 'noop', nodeId: activeNodeId };
     } else if (parent.children[pos]) {
-      return parent.children[pos];
+      return { action: 'move', nextNodeId: parent.children[pos] };
     } else {
       // If we are at the end of the parent's children, move up one level
       current = parent;
       if (loopCheck.has(current.id)) {
         // eslint-disable-next-line no-console
         console.error('Infinite loop detected in the tree navigation.');
-        return current.id;
+        return { action: 'move', nextNodeId: current.id };
       } else {
         loopCheck.add(current.id);
       }
@@ -105,18 +105,18 @@ const findPreviousTreeNode = (
   tree: TreeIdNodeMap,
   excludeRootNode: boolean,
   activeNodeId: TreeNodeId
-): TreeNodeId => {
+): TreeNodeAction => {
   const current = tree.get(activeNodeId);
 
   // Already in the root
-  if (!current.parent) return activeNodeId;
+  if (!current.parent) return { action: 'noop', nodeId: activeNodeId };
 
   // Exclude root
   if (current.index === 0 && excludeRootNode && current.parent === getTreeRootId(tree))
-    return activeNodeId;
+    return { action: 'noop', nodeId: activeNodeId };
 
   // Move one level up
-  if (current.index === 0) return current.parent;
+  if (current.index === 0) return { action: 'move', nextNodeId: current.parent };
 
   // Find the previous sibling
   let next = tree.get(tree.get(current.parent).children[current.index - 1]);
@@ -125,7 +125,7 @@ const findPreviousTreeNode = (
 
   for (let counter = 0; next; counter++) {
     if (next.isLeaf || !next.isOpen) {
-      return next.id;
+      return { action: 'move', nextNodeId: next.id };
     }
     // Last child of the open node
     next = tree.get(next.children[next.children.length - 1]);
@@ -133,7 +133,7 @@ const findPreviousTreeNode = (
     if (loopCheck.has(next.id)) {
       // eslint-disable-next-line no-console
       console.error('Infinite loop detected in the tree navigation.');
-      return next.id;
+      return { action: 'move', nextNodeId: next.id };
     } else {
       loopCheck.add(next.id);
     }
@@ -145,28 +145,22 @@ const findPreviousTreeNode = (
  *
  * @param tree
  * @param activeNodeId
- * @param toggleTreeNode
  * @internal
  */
-const openNextNode = (
-  tree: TreeIdNodeMap,
-  activeNodeId: TreeNodeId,
-  toggleTreeNode: ToggleTreeNode
-): TreeNodeId => {
+const openNextNode = (tree: TreeIdNodeMap, activeNodeId: TreeNodeId): TreeNodeAction => {
   const current = tree.get(activeNodeId);
 
   if (!current.isLeaf) {
     if (!current.isOpen) {
       // Open it if it's closed
-      toggleTreeNode(activeNodeId);
-      return activeNodeId;
+      return { action: 'open', nodeId: activeNodeId };
     } else {
       // Move to the first child if it's open
-      return current.children[0];
+      return { action: 'move', nextNodeId: current.children[0] };
     }
   }
   // Otherwise, do nothing
-  return activeNodeId;
+  return { action: 'noop', nodeId: activeNodeId };
 };
 
 /**
@@ -175,32 +169,29 @@ const openNextNode = (
  * @param tree
  * @param activeNodeId
  * @param excludeRoot
- * @param toggleTreeNode
  * @internal
  */
 const closeNextNode = (
   tree: TreeIdNodeMap,
   activeNodeId: TreeNodeId,
-  excludeRoot: boolean,
-  toggleTreeNode: ToggleTreeNode
-): TreeNodeId => {
+  excludeRoot: boolean
+): TreeNodeAction => {
   const current = tree.get(activeNodeId);
 
   // Close the node if it's open and not a leaf
   if (current.isOpen && !current.isLeaf) {
-    toggleTreeNode(activeNodeId);
-    return activeNodeId;
+    return { action: 'close', nodeId: activeNodeId };
   }
   // Do nothing if it's the root
   if (!current.parent || (excludeRoot && current.parent === getTreeRootId(tree))) {
-    return activeNodeId;
+    return { action: 'noop', nodeId: activeNodeId };
   }
   // Move up one level if it's closed
   if (current.parent) {
-    return current.parent;
+    return { action: 'move', nextNodeId: current.parent };
   }
   // Otherwise, do nothing
-  return activeNodeId;
+  return { action: 'noop', nodeId: activeNodeId };
 };
 
 /**
@@ -272,35 +263,33 @@ export const convertNestedTree2MappedTree = (tree: TreeRoot): TreeIdNodeMap => {
  * @see {@link https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-1a/ WCAG Directory Tree example}
  *
  * @param tree
- * @param activeNodeId Current active tree node descriptor
+ * @param nodeId Current active tree node descriptor
  * @param keyCode Arrow key code
  * @param excludeRoot
- * @param toggleTreeNode
  */
 export const getNextActiveNode = (
   tree: TreeIdNodeMap,
-  activeNodeId: TreeNodeId,
+  nodeId: TreeNodeId,
   keyCode: TreeNavKeyCodes,
-  excludeRoot = true,
-  toggleTreeNode: ToggleTreeNode
-): TreeNodeId => {
-  if (!tree.get(activeNodeId)) {
-    console.warn(`Tree node not found for id: "${activeNodeId}".`);
+  excludeRoot = true
+): TreeNodeAction => {
+  if (!tree.get(nodeId)) {
+    console.warn(`Tree node not found for id: "${nodeId}".`);
 
-    return activeNodeId;
+    return { action: 'noop', nodeId };
   }
 
   switch (keyCode) {
     case 'ArrowUp':
-      return findPreviousTreeNode(tree, excludeRoot, activeNodeId);
+      return findPreviousTreeNode(tree, excludeRoot, nodeId);
     case 'ArrowDown':
-      return findNextTreeNode(tree, activeNodeId);
+      return findNextTreeNode(tree, nodeId);
     case 'ArrowRight':
-      return openNextNode(tree, activeNodeId, toggleTreeNode);
+      return openNextNode(tree, nodeId);
     case 'ArrowLeft':
-      return closeNextNode(tree, activeNodeId, excludeRoot, toggleTreeNode);
+      return closeNextNode(tree, nodeId, excludeRoot);
     default:
-      return activeNodeId;
+      return { action: 'noop', nodeId };
   }
 };
 

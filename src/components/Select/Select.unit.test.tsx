@@ -9,6 +9,8 @@ import Popover from '../Popover';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
+import SpatialNavigationProvider from '../SpatialNavigationProvider';
+import { DEFAULTS } from '../SpatialNavigationProvider/SpatialNavigationProvider.constants';
 
 jest.mock('@react-aria/utils');
 jest.mock('uuid', () => {
@@ -575,7 +577,11 @@ describe('Select', () => {
       expect(screen.getByRole('listbox')).toBeVisible();
     });
 
-    it('should show Listbox when focused and pressing ArrowUp', async () => {
+    it.each`
+      key
+      ${'{ArrowUp}'}
+      ${'{ArrowDown}'}
+    `('should show Listbox when focused and pressing $key', async ({ key }) => {
       const user = userEvent.setup();
 
       render(
@@ -589,35 +595,11 @@ describe('Select', () => {
       const listbox = screen.queryByRole('listbox');
       expect(listbox).not.toBeInTheDocument();
 
-      const button = screen.getByRole('combobox', { name: 'test' });
-      button.focus();
-      expect(button).toHaveFocus();
+      screen.getByRole('combobox', { name: 'test' }).focus();
 
-      await user.keyboard('{ArrowUp}');
-      // list box should be shown after focus and pressing space
-      expect(screen.getByRole('listbox')).toBeVisible();
-    });
+      await user.keyboard(key);
 
-    it('should show Listbox when focused and pressing ArrowDown', async () => {
-      const user = userEvent.setup();
-
-      render(
-        <Select id="test-id" label="test">
-          <Item>Item 1</Item>
-          <Item>Item 2</Item>
-        </Select>
-      );
-
-      // list box shouldn't be shown initially
-      const listbox = screen.queryByRole('listbox');
-      expect(listbox).not.toBeInTheDocument();
-
-      const button = screen.getByRole('combobox', { name: 'test' });
-      button.focus();
-      expect(button).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-      // list box should be shown after focus and pressing space
+      // list box should be shown
       expect(screen.getByRole('listbox')).toBeVisible();
     });
 
@@ -770,37 +752,301 @@ describe('Select', () => {
     });
   });
 
-  it('should properly handle aria activedescendant when dropdown is expanded', async () => {
-    const user = userEvent.setup();
+  describe('Accessibility', () => {
+    it('should properly handle aria activedescendant when dropdown is expanded', async () => {
+      const user = userEvent.setup();
 
-    render(
-      <Select id="test-id" label="test">
-        <Item>Item 1</Item>
-        <Item>Item 2</Item>
-      </Select>
-    );
+      render(
+        <Select id="test-id" label="test">
+          <Item>Item 1</Item>
+          <Item>Item 2</Item>
+        </Select>
+      );
 
-    // list box shouldn't be shown initially
-    let listbox = screen.queryByRole('listbox');
-    expect(listbox).not.toBeInTheDocument();
+      // list box shouldn't be shown initially
+      let listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
 
-    let button = screen.getByRole('combobox', { name: 'test' });
-    button.focus();
-    expect(button).toHaveFocus();
-    expect(button).not.toHaveAttribute('aria-activedescendant');
+      let button = screen.getByRole('combobox', { name: 'test' });
+      button.focus();
+      expect(button).toHaveFocus();
+      expect(button).not.toHaveAttribute('aria-activedescendant');
 
-    await user.keyboard('{ArrowUp}');
-    // list box should be shown after focus and pressing space
+      await user.keyboard('{ArrowUp}');
+      // list box should be shown after focus and pressing space
 
-    button = screen.getByRole('combobox', { name: 'test' });
-    expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.0');
+      button = screen.getByRole('combobox', { name: 'test' });
+      expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.0');
 
-    listbox = screen.getByRole('listbox');
-    expect(listbox).toBeVisible();
+      listbox = screen.getByRole('listbox');
+      expect(listbox).toBeVisible();
 
-    await user.keyboard('{ArrowDown}');
+      await user.keyboard('{ArrowDown}');
 
-    button = screen.getByRole('combobox', { name: 'test' });
-    expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.1');
+      button = screen.getByRole('combobox', { name: 'test' });
+      expect(button).toHaveAttribute('aria-activedescendant', 'test-ID-option-$.1');
+    });
+  });
+
+  describe('spatial navigation', () => {
+    it.each`
+      key
+      ${'{ArrowUp}'}
+      ${'{ArrowDown}'}
+    `('should not show Listbox when focused and pressing ArrowUp', async ({ key }) => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      screen.getByRole('combobox', { name: 'test' }).focus();
+
+      await user.keyboard(key);
+      expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+    });
+
+    it('should not show Listbox when focused and pressing ArrowDown', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      const button = screen.getByRole('combobox', { name: 'test' });
+      button.focus();
+      expect(button).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+      expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+    });
+
+    it('should show Listbox on click', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // list box shouldn't be shown initially
+      const listbox = screen.queryByRole('listbox');
+      expect(listbox).not.toBeInTheDocument();
+
+      // list box should be shown after clicking on button
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+    });
+
+    it('should hide Listbox when clicking outside', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <>
+          <SpatialNavigationProvider>
+            {' '}
+            <Select id="test-id" label="test">
+              <Item>Item 1</Item>
+              <Item>Item 2</Item>
+            </Select>
+          </SpatialNavigationProvider>
+          <button>button-outside</button>
+        </>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // close listbox by clicking outside
+      await user.click(screen.getByRole('button', { name: 'button-outside' }));
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+    });
+
+    it('should hide Listbox when pressing Escape', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // close listbox by pressing escape
+      await user.keyboard('{Escape}');
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+    });
+
+    it('should hide Listbox when pressing custom back key pressed', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider
+          navigationKeyMapping={{
+            ...DEFAULTS.SPATIAL_NAVIGATION_KEY_MAPPING,
+            back: 'GoBack',
+          }}
+        >
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // close listbox by pressing escape
+      await user.keyboard('{GoBack}');
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+    });
+
+    it('should select first option when pressing enter after opening', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose first value and close listbox by pressing enter
+      await user.keyboard('{Enter}');
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // first item should be selected
+      expect(screen.getByRole('combobox', { name: 'test' }).textContent).toBe('Item 1');
+    });
+
+    it('should select second option when pressing arrow-down & enter after opening', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose second value and close listbox by pressing arrow-down and enter
+      await user.keyboard('{ArrowDown}');
+      await user.keyboard('{Enter}');
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // second item should be selected
+      expect(screen.getByRole('combobox', { name: 'test' }).textContent).toBe('Item 2');
+    });
+
+    it('should select third option when clicking on it after opening', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test">
+            <Item>Item 1</Item>
+            <Item>Item 2</Item>
+            <Item>Item 3</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose third value and close listbox by clicking on it
+      await user.click(screen.getByRole('option', { name: 'Item 3' }));
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // second item should be selected
+      expect(screen.getByRole('combobox', { name: 'test' }).textContent).toBe('Item 3');
+    });
+
+    it('should focus on 2nd option after opening if first option is disabled', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <Select id="test-id" label="test" disabledKeys={['1']}>
+            <Item key="1">Item 1</Item>
+            <Item key="2">Item 2</Item>
+          </Select>
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      await user.click(screen.getByRole('combobox', { name: 'test' }));
+
+      expect(screen.getByRole('listbox')).toBeVisible();
+
+      // choose second value and close listbox by pressing enter
+      await user.keyboard('{Enter}');
+
+      // listbox should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+      });
+      // second item should be selected
+      expect(screen.getByRole('combobox', { name: 'test' }).textContent).toBe('Item 2');
+    });
   });
 });

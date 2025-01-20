@@ -5,6 +5,8 @@ import userEvent from '@testing-library/user-event';
 
 import RadioGroup from './';
 import { STYLE } from './RadioGroup.constants';
+import SpatialNavigationProvider from '../SpatialNavigationProvider';
+import RadioSimpleGroup from '../RadioSimpleGroup';
 
 describe('<RadioGroup />', () => {
   describe('snapshot', () => {
@@ -868,6 +870,87 @@ describe('<RadioGroup />', () => {
       expect(option2).toBeChecked();
 
       expect(onChange).toBeCalledWith('option2');
+    });
+
+    describe('with spatial navigation', () => {
+      function setup() {
+        const user = userEvent.setup();
+
+        render(
+          <SpatialNavigationProvider>
+            <button>before</button>
+            <RadioGroup
+              label="Test Radio Group"
+              options={[
+                {
+                  label: 'Option 1',
+                  value: 'option1',
+                  id: 'option1',
+                },
+                {
+                  label: 'Option 2',
+                  value: 'option2',
+                  id: 'option2',
+                },
+                {
+                  label: 'Option 3',
+                  value: 'option2',
+                  id: 'option2',
+                },
+              ]}
+            />
+            <button>after</button>
+          </SpatialNavigationProvider>
+        );
+
+        const btnBefore = screen.getByText('before');
+        const option1 = screen.getByLabelText('Option 1');
+        const option2 = screen.getByLabelText('Option 2');
+        const option3 = screen.getByLabelText('Option 3');
+        const btnAfter = screen.getByText('after');
+
+        // jsDOM returns 0 for all values, so we need to mock them
+        [btnBefore, option1, option2, option3, btnAfter].forEach((e, idx) => {
+          const y = idx * 20 + 10;
+          jest.spyOn(e, 'getBoundingClientRect').mockReturnValue({
+            x: 0,
+            y,
+            top: y,
+            left: 0,
+            bottom: y + 10,
+            right: 100,
+            width: 100,
+            height: 10,
+          } as any);
+        });
+
+        btnBefore.focus();
+        return { user, btnBefore, option1, option2, option3, btnAfter };
+      }
+
+      it('should work normally but not looping back when up and down arrows pressed', async () => {
+        expect.assertions(5);
+
+        const { user, btnBefore, option1, option2, option3, btnAfter } = setup();
+
+        await user.keyboard('{ArrowDown}');
+        expect(option1).toHaveFocus();
+
+        await user.keyboard('{ArrowDown}');
+        await user.keyboard('{ArrowDown}');
+        expect(option3).toHaveFocus();
+
+        await user.keyboard('{ArrowDown}');
+        expect(btnAfter).toHaveFocus();
+
+        await user.keyboard('{ArrowUp}');
+        await user.keyboard('{ArrowUp}');
+        expect(option2).toHaveFocus();
+
+        await user.keyboard('{ArrowUp}');
+        await user.keyboard('{ArrowUp}');
+        expect(btnBefore).toHaveFocus();
+      });
     });
   });
 });

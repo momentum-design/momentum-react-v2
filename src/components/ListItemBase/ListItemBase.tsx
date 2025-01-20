@@ -219,7 +219,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [focusChild, isPressed, itemIndex, listContext, ref, setCurrentFocus, shouldFocusOnPress]);
 
   const updateTabIndexes = useCallback(() => {
-    getKeyboardFocusableElements(ref.current, false)
+    getKeyboardFocusableElements(ref.current, { includeTabbableOnly: false })
       .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
       .forEach((el) =>
         el.setAttribute(
@@ -250,7 +250,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
         return;
       }
 
-      const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
+      const firstFocusable = getKeyboardFocusableElements(ref.current, {
+        includeTabbableOnly: false,
+      }).filter(
         (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
       )[0];
 
