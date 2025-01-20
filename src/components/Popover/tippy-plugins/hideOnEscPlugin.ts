@@ -2,11 +2,30 @@ import type { Instance as TippyInstance, Plugin } from 'tippy.js';
 
 import { dispatchEvent, EventType } from '../Popover.events';
 
+type SetupPluginOptions = {
+  hideKeys: string[];
+  stopEventPropagation: boolean;
+};
+
 const openedTippyInstances: TippyInstance[] = [];
+
+const options: SetupPluginOptions = { hideKeys: ['Escape'], stopEventPropagation: false };
+
+/**
+ * Change plugin settings
+ * @param options
+ */
+export const setupHideOnPlugin = ({ hideKeys, stopEventPropagation }: SetupPluginOptions): void => {
+  options.hideKeys = hideKeys.slice();
+  options.stopEventPropagation = stopEventPropagation;
+};
 
 // hide the last opened popover when Escape key is pressed
 function onKeyDown(event: KeyboardEvent) {
-  if (event.key === 'Escape' && openedTippyInstances.length !== 0) {
+  if (options.hideKeys.includes(event.key) && openedTippyInstances.length !== 0) {
+    if (options.stopEventPropagation) {
+      event.stopImmediatePropagation();
+    }
     const lastIdx = openedTippyInstances.length - 1;
     openedTippyInstances[lastIdx].hide();
   }

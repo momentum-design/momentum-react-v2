@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { act, renderHook } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react-hooks';
 import useOrientationBasedKeyboardNavigation, {
   IUseOrientationBasedKeyboardNavigationProps,
 } from './useOrientationBasedKeyboardNavigation';
 import { KeyboardEvent } from 'react';
+import SpatialNavigationProvider from '../components/SpatialNavigationProvider';
 
 describe('useOrientationBasedKeyboardNavigation', () => {
   const defaultProps = {
@@ -14,30 +15,23 @@ describe('useOrientationBasedKeyboardNavigation', () => {
   } as IUseOrientationBasedKeyboardNavigationProps;
 
   const stopPropagation = () => {};
+  const stopImmediatePropagation = () => {};
   const preventDefault = () => {};
-  const downArrowEvent = {
-    key: 'ArrowDown',
+  const baseEvent = {
     stopPropagation,
+    nativeEvent: { stopImmediatePropagation },
     preventDefault,
-  } as KeyboardEvent<HTMLElement>;
-  const upArrowEvent = {
-    key: 'ArrowUp',
-    stopPropagation,
-    preventDefault,
-  } as KeyboardEvent<HTMLElement>;
-  const leftArrowEvent = {
-    key: 'ArrowLeft',
-    stopPropagation,
-    preventDefault,
-  } as KeyboardEvent<HTMLElement>;
-  const rightArrowEvent = {
-    key: 'ArrowRight',
-    stopPropagation,
-    preventDefault,
-  } as KeyboardEvent<HTMLElement>;
+  };
+
+  const downArrowEvent = { key: 'ArrowDown', ...baseEvent } as KeyboardEvent<HTMLElement>;
+  const upArrowEvent = { key: 'ArrowUp', ...baseEvent } as KeyboardEvent<HTMLElement>;
+  const leftArrowEvent = { key: 'ArrowLeft', ...baseEvent } as KeyboardEvent<HTMLElement>;
+  const rightArrowEvent = { key: 'ArrowRight', ...baseEvent } as KeyboardEvent<HTMLElement>;
 
   it('should navigate correctly by default', () => {
     const { result } = renderHook(() => useOrientationBasedKeyboardNavigation(defaultProps));
+
+    expect(result.current.getContext().noLoop).toStrictEqual(defaultProps.noLoop);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
@@ -420,6 +414,17 @@ describe('useOrientationBasedKeyboardNavigation', () => {
         'Unable to handle non-numeric index without allItemIndexes',
         'c'
       );
+    });
+  });
+
+  describe('with Spatial navigation context', () => {
+    it('should be always in no loop mode', () => {
+      const { result } = renderHook(
+        () => useOrientationBasedKeyboardNavigation({ ...defaultProps, noLoop: false }),
+        { wrapper: SpatialNavigationProvider }
+      );
+
+      expect(result.current.getContext().noLoop).toStrictEqual(true);
     });
   });
 });

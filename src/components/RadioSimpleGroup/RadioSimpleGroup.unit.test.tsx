@@ -8,6 +8,8 @@ import { STYLE } from './RadioSimpleGroup.constants';
 import RadioSimple from '../RadioSimple';
 import Text from '../Text';
 import Icon from '../Icon';
+import SpatialNavigationProvider from '../SpatialNavigationProvider';
+import spyOn = jest.spyOn;
 
 jest.mock('uuid', () => {
   return {
@@ -482,6 +484,68 @@ describe('<RadioSimpleGroup />', () => {
       expect(optionBlue).toBeChecked();
 
       expect(onChange).toBeCalledWith('blue');
+    });
+
+    describe('with spatial navigation', () => {
+      function setup() {
+        const user = userEvent.setup();
+
+        render(
+          <SpatialNavigationProvider>
+            <button>before</button>
+            <RadioSimpleGroup aria-label="Some label">{children}</RadioSimpleGroup>
+            <button>after</button>
+          </SpatialNavigationProvider>
+        );
+
+        const btnBefore = screen.getByText('before');
+        const optionRed = screen.getByLabelText('Red');
+        const optionBlue = screen.getByLabelText('Blue');
+        const optionYellow = screen.getByLabelText('Yellow');
+        const btnAfter = screen.getByText('after');
+
+        // jsDOM returns 0 for all values, so we need to mock them
+        [btnBefore, optionRed, optionBlue, optionYellow, btnAfter].forEach((e, idx) => {
+          const y = idx * 20 + 10;
+          jest.spyOn(e, 'getBoundingClientRect').mockReturnValue({
+            x: 0,
+            y,
+            top: y,
+            left: 0,
+            bottom: y + 10,
+            right: 100,
+            width: 100,
+            height: 10,
+          } as any);
+        });
+
+        btnBefore.focus();
+        return { user, btnBefore, optionRed, optionBlue, optionYellow, btnAfter };
+      }
+
+      it('should work normally but not looping back when up and down arrows pressed', async () => {
+        expect.assertions(5);
+
+        const { user, btnBefore, optionRed, optionBlue, optionYellow, btnAfter } = setup();
+
+        await user.keyboard('{ArrowDown}');
+        expect(optionRed).toHaveFocus();
+
+        await user.keyboard('{ArrowDown}');
+        await user.keyboard('{ArrowDown}');
+        expect(optionYellow).toHaveFocus();
+
+        await user.keyboard('{ArrowDown}');
+        expect(btnAfter).toHaveFocus();
+
+        await user.keyboard('{ArrowUp}');
+        await user.keyboard('{ArrowUp}');
+        expect(optionBlue).toHaveFocus();
+
+        await user.keyboard('{ArrowUp}');
+        await user.keyboard('{ArrowUp}');
+        expect(btnBefore).toHaveFocus();
+      });
     });
   });
 });

@@ -55,9 +55,9 @@ const TabList: FC<Props> = (props: Props) => {
   // Reset the tabIndex when focusing out
   useLayoutEffect(() => {
     if (!isFocusedWithin) {
-      const activeIndex = getKeyboardFocusableElements(containerRef.current, false).findIndex(
-        (el) => el.dataset.active === 'true'
-      );
+      const activeIndex = getKeyboardFocusableElements(containerRef.current, {
+        includeTabbableOnly: false,
+      }).findIndex((el) => el.dataset.active === 'true');
       setCurrentFocus(Math.max(activeIndex, 0));
     }
   }, [isFocusedWithin, setCurrentFocus]);
@@ -65,7 +65,9 @@ const TabList: FC<Props> = (props: Props) => {
   // Get the DOM to focus on the current focused element stored in state
   useLayoutEffect(() => {
     if (isFocusedWithin) {
-      getKeyboardFocusableElements(containerRef.current, false)[currentFocus]?.focus();
+      getKeyboardFocusableElements(containerRef.current, { includeTabbableOnly: false })[
+        currentFocus
+      ]?.focus();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentFocus]);

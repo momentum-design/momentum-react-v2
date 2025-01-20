@@ -19,6 +19,33 @@ export type TreeNavKeyCodes = 'ArrowUp' | 'ArrowDown' | 'ArrowRight' | 'ArrowLef
 export type TreeNodeId = string;
 
 /**
+ * Tree node navigation actions
+ */
+export type TreeNodeAction =
+  | {
+      /** No operation */
+      action: 'noop';
+      nodeId: TreeNodeId;
+    }
+  | {
+      /** Open node */
+
+      action: 'open';
+      nodeId: TreeNodeId;
+    }
+  | {
+      /** Close node */
+
+      action: 'close';
+      nodeId: TreeNodeId;
+    }
+  | {
+      /** Move active node */
+      action: 'move';
+      nextNodeId: TreeNodeId;
+    };
+
+/**
  * Toggles the state of the tree node.
  */
 export type ToggleTreeNode = (id: TreeNodeId, isOpen?: boolean) => void;

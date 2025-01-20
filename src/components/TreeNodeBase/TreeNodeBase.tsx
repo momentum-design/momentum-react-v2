@@ -159,7 +159,9 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
 
   const updateTabIndexes = useCallback(() => {
     if (!isHidden) {
-      getKeyboardFocusableElements(ref.current, false)
+      getKeyboardFocusableElements(ref.current, {
+        includeTabbableOnly: false,
+      })
         .filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)
         .forEach((el) => el.setAttribute('tabindex', tabIndex.toString()));
     }

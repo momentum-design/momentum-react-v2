@@ -7,6 +7,7 @@ import React, {
   forwardRef,
   useRef,
   useEffect,
+  useCallback,
 } from 'react';
 import { useTextField } from '@react-aria/textfield';
 import { useSearchFieldState } from '@react-stately/searchfield';
@@ -20,6 +21,8 @@ import { STYLE } from './TextInput.constants';
 import { useFocusState } from '../../hooks/useFocusState';
 import { v4 as uuidV4 } from 'uuid';
 import { useId } from '@react-aria/utils';
+import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
+import { SPATIAL_NAVIGATION_DIRECTION_KEYS } from '../SpatialNavigationProvider/SpatialNavigationProvider.constants';
 
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
@@ -82,6 +85,18 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     }
   }, [announcerId, errorMessage]);
 
+  const spatialNav = useSpatialNavigationContext();
+  const keydownHandler = useCallback(
+    (evt) => {
+      // Usually arrow keys used for spatial navigation which interfere with the input field
+      // But devices with spatial navigation uses on screen keyboard with virtual arrow keys
+      if (spatialNav?.directionKeys?.includes?.(evt.key)) {
+        evt.preventDefault();
+      }
+    },
+    [spatialNav]
+  );
+
   return (
     <div
       data-level={messageType}
@@ -89,6 +104,7 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
       data-disabled={isDisabled}
       style={style}
       onClick={handleClick}
+      onKeyDown={keydownHandler}
       className={classnames(STYLE.wrapper, className)}
     >
       {label && (
