@@ -23,6 +23,7 @@ import Icon from '../Icon';
 import ListBoxBase from '../ListBoxBase';
 import Popover, { PopoverInstance } from '../Popover';
 import Text from '../Text';
+import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
@@ -49,6 +50,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 
   const selectRef = useRef<HTMLButtonElement>(null);
   const boxRef = useRef<HTMLUListElement>(null);
+  const spatialNav = useSpatialNavigationContext();
 
   const state = useSelectState(props);
   const { labelProps, triggerProps, valueProps, menuProps } = useSelect(props, state, selectRef);
@@ -107,6 +109,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
    */
   const onKeyDown = useCallback(
     (e) => {
+      if (spatialNav) {
+        return;
+      }
       switch (e.key) {
         // useButton already provides Keyboard event support for Enter and Space
         case 'ArrowUp':
@@ -116,7 +121,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
           break;
       }
     },
-    [state]
+    [spatialNav, state]
   );
 
   const otherProps = shallowDisabled
@@ -169,8 +174,11 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' || (spatialNav && event.key === spatialNav.back)) {
         closePopover();
+        if (spatialNav) {
+          event.nativeEvent.stopImmediatePropagation();
+        }
       }
     },
   });

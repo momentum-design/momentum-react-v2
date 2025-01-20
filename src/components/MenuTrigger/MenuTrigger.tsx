@@ -23,6 +23,7 @@ import Popover from '../Popover';
 import type { PopoverInstance, VariantType } from '../Popover/Popover.types';
 import type { FocusStrategy } from '@react-types/shared';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
+import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 
 const MenuTrigger = forwardRef(
   (props: Props, ref: ForwardedRef<{ triggerComponentRef: RefObject<HTMLButtonElement> }>) => {
@@ -46,6 +47,8 @@ const MenuTrigger = forwardRef(
     const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();
 
     const buttonRef = useRef<HTMLButtonElement>();
+
+    const spatialNav = useSpatialNavigationContext();
 
     useImperativeHandle(
       ref,
@@ -100,8 +103,12 @@ const MenuTrigger = forwardRef(
      */
     const { keyboardProps } = useKeyboard({
       onKeyDown: (event) => {
-        if (event.key === 'Escape') {
+        if (event.key === 'Escape' || (spatialNav && event.key === spatialNav.back)) {
           closeMenuTrigger();
+          if (spatialNav) {
+            // skip spatial navigation
+            event.nativeEvent.stopImmediatePropagation();
+          }
         }
       },
     });

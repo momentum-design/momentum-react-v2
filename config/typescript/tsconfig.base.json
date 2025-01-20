@@ -16,6 +16,7 @@
     "preserveConstEnums": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "ES5"
+    "target": "ES5",
+    "lib": ["ESNext", "dom"]
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { SSRProvider } from '@react-aria/ssr';
+import userEvent from '@testing-library/user-event';
 
 import { mountAndWait } from '../../../test/utils';
 import TextInput, { TEXT_INPUT_CONSTANTS as CONSTANTS } from './';
@@ -8,6 +9,8 @@ import { Message } from '../InputMessage/InputMessage.types';
 import InputMessage from '../InputMessage';
 import * as screenReaderAnnouncer from '../ScreenReaderAnnouncer';
 import { ReactWrapper } from 'enzyme';
+import SpatialNavigationProvider from '../SpatialNavigationProvider';
+import { render, screen } from '@testing-library/react';
 
 jest.mock('uuid', () => {
   return {
@@ -25,7 +28,8 @@ describe('<TextInput/>', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
-    container.unmount();
+    container?.unmount?.();
+    container = undefined;
   });
 
   describe('snapshot', () => {
@@ -325,6 +329,32 @@ describe('<TextInput/>', () => {
       );
 
       expect(announceSpy).toHaveBeenCalledWith({ body: 'test1' }, 'test-ID');
+    });
+  });
+
+  describe('spatial navigation', () => {
+    it('should not accept arrow keys in spatial navigation context', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <SpatialNavigationProvider>
+          <TextInput clearAriaLabel="Clear this input" label="text-input" />
+        </SpatialNavigationProvider>
+      );
+
+      // open listbox
+      const input = screen.getByRole('textbox') as HTMLInputElement;
+
+      await user.type(input, 'hello');
+
+      // close listbox by pressing escape
+      await user.keyboard('{ArrowLeft}');
+      await user.keyboard('{ArrowLeft}');
+      await user.keyboard('{ArrowRight}');
+
+      await user.type(input, ' world');
+
+      expect(input.value).toEqual('hello world');
     });
   });
 });

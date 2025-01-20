@@ -204,6 +204,7 @@ export {
   TabsProvider as TabsProviderNext,
   TabPanel as TabPanelNext,
   VirtualizedList,
+  SpatialNavigationProvider,
 } from './components';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
