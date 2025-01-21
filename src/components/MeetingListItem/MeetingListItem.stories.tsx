@@ -307,12 +307,21 @@ Colors.parameters = {
     {
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
+          <ButtonHyperlink>
+            Link for Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book. It
+            has survived not only five centuries, but also the leap
+          </ButtonHyperlink>
         </ButtonGroup>
       ),
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.AcceptedActive}
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries, but also the leap
         </Text>
       ),
       color: MeetingMarker.AcceptedActive,
@@ -327,6 +336,10 @@ Colors.parameters = {
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.AcceptedInactive}
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries, but also the leap
         </Text>
       ),
       color: MeetingMarker.AcceptedInactive,
@@ -335,7 +348,12 @@ Colors.parameters = {
     {
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
+          <ButtonHyperlink>
+            Link for Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book. It
+            has survived not only five centuries, but also the leap
+          </ButtonHyperlink>
         </ButtonGroup>
       ),
       children: (
