@@ -2876,18 +2876,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.8.2":
-  version: 0.8.2
-  resolution: "@momentum-design/components@npm:0.8.2"
+"@momentum-design/components@npm:0.16.12":
+  version: 0.16.12
+  resolution: "@momentum-design/components@npm:0.16.12"
   dependencies:
     "@lit/context": ^1.1.2
     "@lit/react": ^1.0.5
-    lit: ^3.2.0
-  peerDependencies:
     "@momentum-design/fonts": "*"
     "@momentum-design/icons": "*"
     "@momentum-design/tokens": "*"
-  checksum: c40dca1933347d55795d34978bfade2983839fcc7dbf5ca57f616af726a510885057d9476c2c869e4a1c4671ebe1d943efbaf38e9dd7395a4252677928401820
+    lit: ^3.2.0
+    uuid: ^11.0.5
+  checksum: f5e0b0588cee38192a16b150390bf0ff2e49e785ead2102eed6efe2af53e93698b2ce73c40379436fa9bdbe88590e2df9f882182d610cca3d42a428a0b644b7e
+  languageName: node
+  linkType: hard
+
+"@momentum-design/fonts@npm:*":
+  version: 0.1.0
+  resolution: "@momentum-design/fonts@npm:0.1.0"
+  checksum: 8a1c23258d0f031830c0f647e4063e8af733fe68b79f3362482eb435d006d851458395ce203519eb2d2efddcd96d285418c75b2075a19e8ce22a8fa3ed9c8756
   languageName: node
   linkType: hard
 
@@ -2898,10 +2905,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@momentum-design/icons@npm:*":
+  version: 0.8.0
+  resolution: "@momentum-design/icons@npm:0.8.0"
+  checksum: 8c01af2f9babea85cbfdf5b74220748afcf0aac24c5a722fd2fbf89c1b203be83751f6ea995aa5741b8e037586d1265ed2671e51b4d0c048030d5adf353a70e4
+  languageName: node
+  linkType: hard
+
 "@momentum-design/icons@npm:0.0.164":
   version: 0.0.164
   resolution: "@momentum-design/icons@npm:0.0.164"
   checksum: 35ac73c6c7a70987b6b564e90e48edfe561a2a715e68bd28dc00bcf12a7b7d1c17a5a8781362b653582f34b196faf1a82cbed9458bcb8069e2d882698fa55343
+  languageName: node
+  linkType: hard
+
+"@momentum-design/tokens@npm:*":
+  version: 0.3.2
+  resolution: "@momentum-design/tokens@npm:0.3.2"
+  checksum: 738b7eecc03ba151fe2562a7147105c8dbdfc75f7ac8f9767e8b3b95c33f48f34e0164105c46bdbdbce4e6b607ff9d935b28088233a95dc8ec79e9b615afceb7
   languageName: node
   linkType: hard
 
@@ -2949,7 +2970,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/components": 0.8.2
+    "@momentum-design/components": 0.16.12
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.0.164
     "@momentum-design/tokens": 0.1.2
@@ -29601,6 +29622,15 @@ __metadata:
   version: 3.1.0
   resolution: "uuid-browser@npm:3.1.0"
   checksum: 951ec47593865c7cc746df671f7b0f0ff48fcab583fcdaeab6c517a5222af0f5e144a6fcea5fa9620a5b3be047e2f9412a80267ea5c45050e07d51774197d49e
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^11.0.5":
+  version: 11.0.5
+  resolution: "uuid@npm:11.0.5"
+  bin:
+    uuid: dist/esm/bin/uuid
+  checksum: 8a8ed824c77ccc9387eed3049e75268a862379f0d41222716020743c438f31e9acfbe6495bd4cb1a7727c91fcf5ae20be40b306826a62c96f9ff42db48e8ed93
   languageName: node
   linkType: hard
 
