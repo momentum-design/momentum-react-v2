@@ -81,23 +81,26 @@
 
 .md-meeting-list-item-wrapper {
   display: grid;
-  grid-template-columns: 2rem auto auto;
-  grid-column-gap: 0.75rem;
+  grid-template-columns: max-content minmax(0, 3fr) minmax(0, 2fr);
   justify-content: unset;
 
   div[data-position='middle'] {
-    > * {
-      width: 100%;
-    }
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   div[data-position='end'] {
-    width: 100% !important;
+    width: 100%;
+    display: flex;
     justify-content: end;
     justify-self: end;
+    flex-direction: column;
+    align-items: flex-end;
 
     .md-button-group-wrapper {
-      width: auto;
+      width: 100%;
       justify-content: end;
     }
 
