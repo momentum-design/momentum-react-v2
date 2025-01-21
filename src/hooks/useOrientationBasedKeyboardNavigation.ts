@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react';
 import { useKeyboard } from '@react-aria/interactions';
-import { setNextFocus } from '../components/List/List.utils';
+import { setNextFocus as defaultSetNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
 import { useFocusWithinState } from './useFocusState';
 
@@ -16,8 +16,8 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
   focusWithinProps: HTMLAttributes<HTMLElement>;
   getContext: () => {
     listSize: number;
-    currentFocus: number;
-    setCurrentFocus: Dispatch<SetStateAction<number>>;
+    currentFocus: number | string;
+    setCurrentFocus: Dispatch<SetStateAction<number | string>>;
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
     noLoop?: boolean;
@@ -30,7 +30,14 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
   listSize: number;
   orientation: ListOrientation;
   noLoop?: boolean;
-  initialFocus?: number;
+  initialFocus?: number | string;
+  setNextFocus?: (
+    isBackward: boolean,
+    listSize: number,
+    currentFocus: number | string,
+    noLoop: boolean,
+    setFocus: Dispatch<SetStateAction<number | string>>
+  ) => void;
   contextProps?: {
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
@@ -40,8 +47,15 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
 const useOrientationBasedKeyboardNavigation = (
   props: IUseOrientationBasedKeyboardNavigationProps
 ): IUseOrientationBasedKeyboardNavigationReturn => {
-  const { listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
-  const [currentFocus, setCurrentFocus] = useState<number>(-1);
+  const {
+    listSize,
+    orientation,
+    noLoop,
+    contextProps,
+    initialFocus = 0,
+    setNextFocus = defaultSetNextFocus,
+  } = props;
+  const [currentFocus, setCurrentFocus] = useState<number | string>(-1);
   const [updateFocusBlocked, setUpdateFocusBlocked] = useState<boolean>(true);
 
   const { isFocusedWithin, focusWithinProps } = useFocusWithinState({});
