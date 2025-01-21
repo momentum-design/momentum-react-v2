@@ -1,6 +1,14 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -649,6 +657,59 @@ const ListWithTextSelectWrapper = () => {
 
 const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
 
+const ListWithNonDefaultSetNextFocusWrapper = () => {
+  const itemIndices: any[] = ['a', 'b', 'c'];
+
+  const setNextFocus = useCallback(
+    (
+      isBackward: boolean,
+      listSize: number,
+      currentFocus: number | string,
+      noLoop: boolean,
+      setFocus: Dispatch<SetStateAction<number>>
+    ) => {
+      const currentIndex = itemIndices.indexOf(currentFocus);
+
+      let nextIndex: number;
+
+      if (isBackward) {
+        nextIndex = (listSize + currentIndex - 1) % listSize;
+
+        if (noLoop && nextIndex > currentIndex) {
+          return;
+        }
+      } else {
+        nextIndex = (listSize + currentIndex + 1) % listSize;
+
+        if (noLoop && nextIndex < currentIndex) {
+          return;
+        }
+      }
+
+      setFocus(itemIndices[nextIndex]);
+    },
+    [itemIndices]
+  );
+
+  return (
+    <List shouldFocusOnPress setNextFocus={setNextFocus} listSize={3}>
+      <ListItemBase allowTextSelection itemIndex={itemIndices[0]} key={0}>
+        Item 0
+      </ListItemBase>
+      <ListItemBase allowTextSelection itemIndex={itemIndices[1]} key={1}>
+        Item 1
+      </ListItemBase>
+      <ListItemBase allowTextSelection itemIndex={itemIndices[2]} key={2}>
+        Item 2
+      </ListItemBase>
+    </List>
+  );
+};
+
+const ListWithNonDefaultSetNextFocus = Template<unknown>(
+  ListWithNonDefaultSetNextFocusWrapper
+).bind({});
+
 export {
   Example,
   Common,
@@ -667,4 +728,5 @@ export {
   DynamicListWithInitialFocus3,
   SingleItemList,
   ListWithTextSelect,
+  ListWithNonDefaultSetNextFocus,
 };
