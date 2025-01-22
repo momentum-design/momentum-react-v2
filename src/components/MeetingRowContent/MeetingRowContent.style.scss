@@ -85,10 +85,13 @@
   justify-content: unset;
 
   div[data-position='middle'] {
-    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    > * {
+      width: 100%;
+    }
   }
 
   div[data-position='end'] {
@@ -99,7 +102,7 @@
     flex-direction: column;
     align-items: flex-end;
 
-    .md-button-group-wrapper {
+    > * {
       width: 100%;
       justify-content: end;
     }
