@@ -34,7 +34,14 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, MenuTrigger, SearchInput } from '..';
+import {
+  AriaToolbar,
+  AriaToolbarItem,
+  ButtonSimple,
+  ListItemBaseSection,
+  MenuTrigger,
+  SearchInput,
+} from '..';
 import { omit } from 'lodash';
 import { ListRefObject } from './List.types';
 
@@ -658,7 +665,8 @@ const ListWithTextSelectWrapper = () => {
 const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
 
 const ListWithNonDefaultSetNextFocusWrapper = () => {
-  const itemIndices: any[] = ['a', 'b', 'c'];
+  const [itemIndices, setItemIndices]: any[] = useState(['a', 'b', 'c', 'd', 'e', 'f', 'g']);
+  const [itemIndexType, setItemIndexType] = useState('string');
 
   const setNextFocus = useCallback(
     (
@@ -691,18 +699,40 @@ const ListWithNonDefaultSetNextFocusWrapper = () => {
     [itemIndices]
   );
 
+  const listItems = itemIndices.map((value, index) => (
+    <ListItemBase
+      allowTextSelection
+      itemIndex={itemIndexType === 'string' ? value : index}
+      key={value}
+    >
+      {`Item: ${value}`}
+    </ListItemBase>
+  ));
+
   return (
-    <List shouldFocusOnPress setNextFocus={setNextFocus} listSize={3}>
-      <ListItemBase allowTextSelection itemIndex={itemIndices[0]} key={0}>
-        Item 0
-      </ListItemBase>
-      <ListItemBase allowTextSelection itemIndex={itemIndices[1]} key={1}>
-        Item 1
-      </ListItemBase>
-      <ListItemBase allowTextSelection itemIndex={itemIndices[2]} key={2}>
-        Item 2
-      </ListItemBase>
-    </List>
+    <>
+      <List
+        shouldFocusOnPress
+        setNextFocus={itemIndexType === 'string' ? setNextFocus : undefined}
+        listSize={listItems.length}
+      >
+        {listItems}
+      </List>
+      <ButtonSimple onPress={() => setItemIndices(['c', 'd', 'e', 'f', 'g'])}>
+        Remove First Two Items
+      </ButtonSimple>
+      <ButtonSimple onPress={() => setItemIndices(['a', 'b', 'c', 'd', 'e'])}>
+        Remove Last Two Items
+      </ButtonSimple>
+      <ButtonSimple onPress={() => setItemIndices(['a', 'b', 'c', 'd', 'e', 'f', 'g'])}>
+        Reset
+      </ButtonSimple>
+      <ButtonSimple
+        onPress={() => setItemIndexType(itemIndexType === 'string' ? 'number' : 'string')}
+      >
+        {`Swap itemIndexType, current type: ${itemIndexType}`}
+      </ButtonSimple>
+    </>
   );
 };
 
