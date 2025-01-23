@@ -710,6 +710,73 @@ const ListWithNonDefaultSetNextFocus = Template<unknown>(
   ListWithNonDefaultSetNextFocusWrapper
 ).bind({});
 
+const ListWithNonDefaultSetNextFocusVariableLengthWrapper = () => {
+  const [itemIndices, setItemIndices] = useState<string[]>(['a', 'b', 'c']);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      setItemIndices((old) => {
+        if (old.length === 2) {
+          return [...old, 'c'];
+        } else {
+          return old.slice(0, 2);
+        }
+      });
+    }, 3000);
+
+    return () => {
+      clearTimeout(handle);
+    };
+  }, []);
+
+  const setNextFocus = useCallback(
+    (
+      isBackward: boolean,
+      listSize: number,
+      currentFocus: number | string,
+      noLoop: boolean,
+      setFocus: Dispatch<SetStateAction<number | string>>
+    ) => {
+      const currentIndex = itemIndices.indexOf(currentFocus as string);
+
+      let nextIndex: number;
+
+      if (isBackward) {
+        nextIndex = (listSize + currentIndex - 1) % listSize;
+
+        if (noLoop && nextIndex > currentIndex) {
+          return;
+        }
+      } else {
+        nextIndex = (listSize + currentIndex + 1) % listSize;
+
+        if (noLoop && nextIndex < currentIndex) {
+          return;
+        }
+      }
+
+      setFocus(itemIndices[nextIndex]);
+    },
+    [itemIndices]
+  );
+
+  return (
+    <List shouldFocusOnPress setNextFocus={setNextFocus} listSize={3} allItemIndexes={itemIndices}>
+      {itemIndices.map((index) => {
+        return (
+          <ListItemBase allowTextSelection itemIndex={index} key={index}>
+            <ListItemBaseSection position="fill">Item {index}</ListItemBaseSection>
+          </ListItemBase>
+        );
+      })}
+    </List>
+  );
+};
+
+const ListWithNonDefaultSetNextFocusVariableLength = Template<unknown>(
+  ListWithNonDefaultSetNextFocusVariableLengthWrapper
+).bind({});
+
 export {
   Example,
   Common,
@@ -729,4 +796,5 @@ export {
   SingleItemList,
   ListWithTextSelect,
   ListWithNonDefaultSetNextFocus,
+  ListWithNonDefaultSetNextFocusVariableLength,
 };

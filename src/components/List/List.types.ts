@@ -1,4 +1,5 @@
 import { AriaRole, CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react';
+import { ListItemBaseIndex } from '../ListItemBase/ListItemBase.types';
 
 export type ListOrientation = 'horizontal' | 'vertical';
 
@@ -64,7 +65,7 @@ export interface Props {
   /**
    * The index of the item that should be focused initially
    */
-  initialFocus?: number | string;
+  initialFocus?: ListItemBaseIndex;
 
   /**
    * Optional function to control the focus behavior when up/down keys are pressed
@@ -72,17 +73,22 @@ export interface Props {
   setNextFocus?: (
     isBackward: boolean,
     listSize: number,
-    currentFocus: number | string,
+    currentFocus: ListItemBaseIndex,
     noLoop: boolean,
-    setFocus: Dispatch<SetStateAction<number | string>>
+    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>
   ) => void;
+
+  /**
+   * The full list of item indexes to be displayed. This is necessary for non-numeric item indexes
+   */
+  allItemIndexes?: ListItemBaseIndex[];
 }
 
 export interface ListContextValue {
-  currentFocus?: number | string;
+  currentFocus?: ListItemBaseIndex;
   shouldFocusOnPress?: boolean;
   shouldItemFocusBeInset?: boolean;
-  setCurrentFocus?: Dispatch<SetStateAction<number | string>>;
+  setCurrentFocus?: Dispatch<SetStateAction<ListItemBaseIndex>>;
   listSize?: number;
   noLoop?: boolean;
   updateFocusBlocked?: boolean;
@@ -92,5 +98,5 @@ export interface ListContextValue {
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;
   focusOnIndex: (index: number) => void;
-  getCurrentFocusIndex: () => number | string;
+  getCurrentFocusIndex: () => ListItemBaseIndex;
 }

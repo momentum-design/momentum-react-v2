@@ -755,231 +755,278 @@ describe('<List />', () => {
       expect(document.body).toHaveFocus();
     });
 
-    it('should retain focus when the first item is removed from list', async () => {
-      const user = userEvent.setup();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should retain focus when the first item is removed from list',
+      async ({ indexes, useItemIndexes }) => {
+        const user = userEvent.setup();
 
-      const { getByTestId, rerender } = render(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        const { getByTestId, rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
+        expect(document.body).toHaveFocus();
 
-      await user.tab();
+        await user.tab();
 
-      expect(getByTestId('list-item-0')).toHaveFocus();
+        expect(getByTestId('list-item-0')).toHaveFocus();
 
-      rerender(
-        <List listSize={2}>
-          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={0}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        indexes.shift();
 
-      expect(getByTestId('list-item-1')).toHaveFocus();
-    });
+        if (!useItemIndexes) {
+          indexes = indexes.map((i: any) => i - 1);
+        }
 
-    it('should retain focus when the an item before the focused item is removed from list', async () => {
-      const user = userEvent.setup();
+        rerender(
+          <List allItemIndexes={useItemIndexes ? [...indexes] : undefined} listSize={2}>
+            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[0]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[1]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      const { getByTestId, rerender } = render(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        expect(getByTestId('list-item-1')).toHaveFocus();
+      }
+    );
 
-      expect(document.body).toHaveFocus();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should retain focus when the an item before the focused item is removed from list',
+      async ({ indexes, useItemIndexes }) => {
+        const user = userEvent.setup();
 
-      await user.tab();
+        const { getByTestId, rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      expect(getByTestId('list-item-0')).toHaveFocus();
+        expect(document.body).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
+        await user.tab();
 
-      expect(getByTestId('list-item-1')).toHaveFocus();
+        expect(getByTestId('list-item-0')).toHaveFocus();
 
-      rerender(
-        <List listSize={2}>
-          <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={0}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        await user.keyboard('{ArrowDown}');
 
-      expect(getByTestId('list-item-1')).toHaveFocus();
-    });
+        expect(getByTestId('list-item-1')).toHaveFocus();
 
-    it('should retain focus when the last item has focus and is removed from list', async () => {
-      const user = userEvent.setup();
+        rerender(
+          <List allItemIndexes={useItemIndexes ? indexes.slice(1, 3) : undefined} listSize={2}>
+            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      const { getByTestId, rerender } = render(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        expect(getByTestId('list-item-1')).toHaveFocus();
+      }
+    );
 
-      await user.tab();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true, expectedNextFocus: 'list-item-0' },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true, expectedNextFocus: 'list-item-0' },
+    ])(
+      'should retain focus when the last item has focus and is removed from list',
+      async ({ indexes, useItemIndexes, expectedNextFocus }) => {
+        const user = userEvent.setup();
 
-      expect(getByTestId('list-item-0')).toHaveFocus();
+        const { getByTestId, rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      await user.keyboard('{ArrowDown}');
+        await user.tab();
 
-      expect(getByTestId('list-item-1')).toHaveFocus();
+        expect(getByTestId('list-item-0')).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
+        await user.keyboard('{ArrowDown}');
 
-      expect(getByTestId('list-item-2')).toHaveFocus();
+        expect(getByTestId('list-item-1')).toHaveFocus();
 
-      rerender(
-        <List listSize={2}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-        </List>
-      );
+        await user.keyboard('{ArrowDown}');
 
-      expect(getByTestId('list-item-1')).toHaveFocus();
-    });
+        expect(getByTestId('list-item-2')).toHaveFocus();
 
-    it('should not autofocus when the last item is removed from the list', async () => {
-      const { rerender } = render(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        rerender(
+          <List allItemIndexes={useItemIndexes ? indexes.slice(0, 2) : undefined} listSize={2}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
+        expect(getByTestId(expectedNextFocus ?? 'list-item-1')).toHaveFocus();
+      }
+    );
 
-      rerender(
-        <List listSize={2}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-        </List>
-      );
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should not autofocus when the last item is removed from the list',
+      async ({ indexes, useItemIndexes }) => {
+        const { rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
-    });
+        expect(document.body).toHaveFocus();
 
-    it('should retain focus when a middle focused item is removed from list', async () => {
-      const user = userEvent.setup();
+        rerender(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={2}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+          </List>
+        );
 
-      const { getByTestId, rerender } = render(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        expect(document.body).toHaveFocus();
+      }
+    );
 
-      await user.tab();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should retain focus when a middle focused item is removed from list',
+      async ({ indexes, useItemIndexes }) => {
+        const user = userEvent.setup();
 
-      expect(getByTestId('list-item-0')).toHaveFocus();
+        const { getByTestId, rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      await user.keyboard('{ArrowDown}');
+        await user.tab();
 
-      expect(getByTestId('list-item-1')).toHaveFocus();
+        expect(getByTestId('list-item-0')).toHaveFocus();
 
-      rerender(
-        <List listSize={2}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        await user.keyboard('{ArrowDown}');
 
-      expect(getByTestId('list-item-2')).toHaveFocus();
-    });
+        expect(getByTestId('list-item-1')).toHaveFocus();
 
-    it('should focus as expected when more items are added before tabbing to the list', async () => {
-      const user = userEvent.setup();
+        rerender(
+          <List allItemIndexes={indexes} listSize={2}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[1]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      const { getByTestId, rerender } = render(
-        <List listSize={2}>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        expect(getByTestId('list-item-2')).toHaveFocus();
+      }
+    );
 
-      expect(document.body).toHaveFocus();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should focus as expected when more items are added before tabbing to the list',
+      async ({ indexes, useItemIndexes }) => {
+        const user = userEvent.setup();
 
-      rerender(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        const { getByTestId, rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={2}>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      await user.tab();
+        expect(document.body).toHaveFocus();
 
-      expect(getByTestId('list-item-0')).toHaveFocus();
-    });
+        rerender(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
+
+        await user.tab();
+
+        expect(getByTestId('list-item-0')).toHaveFocus();
+      }
+    );
 
     it('should handle text selection', async () => {
       const user = userEvent.setup();

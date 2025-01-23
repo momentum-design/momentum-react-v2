@@ -4,7 +4,7 @@ const CLASS_PREFIX = 'md-list';
 
 const DEFAULTS = {
   ORIENTATION: 'vertical' as ListOrientation,
-  INITIAL_FOCUS: 0,
+  INITIAL_FOCUS_NOT_SET: null,
 };
 
 const STYLE = {

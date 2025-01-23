@@ -4,6 +4,8 @@ import { FocusProps, FocusWithinProps } from '@react-aria/interactions';
 
 export type ListItemBaseSize = 32 | 40 | 50 | 70 | 'auto';
 
+export type ListItemBaseIndex = string | number;
+
 export interface Props
   extends PressEvents,
     Omit<FocusProps, 'isDisabled' | 'onFocusChange'>,
@@ -68,7 +70,7 @@ export interface Props
   /**
    * Indicates wether this item is currently focusable
    */
-  itemIndex?: number;
+  itemIndex?: ListItemBaseIndex;
 
   /**
    * Determines if the list item is interactive (usually used as a header when false)
