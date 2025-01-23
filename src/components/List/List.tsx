@@ -10,6 +10,7 @@ import { mergeProps } from '@react-aria/utils';
 
 const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   const {
+    allItemIndexes,
     className,
     id,
     style,
@@ -20,13 +21,24 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
     shouldItemFocusBeInset,
     noLoop,
     orientation = DEFAULTS.ORIENTATION,
-    initialFocus = DEFAULTS.INITIAL_FOCUS,
+    initialFocus: propInitialFocus = DEFAULTS.INITIAL_FOCUS_NOT_SET,
     setNextFocus,
     ...rest
   } = props;
 
+  let initialFocus = propInitialFocus;
+
+  if (initialFocus === DEFAULTS.INITIAL_FOCUS_NOT_SET) {
+    if (allItemIndexes) {
+      initialFocus = allItemIndexes[0];
+    } else {
+      initialFocus = 0;
+    }
+  }
+
   const { keyboardProps, getContext, focusWithinProps } = useOrientationBasedKeyboardNavigation({
     listSize,
+    allItemIndexes,
     orientation,
     noLoop,
     initialFocus,
