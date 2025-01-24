@@ -16,6 +16,7 @@ import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { ListRefObject } from './List.types';
+import { setNextFocus as defaultSetNextFocus } from './List.utils';
 
 describe('<List />', () => {
   const commonProps = {
@@ -224,51 +225,58 @@ describe('<List />', () => {
       expect(keyDownHandler).toHaveBeenCalled();
     });
 
-    it('should handle up/down arrow keys correctly for vertical lists', async () => {
-      expect.assertions(8);
-      const user = userEvent.setup();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should handle up/down arrow keys correctly for vertical lists',
+      async ({ useItemIndexes, indexes }) => {
+        expect.assertions(8);
+        const user = userEvent.setup();
 
-      const { getAllByRole } = render(
-        <List listSize={3}>
-          <ListItemBase key="0" itemIndex={0}>
-            ListItemBase 1
-          </ListItemBase>
-          <ListItemBase key="1" itemIndex={1}>
-            ListItemBase 2
-          </ListItemBase>
-          <ListItemBase key="2" itemIndex={2}>
-            ListItemBase 3
-          </ListItemBase>
-        </List>
-      );
+        const { getAllByRole } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase key="0" itemIndex={indexes[0]}>
+              ListItemBase 1
+            </ListItemBase>
+            <ListItemBase key="1" itemIndex={indexes[1]}>
+              ListItemBase 2
+            </ListItemBase>
+            <ListItemBase key="2" itemIndex={indexes[2]}>
+              ListItemBase 3
+            </ListItemBase>
+          </List>
+        );
 
-      const listItems = getAllByRole('listitem');
+        const listItems = getAllByRole('listitem');
 
-      await user.tab();
+        await user.tab();
 
-      expect(listItems[0]).toHaveFocus();
+        expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
-      expect(listItems[1]).toHaveFocus();
+        await user.keyboard('{ArrowDown}');
+        expect(listItems[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
-      expect(listItems[2]).toHaveFocus();
+        await user.keyboard('{ArrowDown}');
+        expect(listItems[2]).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
-      expect(listItems[0]).toHaveFocus();
+        await user.keyboard('{ArrowDown}');
+        expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowUp}');
-      expect(listItems[2]).toHaveFocus();
+        await user.keyboard('{ArrowUp}');
+        expect(listItems[2]).toHaveFocus();
 
-      await user.keyboard('{ArrowUp}');
-      expect(listItems[1]).toHaveFocus();
+        await user.keyboard('{ArrowUp}');
+        expect(listItems[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowUp}');
-      expect(listItems[0]).toHaveFocus();
+        await user.keyboard('{ArrowUp}');
+        expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowUp}');
-      expect(listItems[2]).toHaveFocus();
-    });
+        await user.keyboard('{ArrowUp}');
+        expect(listItems[2]).toHaveFocus();
+      }
+    );
 
     it('is vertically oriented by default', async () => {
       expect.assertions(3);
@@ -301,42 +309,54 @@ describe('<List />', () => {
       expect(listItems[0]).toHaveFocus();
     });
 
-    it('should handle up/down arrow keys correctly - no loop for vertical lists', async () => {
-      expect.assertions(5);
-      const user = userEvent.setup();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should handle up/down arrow keys correctly - no loop for vertical lists',
+      async ({ useItemIndexes, indexes }) => {
+        expect.assertions(5);
+        const user = userEvent.setup();
 
-      const { getAllByRole } = render(
-        <List listSize={3} noLoop orientation="vertical">
-          <ListItemBase key="0" itemIndex={0}>
-            ListItemBase 1
-          </ListItemBase>
-          <ListItemBase key="1" itemIndex={1}>
-            ListItemBase 2
-          </ListItemBase>
-          <ListItemBase key="2" itemIndex={2}>
-            ListItemBase 3
-          </ListItemBase>
-        </List>
-      );
+        const { getAllByRole } = render(
+          <List
+            allItemIndexes={useItemIndexes ? indexes : undefined}
+            listSize={3}
+            noLoop
+            orientation="vertical"
+          >
+            <ListItemBase key="0" itemIndex={indexes[0]}>
+              ListItemBase 1
+            </ListItemBase>
+            <ListItemBase key="1" itemIndex={indexes[1]}>
+              ListItemBase 2
+            </ListItemBase>
+            <ListItemBase key="2" itemIndex={indexes[2]}>
+              ListItemBase 3
+            </ListItemBase>
+          </List>
+        );
 
-      const listItems = getAllByRole('listitem');
+        const listItems = getAllByRole('listitem');
 
-      await user.tab();
+        await user.tab();
 
-      expect(listItems[0]).toHaveFocus();
+        expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowUp}');
-      expect(listItems[0]).toHaveFocus();
+        await user.keyboard('{ArrowUp}');
+        expect(listItems[0]).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
-      expect(listItems[1]).toHaveFocus();
+        await user.keyboard('{ArrowDown}');
+        expect(listItems[1]).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
-      expect(listItems[2]).toHaveFocus();
+        await user.keyboard('{ArrowDown}');
+        expect(listItems[2]).toHaveFocus();
 
-      await user.keyboard('{ArrowDown}');
-      expect(listItems[2]).toHaveFocus();
-    });
+        await user.keyboard('{ArrowDown}');
+        expect(listItems[2]).toHaveFocus();
+      }
+    );
 
     it('should handle left/right arrow keys correctly for horizontal lists', async () => {
       expect.assertions(8);
@@ -561,88 +581,107 @@ describe('<List />', () => {
       expect(document.body).toHaveFocus();
     });
 
-    it('should focus programmatically on the specified index', async () => {
-      expect.assertions(4);
-      const user = userEvent.setup();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should focus programmatically on the specified index',
+      async ({ useItemIndexes, indexes }) => {
+        expect.assertions(4);
+        const user = userEvent.setup();
 
-      const ProgrammaticList = () => {
-        const listRef = useRef<ListRefObject>(null);
+        const ProgrammaticList = () => {
+          const listRef = useRef<ListRefObject>(null);
 
-        return (
-          <>
-            <button
-              onClick={() => {
-                listRef.current.focusOnIndex(0);
-              }}
-            >
-              focus on 0
-            </button>
-            <button
-              onClick={() => {
-                listRef.current.focusOnIndex(1);
-              }}
-            >
-              focus on 1
-            </button>
-            <button
-              onClick={() => {
-                listRef.current.focusOnIndex(2);
-              }}
-            >
-              focus on 2
-            </button>
-            <List listSize={3} ref={listRef}>
-              <ListItemBase key="0" itemIndex={0}>
-                <p>list item 1</p>
-              </ListItemBase>
-              <ListItemBase key="1" itemIndex={1}>
-                <p>list item 2</p>
-              </ListItemBase>
-              <ListItemBase key="2" itemIndex={2}>
-                <p>list item 3</p>
-              </ListItemBase>
-            </List>
-          </>
-        );
-      };
+          return (
+            <>
+              <button
+                onClick={() => {
+                  listRef.current.focusOnIndex(indexes[0]);
+                }}
+              >
+                focus on 0
+              </button>
+              <button
+                onClick={() => {
+                  listRef.current.focusOnIndex(indexes[1]);
+                }}
+              >
+                focus on 1
+              </button>
+              <button
+                onClick={() => {
+                  listRef.current.focusOnIndex(indexes[2]);
+                }}
+              >
+                focus on 2
+              </button>
+              <List
+                allItemIndexes={useItemIndexes ? indexes : undefined}
+                listSize={3}
+                ref={listRef}
+              >
+                <ListItemBase key="0" itemIndex={indexes[0]}>
+                  <p>list item 1</p>
+                </ListItemBase>
+                <ListItemBase key="1" itemIndex={indexes[1]}>
+                  <p>list item 2</p>
+                </ListItemBase>
+                <ListItemBase key="2" itemIndex={indexes[2]}>
+                  <p>list item 3</p>
+                </ListItemBase>
+              </List>
+            </>
+          );
+        };
 
-      const { getAllByRole } = render(<ProgrammaticList />);
+        const { getAllByRole } = render(<ProgrammaticList />);
 
-      const listItems = getAllByRole('listitem');
-      const buttons = getAllByRole('button');
+        const listItems = getAllByRole('listitem');
+        const buttons = getAllByRole('button');
 
-      // tab past the buttons
-      await user.tab();
-      await user.tab();
-      await user.tab();
-      await user.tab();
+        // tab past the buttons
+        await user.tab();
+        await user.tab();
+        await user.tab();
+        await user.tab();
 
-      expect(listItems[0]).toHaveFocus();
+        expect(listItems[0]).toHaveFocus();
 
-      await user.click(buttons[1]);
-      expect(listItems[1]).toHaveFocus();
+        await user.click(buttons[1]);
+        expect(listItems[1]).toHaveFocus();
 
-      await user.click(buttons[2]);
+        await user.click(buttons[2]);
 
-      expect(listItems[2]).toHaveFocus();
+        expect(listItems[2]).toHaveFocus();
 
-      await user.click(buttons[0]);
+        await user.click(buttons[0]);
 
-      expect(listItems[0]).toHaveFocus();
-    });
+        expect(listItems[0]).toHaveFocus();
+      }
+    );
 
-    it('should focus the item with initialFocus', async () => {
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])('should focus the item with initialFocus', async ({ useItemIndexes, indexes }) => {
       const user = userEvent.setup();
 
       const { getByTestId, rerender } = render(
-        <List listSize={3} initialFocus={1}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+        <List
+          listSize={3}
+          allItemIndexes={useItemIndexes ? indexes : undefined}
+          initialFocus={indexes[1]}
+        >
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
             0
           </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
             1
           </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
             2
           </ListItemBase>
         </List>
@@ -658,17 +697,21 @@ describe('<List />', () => {
       // focus should not change the current focused position
 
       rerender(
-        <List listSize={3} initialFocus={1}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+        <List
+          listSize={3}
+          allItemIndexes={useItemIndexes ? indexes : undefined}
+          initialFocus={indexes[1]}
+        >
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
             0
           </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
             1
           </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
+          <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
             2
           </ListItemBase>
-          <ListItemBase data-testid="list-item-3" key="3" itemIndex={3}>
+          <ListItemBase data-testid="list-item-3" key="3" itemIndex={indexes[3]}>
             3
           </ListItemBase>
         </List>
@@ -681,79 +724,101 @@ describe('<List />', () => {
       expect(getByTestId('list-item-2')).toHaveFocus();
     });
 
-    it('should focus the item with initialFocus when updated', async () => {
-      const user = userEvent.setup();
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should focus the item with initialFocus when updated',
+      async ({ useItemIndexes, indexes }) => {
+        const user = userEvent.setup();
 
-      const { getByTestId, rerender } = render(
-        <List listSize={3} initialFocus={1}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        const { getByTestId, rerender } = render(
+          <List
+            allItemIndexes={useItemIndexes ? indexes : undefined}
+            listSize={3}
+            initialFocus={indexes[1]}
+          >
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
+        expect(document.body).toHaveFocus();
 
-      rerender(
-        <List listSize={4} initialFocus={2}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-3" key="3" itemIndex={3}>
-            3
-          </ListItemBase>
-        </List>
-      );
+        rerender(
+          <List
+            allItemIndexes={useItemIndexes ? indexes : undefined}
+            listSize={4}
+            initialFocus={indexes[2]}
+          >
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-3" key="3" itemIndex={indexes[3]}>
+              3
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
+        expect(document.body).toHaveFocus();
 
-      await user.tab();
+        await user.tab();
 
-      expect(getByTestId('list-item-2')).toHaveFocus();
-    });
+        expect(getByTestId('list-item-2')).toHaveFocus();
+      }
+    );
 
-    it('should not autofocus when a new item is added to the list', async () => {
-      const { rerender } = render(
-        <List listSize={2}>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={0}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={1}>
-            2
-          </ListItemBase>
-        </List>
-      );
+    it.each([
+      { indexes: [0, 1, 2], useItemIndexes: true },
+      { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+    ])(
+      'should not autofocus when a new item is added to the list',
+      async ({ useItemIndexes, indexes }) => {
+        const { rerender } = render(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={2}>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[0]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[1]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
+        expect(document.body).toHaveFocus();
 
-      rerender(
-        <List listSize={3}>
-          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
-            0
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
-            1
-          </ListItemBase>
-          <ListItemBase data-testid="list-item-2" key="2" itemIndex={2}>
-            2
-          </ListItemBase>
-        </List>
-      );
+        rerender(
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+              0
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+              1
+            </ListItemBase>
+            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+              2
+            </ListItemBase>
+          </List>
+        );
 
-      expect(document.body).toHaveFocus();
-    });
+        expect(document.body).toHaveFocus();
+      }
+    );
 
     it.each([
       { indexes: [0, 1, 2], useItemIndexes: true },
@@ -857,13 +922,50 @@ describe('<List />', () => {
       { indexes: [0, 1, 2], useItemIndexes: true, expectedNextFocus: 'list-item-0' },
       { indexes: [0, 1, 2], useItemIndexes: false },
       { indexes: ['a', 'b', 'c'], useItemIndexes: true, expectedNextFocus: 'list-item-0' },
+      {
+        indexes: ['a', 'b', 'c'],
+        useItemIndexes: true,
+        expectedNextFocus: 'list-item-1',
+        setNextFocus: (isBackward, listSize, currentFocus, noLoop, setFocus, allItemIndexes) => {
+          if (isBackward === null) {
+            // ['a', 'b', 'c'] represents the full list as it was when the list was first rendered
+            // becasue isBackward is null, we know the currentFocus is not in the current allItemIndexes
+            const originalAllItemIndexes = ['a', 'b', 'c'];
+
+            const currentIndex = ['a', 'b', 'c'].indexOf(currentFocus);
+
+            // get the positions of allItemIndex in the original list
+            const allItemIndexesPositions = allItemIndexes.map((itemIndex) =>
+              originalAllItemIndexes.indexOf(itemIndex)
+            );
+
+            // find the difference between these positions and the current index
+            const differences = allItemIndexesPositions.map((position) =>
+              Math.abs(position - currentIndex)
+            );
+
+            // pick the smallest difference as the new index. If there is more than one, prefer the last one
+            const nextIndex = allItemIndexes[differences.lastIndexOf(Math.min(...differences))];
+
+            setFocus(nextIndex);
+
+            return;
+          }
+
+          defaultSetNextFocus(isBackward, listSize, currentFocus, noLoop, setFocus, allItemIndexes);
+        },
+      },
     ])(
       'should retain focus when the last item has focus and is removed from list',
-      async ({ indexes, useItemIndexes, expectedNextFocus }) => {
+      async ({ indexes, useItemIndexes, expectedNextFocus, setNextFocus }) => {
         const user = userEvent.setup();
 
         const { getByTestId, rerender } = render(
-          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
+          <List
+            allItemIndexes={useItemIndexes ? indexes : undefined}
+            listSize={3}
+            setNextFocus={setNextFocus ? setNextFocus : undefined}
+          >
             <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
               0
             </ListItemBase>
@@ -889,7 +991,11 @@ describe('<List />', () => {
         expect(getByTestId('list-item-2')).toHaveFocus();
 
         rerender(
-          <List allItemIndexes={useItemIndexes ? indexes.slice(0, 2) : undefined} listSize={2}>
+          <List
+            allItemIndexes={useItemIndexes ? indexes.slice(0, 2) : undefined}
+            listSize={2}
+            setNextFocus={setNextFocus ? setNextFocus : undefined}
+          >
             <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
               0
             </ListItemBase>

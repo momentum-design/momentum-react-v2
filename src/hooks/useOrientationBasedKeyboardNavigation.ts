@@ -40,7 +40,8 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
     listSize: number,
     currentFocus: ListItemBaseIndex,
     noLoop: boolean,
-    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>
+    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>,
+    allItemIndexes: ListItemBaseIndex[]
   ) => void;
   contextProps?: {
     shouldFocusOnPress?: boolean;

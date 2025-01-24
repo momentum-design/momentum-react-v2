@@ -7,6 +7,7 @@ import './List.style.scss';
 import { ListContext } from './List.utils';
 import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBasedKeyboardNavigation';
 import { mergeProps } from '@react-aria/utils';
+import { ListItemBaseIndex } from '../ListItemBase/ListItemBase.types';
 
 const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   const {
@@ -51,7 +52,7 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   // Expose imperative methods
   useImperativeHandle(ref, () => ({
     listRef,
-    focusOnIndex: (index: number) => getContext()?.setCurrentFocus(index),
+    focusOnIndex: (index: ListItemBaseIndex) => getContext()?.setCurrentFocus(index),
     getCurrentFocusIndex: () => getContext()?.currentFocus,
   }));
 

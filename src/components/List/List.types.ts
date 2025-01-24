@@ -75,7 +75,8 @@ export interface Props {
     listSize: number,
     currentFocus: ListItemBaseIndex,
     noLoop: boolean,
-    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>
+    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>,
+    allItemIndexes?: ListItemBaseIndex[]
   ) => void;
 
   /**
@@ -97,6 +98,6 @@ export interface ListContextValue {
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;
-  focusOnIndex: (index: number) => void;
+  focusOnIndex: (index: ListItemBaseIndex) => void;
   getCurrentFocusIndex: () => ListItemBaseIndex;
 }
