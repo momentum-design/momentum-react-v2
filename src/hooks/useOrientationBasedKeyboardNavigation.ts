@@ -12,7 +12,7 @@ import { setNextFocus as defaultSetNextFocus } from '../components/List/List.uti
 import { ListOrientation } from '../components/List/List.types';
 import { useFocusWithinState } from './useFocusState';
 import { isNumber } from 'lodash';
-import { ListItemBaseIndex } from 'src/components/ListItemBase/ListItemBase.types';
+import { ListItemBaseIndex } from '../components/ListItemBase/ListItemBase.types';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
   keyboardProps: HTMLAttributes<HTMLElement>;
@@ -31,7 +31,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
 
 export type IUseOrientationBasedKeyboardNavigationProps = {
   listSize: number;
-  allItemIndexes: ListItemBaseIndex[];
+  allItemIndexes?: ListItemBaseIndex[];
   orientation: ListOrientation;
   noLoop?: boolean;
   initialFocus?: ListItemBaseIndex;
