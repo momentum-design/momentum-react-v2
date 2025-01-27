@@ -23,7 +23,6 @@ import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
 import { useFocusAndFocusWithinState } from '../../hooks/useFocusState';
-import { isNumber } from 'lodash';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
