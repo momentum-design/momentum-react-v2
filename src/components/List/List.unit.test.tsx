@@ -821,25 +821,69 @@ describe('<List />', () => {
     );
 
     it.each([
-      { indexes: [0, 1, 2], useItemIndexes: true },
-      { indexes: [0, 1, 2], useItemIndexes: false },
-      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+      {
+        initialData: [
+          { index: 0, label: 0 },
+          { index: 1, label: 1 },
+          { index: 2, label: 2 },
+          { index: 3, label: 3 },
+        ],
+        endData: [
+          { index: 0, label: 1 },
+          { index: 1, label: 2 },
+          { index: 2, label: 3 },
+        ],
+        useItemIndexes: true,
+      },
+
+      {
+        initialData: [
+          { index: 0, label: 0 },
+          { index: 1, label: 1 },
+          { index: 2, label: 2 },
+          { index: 3, label: 3 },
+        ],
+        endData: [
+          { index: 0, label: 1 },
+          { index: 1, label: 2 },
+          { index: 2, label: 3 },
+        ],
+        useItemIndexes: false,
+      },
+
+      {
+        initialData: [
+          { index: 'a', label: 0 },
+          { index: 'b', label: 1 },
+          { index: 'c', label: 2 },
+          { index: 'd', label: 3 },
+        ],
+        endData: [
+          { index: 'b', label: 1 },
+          { index: 'c', label: 2 },
+          { index: 'd', label: 3 },
+        ],
+        useItemIndexes: true,
+      },
     ])(
       'should retain focus when the first item is removed from list',
-      async ({ indexes, useItemIndexes }) => {
+      async ({ initialData, endData, useItemIndexes }) => {
         const user = userEvent.setup();
 
         const { getByTestId, rerender } = render(
-          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
-            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
-              0
-            </ListItemBase>
-            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
-              1
-            </ListItemBase>
-            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
-              2
-            </ListItemBase>
+          <List
+            allItemIndexes={useItemIndexes ? initialData.map((item) => item.index) : undefined}
+            listSize={3}
+          >
+            {initialData.map((item) => (
+              <ListItemBase
+                data-testid={`list-item-${item.label}`}
+                key={item.label}
+                itemIndex={item.index}
+              >
+                {item.label}
+              </ListItemBase>
+            ))}
           </List>
         );
 
@@ -849,20 +893,20 @@ describe('<List />', () => {
 
         expect(getByTestId('list-item-0')).toHaveFocus();
 
-        indexes.shift();
-
-        if (!useItemIndexes) {
-          indexes = indexes.map((i: any) => i - 1);
-        }
-
         rerender(
-          <List allItemIndexes={useItemIndexes ? [...indexes] : undefined} listSize={2}>
-            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[0]}>
-              1
-            </ListItemBase>
-            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[1]}>
-              2
-            </ListItemBase>
+          <List
+            allItemIndexes={useItemIndexes ? endData.map((item) => item.index) : undefined}
+            listSize={2}
+          >
+            {endData.map((item) => (
+              <ListItemBase
+                data-testid={`list-item-${item.label}`}
+                key={item.label}
+                itemIndex={item.index}
+              >
+                {item.label}
+              </ListItemBase>
+            ))}
           </List>
         );
 
@@ -871,23 +915,36 @@ describe('<List />', () => {
     );
 
     it.each([
-      { indexes: [0, 1, 2], useItemIndexes: true },
-      { indexes: [0, 1, 2], useItemIndexes: false },
-      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+      { initialIndexes: [0, 1, 2], indexesEnd: [1, 2], useItemIndexes: true },
+      { initialIndexes: [0, 1, 2], indexesEnd: [0, 1], useItemIndexes: false },
+      { initialIndexes: ['a', 'b', 'c'], indexesEnd: ['b', 'c'], useItemIndexes: true },
     ])(
       'should retain focus when the an item before the focused item is removed from list',
-      async ({ indexes, useItemIndexes }) => {
+      async ({ initialIndexes, indexesEnd, useItemIndexes }) => {
         const user = userEvent.setup();
 
         const { getByTestId, rerender } = render(
-          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
-            <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
+          <List allItemIndexes={useItemIndexes ? initialIndexes : undefined} listSize={3}>
+            <ListItemBase
+              data-testid="list-item-0"
+              key={indexesEnd[0]}
+              itemIndex={initialIndexes[0]}
+            >
               0
             </ListItemBase>
-            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+            <ListItemBase
+              id="test"
+              data-testid="list-item-1"
+              key={indexesEnd[1]}
+              itemIndex={initialIndexes[1]}
+            >
               1
             </ListItemBase>
-            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+            <ListItemBase
+              data-testid="list-item-2"
+              key={indexesEnd[2]}
+              itemIndex={initialIndexes[2]}
+            >
               2
             </ListItemBase>
           </List>
@@ -904,11 +961,16 @@ describe('<List />', () => {
         expect(getByTestId('list-item-1')).toHaveFocus();
 
         rerender(
-          <List allItemIndexes={useItemIndexes ? indexes.slice(1, 3) : undefined} listSize={2}>
-            <ListItemBase id="test" data-testid="list-item-1" key="1" itemIndex={indexes[1]}>
+          <List allItemIndexes={useItemIndexes ? indexesEnd : undefined} listSize={2}>
+            <ListItemBase
+              id="test"
+              data-testid="list-item-1"
+              key={indexesEnd[0]}
+              itemIndex={indexesEnd[0]}
+            >
               1
             </ListItemBase>
-            <ListItemBase data-testid="list-item-2" key="2" itemIndex={indexes[2]}>
+            <ListItemBase data-testid="list-item-2" key={indexesEnd[1]} itemIndex={indexesEnd[1]}>
               2
             </ListItemBase>
           </List>
@@ -1095,6 +1157,7 @@ describe('<List />', () => {
 
     it.each([
       { indexes: [0, 1, 2], useItemIndexes: false },
+      { indexes: [0, 1, 2], useItemIndexes: true },
       { indexes: ['a', 'b', 'c'], useItemIndexes: true },
     ])(
       'should focus as expected when more items are added before tabbing to the list',
