@@ -88,10 +88,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    > * {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   div[data-position='end'] {
@@ -101,11 +98,6 @@
     justify-self: end;
     flex-direction: column;
     align-items: flex-end;
-
-    > * {
-      width: 100%;
-      justify-content: end;
-    }
 
     a {
       overflow: hidden;
