@@ -486,6 +486,19 @@ describe('ListItemBase', () => {
       />
     );
     expect(getByTestId('list-item-1')).not.toHaveFocus();
+
+    rerender(
+      <Wrapper
+        value={{
+          listSize: 3,
+          shouldFocusOnPress: false,
+          shouldItemFocusBeInset: false,
+          currentFocus: 1,
+          setCurrentFocus: jest.fn(),
+        }}
+      />
+    );
+    expect(getByTestId('list-item-1')).not.toHaveFocus();
   });
 
   beforeEach(() => {
