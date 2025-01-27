@@ -23,7 +23,6 @@ import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
 import { useFocusAndFocusWithinState } from '../../hooks/useFocusState';
-import { isNumber } from 'lodash';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -266,10 +265,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * we want to silently update the currentFocus back to the first element in
    * case the index of the element focused before the list shrink is now outside
    * the size of the new list size (shrinked size)
-   * Only works with numeric itemIndex
    */
   useLayoutEffect(() => {
-    if (!!listSize && isNumber(currentFocus) && currentFocus >= listSize) {
+    if (!!listSize && currentFocus >= listSize) {
       // set focus to last item
       listContext.setCurrentFocus(listSize - 1);
       updateTabIndexes();

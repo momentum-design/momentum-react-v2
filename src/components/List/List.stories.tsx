@@ -1,14 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  Dispatch,
-  SetStateAction,
-} from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -34,14 +26,7 @@ import ButtonHyperlink from '../ButtonHyperlink';
 import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
-import {
-  AriaToolbar,
-  AriaToolbarItem,
-  ButtonSimple,
-  ListItemBaseSection,
-  MenuTrigger,
-  SearchInput,
-} from '..';
+import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, MenuTrigger, SearchInput } from '..';
 import { omit } from 'lodash';
 import { ListRefObject } from './List.types';
 
@@ -664,82 +649,6 @@ const ListWithTextSelectWrapper = () => {
 
 const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
 
-const ListWithNonDefaultSetNextFocusWrapper = () => {
-  const [itemIndices, setItemIndices]: any[] = useState(['a', 'b', 'c', 'd', 'e', 'f', 'g']);
-  const [itemIndexType, setItemIndexType] = useState('string');
-
-  const setNextFocus = useCallback(
-    (
-      isBackward: boolean,
-      listSize: number,
-      currentFocus: number | string,
-      noLoop: boolean,
-      setFocus: Dispatch<SetStateAction<number>>
-    ) => {
-      const currentIndex = itemIndices.indexOf(currentFocus);
-
-      let nextIndex: number;
-
-      if (isBackward) {
-        nextIndex = (listSize + currentIndex - 1) % listSize;
-
-        if (noLoop && nextIndex > currentIndex) {
-          return;
-        }
-      } else {
-        nextIndex = (listSize + currentIndex + 1) % listSize;
-
-        if (noLoop && nextIndex < currentIndex) {
-          return;
-        }
-      }
-
-      setFocus(itemIndices[nextIndex]);
-    },
-    [itemIndices]
-  );
-
-  const listItems = itemIndices.map((value, index) => (
-    <ListItemBase
-      allowTextSelection
-      itemIndex={itemIndexType === 'string' ? value : index}
-      key={value}
-    >
-      {`Item: ${value}`}
-    </ListItemBase>
-  ));
-
-  return (
-    <>
-      <List
-        shouldFocusOnPress
-        setNextFocus={itemIndexType === 'string' ? setNextFocus : undefined}
-        listSize={listItems.length}
-      >
-        {listItems}
-      </List>
-      <ButtonSimple onPress={() => setItemIndices(['c', 'd', 'e', 'f', 'g'])}>
-        Remove First Two Items
-      </ButtonSimple>
-      <ButtonSimple onPress={() => setItemIndices(['a', 'b', 'c', 'd', 'e'])}>
-        Remove Last Two Items
-      </ButtonSimple>
-      <ButtonSimple onPress={() => setItemIndices(['a', 'b', 'c', 'd', 'e', 'f', 'g'])}>
-        Reset
-      </ButtonSimple>
-      <ButtonSimple
-        onPress={() => setItemIndexType(itemIndexType === 'string' ? 'number' : 'string')}
-      >
-        {`Swap itemIndexType, current type: ${itemIndexType}`}
-      </ButtonSimple>
-    </>
-  );
-};
-
-const ListWithNonDefaultSetNextFocus = Template<unknown>(
-  ListWithNonDefaultSetNextFocusWrapper
-).bind({});
-
 export {
   Example,
   Common,
@@ -758,5 +667,4 @@ export {
   DynamicListWithInitialFocus3,
   SingleItemList,
   ListWithTextSelect,
-  ListWithNonDefaultSetNextFocus,
 };

@@ -64,25 +64,14 @@ export interface Props {
   /**
    * The index of the item that should be focused initially
    */
-  initialFocus?: number | string;
-
-  /**
-   * Optional function to control the focus behavior when up/down keys are pressed
-   */
-  setNextFocus?: (
-    isBackward: boolean,
-    listSize: number,
-    currentFocus: number | string,
-    noLoop: boolean,
-    setFocus: Dispatch<SetStateAction<number | string>>
-  ) => void;
+  initialFocus?: number;
 }
 
 export interface ListContextValue {
-  currentFocus?: number | string;
+  currentFocus?: number;
   shouldFocusOnPress?: boolean;
   shouldItemFocusBeInset?: boolean;
-  setCurrentFocus?: Dispatch<SetStateAction<number | string>>;
+  setCurrentFocus?: Dispatch<SetStateAction<number>>;
   listSize?: number;
   noLoop?: boolean;
   updateFocusBlocked?: boolean;
@@ -92,5 +81,5 @@ export interface ListContextValue {
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;
   focusOnIndex: (index: number) => void;
-  getCurrentFocusIndex: () => number | string;
+  getCurrentFocusIndex: () => number;
 }

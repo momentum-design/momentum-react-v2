@@ -1,0 +1,11 @@
+.md-virtualized-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  contain: strict;
+
+  .md-virtualized-list-wrapper {
+    width: 100%;
+    position: relative;
+  }
+}
