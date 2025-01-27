@@ -184,25 +184,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const previousItemIndex = usePrevious(itemIndex);
   const lastCurrentFocus = usePrevious(currentFocus);
 
-  // When an item is added to the list, we need to reset the focus since the list size has changed
-  // and maybe the item index has changed as well
-  useLayoutEffect(() => {
-    if (
-      itemIndex !== previousItemIndex &&
-      currentFocus === previousItemIndex &&
-      listFocusedWithin
-    ) {
-      setCurrentFocus(itemIndex);
-    }
-  }, [
-    currentFocus,
-    itemIndex,
-    lastCurrentFocus,
-    listFocusedWithin,
-    previousItemIndex,
-    setCurrentFocus,
-  ]);
-
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
     if (
@@ -260,21 +241,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     previousItemIndex,
     ref,
   ]);
-
-  /**
-   * When the items inside the list context gets smaller (search/filter applied)
-   * we want to silently update the currentFocus back to the first element in
-   * case the index of the element focused before the list shrink is now outside
-   * the size of the new list size (shrinked size)
-   * Only works with numeric itemIndex
-   */
-  useLayoutEffect(() => {
-    if (!!listSize && isNumber(currentFocus) && currentFocus >= listSize) {
-      // set focus to last item
-      listContext.setCurrentFocus(listSize - 1);
-      updateTabIndexes();
-    }
-  }, [currentFocus, listContext, listSize, updateTabIndexes]);
 
   useEffect(() => {
     if (listContext && currentFocus === undefined) {
