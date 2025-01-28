@@ -1201,6 +1201,43 @@ describe('<List />', () => {
       }
     );
 
+    it('should handle the list size going to zero and then back again', async () => {
+      const user = userEvent.setup();
+
+      const { getByTestId, rerender } = render(
+        <List listSize={2}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+          <ListItemBase data-testid="list-item-1" key="1" itemIndex={1}>
+            1
+          </ListItemBase>
+        </List>
+      );
+
+      await user.tab();
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+
+      await user.keyboard('{ArrowDown}');
+
+      expect(getByTestId('list-item-1')).toHaveFocus();
+
+      rerender(<List listSize={0} />);
+
+      expect(document.body).toHaveFocus();
+
+      rerender(
+        <List listSize={1}>
+          <ListItemBase data-testid="list-item-0" key="0" itemIndex={0}>
+            0
+          </ListItemBase>
+        </List>
+      );
+
+      expect(getByTestId('list-item-0')).toHaveFocus();
+    });
+
     it('should handle text selection', async () => {
       const user = userEvent.setup();
 

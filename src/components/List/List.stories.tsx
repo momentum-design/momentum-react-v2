@@ -35,7 +35,7 @@ import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, MenuTrigger, SearchInput } from '..';
-import { omit } from 'lodash';
+import { omit, times } from 'lodash';
 import { ListRefObject } from './List.types';
 
 const TEST_LIST_SIZE = 30;
@@ -670,6 +670,30 @@ const DynamicListWithInitialFocus4 = Template<unknown>(DynamicListWithInitialFoc
   {}
 );
 
+const DynamicListGoesToZeroSizeWrapper = () => {
+  const [showItems, setShowItems] = useState(3);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      setShowItems((old) => (old + 1) % 4);
+    }, 3000);
+
+    return () => clearInterval(handle);
+  });
+
+  return (
+    <List listSize={showItems}>
+      {times(showItems, (index) => (
+        <ListItemBase itemIndex={index} key={index}>
+          <ListItemBaseSection position="fill">Item {index}</ListItemBaseSection>
+        </ListItemBase>
+      ))}
+    </List>
+  );
+};
+
+const DynamicListGoesToZeroSize = Template<unknown>(DynamicListGoesToZeroSizeWrapper).bind({});
+
 const SingleItemListWrapper = () => {
   return (
     <List listSize={1}>
@@ -841,4 +865,5 @@ export {
   ListWithTextSelect,
   ListWithNonDefaultSetNextFocus,
   ListWithNonDefaultSetNextFocusVariableLength,
+  DynamicListGoesToZeroSize,
 };
