@@ -8,11 +8,12 @@ import {
   useState,
 } from 'react';
 import { useKeyboard } from '@react-aria/interactions';
-import { setNextFocus as defaultSetNextFocus } from '../components/List/List.utils';
+import { setNextFocus, onCurrentFocusNotFound } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
 import { useFocusWithinState } from './useFocusState';
 import { isNumber } from 'lodash';
 import { ListItemBaseIndex } from '../components/ListItemBase/ListItemBase.types';
+import { usePrevious } from './usePrevious';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
   keyboardProps: HTMLAttributes<HTMLElement>;
@@ -35,14 +36,6 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
   orientation: ListOrientation;
   noLoop?: boolean;
   initialFocus?: ListItemBaseIndex;
-  setNextFocus?: (
-    isBackward: boolean,
-    listSize: number,
-    currentFocus: ListItemBaseIndex,
-    noLoop: boolean,
-    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>,
-    allItemIndexes: ListItemBaseIndex[]
-  ) => void;
   contextProps?: {
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
@@ -52,15 +45,7 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
 const useOrientationBasedKeyboardNavigation = (
   props: IUseOrientationBasedKeyboardNavigationProps
 ): IUseOrientationBasedKeyboardNavigationReturn => {
-  const {
-    allItemIndexes,
-    listSize,
-    orientation,
-    noLoop,
-    contextProps,
-    initialFocus = 0,
-    setNextFocus = defaultSetNextFocus,
-  } = props;
+  const { allItemIndexes, listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
   const [currentFocus, setCurrentFocus] = useState<number | string>(-1);
   const [updateFocusBlocked, setUpdateFocusBlocked] = useState<boolean>(true);
 
@@ -99,6 +84,8 @@ const useOrientationBasedKeyboardNavigation = (
     ]
   );
 
+  const previousAllItemIndexes = usePrevious(allItemIndexes);
+
   useEffect(() => {
     if (!allItemIndexes) {
       if (!isNumber(currentFocus)) {
@@ -123,16 +110,14 @@ const useOrientationBasedKeyboardNavigation = (
     if (currentFocus !== -1 && !allItemIndexes.includes(currentFocus)) {
       const context = getContext();
 
-      setNextFocus(
-        null,
-        context.listSize,
-        context.currentFocus,
-        context.noLoop,
-        setCurrentFocus,
-        context.allItemIndexes
+      onCurrentFocusNotFound(
+        currentFocus,
+        context.allItemIndexes,
+        previousAllItemIndexes,
+        setCurrentFocus
       );
     }
-  }, [allItemIndexes, currentFocus, getContext, initialFocus, listSize, setNextFocus]);
+  }, [allItemIndexes, currentFocus, getContext, initialFocus, listSize, previousAllItemIndexes]);
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {

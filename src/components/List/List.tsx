@@ -23,7 +23,6 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
     noLoop,
     orientation = DEFAULTS.ORIENTATION,
     initialFocus: propInitialFocus = DEFAULTS.INITIAL_FOCUS_NOT_SET,
-    setNextFocus,
     ...rest
   } = props;
 
@@ -43,7 +42,6 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
     orientation,
     noLoop,
     initialFocus,
-    setNextFocus,
     contextProps: { shouldFocusOnPress, shouldItemFocusBeInset },
   });
 
