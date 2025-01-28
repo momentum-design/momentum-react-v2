@@ -11,7 +11,7 @@ import { useKeyboard } from '@react-aria/interactions';
 import { setNextFocus as defaultSetNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
 import { useFocusWithinState } from './useFocusState';
-import { initial, isNumber } from 'lodash';
+import { isNumber } from 'lodash';
 import { ListItemBaseIndex } from '../components/ListItemBase/ListItemBase.types';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
