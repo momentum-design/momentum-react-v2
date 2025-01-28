@@ -13,7 +13,6 @@ import { ListOrientation } from '../components/List/List.types';
 import { useFocusWithinState } from './useFocusState';
 import { isNumber } from 'lodash';
 import { ListItemBaseIndex } from '../components/ListItemBase/ListItemBase.types';
-import { usePrevious } from './usePrevious';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
   keyboardProps: HTMLAttributes<HTMLElement>;
@@ -100,22 +99,13 @@ const useOrientationBasedKeyboardNavigation = (
     ]
   );
 
-  const previousListSize = usePrevious(listSize);
-
   useEffect(() => {
     if (!allItemIndexes) {
       if (isNumber(currentFocus)) {
-        if (
-          previousListSize &&
-          listSize !== previousListSize &&
-          currentFocus !== -1 &&
-          isFocusedWithin
-        ) {
-          const listSizeDifference = listSize - previousListSize;
-
-          const newFocus = currentFocus + listSizeDifference;
-
-          setCurrentFocus(newFocus);
+        if (listSize && currentFocus !== -1) {
+          if (currentFocus >= listSize) {
+            setCurrentFocus(listSize - 1);
+          }
         }
       } else if (!(isNumber(currentFocus) && currentFocus === -1)) {
         console.warn('Unable to handle non-numeric index without allItemIndexes', currentFocus);
@@ -134,16 +124,7 @@ const useOrientationBasedKeyboardNavigation = (
         context.allItemIndexes
       );
     }
-  }, [
-    allItemIndexes,
-    currentFocus,
-    getContext,
-    isFocusedWithin,
-    listSize,
-    noLoop,
-    previousListSize,
-    setNextFocus,
-  ]);
+  }, [allItemIndexes, currentFocus, getContext, listSize, noLoop, setNextFocus]);
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {

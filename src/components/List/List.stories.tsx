@@ -627,6 +627,49 @@ const DynamicListWithInitialFocus3 = Template<unknown>(DynamicListWithInitialFoc
   {}
 );
 
+const DynamicListWithInitialFocusWrapper4 = () => {
+  const [showMiddle, setShowMiddle] = useState(false);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      setShowMiddle((old) => !old);
+    }, 3000);
+
+    return () => clearInterval(handle);
+  });
+
+  let offset = 0;
+  if (showMiddle) {
+    offset = 1;
+  }
+
+  return (
+    <List listSize={showMiddle ? 5 : 4}>
+      <ListItemBase itemIndex={0} key={0}>
+        Item 0
+      </ListItemBase>
+      <ListItemBase itemIndex={1} key={1}>
+        Item 1
+      </ListItemBase>
+      {showMiddle && (
+        <ListItemBase itemIndex={2} key={2}>
+          Item 2
+        </ListItemBase>
+      )}
+      <ListItemBase itemIndex={2 + offset} key={3}>
+        Item 3
+      </ListItemBase>
+      <ListItemBase itemIndex={3 + offset} key={4}>
+        Item 4
+      </ListItemBase>
+    </List>
+  );
+};
+
+const DynamicListWithInitialFocus4 = Template<unknown>(DynamicListWithInitialFocusWrapper4).bind(
+  {}
+);
+
 const SingleItemListWrapper = () => {
   return (
     <List listSize={1}>
@@ -793,6 +836,7 @@ export {
   DynamicListWithInitialFocus,
   DynamicListWithInitialFocus2,
   DynamicListWithInitialFocus3,
+  DynamicListWithInitialFocus4,
   SingleItemList,
   ListWithTextSelect,
   ListWithNonDefaultSetNextFocus,
