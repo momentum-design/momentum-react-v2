@@ -119,6 +119,7 @@ describe('useOrientationBasedKeyboardNavigation', () => {
 
   describe('list size changes', () => {
     it.each([
+      // removing items
       { focusedIndex: 0, expectedNextFocus: 0, newListSize: 4 },
       { focusedIndex: 1, expectedNextFocus: 1, newListSize: 4 },
       { focusedIndex: 2, expectedNextFocus: 2, newListSize: 4 },
@@ -127,6 +128,13 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       { focusedIndex: 4, expectedNextFocus: 2, newListSize: 3 },
       { focusedIndex: 4, expectedNextFocus: 1, newListSize: 2 },
       { focusedIndex: 4, expectedNextFocus: 0, newListSize: 1 },
+
+      // adding items
+      { focusedIndex: 0, expectedNextFocus: 0, newListSize: 6 },
+      { focusedIndex: 1, expectedNextFocus: 1, newListSize: 6 },
+      { focusedIndex: 2, expectedNextFocus: 2, newListSize: 6 },
+      { focusedIndex: 3, expectedNextFocus: 3, newListSize: 6 },
+      { focusedIndex: 4, expectedNextFocus: 4, newListSize: 6 },
     ])(
       'should handle list size changing with numeric indexes - non-focused item removed',
       ({ focusedIndex, expectedNextFocus, newListSize }) => {
