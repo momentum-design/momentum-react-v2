@@ -11,7 +11,7 @@ import { useKeyboard } from '@react-aria/interactions';
 import { setNextFocus as defaultSetNextFocus } from '../components/List/List.utils';
 import { ListOrientation } from '../components/List/List.types';
 import { useFocusWithinState } from './useFocusState';
-import { isNumber } from 'lodash';
+import { initial, isNumber } from 'lodash';
 import { ListItemBaseIndex } from '../components/ListItemBase/ListItemBase.types';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
@@ -108,7 +108,13 @@ const useOrientationBasedKeyboardNavigation = (
       }
 
       if (currentFocus >= listSize) {
-        setCurrentFocus(listSize - 1);
+        const newFocus = listSize - 1;
+
+        if (newFocus >= 0) {
+          setCurrentFocus(newFocus);
+        } else {
+          setCurrentFocus(initialFocus);
+        }
       }
 
       return;
@@ -126,7 +132,7 @@ const useOrientationBasedKeyboardNavigation = (
         context.allItemIndexes
       );
     }
-  }, [allItemIndexes, currentFocus, getContext, listSize, setNextFocus]);
+  }, [allItemIndexes, currentFocus, getContext, initialFocus, listSize, setNextFocus]);
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
