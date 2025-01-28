@@ -658,7 +658,7 @@ const ListWithTextSelectWrapper = () => {
 const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
 
 const ListWithNonDefaultSetNextFocusWrapper = () => {
-  const itemIndices: any[] = ['a', 'b', 'c'];
+  const itemIndexes: any[] = ['a', 'b', 'c'];
 
   const setNextFocus = useCallback(
     (
@@ -668,7 +668,7 @@ const ListWithNonDefaultSetNextFocusWrapper = () => {
       noLoop: boolean,
       setFocus: Dispatch<SetStateAction<number>>
     ) => {
-      const currentIndex = itemIndices.indexOf(currentFocus);
+      const currentIndex = itemIndexes.indexOf(currentFocus);
 
       let nextIndex: number;
 
@@ -686,20 +686,20 @@ const ListWithNonDefaultSetNextFocusWrapper = () => {
         }
       }
 
-      setFocus(itemIndices[nextIndex]);
+      setFocus(itemIndexes[nextIndex]);
     },
-    [itemIndices]
+    [itemIndexes]
   );
 
   return (
-    <List shouldFocusOnPress setNextFocus={setNextFocus} listSize={3}>
-      <ListItemBase allowTextSelection itemIndex={itemIndices[0]} key={0}>
+    <List shouldFocusOnPress allItemIndexes={itemIndexes} setNextFocus={setNextFocus} listSize={3}>
+      <ListItemBase allowTextSelection itemIndex={itemIndexes[0]} key={0}>
         Item 0
       </ListItemBase>
-      <ListItemBase allowTextSelection itemIndex={itemIndices[1]} key={1}>
+      <ListItemBase allowTextSelection itemIndex={itemIndexes[1]} key={1}>
         Item 1
       </ListItemBase>
-      <ListItemBase allowTextSelection itemIndex={itemIndices[2]} key={2}>
+      <ListItemBase allowTextSelection itemIndex={itemIndexes[2]} key={2}>
         Item 2
       </ListItemBase>
     </List>
