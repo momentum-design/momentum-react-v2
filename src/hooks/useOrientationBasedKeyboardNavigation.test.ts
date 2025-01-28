@@ -218,7 +218,19 @@ describe('useOrientationBasedKeyboardNavigation', () => {
         initialIndexes: ['a', 'b', 'c', 'd', 'e'],
         focusedIndex: 'e',
         finalIndexes: ['a', 'b', 'c', 'd'],
-        expectedNextFocus: 'a', // This is the unexpected result as it jumps back to the beginning of the list
+        expectedNextFocus: 'd',
+      },
+      {
+        initialIndexes: ['a', 'b', 'c', 'd', 'e'],
+        focusedIndex: 'e',
+        finalIndexes: ['a', 'b', 'c'],
+        expectedNextFocus: 'c',
+      },
+      {
+        initialIndexes: ['a', 'b', 'c', 'd', 'e', 'f'],
+        focusedIndex: 'c',
+        finalIndexes: ['a', 'b', 'e', 'f'],
+        expectedNextFocus: 'b',
       },
       {
         initialIndexes: ['a', 'b', 'c', 'd', 'e'],
@@ -287,6 +299,14 @@ describe('useOrientationBasedKeyboardNavigation', () => {
         focusedIndex: 'd',
         finalIndexes: ['a', 'b', 'c', 'd', 'e'],
         expectedNextFocus: 'd',
+      },
+
+      // swap all the items
+      {
+        initialIndexes: ['a', 'b', 'c', 'd', 'e'],
+        focusedIndex: 'c',
+        finalIndexes: ['g', 'h', 'i', 'j', 'k'],
+        expectedNextFocus: 'k',
       },
     ])(
       'should handle list size changing with non-numeric indexes',

@@ -68,18 +68,6 @@ export interface Props {
   initialFocus?: ListItemBaseIndex;
 
   /**
-   * Optional function to control the focus behavior when up/down keys are pressed
-   */
-  setNextFocus?: (
-    isBackward: boolean,
-    listSize: number,
-    currentFocus: ListItemBaseIndex,
-    noLoop: boolean,
-    setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>,
-    allItemIndexes?: ListItemBaseIndex[]
-  ) => void;
-
-  /**
    * The full list of item indexes to be displayed. This is necessary for non-numeric item indexes
    */
   allItemIndexes?: ListItemBaseIndex[];

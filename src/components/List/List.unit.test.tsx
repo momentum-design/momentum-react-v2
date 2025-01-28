@@ -985,53 +985,16 @@ describe('<List />', () => {
     );
 
     it.each([
-      { indexes: [0, 1, 2], useItemIndexes: true, expectedNextFocus: 'list-item-0' },
+      { indexes: [0, 1, 2], useItemIndexes: true, expectedNextFocus: 'list-item-1' },
       { indexes: [0, 1, 2], useItemIndexes: false },
-      { indexes: ['a', 'b', 'c'], useItemIndexes: true, expectedNextFocus: 'list-item-0' },
-      {
-        indexes: ['a', 'b', 'c'],
-        useItemIndexes: true,
-        expectedNextFocus: 'list-item-1',
-        setNextFocus: (isBackward, listSize, currentFocus, noLoop, setFocus, allItemIndexes) => {
-          if (isBackward === null) {
-            // ['a', 'b', 'c'] represents the full list as it was when the list was first rendered
-            // becasue isBackward is null, we know the currentFocus is not in the current allItemIndexes
-            const originalAllItemIndexes = ['a', 'b', 'c'];
-
-            const currentIndex = ['a', 'b', 'c'].indexOf(currentFocus);
-
-            // get the positions of allItemIndex in the original list
-            const allItemIndexesPositions = allItemIndexes.map((itemIndex) =>
-              originalAllItemIndexes.indexOf(itemIndex)
-            );
-
-            // find the difference between these positions and the current index
-            const differences = allItemIndexesPositions.map((position) =>
-              Math.abs(position - currentIndex)
-            );
-
-            // pick the smallest difference as the new index. If there is more than one, prefer the last one
-            const nextIndex = allItemIndexes[differences.lastIndexOf(Math.min(...differences))];
-
-            setFocus(nextIndex);
-
-            return;
-          }
-
-          defaultSetNextFocus(isBackward, listSize, currentFocus, noLoop, setFocus, allItemIndexes);
-        },
-      },
+      { indexes: ['a', 'b', 'c'], useItemIndexes: true, expectedNextFocus: 'list-item-1' },
     ])(
       'should retain focus when the last item has focus and is removed from list',
-      async ({ indexes, useItemIndexes, expectedNextFocus, setNextFocus }) => {
+      async ({ indexes, useItemIndexes, expectedNextFocus }) => {
         const user = userEvent.setup();
 
         const { getByTestId, rerender } = render(
-          <List
-            allItemIndexes={useItemIndexes ? indexes : undefined}
-            listSize={3}
-            setNextFocus={setNextFocus ? setNextFocus : undefined}
-          >
+          <List allItemIndexes={useItemIndexes ? indexes : undefined} listSize={3}>
             <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
               0
             </ListItemBase>
@@ -1057,11 +1020,7 @@ describe('<List />', () => {
         expect(getByTestId('list-item-2')).toHaveFocus();
 
         rerender(
-          <List
-            allItemIndexes={useItemIndexes ? indexes.slice(0, 2) : undefined}
-            listSize={2}
-            setNextFocus={setNextFocus ? setNextFocus : undefined}
-          >
+          <List allItemIndexes={useItemIndexes ? indexes.slice(0, 2) : undefined} listSize={2}>
             <ListItemBase data-testid="list-item-0" key="0" itemIndex={indexes[0]}>
               0
             </ListItemBase>

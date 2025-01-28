@@ -59,3 +59,24 @@ export const setNextFocus = (
 
   setFocus(nextIndex);
 };
+
+export const onCurrentFocusNotFound = (
+  currentFocus: ListItemBaseIndex,
+  allItemIndexes: ListItemBaseIndex[],
+  previousAllItemIndexes: ListItemBaseIndex[],
+  setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>
+): void => {
+  const previousIndexOfCurrentFocus = previousAllItemIndexes.indexOf(currentFocus);
+
+  const allItemIndexesPositions = allItemIndexes.map((itemIndex) =>
+    previousAllItemIndexes.indexOf(itemIndex)
+  );
+
+  const differences = allItemIndexesPositions.map((position) =>
+    Math.abs(position - previousIndexOfCurrentFocus)
+  );
+
+  const nextIndex = allItemIndexes[differences.lastIndexOf(Math.min(...differences))];
+
+  setFocus(nextIndex);
+};

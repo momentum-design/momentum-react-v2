@@ -724,59 +724,6 @@ const ListWithTextSelectWrapper = () => {
 
 const ListWithTextSelect = Template<unknown>(ListWithTextSelectWrapper).bind({});
 
-const ListWithNonDefaultSetNextFocusWrapper = () => {
-  const itemIndexes: any[] = ['a', 'b', 'c'];
-
-  const setNextFocus = useCallback(
-    (
-      isBackward: boolean,
-      listSize: number,
-      currentFocus: number | string,
-      noLoop: boolean,
-      setFocus: Dispatch<SetStateAction<number>>
-    ) => {
-      const currentIndex = itemIndexes.indexOf(currentFocus);
-
-      let nextIndex: number;
-
-      if (isBackward) {
-        nextIndex = (listSize + currentIndex - 1) % listSize;
-
-        if (noLoop && nextIndex > currentIndex) {
-          return;
-        }
-      } else {
-        nextIndex = (listSize + currentIndex + 1) % listSize;
-
-        if (noLoop && nextIndex < currentIndex) {
-          return;
-        }
-      }
-
-      setFocus(itemIndexes[nextIndex]);
-    },
-    [itemIndexes]
-  );
-
-  return (
-    <List shouldFocusOnPress allItemIndexes={itemIndexes} setNextFocus={setNextFocus} listSize={3}>
-      <ListItemBase allowTextSelection itemIndex={itemIndexes[0]} key={0}>
-        Item 0
-      </ListItemBase>
-      <ListItemBase allowTextSelection itemIndex={itemIndexes[1]} key={1}>
-        Item 1
-      </ListItemBase>
-      <ListItemBase allowTextSelection itemIndex={itemIndexes[2]} key={2}>
-        Item 2
-      </ListItemBase>
-    </List>
-  );
-};
-
-const ListWithNonDefaultSetNextFocus = Template<unknown>(
-  ListWithNonDefaultSetNextFocusWrapper
-).bind({});
-
 const ListWithNonDefaultSetNextFocusVariableLengthWrapper = () => {
   const [itemIndices, setItemIndices] = useState<string[]>(['a', 'b', 'c']);
 
@@ -796,39 +743,8 @@ const ListWithNonDefaultSetNextFocusVariableLengthWrapper = () => {
     };
   }, []);
 
-  const setNextFocus = useCallback(
-    (
-      isBackward: boolean,
-      listSize: number,
-      currentFocus: number | string,
-      noLoop: boolean,
-      setFocus: Dispatch<SetStateAction<number | string>>
-    ) => {
-      const currentIndex = itemIndices.indexOf(currentFocus as string);
-
-      let nextIndex: number;
-
-      if (isBackward) {
-        nextIndex = (listSize + currentIndex - 1) % listSize;
-
-        if (noLoop && nextIndex > currentIndex) {
-          return;
-        }
-      } else {
-        nextIndex = (listSize + currentIndex + 1) % listSize;
-
-        if (noLoop && nextIndex < currentIndex) {
-          return;
-        }
-      }
-
-      setFocus(itemIndices[nextIndex]);
-    },
-    [itemIndices]
-  );
-
   return (
-    <List shouldFocusOnPress setNextFocus={setNextFocus} listSize={3} allItemIndexes={itemIndices}>
+    <List shouldFocusOnPress listSize={3} allItemIndexes={itemIndices}>
       {itemIndices.map((index) => {
         return (
           <ListItemBase allowTextSelection itemIndex={index} key={index}>
@@ -863,7 +779,6 @@ export {
   DynamicListWithInitialFocus4,
   SingleItemList,
   ListWithTextSelect,
-  ListWithNonDefaultSetNextFocus,
   ListWithNonDefaultSetNextFocusVariableLength,
   DynamicListGoesToZeroSize,
 };
