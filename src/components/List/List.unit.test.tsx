@@ -16,7 +16,6 @@ import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { ListRefObject } from './List.types';
-import { setNextFocus as defaultSetNextFocus } from './List.utils';
 
 describe('<List />', () => {
   const commonProps = {
