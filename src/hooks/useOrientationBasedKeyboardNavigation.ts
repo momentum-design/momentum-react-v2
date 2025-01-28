@@ -114,7 +114,7 @@ const useOrientationBasedKeyboardNavigation = (
       return;
     }
 
-    if (!allItemIndexes.includes(currentFocus) && currentFocus !== -1) {
+    if (currentFocus !== -1 && !allItemIndexes.includes(currentFocus)) {
       const context = getContext();
 
       setNextFocus(
