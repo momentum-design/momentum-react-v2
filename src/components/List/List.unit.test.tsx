@@ -927,7 +927,7 @@ describe('<List />', () => {
           <List allItemIndexes={useItemIndexes ? initialIndexes : undefined} listSize={3}>
             <ListItemBase
               data-testid="list-item-0"
-              key={indexesEnd[0]}
+              key={initialIndexes[0]}
               itemIndex={initialIndexes[0]}
             >
               0
@@ -935,14 +935,14 @@ describe('<List />', () => {
             <ListItemBase
               id="test"
               data-testid="list-item-1"
-              key={indexesEnd[1]}
+              key={initialIndexes[1]}
               itemIndex={initialIndexes[1]}
             >
               1
             </ListItemBase>
             <ListItemBase
               data-testid="list-item-2"
-              key={indexesEnd[2]}
+              key={initialIndexes[2]}
               itemIndex={initialIndexes[2]}
             >
               2
@@ -965,12 +965,16 @@ describe('<List />', () => {
             <ListItemBase
               id="test"
               data-testid="list-item-1"
-              key={indexesEnd[0]}
+              key={initialIndexes[1]}
               itemIndex={indexesEnd[0]}
             >
               1
             </ListItemBase>
-            <ListItemBase data-testid="list-item-2" key={indexesEnd[1]} itemIndex={indexesEnd[1]}>
+            <ListItemBase
+              data-testid="list-item-2"
+              key={initialIndexes[2]}
+              itemIndex={indexesEnd[1]}
+            >
               2
             </ListItemBase>
           </List>

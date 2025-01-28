@@ -183,6 +183,25 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const previousItemIndex = usePrevious(itemIndex);
   const lastCurrentFocus = usePrevious(currentFocus);
 
+  // When an item is added to the list, we need to reset the focus since the list size has changed
+  // and maybe the item index has changed as well
+  useLayoutEffect(() => {
+    if (
+      itemIndex !== previousItemIndex &&
+      currentFocus === previousItemIndex &&
+      listFocusedWithin
+    ) {
+      setCurrentFocus(itemIndex);
+    }
+  }, [
+    currentFocus,
+    itemIndex,
+    lastCurrentFocus,
+    listFocusedWithin,
+    previousItemIndex,
+    setCurrentFocus,
+  ]);
+
   // makes sure that whenever an item is pressed, the list focus state gets updated as well
   useEffect(() => {
     if (
