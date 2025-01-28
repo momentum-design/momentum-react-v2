@@ -126,7 +126,7 @@ const useOrientationBasedKeyboardNavigation = (
         context.allItemIndexes
       );
     }
-  }, [allItemIndexes, currentFocus, getContext, listSize, noLoop, setNextFocus]);
+  }, [allItemIndexes, currentFocus, getContext, listSize, setNextFocus]);
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
