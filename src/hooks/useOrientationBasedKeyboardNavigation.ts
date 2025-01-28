@@ -101,18 +101,20 @@ const useOrientationBasedKeyboardNavigation = (
 
   useEffect(() => {
     if (!allItemIndexes) {
-      if (isNumber(currentFocus)) {
-        if (listSize && currentFocus !== -1) {
-          if (currentFocus >= listSize) {
-            setCurrentFocus(listSize - 1);
-          }
-        }
-      } else if (!(isNumber(currentFocus) && currentFocus === -1)) {
+      if (!isNumber(currentFocus)) {
         console.warn('Unable to handle non-numeric index without allItemIndexes', currentFocus);
+
+        return;
       }
+
+      if (currentFocus >= listSize) {
+        setCurrentFocus(listSize - 1);
+      }
+
       return;
     }
-    if (allItemIndexes.indexOf(currentFocus) < 0 && currentFocus !== -1) {
+
+    if (!allItemIndexes.includes(currentFocus) && currentFocus !== -1) {
       const context = getContext();
 
       setNextFocus(
