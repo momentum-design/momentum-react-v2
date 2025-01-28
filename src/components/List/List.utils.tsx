@@ -16,47 +16,35 @@ export const setNextFocus = (
   allItemIndexes: ListItemBaseIndex[]
 ): void => {
   let nextIndex: ListItemBaseIndex;
+  let currentIndex: number;
 
-  // Default behaviour with numeric index
   if (!allItemIndexes) {
     if (!isNumber(currentFocus)) {
       console.warn('Cannot handle non-numeric index without allItemIndexes');
       return;
     }
-
-    if (isBackward) {
-      nextIndex = (listSize + currentFocus - 1) % listSize;
-
-      if (noLoop && nextIndex > currentFocus) {
-        return;
-      }
-    } else {
-      nextIndex = (listSize + currentFocus + 1) % listSize;
-
-      if (noLoop && nextIndex < currentFocus) {
-        return;
-      }
-    }
+    currentIndex = currentFocus;
   } else {
-    // With allItemIndexes the current index is looked up in the full array
-    const currentIndex = allItemIndexes.indexOf(currentFocus);
-    if (isBackward) {
-      nextIndex = (listSize + currentIndex - 1) % listSize;
-
-      if (noLoop && nextIndex > currentIndex) {
-        return;
-      }
-    } else {
-      nextIndex = (listSize + currentIndex + 1) % listSize;
-
-      if (noLoop && nextIndex < currentIndex) {
-        return;
-      }
-    }
-
-    nextIndex = allItemIndexes[nextIndex];
+    currentIndex = allItemIndexes.indexOf(currentFocus);
   }
 
+  if (isBackward) {
+    nextIndex = (listSize + currentIndex - 1) % listSize;
+
+    if (noLoop && nextIndex > currentIndex) {
+      return;
+    }
+  } else {
+    nextIndex = (listSize + currentIndex + 1) % listSize;
+
+    if (noLoop && nextIndex < currentIndex) {
+      return;
+    }
+  }
+
+  if (allItemIndexes) {
+    nextIndex = allItemIndexes[nextIndex];
+  }
   setFocus(nextIndex);
 };
 
