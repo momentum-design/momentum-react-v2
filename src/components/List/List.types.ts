@@ -83,6 +83,7 @@ export interface ListContextValue {
   updateFocusBlocked?: boolean;
   setUpdateFocusBlocked?: Dispatch<SetStateAction<boolean>>;
   isFocusedWithin?: boolean;
+  addFocusCallback: (index: ListItemBaseIndex, callback: () => void) => void;
 }
 export interface ListRefObject {
   listRef: React.RefObject<HTMLUListElement>;

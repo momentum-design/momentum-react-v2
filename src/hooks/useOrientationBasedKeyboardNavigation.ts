@@ -5,6 +5,7 @@ import {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useRef,
   useState,
 } from 'react';
 import { useKeyboard } from '@react-aria/interactions';
@@ -27,6 +28,7 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     noLoop?: boolean;
     updateFocusBlocked?: boolean;
     isFocusedWithin?: boolean;
+    addFocusCallback: (index: ListItemBaseIndex, callback: () => void) => void;
   };
 };
 
@@ -49,7 +51,30 @@ const useOrientationBasedKeyboardNavigation = (
   const [currentFocus, setCurrentFocus] = useState<number | string>(-1);
   const [updateFocusBlocked, setUpdateFocusBlocked] = useState<boolean>(true);
 
+  const focusCallbacks = useRef({});
+
+  const addFocusCallback = useCallback((index, callback) => {
+    focusCallbacks.current[index] = callback;
+  }, []);
+
   const { isFocusedWithin, focusWithinProps } = useFocusWithinState({});
+
+  const lastCurrentFocus = usePrevious(currentFocus);
+
+  useLayoutEffect(() => {
+    if (
+      lastCurrentFocus !== undefined && // prevents focus of new elements
+      lastCurrentFocus !== currentFocus && // focuses the new element in up/down navigation
+      // itemHasFocus &&
+      !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
+    ) {
+      const callback = focusCallbacks.current[currentFocus];
+
+      if (callback) {
+        callback();
+      }
+    }
+  }, [currentFocus, isFocusedWithin, lastCurrentFocus, updateFocusBlocked]);
 
   // When the initial focus changes, we temporarily disable the automatic focus of the currentFocus
   // Once that new focused item has rendered, it will re-enable the automatic focus
@@ -71,6 +96,7 @@ const useOrientationBasedKeyboardNavigation = (
       updateFocusBlocked,
       isFocusedWithin,
       allItemIndexes,
+      addFocusCallback,
       ...contextProps,
     }),
     [
@@ -80,6 +106,7 @@ const useOrientationBasedKeyboardNavigation = (
       updateFocusBlocked,
       isFocusedWithin,
       allItemIndexes,
+      addFocusCallback,
       contextProps,
     ]
   );
