@@ -27,7 +27,7 @@ import Badge from '../Badge';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, MenuTrigger, SearchInput } from '..';
-import { omit, times } from 'lodash';
+import { omit, range, times } from 'lodash';
 import { ListRefObject } from './List.types';
 
 const TEST_LIST_SIZE = 30;
@@ -779,7 +779,13 @@ const GrowingListWrapper = () => {
   }, [itemCount]);
 
   return (
-    <List initialFocus={itemCount - 1} shouldFocusOnPress listSize={itemCount} key="list">
+    <List
+      allItemIndexes={range(0, itemCount)}
+      initialFocus={itemCount - 1}
+      shouldFocusOnPress
+      listSize={itemCount}
+      key="list"
+    >
       {times(itemCount, (index) => (
         <MemoizedItemBase2 index={index} key={index} />
       ))}

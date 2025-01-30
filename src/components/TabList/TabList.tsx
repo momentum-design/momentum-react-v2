@@ -48,7 +48,9 @@ const TabList: FC<Props> = (props: Props) => {
     noLoop: false,
   });
 
-  const { currentFocus, isFocusedWithin, setCurrentFocus } = getFocusContext();
+  const { getCurrentFocus, isFocusedWithin, setCurrentFocus } = getFocusContext();
+
+  const currentFocus = getCurrentFocus();
 
   // Reset the tabIndex when focusing out
   useLayoutEffect(() => {
