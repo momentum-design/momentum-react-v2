@@ -43,24 +43,6 @@ export const useItemHasFocus = ({ itemIndex }) => {
   return itemHasFocus;
 };
 
-export const useCurrentFocusIsUndefined = () => {
-  const listContext = useListContext();
-
-  const currentFocus = listContext?.currentFocus;
-
-  return currentFocus === undefined;
-};
-
-export const useLastCurrentFocusIsUndefined = () => {
-  const listContext = useListContext();
-
-  const currentFocus = listContext?.currentFocus;
-
-  const lastCurrentFocus = usePrevious(currentFocus);
-
-  return lastCurrentFocus === undefined;
-};
-
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
 //TODO: Implement multi-line
@@ -213,7 +195,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const listFocusedWithin = listContext?.isFocusedWithin;
   const addFocusCallback = listContext?.addFocusCallback;
 
-  const itemHasFocus = useItemHasFocus({ itemIndex });
+  // const itemHasFocus = useItemHasFocus({ itemIndex });
+  const [itemHasFocus, setItemHasFocus] = useState(undefined);
 
   const listItemTabIndex = getListItemBaseTabIndex({
     interactive,
@@ -224,9 +207,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const previousItemIndex = usePrevious(itemIndex);
 
   const previousItemHasFocus = usePrevious(itemHasFocus);
-
-  const currentFocusIsUndefined = useCurrentFocusIsUndefined();
-  const lastCurrentFocusIsUndefined = useLastCurrentFocusIsUndefined();
 
   // When an item is added to the list, we need to reset the focus since the list size has changed
   // and maybe the item index has changed as well
@@ -270,23 +250,38 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focus, ref, isFocusedWithin, focusChild, listItemTabIndex]);
 
-  const onFocusCallback = useCallback(() => {
-    if (!ref.current) {
-      return;
-    }
-
-    const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
-      (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
-    )[0];
-
-    if (focusChild) {
-      firstFocusable?.focus();
-    } else {
-      ref.current.focus();
-    }
-  }, [focusChild, ref]);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    isFirstRender.current = false;
+  }, []);
+
+  const onFocusCallback = useCallback(
+    (focused, focusBlocked) => {
+      setItemHasFocus(focused);
+
+      if (!focused || focusBlocked || isFirstRender.current) {
+        return;
+      }
+
+      if (!ref.current) {
+        return;
+      }
+
+      const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
+        (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
+      )[0];
+
+      if (focusChild) {
+        firstFocusable?.focus();
+      } else {
+        ref.current.focus();
+      }
+    },
+    [focusChild, ref]
+  );
+
+  useLayoutEffect(() => {
     if (addFocusCallback) {
       addFocusCallback(itemIndex, onFocusCallback);
     }
@@ -294,7 +289,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   useLayoutEffect(() => {
     if (
-      !lastCurrentFocusIsUndefined && // prevents focus of new elements
       !isFocusedWithin &&
       listFocusedWithin && // focuses the new element in up/down navigation
       itemHasFocus &&
@@ -318,15 +312,14 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     listFocusedWithin,
     ref,
     itemHasFocus,
-    lastCurrentFocusIsUndefined,
   ]);
 
   useEffect(() => {
-    if (listContext && currentFocusIsUndefined) {
+    if (listContext && !itemHasFocus && isFocusedWithin) {
       return;
     }
     updateTabIndexes();
-  }, [updateTabIndexes, isFocusedWithin, listContext, currentFocusIsUndefined]);
+  }, [updateTabIndexes, listContext, itemHasFocus, isFocusedWithin]);
 
   useMutationObservable(ref.current, updateTabIndexes);
 

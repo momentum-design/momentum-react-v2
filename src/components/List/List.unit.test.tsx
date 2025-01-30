@@ -315,7 +315,7 @@ describe('<List />', () => {
     ])(
       'should handle up/down arrow keys correctly - no loop for vertical lists',
       async ({ useItemIndexes, indexes }) => {
-        expect.assertions(5);
+        expect.assertions(6);
         const user = userEvent.setup();
 
         const { getAllByRole } = render(
@@ -338,6 +338,8 @@ describe('<List />', () => {
         );
 
         const listItems = getAllByRole('listitem');
+
+        expect(listItems[0]).not.toHaveFocus();
 
         await user.tab();
 
@@ -724,9 +726,9 @@ describe('<List />', () => {
     });
 
     it.each([
-      { indexes: [0, 1, 2], useItemIndexes: true },
-      { indexes: [0, 1, 2], useItemIndexes: false },
-      { indexes: ['a', 'b', 'c'], useItemIndexes: true },
+      { indexes: [0, 1, 2, 3], useItemIndexes: true },
+      { indexes: [0, 1, 2, 3], useItemIndexes: false },
+      { indexes: ['a', 'b', 'c', 'd'], useItemIndexes: true },
     ])(
       'should focus the item with initialFocus when updated',
       async ({ useItemIndexes, indexes }) => {
