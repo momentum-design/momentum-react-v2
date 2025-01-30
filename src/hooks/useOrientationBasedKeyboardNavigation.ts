@@ -99,7 +99,7 @@ const useOrientationBasedKeyboardNavigation = (
 
   const getCurrentFocus = useCallback(() => currentFocusRef.current, []);
 
-  const { shouldFocusOnPress, shouldItemFocusBeInset } = contextProps;
+  const { shouldFocusOnPress, shouldItemFocusBeInset } = contextProps || {};
 
   const context = useMemo(
     () => ({
@@ -107,7 +107,6 @@ const useOrientationBasedKeyboardNavigation = (
       setCurrentFocus,
       setUpdateFocusBlocked,
       isFocusedWithin,
-      allItemIndexes,
       addFocusCallback,
       getCurrentFocus,
       shouldFocusOnPress,
@@ -118,7 +117,6 @@ const useOrientationBasedKeyboardNavigation = (
       setCurrentFocus,
       setUpdateFocusBlocked,
       isFocusedWithin,
-      allItemIndexes,
       addFocusCallback,
       getCurrentFocus,
       shouldFocusOnPress,
@@ -152,19 +150,11 @@ const useOrientationBasedKeyboardNavigation = (
     }
 
     if (currentFocus !== -1 && !allItemIndexes.includes(currentFocus)) {
-      const context = getContext();
-
-      onCurrentFocusNotFound(
-        currentFocus,
-        context.allItemIndexes,
-        previousAllItemIndexes,
-        setCurrentFocus
-      );
+      onCurrentFocusNotFound(currentFocus, allItemIndexes, previousAllItemIndexes, setCurrentFocus);
     }
   }, [
     allItemIndexes,
     currentFocus,
-    getContext,
     initialFocus,
     listSize,
     previousAllItemIndexes,

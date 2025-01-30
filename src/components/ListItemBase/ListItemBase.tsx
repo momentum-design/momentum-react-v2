@@ -54,9 +54,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
-  // eslint-disable-next-line no-console
-  console.log('RENDER', itemIndex);
-
   const listContext = useListContext();
 
   const internalRef = useRef<HTMLLIElement>();
