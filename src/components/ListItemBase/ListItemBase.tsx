@@ -25,24 +25,6 @@ import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
 import { useFocusAndFocusWithinState } from '../../hooks/useFocusState';
 
-export const useItemHasFocus = ({ itemIndex }) => {
-  const listContext = useListContext();
-
-  const currentFocus = listContext?.currentFocus;
-
-  const [itemHasFocus, setItemHasFocus] = useState(false);
-
-  useEffect(() => {
-    if (currentFocus === itemIndex) {
-      setItemHasFocus(true);
-    } else {
-      setItemHasFocus(false);
-    }
-  }, [currentFocus, itemIndex]);
-
-  return itemHasFocus;
-};
-
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
 //TODO: Implement multi-line
@@ -71,6 +53,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   } = props;
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
+
+  // eslint-disable-next-line no-console
+  console.log('RENDER', itemIndex);
 
   const listContext = useListContext();
 
@@ -187,7 +172,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
    * Focus management
    */
   const setCurrentFocus = listContext?.setCurrentFocus;
-  const updateFocusBlocked = listContext?.updateFocusBlocked;
+  // const updateFocusBlocked = listContext?.updateFocusBlocked;
+
+  const [updateFocusBlocked, setUpdateFocusBlockedInternal] = useState(false);
+
   const setUpdateFocusBlocked = listContext?.setUpdateFocusBlocked;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
@@ -195,7 +183,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const listFocusedWithin = listContext?.isFocusedWithin;
   const addFocusCallback = listContext?.addFocusCallback;
 
-  // const itemHasFocus = useItemHasFocus({ itemIndex });
   const [itemHasFocus, setItemHasFocus] = useState(undefined);
 
   const listItemTabIndex = getListItemBaseTabIndex({
@@ -258,6 +245,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   const onFocusCallback = useCallback(
     (focused, focusBlocked) => {
+      setUpdateFocusBlockedInternal(focusBlocked);
       setItemHasFocus(focused);
 
       if (!focused || focusBlocked || isFirstRender.current) {

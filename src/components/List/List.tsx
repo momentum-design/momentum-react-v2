@@ -1,4 +1,4 @@
-import React, { RefObject, useImperativeHandle, useRef, forwardRef } from 'react';
+import React, { RefObject, useImperativeHandle, useRef, forwardRef, useMemo } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './List.constants';
@@ -51,7 +51,7 @@ const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   useImperativeHandle(ref, () => ({
     listRef,
     focusOnIndex: (index: ListItemBaseIndex) => getContext()?.setCurrentFocus(index),
-    getCurrentFocusIndex: () => getContext()?.currentFocus,
+    getCurrentFocusIndex: () => getContext()?.getCurrentFocus(),
   }));
 
   return (
