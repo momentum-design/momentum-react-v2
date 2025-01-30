@@ -168,11 +168,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   /**
    * Focus management
    */
-  const setCurrentFocus = listContext?.setCurrentFocus;
-  // const updateFocusBlocked = listContext?.updateFocusBlocked;
-
   const [updateFocusBlocked, setUpdateFocusBlockedInternal] = useState(false);
 
+  const setCurrentFocus = listContext?.setCurrentFocus;
   const setUpdateFocusBlocked = listContext?.setUpdateFocusBlocked;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
   const shouldItemFocusBeInset =
