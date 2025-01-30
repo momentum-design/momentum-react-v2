@@ -74,16 +74,15 @@ export interface Props {
 }
 
 export interface ListContextValue {
-  currentFocus?: ListItemBaseIndex;
   shouldFocusOnPress?: boolean;
   shouldItemFocusBeInset?: boolean;
   setCurrentFocus?: Dispatch<SetStateAction<ListItemBaseIndex>>;
-  listSize?: number;
   noLoop?: boolean;
   updateFocusBlocked?: boolean;
   setUpdateFocusBlocked?: Dispatch<SetStateAction<boolean>>;
   isFocusedWithin?: boolean;
-  addFocusCallback: (
+  getCurrentFocus?: () => ListItemBaseIndex;
+  addFocusCallback?: (
     index: ListItemBaseIndex,
     callback: (focused: boolean, focusBlocked: boolean) => void
   ) => void;

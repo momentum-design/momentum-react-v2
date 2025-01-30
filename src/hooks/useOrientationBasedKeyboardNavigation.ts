@@ -5,6 +5,7 @@ import {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -20,15 +21,14 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
   keyboardProps: HTMLAttributes<HTMLElement>;
   focusWithinProps: HTMLAttributes<HTMLElement>;
   getContext: () => {
-    listSize: number;
-    currentFocus: ListItemBaseIndex;
     setCurrentFocus: Dispatch<SetStateAction<ListItemBaseIndex>>;
     shouldFocusOnPress?: boolean;
     shouldItemFocusBeInset?: boolean;
     noLoop?: boolean;
     updateFocusBlocked?: boolean;
     isFocusedWithin?: boolean;
-    addFocusCallback: (
+    getCurrentFocus?: () => ListItemBaseIndex;
+    addFocusCallback?: (
       index: ListItemBaseIndex,
       callback: (focused: boolean, focusBlocked: boolean) => void
     ) => void;
@@ -80,10 +80,7 @@ const useOrientationBasedKeyboardNavigation = (
 
   useLayoutEffect(() => {
     if (
-      lastCurrentFocus !== undefined && // prevents focus of new elements
-      lastCurrentFocus !== currentFocus // && // focuses the new element in up/down navigation
-      // itemHasFocus &&
-      // !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
+      lastCurrentFocus !== currentFocus // focuses the new element in up/down navigation
     ) {
       focusCallbacks.current[currentFocus]?.(true, updateFocusBlocked);
       focusCallbacks.current[lastCurrentFocus]?.(false, updateFocusBlocked);
@@ -100,32 +97,36 @@ const useOrientationBasedKeyboardNavigation = (
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialFocus]);
 
-  const getContext = useCallback(
+  const getCurrentFocus = useCallback(() => currentFocusRef.current, []);
+
+  const { shouldFocusOnPress, shouldItemFocusBeInset } = contextProps;
+
+  const context = useMemo(
     () => ({
-      listSize,
-      currentFocus,
       noLoop,
       setCurrentFocus,
       setUpdateFocusBlocked,
-      updateFocusBlocked,
       isFocusedWithin,
       allItemIndexes,
       addFocusCallback,
-      ...contextProps,
+      getCurrentFocus,
+      shouldFocusOnPress,
+      shouldItemFocusBeInset,
     }),
     [
-      listSize,
-      currentFocus,
       noLoop,
       setCurrentFocus,
       setUpdateFocusBlocked,
-      updateFocusBlocked,
       isFocusedWithin,
       allItemIndexes,
       addFocusCallback,
-      contextProps,
+      getCurrentFocus,
+      shouldFocusOnPress,
+      shouldItemFocusBeInset,
     ]
   );
+
+  const getContext = useCallback(() => context, [context]);
 
   const previousAllItemIndexes = usePrevious(allItemIndexes);
 
@@ -175,34 +176,18 @@ const useOrientationBasedKeyboardNavigation = (
       const forwardKey = orientation === 'horizontal' ? 'ArrowRight' : 'ArrowDown';
       const backwardKey = orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp';
 
-      const context = getContext();
-
       switch (evt.key) {
         case 'Escape':
           evt.continuePropagation();
           break;
         case backwardKey:
           evt.preventDefault();
-          setNextFocus(
-            true,
-            context.listSize,
-            context.currentFocus,
-            context.noLoop,
-            setCurrentFocus,
-            context.allItemIndexes
-          );
+          setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus, allItemIndexes);
           break;
 
         case forwardKey:
           evt.preventDefault();
-          setNextFocus(
-            false,
-            context.listSize,
-            context.currentFocus,
-            context.noLoop,
-            setCurrentFocus,
-            context.allItemIndexes
-          );
+          setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus, allItemIndexes);
           break;
 
         default:

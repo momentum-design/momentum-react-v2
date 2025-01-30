@@ -752,6 +752,43 @@ const ListWithNonDefaultSetNextFocusVariableLength = Template<unknown>(
   ListWithNonDefaultSetNextFocusVariableLengthWrapper
 ).bind({});
 
+const MemoizedItemBase = ({ index }: { index: number }) => {
+  return (
+    <ListItemBase allowTextSelection itemIndex={index}>
+      <ListItemBaseSection position="fill">Item {index}</ListItemBaseSection>
+    </ListItemBase>
+  );
+};
+
+const MemoizedItemBase2 = React.memo(MemoizedItemBase);
+
+const GrowingListWrapper = () => {
+  const [itemCount, setItemCount] = useState(3);
+
+  useEffect(() => {
+    const handle = setInterval(() => {
+      if (itemCount === 10) {
+        return;
+      }
+      setItemCount((old) => old + 1);
+    }, 3000);
+
+    return () => {
+      clearTimeout(handle);
+    };
+  }, [itemCount]);
+
+  return (
+    <List initialFocus={itemCount - 1} shouldFocusOnPress listSize={itemCount} key="list">
+      {times(itemCount, (index) => (
+        <MemoizedItemBase2 index={index} key={index} />
+      ))}
+    </List>
+  );
+};
+
+const GrowingList = Template<unknown>(GrowingListWrapper).bind({});
+
 export {
   Example,
   Common,
@@ -773,4 +810,5 @@ export {
   ListWithTextSelect,
   ListWithNonDefaultSetNextFocusVariableLength,
   DynamicListGoesToZeroSize,
+  GrowingList,
 };
