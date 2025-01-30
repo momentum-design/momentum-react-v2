@@ -28,7 +28,10 @@ type IUseOrientationBasedKeyboardNavigationReturn = {
     noLoop?: boolean;
     updateFocusBlocked?: boolean;
     isFocusedWithin?: boolean;
-    addFocusCallback: (index: ListItemBaseIndex, callback: () => void) => void;
+    addFocusCallback: (
+      index: ListItemBaseIndex,
+      callback: (focused: boolean, focusBlocked: boolean) => void
+    ) => void;
   };
 };
 
@@ -48,13 +51,27 @@ const useOrientationBasedKeyboardNavigation = (
   props: IUseOrientationBasedKeyboardNavigationProps
 ): IUseOrientationBasedKeyboardNavigationReturn => {
   const { allItemIndexes, listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
-  const [currentFocus, setCurrentFocus] = useState<number | string>(-1);
-  const [updateFocusBlocked, setUpdateFocusBlocked] = useState<boolean>(true);
+  const [currentFocus, setCurrentFocusInternal] = useState<number | string>(-1);
+  const [updateFocusBlocked, setUpdateFocusBlockedInternal] = useState<boolean>(true);
 
+  const currentFocusRef = useRef(currentFocus);
   const focusCallbacks = useRef({});
+  const updateFocusBlockedRef = useRef(updateFocusBlocked);
+
+  const setUpdateFocusBlocked = useCallback((value: boolean) => {
+    updateFocusBlockedRef.current = value;
+    setUpdateFocusBlockedInternal(value);
+  }, []);
+
+  const setCurrentFocus = useCallback((index: ListItemBaseIndex) => {
+    currentFocusRef.current = index;
+    setCurrentFocusInternal(index);
+  }, []);
 
   const addFocusCallback = useCallback((index, callback) => {
     focusCallbacks.current[index] = callback;
+
+    callback(index === currentFocusRef.current, updateFocusBlockedRef.current);
   }, []);
 
   const { isFocusedWithin, focusWithinProps } = useFocusWithinState({});
@@ -64,15 +81,12 @@ const useOrientationBasedKeyboardNavigation = (
   useLayoutEffect(() => {
     if (
       lastCurrentFocus !== undefined && // prevents focus of new elements
-      lastCurrentFocus !== currentFocus && // focuses the new element in up/down navigation
+      lastCurrentFocus !== currentFocus // && // focuses the new element in up/down navigation
       // itemHasFocus &&
-      !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
+      // !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
     ) {
-      const callback = focusCallbacks.current[currentFocus];
-
-      if (callback) {
-        callback();
-      }
+      focusCallbacks.current[currentFocus]?.(true, updateFocusBlocked);
+      focusCallbacks.current[lastCurrentFocus]?.(false, updateFocusBlocked);
     }
   }, [currentFocus, isFocusedWithin, lastCurrentFocus, updateFocusBlocked]);
 
@@ -103,6 +117,8 @@ const useOrientationBasedKeyboardNavigation = (
       listSize,
       currentFocus,
       noLoop,
+      setCurrentFocus,
+      setUpdateFocusBlocked,
       updateFocusBlocked,
       isFocusedWithin,
       allItemIndexes,
@@ -144,7 +160,15 @@ const useOrientationBasedKeyboardNavigation = (
         setCurrentFocus
       );
     }
-  }, [allItemIndexes, currentFocus, getContext, initialFocus, listSize, previousAllItemIndexes]);
+  }, [
+    allItemIndexes,
+    currentFocus,
+    getContext,
+    initialFocus,
+    listSize,
+    previousAllItemIndexes,
+    setCurrentFocus,
+  ]);
 
   const { keyboardProps } = useKeyboard({
     onKeyDown: (evt) => {
