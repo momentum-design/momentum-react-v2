@@ -1,4 +1,5 @@
-import { VirtualItem, Virtualizer } from '@tanstack/react-virtual';
+import { ScrollEvent } from '@react-types/shared';
+import { PartialKeys, VirtualItem, Virtualizer, VirtualizerOptions } from '@tanstack/react-virtual';
 import { CSSProperties, ReactNode } from 'react';
 
 export interface Props {
@@ -21,9 +22,12 @@ export interface Props {
    */
   style?: CSSProperties;
 
-  onScroll?: (e) => void;
-  count: number;
-  estimateSize: () => number;
+  virtualizerProps: PartialKeys<
+    VirtualizerOptions<HTMLDivElement, Element>,
+    'observeElementRect' | 'observeElementOffset' | 'scrollToFn'
+  >;
+
+  onScroll?: (currentTarget: EventTarget & HTMLDivElement) => void;
 }
 
 export interface WrapperRefObject {

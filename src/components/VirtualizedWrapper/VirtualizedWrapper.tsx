@@ -7,14 +7,13 @@ import { useVirtualizer } from '@tanstack/react-virtual';
 import './VirtualizedWrapper.style.scss';
 
 const VirtualizedWrapper = forwardRef((props: Props, ref: RefObject<WrapperRefObject>) => {
-  const { className, onScroll, children, count, estimateSize } = props;
+  const { className, virtualizerProps, children, onScroll } = props;
 
   const wrapperRef = useRef<HTMLDivElement>();
 
   const virtualizer = useVirtualizer({
-    count,
+    ...virtualizerProps,
     getScrollElement: () => wrapperRef?.current,
-    estimateSize,
   });
 
   const virtualItems = virtualizer.getVirtualItems();
