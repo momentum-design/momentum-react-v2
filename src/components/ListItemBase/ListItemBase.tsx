@@ -176,7 +176,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   const listFocusedWithin = listContext?.isFocusedWithin;
   const addFocusCallback = listContext?.addFocusCallback;
 
-  const [itemHasFocus, setItemHasFocus] = useState(undefined);
+  const [itemHasFocus, setItemHasFocus] = useState(false);
 
   const listItemTabIndex = getListItemBaseTabIndex({
     interactive,
@@ -231,7 +231,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   // We must not autofocus when rendering new elements
   // If a new element is rendered that has the same index as current focus (i.e. the focused element is replaced)
-  // then it would otherwise try and render, because focus is not blocked and the element is the current focus
+  // then it would otherwise try and focus, because focus is not blocked and the element is the current focus
   const isFirstRender = useRef(true);
 
   useEffect(() => {
@@ -267,7 +267,13 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   // The hook will then tell the list item when it has focus and when the focus is blocked
   useLayoutEffect(() => {
     if (addFocusCallback) {
+      const currentIndex = itemIndex;
+
       addFocusCallback(itemIndex, onFocusCallback);
+
+      return () => {
+        addFocusCallback?.(currentIndex, undefined);
+      };
     }
   }, [addFocusCallback, itemIndex, onFocusCallback]);
 
