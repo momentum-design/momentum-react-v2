@@ -18,7 +18,7 @@ describe('ListItemBase', () => {
     beforeEach(() => {
       jest
         .spyOn(listUtils, 'useListContext')
-        .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
+        .mockImplementation(() => ({ shouldFocusOnPress: false }));
     });
 
     afterEach(() => {
@@ -477,10 +477,8 @@ describe('ListItemBase', () => {
     rerender(
       <Wrapper
         value={{
-          listSize: 2,
           shouldFocusOnPress: false,
           shouldItemFocusBeInset: false,
-          currentFocus: 0,
           setCurrentFocus: jest.fn(),
         }}
       />
@@ -490,10 +488,8 @@ describe('ListItemBase', () => {
     rerender(
       <Wrapper
         value={{
-          listSize: 3,
           shouldFocusOnPress: false,
           shouldItemFocusBeInset: false,
-          currentFocus: 1,
           setCurrentFocus: jest.fn(),
         }}
       />
