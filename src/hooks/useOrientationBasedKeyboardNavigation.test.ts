@@ -43,31 +43,28 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
     });
 
-    let { currentFocus } = result.current.getContext();
-    expect(currentFocus).toStrictEqual(1);
+    const { getCurrentFocus } = result.current.getContext();
+    expect(getCurrentFocus()).toStrictEqual(1);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
     // no loop true so should 0
-    expect(currentFocus).toStrictEqual(0);
+    expect(getCurrentFocus()).toStrictEqual(0);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(leftArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
-    expect(currentFocus).toStrictEqual(0);
+    expect(getCurrentFocus()).toStrictEqual(0);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(upArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
     // no loop true should be 1
-    expect(currentFocus).toStrictEqual(1);
+    expect(getCurrentFocus()).toStrictEqual(1);
   });
 
   it('should navigate correctly when horizontal and noLoop', () => {
@@ -83,38 +80,34 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       result.current.keyboardProps.onKeyDown(rightArrowEvent);
     });
 
-    let { currentFocus } = result.current.getContext();
-    expect(currentFocus).toStrictEqual(1);
+    const { getCurrentFocus } = result.current.getContext();
+    expect(getCurrentFocus()).toStrictEqual(1);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(rightArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
     // no loop false so shouldn't wrap back to 0
-    expect(currentFocus).toStrictEqual(1);
+    expect(getCurrentFocus()).toStrictEqual(1);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(leftArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
-    expect(currentFocus).toStrictEqual(0);
+    expect(getCurrentFocus()).toStrictEqual(0);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(leftArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
     // no loop false so shouldn't wrap back to 1
-    expect(currentFocus).toStrictEqual(0);
+    expect(getCurrentFocus()).toStrictEqual(0);
 
     act(() => {
       result.current.keyboardProps.onKeyDown(downArrowEvent);
     });
 
-    ({ currentFocus } = result.current.getContext());
-    expect(currentFocus).toStrictEqual(0);
+    expect(getCurrentFocus()).toStrictEqual(0);
   });
 
   describe('list size changes', () => {
@@ -146,45 +139,45 @@ describe('useOrientationBasedKeyboardNavigation', () => {
         );
 
         expect(result.current.getContext()).toEqual({
-          allItemIndexes: undefined,
-          currentFocus: 0,
+          getCurrentFocus: expect.any(Function),
+          addFocusCallback: expect.any(Function),
           isFocusedWithin: false,
-          listSize: 5,
           noLoop: undefined,
           setCurrentFocus: expect.any(Function),
           setUpdateFocusBlocked: expect.any(Function),
-          updateFocusBlocked: true,
         });
+
+        expect(result.current.getContext().getCurrentFocus()).toEqual(0);
 
         act(() => {
           result.current.getContext().setCurrentFocus(focusedIndex);
         });
 
         expect(result.current.getContext()).toEqual({
-          allItemIndexes: undefined,
-          currentFocus: focusedIndex,
+          getCurrentFocus: expect.any(Function),
+          addFocusCallback: expect.any(Function),
           isFocusedWithin: false,
-          listSize: 5,
           noLoop: undefined,
           setCurrentFocus: expect.any(Function),
           setUpdateFocusBlocked: expect.any(Function),
-          updateFocusBlocked: true,
         });
+
+        expect(result.current.getContext().getCurrentFocus()).toEqual(focusedIndex);
 
         act(() => {
           rerender({ listSize: newListSize, orientation: 'vertical' });
         });
 
         expect(result.current.getContext()).toEqual({
-          allItemIndexes: undefined,
-          currentFocus: expectedNextFocus,
+          getCurrentFocus: expect.any(Function),
+          addFocusCallback: expect.any(Function),
           isFocusedWithin: false,
-          listSize: newListSize,
           noLoop: undefined,
           setCurrentFocus: expect.any(Function),
           setUpdateFocusBlocked: expect.any(Function),
-          updateFocusBlocked: true,
         });
+
+        expect(result.current.getContext().getCurrentFocus()).toEqual(expectedNextFocus);
       }
     );
 
@@ -323,30 +316,31 @@ describe('useOrientationBasedKeyboardNavigation', () => {
         );
 
         expect(result.current.getContext()).toEqual({
-          allItemIndexes: initialIndexes,
-          currentFocus: initialIndexes[0],
+          // currentFocus: initialIndexes[0],
+          getCurrentFocus: expect.any(Function),
+          addFocusCallback: expect.any(Function),
           isFocusedWithin: false,
-          listSize: initialIndexes.length,
           noLoop: undefined,
           setCurrentFocus: expect.any(Function),
           setUpdateFocusBlocked: expect.any(Function),
-          updateFocusBlocked: true,
         });
+
+        expect(result.current.getContext().getCurrentFocus()).toEqual(initialIndexes[0]);
 
         act(() => {
           result.current.getContext().setCurrentFocus(focusedIndex);
         });
 
         expect(result.current.getContext()).toEqual({
-          allItemIndexes: initialIndexes,
-          currentFocus: focusedIndex,
+          getCurrentFocus: expect.any(Function),
+          addFocusCallback: expect.any(Function),
           isFocusedWithin: false,
-          listSize: initialIndexes.length,
           noLoop: undefined,
           setCurrentFocus: expect.any(Function),
           setUpdateFocusBlocked: expect.any(Function),
-          updateFocusBlocked: true,
         });
+
+        expect(result.current.getContext().getCurrentFocus()).toEqual(focusedIndex);
 
         act(() => {
           rerender({
@@ -357,15 +351,15 @@ describe('useOrientationBasedKeyboardNavigation', () => {
         });
 
         expect(result.current.getContext()).toEqual({
-          allItemIndexes: finalIndexes,
-          currentFocus: expectedNextFocus,
+          getCurrentFocus: expect.any(Function),
+          addFocusCallback: expect.any(Function),
           isFocusedWithin: false,
-          listSize: finalIndexes.length,
           noLoop: undefined,
           setCurrentFocus: expect.any(Function),
           setUpdateFocusBlocked: expect.any(Function),
-          updateFocusBlocked: true,
         });
+
+        expect(result.current.getContext().getCurrentFocus()).toEqual(expectedNextFocus);
       }
     );
 
@@ -380,29 +374,30 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       jest.spyOn(console, 'warn');
 
       expect(result.current.getContext()).toEqual({
-        allItemIndexes: undefined,
-        currentFocus: 0,
+        getCurrentFocus: expect.any(Function),
+        addFocusCallback: expect.any(Function),
         isFocusedWithin: false,
-        listSize: 3,
         noLoop: undefined,
         setCurrentFocus: expect.any(Function),
         setUpdateFocusBlocked: expect.any(Function),
-        updateFocusBlocked: true,
       });
+
+      expect(result.current.getContext().getCurrentFocus()).toEqual(0);
 
       act(() => {
         result.current.getContext().setCurrentFocus('c');
       });
 
       expect(result.current.getContext()).toEqual({
-        currentFocus: 'c',
+        getCurrentFocus: expect.any(Function),
+        addFocusCallback: expect.any(Function),
         isFocusedWithin: false,
-        listSize: 3,
         noLoop: undefined,
         setCurrentFocus: expect.any(Function),
         setUpdateFocusBlocked: expect.any(Function),
-        updateFocusBlocked: true,
       });
+
+      expect(result.current.getContext().getCurrentFocus()).toEqual('c');
 
       act(() => {
         rerender({ listSize: 2, orientation: 'vertical' });
@@ -411,15 +406,15 @@ describe('useOrientationBasedKeyboardNavigation', () => {
       // We can't handle non-numeric indexes without allItemIndexes
       // So the current focus remains unchanged
       expect(result.current.getContext()).toEqual({
-        allItemIndexes: undefined,
-        currentFocus: 'c',
+        getCurrentFocus: expect.any(Function),
+        addFocusCallback: expect.any(Function),
         isFocusedWithin: false,
-        listSize: 2,
         noLoop: undefined,
         setCurrentFocus: expect.any(Function),
         setUpdateFocusBlocked: expect.any(Function),
-        updateFocusBlocked: true,
       });
+
+      expect(result.current.getContext().getCurrentFocus()).toEqual('c');
 
       expect(console.warn).toHaveBeenCalledWith(
         'Unable to handle non-numeric index without allItemIndexes',
