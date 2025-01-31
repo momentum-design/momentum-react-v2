@@ -1,4 +1,4 @@
-import React, { RefObject, useImperativeHandle, useRef, forwardRef, useMemo } from 'react';
+import React, { RefObject, useImperativeHandle, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import { DEFAULTS, STYLE } from './List.constants';
