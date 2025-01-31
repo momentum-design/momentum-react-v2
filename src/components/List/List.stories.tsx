@@ -50,6 +50,7 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   listSize: TEST_LIST_SIZE,
+  shouldFocusOnPress: true,
   children: Array.from(Array(TEST_LIST_SIZE).keys()).map((index) => (
     <ListItemBase itemIndex={index} key={index} isPadded>
       {`Item ${index}`}
@@ -688,7 +689,7 @@ const DynamicListGoesToZeroSize = Template<unknown>(DynamicListGoesToZeroSizeWra
 
 const SingleItemListWrapper = () => {
   return (
-    <List listSize={1}>
+    <List shouldFocusOnPress listSize={1}>
       <ListItemBase itemIndex={0} key={0}>
         Item 0
       </ListItemBase>
