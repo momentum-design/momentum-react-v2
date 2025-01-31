@@ -14,7 +14,7 @@ describe('<SpaceListItem />', () => {
   beforeEach(() => {
     jest
       .spyOn(ListContext, 'useListContext')
-      .mockImplementation(() => ({ currentFocus: 0, shouldFocusOnPres: false }));
+      .mockImplementation(() => ({ shouldFocusOnPress: false }));
   });
 
   describe('snapshot', () => {
