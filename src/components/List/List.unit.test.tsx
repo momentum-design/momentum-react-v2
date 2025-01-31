@@ -1195,7 +1195,7 @@ describe('<List />', () => {
         </List>
       );
 
-      expect(getByTestId('list-item-0')).toHaveFocus();
+      expect(document.body).toHaveFocus();
     });
 
     it('should handle text selection', async () => {

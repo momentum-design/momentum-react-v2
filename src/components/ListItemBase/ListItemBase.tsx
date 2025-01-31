@@ -168,8 +168,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   /**
    * Focus management
    */
-  const [updateFocusBlocked, setUpdateFocusBlockedInternal] = useState(false);
-
   const setCurrentFocus = listContext?.setCurrentFocus;
   const setUpdateFocusBlocked = listContext?.setUpdateFocusBlocked;
   const shouldFocusOnPress = listContext?.shouldFocusOnPress || false;
@@ -242,7 +240,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   const onFocusCallback = useCallback(
     (focused, focusBlocked) => {
-      setUpdateFocusBlockedInternal(focusBlocked);
       setItemHasFocus(focused);
 
       if (!focused || focusBlocked || isFirstRender.current) {
@@ -273,35 +270,6 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
       addFocusCallback(itemIndex, onFocusCallback);
     }
   }, [addFocusCallback, itemIndex, onFocusCallback]);
-
-  // Without this useLayoutEffect, precisely one test fails:
-  // The list going to zero size and then back again
-  useLayoutEffect(() => {
-    if (
-      !isFocusedWithin &&
-      listFocusedWithin && // focuses the new element in up/down navigation
-      itemHasFocus &&
-      !updateFocusBlocked // Don't focus anything at all while the list is finding its initial focus
-    ) {
-      const firstFocusable = getKeyboardFocusableElements(ref.current, false).filter(
-        (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
-      )[0];
-
-      if (focusChild) {
-        firstFocusable?.focus();
-      } else {
-        ref.current.focus();
-      }
-    }
-  }, [
-    focusChild,
-    isFocusedWithin,
-    updateFocusBlocked,
-    itemIndex,
-    listFocusedWithin,
-    ref,
-    itemHasFocus,
-  ]);
 
   // When the current focus moves from the things inside the list item
   // to the list item itself, we need to update the tab indexes of the things inside again

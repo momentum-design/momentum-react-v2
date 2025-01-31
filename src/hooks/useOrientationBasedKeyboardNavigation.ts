@@ -86,8 +86,8 @@ const useOrientationBasedKeyboardNavigation = (
   // If current focus changes, we need to let both the old and the new focused list item know
   useLayoutEffect(() => {
     if (lastCurrentFocus !== currentFocus) {
-      focusCallbacks.current[currentFocus]?.(true, updateFocusBlocked);
       focusCallbacks.current[lastCurrentFocus]?.(false, updateFocusBlocked);
+      focusCallbacks.current[currentFocus]?.(true, updateFocusBlocked);
     }
   }, [currentFocus, isFocusedWithin, lastCurrentFocus, updateFocusBlocked]);
 
