@@ -54,6 +54,11 @@ const useOrientationBasedKeyboardNavigation = (
   const [currentFocus, setCurrentFocusInternal] = useState<number | string>(-1);
   const [updateFocusBlocked, setUpdateFocusBlockedInternal] = useState<boolean>(true);
 
+  // When a new list item registers itself with this hook, we need to tell it
+  // whether it is focused and whether the focus setting is blocked
+  // We don't want the addFocusCallback to have a dependency on either of these
+  // as it would then cause all the list items to re-render when the focus changes
+  // so we use refs to keep track of the current values
   const currentFocusRef = useRef(currentFocus);
   const focusCallbacks = useRef({});
   const updateFocusBlockedRef = useRef(updateFocusBlocked);
@@ -78,10 +83,9 @@ const useOrientationBasedKeyboardNavigation = (
 
   const lastCurrentFocus = usePrevious(currentFocus);
 
+  // If current focus changes, we need to let both the old and the new focused list item know
   useLayoutEffect(() => {
-    if (
-      lastCurrentFocus !== currentFocus // focuses the new element in up/down navigation
-    ) {
+    if (lastCurrentFocus !== currentFocus) {
       focusCallbacks.current[currentFocus]?.(true, updateFocusBlocked);
       focusCallbacks.current[lastCurrentFocus]?.(false, updateFocusBlocked);
     }
@@ -101,6 +105,9 @@ const useOrientationBasedKeyboardNavigation = (
 
   const { shouldFocusOnPress, shouldItemFocusBeInset } = contextProps || {};
 
+  // It is important to keep frequently changing values out of the context
+  // The context is used by all the list items and we want to keep list item
+  // re-renders to a minimum
   const context = useMemo(
     () => ({
       noLoop,

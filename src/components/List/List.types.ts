@@ -78,7 +78,6 @@ export interface ListContextValue {
   shouldItemFocusBeInset?: boolean;
   setCurrentFocus?: Dispatch<SetStateAction<ListItemBaseIndex>>;
   noLoop?: boolean;
-  updateFocusBlocked?: boolean;
   setUpdateFocusBlocked?: Dispatch<SetStateAction<boolean>>;
   isFocusedWithin?: boolean;
   getCurrentFocus?: () => ListItemBaseIndex;
