@@ -190,8 +190,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
   const previousItemHasFocus = usePrevious(itemHasFocus);
 
-  // When an item is added to the list, we need to reset the focus since the list size has changed
-  // and maybe the item index has changed as well
+  // New elements have been added to the list, and the currently focused element has been pushed down
+  // We don't want the focus to move to the new item, the one that now has this items original index
+  // So we set the focus to new index of the originally focused item
   useLayoutEffect(() => {
     if (previousItemHasFocus && itemIndex !== previousItemIndex && listFocusedWithin) {
       setCurrentFocus(itemIndex);
@@ -228,10 +229,11 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
           isFocusedWithin || focusChild ? listItemTabIndex.toString() : '-1'
         )
       );
-    // Also include "focus" in the dependencies to update the tab indexes when the focus changes
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [focus, ref, isFocusedWithin, focusChild, listItemTabIndex]);
+  }, [ref, isFocusedWithin, focusChild, listItemTabIndex]);
 
+  // We must not autofocus when rendering new elements
+  // If a new element is rendered that has the same index as current focus (i.e. the focused element is replaced)
+  // then it would otherwise try and render, because focus is not blocked and the element is the current focus
   const isFirstRender = useRef(true);
 
   useEffect(() => {
@@ -264,12 +266,16 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     [focusChild, ref]
   );
 
+  // This registers the list item base with the orientation based keyboard navigation hook
+  // The hook will then tell the list item when it has focus and when the focus is blocked
   useLayoutEffect(() => {
     if (addFocusCallback) {
       addFocusCallback(itemIndex, onFocusCallback);
     }
   }, [addFocusCallback, itemIndex, onFocusCallback]);
 
+  // Without this useLayoutEffect, precisely one test fails:
+  // The list going to zero size and then back again
   useLayoutEffect(() => {
     if (
       !isFocusedWithin &&
@@ -297,6 +303,8 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     itemHasFocus,
   ]);
 
+  // When the current focus moves from the things inside the list item
+  // to the list item itself, we need to update the tab indexes of the things inside again
   useEffect(() => {
     if (listContext && !itemHasFocus && isFocusedWithin) {
       return;
