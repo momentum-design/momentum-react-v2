@@ -544,6 +544,40 @@ describe('ListItemBase', () => {
     expect(getByTestId('list-item-1')).toHaveFocus();
   });
 
+  it('if an item index changes for a particular item, the old item should not be remembered', async () => {
+    const { getByTestId, rerender } = render(
+      <List shouldFocusOnPress listSize={2}>
+        <ListItemBase key={'base0'} data-testid="list-item-1" itemIndex={0}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+        <ListItemBase key={'base1'} data-testid="list-item-2" itemIndex={1}>
+          <ButtonPill>2</ButtonPill>
+        </ListItemBase>
+      </List>
+    );
+
+    simulateOnPress(getByTestId, 'list-item-2');
+
+    expect(getByTestId('list-item-2')).toHaveFocus();
+
+    rerender(
+      <List shouldFocusOnPress listSize={2}>
+        <ListItemBase key={'base0'} data-testid="list-item-1" itemIndex={3}>
+          <ButtonPill>1</ButtonPill>
+        </ListItemBase>
+        <ListItemBase key={'base1'} data-testid="list-item-2" itemIndex={1}>
+          <ButtonPill>2</ButtonPill>
+        </ListItemBase>
+      </List>
+    );
+
+    // press up arrow key
+    fireEvent.keyDown(getByTestId('list-item-2'), { key: 'ArrowUp' });
+
+    // If the old item index was remembered, the focus would be on list-item-1
+    expect(getByTestId('list-item-2')).toHaveFocus();
+  });
+
   it('should not focus on press with focusChild even if shouldFocusOnPress is set', async () => {
     const { getByTestId } = render(
       <List shouldFocusOnPress listSize={1}>
