@@ -1,37 +1,29 @@
-import { ScrollEvent } from '@react-types/shared';
 import { PartialKeys, VirtualItem, Virtualizer, VirtualizerOptions } from '@tanstack/react-virtual';
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties } from 'react';
 
-export interface Props {
+export interface Props extends PartialKeys<VirtualizerOptions<HTMLDivElement, Element>, 'getScrollElement' | 'observeElementRect' | 'observeElementOffset' | 'scrollToFn'> {
   /**
    * Custom class for overriding this component's CSS.
    */
   className?: string;
 
   /**
-   * Custom id for overriding this component's CSS.
+   * Any list rendered inside of Virtualized Wrapper should accept these parameters
+   * @param virtualItems - Array of virtual items to render cliet side
+   * @param measureElement  - ref to pass to each item in order to size correctly
+   * @param listStyle - style to give to list
+   * @returns list with nested listitems
    */
+  renderList: (virtualItems: Array<VirtualItem>, measureElement: (node: Element | null | undefined) => void, listStyle: CSSProperties) => JSX.Element;
 
   /**
-   * Child components of this component.
+   * Passes current target back to client for handling
+   * @param currentTarget 
    */
-  children: ReactNode;
-
-  /**
-   * Custom style for overriding this component's CSS.
-   */
-  style?: CSSProperties;
-
-  virtualizerProps: PartialKeys<
-    VirtualizerOptions<HTMLDivElement, Element>,
-    'observeElementRect' | 'observeElementOffset' | 'scrollToFn'
-  >;
-
   onScroll?: (currentTarget: EventTarget & HTMLDivElement) => void;
 }
 
 export interface WrapperRefObject {
-  wrapperRef: React.RefObject<HTMLDivElement>;
-  virtualItems: Array<VirtualItem>;
+  scrollRef: HTMLDivElement;
   virtualizer: Virtualizer<HTMLDivElement, Element>;
 }

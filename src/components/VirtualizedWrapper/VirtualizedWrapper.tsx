@@ -7,27 +7,27 @@ import { useVirtualizer } from '@tanstack/react-virtual';
 import './VirtualizedWrapper.style.scss';
 
 const VirtualizedWrapper = forwardRef((props: Props, ref: RefObject<WrapperRefObject>) => {
-  const { className, virtualizerProps, children, onScroll } = props;
+  const { className, onScroll, renderList, ...virtualizerProps } = props;
 
-  const wrapperRef = useRef<HTMLDivElement>();
+  const scrollRef = useRef<HTMLDivElement>();
 
   const virtualizer = useVirtualizer({
     ...virtualizerProps,
-    getScrollElement: () => wrapperRef?.current,
+    getScrollElement: () => scrollRef?.current,
   });
-
-  const virtualItems = virtualizer.getVirtualItems();
 
   // Expose imperative methods
   useImperativeHandle(ref, () => ({
-    wrapperRef,
-    virtualItems,
+    scrollRef: scrollRef?.current,
     virtualizer,
   }));
 
+  const {getVirtualItems, measureElement} = virtualizer;
+  const virtualItems = getVirtualItems();
+
   return (
     <div
-      ref={wrapperRef}
+      ref={scrollRef}
       onScroll={(e) => onScroll && onScroll(e.currentTarget)}
       className={classnames(className, STYLE.container)}
     >
@@ -37,7 +37,13 @@ const VirtualizedWrapper = forwardRef((props: Props, ref: RefObject<WrapperRefOb
           height: virtualizer.getTotalSize(),
         }}
       >
-        {children}
+        {renderList(virtualItems, measureElement, {
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          transform: `translateY(${virtualItems?.[0]?.start ?? 0}px)`,
+        })}
       </div>
     </div>
   );

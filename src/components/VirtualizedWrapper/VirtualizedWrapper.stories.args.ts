@@ -2,18 +2,6 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 export default {
   ...commonStyles,
-  children: {
-    description: 'Provides the child nodes for this element.',
-    control: { type: 'text' },
-    table: {
-      type: {
-        summary: 'ReactNode',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   onScroll: {
     description: 'Provides scrolling callback when user scrolls',
     control: { type: 'function' },
