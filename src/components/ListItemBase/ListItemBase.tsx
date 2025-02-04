@@ -267,12 +267,10 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   // The hook will then tell the list item when it has focus and when the focus is blocked
   useLayoutEffect(() => {
     if (addFocusCallback) {
-      const currentIndex = itemIndex;
-
       addFocusCallback(itemIndex, onFocusCallback);
 
       return () => {
-        addFocusCallback?.(currentIndex, undefined);
+        addFocusCallback?.(itemIndex, undefined);
       };
     }
   }, [addFocusCallback, itemIndex, onFocusCallback]);
