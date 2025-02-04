@@ -74,7 +74,11 @@ const useOrientationBasedKeyboardNavigation = (
   }, []);
 
   const addFocusCallback = useCallback((index, callback) => {
-    focusCallbacks.current[index] = callback;
+    if (callback) {
+      focusCallbacks.current[index] = callback;
+    } else {
+      delete focusCallbacks.current[index];
+    }
 
     callback?.(index === currentFocusRef.current, updateFocusBlockedRef.current);
   }, []);
