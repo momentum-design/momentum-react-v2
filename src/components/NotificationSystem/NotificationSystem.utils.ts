@@ -75,6 +75,7 @@ export const update = (toastId: Id, options: UpdateOptionsType): void => {
  * @param toastId id of the notification to dismiss
  */
 export const dismiss = (toastId: Id): void => {
+  console.log('CLOSING!!');
   toast.dismiss(toastId);
 };
 
