@@ -66,7 +66,7 @@ const AlertBanner: FC<Props> = (props: Props) => {
     >
       {imageComponent}
       {labelComponent}
-      {buttonsComponent}
+      {buttons && buttonsComponent}
     </div>
   );
 };

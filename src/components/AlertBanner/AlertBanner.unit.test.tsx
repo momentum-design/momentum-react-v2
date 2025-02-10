@@ -286,4 +286,28 @@ describe('<AlertBanner />', () => {
       expect(element.getAttribute('data-test')).toBe('mock-data-test-id');
     });
   });
+
+  describe('children', () => {
+    it('renders a buttonsComponent section if buttons are provided', () => {
+      expect.assertions(1);
+
+      const buttonsSection = mount(
+        <AlertBanner buttons={<button className="123">Some button</button>} />
+      )
+        .find(AlertBanner)
+        .find('.md-alert-banner-buttons');
+
+      expect(buttonsSection.exists()).toBe(true);
+    });
+
+    it('renders a buttonsComponent section if buttons are not provided', () => {
+      expect.assertions(1);
+
+      const buttonsSection = mount(<AlertBanner />)
+        .find(AlertBanner)
+        .find('.md-alert-banner-buttons');
+
+      expect(buttonsSection.exists()).toBe(false);
+    });
+  });
 });

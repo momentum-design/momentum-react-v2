@@ -17,9 +17,6 @@ exports[`<AlertBanner /> snapshot should match snapshot 1`] = `
     <p
       className="md-alert-banner-label"
     />
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -93,9 +90,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with children as ReactEl
         Example Text
       </div>
     </div>
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -119,9 +113,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with children as string 
     >
       Example Text
     </p>
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -144,9 +135,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with className 1`] = `
     />
     <p
       className="md-alert-banner-label"
-    />
-    <div
-      className="md-alert-banner-buttons"
     />
   </div>
 </AlertBanner>
@@ -173,9 +161,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with color 1`] = `
     >
       Example Text
     </p>
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -199,9 +184,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with id 1`] = `
     />
     <p
       className="md-alert-banner-label"
-    />
-    <div
-      className="md-alert-banner-buttons"
     />
   </div>
 </AlertBanner>
@@ -232,9 +214,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with image 1`] = `
     <p
       className="md-alert-banner-label"
     />
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -257,9 +236,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with isCentered 1`] = `
     />
     <p
       className="md-alert-banner-label"
-    />
-    <div
-      className="md-alert-banner-buttons"
     />
   </div>
 </AlertBanner>
@@ -284,9 +260,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with isGrown 1`] = `
     <p
       className="md-alert-banner-label"
     />
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -310,9 +283,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with isPilled 1`] = `
     <p
       className="md-alert-banner-label"
     />
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -334,9 +304,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with isStatic 1`] = `
     />
     <p
       className="md-alert-banner-label"
-    />
-    <div
-      className="md-alert-banner-buttons"
     />
   </div>
 </AlertBanner>
@@ -363,9 +330,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with label 1`] = `
     >
       Example Text
     </p>
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -391,9 +355,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with size 1`] = `
     >
       Example Text
     </p>
-    <div
-      className="md-alert-banner-buttons"
-    />
   </div>
 </AlertBanner>
 `;
@@ -425,9 +386,6 @@ exports[`<AlertBanner /> snapshot should match snapshot with style 1`] = `
     />
     <p
       className="md-alert-banner-label"
-    />
-    <div
-      className="md-alert-banner-buttons"
     />
   </div>
 </AlertBanner>
