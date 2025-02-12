@@ -86,13 +86,13 @@ const MenuTrigger = forwardRef(
      */
     useEffect(() => {
       if (popoverInstance) {
-        if (isOpen) {
+        if (state.isOpen) {
           popoverInstance.show();
         } else {
           popoverInstance.hide();
         }
       }
-    }, [isOpen, popoverInstance]);
+    }, [popoverInstance, state.isOpen]);
 
     /**
      * Add manual keyboard accessibility because our Popover component
@@ -109,9 +109,6 @@ const MenuTrigger = forwardRef(
     // delete color prop which is passed down and used in the ModalContainer
     // because it conflicts with the HTML color property
     delete keyboardProps.color;
-    // delete the onKeyDown provided by Aria because Popover component will add
-    // appropriate keyboard accessibility instead.
-    delete menuTriggerProps.onKeyDown;
 
     return (
       <Popover
@@ -120,7 +117,7 @@ const MenuTrigger = forwardRef(
           ref: buttonRef,
         })}
         className={classnames(className, STYLE.wrapper)}
-        trigger="click"
+        trigger="manual"
         id={id}
         role="generic"
         style={style}
@@ -161,5 +158,7 @@ const MenuTrigger = forwardRef(
     );
   }
 );
+
+MenuTrigger.displayName = 'MenuTrigger';
 
 export default MenuTrigger;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
@@ -16,6 +16,7 @@ import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { action } from '@storybook/addon-actions';
 import ContentSeparator from '../ContentSeparator';
+import { StoryObj } from '@storybook/react';
 
 export default {
   title: 'Momentum UI/MenuTrigger',
@@ -290,4 +291,31 @@ CloseOnSelect.parameters = {
   ],
 };
 
-export { Example, Common, CloseOnSelect };
+const WithOpenChangeHandler: StoryObj<typeof MenuTrigger> = {
+  // eslint-disable-next-line react/display-name
+  render: () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+      <MenuTrigger
+        triggerComponent={
+          <ButtonCircle>
+            <Icon name={isOpen ? 'arrow-up' : 'arrow-down'} weight="bold" autoScale={100} />
+          </ButtonCircle>
+        }
+        onOpenChange={setIsOpen}
+      >
+        <Menu selectionMode="single" key="2">
+          <Item key="one">This is a longer text and should trim nicely...</Item>
+          <Item key="two">Two</Item>
+          <Item key="three">Three</Item>
+          <Item key="four">Four</Item>
+          <Item key="five">Five</Item>
+          <Item key="six">Six</Item>
+        </Menu>
+      </MenuTrigger>
+    );
+  },
+};
+
+export { Example, Common, CloseOnSelect, WithOpenChangeHandler };

@@ -1021,7 +1021,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
       className="md-space-row-content-menu-trigger-wrapper"
       data-position="end"
     >
-      <ForwardRef
+      <MenuTrigger
         triggerComponent={
           <ButtonCircle
             aria-label="Menu trigger label"
@@ -1049,7 +1049,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
           role="generic"
           setInstance={[Function]}
           showArrow={false}
-          trigger="click"
+          trigger="manual"
           triggerComponent={
             <ButtonCircle
               aria-controls={null}
@@ -1059,6 +1059,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
               data-testid="menu-trigger-button"
               ghost={true}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               size={28}
@@ -1075,7 +1076,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
           <LazyTippy
             animation={false}
             appendTo="parent"
-            hideOnClick={true}
+            hideOnClick={false}
             interactive={true}
             offset={
               Array [
@@ -1119,12 +1120,12 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
             }
             render={[Function]}
             setInstance={[Function]}
-            trigger="click"
+            trigger="manual"
           >
             <ForwardRef(TippyWrapper)
               animation={false}
               appendTo="parent"
-              hideOnClick={true}
+              hideOnClick={false}
               interactive={true}
               offset={
                 Array [
@@ -1176,12 +1177,12 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                 }
               }
               render={[Function]}
-              trigger="click"
+              trigger="manual"
             >
               <Tippy
                 animation={false}
                 appendTo="parent"
-                hideOnClick={true}
+                hideOnClick={false}
                 interactive={true}
                 offset={
                   Array [
@@ -1233,7 +1234,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                   }
                 }
                 render={[Function]}
-                trigger="click"
+                trigger="manual"
               >
                 <ButtonCircle
                   aria-controls={null}
@@ -1243,6 +1244,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                   data-testid="menu-trigger-button"
                   ghost={true}
                   id="test-ID"
+                  onKeyDown={[Function]}
                   onPress={[Function]}
                   onPressStart={[Function]}
                   size={28}
@@ -1265,6 +1267,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                     data-size={28}
                     data-testid="menu-trigger-button"
                     id="test-ID"
+                    onKeyDown={[Function]}
                     onPress={[Function]}
                     onPressStart={[Function]}
                     useNativeKeyDown={true}
@@ -1294,6 +1297,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                           onClick={[Function]}
                           onDragStart={[Function]}
                           onFocus={[Function]}
+                          onKeyDown={[Function]}
                           onKeyUp={[Function]}
                           onMouseDown={[Function]}
                           onMouseEnter={[Function]}
@@ -1349,7 +1353,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
             </ForwardRef(TippyWrapper)>
           </LazyTippy>
         </Popover>
-      </ForwardRef>
+      </MenuTrigger>
     </div>
   </ListItemBaseSection>
 </SpaceRowContent>
