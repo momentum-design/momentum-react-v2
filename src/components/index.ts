@@ -88,3 +88,4 @@ export { default as MeetingRowContent } from './MeetingRowContent';
 export { default as TabsProvider, useTabsContext } from './TabsProvider';
 export { default as TabList } from './TabList';
 export { default as TabPanel } from './TabPanel';
+export { default as VirtualizedWrapper } from './VirtualizedWrapper';
