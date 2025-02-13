@@ -1,0 +1,2619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TooltipMenuTriggerCombo /> snapshot should match snapshot 1`] = `
+<TooltipMenuTriggerCombo
+  menuContent={
+    <_Menu
+      selectionMode="single"
+    >
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        One
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Two
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Three
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+    </_Menu>
+  }
+  tooltipContent={
+    <Text
+      tagName="p"
+    >
+      Tooltip
+    </Text>
+  }
+  tooltipProps={
+    Object {
+      "type": "label",
+    }
+  }
+  triggerComponent={
+    <ButtonPill>
+      Trigger component
+    </ButtonPill>
+  }
+>
+  <MenuTrigger
+    onOpenChange={[Function]}
+    triggerComponent={
+      <TooltipWrapper
+        _tooltipProps={
+          Object {
+            "children": <Text
+              tagName="p"
+            >
+              Tooltip
+            </Text>,
+            "onHide": [Function],
+            "onShow": [Function],
+            "setInstance": [Function],
+            "type": "label",
+          }
+        }
+        _triggerComponent={
+          <ButtonPill>
+            Trigger component
+          </ButtonPill>
+        }
+      />
+    }
+  >
+    <Popover
+      autoFocus={false}
+      className="md-menu-trigger-wrapper"
+      color="primary"
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom-start"
+      role="generic"
+      setInstance={[Function]}
+      showArrow={false}
+      trigger="manual"
+      triggerComponent={
+        <TooltipWrapper
+          _tooltipProps={
+            Object {
+              "children": <Text
+                tagName="p"
+              >
+                Tooltip
+              </Text>,
+              "onHide": [Function],
+              "onShow": [Function],
+              "setInstance": [Function],
+              "type": "label",
+            }
+          }
+          _triggerComponent={
+            <ButtonPill>
+              Trigger component
+            </ButtonPill>
+          }
+          aria-controls={null}
+          aria-expanded={false}
+          aria-haspopup={true}
+          id="test-ID"
+          onKeyDown={[Function]}
+          onPress={[Function]}
+          onPressStart={[Function]}
+        />
+      }
+      variant="medium"
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        placement="bottom-start"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          placement="bottom-start"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            placement="bottom-start"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <TooltipWrapper
+              _tooltipProps={
+                Object {
+                  "children": <Text
+                    tagName="p"
+                  >
+                    Tooltip
+                  </Text>,
+                  "onHide": [Function],
+                  "onShow": [Function],
+                  "setInstance": [Function],
+                  "type": "label",
+                }
+              }
+              _triggerComponent={
+                <ButtonPill>
+                  Trigger component
+                </ButtonPill>
+              }
+              aria-controls={null}
+              aria-expanded={false}
+              aria-haspopup={true}
+              id="test-ID"
+              onKeyDown={[Function]}
+              onPress={[Function]}
+              onPressStart={[Function]}
+            >
+              <Tooltip
+                onHide={[Function]}
+                onShow={[Function]}
+                setInstance={[Function]}
+                triggerComponent={
+                  <ButtonPill
+                    aria-controls={null}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    id="test-ID"
+                    onKeyDown={[Function]}
+                    onPress={[Function]}
+                    onPressStart={[Function]}
+                  >
+                    Trigger component
+                  </ButtonPill>
+                }
+                type="label"
+              >
+                <Popover
+                  addBackdrop={false}
+                  aria-hidden={false}
+                  boundary="scrollParent"
+                  color="primary"
+                  interactive={false}
+                  offsetDistance={5}
+                  offsetSkidding={0}
+                  onHide={[Function]}
+                  onShow={[Function]}
+                  placement="auto"
+                  role="tooltip"
+                  setInstance={[Function]}
+                  showArrow={true}
+                  strategy="absolute"
+                  trigger="mouseenter focus"
+                  triggerComponent={
+                    <ButtonPill
+                      aria-controls={null}
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      aria-labelledby="test-ID"
+                      id="test-ID"
+                      onKeyDown={[Function]}
+                      onPress={[Function]}
+                      onPressStart={[Function]}
+                    >
+                      Trigger component
+                    </ButtonPill>
+                  }
+                  variant="small"
+                >
+                  <LazyTippy
+                    animation={false}
+                    appendTo="parent"
+                    hideOnClick={true}
+                    interactive={false}
+                    offset={
+                      Array [
+                        0,
+                        17,
+                      ]
+                    }
+                    onHidden={[Function]}
+                    onHide={[Function]}
+                    onShow={[Function]}
+                    placement="auto"
+                    plugins={
+                      Array [
+                        Object {
+                          "defaultValue": true,
+                          "fn": [Function],
+                          "name": "hideOnEsc",
+                        },
+                      ]
+                    }
+                    popperOptions={
+                      Object {
+                        "modifiers": Array [
+                          Object {
+                            "enabled": true,
+                            "name": "arrow",
+                            "options": Object {
+                              "element": "#arrow1",
+                              "padding": 5,
+                            },
+                          },
+                          Object {
+                            "name": "preventOverflow",
+                            "options": Object {
+                              "altAxis": true,
+                              "boundariesElement": "scrollParent",
+                              "padding": 8,
+                            },
+                          },
+                        ],
+                        "strategy": "absolute",
+                      }
+                    }
+                    render={[Function]}
+                    setInstance={[Function]}
+                    trigger="mouseenter focus"
+                  >
+                    <ForwardRef(TippyWrapper)
+                      animation={false}
+                      appendTo="parent"
+                      hideOnClick={true}
+                      interactive={false}
+                      offset={
+                        Array [
+                          0,
+                          17,
+                        ]
+                      }
+                      onHidden={[Function]}
+                      onHide={[Function]}
+                      onShow={[Function]}
+                      placement="auto"
+                      plugins={
+                        Array [
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "defaultValue": true,
+                            "fn": [Function],
+                            "name": "hideOnEsc",
+                          },
+                        ]
+                      }
+                      popperOptions={
+                        Object {
+                          "modifiers": Array [
+                            Object {
+                              "enabled": true,
+                              "name": "arrow",
+                              "options": Object {
+                                "element": "#arrow1",
+                                "padding": 5,
+                              },
+                            },
+                            Object {
+                              "name": "preventOverflow",
+                              "options": Object {
+                                "altAxis": true,
+                                "boundariesElement": "scrollParent",
+                                "padding": 8,
+                              },
+                            },
+                          ],
+                          "strategy": "absolute",
+                        }
+                      }
+                      render={[Function]}
+                      trigger="mouseenter focus"
+                    >
+                      <Tippy
+                        animation={false}
+                        appendTo="parent"
+                        hideOnClick={true}
+                        interactive={false}
+                        offset={
+                          Array [
+                            0,
+                            17,
+                          ]
+                        }
+                        onHidden={[Function]}
+                        onHide={[Function]}
+                        onShow={[Function]}
+                        placement="auto"
+                        plugins={
+                          Array [
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "defaultValue": true,
+                              "fn": [Function],
+                              "name": "hideOnEsc",
+                            },
+                          ]
+                        }
+                        popperOptions={
+                          Object {
+                            "modifiers": Array [
+                              Object {
+                                "enabled": true,
+                                "name": "arrow",
+                                "options": Object {
+                                  "element": "#arrow1",
+                                  "padding": 5,
+                                },
+                              },
+                              Object {
+                                "name": "preventOverflow",
+                                "options": Object {
+                                  "altAxis": true,
+                                  "boundariesElement": "scrollParent",
+                                  "padding": 8,
+                                },
+                              },
+                            ],
+                            "strategy": "absolute",
+                          }
+                        }
+                        render={[Function]}
+                        trigger="mouseenter focus"
+                      >
+                        <ButtonPill
+                          aria-controls={null}
+                          aria-expanded={false}
+                          aria-haspopup={true}
+                          aria-labelledby="test-ID"
+                          id="test-ID"
+                          onKeyDown={[Function]}
+                          onPress={[Function]}
+                          onPressStart={[Function]}
+                          useNativeKeyDown={true}
+                        >
+                          <ButtonSimple
+                            aria-controls={null}
+                            aria-disabled={false}
+                            aria-expanded={false}
+                            aria-haspopup={true}
+                            aria-labelledby="test-ID"
+                            className="md-button-pill-wrapper"
+                            data-color="primary"
+                            data-disabled={false}
+                            data-disabled-outline={false}
+                            data-ghost={false}
+                            data-grown={false}
+                            data-inverted={false}
+                            data-outline={false}
+                            data-shallow-disabled={false}
+                            data-size={40}
+                            id="test-ID"
+                            onKeyDown={[Function]}
+                            onPress={[Function]}
+                            onPressStart={[Function]}
+                            useNativeKeyDown={true}
+                          >
+                            <FocusRing>
+                              <FocusRing
+                                focusClass="md-focus-ring-wrapper children"
+                                focusRingClass="md-focus-ring-wrapper children"
+                              >
+                                <button
+                                  aria-controls={null}
+                                  aria-expanded={false}
+                                  aria-haspopup={true}
+                                  aria-labelledby="test-ID"
+                                  className="md-button-pill-wrapper md-button-simple-wrapper"
+                                  data-color="primary"
+                                  data-disabled={false}
+                                  data-disabled-outline={false}
+                                  data-ghost={false}
+                                  data-grown={false}
+                                  data-inverted={false}
+                                  data-outline={false}
+                                  data-shallow-disabled={false}
+                                  data-size={40}
+                                  id="test-ID"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDragStart={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchCancel={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  type="button"
+                                >
+                                  <span>
+                                    Trigger component
+                                  </span>
+                                </button>
+                              </FocusRing>
+                            </FocusRing>
+                          </ButtonSimple>
+                        </ButtonPill>
+                        <Portal
+                          containerInfo={
+                            <div
+                              data-tippy-root=""
+                              id="tippy-1"
+                              style="pointer-events: none; z-index: 9999;"
+                            >
+                              
+                            </div>
+                          }
+                        />
+                      </Tippy>
+                    </ForwardRef(TippyWrapper)>
+                  </LazyTippy>
+                </Popover>
+                <div
+                  className="md-tooltip-label"
+                  id="test-ID"
+                >
+                  <Text
+                    tagName="p"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      tagname="p"
+                      type="body-large-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        Tooltip
+                      </mdc-text>
+                    </Text>
+                  </Text>
+                </div>
+              </Tooltip>
+            </TooltipWrapper>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-2"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+  </MenuTrigger>
+</TooltipMenuTriggerCombo>
+`;
+
+exports[`<TooltipMenuTriggerCombo /> snapshot should match snapshot with menuTriggerProps 1`] = `
+<TooltipMenuTriggerCombo
+  menuContent={
+    <_Menu
+      selectionMode="single"
+    >
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        One
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Two
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Three
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+    </_Menu>
+  }
+  menuTriggerProps={
+    Object {
+      "closeOnSelect": false,
+    }
+  }
+  tooltipContent={
+    <Text
+      tagName="p"
+    >
+      Tooltip
+    </Text>
+  }
+  tooltipProps={
+    Object {
+      "type": "label",
+    }
+  }
+  triggerComponent={
+    <ButtonPill>
+      Trigger component
+    </ButtonPill>
+  }
+>
+  <MenuTrigger
+    closeOnSelect={false}
+    onOpenChange={[Function]}
+    triggerComponent={
+      <TooltipWrapper
+        _tooltipProps={
+          Object {
+            "children": <Text
+              tagName="p"
+            >
+              Tooltip
+            </Text>,
+            "onHide": [Function],
+            "onShow": [Function],
+            "setInstance": [Function],
+            "type": "label",
+          }
+        }
+        _triggerComponent={
+          <ButtonPill>
+            Trigger component
+          </ButtonPill>
+        }
+      />
+    }
+  >
+    <Popover
+      autoFocus={false}
+      className="md-menu-trigger-wrapper"
+      color="primary"
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom-start"
+      role="generic"
+      setInstance={[Function]}
+      showArrow={false}
+      trigger="manual"
+      triggerComponent={
+        <TooltipWrapper
+          _tooltipProps={
+            Object {
+              "children": <Text
+                tagName="p"
+              >
+                Tooltip
+              </Text>,
+              "onHide": [Function],
+              "onShow": [Function],
+              "setInstance": [Function],
+              "type": "label",
+            }
+          }
+          _triggerComponent={
+            <ButtonPill>
+              Trigger component
+            </ButtonPill>
+          }
+          aria-controls={null}
+          aria-expanded={false}
+          aria-haspopup={true}
+          id="test-ID"
+          onKeyDown={[Function]}
+          onPress={[Function]}
+          onPressStart={[Function]}
+        />
+      }
+      variant="medium"
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        placement="bottom-start"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          placement="bottom-start"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            placement="bottom-start"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <TooltipWrapper
+              _tooltipProps={
+                Object {
+                  "children": <Text
+                    tagName="p"
+                  >
+                    Tooltip
+                  </Text>,
+                  "onHide": [Function],
+                  "onShow": [Function],
+                  "setInstance": [Function],
+                  "type": "label",
+                }
+              }
+              _triggerComponent={
+                <ButtonPill>
+                  Trigger component
+                </ButtonPill>
+              }
+              aria-controls={null}
+              aria-expanded={false}
+              aria-haspopup={true}
+              id="test-ID"
+              onKeyDown={[Function]}
+              onPress={[Function]}
+              onPressStart={[Function]}
+            >
+              <Tooltip
+                onHide={[Function]}
+                onShow={[Function]}
+                setInstance={[Function]}
+                triggerComponent={
+                  <ButtonPill
+                    aria-controls={null}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    id="test-ID"
+                    onKeyDown={[Function]}
+                    onPress={[Function]}
+                    onPressStart={[Function]}
+                  >
+                    Trigger component
+                  </ButtonPill>
+                }
+                type="label"
+              >
+                <Popover
+                  addBackdrop={false}
+                  aria-hidden={false}
+                  boundary="scrollParent"
+                  color="primary"
+                  interactive={false}
+                  offsetDistance={5}
+                  offsetSkidding={0}
+                  onHide={[Function]}
+                  onShow={[Function]}
+                  placement="auto"
+                  role="tooltip"
+                  setInstance={[Function]}
+                  showArrow={true}
+                  strategy="absolute"
+                  trigger="mouseenter focus"
+                  triggerComponent={
+                    <ButtonPill
+                      aria-controls={null}
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      aria-labelledby="test-ID"
+                      id="test-ID"
+                      onKeyDown={[Function]}
+                      onPress={[Function]}
+                      onPressStart={[Function]}
+                    >
+                      Trigger component
+                    </ButtonPill>
+                  }
+                  variant="small"
+                >
+                  <LazyTippy
+                    animation={false}
+                    appendTo="parent"
+                    hideOnClick={true}
+                    interactive={false}
+                    offset={
+                      Array [
+                        0,
+                        17,
+                      ]
+                    }
+                    onHidden={[Function]}
+                    onHide={[Function]}
+                    onShow={[Function]}
+                    placement="auto"
+                    plugins={
+                      Array [
+                        Object {
+                          "defaultValue": true,
+                          "fn": [Function],
+                          "name": "hideOnEsc",
+                        },
+                      ]
+                    }
+                    popperOptions={
+                      Object {
+                        "modifiers": Array [
+                          Object {
+                            "enabled": true,
+                            "name": "arrow",
+                            "options": Object {
+                              "element": "#arrow1",
+                              "padding": 5,
+                            },
+                          },
+                          Object {
+                            "name": "preventOverflow",
+                            "options": Object {
+                              "altAxis": true,
+                              "boundariesElement": "scrollParent",
+                              "padding": 8,
+                            },
+                          },
+                        ],
+                        "strategy": "absolute",
+                      }
+                    }
+                    render={[Function]}
+                    setInstance={[Function]}
+                    trigger="mouseenter focus"
+                  >
+                    <ForwardRef(TippyWrapper)
+                      animation={false}
+                      appendTo="parent"
+                      hideOnClick={true}
+                      interactive={false}
+                      offset={
+                        Array [
+                          0,
+                          17,
+                        ]
+                      }
+                      onHidden={[Function]}
+                      onHide={[Function]}
+                      onShow={[Function]}
+                      placement="auto"
+                      plugins={
+                        Array [
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "defaultValue": true,
+                            "fn": [Function],
+                            "name": "hideOnEsc",
+                          },
+                        ]
+                      }
+                      popperOptions={
+                        Object {
+                          "modifiers": Array [
+                            Object {
+                              "enabled": true,
+                              "name": "arrow",
+                              "options": Object {
+                                "element": "#arrow1",
+                                "padding": 5,
+                              },
+                            },
+                            Object {
+                              "name": "preventOverflow",
+                              "options": Object {
+                                "altAxis": true,
+                                "boundariesElement": "scrollParent",
+                                "padding": 8,
+                              },
+                            },
+                          ],
+                          "strategy": "absolute",
+                        }
+                      }
+                      render={[Function]}
+                      trigger="mouseenter focus"
+                    >
+                      <Tippy
+                        animation={false}
+                        appendTo="parent"
+                        hideOnClick={true}
+                        interactive={false}
+                        offset={
+                          Array [
+                            0,
+                            17,
+                          ]
+                        }
+                        onHidden={[Function]}
+                        onHide={[Function]}
+                        onShow={[Function]}
+                        placement="auto"
+                        plugins={
+                          Array [
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "defaultValue": true,
+                              "fn": [Function],
+                              "name": "hideOnEsc",
+                            },
+                          ]
+                        }
+                        popperOptions={
+                          Object {
+                            "modifiers": Array [
+                              Object {
+                                "enabled": true,
+                                "name": "arrow",
+                                "options": Object {
+                                  "element": "#arrow1",
+                                  "padding": 5,
+                                },
+                              },
+                              Object {
+                                "name": "preventOverflow",
+                                "options": Object {
+                                  "altAxis": true,
+                                  "boundariesElement": "scrollParent",
+                                  "padding": 8,
+                                },
+                              },
+                            ],
+                            "strategy": "absolute",
+                          }
+                        }
+                        render={[Function]}
+                        trigger="mouseenter focus"
+                      >
+                        <ButtonPill
+                          aria-controls={null}
+                          aria-expanded={false}
+                          aria-haspopup={true}
+                          aria-labelledby="test-ID"
+                          id="test-ID"
+                          onKeyDown={[Function]}
+                          onPress={[Function]}
+                          onPressStart={[Function]}
+                          useNativeKeyDown={true}
+                        >
+                          <ButtonSimple
+                            aria-controls={null}
+                            aria-disabled={false}
+                            aria-expanded={false}
+                            aria-haspopup={true}
+                            aria-labelledby="test-ID"
+                            className="md-button-pill-wrapper"
+                            data-color="primary"
+                            data-disabled={false}
+                            data-disabled-outline={false}
+                            data-ghost={false}
+                            data-grown={false}
+                            data-inverted={false}
+                            data-outline={false}
+                            data-shallow-disabled={false}
+                            data-size={40}
+                            id="test-ID"
+                            onKeyDown={[Function]}
+                            onPress={[Function]}
+                            onPressStart={[Function]}
+                            useNativeKeyDown={true}
+                          >
+                            <FocusRing>
+                              <FocusRing
+                                focusClass="md-focus-ring-wrapper children"
+                                focusRingClass="md-focus-ring-wrapper children"
+                              >
+                                <button
+                                  aria-controls={null}
+                                  aria-expanded={false}
+                                  aria-haspopup={true}
+                                  aria-labelledby="test-ID"
+                                  className="md-button-pill-wrapper md-button-simple-wrapper"
+                                  data-color="primary"
+                                  data-disabled={false}
+                                  data-disabled-outline={false}
+                                  data-ghost={false}
+                                  data-grown={false}
+                                  data-inverted={false}
+                                  data-outline={false}
+                                  data-shallow-disabled={false}
+                                  data-size={40}
+                                  id="test-ID"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDragStart={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchCancel={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  type="button"
+                                >
+                                  <span>
+                                    Trigger component
+                                  </span>
+                                </button>
+                              </FocusRing>
+                            </FocusRing>
+                          </ButtonSimple>
+                        </ButtonPill>
+                        <Portal
+                          containerInfo={
+                            <div
+                              data-tippy-root=""
+                              id="tippy-3"
+                              style="pointer-events: none; z-index: 9999;"
+                            >
+                              
+                            </div>
+                          }
+                        />
+                      </Tippy>
+                    </ForwardRef(TippyWrapper)>
+                  </LazyTippy>
+                </Popover>
+                <div
+                  className="md-tooltip-label"
+                  id="test-ID"
+                >
+                  <Text
+                    tagName="p"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      tagname="p"
+                      type="body-large-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        Tooltip
+                      </mdc-text>
+                    </Text>
+                  </Text>
+                </div>
+              </Tooltip>
+            </TooltipWrapper>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-4"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+  </MenuTrigger>
+</TooltipMenuTriggerCombo>
+`;
+
+exports[`<TooltipMenuTriggerCombo /> snapshot should match snapshot with tooltipProps 1`] = `
+<TooltipMenuTriggerCombo
+  menuContent={
+    <_Menu
+      selectionMode="single"
+    >
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        One
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Two
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Three
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+    </_Menu>
+  }
+  menuTriggerProps={
+    Object {
+      "closeOnSelect": false,
+    }
+  }
+  tooltipContent={
+    <Text
+      tagName="p"
+    >
+      Tooltip
+    </Text>
+  }
+  tooltipProps={
+    Object {
+      "placement": "bottom",
+      "type": "label",
+    }
+  }
+  triggerComponent={
+    <ButtonPill>
+      Trigger component
+    </ButtonPill>
+  }
+>
+  <MenuTrigger
+    closeOnSelect={false}
+    onOpenChange={[Function]}
+    triggerComponent={
+      <TooltipWrapper
+        _tooltipProps={
+          Object {
+            "children": <Text
+              tagName="p"
+            >
+              Tooltip
+            </Text>,
+            "onHide": [Function],
+            "onShow": [Function],
+            "placement": "bottom",
+            "setInstance": [Function],
+            "type": "label",
+          }
+        }
+        _triggerComponent={
+          <ButtonPill>
+            Trigger component
+          </ButtonPill>
+        }
+      />
+    }
+  >
+    <Popover
+      autoFocus={false}
+      className="md-menu-trigger-wrapper"
+      color="primary"
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom-start"
+      role="generic"
+      setInstance={[Function]}
+      showArrow={false}
+      trigger="manual"
+      triggerComponent={
+        <TooltipWrapper
+          _tooltipProps={
+            Object {
+              "children": <Text
+                tagName="p"
+              >
+                Tooltip
+              </Text>,
+              "onHide": [Function],
+              "onShow": [Function],
+              "placement": "bottom",
+              "setInstance": [Function],
+              "type": "label",
+            }
+          }
+          _triggerComponent={
+            <ButtonPill>
+              Trigger component
+            </ButtonPill>
+          }
+          aria-controls={null}
+          aria-expanded={false}
+          aria-haspopup={true}
+          id="test-ID"
+          onKeyDown={[Function]}
+          onPress={[Function]}
+          onPressStart={[Function]}
+        />
+      }
+      variant="medium"
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        placement="bottom-start"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          placement="bottom-start"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            placement="bottom-start"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <TooltipWrapper
+              _tooltipProps={
+                Object {
+                  "children": <Text
+                    tagName="p"
+                  >
+                    Tooltip
+                  </Text>,
+                  "onHide": [Function],
+                  "onShow": [Function],
+                  "placement": "bottom",
+                  "setInstance": [Function],
+                  "type": "label",
+                }
+              }
+              _triggerComponent={
+                <ButtonPill>
+                  Trigger component
+                </ButtonPill>
+              }
+              aria-controls={null}
+              aria-expanded={false}
+              aria-haspopup={true}
+              id="test-ID"
+              onKeyDown={[Function]}
+              onPress={[Function]}
+              onPressStart={[Function]}
+            >
+              <Tooltip
+                onHide={[Function]}
+                onShow={[Function]}
+                placement="bottom"
+                setInstance={[Function]}
+                triggerComponent={
+                  <ButtonPill
+                    aria-controls={null}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    id="test-ID"
+                    onKeyDown={[Function]}
+                    onPress={[Function]}
+                    onPressStart={[Function]}
+                  >
+                    Trigger component
+                  </ButtonPill>
+                }
+                type="label"
+              >
+                <Popover
+                  addBackdrop={false}
+                  aria-hidden={false}
+                  boundary="scrollParent"
+                  color="primary"
+                  interactive={false}
+                  offsetDistance={5}
+                  offsetSkidding={0}
+                  onHide={[Function]}
+                  onShow={[Function]}
+                  placement="bottom"
+                  role="tooltip"
+                  setInstance={[Function]}
+                  showArrow={true}
+                  strategy="absolute"
+                  trigger="mouseenter focus"
+                  triggerComponent={
+                    <ButtonPill
+                      aria-controls={null}
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      aria-labelledby="test-ID"
+                      id="test-ID"
+                      onKeyDown={[Function]}
+                      onPress={[Function]}
+                      onPressStart={[Function]}
+                    >
+                      Trigger component
+                    </ButtonPill>
+                  }
+                  variant="small"
+                >
+                  <LazyTippy
+                    animation={false}
+                    appendTo="parent"
+                    hideOnClick={true}
+                    interactive={false}
+                    offset={
+                      Array [
+                        0,
+                        17,
+                      ]
+                    }
+                    onHidden={[Function]}
+                    onHide={[Function]}
+                    onShow={[Function]}
+                    placement="bottom"
+                    plugins={
+                      Array [
+                        Object {
+                          "defaultValue": true,
+                          "fn": [Function],
+                          "name": "hideOnEsc",
+                        },
+                      ]
+                    }
+                    popperOptions={
+                      Object {
+                        "modifiers": Array [
+                          Object {
+                            "enabled": true,
+                            "name": "arrow",
+                            "options": Object {
+                              "element": "#arrow1",
+                              "padding": 5,
+                            },
+                          },
+                          Object {
+                            "name": "preventOverflow",
+                            "options": Object {
+                              "altAxis": true,
+                              "boundariesElement": "scrollParent",
+                              "padding": 8,
+                            },
+                          },
+                        ],
+                        "strategy": "absolute",
+                      }
+                    }
+                    render={[Function]}
+                    setInstance={[Function]}
+                    trigger="mouseenter focus"
+                  >
+                    <ForwardRef(TippyWrapper)
+                      animation={false}
+                      appendTo="parent"
+                      hideOnClick={true}
+                      interactive={false}
+                      offset={
+                        Array [
+                          0,
+                          17,
+                        ]
+                      }
+                      onHidden={[Function]}
+                      onHide={[Function]}
+                      onShow={[Function]}
+                      placement="bottom"
+                      plugins={
+                        Array [
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "defaultValue": true,
+                            "fn": [Function],
+                            "name": "hideOnEsc",
+                          },
+                        ]
+                      }
+                      popperOptions={
+                        Object {
+                          "modifiers": Array [
+                            Object {
+                              "enabled": true,
+                              "name": "arrow",
+                              "options": Object {
+                                "element": "#arrow1",
+                                "padding": 5,
+                              },
+                            },
+                            Object {
+                              "name": "preventOverflow",
+                              "options": Object {
+                                "altAxis": true,
+                                "boundariesElement": "scrollParent",
+                                "padding": 8,
+                              },
+                            },
+                          ],
+                          "strategy": "absolute",
+                        }
+                      }
+                      render={[Function]}
+                      trigger="mouseenter focus"
+                    >
+                      <Tippy
+                        animation={false}
+                        appendTo="parent"
+                        hideOnClick={true}
+                        interactive={false}
+                        offset={
+                          Array [
+                            0,
+                            17,
+                          ]
+                        }
+                        onHidden={[Function]}
+                        onHide={[Function]}
+                        onShow={[Function]}
+                        placement="bottom"
+                        plugins={
+                          Array [
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "defaultValue": true,
+                              "fn": [Function],
+                              "name": "hideOnEsc",
+                            },
+                          ]
+                        }
+                        popperOptions={
+                          Object {
+                            "modifiers": Array [
+                              Object {
+                                "enabled": true,
+                                "name": "arrow",
+                                "options": Object {
+                                  "element": "#arrow1",
+                                  "padding": 5,
+                                },
+                              },
+                              Object {
+                                "name": "preventOverflow",
+                                "options": Object {
+                                  "altAxis": true,
+                                  "boundariesElement": "scrollParent",
+                                  "padding": 8,
+                                },
+                              },
+                            ],
+                            "strategy": "absolute",
+                          }
+                        }
+                        render={[Function]}
+                        trigger="mouseenter focus"
+                      >
+                        <ButtonPill
+                          aria-controls={null}
+                          aria-expanded={false}
+                          aria-haspopup={true}
+                          aria-labelledby="test-ID"
+                          id="test-ID"
+                          onKeyDown={[Function]}
+                          onPress={[Function]}
+                          onPressStart={[Function]}
+                          useNativeKeyDown={true}
+                        >
+                          <ButtonSimple
+                            aria-controls={null}
+                            aria-disabled={false}
+                            aria-expanded={false}
+                            aria-haspopup={true}
+                            aria-labelledby="test-ID"
+                            className="md-button-pill-wrapper"
+                            data-color="primary"
+                            data-disabled={false}
+                            data-disabled-outline={false}
+                            data-ghost={false}
+                            data-grown={false}
+                            data-inverted={false}
+                            data-outline={false}
+                            data-shallow-disabled={false}
+                            data-size={40}
+                            id="test-ID"
+                            onKeyDown={[Function]}
+                            onPress={[Function]}
+                            onPressStart={[Function]}
+                            useNativeKeyDown={true}
+                          >
+                            <FocusRing>
+                              <FocusRing
+                                focusClass="md-focus-ring-wrapper children"
+                                focusRingClass="md-focus-ring-wrapper children"
+                              >
+                                <button
+                                  aria-controls={null}
+                                  aria-expanded={false}
+                                  aria-haspopup={true}
+                                  aria-labelledby="test-ID"
+                                  className="md-button-pill-wrapper md-button-simple-wrapper"
+                                  data-color="primary"
+                                  data-disabled={false}
+                                  data-disabled-outline={false}
+                                  data-ghost={false}
+                                  data-grown={false}
+                                  data-inverted={false}
+                                  data-outline={false}
+                                  data-shallow-disabled={false}
+                                  data-size={40}
+                                  id="test-ID"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDragStart={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchCancel={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  type="button"
+                                >
+                                  <span>
+                                    Trigger component
+                                  </span>
+                                </button>
+                              </FocusRing>
+                            </FocusRing>
+                          </ButtonSimple>
+                        </ButtonPill>
+                        <Portal
+                          containerInfo={
+                            <div
+                              data-tippy-root=""
+                              id="tippy-5"
+                              style="pointer-events: none; z-index: 9999;"
+                            >
+                              
+                            </div>
+                          }
+                        />
+                      </Tippy>
+                    </ForwardRef(TippyWrapper)>
+                  </LazyTippy>
+                </Popover>
+                <div
+                  className="md-tooltip-label"
+                  id="test-ID"
+                >
+                  <Text
+                    tagName="p"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      tagname="p"
+                      type="body-large-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        Tooltip
+                      </mdc-text>
+                    </Text>
+                  </Text>
+                </div>
+              </Tooltip>
+            </TooltipWrapper>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-6"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+  </MenuTrigger>
+</TooltipMenuTriggerCombo>
+`;
+
+exports[`<TooltipMenuTriggerCombo /> snapshot should match snapshot with tooltipProps.type = "description" 1`] = `
+<TooltipMenuTriggerCombo
+  menuContent={
+    <_Menu
+      selectionMode="single"
+    >
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        One
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Two
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+      <$de85adf0b38f4f13e9cffd2f21$var$Item>
+        Three
+      </$de85adf0b38f4f13e9cffd2f21$var$Item>
+    </_Menu>
+  }
+  tooltipContent={
+    <Text
+      tagName="p"
+    >
+      Tooltip
+    </Text>
+  }
+  tooltipProps={
+    Object {
+      "placement": "bottom",
+      "type": "description",
+    }
+  }
+  triggerComponent={
+    <ButtonPill>
+      Trigger component
+    </ButtonPill>
+  }
+>
+  <MenuTrigger
+    onOpenChange={[Function]}
+    triggerComponent={
+      <TooltipWrapper
+        _tooltipProps={
+          Object {
+            "children": <Text
+              tagName="p"
+            >
+              Tooltip
+            </Text>,
+            "onHide": [Function],
+            "onShow": [Function],
+            "placement": "bottom",
+            "setInstance": [Function],
+            "type": "description",
+          }
+        }
+        _triggerComponent={
+          <ButtonPill>
+            Trigger component
+          </ButtonPill>
+        }
+      />
+    }
+  >
+    <Popover
+      autoFocus={false}
+      className="md-menu-trigger-wrapper"
+      color="primary"
+      hideOnEsc={false}
+      interactive={true}
+      onClickOutside={[Function]}
+      onKeyDown={[Function]}
+      placement="bottom-start"
+      role="generic"
+      setInstance={[Function]}
+      showArrow={false}
+      trigger="manual"
+      triggerComponent={
+        <TooltipWrapper
+          _tooltipProps={
+            Object {
+              "children": <Text
+                tagName="p"
+              >
+                Tooltip
+              </Text>,
+              "onHide": [Function],
+              "onShow": [Function],
+              "placement": "bottom",
+              "setInstance": [Function],
+              "type": "description",
+            }
+          }
+          _triggerComponent={
+            <ButtonPill>
+              Trigger component
+            </ButtonPill>
+          }
+          aria-controls={null}
+          aria-expanded={false}
+          aria-haspopup={true}
+          id="test-ID"
+          onKeyDown={[Function]}
+          onPress={[Function]}
+          onPressStart={[Function]}
+        />
+      }
+      variant="medium"
+    >
+      <LazyTippy
+        animation={false}
+        appendTo="parent"
+        hideOnClick={false}
+        interactive={true}
+        offset={
+          Array [
+            0,
+            5,
+          ]
+        }
+        onClickOutside={[Function]}
+        onHidden={[Function]}
+        placement="bottom-start"
+        plugins={
+          Array [
+            Object {
+              "fn": [Function],
+              "name": "addBackdropPlugin",
+            },
+          ]
+        }
+        popperOptions={
+          Object {
+            "modifiers": Array [
+              Object {
+                "enabled": false,
+                "name": "arrow",
+                "options": Object {
+                  "element": "#arrow1",
+                  "padding": 5,
+                },
+              },
+              Object {
+                "name": "preventOverflow",
+                "options": Object {
+                  "altAxis": true,
+                  "boundariesElement": "scrollParent",
+                  "padding": 8,
+                },
+              },
+            ],
+            "strategy": "absolute",
+          }
+        }
+        render={[Function]}
+        setInstance={[Function]}
+        trigger="manual"
+      >
+        <ForwardRef(TippyWrapper)
+          animation={false}
+          appendTo="parent"
+          hideOnClick={false}
+          interactive={true}
+          offset={
+            Array [
+              0,
+              5,
+            ]
+          }
+          onClickOutside={[Function]}
+          onHidden={[Function]}
+          placement="bottom-start"
+          plugins={
+            Array [
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+              },
+              Object {
+                "fn": [Function],
+                "name": "addBackdropPlugin",
+              },
+            ]
+          }
+          popperOptions={
+            Object {
+              "modifiers": Array [
+                Object {
+                  "enabled": false,
+                  "name": "arrow",
+                  "options": Object {
+                    "element": "#arrow1",
+                    "padding": 5,
+                  },
+                },
+                Object {
+                  "name": "preventOverflow",
+                  "options": Object {
+                    "altAxis": true,
+                    "boundariesElement": "scrollParent",
+                    "padding": 8,
+                  },
+                },
+              ],
+              "strategy": "absolute",
+            }
+          }
+          render={[Function]}
+          trigger="manual"
+        >
+          <Tippy
+            animation={false}
+            appendTo="parent"
+            hideOnClick={false}
+            interactive={true}
+            offset={
+              Array [
+                0,
+                5,
+              ]
+            }
+            onClickOutside={[Function]}
+            onHidden={[Function]}
+            placement="bottom-start"
+            plugins={
+              Array [
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                },
+                Object {
+                  "fn": [Function],
+                  "name": "addBackdropPlugin",
+                },
+              ]
+            }
+            popperOptions={
+              Object {
+                "modifiers": Array [
+                  Object {
+                    "enabled": false,
+                    "name": "arrow",
+                    "options": Object {
+                      "element": "#arrow1",
+                      "padding": 5,
+                    },
+                  },
+                  Object {
+                    "name": "preventOverflow",
+                    "options": Object {
+                      "altAxis": true,
+                      "boundariesElement": "scrollParent",
+                      "padding": 8,
+                    },
+                  },
+                ],
+                "strategy": "absolute",
+              }
+            }
+            render={[Function]}
+            trigger="manual"
+          >
+            <TooltipWrapper
+              _tooltipProps={
+                Object {
+                  "children": <Text
+                    tagName="p"
+                  >
+                    Tooltip
+                  </Text>,
+                  "onHide": [Function],
+                  "onShow": [Function],
+                  "placement": "bottom",
+                  "setInstance": [Function],
+                  "type": "description",
+                }
+              }
+              _triggerComponent={
+                <ButtonPill>
+                  Trigger component
+                </ButtonPill>
+              }
+              aria-controls={null}
+              aria-expanded={false}
+              aria-haspopup={true}
+              id="test-ID"
+              onKeyDown={[Function]}
+              onPress={[Function]}
+              onPressStart={[Function]}
+            >
+              <Tooltip
+                onHide={[Function]}
+                onShow={[Function]}
+                placement="bottom"
+                setInstance={[Function]}
+                triggerComponent={
+                  <ButtonPill
+                    aria-controls={null}
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    id="test-ID"
+                    onKeyDown={[Function]}
+                    onPress={[Function]}
+                    onPressStart={[Function]}
+                  >
+                    Trigger component
+                  </ButtonPill>
+                }
+                type="description"
+              >
+                <Popover
+                  addBackdrop={false}
+                  aria-hidden={true}
+                  boundary="scrollParent"
+                  color="primary"
+                  interactive={false}
+                  offsetDistance={5}
+                  offsetSkidding={0}
+                  onHide={[Function]}
+                  onShow={[Function]}
+                  placement="bottom"
+                  role="tooltip"
+                  setInstance={[Function]}
+                  showArrow={true}
+                  strategy="absolute"
+                  trigger="mouseenter focus"
+                  triggerComponent={
+                    <ButtonPill
+                      aria-controls={null}
+                      aria-describedby="test-ID"
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      id="test-ID"
+                      onKeyDown={[Function]}
+                      onPress={[Function]}
+                      onPressStart={[Function]}
+                    >
+                      Trigger component
+                    </ButtonPill>
+                  }
+                  variant="small"
+                >
+                  <LazyTippy
+                    animation={false}
+                    appendTo="parent"
+                    hideOnClick={true}
+                    interactive={false}
+                    offset={
+                      Array [
+                        0,
+                        17,
+                      ]
+                    }
+                    onHidden={[Function]}
+                    onHide={[Function]}
+                    onShow={[Function]}
+                    placement="bottom"
+                    plugins={
+                      Array [
+                        Object {
+                          "defaultValue": true,
+                          "fn": [Function],
+                          "name": "hideOnEsc",
+                        },
+                      ]
+                    }
+                    popperOptions={
+                      Object {
+                        "modifiers": Array [
+                          Object {
+                            "enabled": true,
+                            "name": "arrow",
+                            "options": Object {
+                              "element": "#arrow1",
+                              "padding": 5,
+                            },
+                          },
+                          Object {
+                            "name": "preventOverflow",
+                            "options": Object {
+                              "altAxis": true,
+                              "boundariesElement": "scrollParent",
+                              "padding": 8,
+                            },
+                          },
+                        ],
+                        "strategy": "absolute",
+                      }
+                    }
+                    render={[Function]}
+                    setInstance={[Function]}
+                    trigger="mouseenter focus"
+                  >
+                    <ForwardRef(TippyWrapper)
+                      animation={false}
+                      appendTo="parent"
+                      hideOnClick={true}
+                      interactive={false}
+                      offset={
+                        Array [
+                          0,
+                          17,
+                        ]
+                      }
+                      onHidden={[Function]}
+                      onHide={[Function]}
+                      onShow={[Function]}
+                      placement="bottom"
+                      plugins={
+                        Array [
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "fn": [Function],
+                          },
+                          Object {
+                            "defaultValue": true,
+                            "fn": [Function],
+                            "name": "hideOnEsc",
+                          },
+                        ]
+                      }
+                      popperOptions={
+                        Object {
+                          "modifiers": Array [
+                            Object {
+                              "enabled": true,
+                              "name": "arrow",
+                              "options": Object {
+                                "element": "#arrow1",
+                                "padding": 5,
+                              },
+                            },
+                            Object {
+                              "name": "preventOverflow",
+                              "options": Object {
+                                "altAxis": true,
+                                "boundariesElement": "scrollParent",
+                                "padding": 8,
+                              },
+                            },
+                          ],
+                          "strategy": "absolute",
+                        }
+                      }
+                      render={[Function]}
+                      trigger="mouseenter focus"
+                    >
+                      <Tippy
+                        animation={false}
+                        appendTo="parent"
+                        hideOnClick={true}
+                        interactive={false}
+                        offset={
+                          Array [
+                            0,
+                            17,
+                          ]
+                        }
+                        onHidden={[Function]}
+                        onHide={[Function]}
+                        onShow={[Function]}
+                        placement="bottom"
+                        plugins={
+                          Array [
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "fn": [Function],
+                            },
+                            Object {
+                              "defaultValue": true,
+                              "fn": [Function],
+                              "name": "hideOnEsc",
+                            },
+                          ]
+                        }
+                        popperOptions={
+                          Object {
+                            "modifiers": Array [
+                              Object {
+                                "enabled": true,
+                                "name": "arrow",
+                                "options": Object {
+                                  "element": "#arrow1",
+                                  "padding": 5,
+                                },
+                              },
+                              Object {
+                                "name": "preventOverflow",
+                                "options": Object {
+                                  "altAxis": true,
+                                  "boundariesElement": "scrollParent",
+                                  "padding": 8,
+                                },
+                              },
+                            ],
+                            "strategy": "absolute",
+                          }
+                        }
+                        render={[Function]}
+                        trigger="mouseenter focus"
+                      >
+                        <ButtonPill
+                          aria-controls={null}
+                          aria-describedby="test-ID"
+                          aria-expanded={false}
+                          aria-haspopup={true}
+                          id="test-ID"
+                          onKeyDown={[Function]}
+                          onPress={[Function]}
+                          onPressStart={[Function]}
+                          useNativeKeyDown={true}
+                        >
+                          <ButtonSimple
+                            aria-controls={null}
+                            aria-describedby="test-ID"
+                            aria-disabled={false}
+                            aria-expanded={false}
+                            aria-haspopup={true}
+                            className="md-button-pill-wrapper"
+                            data-color="primary"
+                            data-disabled={false}
+                            data-disabled-outline={false}
+                            data-ghost={false}
+                            data-grown={false}
+                            data-inverted={false}
+                            data-outline={false}
+                            data-shallow-disabled={false}
+                            data-size={40}
+                            id="test-ID"
+                            onKeyDown={[Function]}
+                            onPress={[Function]}
+                            onPressStart={[Function]}
+                            useNativeKeyDown={true}
+                          >
+                            <FocusRing>
+                              <FocusRing
+                                focusClass="md-focus-ring-wrapper children"
+                                focusRingClass="md-focus-ring-wrapper children"
+                              >
+                                <button
+                                  aria-controls={null}
+                                  aria-describedby="test-ID"
+                                  aria-expanded={false}
+                                  aria-haspopup={true}
+                                  className="md-button-pill-wrapper md-button-simple-wrapper"
+                                  data-color="primary"
+                                  data-disabled={false}
+                                  data-disabled-outline={false}
+                                  data-ghost={false}
+                                  data-grown={false}
+                                  data-inverted={false}
+                                  data-outline={false}
+                                  data-shallow-disabled={false}
+                                  data-size={40}
+                                  id="test-ID"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDragStart={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchCancel={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  type="button"
+                                >
+                                  <span>
+                                    Trigger component
+                                  </span>
+                                </button>
+                              </FocusRing>
+                            </FocusRing>
+                          </ButtonSimple>
+                        </ButtonPill>
+                        <Portal
+                          containerInfo={
+                            <div
+                              data-tippy-root=""
+                              id="tippy-7"
+                              style="pointer-events: none; z-index: 9999;"
+                            >
+                              
+                            </div>
+                          }
+                        />
+                      </Tippy>
+                    </ForwardRef(TippyWrapper)>
+                  </LazyTippy>
+                </Popover>
+                <div
+                  className="md-tooltip-label"
+                  id="test-ID"
+                >
+                  <Text
+                    tagName="p"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      tagname="p"
+                      type="body-large-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      >
+                        Tooltip
+                      </mdc-text>
+                    </Text>
+                  </Text>
+                </div>
+              </Tooltip>
+            </TooltipWrapper>
+            <Portal
+              containerInfo={
+                <div
+                  data-tippy-root=""
+                  id="tippy-8"
+                  style="z-index: 9999;"
+                >
+                  
+                </div>
+              }
+            />
+          </Tippy>
+        </ForwardRef(TippyWrapper)>
+      </LazyTippy>
+    </Popover>
+  </MenuTrigger>
+</TooltipMenuTriggerCombo>
+`;

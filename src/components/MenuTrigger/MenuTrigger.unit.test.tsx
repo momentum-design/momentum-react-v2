@@ -8,8 +8,8 @@ import { mountAndWait } from '../../../test/utils';
 import { ModalContainer, Popover } from '..';
 import { ROUNDS } from '../ModalContainer/ModalContainer.constants';
 
-import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, type Screen, screen, waitFor } from '@testing-library/react';
+import userEvent, { type UserEvent } from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 jest.mock('uuid', () => {
@@ -309,9 +309,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
   });
 
   describe('actions', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const openMenu = async (user: any, screen: any) => {
-      await user.click(screen.getByRole('button', { name: 'Open Menu' }));
+    const openMenu = async (user: UserEvent, screen: Screen, withKeyboard = false) => {
+      if (withKeyboard) {
+        await user.tab();
+        expect(screen.getByRole('button', { name: 'Open Menu' })).toHaveFocus();
+        await user.keyboard('{Enter}');
+      } else {
+        await user.click(screen.getByRole('button', { name: 'Open Menu' }));
+      }
+
       await waitFor(() => {
         expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeInTheDocument();
       });
@@ -319,121 +325,123 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       return menu;
     };
 
-    it('should callback correctly when onOpenChange is provided ', async () => {
-      const user = userEvent.setup();
+    describe.each([false, true])('keyboard = %s', (keyboard) => {
+      it('should callback correctly when onOpenChange is provided', async () => {
+        const user = userEvent.setup();
 
-      const onOpenChangeMock = jest.fn();
+        const onOpenChangeMock = jest.fn();
 
-      render(<MenuTrigger {...defaultProps} onOpenChange={onOpenChangeMock} />);
-      expect(onOpenChangeMock).not.toHaveBeenCalled();
+        render(<MenuTrigger {...defaultProps} onOpenChange={onOpenChangeMock} />);
+        expect(onOpenChangeMock).not.toHaveBeenCalled();
 
-      await openMenu(user, screen);
+        await openMenu(user, screen, keyboard);
 
-      expect(onOpenChangeMock).toHaveBeenCalledWith(true);
-      expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
-      onOpenChangeMock.mockClear();
+        expect(onOpenChangeMock).toHaveBeenCalledWith(true);
+        expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
+        onOpenChangeMock.mockClear();
 
-      await user.keyboard('{Escape}');
+        await user.keyboard('{Escape}');
 
-      await waitFor(() => {
-        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
+
+        expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+        expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
       });
 
-      expect(onOpenChangeMock).toHaveBeenCalledWith(false);
-      expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
-    });
+      it('should close the menu when closeOnSelect is true', async () => {
+        const user = userEvent.setup();
 
-    it('should close the menu when closeOnSelect is true', async () => {
-      const user = userEvent.setup();
+        render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-      render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
+        await openMenu(user, screen, keyboard);
 
-      await openMenu(user, screen);
+        await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
-      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
-
-      await waitFor(() => {
-        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
-      });
-    });
-
-    it('should not close the menu when closeOnSelect is false', async () => {
-      const user = userEvent.setup();
-
-      render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
-
-      await openMenu(user, screen);
-
-      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
-
-      await waitFor(() => {
-        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
-      });
-    });
-
-    it('should close the menu when closeOnSelect is false but overridden by <Item closeOnSelect={true} />', async () => {
-      const user = userEvent.setup();
-
-      const children = [...defaultProps.children];
-      children.push(
-        <Menu>
-          <Item key="close" closeOnSelect={true}>
-            Close
-          </Item>
-        </Menu>
-      );
-
-      render(
-        <MenuTrigger {...defaultProps} closeOnSelect={false}>
-          {children}
-        </MenuTrigger>
-      );
-
-      await openMenu(user, screen);
-
-      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
-
-      await waitFor(() => {
-        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
       });
 
-      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+      it('should not close the menu when closeOnSelect is false', async () => {
+        const user = userEvent.setup();
 
-      await waitFor(() => {
-        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
-      });
-    });
+        render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-    it('should not close the menu when closeOnSelect is true but overridden by <Item closeOnSelect={false} />', async () => {
-      const user = userEvent.setup();
+        await openMenu(user, screen, keyboard);
 
-      const children = [...defaultProps.children];
-      children.push(
-        <Menu>
-          <Item key="close" closeOnSelect={false}>
-            Close
-          </Item>
-        </Menu>
-      );
+        await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
-      render(
-        <MenuTrigger {...defaultProps} closeOnSelect={true}>
-          {children}
-        </MenuTrigger>
-      );
-
-      await openMenu(user, screen);
-
-      user.click(screen.getByRole('menuitem', { name: 'Close' }));
-
-      await waitFor(() => {
-        expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+        await waitFor(() => {
+          expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+        });
       });
 
-      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+      it('should close the menu when closeOnSelect is false but overridden by <Item closeOnSelect={true} />', async () => {
+        const user = userEvent.setup();
 
-      await waitFor(() => {
-        expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        const children = [...defaultProps.children];
+        children.push(
+          <Menu>
+            <Item key="close" closeOnSelect={true}>
+              Close
+            </Item>
+          </Menu>
+        );
+
+        render(
+          <MenuTrigger {...defaultProps} closeOnSelect={false}>
+            {children}
+          </MenuTrigger>
+        );
+
+        await openMenu(user, screen, keyboard);
+
+        await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+
+        await waitFor(() => {
+          expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+        });
+
+        user.click(screen.getByRole('menuitem', { name: 'Close' }));
+
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
+      });
+
+      it('should not close the menu when closeOnSelect is true but overridden by <Item closeOnSelect={false} />', async () => {
+        const user = userEvent.setup();
+
+        const children = [...defaultProps.children];
+        children.push(
+          <Menu>
+            <Item key="close" closeOnSelect={false}>
+              Close
+            </Item>
+          </Menu>
+        );
+
+        render(
+          <MenuTrigger {...defaultProps} closeOnSelect={true}>
+            {children}
+          </MenuTrigger>
+        );
+
+        await openMenu(user, screen, keyboard);
+
+        user.click(screen.getByRole('menuitem', { name: 'Close' }));
+
+        await waitFor(() => {
+          expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
+        });
+
+        await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
       });
     });
 
