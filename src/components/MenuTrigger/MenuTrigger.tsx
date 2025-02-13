@@ -32,7 +32,6 @@ const MenuTrigger = forwardRef(
       style,
       closeOnSelect,
       children,
-      isOpen,
       delay,
       variant = DEFAULTS.VARIANT,
       color = DEFAULTS.COLOR,

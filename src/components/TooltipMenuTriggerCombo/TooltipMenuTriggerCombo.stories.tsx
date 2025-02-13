@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import TooltipMenuTriggerCombo from './';
 import Documentation from './TooltipMenuTriggerCombo.stories.docs.mdx';
@@ -17,7 +16,7 @@ export default {
   parameters: {
     expanded: true,
     docs: {
-      page: DocumentationPage(Documentation, StyleDocs),
+      page: DocumentationPage(Documentation),
     },
   },
 };
@@ -25,14 +24,7 @@ export default {
 const ExampleStory = ({ isPill }: { isPill: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const icon = (
-    <Icon
-      name={isOpen ? 'arrow-up' : 'arrow-down'}
-      weight="bold"
-      autoScale={100}
-      style={{ border: '1px solid black' }}
-    />
-  );
+  const icon = <Icon name={isOpen ? 'arrow-up' : 'arrow-down'} weight="bold" autoScale={100} />;
 
   return (
     <TooltipMenuTriggerCombo
@@ -68,6 +60,7 @@ const ExampleStory = ({ isPill }: { isPill: boolean }) => {
 };
 
 const Example: StoryObj<typeof TooltipMenuTriggerCombo> = {
+  // eslint-disable-next-line react/display-name
   render: () => (
     <>
       <ExampleStory isPill={true} />

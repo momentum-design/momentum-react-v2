@@ -6,7 +6,7 @@ import Tooltip from '../Tooltip';
 /**
  * The TooltipWrapper component.
  *
- * MenuTrigger passes additional properties to its `triggerComponent` (for example, useNativeKeyDown, onPress, onPressStart)
+ * MenuTrigger passes additional properties to its `triggerComponent` (for example, onPress, onPressStart)
  * Capture these props and pass them to the triggerComponent of the tooltip instead
  */
 const TooltipWrapper: FC<TooltipWrapperProps> = forwardRef(

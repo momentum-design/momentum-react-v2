@@ -3,9 +3,9 @@ import { MenuTriggerProps } from '../MenuTrigger';
 import { TooltipProps } from '../Tooltip';
 
 export interface Props {
-  menuTriggerProps: Omit<MenuTriggerProps, 'children' | 'triggerComponent'>;
+  menuTriggerProps?: Omit<MenuTriggerProps, 'children' | 'triggerComponent'>;
   menuContent: MenuTriggerProps['children'];
-  tooltipProps: Omit<TooltipProps, 'children' | 'triggerComponent'>;
+  tooltipProps?: Partial<Omit<TooltipProps, 'children' | 'triggerComponent'>>;
   tooltipContent: TooltipProps['children'];
   triggerComponent: ReactElement;
 }

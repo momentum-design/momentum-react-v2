@@ -1,7 +1,6 @@
 import React, { FC, useCallback, useEffect, useState } from 'react';
 
 import { Props } from './TooltipMenuTriggerCombo.types';
-import './TooltipMenuTriggerCombo.style.scss';
 import MenuTrigger from '../MenuTrigger';
 import TooltipWrapper from './TooltipWrapper';
 import { PopoverInstance } from '../Popover';
@@ -13,7 +12,7 @@ const TooltipMenuTriggerCombo: FC<Props> = (props: Props) => {
   const { menuContent, menuTriggerProps, tooltipContent, tooltipProps, triggerComponent } = props;
 
   const [tooltipInstance, setTooltipInstance] = useState<PopoverInstance>();
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
   const setMergedTooltipInstances = useCallback(
@@ -27,7 +26,7 @@ const TooltipMenuTriggerCombo: FC<Props> = (props: Props) => {
   const handleMenuOpenChange = useCallback(
     (isOpen: boolean) => {
       menuTriggerProps?.onOpenChange?.(isOpen);
-      setIsPopoverOpen(isOpen);
+      setIsMenuOpen(isOpen);
     },
     [menuTriggerProps]
   );
@@ -50,10 +49,10 @@ const TooltipMenuTriggerCombo: FC<Props> = (props: Props) => {
 
   // if the tooltip and popover are both open at the same time we close the tooltip to avoid them overlapping
   useEffect(() => {
-    if (isPopoverOpen && isTooltipOpen) {
+    if (isMenuOpen && isTooltipOpen) {
       tooltipInstance?.hide();
     }
-  }, [isPopoverOpen, isTooltipOpen, tooltipInstance]);
+  }, [isMenuOpen, isTooltipOpen, tooltipInstance]);
 
   return (
     <MenuTrigger
@@ -62,6 +61,7 @@ const TooltipMenuTriggerCombo: FC<Props> = (props: Props) => {
       triggerComponent={
         <TooltipWrapper
           _tooltipProps={{
+            type: 'label',
             ...tooltipProps,
             onHide: handleOnHideTooltip,
             onShow: handleOnShowTooltip,
