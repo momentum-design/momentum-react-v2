@@ -59,7 +59,7 @@ const ExampleStory = ({ isPill }: { isPill: boolean }) => {
   );
 };
 
-const Example: StoryObj<typeof TooltipMenuTriggerCombo> = {
+const Example: StoryObj = {
   // eslint-disable-next-line react/display-name
   render: () => (
     <>
@@ -69,4 +69,27 @@ const Example: StoryObj<typeof TooltipMenuTriggerCombo> = {
   ),
 };
 
-export { Example };
+const WithDescriptionTooltip: StoryObj = {
+  // eslint-disable-next-line react/display-name
+  render: () => (
+    <TooltipMenuTriggerCombo
+      menuContent={
+        <Menu selectionMode="single" key="2">
+          <Item key="one">This is a longer text and should trim nicely...</Item>
+          <Item key="two">Two</Item>
+          <Item key="three">Three</Item>
+          <Item key="four">Four</Item>
+          <Item key="five">Five</Item>
+          <Item key="six">Six</Item>
+        </Menu>
+      }
+      tooltipContent={'This is a description'}
+      tooltipProps={{
+        type: 'description',
+      }}
+      triggerComponent={<ButtonPill>Open Menu</ButtonPill>}
+    />
+  ),
+};
+
+export { Example, WithDescriptionTooltip };
