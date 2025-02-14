@@ -11,9 +11,10 @@ import { SpatialNavigation } from './SpatialNavigation';
  */
 const SpatialNavigationProvider: FC<Props> = ({
   children,
+  onGoBack,
   navigationKeyMapping = DEFAULTS.SPATIAL_NAVIGATION_KEY_MAPPING,
 }) => {
-  const spatial = useMemo(() => new SpatialNavigation(), []);
+  const spatial = useMemo(() => new SpatialNavigation(onGoBack), [onGoBack]);
   const value = useMemo(
     () => ({
       enterKey: navigationKeyMapping.enter,
@@ -43,14 +44,15 @@ const SpatialNavigationProvider: FC<Props> = ({
   });
 
   useEffect(() => {
+    const validKeys = [
+      navigationKeyMapping.up,
+      navigationKeyMapping.down,
+      navigationKeyMapping.left,
+      navigationKeyMapping.right,
+      navigationKeyMapping.back,
+    ];
     const handleKeyDown = (evt: KeyboardEvent) => {
-      if (
-        evt.shiftKey ||
-        evt.ctrlKey ||
-        evt.altKey ||
-        evt.metaKey ||
-        !value.directionKeys.includes(evt.key)
-      )
+      if (evt.shiftKey || evt.ctrlKey || evt.altKey || evt.metaKey || !validKeys.includes(evt.key))
         return;
       if (evt.target instanceof HTMLElement) {
         spatial.setActiveElement(evt.target);
@@ -65,6 +67,8 @@ const SpatialNavigationProvider: FC<Props> = ({
           return spatial.focusNext('left');
         case navigationKeyMapping.right:
           return spatial.focusNext('right');
+        case navigationKeyMapping.back:
+          return spatial.goBack();
       }
     };
 
@@ -74,14 +78,14 @@ const SpatialNavigationProvider: FC<Props> = ({
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('focus', handleFocus);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focus', handleFocus);
     // Clean up
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('focus', handleFocus);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focus', handleFocus);
     };
-  }, [navigationKeyMapping, spatial, value.directionKeys]);
+  }, [navigationKeyMapping, spatial, value.backKey, value.directionKeys]);
 
   return (
     <SpatialNavigationContext.Provider value={value}>{children}</SpatialNavigationContext.Provider>

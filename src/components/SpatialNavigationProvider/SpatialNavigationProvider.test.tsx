@@ -9,7 +9,6 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useSpatialNavigationContext } from './SpatialNavigationProvider.utils';
 import { fireEvent, render } from '@testing-library/react';
 import { SpatialNavigation } from './SpatialNavigation';
-import userEvent from '@testing-library/user-event';
 
 jest.mock('./SpatialNavigation');
 const MockedSpatialNavigation = SpatialNavigation as unknown as Mock<SpatialNavigation>;
@@ -157,10 +156,27 @@ describe('<SpatialNavigationProvider />', () => {
       ({ modifier }) => {
         const { container } = render(<SpatialNavigationProvider />);
 
-        // await userEvent.keyboard(`{${modifier}>}{ArrowDown}{/${modifier}}`, {});
         fireEvent.keyDown(container, { key: 'ArrowDown', [`${modifier}Key`]: true });
         expect(MockedSpatialNavigation.mock.instances[0].focusNext).not.toHaveBeenCalled();
       }
     );
+
+    it('should call goBack handler when back button pressed', () => {
+      const { container } = render(<SpatialNavigationProvider />);
+
+      fireEvent.keyDown(container, { key: 'Escape' });
+
+      expect(MockedSpatialNavigation.mock.instances[0].goBack).toHaveBeenNthCalledWith(1);
+    });
+
+    it('should call goBack handler when custom back button pressed', () => {
+      const { container } = render(
+        <SpatialNavigationProvider navigationKeyMapping={CUSTOM_KEYMAP} />
+      );
+
+      fireEvent.keyDown(container, { key: 'q' });
+
+      expect(MockedSpatialNavigation.mock.instances[0].goBack).toHaveBeenNthCalledWith(1);
+    });
   });
 });

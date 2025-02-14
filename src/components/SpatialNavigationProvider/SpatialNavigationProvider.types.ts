@@ -24,12 +24,15 @@ type KeyName = string;
  */
 export type NavKeyMapping = { [T in Navigation]: KeyName };
 
+export type GoBackHandler = () => void;
+
 /**
  * Spatial navigation properties
  */
 export type Props = {
   children?: ReactNode;
   navigationKeyMapping?: NavKeyMapping;
+  onGoBack?: GoBackHandler;
 };
 
 export type SpatialNavigationContextValue =

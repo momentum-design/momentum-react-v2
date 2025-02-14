@@ -177,7 +177,10 @@ export const getElementRelativeDistances = (
   const extendedBoundRect = activeElementExpandedRects[direction];
   const elementRect = getElementRectWithMidPoint(element);
 
-  let edgeDistance = getEdgeDistance(activeElementMidPoint, elementRect, direction, farEdge) * 1.2;
+  let edgeDistance = Math.round(
+    getEdgeDistance(activeElementMidPoint, elementRect, direction, farEdge) * 1.2
+  );
+
   if (edgeDistance < 0) {
     return { element, distance: Infinity, edgeDistance };
   }
@@ -203,7 +206,7 @@ export const orderElementsByDistance = (
 
   return focusableElements
     .map((el) => getElementRelativeDistances(el, direction, active, expandedBoundingRects, farEdge))
-    .filter(({ element, edgeDistance }) => element !== activeEl && edgeDistance > 0)
+    .filter(({ element, edgeDistance }) => element !== activeEl && edgeDistance >= 0)
     .sort((a, b) => a.edgeDistance - b.edgeDistance || a.distance - b.distance);
 };
 

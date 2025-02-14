@@ -1,5 +1,5 @@
 import { getKeyboardFocusableElements } from '../../utils/navigation';
-import { Direction } from './SpatialNavigationProvider.types';
+import { Direction, GoBackHandler } from './SpatialNavigationProvider.types';
 import capitalize from 'lodash/capitalize';
 import { orderElementsByDistance } from './SpatialNavigationProvider.utils';
 
@@ -20,8 +20,15 @@ export class SpatialNavigation {
    */
   private activeElementObserver: MutationObserver;
 
-  constructor() {
+  /**
+   * Back navigation handler
+   * @private
+   */
+  private readonly goBackHandler: GoBackHandler | undefined;
+
+  constructor(goBackHandler?: GoBackHandler) {
     this.activeElementObserver = new MutationObserver(this.activeElementObserverCallback);
+    this.goBackHandler = goBackHandler;
   }
 
   /**
@@ -89,6 +96,23 @@ export class SpatialNavigation {
 
     if (nextActiveElement) {
       this.setActiveElementAndFocus(nextActiveElement);
+    }
+  }
+
+  /**
+   * Handle back action
+   *
+   * Either trigger click on goBack element if any
+   * otherwise call default go back handler
+   */
+  goBack(): void {
+    const goBackElement = getKeyboardFocusableElements(this.root).find(
+      (el) => el.dataset.spatialGoBack
+    );
+    if (goBackElement) {
+      goBackElement.click();
+    } else {
+      this.goBackHandler?.();
     }
   }
 

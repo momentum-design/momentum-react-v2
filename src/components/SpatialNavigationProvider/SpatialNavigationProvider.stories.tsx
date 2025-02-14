@@ -27,6 +27,7 @@ import Flex from '../Flex';
 import argTypes from './SpatialNavigationProvider.stories.args';
 import { DEFAULTS } from './SpatialNavigationProvider.constants';
 import { visualDebugger } from './SpatialNavigationProvider.utils';
+import ButtonGroup from '../ButtonGroup';
 
 export default {
   title: 'Momentum UI/SpatialNavigationProvider',
@@ -82,6 +83,9 @@ const Form = Template(({ backKey }) => {
           style={{
             margin: 'auto',
             maxWidth: '200rem',
+            gap: '1rem',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
           <ButtonPill ghost>Start</ButtonPill>
@@ -99,6 +103,30 @@ const Form = Template(({ backKey }) => {
             <Item key="3">Green</Item>
             <Item key="4">Yellow</Item>
           </Select>
+
+          <ButtonGroup round compressed>
+            <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '6.8rem' }}>
+              <Icon key="0" name="microphone-on" autoScale={125} style={{ marginLeft: 'auto' }} />
+              <div key="1" style={{ marginRight: 'auto' }}>
+                Mute
+              </div>
+            </ButtonPill>
+            <MenuTrigger
+              key="2"
+              placement="top-end"
+              triggerComponent={
+                <ButtonCircle outline ghost key="1" size={40}>
+                  <Icon name="arrow-down" autoScale={100} />
+                </ButtonCircle>
+              }
+              children={[
+                <Menu key="0" selectionMode="single">
+                  <Item>Item 1</Item>
+                  <Item>Item 2</Item>
+                </Menu>,
+              ]}
+            />
+          </ButtonGroup>
 
           <RadioGroup
             options={[
