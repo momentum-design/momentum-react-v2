@@ -214,7 +214,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${100}        | ${'none'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'none'}       | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'left'}  | ${100}        | ${'none'}       | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'left'}  | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'left'}  | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'left'}  | ${100}        | ${'horizontal'} | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'horizontal'} | ${'top'}         | ${2500}          | ${Infinity}
       ${'left'}  | ${100}        | ${'horizontal'} | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -223,7 +223,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${100}        | ${'horizontal'} | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'horizontal'} | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'left'}  | ${100}        | ${'horizontal'} | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'left'}  | ${100}        | ${'horizontal'} | ${'inside'}      | ${0}             | ${5.76}
+      ${'left'}  | ${100}        | ${'horizontal'} | ${'inside'}      | ${0}             | ${4}
       ${'left'}  | ${100}        | ${'vertical'}   | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'vertical'}   | ${'top'}         | ${Infinity}      | ${-12}
       ${'left'}  | ${100}        | ${'vertical'}   | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -232,7 +232,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${100}        | ${'vertical'}   | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'vertical'}   | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'left'}  | ${100}        | ${'vertical'}   | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'left'}  | ${100}        | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'left'}  | ${100}        | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-10}
       ${'left'}  | ${100}        | ${'both'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'both'}       | ${'top'}         | ${2500}          | ${Infinity}
       ${'left'}  | ${100}        | ${'both'}       | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -241,7 +241,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${100}        | ${'both'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${100}        | ${'both'}       | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'left'}  | ${100}        | ${'both'}       | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'left'}  | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'left'}  | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'left'}  | ${10}         | ${'none'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'none'}       | ${'top'}         | ${Infinity}      | ${-12}
       ${'left'}  | ${10}         | ${'none'}       | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -250,7 +250,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${10}         | ${'none'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'none'}       | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'left'}  | ${10}         | ${'none'}       | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'left'}  | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'left'}  | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'left'}  | ${10}         | ${'horizontal'} | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'horizontal'} | ${'top'}         | ${2500}          | ${Infinity}
       ${'left'}  | ${10}         | ${'horizontal'} | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -259,7 +259,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${10}         | ${'horizontal'} | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'horizontal'} | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'left'}  | ${10}         | ${'horizontal'} | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'left'}  | ${10}         | ${'horizontal'} | ${'inside'}      | ${0}             | ${5.76}
+      ${'left'}  | ${10}         | ${'horizontal'} | ${'inside'}      | ${0}             | ${4}
       ${'left'}  | ${10}         | ${'vertical'}   | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'vertical'}   | ${'top'}         | ${Infinity}      | ${-12}
       ${'left'}  | ${10}         | ${'vertical'}   | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -268,7 +268,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${10}         | ${'vertical'}   | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'vertical'}   | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'left'}  | ${10}         | ${'vertical'}   | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'left'}  | ${10}         | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'left'}  | ${10}         | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-10}
       ${'left'}  | ${10}         | ${'both'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'both'}       | ${'top'}         | ${2500}          | ${Infinity}
       ${'left'}  | ${10}         | ${'both'}       | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -277,7 +277,7 @@ describe('Spatial navigation utils', () => {
       ${'left'}  | ${10}         | ${'both'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'left'}  | ${10}         | ${'both'}       | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'left'}  | ${10}         | ${'both'}       | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'left'}  | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'left'}  | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'right'} | ${100}        | ${'none'}       | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'right'} | ${100}        | ${'none'}       | ${'top'}         | ${Infinity}      | ${-12}
       ${'right'} | ${100}        | ${'none'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -286,7 +286,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${100}        | ${'none'}       | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'right'} | ${100}        | ${'none'}       | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'right'} | ${100}        | ${'none'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'right'} | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'right'} | ${100}        | ${'horizontal'} | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'right'} | ${100}        | ${'horizontal'} | ${'top'}         | ${2500}          | ${Infinity}
       ${'right'} | ${100}        | ${'horizontal'} | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -295,7 +295,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${100}        | ${'horizontal'} | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'right'} | ${100}        | ${'horizontal'} | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'right'} | ${100}        | ${'horizontal'} | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${100}        | ${'horizontal'} | ${'inside'}      | ${0}             | ${5.76}
+      ${'right'} | ${100}        | ${'horizontal'} | ${'inside'}      | ${0}             | ${4}
       ${'right'} | ${100}        | ${'vertical'}   | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'right'} | ${100}        | ${'vertical'}   | ${'top'}         | ${Infinity}      | ${-12}
       ${'right'} | ${100}        | ${'vertical'}   | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -304,7 +304,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${100}        | ${'vertical'}   | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'right'} | ${100}        | ${'vertical'}   | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'right'} | ${100}        | ${'vertical'}   | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${100}        | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'right'} | ${100}        | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-10}
       ${'right'} | ${100}        | ${'both'}       | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'right'} | ${100}        | ${'both'}       | ${'top'}         | ${2500}          | ${Infinity}
       ${'right'} | ${100}        | ${'both'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -313,7 +313,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${100}        | ${'both'}       | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'right'} | ${100}        | ${'both'}       | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'right'} | ${100}        | ${'both'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'right'} | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'right'} | ${10}         | ${'none'}       | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'right'} | ${10}         | ${'none'}       | ${'top'}         | ${Infinity}      | ${-12}
       ${'right'} | ${10}         | ${'none'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -322,7 +322,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${10}         | ${'none'}       | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'right'} | ${10}         | ${'none'}       | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'right'} | ${10}         | ${'none'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'right'} | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'right'} | ${10}         | ${'horizontal'} | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'right'} | ${10}         | ${'horizontal'} | ${'top'}         | ${2500}          | ${Infinity}
       ${'right'} | ${10}         | ${'horizontal'} | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -331,7 +331,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${10}         | ${'horizontal'} | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'right'} | ${10}         | ${'horizontal'} | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'right'} | ${10}         | ${'horizontal'} | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${10}         | ${'horizontal'} | ${'inside'}      | ${0}             | ${5.76}
+      ${'right'} | ${10}         | ${'horizontal'} | ${'inside'}      | ${0}             | ${4}
       ${'right'} | ${10}         | ${'vertical'}   | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'right'} | ${10}         | ${'vertical'}   | ${'top'}         | ${Infinity}      | ${-12}
       ${'right'} | ${10}         | ${'vertical'}   | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -340,7 +340,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${10}         | ${'vertical'}   | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'right'} | ${10}         | ${'vertical'}   | ${'bottom'}      | ${Infinity}      | ${-12}
       ${'right'} | ${10}         | ${'vertical'}   | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${10}         | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'right'} | ${10}         | ${'vertical'}   | ${'inside'}      | ${Infinity}      | ${-10}
       ${'right'} | ${10}         | ${'both'}       | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'right'} | ${10}         | ${'both'}       | ${'top'}         | ${2500}          | ${Infinity}
       ${'right'} | ${10}         | ${'both'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -349,7 +349,7 @@ describe('Spatial navigation utils', () => {
       ${'right'} | ${10}         | ${'both'}       | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'right'} | ${10}         | ${'both'}       | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'right'} | ${10}         | ${'both'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'right'} | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'right'} | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'up'}    | ${100}        | ${'none'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${100}        | ${'none'}       | ${'top'}         | ${2500}          | ${2304}
       ${'up'}    | ${100}        | ${'none'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -358,7 +358,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${100}        | ${'none'}       | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'up'}    | ${100}        | ${'none'}       | ${'bottom'}      | ${Infinity}      | ${-72}
       ${'up'}    | ${100}        | ${'none'}       | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'up'}    | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'up'}    | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'up'}    | ${100}        | ${'horizontal'} | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${100}        | ${'horizontal'} | ${'top'}         | ${2500}          | ${2304}
       ${'up'}    | ${100}        | ${'horizontal'} | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -367,7 +367,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${100}        | ${'horizontal'} | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'up'}    | ${100}        | ${'horizontal'} | ${'bottom'}      | ${Infinity}      | ${-72}
       ${'up'}    | ${100}        | ${'horizontal'} | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'up'}    | ${100}        | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'up'}    | ${100}        | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-10}
       ${'up'}    | ${100}        | ${'vertical'}   | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${100}        | ${'vertical'}   | ${'top'}         | ${2500}          | ${3600}
       ${'up'}    | ${100}        | ${'vertical'}   | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -376,7 +376,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${100}        | ${'vertical'}   | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'up'}    | ${100}        | ${'vertical'}   | ${'bottom'}      | ${Infinity}      | ${-60}
       ${'up'}    | ${100}        | ${'vertical'}   | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'up'}    | ${100}        | ${'vertical'}   | ${'inside'}      | ${0}             | ${5.76}
+      ${'up'}    | ${100}        | ${'vertical'}   | ${'inside'}      | ${0}             | ${4}
       ${'up'}    | ${100}        | ${'both'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${100}        | ${'both'}       | ${'top'}         | ${2500}          | ${3600}
       ${'up'}    | ${100}        | ${'both'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -385,7 +385,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${100}        | ${'both'}       | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'up'}    | ${100}        | ${'both'}       | ${'bottom'}      | ${Infinity}      | ${-60}
       ${'up'}    | ${100}        | ${'both'}       | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'up'}    | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'up'}    | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'up'}    | ${10}         | ${'none'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${10}         | ${'none'}       | ${'top'}         | ${2500}          | ${Infinity}
       ${'up'}    | ${10}         | ${'none'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -394,7 +394,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${10}         | ${'none'}       | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'up'}    | ${10}         | ${'none'}       | ${'bottom'}      | ${Infinity}      | ${-72}
       ${'up'}    | ${10}         | ${'none'}       | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'up'}    | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'up'}    | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'up'}    | ${10}         | ${'horizontal'} | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${10}         | ${'horizontal'} | ${'top'}         | ${2500}          | ${Infinity}
       ${'up'}    | ${10}         | ${'horizontal'} | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -403,7 +403,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${10}         | ${'horizontal'} | ${'bottomLeft'}  | ${Infinity}      | ${-72}
       ${'up'}    | ${10}         | ${'horizontal'} | ${'bottom'}      | ${Infinity}      | ${-72}
       ${'up'}    | ${10}         | ${'horizontal'} | ${'bottomRight'} | ${Infinity}      | ${-72}
-      ${'up'}    | ${10}         | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'up'}    | ${10}         | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-10}
       ${'up'}    | ${10}         | ${'vertical'}   | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${10}         | ${'vertical'}   | ${'top'}         | ${2500}          | ${Infinity}
       ${'up'}    | ${10}         | ${'vertical'}   | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -412,7 +412,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${10}         | ${'vertical'}   | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'up'}    | ${10}         | ${'vertical'}   | ${'bottom'}      | ${Infinity}      | ${-60}
       ${'up'}    | ${10}         | ${'vertical'}   | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'up'}    | ${10}         | ${'vertical'}   | ${'inside'}      | ${0}             | ${5.76}
+      ${'up'}    | ${10}         | ${'vertical'}   | ${'inside'}      | ${0}             | ${4}
       ${'up'}    | ${10}         | ${'both'}       | ${'topLeft'}     | ${5000}          | ${Infinity}
       ${'up'}    | ${10}         | ${'both'}       | ${'top'}         | ${2500}          | ${Infinity}
       ${'up'}    | ${10}         | ${'both'}       | ${'topRight'}    | ${5000}          | ${Infinity}
@@ -421,7 +421,7 @@ describe('Spatial navigation utils', () => {
       ${'up'}    | ${10}         | ${'both'}       | ${'bottomLeft'}  | ${Infinity}      | ${-60}
       ${'up'}    | ${10}         | ${'both'}       | ${'bottom'}      | ${Infinity}      | ${-60}
       ${'up'}    | ${10}         | ${'both'}       | ${'bottomRight'} | ${Infinity}      | ${-60}
-      ${'up'}    | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'up'}    | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'down'}  | ${100}        | ${'none'}       | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'down'}  | ${100}        | ${'none'}       | ${'top'}         | ${Infinity}      | ${-72}
       ${'down'}  | ${100}        | ${'none'}       | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -430,7 +430,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${100}        | ${'none'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${100}        | ${'none'}       | ${'bottom'}      | ${2500}          | ${2304}
       ${'down'}  | ${100}        | ${'none'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'down'}  | ${100}        | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'down'}  | ${100}        | ${'horizontal'} | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'down'}  | ${100}        | ${'horizontal'} | ${'top'}         | ${Infinity}      | ${-72}
       ${'down'}  | ${100}        | ${'horizontal'} | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -439,7 +439,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${100}        | ${'horizontal'} | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${100}        | ${'horizontal'} | ${'bottom'}      | ${2500}          | ${2304}
       ${'down'}  | ${100}        | ${'horizontal'} | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${100}        | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'down'}  | ${100}        | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-10}
       ${'down'}  | ${100}        | ${'vertical'}   | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'down'}  | ${100}        | ${'vertical'}   | ${'top'}         | ${Infinity}      | ${-60}
       ${'down'}  | ${100}        | ${'vertical'}   | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -448,7 +448,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${100}        | ${'vertical'}   | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${100}        | ${'vertical'}   | ${'bottom'}      | ${2500}          | ${3600}
       ${'down'}  | ${100}        | ${'vertical'}   | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${100}        | ${'vertical'}   | ${'inside'}      | ${0}             | ${5.76}
+      ${'down'}  | ${100}        | ${'vertical'}   | ${'inside'}      | ${0}             | ${4}
       ${'down'}  | ${100}        | ${'both'}       | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'down'}  | ${100}        | ${'both'}       | ${'top'}         | ${Infinity}      | ${-60}
       ${'down'}  | ${100}        | ${'both'}       | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -457,7 +457,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${100}        | ${'both'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${100}        | ${'both'}       | ${'bottom'}      | ${2500}          | ${3600}
       ${'down'}  | ${100}        | ${'both'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'down'}  | ${100}        | ${'both'}       | ${'inside'}      | ${0}             | ${4}
       ${'down'}  | ${10}         | ${'none'}       | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'down'}  | ${10}         | ${'none'}       | ${'top'}         | ${Infinity}      | ${-72}
       ${'down'}  | ${10}         | ${'none'}       | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -466,7 +466,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${10}         | ${'none'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${10}         | ${'none'}       | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'down'}  | ${10}         | ${'none'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'down'}  | ${10}         | ${'none'}       | ${'inside'}      | ${Infinity}      | ${-10}
       ${'down'}  | ${10}         | ${'horizontal'} | ${'topLeft'}     | ${Infinity}      | ${-72}
       ${'down'}  | ${10}         | ${'horizontal'} | ${'top'}         | ${Infinity}      | ${-72}
       ${'down'}  | ${10}         | ${'horizontal'} | ${'topRight'}    | ${Infinity}      | ${-72}
@@ -475,7 +475,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${10}         | ${'horizontal'} | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${10}         | ${'horizontal'} | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'down'}  | ${10}         | ${'horizontal'} | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${10}         | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-9.6}
+      ${'down'}  | ${10}         | ${'horizontal'} | ${'inside'}      | ${Infinity}      | ${-10}
       ${'down'}  | ${10}         | ${'vertical'}   | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'down'}  | ${10}         | ${'vertical'}   | ${'top'}         | ${Infinity}      | ${-60}
       ${'down'}  | ${10}         | ${'vertical'}   | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -484,7 +484,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${10}         | ${'vertical'}   | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${10}         | ${'vertical'}   | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'down'}  | ${10}         | ${'vertical'}   | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${10}         | ${'vertical'}   | ${'inside'}      | ${0}             | ${5.76}
+      ${'down'}  | ${10}         | ${'vertical'}   | ${'inside'}      | ${0}             | ${4}
       ${'down'}  | ${10}         | ${'both'}       | ${'topLeft'}     | ${Infinity}      | ${-60}
       ${'down'}  | ${10}         | ${'both'}       | ${'top'}         | ${Infinity}      | ${-60}
       ${'down'}  | ${10}         | ${'both'}       | ${'topRight'}    | ${Infinity}      | ${-60}
@@ -493,7 +493,7 @@ describe('Spatial navigation utils', () => {
       ${'down'}  | ${10}         | ${'both'}       | ${'bottomLeft'}  | ${5000}          | ${Infinity}
       ${'down'}  | ${10}         | ${'both'}       | ${'bottom'}      | ${2500}          | ${Infinity}
       ${'down'}  | ${10}         | ${'both'}       | ${'bottomRight'} | ${5000}          | ${Infinity}
-      ${'down'}  | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${5.76}
+      ${'down'}  | ${10}         | ${'both'}       | ${'inside'}      | ${0}             | ${4}
     `(
       'when direction is $direction, size is $expansionSize, far edge is $farEdge and element is $elementName from active, distance is $expectedDistance and edgeDistance is $expectedEdgeDistance',
       ({

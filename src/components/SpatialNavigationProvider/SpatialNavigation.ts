@@ -54,7 +54,7 @@ export class SpatialNavigation {
    */
   private findActiveElement(elements: HTMLElement[]): void {
     const currentActiveElement = this.getActiveElement();
-    if (!this.activeElement || !elements.includes(currentActiveElement)) {
+    if (!currentActiveElement || !elements.includes(currentActiveElement)) {
       const nextActiveElement = elements[0];
       if (nextActiveElement) {
         this.setActiveElementAndFocus(nextActiveElement);
