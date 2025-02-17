@@ -12,13 +12,7 @@ import {
   TreeContext,
   useTreeContext,
 } from './Tree.utils';
-import {
-  TreeNodeRecord,
-  TreeIdNodeMap,
-  ToggleTreeNode,
-  TreeContextValue,
-  TreeNodeId,
-} from './Tree.types';
+import { TreeNodeRecord, TreeIdNodeMap, TreeContextValue, TreeNodeId } from './Tree.types';
 import { createTreeNode as tNode } from './test.utils';
 import { renderHook } from '@testing-library/react-hooks';
 
@@ -126,20 +120,17 @@ describe('Tree utils', () => {
 
   describe('getNextActiveNode', () => {
     let tree: TreeIdNodeMap;
-    let toggleTreeNode: ToggleTreeNode;
     beforeEach(() => {
       tree = createTree();
-      toggleTreeNode = jest.fn();
     });
 
     it('should returns with the same nodeId when it is not found in the tree', () => {
       jest.spyOn(console, 'warn').mockImplementation(() => {
         /**/
       });
-      const result = getNextActiveNode(tree, 'not-found', 'ArrowDown', true, toggleTreeNode);
+      const result = getNextActiveNode(tree, 'not-found', 'ArrowDown', true);
 
-      expect(toggleTreeNode).not.toHaveBeenCalled();
-      expect(result).toEqual('not-found');
+      expect(result).toEqual({ action: 'noop', nodeId: 'not-found' });
       // eslint-disable-next-line no-console
       expect(console.warn).toHaveBeenCalledTimes(1);
     });
@@ -148,88 +139,67 @@ describe('Tree utils', () => {
       describe('and press arrow left', () => {
         it('closes the node when it was open', () => {
           const activeNode = '2.2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true);
 
-          expect(toggleTreeNode).toHaveBeenCalledWith(activeNode);
-          expect(result).toEqual('2.2');
+          expect(result).toEqual({ action: 'close', nodeId: '2.2' });
         });
 
         it('moves up one level when the active node was closed', () => {
           const activeNode = '4.1';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('4');
+          expect(result).toEqual({ action: 'move', nextNodeId: '4' });
         });
 
         it('moves up one level when active node is a leaf', () => {
           const activeNode = '4.2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('4');
+          expect(result).toEqual({ action: 'move', nextNodeId: '4' });
         });
 
         it('does nothing when the node is in the root', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '1' });
         });
 
         it('should work with single level tree', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(
-            createSingleLevelTree(),
-            activeNode,
-            'ArrowLeft',
-            true,
-            toggleTreeNode
-          );
+          const result = getNextActiveNode(createSingleLevelTree(), activeNode, 'ArrowLeft', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '1' });
         });
       });
 
       describe('and press arrow right', () => {
         it('opens active node when it was closed', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', true);
 
-          expect(toggleTreeNode).toHaveBeenCalledWith(activeNode);
-          expect(result).toEqual('1');
+          expect(result).toEqual({ action: 'open', nodeId: '1' });
         });
 
         it('activates the first child of the already open node', () => {
           const activeNode = '2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('2.1');
+          expect(result).toEqual({ action: 'move', nextNodeId: '2.1' });
         });
 
         it('does nothing when the active node is a leaf', () => {
           const activeNode = '4.2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '4.2' });
         });
 
         it('should work with single level tree', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(
-            createSingleLevelTree(),
-            activeNode,
-            'ArrowRight',
-            true,
-            toggleTreeNode
-          );
+          const result = getNextActiveNode(createSingleLevelTree(), activeNode, 'ArrowRight', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '1' });
         });
       });
 
@@ -249,24 +219,20 @@ describe('Tree utils', () => {
           ${'4.1'}   | ${'4.2'}
           ${'4.2'}   | ${'4.2'}
         `('active node moves down in the three from $from to $to', ({ from, to }) => {
-          const result = getNextActiveNode(tree, from, 'ArrowDown', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, from, 'ArrowDown', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(to);
+          if (from === '4.2' && to === '4.2') {
+            expect(result).toEqual({ action: 'noop', nodeId: to });
+          } else {
+            expect(result).toEqual({ action: 'move', nextNodeId: to });
+          }
         });
 
         it('should work with single level tree', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(
-            createSingleLevelTree(),
-            activeNode,
-            'ArrowDown',
-            true,
-            toggleTreeNode
-          );
+          const result = getNextActiveNode(createSingleLevelTree(), activeNode, 'ArrowDown', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('2');
+          expect(result).toEqual({ action: 'move', nextNodeId: '2' });
         });
 
         it('should return with the last node id before the loop restart when the tree has a loop', () => {
@@ -276,9 +242,10 @@ describe('Tree utils', () => {
           const loopTree = createTree();
           loopTree.get('2').parent = '2.2.3';
 
-          expect(getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true, toggleTreeNode)).toEqual(
-            '2.2'
-          );
+          expect(getNextActiveNode(loopTree, '2.2.3', 'ArrowDown', true)).toEqual({
+            action: 'move',
+            nextNodeId: '2.2',
+          });
         });
       });
 
@@ -298,24 +265,20 @@ describe('Tree utils', () => {
           ${'1'}     | ${'0'}
           ${'0'}     | ${'0'}
         `('active node moves up in the three from $from to $to', ({ from, to }) => {
-          const result = getNextActiveNode(tree, from, 'ArrowUp', true, toggleTreeNode);
+          const result = getNextActiveNode(tree, from, 'ArrowUp', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(to);
+          if (from === '0' && to === '0') {
+            expect(result).toEqual({ action: 'noop', nodeId: to });
+          } else {
+            expect(result).toEqual({ action: 'move', nextNodeId: to });
+          }
         });
 
         it('should work with single level tree', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(
-            createSingleLevelTree(),
-            activeNode,
-            'ArrowUp',
-            true,
-            toggleTreeNode
-          );
+          const result = getNextActiveNode(createSingleLevelTree(), activeNode, 'ArrowUp', true);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('0');
+          expect(result).toEqual({ action: 'move', nextNodeId: '0' });
         });
       });
 
@@ -326,7 +289,10 @@ describe('Tree utils', () => {
         const loopTree = createTree();
         loopTree.get('2.2').children.push('3');
 
-        expect(getNextActiveNode(loopTree, '3', 'ArrowUp', true, toggleTreeNode)).toEqual('3');
+        expect(getNextActiveNode(loopTree, '3', 'ArrowUp', true)).toEqual({
+          action: 'move',
+          nextNodeId: '3',
+        });
         // eslint-disable-next-line no-console
         expect(console.error).toHaveBeenCalledTimes(1);
       });
@@ -336,34 +302,30 @@ describe('Tree utils', () => {
       describe('and press arrow left', () => {
         it('closes the node when it was open', () => {
           const activeNode = '2.2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false);
 
-          expect(toggleTreeNode).toHaveBeenCalledWith(activeNode);
-          expect(result).toEqual('2.2');
+          expect(result).toEqual({ action: 'close', nodeId: '2.2' });
         });
 
         it('moves up one level when the active node was closed', () => {
           const activeNode = '4.1';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('4');
+          expect(result).toEqual({ action: 'move', nextNodeId: '4' });
         });
 
         it('moves up one level when active node is a leaf', () => {
           const activeNode = '4.2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('4');
+          expect(result).toEqual({ action: 'move', nextNodeId: '4' });
         });
 
         it('moves to the root when the child os the root is active', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('<root>');
+          expect(result).toEqual({ action: 'move', nextNodeId: '<root>' });
         });
 
         it('does nothing when the root node is active', () => {
@@ -371,46 +333,41 @@ describe('Tree utils', () => {
 
           const rootNode = '<root>';
           tree.get(rootNode).isOpen = false;
-          const result = getNextActiveNode(tree, rootNode, 'ArrowLeft', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, rootNode, 'ArrowLeft', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(rootNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '<root>' });
         });
 
         it('should work with single level tree', () => {
           const activeNode = '<root>';
           const tree = createSingleLevelTree();
           tree.get(activeNode).isOpen = false;
-          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowLeft', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '<root>' });
         });
       });
 
       describe('and press arrow right', () => {
         it('opens active node when it was closed', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', false);
 
-          expect(toggleTreeNode).toHaveBeenCalledWith(activeNode);
-          expect(result).toEqual('1');
+          expect(result).toEqual({ action: 'open', nodeId: '1' });
         });
 
         it('activates the first child of the already open node', () => {
           const activeNode = '2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('2.1');
+          expect(result).toEqual({ action: 'move', nextNodeId: '2.1' });
         });
 
         it('does nothing when the active node is a leaf', () => {
           const activeNode = '4.2';
-          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, activeNode, 'ArrowRight', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '4.2' });
         });
 
         it('should work with single level tree', () => {
@@ -419,12 +376,10 @@ describe('Tree utils', () => {
             createSingleLevelTree(),
             activeNode,
             'ArrowRight',
-            false,
-            toggleTreeNode
+            false
           );
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(activeNode);
+          expect(result).toEqual({ action: 'noop', nodeId: '1' });
         });
       });
 
@@ -444,24 +399,20 @@ describe('Tree utils', () => {
           ${'4.1'}   | ${'4.2'}
           ${'4.2'}   | ${'4.2'}
         `('active node moves down in the three from $from to $to', ({ from, to }) => {
-          const result = getNextActiveNode(tree, from, 'ArrowDown', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, from, 'ArrowDown', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(to);
+          if (from === '4.2' && to === '4.2') {
+            expect(result).toEqual({ action: 'noop', nodeId: to });
+          } else {
+            expect(result).toEqual({ action: 'move', nextNodeId: to });
+          }
         });
 
         it('should work with single level tree', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(
-            createSingleLevelTree(),
-            activeNode,
-            'ArrowDown',
-            false,
-            toggleTreeNode
-          );
+          const result = getNextActiveNode(createSingleLevelTree(), activeNode, 'ArrowDown', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('2');
+          expect(result).toEqual({ action: 'move', nextNodeId: '2' });
         });
       });
 
@@ -481,24 +432,16 @@ describe('Tree utils', () => {
           ${'1'}     | ${'0'}
           ${'0'}     | ${'<root>'}
         `('active node moves up in the three from $from to $to', ({ from, to }) => {
-          const result = getNextActiveNode(tree, from, 'ArrowUp', false, toggleTreeNode);
+          const result = getNextActiveNode(tree, from, 'ArrowUp', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual(to);
+          expect(result).toEqual({ action: 'move', nextNodeId: to });
         });
 
         it('should work with single level tree', () => {
           const activeNode = '1';
-          const result = getNextActiveNode(
-            createSingleLevelTree(),
-            activeNode,
-            'ArrowUp',
-            false,
-            toggleTreeNode
-          );
+          const result = getNextActiveNode(createSingleLevelTree(), activeNode, 'ArrowUp', false);
 
-          expect(toggleTreeNode).not.toHaveBeenCalled();
-          expect(result).toEqual('0');
+          expect(result).toEqual({ action: 'move', nextNodeId: '0' });
         });
       });
     });
@@ -506,18 +449,16 @@ describe('Tree utils', () => {
     describe('when press enter', () => {
       it('should do nothing on leaf nodes', () => {
         const activeNode = '4.2';
-        const result = getNextActiveNode(tree, activeNode, 'Enter', true, toggleTreeNode);
+        const result = getNextActiveNode(tree, activeNode, 'Enter', true);
 
-        expect(toggleTreeNode).not.toHaveBeenCalled();
-        expect(result).toEqual(activeNode);
+        expect(result).toEqual({ action: 'noop', nodeId: '4.2' });
       });
 
       it('should do nothing on non-leaf nodes', () => {
         const activeNode = '4';
-        const result = getNextActiveNode(tree, activeNode, 'Enter', true, toggleTreeNode);
+        const result = getNextActiveNode(tree, activeNode, 'Enter', true);
 
-        expect(toggleTreeNode).not.toHaveBeenCalled();
-        expect(result).toEqual(activeNode);
+        expect(result).toEqual({ action: 'noop', nodeId: '4' });
       });
     });
   });

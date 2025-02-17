@@ -53,7 +53,7 @@ describe('navigation', () => {
       <button aria-hidden='false' id='13'></button>
       <button disabled id='14'></button>
     `),
-        false
+        { includeTabbableOnly: false }
       ).map((n) => n.id);
 
       expect(ids).toEqual(['2', '3', '4', '5', '6', '7', '8', '9', '13']);
@@ -151,7 +151,7 @@ describe('navigation', () => {
         <button id="1" tabindex='0' />
         <button id="2" disabled tabindex='-1' />
     `),
-        false
+        { includeTabbableOnly: false }
       ).map((n) => n.id);
 
       expect(ids).toEqual(['1']);

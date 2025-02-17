@@ -44,13 +44,21 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
     });
   };
 
+  const menuListProps = {
+    ...listBoxProps,
+    onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+      e.nativeEvent.stopImmediatePropagation();
+      listBoxProps.onKeyDown(e);
+    },
+  };
+
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
     <ListBoxContext.Provider value={state}>
       <ListContext.Provider value={{}}>
         <MenuListBackground
-          {...listBoxProps}
+          {...menuListProps}
           color={'primary'}
           ref={ref}
           style={style}

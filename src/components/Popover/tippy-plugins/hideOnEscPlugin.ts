@@ -4,9 +4,21 @@ import { dispatchEvent, EventType } from '../Popover.events';
 
 const openedTippyInstances: TippyInstance[] = [];
 
+let hideKeys = ['Escape'];
+
+/**
+ * Change hide key list
+ * @param newHideKeys
+ */
+export const setHideKeys = (newHideKeys: string[]): void => {
+  hideKeys = newHideKeys.slice();
+};
+
 // hide the last opened popover when Escape key is pressed
 function onKeyDown(event: KeyboardEvent) {
-  if (event.key === 'Escape' && openedTippyInstances.length !== 0) {
+  if (hideKeys.includes(event.key) && openedTippyInstances.length !== 0) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
     const lastIdx = openedTippyInstances.length - 1;
     openedTippyInstances[lastIdx].hide();
   }
