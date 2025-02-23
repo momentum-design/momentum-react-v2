@@ -97,31 +97,33 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
           fillColor="var(--mds-color-theme-indicator-attention)"
           name="warning"
           scale={14}
-          strokeColor="none"
           weight="filled"
         >
-          <div
-            aria-hidden="true"
+          <Icon
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-            role="img"
+            data-autoscale={false}
+            data-scale={14}
+            data-test="warning"
+            name="warning-filled"
+            style={
+              Object {
+                "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-attention)",
+              }
+            }
           >
-            <svg
-              aria-hidden="true"
-              className=""
+            <mdc-icon
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               data-autoscale={false}
               data-scale={14}
               data-test="warning"
-              height="100%"
               style={
                 Object {
-                  "fill": "var(--mds-color-theme-indicator-attention)",
-                  "stroke": "none",
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-attention)",
                 }
               }
-              viewBox="0, 0, 32, 32"
-              width="100%"
+              suppressHydrationWarning={true}
             />
-          </div>
+          </Icon>
         </Icon>
       </div>
     </Presence>
@@ -147,24 +149,23 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
       scale={16}
       weight="bold"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-avatar-wrapper-children md-avatar-icon-wrapper md-icon-no-shrink"
-        role="img"
+      <Icon
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-avatar-wrapper-children md-avatar-icon-wrapper"
+        data-autoscale={false}
+        data-scale={16}
+        data-test="check"
+        name="check-bold"
+        style={Object {}}
       >
-        <svg
-          aria-hidden="true"
-          className=""
+        <mdc-icon
+          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-avatar-wrapper-children md-avatar-icon-wrapper"
           data-autoscale={false}
           data-scale={16}
           data-test="check"
-          fill="currentColor"
-          height="100%"
           style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
+          suppressHydrationWarning={true}
         />
-      </div>
+      </Icon>
     </Icon>
   </div>
 </Avatar>
@@ -191,24 +192,23 @@ exports[`Avatar snapshot should match snapshot with iconOnHover 1`] = `
         scale={16}
         weight="bold"
       >
-        <div
-          aria-hidden="true"
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-avatar-wrapper-children md-avatar-icon-wrapper md-icon-no-shrink"
-          role="img"
+        <Icon
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-avatar-wrapper-children md-avatar-icon-wrapper"
+          data-autoscale={false}
+          data-scale={16}
+          data-test="check"
+          name="check-bold"
+          style={Object {}}
         >
-          <svg
-            aria-hidden="true"
-            className=""
+          <mdc-icon
+            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-avatar-wrapper-children md-avatar-icon-wrapper"
             data-autoscale={false}
             data-scale={16}
             data-test="check"
-            fill="currentColor"
-            height="100%"
             style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
+            suppressHydrationWarning={true}
           />
-        </div>
+        </Icon>
       </Icon>
     </div>
   </div>
@@ -480,31 +480,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-stable)"
             name="unread"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="unread"
+              name="unread-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-stable)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="unread"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-stable)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-stable)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -550,31 +552,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="camera-presence"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="camera-presence"
+              name="camera-presence-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="camera-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-unstable)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -620,31 +624,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="meetings-presence"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="meetings-presence"
+              name="meetings-presence-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="meetings-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-unstable)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -690,31 +696,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="handset"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="handset"
+              name="handset-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="handset"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-unstable)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -760,31 +768,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-attention)"
             name="dnd-presence"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="dnd-presence"
+              name="dnd-presence-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-attention)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="dnd-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-attention)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-attention)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -830,31 +840,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-attention)"
             name="share-screen"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="share-screen"
+              name="share-screen-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-attention)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="share-screen"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-attention)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-attention)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -900,31 +912,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="quiet-hours-presence"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="quiet-hours-presence"
+              name="quiet-hours-presence-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="quiet-hours-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-locked)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -970,31 +984,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="recents-presence"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="recents-presence"
+              name="recents-presence-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="recents-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-locked)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -1040,31 +1056,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="pto-presence"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="pto-presence"
+              name="pto-presence-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="pto-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-locked)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -1110,31 +1128,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="busy-presence"
             scale={14}
-            strokeColor="none"
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="busy-presence"
+              name="busy-presence-bold"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="busy-presence"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-unstable)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-unstable)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -1180,31 +1200,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="phone"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="phone"
+              name="phone-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="phone"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-locked)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -1250,31 +1272,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="generic-device-video"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="generic-device-video"
+              name="generic-device-video-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="generic-device-video"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-locked)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>
@@ -1320,31 +1344,33 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="pause"
             scale={14}
-            strokeColor="none"
             weight="filled"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={14}
+              data-test="pause"
+              name="pause-filled"
+              style={
+                Object {
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
+                }
+              }
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={14}
                 data-test="pause"
-                height="100%"
                 style={
                   Object {
-                    "fill": "var(--mds-color-theme-indicator-locked)",
-                    "stroke": "none",
+                    "--mdc-icon-fill-color": "var(--mds-color-theme-indicator-locked)",
                   }
                 }
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </div>
       </Presence>

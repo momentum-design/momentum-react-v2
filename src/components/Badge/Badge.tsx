@@ -24,7 +24,6 @@ const Badge: FC<Props> = (props: Props) => {
           weight="bold"
           scale={12}
           fillColor={'var(--mds-color-theme-background-accent-normal)'}
-          strokeColor="none"
         />
       ) : null}
     </div>

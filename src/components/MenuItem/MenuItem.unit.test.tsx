@@ -106,11 +106,7 @@ describe('<MenuItem />', () => {
       ).toEqual(true);
 
       expect(
-        element
-          .find(ListItemBaseSection)
-          .filter({ position: 'start' })
-          .find('.md-menu-item-tick-icon')
-          .exists()
+        element.find(ListItemBaseSection).filter({ position: 'start' }).find('mdc-icon').exists()
       ).toEqual(false);
 
       expect(
@@ -143,11 +139,7 @@ describe('<MenuItem />', () => {
       ).toEqual(false);
 
       expect(
-        element
-          .find(ListItemBaseSection)
-          .filter({ position: 'start' })
-          .find('.md-menu-item-tick-icon')
-          .exists()
+        element.find(ListItemBaseSection).filter({ position: 'start' }).find('mdc-icon').exists()
       ).toEqual(true);
 
       expect(
@@ -195,11 +187,7 @@ describe('<MenuItem />', () => {
       const element = wrapper.find('li');
 
       expect(
-        element
-          .find(ListItemBaseSection)
-          .filter({ position: 'end' })
-          .find('.md-menu-item-tick-icon')
-          .exists()
+        element.find(ListItemBaseSection).filter({ position: 'end' }).find('mdc-icon').exists()
       ).toEqual(true);
 
       expect(

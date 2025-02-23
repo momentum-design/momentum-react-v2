@@ -142,7 +142,6 @@ const AvatarMeetingsListItem: FC<Props> = (props: Props) => {
               weight="bold"
               scale={16}
               fillColor={isMuted && 'var(--mds-color-theme-text-error-normal)'}
-              strokeColor="none"
             />
           </ButtonCircle>
         )}

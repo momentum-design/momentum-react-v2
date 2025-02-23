@@ -227,7 +227,11 @@ exports[`<AlertBanner /> snapshot should match snapshot with image 1`] = `
     <div
       className="md-alert-banner-image"
     >
-      A
+      <div
+        className=""
+      >
+        A
+      </div>
     </div>
     <p
       className="md-alert-banner-label"

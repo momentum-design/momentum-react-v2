@@ -52,11 +52,11 @@
         }
       }
 
-      svg {
-        fill: var(--mds-color-theme-text-primary-disabled);
+      mdc-icon {
+        --mdc-icon-fill-color: var(--mds-color-theme-text-primary-disabled);
 
         @media (forced-colors: active) {
-          fill: GrayText !important;
+          --mdc-icon-fill-color: GrayText !important;
         }
       }
     }
@@ -78,8 +78,8 @@
       color: var(--mds-color-theme-text-primary-disabled);
     }
 
-    svg {
-      fill: var(--mds-color-theme-text-primary-disabled);
+    mdc-icon {
+      --mdc-icon-fill-color: var(--mds-color-theme-text-primary-disabled);
     }
   }
 

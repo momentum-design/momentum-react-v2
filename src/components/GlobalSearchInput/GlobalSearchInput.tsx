@@ -43,6 +43,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       setAriaAlert(newFilters[0].translations.filterAdded);
     }
     setPreviousFilters(filters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(filters)]);
 
   const onClearPress = () => {
@@ -118,10 +119,10 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       </label>
       <div>
         <Icon
-          weight="light"
+          weight="bold"
           scale={18}
           className={STYLE.search}
-          strokeColor="var(--mds-color-theme-text-primary-normal)"
+          fillColor="var(--mds-color-theme-text-primary-normal)"
           name={searching ? 'spinner' : 'search'}
         />
       </div>

@@ -20,6 +20,7 @@ const generateMain = (dir) => {
     typescript: {
       reactDocgen: 'none',
     },
+    staticDirs: ['../public'],
     webpackFinal: (config) => {
       config.resolve.alias['@momentum-ui/react-collaboration'] = path.resolve(
         REPO_ROOT,
@@ -59,7 +60,7 @@ const generateMain = (dir) => {
       // Adding these will mean they go through babel and therefore work with IE
       nodeModulesRule.include = [
         nodeModulesRule.include,
-        /[\\/]node_modules[\\/](@react-aria|react-verification-input|lit|@lit\/react|@lit\/context)/,
+        /[\\/]node_modules[\\/](@react-aria|react-verification-input|lit|@lit\/react|@lit\/context|@tanstack\/lit-virtual|@tanstack\/virtual-core)/,
       ];
       return config;
     },

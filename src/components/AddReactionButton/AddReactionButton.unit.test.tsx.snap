@@ -53,24 +53,23 @@ exports[`<AddReactionButton /> snapshot should match snapshot 1`] = `
               name="reactions"
               scale={12}
             >
-              <div
-                aria-hidden="true"
+              <Icon
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                role="img"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="reactions"
+                name="reactions-regular"
+                style={Object {}}
               >
-                <svg
-                  aria-hidden="true"
-                  className=""
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                   data-autoscale={false}
                   data-scale={12}
                   data-test="reactions"
-                  fill="currentColor"
-                  height="100%"
                   style={Object {}}
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
+                  suppressHydrationWarning={true}
                 />
-              </div>
+              </Icon>
             </Icon>
           </button>
         </FocusRing>
@@ -135,24 +134,23 @@ exports[`<AddReactionButton /> snapshot should match snapshot with className 1`]
               name="reactions"
               scale={12}
             >
-              <div
-                aria-hidden="true"
+              <Icon
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                role="img"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="reactions"
+                name="reactions-regular"
+                style={Object {}}
               >
-                <svg
-                  aria-hidden="true"
-                  className=""
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                   data-autoscale={false}
                   data-scale={12}
                   data-test="reactions"
-                  fill="currentColor"
-                  height="100%"
                   style={Object {}}
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
+                  suppressHydrationWarning={true}
                 />
-              </div>
+              </Icon>
             </Icon>
           </button>
         </FocusRing>
@@ -220,24 +218,23 @@ exports[`<AddReactionButton /> snapshot should match snapshot with id 1`] = `
               name="reactions"
               scale={12}
             >
-              <div
-                aria-hidden="true"
+              <Icon
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                role="img"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="reactions"
+                name="reactions-regular"
+                style={Object {}}
               >
-                <svg
-                  aria-hidden="true"
-                  className=""
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                   data-autoscale={false}
                   data-scale={12}
                   data-test="reactions"
-                  fill="currentColor"
-                  height="100%"
                   style={Object {}}
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
+                  suppressHydrationWarning={true}
                 />
-              </div>
+              </Icon>
             </Icon>
           </button>
         </FocusRing>
@@ -321,24 +318,23 @@ exports[`<AddReactionButton /> snapshot should match snapshot with style 1`] = `
               name="reactions"
               scale={12}
             >
-              <div
-                aria-hidden="true"
+              <Icon
                 className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                role="img"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="reactions"
+                name="reactions-regular"
+                style={Object {}}
               >
-                <svg
-                  aria-hidden="true"
-                  className=""
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                   data-autoscale={false}
                   data-scale={12}
                   data-test="reactions"
-                  fill="currentColor"
-                  height="100%"
                   style={Object {}}
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
+                  suppressHydrationWarning={true}
                 />
-              </div>
+              </Icon>
             </Icon>
           </button>
         </FocusRing>

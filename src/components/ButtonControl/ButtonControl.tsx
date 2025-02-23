@@ -26,7 +26,7 @@ const ButtonControl = forwardRef((props: Props, providedRef: RefObject<HTMLButto
   switch (iconName) {
     case ICONS.favorite:
       iconProps.weight = ICON_CONSTANTS.WEIGHTS.filled;
-      iconProps.color = props.isDisabled
+      iconProps.fillColor = props.isDisabled
         ? 'var(--mds-color-theme-text-primary-disabled)'
         : 'var(--mds-color-theme-text-warning-normal)';
       break;

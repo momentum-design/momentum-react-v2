@@ -23,6 +23,8 @@ import {
   SubMenu,
   ToggleSwitch,
 } from '@momentum-ui/react-collaboration';
+import ButtonCircle from '../../../components/ButtonCircle';
+import IconNext from '../../../components/Icon';
 import { AutoSizer as CAutoSizer, List as Clist } from 'react-virtualized';
 import { FixedSizeList } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
@@ -90,9 +92,15 @@ class EventOverlayKitchenSink extends React.Component {
         targetOffset={targetOffset}
         {...other}
       >
-        <Button color="blue" ariaLabel={buttonLabel ? `${buttonLabel}` : 'Click'}>
-          {buttonLabel ? buttonLabel : 'Click'}
-        </Button>
+        {other?.isButtonCircle ? (
+          <ButtonCircle>
+            <IconNext name="email" weight="bold" autoScale={150} />
+          </ButtonCircle>
+        ) : (
+          <Button color="blue" ariaLabel={buttonLabel ? `${buttonLabel}` : 'Click'}>
+            {buttonLabel ? buttonLabel : 'Click'}
+          </Button>
+        )}
       </Popover>
     );
 
@@ -314,6 +322,7 @@ class EventOverlayKitchenSink extends React.Component {
                   allowClickAway: false,
                 })}
                 {getPopover(simpleDiv, 'Focus', { popoverTrigger: 'Focus' })}
+                {getPopover(simpleDiv, 'Click', { isButtonCircle: true })}
               </React.Fragment>
             </div>
             <div

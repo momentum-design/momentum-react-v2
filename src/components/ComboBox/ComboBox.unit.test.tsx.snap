@@ -168,24 +168,23 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>
@@ -360,24 +359,23 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>
@@ -552,24 +550,23 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>
@@ -744,24 +741,23 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>
@@ -941,24 +937,23 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>
@@ -1133,24 +1128,23 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>
@@ -1338,24 +1332,23 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                   scale={12}
                   weight="filled"
                 >
-                  <div
-                    aria-hidden="true"
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-combo-box-arrow-icon md-icon-no-shrink"
-                    role="img"
+                  <Icon
+                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="arrow-down"
+                    name="arrow-down-filled"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="arrow-down"
-                      fill="currentColor"
-                      height="100%"
                       style={Object {}}
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </button>
             </FocusRing>

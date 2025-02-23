@@ -2876,18 +2876,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.16.12":
-  version: 0.16.12
-  resolution: "@momentum-design/components@npm:0.16.12"
+"@momentum-design/components@npm:0.25.3":
+  version: 0.25.3
+  resolution: "@momentum-design/components@npm:0.25.3"
   dependencies:
     "@lit/context": ^1.1.2
     "@lit/react": ^1.0.5
     "@momentum-design/fonts": "*"
     "@momentum-design/icons": "*"
     "@momentum-design/tokens": "*"
+    "@tanstack/lit-virtual": ^3.11.3
     lit: ^3.2.0
     uuid: ^11.0.5
-  checksum: f5e0b0588cee38192a16b150390bf0ff2e49e785ead2102eed6efe2af53e93698b2ce73c40379436fa9bdbe88590e2df9f882182d610cca3d42a428a0b644b7e
+  checksum: 6f7bc6581a39f7c9fdd9d635401ed154e6447935a7440984f9bcc77680e8328ffc6e945bce4e21a2c4387f04565a73d84bf82c3af2a78449c811d839791d1870
   languageName: node
   linkType: hard
 
@@ -2905,17 +2906,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/icons@npm:*":
-  version: 0.8.0
-  resolution: "@momentum-design/icons@npm:0.8.0"
-  checksum: 8c01af2f9babea85cbfdf5b74220748afcf0aac24c5a722fd2fbf89c1b203be83751f6ea995aa5741b8e037586d1265ed2671e51b4d0c048030d5adf353a70e4
-  languageName: node
-  linkType: hard
-
-"@momentum-design/icons@npm:0.0.164":
-  version: 0.0.164
-  resolution: "@momentum-design/icons@npm:0.0.164"
-  checksum: 35ac73c6c7a70987b6b564e90e48edfe561a2a715e68bd28dc00bcf12a7b7d1c17a5a8781362b653582f34b196faf1a82cbed9458bcb8069e2d882698fa55343
+"@momentum-design/icons@npm:0.9.1":
+  version: 0.9.1
+  resolution: "@momentum-design/icons@npm:0.9.1"
+  checksum: 8aedbad85e5e1c72f794f3f656ab1a5125dee31078c3c13d755da36eeddf9f19656cc6d366ab482ffcc8eb6edf893b825d8107469ad80b98e56b3aa7bc0f3fd5
   languageName: node
   linkType: hard
 
@@ -2970,9 +2964,9 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/components": 0.16.12
+    "@momentum-design/components": 0.25.3
     "@momentum-design/fonts": 0.0.8
-    "@momentum-design/icons": 0.0.164
+    "@momentum-design/icons": 0.9.1
     "@momentum-design/tokens": 0.1.2
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
@@ -6964,6 +6958,24 @@ __metadata:
   dependencies:
     defer-to-connect: ^1.0.1
   checksum: 4d9158061c5f397c57b4988cde33a163244e4f02df16364f103971957a32886beb104d6180902cbe8b38cb940e234d9f98a4e486200deca621923f62f50a06fe
+  languageName: node
+  linkType: hard
+
+"@tanstack/lit-virtual@npm:^3.11.3":
+  version: 3.13.0
+  resolution: "@tanstack/lit-virtual@npm:3.13.0"
+  dependencies:
+    "@tanstack/virtual-core": 3.13.0
+  peerDependencies:
+    lit: ^3.1.0
+  checksum: 1135c238aaaa927ef28170b0c2b04605571d6df1f7ce4978dca2b28b852436820592f0c698bd44ce4cd41eb21b11c5721223451a9b28f2deeac4a8b990618bab
+  languageName: node
+  linkType: hard
+
+"@tanstack/virtual-core@npm:3.13.0":
+  version: 3.13.0
+  resolution: "@tanstack/virtual-core@npm:3.13.0"
+  checksum: 0cbead3350002bea1f8353e091d3d8d3d9ba7815f4a0eb359bc927b7b7f39c9530c1dfa15f8d75fe5f47621c8f55be57643133b8fe728af09f7ea0578016f78d
   languageName: node
   linkType: hard
 

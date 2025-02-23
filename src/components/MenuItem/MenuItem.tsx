@@ -57,7 +57,12 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   delete menuItemProps.onKeyDown; // we want our passed onKeyDown to be used instaed of useMenuItem aria's function
 
   const tickIcon = (
-    <Icon className={STYLE.tickIcon} name="check" weight="bold" scale={16} strokeColor="none" />
+    <Icon
+      fillColor="var(--mds-color-theme-control-active-normal)"
+      name="check"
+      weight="bold"
+      scale={16}
+    />
   );
 
   const renderSections = () => {

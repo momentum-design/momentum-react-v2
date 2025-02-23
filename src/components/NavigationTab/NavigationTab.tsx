@@ -15,7 +15,7 @@ const NavigationTab: FC<Props> = (props: Props) => {
   const { icon, label, count = 0, className, id, size, style, active, ...otherProps } = props;
 
   const iconComponent = icon ? (
-    <Icon className={STYLE.icon} name={icon} scale={24} weight={'filled'} strokeColor={'none'} />
+    <Icon className={STYLE.icon} name={icon} scale={24} weight={'filled'} />
   ) : null;
 
   const labelComponent =

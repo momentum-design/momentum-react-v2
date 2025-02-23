@@ -21,27 +21,31 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
           scale={16}
           weight="bold"
         >
-          <div
-            aria-hidden="true"
+          <Icon
             className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-            role="img"
+            data-autoscale={false}
+            data-scale={16}
+            data-test="warning"
+            name="warning-bold"
+            style={
+              Object {
+                "--mdc-icon-fill-color": "var(--mds-color-theme-text-error-normal)",
+              }
+            }
           >
-            <svg
-              aria-hidden="true"
-              className=""
+            <mdc-icon
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
               data-autoscale={false}
               data-scale={16}
               data-test="warning"
-              height="100%"
               style={
                 Object {
-                  "fill": "var(--mds-color-theme-text-error-normal)",
+                  "--mdc-icon-fill-color": "var(--mds-color-theme-text-error-normal)",
                 }
               }
-              viewBox="0, 0, 32, 32"
-              width="100%"
+              suppressHydrationWarning={true}
             />
-          </div>
+          </Icon>
         </Icon>
       </div>
       <Text

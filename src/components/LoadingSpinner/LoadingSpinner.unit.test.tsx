@@ -132,7 +132,7 @@ describe('<LoadingSpinner />', () => {
       const scale = 32 as const;
 
       (await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" scale={scale} />))
-        .find('svg')
+        .find('mdc-icon')
         .forEach((icon) => {
           expect(icon.getDOMNode().getAttribute('data-scale')).toBe(`${scale}`);
         });
