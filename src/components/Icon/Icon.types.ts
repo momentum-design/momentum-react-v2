@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import IconKeys from '@momentum-design/icons/dist/types/types';
+import type IconKeys from '@momentum-design/icons/dist/types/types';
 import { Props as TooltipProps } from '../Tooltip/Tooltip.types';
 
 export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
@@ -45,11 +45,6 @@ export interface Props {
   className?: string;
 
   /**
-   * Color the Icon will be filled and stroked with. This overrides the fillColor and strokeColor props.
-   */
-  color?: string;
-
-  /**
    * Color the Icon will be filled with.
    * @internal
    */
@@ -67,16 +62,10 @@ export interface Props {
   name: InferredIconName;
 
   /**
-   * Scale represents the size/scale of te icon.
+   * Scale represents the size/scale of the icon in pixel values or auto | inherit.
    * @default 32
    */
   scale?: IconScale;
-
-  /**
-   * Color the Icon will be stroked with.
-   * @internal
-   */
-  strokeColor?: string;
 
   /**
    * Custom style for overriding this component's CSS.

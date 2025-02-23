@@ -378,7 +378,7 @@ describe('Select', () => {
           <Item>Item 2</Item>
         </Select>
       );
-      const svg = wrapper.find('li[data-key="$.0"] svg').getDOMNode();
+      const svg = wrapper.find('li[data-key="$.0"] mdc-icon').getDOMNode();
 
       expect(svg).toBeDefined();
     });

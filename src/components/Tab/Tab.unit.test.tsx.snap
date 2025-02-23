@@ -369,24 +369,23 @@ exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
             scale={12}
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={12}
                 data-test="plus"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </button>
       </FocusRing>
@@ -435,24 +434,23 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
             scale={12}
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={12}
                 data-test="plus"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </button>
       </FocusRing>
@@ -501,24 +499,23 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
             scale={12}
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={12}
                 data-test="plus"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </button>
       </FocusRing>
@@ -572,24 +569,23 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
             scale={12}
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={12}
                 data-test="plus"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </button>
       </FocusRing>
@@ -640,24 +636,23 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
             scale={12}
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={12}
                 data-test="plus"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </button>
       </FocusRing>
@@ -720,24 +715,23 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
             scale={12}
             weight="bold"
           >
-            <div
-              aria-hidden="true"
+            <Icon
               className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-              role="img"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
                 data-scale={12}
                 data-test="plus"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
           </Icon>
         </button>
       </FocusRing>

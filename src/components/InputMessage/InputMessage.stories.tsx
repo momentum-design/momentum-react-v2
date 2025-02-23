@@ -3,8 +3,6 @@ import { Story } from '@storybook/react';
 
 import InputMessage, { InputMessageProps, INPUT_MESSAGE_CONSTANTS } from './';
 
-import ThemeProvider from '../ThemeProvider';
-
 export default {
   title: 'Momentum UI/InputMessage',
   component: InputMessage,
@@ -31,11 +29,7 @@ export default {
   },
 };
 
-const Template: Story<InputMessageProps> = (args) => (
-  <ThemeProvider>
-    <InputMessage {...args} />
-  </ThemeProvider>
-);
+const Template: Story<InputMessageProps> = (args) => <InputMessage {...args} />;
 
 const Example = Template.bind({});
 

@@ -368,7 +368,7 @@ class Lightbox extends React.Component {
           >
             <IconNext
               name="arrow-left"
-              color="var(--mds-color-theme-common-text-primary-normal)"
+              fillColor="var(--mds-color-theme-common-text-primary-normal)"
               scale={16}
             />
           </ButtonSimple>
@@ -390,7 +390,7 @@ class Lightbox extends React.Component {
           >
             <IconNext
               name="arrow-right"
-              color="var(--mds-color-theme-common-text-primary-normal)"
+              fillColor="var(--mds-color-theme-common-text-primary-normal)"
               scale={16}
             />
           </ButtonSimple>
@@ -416,7 +416,7 @@ class Lightbox extends React.Component {
               ) : (
                 <IconNext
                   name="download"
-                  color="var(--mds-color-theme-common-text-primary-normal)"
+                  fillColor="var(--mds-color-theme-common-text-primary-normal)"
                   scale={20}
                   weight="light"
                 />
@@ -448,7 +448,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="arrow-left"
-                    color="var(--mds-color-theme-common-text-primary-normal)"
+                    fillColor="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -469,7 +469,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="arrow-right"
-                    color="var(--mds-color-theme-common-text-primary-normal)"
+                    fillColor="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -505,7 +505,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="zoom-out"
-                    color="var(--mds-color-theme-common-text-primary-normal)"
+                    fillColor="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -529,7 +529,7 @@ class Lightbox extends React.Component {
                 >
                   <IconNext
                     name="zoom-in"
-                    color="var(--mds-color-theme-common-text-primary-normal)"
+                    fillColor="var(--mds-color-theme-common-text-primary-normal)"
                     scale={20}
                     weight="light"
                   />
@@ -557,7 +557,12 @@ class Lightbox extends React.Component {
         aria-labelledby={this.nameId}
       >
         {/* adding this so that focus styling applies to components inside the modal. */}
-        <MomentumThemeProvider theme={this.props.theme}>
+        <MomentumThemeProvider
+          theme={this.props.theme}
+          iconUrl={this.props.iconUrl}
+          iconCacheStrategy={this.props.iconCacheStrategy}
+          iconCacheName={this.props.iconCacheName}
+        >
           <div className="md-lightbox__header">
             <div className="md-lightbox__header-item--left">
               <div className="md-lightbox__header-meta">
@@ -582,7 +587,7 @@ class Lightbox extends React.Component {
                   >
                     <IconNext
                       name="cancel"
-                      color="var(--mds-color-theme-common-text-primary-normal)"
+                      fillColor="var(--mds-color-theme-common-text-primary-normal)"
                       scale={20}
                       weight="light"
                     />
@@ -652,6 +657,12 @@ Lightbox.propTypes = {
   popoverProps: PropTypes.object,
   /** @prop theme -- used to pass down to the ThemeProvider */
   theme: PropTypes.string,
+  /** @prop iconUrl -- used to pass down to the ThemeProvider */
+  iconUrl: PropTypes.string,
+  /** @prop iconCacheStrategy -- used to pass down to the ThemeProvider */
+  iconCacheStrategy: PropTypes.string,
+  /** @prop iconCacheName -- used to pass down to the ThemeProvider */
+  iconCacheName: PropTypes.string,
   /** @prop Collection of predefined tootips for various Lightbox actions | { download: 'Download', etc } */
   tooltips: PropTypes.shape({
     download: PropTypes.string,

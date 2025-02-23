@@ -32,9 +32,11 @@ const AlertBanner: FC<Props> = (props: Props) => {
   const buttonsComponent = <div className={STYLE.buttons}>{mutatedButtons}</div>;
 
   const imageComponent = image ? (
-    cloneElement(image, {
-      className: classnames(image.props.className, STYLE.image),
-    })
+    <div className={STYLE.image}>
+      {cloneElement(image, {
+        className: classnames(image.props.className),
+      })}
+    </div>
   ) : (
     <div className={STYLE.image} />
   );

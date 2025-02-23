@@ -19,6 +19,12 @@ exports[`<RadioSimple /> snapshot should match snapshot 1`] = `
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -48,6 +54,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with ariaLabel 1`] = `
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -77,6 +89,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with ariaLabelledBy 1`] 
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -106,6 +124,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with className 1`] = `
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -137,6 +161,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with id 1`] = `
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -166,6 +196,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with isDisabled 1`] = `
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -196,6 +232,12 @@ exports[`<RadioSimple /> snapshot should match snapshot with style 1`] = `
       />
     </div>
     <div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >

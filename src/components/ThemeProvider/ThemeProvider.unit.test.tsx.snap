@@ -12,9 +12,18 @@ exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
       class="md-theme-darkWebex mds-typography"
       suppressHydrationWarning={true}
     >
-      <div
-        className="md-theme-provider-wrapper md-theme-provider-globals"
-      />
+      <IconProvider
+        shouldCache={true}
+      >
+        <mdc-iconprovider
+          shouldCache={true}
+          suppressHydrationWarning={true}
+        >
+          <div
+            className="md-theme-provider-wrapper md-theme-provider-globals"
+          />
+        </mdc-iconprovider>
+      </IconProvider>
     </mdc-themeprovider>
   </ThemeProvider>
 </ThemeProvider>
@@ -36,14 +45,23 @@ exports[`<ThemeProvider /> snapshot should match snapshot with style 1`] = `
       class="md-theme-darkWebex mds-typography"
       suppressHydrationWarning={true}
     >
-      <div
-        className="md-theme-provider-wrapper md-theme-provider-globals"
-        style={
-          Object {
-            "color": "pink",
-          }
-        }
-      />
+      <IconProvider
+        shouldCache={true}
+      >
+        <mdc-iconprovider
+          shouldCache={true}
+          suppressHydrationWarning={true}
+        >
+          <div
+            className="md-theme-provider-wrapper md-theme-provider-globals"
+            style={
+              Object {
+                "color": "pink",
+              }
+            }
+          />
+        </mdc-iconprovider>
+      </IconProvider>
     </mdc-themeprovider>
   </ThemeProvider>
 </ThemeProvider>

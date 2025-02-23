@@ -223,7 +223,7 @@ AudioVideoControls.parameters = {
           <Icon
             key="0"
             name="microphone-muted"
-            strokeColor="#FC8B98"
+            fillColor="#FC8B98"
             autoScale={125}
             style={{ marginLeft: 'auto' }}
           />
@@ -264,7 +264,7 @@ AudioVideoControls.parameters = {
           size={40}
           style={{ minWidth: '8.3rem' }}
         >
-          <Icon key="0" name="camera-muted" strokeColor="#FC8B98" autoScale={125} />
+          <Icon key="0" name="camera-muted" fillColor="#FC8B98" autoScale={125} />
           <div key="1">Start Video</div>
         </ButtonPill>,
         <ButtonCircle outline ghost key="1" size={40}>

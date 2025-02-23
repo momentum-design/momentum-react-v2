@@ -108,7 +108,7 @@
 }
 
 .md-meeting-row-content-end-section {
-  .md-button-group-wrapper > .md-icon-wrapper > svg {
+  .md-button-group-wrapper > .md-icon-wrapper::part(icon) {
     path {
       fill: var(--mds-color-theme-text-secondary-normal);
     }

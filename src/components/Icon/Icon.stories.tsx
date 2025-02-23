@@ -8,6 +8,10 @@ import argTypes from './Icon.stories.args';
 import Documentation from './Icon.stories.docs.mdx';
 import { SIZES, WEIGHTS } from './Icon.constants';
 
+const sizesWithoutAutoInherit = Object.values(SIZES).filter(
+  (size) => !['auto', 'inherit'].includes(size as string)
+);
+
 export default {
   title: 'Momentum UI/Icon',
   component: Icon,
@@ -25,6 +29,9 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   name: 'accessibility',
+  ariaLabel: undefined,
+  title: undefined,
+  scale: 32,
 };
 
 const Sizes = MultiTemplate<IconProps>(Icon).bind({});
@@ -39,7 +46,7 @@ Sizes.args = {
 
 Sizes.parameters = {
   variants: [
-    ...Object.values(SIZES).map((size) => {
+    ...sizesWithoutAutoInherit.map((size) => {
       return {
         scale: size,
       };
@@ -93,7 +100,7 @@ const cartesian = <T extends (string | number)[][]>(...arr: T) =>
 
 Common.parameters = {
   variants: [
-    ...cartesian(Object.values(WEIGHTS), Object.values(SIZES)).flatMap((variant) => {
+    ...cartesian(Object.values(WEIGHTS), sizesWithoutAutoInherit).flatMap((variant) => {
       return { weight: variant[0], scale: variant[1] };
     }),
   ],

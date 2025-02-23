@@ -77,7 +77,8 @@
     "storybook:start": "yarn storybook:start:src",
     "storybook:start:docs": "serve ./docs",
     "storybook:start:src": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -c ./config/storybook/src -p 6006",
-    "start": "yarn storybook:start",
+    "start": "yarn start:copy:icons && yarn storybook:start",
+    "start:copy:icons": "node ./scripts/copyIconsStorybook.js",
     "start:components": "yarn storybook:start",
     "start:examples": "yarn examples:start:src",
     "start:watch": "run-p lint:watch test:watch start",
@@ -98,14 +99,15 @@
   },
   "resolutions": {
     "@react-aria/button": "3.4.3",
-    "@types/node": "22.7.4"
+    "@types/node": "22.7.4",
+    "@momentum-design/icons": "0.9.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@momentum-design/animations": "^0.0.4",
-    "@momentum-design/components": "0.16.12",
+    "@momentum-design/components": "0.25.3",
     "@momentum-design/fonts": "0.0.8",
-    "@momentum-design/icons": "0.0.164",
+    "@momentum-design/icons": "0.9.1",
     "@momentum-design/tokens": "0.1.2",
     "@momentum-ui/design-tokens": "^0.0.63",
     "@momentum-ui/icons": "8.28.4",

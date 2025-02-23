@@ -231,7 +231,7 @@ describe('Avatar', () => {
       const presence = PresenceType.Away;
 
       const container = await mountAndWait(<Avatar initials="CW" presence={presence} />);
-      const element = container.find('svg').getDOMNode();
+      const element = container.find('mdc-icon').getDOMNode();
 
       expect(element).toBeDefined();
     });
@@ -305,7 +305,7 @@ describe('Avatar', () => {
       const icon = 'check';
 
       const container = await mountAndWait(<Avatar title="Cisco Webex" icon={icon} />);
-      const element = container.find('svg').getDOMNode();
+      const element = container.find('mdc-icon').getDOMNode();
 
       expect(element).toBeDefined();
     });
@@ -319,7 +319,7 @@ describe('Avatar', () => {
       const container = await mountAndWait(
         <Avatar title="Cisco Webex" iconOnHover={iconOnHover} />
       );
-      const element = container.find('svg').getDOMNode();
+      const element = container.find('mdc-icon').getDOMNode();
 
       expect(element).toBeDefined();
     });
@@ -352,7 +352,7 @@ describe('Avatar', () => {
         <Avatar failureBadge={failureBadge} title="Cisco Webex" />
       );
 
-      const element = container.find('svg[data-test="warning"]').getDOMNode();
+      const element = container.find('mdc-icon[data-test="warning"]').getDOMNode();
       expect(element).toBeDefined();
     });
 

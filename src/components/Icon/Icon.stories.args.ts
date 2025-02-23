@@ -17,36 +17,9 @@ export default {
       },
     },
   },
-  color: {
-    defaultValue: undefined,
-    description:
-      'Color for the icon to be filled and stroked with. This overrides the `fillColor` and `strokeColor` props.',
-    control: { type: 'color' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   fillColor: {
     defaultValue: undefined,
     description: 'Fill color for the icon.',
-    control: { type: 'color' },
-    table: {
-      type: {
-        summary: 'string',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  strokeColor: {
-    defaultValue: undefined,
-    description: 'Stroke color for the icon.',
     control: { type: 'color' },
     table: {
       type: {
@@ -71,7 +44,7 @@ export default {
     },
   },
   scale: {
-    defaultValue: CONSTANTS.DEFAULTS.SCALE,
+    defaultValue: '100%',
     description: 'Scale represents the size/scale of te icon.',
     options: [undefined, ...Object.values(CONSTANTS.SIZES)],
     control: { type: 'select' },
@@ -80,7 +53,7 @@ export default {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SCALE,
+        summary: '100%',
       },
     },
   },

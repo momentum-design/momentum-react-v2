@@ -306,24 +306,23 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
           scale={12}
           weight="bold"
         >
-          <div
-            aria-hidden="true"
-            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
-            role="img"
+          <Icon
+            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-checkbox-icon"
+            data-autoscale={false}
+            data-scale={12}
+            data-test="minus"
+            name="minus-bold"
+            style={Object {}}
           >
-            <svg
-              aria-hidden="true"
-              className=""
+            <mdc-icon
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-checkbox-icon"
               data-autoscale={false}
               data-scale={12}
               data-test="minus"
-              fill="currentColor"
-              height="100%"
               style={Object {}}
-              viewBox="0, 0, 32, 32"
-              width="100%"
+              suppressHydrationWarning={true}
             />
-          </div>
+          </Icon>
         </Icon>
       </div>
     </label>
@@ -600,24 +599,23 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
           scale={12}
           weight="bold"
         >
-          <div
-            aria-hidden="true"
-            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-checkbox-icon md-icon-no-shrink"
-            role="img"
+          <Icon
+            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-checkbox-icon"
+            data-autoscale={false}
+            data-scale={12}
+            data-test="check"
+            name="check-bold"
+            style={Object {}}
           >
-            <svg
-              aria-hidden="true"
-              className=""
+            <mdc-icon
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-checkbox-icon"
               data-autoscale={false}
               data-scale={12}
               data-test="check"
-              fill="currentColor"
-              height="100%"
               style={Object {}}
-              viewBox="0, 0, 32, 32"
-              width="100%"
+              suppressHydrationWarning={true}
             />
-          </div>
+          </Icon>
         </Icon>
       </div>
     </label>

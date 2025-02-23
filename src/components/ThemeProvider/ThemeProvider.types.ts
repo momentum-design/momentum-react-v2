@@ -49,4 +49,19 @@ export interface Props {
    * The theme name to provide styles from to all child components.
    */
   theme?: ThemeNames | MDTheme;
+
+  /**
+   * The URL from where to fetch icons.
+   */
+  iconUrl?: string;
+
+  /**
+   * The icon cache strategy to use.
+   */
+  iconCacheStrategy?: 'in-memory-cache' | 'web-cache-api';
+
+  /**
+   * The icon cache name to use.
+   */
+  iconCacheName?: string;
 }
