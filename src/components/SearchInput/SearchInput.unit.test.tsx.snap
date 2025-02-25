@@ -368,6 +368,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
           aria-hidden={true}
           className="md-search-input-searching"
           scale={16}
+          variant="button"
         >
           <div
             aria-hidden={true}
@@ -381,7 +382,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
                   "--mdc-spinner-size": "16px",
                 }
               }
-              variant="standalone"
+              variant="button"
             >
               <mdc-spinner
                 style={

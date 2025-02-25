@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from '../../utils/snakeCase';
-import { Spinner } from '@momentum-ui/react-collaboration';
+import LoadingSpinner from '../../../components/LoadingSpinner';
 
 /**
  * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
@@ -46,7 +46,7 @@ const FileContentItem = (props) => {
       {loading ? (
         <div className="md-content-file" style={{ backgroundImage: content && `url(${content})` }}>
           <div className={`${(content && ' md-content--opacity') || ''}`}>
-            <Spinner />
+            <LoadingSpinner aria-hidden scale={32} />
           </div>
         </div>
       ) : (
