@@ -25,9 +25,7 @@
   &[data-disabled='false'] {
     .md-checkbox-label {
       .md-checkbox-icon {
-        svg {
-          fill: var(--mds-color-theme-inverted-text-primary-normal);
-        }
+        --mdc-icon-fill-color: var(--mds-color-theme-inverted-text-primary-normal);
       }
 
       > .md-checkbox-label {
@@ -40,8 +38,8 @@
         @media (forced-colors: active) {
           background-color: FieldText;
 
-          svg {
-            fill: Field;
+          mdc-icon {
+            --mdc-icon-fill-color: Field;
           }
         }
       }
@@ -115,9 +113,7 @@
   &.disable {
     .md-checkbox-label {
       .md-checkbox-icon {
-        svg {
-          fill: var(--mds-color-theme-text-primary-disabled);
-        }
+        --mdc-icon-fill-color: var(--mds-color-theme-text-primary-disabled);
       }
 
       color: var(--mds-color-theme-text-primary-disabled);

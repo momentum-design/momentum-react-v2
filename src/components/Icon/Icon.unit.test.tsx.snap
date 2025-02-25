@@ -4,24 +4,21 @@ exports[`<Icon /> snapshot should match snapshot 1`] = `
 <Icon
   name="accessibility"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="accessibility"
+    name="accessibility-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -31,25 +28,23 @@ exports[`<Icon /> snapshot should match snapshot with aria-label 1`] = `
   name="draft-indicator"
   weight="bold"
 >
-  <div
-    aria-hidden="false"
+  <Icon
     aria-label="This participant is muted"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="draft-indicator"
+    name="draft-indicator-bold"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      aria-label="This participant is muted"
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="draft-indicator"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -59,25 +54,23 @@ exports[`<Icon /> snapshot should match snapshot with ariaLabel 1`] = `
   name="draft-indicator"
   weight="bold"
 >
-  <div
-    aria-hidden="false"
+  <Icon
     aria-label="This participant is muted"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="draft-indicator"
+    name="draft-indicator-bold"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      aria-label="This participant is muted"
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="draft-indicator"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -86,24 +79,23 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to 'true' 1`
   autoScale={true}
   name="accessibility"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={true}
+    data-scale={false}
+    data-test="accessibility"
+    name="accessibility-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={true}
       data-scale={false}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -112,24 +104,23 @@ exports[`<Icon /> snapshot should match snapshot with autoScale set to a percent
   autoScale={150}
   name="accessibility"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={150}
+    data-scale={false}
+    data-test="accessibility"
+    name="accessibility-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={150}
       data-scale={false}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -138,54 +129,21 @@ exports[`<Icon /> snapshot should match snapshot with className 1`] = `
   className="example-class"
   name="accessibility"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales example-class"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink example-class"
+    data-autoscale={false}
+    data-test="accessibility"
+    name="accessibility-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink example-class"
       data-autoscale={false}
-      data-scale={32}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
-</Icon>
-`;
-
-exports[`<Icon /> snapshot should match snapshot with color 1`] = `
-<Icon
-  color="red"
-  name="accessibility"
->
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
-  >
-    <svg
-      aria-hidden="true"
-      className=""
-      data-autoscale={false}
-      data-scale={32}
-      data-test="accessibility"
-      height="100%"
-      style={
-        Object {
-          "fill": "red",
-          "stroke": "red",
-        }
-      }
-      viewBox="0, 0, 32, 32"
-      width="100%"
-    />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -194,27 +152,29 @@ exports[`<Icon /> snapshot should match snapshot with fillColor 1`] = `
   fillColor="red"
   name="accessibility"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="accessibility"
+    name="accessibility-regular"
+    style={
+      Object {
+        "--mdc-icon-fill-color": "red",
+      }
+    }
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="accessibility"
-      height="100%"
       style={
         Object {
-          "fill": "red",
+          "--mdc-icon-fill-color": "red",
         }
       }
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -223,25 +183,22 @@ exports[`<Icon /> snapshot should match snapshot with id 1`] = `
   id="example-id"
   name="accessibility"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="accessibility"
     id="example-id"
-    role="img"
+    name="accessibility-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -249,17 +206,21 @@ exports[`<Icon /> snapshot should match snapshot with invalid name 1`] = `
 <Icon
   name="invalid_icon_name"
 >
-  <div
-    className="md-icon-wrapper"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="invalid_icon_name"
+    name="invalid_icon_name-regular"
+    style={Object {}}
   >
-    <div
-      className="md-icon-not-found"
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
-    >
-      ⃞
-    </div>
-  </div>
+      data-test="invalid_icon_name"
+      style={Object {}}
+      suppressHydrationWarning={true}
+    />
+  </Icon>
 </Icon>
 `;
 
@@ -268,24 +229,23 @@ exports[`<Icon /> snapshot should match snapshot with scale 1`] = `
   name="accessibility"
   scale={16}
 >
-  <div
-    aria-hidden="true"
+  <Icon
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-    role="img"
+    data-autoscale={false}
+    data-scale={16}
+    data-test="accessibility"
+    name="accessibility-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
       data-scale={16}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -294,54 +254,23 @@ exports[`<Icon /> snapshot should match snapshot with small icons 1`] = `
   name="info-badge"
   scale={14}
 >
-  <div
-    aria-hidden="true"
+  <Icon
     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-    role="img"
+    data-autoscale={false}
+    data-scale={14}
+    data-test="info-badge"
+    name="info-badge-regular"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
       data-scale={14}
       data-test="info-badge"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 14, 14"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
-</Icon>
-`;
-
-exports[`<Icon /> snapshot should match snapshot with strokeColor 1`] = `
-<Icon
-  name="accessibility"
-  strokeColor="red"
->
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
-  >
-    <svg
-      aria-hidden="true"
-      className=""
-      data-autoscale={false}
-      data-scale={32}
-      data-test="accessibility"
-      fill="currentColor"
-      height="100%"
-      style={
-        Object {
-          "stroke": "red",
-        }
-      }
-      viewBox="0, 0, 32, 32"
-      width="100%"
-    />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -354,29 +283,29 @@ exports[`<Icon /> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="accessibility"
+    name="accessibility-regular"
     style={
       Object {
         "color": "pink",
       }
     }
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
-      style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -386,26 +315,23 @@ exports[`<Icon /> snapshot should match snapshot with title 1`] = `
   title="You have a draft message"
   weight="bold"
 >
-  <div
-    aria-hidden="false"
+  <Icon
     aria-label="You have a draft message"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
-    title="You have a draft message"
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="draft-indicator"
+    name="draft-indicator-bold"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      aria-label="You have a draft message"
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="draft-indicator"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;
 
@@ -423,25 +349,14 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children and plac
     placement="bottom"
     strategy="fixed"
     triggerComponent={
-      <div
-        aria-hidden="false"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-        role="img"
+      <Icon
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale={false}
+        data-test="accessibility"
+        name="accessibility-regular"
+        style={Object {}}
         tabIndex={0}
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={32}
-          data-test="accessibility"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
+      />
     }
     type="label"
   >
@@ -460,26 +375,15 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children and plac
       strategy="fixed"
       trigger="mouseenter focus"
       triggerComponent={
-        <div
-          aria-hidden="false"
+        <Icon
           aria-labelledby="test-ID"
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-          role="img"
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+          data-autoscale={false}
+          data-test="accessibility"
+          name="accessibility-regular"
+          style={Object {}}
           tabIndex={0}
-        >
-          <svg
-            aria-hidden="true"
-            className=""
-            data-autoscale={false}
-            data-scale={32}
-            data-test="accessibility"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
+        />
       }
       variant="small"
     >
@@ -646,26 +550,24 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children and plac
             render={[Function]}
             trigger="mouseenter focus"
           >
-            <div
-              aria-hidden="false"
+            <Icon
               aria-labelledby="test-ID"
-              className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-              role="img"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              data-autoscale={false}
+              data-test="accessibility"
+              name="accessibility-regular"
+              style={Object {}}
               tabIndex={0}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                aria-labelledby="test-ID"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
-                data-scale={32}
                 data-test="accessibility"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
             <Portal
               containerInfo={
                 <div
@@ -704,25 +606,14 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
     placement="top"
     strategy="fixed"
     triggerComponent={
-      <div
-        aria-hidden="false"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-        role="img"
+      <Icon
+        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale={false}
+        data-test="accessibility"
+        name="accessibility-regular"
+        style={Object {}}
         tabIndex={0}
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={32}
-          data-test="accessibility"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
+      />
     }
     type="label"
   >
@@ -741,26 +632,15 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
       strategy="fixed"
       trigger="mouseenter focus"
       triggerComponent={
-        <div
-          aria-hidden="false"
+        <Icon
           aria-labelledby="test-ID"
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-          role="img"
+          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+          data-autoscale={false}
+          data-test="accessibility"
+          name="accessibility-regular"
+          style={Object {}}
           tabIndex={0}
-        >
-          <svg
-            aria-hidden="true"
-            className=""
-            data-autoscale={false}
-            data-scale={32}
-            data-test="accessibility"
-            fill="currentColor"
-            height="100%"
-            style={Object {}}
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
+        />
       }
       variant="small"
     >
@@ -927,26 +807,24 @@ exports[`<Icon /> snapshot should match snapshot with tooltip (children) 1`] = `
             render={[Function]}
             trigger="mouseenter focus"
           >
-            <div
-              aria-hidden="false"
+            <Icon
               aria-labelledby="test-ID"
-              className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-              role="img"
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              data-autoscale={false}
+              data-test="accessibility"
+              name="accessibility-regular"
+              style={Object {}}
               tabIndex={0}
             >
-              <svg
-                aria-hidden="true"
-                className=""
+              <mdc-icon
+                aria-labelledby="test-ID"
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                 data-autoscale={false}
-                data-scale={32}
                 data-test="accessibility"
-                fill="currentColor"
-                height="100%"
                 style={Object {}}
-                viewBox="0, 0, 32, 32"
-                width="100%"
+                suppressHydrationWarning={true}
               />
-            </div>
+            </Icon>
             <Portal
               containerInfo={
                 <div
@@ -977,23 +855,20 @@ exports[`<Icon /> snapshot should match snapshot with weight 1`] = `
   name="accessibility"
   weight="light"
 >
-  <div
-    aria-hidden="true"
-    className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-    role="img"
+  <Icon
+    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+    data-autoscale={false}
+    data-test="accessibility"
+    name="accessibility-light"
+    style={Object {}}
   >
-    <svg
-      aria-hidden="true"
-      className=""
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
       data-autoscale={false}
-      data-scale={32}
       data-test="accessibility"
-      fill="currentColor"
-      height="100%"
       style={Object {}}
-      viewBox="0, 0, 32, 32"
-      width="100%"
+      suppressHydrationWarning={true}
     />
-  </div>
+  </Icon>
 </Icon>
 `;

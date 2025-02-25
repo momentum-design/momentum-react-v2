@@ -228,8 +228,8 @@ describe('<MeetingListItem />', () => {
       expect(element.getElementsByClassName('button-circle')[0].getAttribute('data-size')).toBe(
         '32'
       );
-      expect(element.getElementsByTagName('svg')[0].getAttribute('data-scale')).toBe('12');
-      expect(element.getElementsByTagName('svg')[1].getAttribute('data-scale')).toBe('12');
+      expect(element.getElementsByTagName('mdc-icon')[0].getAttribute('data-scale')).toBe('12');
+      expect(element.getElementsByTagName('mdc-icon')[1].getAttribute('data-scale')).toBe('12');
       expect(element.getElementsByClassName('avatar')[0].getAttribute('data-size')).toBe('32');
     });
   });

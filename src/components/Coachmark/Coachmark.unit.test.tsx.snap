@@ -37,24 +37,14 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
         <div
           class="md-coachmark-header"
         >
-          <div
-            aria-hidden="true"
+          <mdc-icon
             class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-            role="img"
-          >
-            <svg
-              aria-hidden="true"
-              class=""
-              data-autoscale="false"
-              data-scale="18"
-              data-test="placeholder"
-              data-testid="placeholder"
-              fill="currentColor"
-              height="100%"
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
-          </div>
+            data-autoscale="false"
+            data-scale="18"
+            data-test="placeholder"
+            data-testid="placeholder"
+            name="placeholder-regular"
+          />
           <mdc-text
             class="md-text-wrapper md-coachmark-title"
             tagname="h3"
@@ -75,23 +65,13 @@ exports[`<Coachmark /> snapshot should match snapshot with header 1`] = `
               class="md-button-control-wrapper md-button-simple-wrapper md-focus-ring-wrapper children"
               type="button"
             >
-              <div
-                aria-hidden="true"
-                class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                role="img"
-              >
-                <svg
-                  aria-hidden="true"
-                  class=""
-                  data-autoscale="true"
-                  data-scale="false"
-                  data-test="cancel"
-                  fill="currentColor"
-                  height="100%"
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
-                />
-              </div>
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                data-autoscale="true"
+                data-scale="false"
+                data-test="cancel"
+                name="cancel-bold"
+              />
             </button>
           </div>
         </div>
@@ -293,23 +273,13 @@ exports[`<Coachmark /> snapshot should match snapshot without header 1`] = `
             class="md-button-control-wrapper md-button-simple-wrapper"
             type="button"
           >
-            <div
-              aria-hidden="true"
-              class="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-              role="img"
-            >
-              <svg
-                aria-hidden="true"
-                class=""
-                data-autoscale="true"
-                data-scale="false"
-                data-test="cancel"
-                fill="currentColor"
-                height="100%"
-                viewBox="0, 0, 32, 32"
-                width="100%"
-              />
-            </div>
+            <mdc-icon
+              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              data-autoscale="true"
+              data-scale="false"
+              data-test="cancel"
+              name="cancel-bold"
+            />
           </button>
         </div>
       </div>

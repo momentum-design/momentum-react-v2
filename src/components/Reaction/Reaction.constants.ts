@@ -11,6 +11,8 @@ import { cartesian, generateReactionsWithSkinTone } from './Reaction.util';
 
 const CLASS_PREFIX = 'md-reaction';
 
+const GLYPH_NOT_FOUND = String.fromCharCode(0x20de);
+
 const DEFAULTS = {
   SIZE: 12,
 };
@@ -90,4 +92,5 @@ export {
   STYLE,
   ON_VIDEO_REACTIONS,
   ORIGINAL_REACTIONS,
+  GLYPH_NOT_FOUND,
 };

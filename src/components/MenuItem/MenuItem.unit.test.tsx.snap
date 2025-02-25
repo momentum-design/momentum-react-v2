@@ -290,12 +290,37 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               data-position="end"
             >
               <Icon
-                className="md-menu-item-tick-icon"
+                fillColor="var(--mds-color-theme-control-active-normal)"
                 name="check"
                 scale={16}
-                strokeColor="none"
                 weight="bold"
-              />
+              >
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="check"
+                  name="check-bold"
+                  style={
+                    Object {
+                      "--mdc-icon-fill-color": "var(--mds-color-theme-control-active-normal)",
+                    }
+                  }
+                >
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    data-autoscale={false}
+                    data-scale={16}
+                    data-test="check"
+                    style={
+                      Object {
+                        "--mdc-icon-fill-color": "var(--mds-color-theme-control-active-normal)",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Icon>
+              </Icon>
             </div>
           </ListItemBaseSection>
         </li>
@@ -584,12 +609,37 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               data-position="start"
             >
               <Icon
-                className="md-menu-item-tick-icon"
+                fillColor="var(--mds-color-theme-control-active-normal)"
                 name="check"
                 scale={16}
-                strokeColor="none"
                 weight="bold"
-              />
+              >
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="check"
+                  name="check-bold"
+                  style={
+                    Object {
+                      "--mdc-icon-fill-color": "var(--mds-color-theme-control-active-normal)",
+                    }
+                  }
+                >
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    data-autoscale={false}
+                    data-scale={16}
+                    data-test="check"
+                    style={
+                      Object {
+                        "--mdc-icon-fill-color": "var(--mds-color-theme-control-active-normal)",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Icon>
+              </Icon>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection

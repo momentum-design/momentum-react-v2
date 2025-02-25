@@ -412,7 +412,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
                             autoScale={true}
                             name="cancel"
                             weight="bold"
-                          />
+                          >
+                            <Icon
+                              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                              data-autoscale={true}
+                              data-scale={false}
+                              data-test="cancel"
+                              name="cancel-bold"
+                              style={Object {}}
+                            >
+                              <mdc-icon
+                                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                                data-autoscale={true}
+                                data-scale={false}
+                                data-test="cancel"
+                                style={Object {}}
+                                suppressHydrationWarning={true}
+                              />
+                            </Icon>
+                          </Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
@@ -1007,7 +1025,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                             autoScale={true}
                             name="cancel"
                             weight="bold"
-                          />
+                          >
+                            <Icon
+                              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                              data-autoscale={true}
+                              data-scale={false}
+                              data-test="cancel"
+                              name="cancel-bold"
+                              style={Object {}}
+                            >
+                              <mdc-icon
+                                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                                data-autoscale={true}
+                                data-scale={false}
+                                data-test="cancel"
+                                style={Object {}}
+                                suppressHydrationWarning={true}
+                              />
+                            </Icon>
+                          </Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
@@ -1046,10 +1082,36 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                         >
                           <Icon
                             autoScale={true}
-                            color="var(--mds-color-theme-text-warning-normal)"
+                            fillColor="var(--mds-color-theme-text-warning-normal)"
                             name="favorite"
                             weight="filled"
-                          />
+                          >
+                            <Icon
+                              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                              data-autoscale={true}
+                              data-scale={false}
+                              data-test="favorite"
+                              name="favorite-filled"
+                              style={
+                                Object {
+                                  "--mdc-icon-fill-color": "var(--mds-color-theme-text-warning-normal)",
+                                }
+                              }
+                            >
+                              <mdc-icon
+                                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                                data-autoscale={true}
+                                data-scale={false}
+                                data-test="favorite"
+                                style={
+                                  Object {
+                                    "--mdc-icon-fill-color": "var(--mds-color-theme-text-warning-normal)",
+                                  }
+                                }
+                                suppressHydrationWarning={true}
+                              />
+                            </Icon>
+                          </Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
@@ -1090,7 +1152,25 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                             autoScale={true}
                             name="arrow-up"
                             weight="bold"
-                          />
+                          >
+                            <Icon
+                              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                              data-autoscale={true}
+                              data-scale={false}
+                              data-test="arrow-up"
+                              name="arrow-up-bold"
+                              style={Object {}}
+                            >
+                              <mdc-icon
+                                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                                data-autoscale={true}
+                                data-scale={false}
+                                data-test="arrow-up"
+                                style={Object {}}
+                                suppressHydrationWarning={true}
+                              />
+                            </Icon>
+                          </Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>

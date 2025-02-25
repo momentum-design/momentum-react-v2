@@ -40,10 +40,8 @@
     align-items: center;
     justify-content: center;
 
-    .md-avatar-icon-wrapper {
-      svg {
-        display: none;
-      }
+    .md-avatar-icon-wrapper::part(icon) {
+      display: none;
     }
   }
 
@@ -52,10 +50,8 @@
     .md-avatar-icon-on-hover-wrapper {
       background-color: var(--mds-color-theme-common-overlays-secondary-normal);
 
-      .md-avatar-icon-wrapper {
-        svg {
-          display: block;
-        }
+      .md-avatar-icon-wrapper::part(icon) {
+        display: block;
       }
     }
   }
@@ -77,9 +73,7 @@
   }
 
   .md-avatar-icon-wrapper {
-    svg {
-      fill: var(--mds-color-theme-common-text-primary-normal);
-    }
+    --mdc-icon-fill-color: var(--mds-color-theme-common-text-primary-normal);
   }
 
   // Background Color
@@ -279,10 +273,8 @@
     .md-avatar-icon-on-hover-wrapper {
       background-color: var(--mds-color-theme-common-overlays-secondary-normal);
 
-      .md-avatar-icon-wrapper {
-        svg {
-          display: block;
-        }
+      .md-avatar-icon-wrapper::part(icon) {
+        display: block;
       }
     }
   }

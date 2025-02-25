@@ -186,8 +186,6 @@ describe('<SpaceRowContent />', () => {
     it('should match snapshot with menuItems', async () => {
       expect.assertions(1);
 
-      const isDisabled = true;
-
       const container = await mountAndWait(
         <SpaceRowContent
           menuItems={[{ key: 'item-1', text: 'Item 1' }]}
@@ -472,7 +470,7 @@ describe('<SpaceRowContent />', () => {
         await mountAndWait(<SpaceRowContent isDraft={isDraft} isSelected={isSelected} />)
       )
         .find(Icon)
-        .find('svg[data-test="draft-indicator"]')
+        .find('mdc-icon[data-test="draft-indicator"]')
         .getDOMNode();
 
       expect(element).toBeDefined();

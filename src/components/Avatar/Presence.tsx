@@ -24,7 +24,6 @@ const Presence: FC<PresenceProps> = (props: PresenceProps) => {
         name={presenceIcon}
         weight={presenceIcon === 'busy-presence' ? 'bold' : 'filled'}
         fillColor={presenceColor}
-        strokeColor="none"
         scale={AVATAR_PRESENCE_ICON_SIZE_MAPPING[size]}
       />
     </div>

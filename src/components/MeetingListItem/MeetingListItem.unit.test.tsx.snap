@@ -491,28 +491,25 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                   strokeColor="none"
                   weight="bold"
                 >
-                  <div
-                    aria-hidden="true"
+                  <Icon
                     className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                    role="img"
+                    data-autoscale={false}
+                    data-scale={12}
+                    data-test="placeholder"
+                    name="placeholder-bold"
+                    strokeColor="none"
+                    style={Object {}}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className=""
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                       data-autoscale={false}
                       data-scale={12}
                       data-test="placeholder"
-                      fill="currentColor"
-                      height="100%"
-                      style={
-                        Object {
-                          "stroke": "none",
-                        }
-                      }
-                      viewBox="0, 0, 32, 32"
-                      width="100%"
+                      strokeColor="none"
+                      style={Object {}}
+                      suppressHydrationWarning={true}
                     />
-                  </div>
+                  </Icon>
                 </Icon>
               </div>
             </ListItemBaseSection>

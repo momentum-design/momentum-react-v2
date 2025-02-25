@@ -845,23 +845,13 @@ exports[`<Popover /> snapshot should match snapshot with closeButtonPlacement 2`
         data-size="20"
         type="button"
       >
-        <div
-          aria-hidden="true"
+        <mdc-icon
           class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          role="img"
-        >
-          <svg
-            aria-hidden="true"
-            class=""
-            data-autoscale="false"
-            data-scale="16"
-            data-test="cancel"
-            fill="currentColor"
-            height="100%"
-            viewBox="0, 0, 32, 32"
-            width="100%"
-          />
-        </div>
+          data-autoscale="false"
+          data-scale="16"
+          data-test="cancel"
+          name="cancel-bold"
+        />
       </button>
       <p>
         Content
