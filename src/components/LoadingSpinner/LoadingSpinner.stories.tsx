@@ -5,7 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import LoadingSpinner, { LoadingSpinnerProps } from './';
 import argTypes from './LoadingSpinner.stories.args';
 import Documentation from './LoadingSpinner.stories.docs.mdx';
-import { SIZES } from '../Icon/Icon.constants';
+import { SCALES, SIZES } from './LoadingSpinner.constants';
 
 export default {
   title: 'Momentum UI/LoadingSpinner',
@@ -28,7 +28,10 @@ Common.argTypes = { ...argTypes };
 delete Common.argTypes.scale;
 
 Common.parameters = {
-  variants: [...Object.values(SIZES).map((scale) => ({ scale }))],
+  variants: [
+    ...Object.values(SIZES).map((size) => ({ size })),
+    ...Object.values(SCALES).map((scale) => ({ scale })),
+  ],
 };
 
 export { Example, Common };
