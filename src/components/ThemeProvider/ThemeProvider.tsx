@@ -16,7 +16,6 @@ import {
   ThemeProvider as MdcThemeProvider,
   IconProvider as MdcIconProvider,
 } from '@momentum-design/components/dist/react';
-import { inMemoryCache, webAPIIconsCache } from '@momentum-design/components';
 
 import {
   DEFAULTS,
@@ -27,23 +26,10 @@ import {
 import { Props } from './ThemeProvider.types';
 import './ThemeProvider.style.scss';
 
-interface ThemeProviderExtension {
-  inMemoryCache: typeof inMemoryCache;
-  webAPIIconsCache: typeof webAPIIconsCache;
-}
-
 /**
  * Provides a collection of CSSVariables based on a ThemeToken to all child elements inside of a rendered `<div />` element.
  */
-const ThemeProvider: FC<Props> & ThemeProviderExtension = ({
-  children,
-  id,
-  style,
-  theme,
-  iconUrl,
-  iconCacheName,
-  iconCacheStrategy,
-}: Props) => {
+const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => {
   // TODO: get rid of legacy theme
   const themeClass = `${THEME_CLASS_PREFIX}-${theme || DEFAULTS.THEME}`;
   const themeClassStable = `${THEME_CLASS_PREFIX_STABLE}-${theme || DEFAULTS.THEME}`;
@@ -53,7 +39,7 @@ const ThemeProvider: FC<Props> & ThemeProviderExtension = ({
       themeclass={themeClassStable}
       className={classNames(themeClass, STYLE.typography)}
     >
-      <MdcIconProvider cache-strategy={iconCacheStrategy} cache-name={iconCacheName} url={iconUrl}>
+      <MdcIconProvider>
         <div className={`${STYLE.wrapper} ${STYLE.globals}`} style={style} id={id}>
           {children}
         </div>
@@ -61,8 +47,5 @@ const ThemeProvider: FC<Props> & ThemeProviderExtension = ({
     </MdcThemeProvider>
   );
 };
-
-ThemeProvider.inMemoryCache = inMemoryCache;
-ThemeProvider.webAPIIconsCache = webAPIIconsCache;
 
 export default ThemeProvider;

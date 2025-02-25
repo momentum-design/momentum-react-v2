@@ -18,9 +18,6 @@ const theme = (Story, { globals }) => {
     <ThemeProvider
       id="theme-provider"
       theme={theme}
-      iconUrl="/icons/svg"
-      iconCacheStrategy="in-memory-cache"
-      iconCacheName="momentum"
       style={{
         backgroundColor: 'var(--mds-color-theme-background-solid-primary-normal)',
         height: '100vh',
