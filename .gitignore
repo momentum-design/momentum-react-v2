@@ -151,6 +151,3 @@ charts/lib/
 charts/css/
 charts/yarn.lock
 .swc
-
-
-config/storybook/public

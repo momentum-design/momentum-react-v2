@@ -72,9 +72,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 <mdc-themeprovider
                   class="md-theme-darkWebex mds-typography"
                 >
-                  <mdc-iconprovider
-                    shouldcache="true"
-                  >
+                  <mdc-iconprovider>
                     <div
                       class="md-theme-provider-wrapper md-theme-provider-globals"
                     >
@@ -303,11 +301,8 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                       class="md-theme-darkWebex mds-typography"
                       suppressHydrationWarning={true}
                     >
-                      <IconProvider
-                        shouldCache={true}
-                      >
+                      <IconProvider>
                         <mdc-iconprovider
-                          shouldCache={true}
                           suppressHydrationWarning={true}
                         >
                           <div

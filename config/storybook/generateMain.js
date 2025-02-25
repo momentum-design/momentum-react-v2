@@ -20,7 +20,6 @@ const generateMain = (dir) => {
     typescript: {
       reactDocgen: 'none',
     },
-    staticDirs: ['../public'],
     webpackFinal: (config) => {
       config.resolve.alias['@momentum-ui/react-collaboration'] = path.resolve(
         REPO_ROOT,
