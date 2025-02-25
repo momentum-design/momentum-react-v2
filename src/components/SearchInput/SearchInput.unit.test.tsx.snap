@@ -374,55 +374,24 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
             className="md-search-input-searching md-loading-spinner-wrapper"
             role="img"
           >
-            <Icon
-              name="spinner"
-              scale={16}
-              weight="regular"
+            <Spinner
+              inverted={false}
+              style={
+                Object {
+                  "--mdc-spinner-size": "16px",
+                }
+              }
+              variant="standalone"
             >
-              <div
-                aria-hidden="true"
-                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                role="img"
-              >
-                <svg
-                  aria-hidden="true"
-                  className=""
-                  data-autoscale={false}
-                  data-scale={16}
-                  data-test="spinner"
-                  fill="currentColor"
-                  height="100%"
-                  style={Object {}}
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
-                />
-              </div>
-            </Icon>
-            <Icon
-              className="md-loading-spinner-arch"
-              name="spinner-in-progress"
-              scale={16}
-              weight="regular"
-            >
-              <div
-                aria-hidden="true"
-                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-                role="img"
-              >
-                <svg
-                  aria-hidden="true"
-                  className=""
-                  data-autoscale={false}
-                  data-scale={16}
-                  data-test="spinner-in-progress"
-                  fill="currentColor"
-                  height="100%"
-                  style={Object {}}
-                  viewBox="0, 0, 32, 32"
-                  width="100%"
-                />
-              </div>
-            </Icon>
+              <mdc-spinner
+                style={
+                  Object {
+                    "--mdc-spinner-size": "16px",
+                  }
+                }
+                suppressHydrationWarning={true}
+              />
+            </Spinner>
           </div>
         </LoadingSpinner>
       </div>
