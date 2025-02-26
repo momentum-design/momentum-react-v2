@@ -24,7 +24,7 @@ describe('tests for <InputSearch />', () => {
   it('should pass isLoading prop', () => {
     const container = mount(<InputSearch id="1" name="test" isLoading />);
 
-    expect(container.find('.md-spinner').exists()).toEqual(true);
+    expect(container.find('.md-loading-spinner-wrapper').exists()).toEqual(true);
   });
 
   it('should render Icon component', () => {

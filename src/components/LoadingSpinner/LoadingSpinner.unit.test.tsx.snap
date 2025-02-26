@@ -9,55 +9,24 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
     className="md-loading-spinner-wrapper"
     role="img"
   >
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "24px",
+        }
+      }
+      variant="standalone"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
-    >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "24px",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
   </div>
 </LoadingSpinner>
 `;
@@ -71,55 +40,24 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
     className="md-loading-spinner-wrapper"
     role="img"
   >
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "24px",
+        }
+      }
+      variant="standalone"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
-    >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "24px",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
   </div>
 </LoadingSpinner>
 `;
@@ -134,55 +72,24 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
     className="example-class md-loading-spinner-wrapper"
     role="img"
   >
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "24px",
+        }
+      }
+      variant="standalone"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
-    >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "24px",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
   </div>
 </LoadingSpinner>
 `;
@@ -198,55 +105,24 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
     id="example-id"
     role="img"
   >
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "24px",
+        }
+      }
+      variant="standalone"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
-    >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "24px",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
   </div>
 </LoadingSpinner>
 `;
@@ -261,55 +137,24 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
     className="md-loading-spinner-wrapper"
     role="img"
   >
-    <Icon
-      name="spinner"
-      scale={32}
-      weight="regular"
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "32px",
+        }
+      }
+      variant="standalone"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={32}
-          data-test="spinner"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={32}
-      weight="regular"
-    >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={32}
-          data-test="spinner-in-progress"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "32px",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
   </div>
 </LoadingSpinner>
 `;
@@ -333,55 +178,24 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "24px",
+        }
+      }
+      variant="standalone"
     >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
-    >
-      <div
-        aria-hidden="true"
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-loading-spinner-arch md-icon-no-shrink"
-        role="img"
-      >
-        <svg
-          aria-hidden="true"
-          className=""
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          fill="currentColor"
-          height="100%"
-          style={Object {}}
-          viewBox="0, 0, 32, 32"
-          width="100%"
-        />
-      </div>
-    </Icon>
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "24px",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
   </div>
 </LoadingSpinner>
 `;
