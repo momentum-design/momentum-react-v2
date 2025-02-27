@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { render, waitFor } from '@testing-library/react';
 
 import VirtualizedList from './VirtualizedList';
 
