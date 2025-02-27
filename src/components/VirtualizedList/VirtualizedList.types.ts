@@ -38,5 +38,5 @@ export interface Props extends VirtualizerProps {
   /**
    * React node to render
    */
-  children?: ReactNode;
+  children: ReactNode;
 }

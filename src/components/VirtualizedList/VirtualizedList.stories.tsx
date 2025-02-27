@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -6,7 +6,6 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import VirtualizedList from './VirtualizedList';
 import { VirtualizedListProps } from '.';
-import { VirtualizedList as MdcVirtualizedList } from '@momentum-design/components';
 import List from '../List';
 import ListItemBase from '../ListItemBase';
 import argTypes from './VirtualizedList.stories.args';
@@ -33,13 +32,10 @@ const Example = Template<VirtualizedListProps>(({ count, onScroll }) => {
     listStyle: {},
   });
 
-  const virtualizedRef = useRef<MdcVirtualizedList>();
-
   const { virtualItems, measureElement, listStyle } = listData;
 
   return (
     <VirtualizedList
-      ref={virtualizedRef}
       setListData={setListData}
       count={count}
       estimateSize={() => 20}

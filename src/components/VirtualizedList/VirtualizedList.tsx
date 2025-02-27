@@ -1,4 +1,4 @@
-import React, { RefObject, forwardRef, useCallback, useEffect } from 'react';
+import React, { RefObject, forwardRef, useCallback, useEffect, useRef } from 'react';
 
 import { Props } from './VirtualizedList.types';
 import { VirtualizedList as MdcVirtualizedList } from '@momentum-design/components/dist/react';
@@ -7,12 +7,15 @@ import { VirtualizedList as VirtualizedListRef } from '@momentum-design/componen
 const VirtualizedList = forwardRef((props: Props, ref: RefObject<VirtualizedListRef>) => {
   const { className, style, id, onScroll, setListData, children, ...virtualizerProps } = props;
 
+  const _ref = useRef(null);
+  const virtualizedListRef = ref ?? _ref;
+
   useEffect(() => {
-    if (ref.current) {
-      ref.current.virtualizerprops = virtualizerProps;
-      ref.current.onscroll = onScroll;
+    if (virtualizedListRef?.current) {
+      virtualizedListRef.current.virtualizerprops = virtualizerProps;
+      virtualizedListRef.current.onscroll = onScroll;
     }
-  }, [onScroll, ref, virtualizerProps]);
+  }, [onScroll, ref, virtualizedListRef, virtualizerProps]);
 
   const handleListDataChange = useCallback(
     ({ virtualItems, measureElement, listStyle }) => {
@@ -30,7 +33,7 @@ const VirtualizedList = forwardRef((props: Props, ref: RefObject<VirtualizedList
       style={style}
       id={id}
       className={className}
-      ref={ref}
+      ref={virtualizedListRef}
       setlistdata={handleListDataChange}
     >
       {children}
