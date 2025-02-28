@@ -105,8 +105,10 @@ const MenuTrigger = forwardRef(
       onKeyDown: (event) => {
         if (event.key === 'Escape' || (spatialNav && event.key === spatialNav.backKey)) {
           closeMenuTrigger();
-          event.preventDefault();
-          event.nativeEvent.stopImmediatePropagation();
+          if (spatialNav) {
+            // skip spatial navigation
+            event.nativeEvent.stopImmediatePropagation();
+          }
         }
       },
     });

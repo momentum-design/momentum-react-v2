@@ -3,7 +3,7 @@ import React, { FC, useEffect, useMemo } from 'react';
 import { SpatialNavigationContext } from './SpatialNavigationProvider.utils';
 import { Props } from './SpatialNavigationProvider.types';
 import { DEFAULTS } from './SpatialNavigationProvider.constants';
-import { setHideKeys } from '../Popover/tippy-plugins/hideOnEscPlugin';
+import { setupHideOnPlugin } from '../Popover/tippy-plugins/hideOnEscPlugin';
 import { SpatialNavigation } from './SpatialNavigation';
 
 /**
@@ -40,7 +40,7 @@ const SpatialNavigationProvider: FC<Props> = ({
    * Setup other components
    */
   useEffect(() => {
-    setHideKeys([navigationKeyMapping.back]);
+    setupHideOnPlugin({ hideKeys: [navigationKeyMapping.back], stopEventPropagation: true });
   });
 
   useEffect(() => {

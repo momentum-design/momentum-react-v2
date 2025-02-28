@@ -88,6 +88,8 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
   const spatialNav = useSpatialNavigationContext();
   const keydownHandler = useCallback(
     (evt) => {
+      // Usually arrow keys used for spatial navigation which interfere with the input field
+      // But devices with spatial navigation uses on screen keyboard with virtual arrow keys
       if (spatialNav?.directionKeys?.includes?.(evt.key)) {
         evt.preventDefault();
       }

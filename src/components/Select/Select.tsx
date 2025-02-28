@@ -176,8 +176,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     onKeyDown: (event) => {
       if (event.key === 'Escape' || (spatialNav && event.key === spatialNav.backKey)) {
         closePopover();
-        event.preventDefault();
-        event.nativeEvent.stopImmediatePropagation();
+        if (spatialNav) {
+          event.nativeEvent.stopImmediatePropagation();
+        }
       }
     },
   });

@@ -195,6 +195,15 @@ export const getElementRelativeDistances = (
   return { element, distance, edgeDistance };
 };
 
+/**
+ * Calculate the distance of the focusable elements form the active element
+ * and return the sorted list of elements based on the distance.
+ * The first element is the closest.
+ *
+ * @param activeEl  Active/focused Dom element
+ * @param focusableElements All focusable elements
+ * @param direction Direction of the navigation
+ */
 export const orderElementsByDistance = (
   activeEl: HTMLElement,
   focusableElements: HTMLElement[],
