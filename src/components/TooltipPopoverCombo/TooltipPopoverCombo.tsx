@@ -31,32 +31,37 @@ const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
 
   const handleOnShowPopover = useCallback(
     (instance: PopoverInstance | undefined) => {
-      otherPopoverProps?.onShow?.(instance);
-      setIsPopoverOpen(true);
+      const result = otherPopoverProps?.onShow?.(instance);
+      if (result !== false) setIsPopoverOpen(true);
+      return result;
     },
     [otherPopoverProps]
   );
 
   const handleOnHidePopover = useCallback(
     (instance: PopoverInstance | undefined) => {
-      otherPopoverProps?.onHide?.(instance);
-      setIsPopoverOpen(false);
+      const result = otherPopoverProps?.onHide?.(instance);
+      if (result !== false) setIsPopoverOpen(false);
+      return result;
     },
     [otherPopoverProps]
   );
 
   const handleOnHideTooltip = useCallback(
     (instance: PopoverInstance | undefined) => {
-      otherTooltipProps?.onHide?.(instance);
-      setIsTooltipOpen(false);
+      const result = otherTooltipProps?.onHide?.(instance);
+      if (result !== false) setIsTooltipOpen(false);
+
+      return result;
     },
     [otherTooltipProps]
   );
 
   const handleOnShowTooltip = useCallback(
     (instance: PopoverInstance | undefined) => {
-      otherTooltipProps?.onShow?.(instance);
-      setIsTooltipOpen(true);
+      const result = otherTooltipProps?.onShow?.(instance);
+      if (result !== false) setIsTooltipOpen(true);
+      return result;
     },
     [otherTooltipProps]
   );

@@ -307,5 +307,54 @@ describe('<TooltipPopoverCombo />', () => {
         expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument();
       });
     });
+
+    it('should not show tooltip or popover when onShow callback return false', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ onShow: () => false }}
+          otherPopoverProps={{ onShow: () => false }}
+        />
+      );
+      await user.hover(screen.getByText('Example button'));
+
+      await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeInTheDocument());
+
+      await user.click(screen.getByText('Example button'));
+
+      await waitFor(() =>
+        expect(screen.queryByText('Example popover content button')).not.toBeInTheDocument()
+      );
+    });
+
+    it('should not hide tooltip or popover when onHide callback return false', async () => {
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <TooltipPopoverCombo
+          triggerComponent={triggerComponent}
+          tooltipContent={tooltipContent}
+          popoverContent={popoverContent}
+          otherTooltipProps={{ onHide: () => false }}
+          otherPopoverProps={{ onHide: () => false }}
+        />
+      );
+      await user.hover(screen.getByText('Example button'));
+      await user.unhover(screen.getByText('Example button'));
+
+      await waitFor(() => expect(screen.queryByRole('tooltip')).toBeInTheDocument());
+
+      await user.click(screen.getByText('Example button'));
+      const backdrop = container.querySelector(`.${POPOVER_STYLE.backdrop}`);
+      await user.click(backdrop);
+
+      await waitFor(() =>
+        expect(screen.queryByText('Example popover content button')).toBeInTheDocument()
+      );
+    });
   });
 });
