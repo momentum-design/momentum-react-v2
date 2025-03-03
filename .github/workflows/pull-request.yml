@@ -12,7 +12,7 @@ env:
 jobs:
   check-validation:
     name: Check - Validation
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check Validation
         run: |
@@ -38,7 +38,7 @@ jobs:
   initialize:
     name: Initialize
     needs: check-validation
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
         uses: actions/checkout@v4
@@ -71,7 +71,7 @@ jobs:
   test-source:
     name: Test - Source
     needs: initialize
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
         uses: actions/checkout@v4
@@ -95,7 +95,7 @@ jobs:
   test-static:
     name: Test - static
     needs: initialize
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
         uses: actions/checkout@v4
@@ -122,7 +122,7 @@ jobs:
   build-source:
     name: Build - Source
     needs: initialize
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
         uses: actions/checkout@v4
