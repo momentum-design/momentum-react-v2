@@ -5,7 +5,7 @@ import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
 import Icon from '../Icon';
 
-import { STYLE } from './ToastNotification.constants';
+import { STYLE, DEFAULTS } from './ToastNotification.constants';
 import { Props } from './ToastNotification.types';
 import './ToastNotification.style.scss';
 import Text from '../Text';
@@ -23,8 +23,24 @@ const ToastNotification: FC<Props> = (props: Props) => {
     buttonGroup,
     onClose,
     closeButtonLabel,
+    interruptsUserFlow = DEFAULTS.INTERRUPTS_USER_FLOW,
     ...rest
   } = props;
+
+  const isInteractiveDialog = !!onClose || !!buttonGroup;
+
+  if (interruptsUserFlow && !isInteractiveDialog) {
+    console.warn(
+      'MRV2 ToastNotification: If a ToastNotification interrupts user flow, please make sure it has at least one interactive element inside for the user to act and continue the flow.'
+    );
+  }
+
+  // If an alert toast interrupts a user's workflow to communicate an important message and require a response, then it should have role="alertdialog", it will be treated as a modal dialog.
+  // Otherwise, if the toast has interactive controls, it should have role="status".
+  // Otherwise, it should have role="alert" and aria-hidden="true".
+  const role = props.role || (interruptsUserFlow ? 'alertdialog' : 'status');
+  const ariaHiddenProps =
+    !interruptsUserFlow && !isInteractiveDialog ? { 'aria-hidden': true } : {};
 
   return (
     <ModalContainer
@@ -33,8 +49,10 @@ const ToastNotification: FC<Props> = (props: Props) => {
       id={id}
       style={style}
       round={50}
-      role="generic"
-      ariaModal={false}
+      role={role}
+      focusLockProps={{ autoFocus: interruptsUserFlow }} // modal dialogs should lock focus on themselves until user has taken action about them
+      aria-live="off" // no need for aria-live as SR announcement is controlled by the NotificationSystem.announce({screenReaderAnnouncement?: string}) method
+      {...ariaHiddenProps}
       {...rest}
     >
       <div className={STYLE.body}>
@@ -42,7 +60,11 @@ const ToastNotification: FC<Props> = (props: Props) => {
           <div className={classnames(className, STYLE.leadingVisual)}>{leadingVisual}</div>
         )}
         {isString(content) ? (
-          <Text className={classnames(className, STYLE.content)} type="body-primary" tagName="p">
+          <Text
+            className={classnames(className, STYLE.content)}
+            type="body-primary"
+            tagName={interruptsUserFlow ? 'h2' : 'p'} // any modal dialog (which locks the focus) must have a heading level 2 on its visible title
+          >
             {content}
           </Text>
         ) : (

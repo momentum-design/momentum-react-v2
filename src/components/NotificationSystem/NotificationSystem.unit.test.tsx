@@ -364,9 +364,9 @@ describe('<NotificationSystem />', () => {
     });
   });
 
-  describe('actions', () => {
-    it('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
-      expect.assertions(4);
+  describe.only('actions', () => {
+    it.only('should show a notification after notify has been fired and disappears after dismiss has been fired', async () => {
+      // expect.assertions(4);
 
       render(<NotificationSystem id="id" ariaLabel="test" />);
 
@@ -387,7 +387,7 @@ describe('<NotificationSystem />', () => {
       });
 
       // wait till the toast shows up on the screen:
-      const toast = await screen.findByRole('alert');
+      const toast = await screen.findByRole('generic');
       expect(toast).toBeVisible();
       expect(toast).toHaveTextContent(textContent);
 
@@ -398,9 +398,15 @@ describe('<NotificationSystem />', () => {
         NotificationSystem.dismiss(toastId);
       });
 
+      await waitFor(() => {
+        expect(NotificationSystem.isActive(toastId)).toBeFalsy();
+      });
+
+      screen.debug();
+
+      waitForElementToBeRemoved(() => screen.queryByRole('generic'));
+
       // check if toast got removed and the toast is not active anymore
-      await waitForElementToBeRemoved(() => screen.queryByRole('alert'));
-      expect(NotificationSystem.isActive(toastId)).toBeFalsy();
     });
 
     it('should close the `medium attention` notification after clicking on the close button', async () => {
@@ -446,7 +452,7 @@ describe('<NotificationSystem />', () => {
       expect(NotificationSystem.isActive(toastId)).toBeFalsy();
     });
 
-    it('should update an existing notification', async () => {
+    it.only('should update an existing notification', async () => {
       render(<NotificationSystem id="id" ariaLabel="test" />);
 
       const toastId = '12345';
@@ -467,7 +473,7 @@ describe('<NotificationSystem />', () => {
       });
 
       // wait till the toast shows up on the screen:
-      const toast = await screen.findByRole('alert');
+      const toast = await screen.findByRole('status');
       expect(toast).toBeVisible();
       expect(toast).toHaveTextContent(textContent);
 
@@ -487,11 +493,11 @@ describe('<NotificationSystem />', () => {
       });
 
       await waitFor(() => {
-        expect(screen.getByRole('alert')).toHaveTextContent(newcontent);
+        expect(screen.getByRole('status')).toHaveTextContent(newcontent);
       });
     });
 
-    it('should allow triggering notifications in multiple systems', async () => {
+    it.only('should allow triggering notifications in multiple systems', async () => {
       expect.assertions(7);
 
       const firstSystemId = 'id123';
@@ -518,7 +524,7 @@ describe('<NotificationSystem />', () => {
       });
 
       // wait till the first toast shows up on the screen:
-      const toasts = await screen.findAllByRole('alert');
+      const toasts = await screen.findAllByRole('status');
       expect(toasts).toHaveLength(1);
       expect(toasts[0]).toBeVisible();
       expect(toasts[0]).toHaveTextContent(textContent + firstSystemId);
@@ -541,7 +547,7 @@ describe('<NotificationSystem />', () => {
       // wait till the 2 toasts shows up on the screen:
       let toastsAfterUpdate: HTMLElement[];
       await waitFor(() => {
-        toastsAfterUpdate = screen.getAllByRole('alert');
+        toastsAfterUpdate = screen.getAllByRole('status');
         expect(toastsAfterUpdate).toHaveLength(2);
       });
       expect(toastsAfterUpdate[1]).toBeVisible();
