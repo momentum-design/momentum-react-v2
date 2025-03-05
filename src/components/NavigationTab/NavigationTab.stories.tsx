@@ -15,6 +15,9 @@ export default {
       page: DocumentationPage(Documentation, StyleDocs),
     },
   },
+  args: {
+    icon: 'chat',
+  },
 };
 
 const Example = Template<NavigationTabProps>(NavigationTab).bind({});
@@ -27,7 +30,7 @@ Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
 Sizes.parameters = {
-  variants: [{ size: undefined }, { size: 40 }, { size: 48 }, { size: 200 }],
+  variants: [{ size: undefined }, { size: 40 }, { size: 48 }, { size: 200, label: 'Chat' }],
 };
 
 const Active = MultiTemplate<NavigationTabProps>(NavigationTab).bind({});
@@ -39,4 +42,4 @@ Active.parameters = {
   variants: [{ active: undefined }, { active: true }, { active: false }],
 };
 
-export { Example, Sizes };
+export { Example, Sizes, Active };
