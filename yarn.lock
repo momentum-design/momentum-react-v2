@@ -2876,18 +2876,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.16.12":
-  version: 0.16.12
-  resolution: "@momentum-design/components@npm:0.16.12"
+"@momentum-design/components@npm:0.23.1":
+  version: 0.23.1
+  resolution: "@momentum-design/components@npm:0.23.1"
   dependencies:
     "@lit/context": ^1.1.2
     "@lit/react": ^1.0.5
     "@momentum-design/fonts": "*"
     "@momentum-design/icons": "*"
     "@momentum-design/tokens": "*"
+    "@tanstack/lit-virtual": ^3.11.3
     lit: ^3.2.0
     uuid: ^11.0.5
-  checksum: f5e0b0588cee38192a16b150390bf0ff2e49e785ead2102eed6efe2af53e93698b2ce73c40379436fa9bdbe88590e2df9f882182d610cca3d42a428a0b644b7e
+  checksum: 664b992288ade7a65a38908d478ae86df411a960ed4fdf605e9046e6a6b7b6f6ebede06bcb3a1418b40a777aebf236148ded9aaeb5d7de86521fdf840c5a8eca
   languageName: node
   linkType: hard
 
@@ -2970,7 +2971,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/components": 0.16.12
+    "@momentum-design/components": 0.23.1
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.0.164
     "@momentum-design/tokens": 0.1.2
@@ -6964,6 +6965,24 @@ __metadata:
   dependencies:
     defer-to-connect: ^1.0.1
   checksum: 4d9158061c5f397c57b4988cde33a163244e4f02df16364f103971957a32886beb104d6180902cbe8b38cb940e234d9f98a4e486200deca621923f62f50a06fe
+  languageName: node
+  linkType: hard
+
+"@tanstack/lit-virtual@npm:^3.11.3":
+  version: 3.13.0
+  resolution: "@tanstack/lit-virtual@npm:3.13.0"
+  dependencies:
+    "@tanstack/virtual-core": 3.13.0
+  peerDependencies:
+    lit: ^3.1.0
+  checksum: 1135c238aaaa927ef28170b0c2b04605571d6df1f7ce4978dca2b28b852436820592f0c698bd44ce4cd41eb21b11c5721223451a9b28f2deeac4a8b990618bab
+  languageName: node
+  linkType: hard
+
+"@tanstack/virtual-core@npm:3.13.0":
+  version: 3.13.0
+  resolution: "@tanstack/virtual-core@npm:3.13.0"
+  checksum: 0cbead3350002bea1f8353e091d3d8d3d9ba7815f4a0eb359bc927b7b7f39c9530c1dfa15f8d75fe5f47621c8f55be57643133b8fe728af09f7ea0578016f78d
   languageName: node
   linkType: hard
 
