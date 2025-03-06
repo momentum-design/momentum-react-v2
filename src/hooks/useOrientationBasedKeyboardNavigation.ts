@@ -16,6 +16,7 @@ import { useFocusWithinState } from './useFocusState';
 import { isNumber } from 'lodash';
 import { ListItemBaseIndex } from '../components/ListItemBase/ListItemBase.types';
 import { usePrevious } from './usePrevious';
+import { useSpatialNavigationContext } from '../components/SpatialNavigationProvider/SpatialNavigationProvider.utils';
 
 type IUseOrientationBasedKeyboardNavigationReturn = {
   keyboardProps: HTMLAttributes<HTMLElement>;
@@ -50,6 +51,8 @@ export type IUseOrientationBasedKeyboardNavigationProps = {
 const useOrientationBasedKeyboardNavigation = (
   props: IUseOrientationBasedKeyboardNavigationProps
 ): IUseOrientationBasedKeyboardNavigationReturn => {
+  const spatialNav = useSpatialNavigationContext();
+
   const { allItemIndexes, listSize, orientation, noLoop, contextProps, initialFocus = 0 } = props;
   const [currentFocus, setCurrentFocusInternal] = useState<number | string>(-1);
   const [updateFocusBlocked, setUpdateFocusBlockedInternal] = useState<boolean>(true);
@@ -114,7 +117,7 @@ const useOrientationBasedKeyboardNavigation = (
   // re-renders to a minimum
   const context = useMemo(
     () => ({
-      noLoop,
+      noLoop: spatialNav ? true : noLoop,
       setCurrentFocus,
       setUpdateFocusBlocked,
       isFocusedWithin,
@@ -132,6 +135,7 @@ const useOrientationBasedKeyboardNavigation = (
       getCurrentFocus,
       shouldFocusOnPress,
       shouldItemFocusBeInset,
+      spatialNav,
     ]
   );
 
@@ -161,7 +165,7 @@ const useOrientationBasedKeyboardNavigation = (
     }
 
     if (currentFocus !== -1 && !allItemIndexes.includes(currentFocus)) {
-      onCurrentFocusNotFound(currentFocus, allItemIndexes, previousAllItemIndexes, setCurrentFocus);
+      setCurrentFocus(onCurrentFocusNotFound(currentFocus, allItemIndexes, previousAllItemIndexes));
     }
   }, [
     allItemIndexes,
@@ -182,15 +186,21 @@ const useOrientationBasedKeyboardNavigation = (
           evt.continuePropagation();
           break;
         case backwardKey:
-          evt.preventDefault();
-          setNextFocus(true, listSize, currentFocus, noLoop, setCurrentFocus, allItemIndexes);
+        case forwardKey: {
+          const next = setNextFocus(
+            currentFocus,
+            listSize,
+            evt.key === backwardKey,
+            context.noLoop,
+            allItemIndexes
+          );
+          if (next !== undefined) {
+            evt.nativeEvent.stopImmediatePropagation();
+            evt.preventDefault();
+            setCurrentFocus(next);
+          }
           break;
-
-        case forwardKey:
-          evt.preventDefault();
-          setNextFocus(false, listSize, currentFocus, noLoop, setCurrentFocus, allItemIndexes);
-          break;
-
+        }
         default:
           break;
       }

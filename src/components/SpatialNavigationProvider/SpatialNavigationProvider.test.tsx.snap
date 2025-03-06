@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpatialNavigationProvider /> snapshot should match snapshot 1`] = `<SpatialNavigationProvider />`;
+
+exports[`<SpatialNavigationProvider /> snapshot should match snapshot with custom key mapping 1`] = `
+<SpatialNavigationProvider
+  navigationKeyMapping={
+    Object {
+      "back": "q",
+      "down": "s",
+      "enter": "e",
+      "left": "a",
+      "right": "d",
+      "up": "w",
+    }
+  }
+/>
+`;

@@ -68,6 +68,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"
@@ -260,6 +261,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"
@@ -452,6 +454,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"
@@ -644,6 +647,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"
@@ -841,6 +845,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"
@@ -1033,6 +1038,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"
@@ -1238,6 +1244,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
           data-focus={false}
           data-level="none"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="md-text-input-container"

@@ -10,6 +10,7 @@ import { ListState } from '@react-stately/list';
 import { Node } from '@react-types/shared';
 import MenuListBackground from '../MenuListBackground';
 import { ListContext } from '../List/List.utils';
+import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 
 export const ListBoxContext = React.createContext<ListState<unknown>>(null);
 
@@ -32,6 +33,7 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
     state,
     ref
   );
+  const spatialNav = useSpatialNavigationContext();
 
   const renderItems = () => {
     return Array.from(state.collection.getKeys()).map((key) => {
@@ -44,13 +46,24 @@ const ListBoxBase = <T extends object>(props: Props<T>, ref: RefObject<HTMLUList
     });
   };
 
+  const menuListProps = {
+    ...listBoxProps,
+    onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+      if (spatialNav) {
+        // skip spatial navigation
+        e.nativeEvent.stopImmediatePropagation();
+      }
+      listBoxProps.onKeyDown(e);
+    },
+  };
+
   // ListContext is necessary to prevent changes in parent ListContext
   // for example when Menu is inside a list row
   return (
     <ListBoxContext.Provider value={state}>
       <ListContext.Provider value={{}}>
         <MenuListBackground
-          {...listBoxProps}
+          {...menuListProps}
           color={'primary'}
           ref={ref}
           style={style}

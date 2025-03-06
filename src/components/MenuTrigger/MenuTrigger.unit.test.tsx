@@ -11,6 +11,8 @@ import { ROUNDS } from '../ModalContainer/ModalContainer.constants';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import SpatialNavigationProvider from '../SpatialNavigationProvider';
+import { DEFAULTS } from '../SpatialNavigationProvider/SpatialNavigationProvider.constants';
 
 jest.mock('uuid', () => {
   return {
@@ -615,6 +617,31 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
         await user.tab({ shift: true });
         expect(await screen.findByRole('menuitemcheckbox', { name: 'Five' })).toHaveFocus();
+      });
+    });
+
+    describe('spatial navigation', () => {
+      it('closes the menu on Escape', async () => {
+        const user = userEvent.setup();
+
+        render(
+          <SpatialNavigationProvider
+            navigationKeyMapping={{
+              ...DEFAULTS.SPATIAL_NAVIGATION_KEY_MAPPING,
+              back: 'GoBack',
+            }}
+          >
+            <MenuTrigger {...defaultProps} />
+          </SpatialNavigationProvider>
+        );
+
+        await openMenu(user, screen);
+
+        await user.keyboard('{GoBack}');
+
+        await waitFor(() => {
+          expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
+        });
       });
     });
   });

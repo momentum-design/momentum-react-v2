@@ -28,6 +28,7 @@ import { useVirtualTreeNavigation } from './Tree.hooks';
 import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
 import { usePrevious } from '../../hooks/usePrevious';
 import { useItemSelected } from '../../hooks/useItemSelected';
+import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 
 const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   const {
@@ -56,6 +57,8 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   }
 
   const treeRef = useRef<HTMLDivElement>();
+
+  const spatialNav = useSpatialNavigationContext();
 
   const itemSelection = useItemSelected<TreeNodeId>({
     selectionMode,
@@ -237,8 +240,18 @@ const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
         case 'ArrowLeft': {
           evt.preventDefault();
           if (activeNode) {
-            const next = getNextActiveNode(tree, activeNode, key, excludeTreeRoot, toggleTreeNode);
-            setActiveNodeId(next);
+            const next = getNextActiveNode(tree, activeNode, key, excludeTreeRoot);
+            if (next.action !== 'noop') {
+              if (spatialNav) {
+                // skip spatial navigation
+                evt.nativeEvent.stopImmediatePropagation();
+              }
+              if (next.action === 'move') {
+                setActiveNodeId(next.nextNodeId);
+              } else if (next.action === 'open' || next.action === 'close') {
+                toggleTreeNode(next.nodeId);
+              }
+            }
           }
           break;
         }
