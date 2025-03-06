@@ -13,7 +13,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
       inverted={false}
       style={
         Object {
-          "--mdc-spinner-size": "24px",
+          "--mdc-spinner-size": "1.5rem",
         }
       }
       variant="standalone"
@@ -21,7 +21,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
       <mdc-spinner
         style={
           Object {
-            "--mdc-spinner-size": "24px",
+            "--mdc-spinner-size": "1.5rem",
           }
         }
         suppressHydrationWarning={true}
@@ -44,7 +44,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
       inverted={false}
       style={
         Object {
-          "--mdc-spinner-size": "24px",
+          "--mdc-spinner-size": "1.5rem",
         }
       }
       variant="standalone"
@@ -52,7 +52,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
       <mdc-spinner
         style={
           Object {
-            "--mdc-spinner-size": "24px",
+            "--mdc-spinner-size": "1.5rem",
           }
         }
         suppressHydrationWarning={true}
@@ -76,7 +76,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
       inverted={false}
       style={
         Object {
-          "--mdc-spinner-size": "24px",
+          "--mdc-spinner-size": "1.5rem",
         }
       }
       variant="standalone"
@@ -84,7 +84,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
       <mdc-spinner
         style={
           Object {
-            "--mdc-spinner-size": "24px",
+            "--mdc-spinner-size": "1.5rem",
           }
         }
         suppressHydrationWarning={true}
@@ -109,7 +109,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
       inverted={false}
       style={
         Object {
-          "--mdc-spinner-size": "24px",
+          "--mdc-spinner-size": "1.5rem",
         }
       }
       variant="standalone"
@@ -117,7 +117,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
       <mdc-spinner
         style={
           Object {
-            "--mdc-spinner-size": "24px",
+            "--mdc-spinner-size": "1.5rem",
           }
         }
         suppressHydrationWarning={true}
@@ -141,7 +141,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
       inverted={false}
       style={
         Object {
-          "--mdc-spinner-size": "32px",
+          "--mdc-spinner-size": "2rem",
         }
       }
       variant="standalone"
@@ -149,7 +149,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
       <mdc-spinner
         style={
           Object {
-            "--mdc-spinner-size": "32px",
+            "--mdc-spinner-size": "2rem",
           }
         }
         suppressHydrationWarning={true}
@@ -182,7 +182,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       inverted={false}
       style={
         Object {
-          "--mdc-spinner-size": "24px",
+          "--mdc-spinner-size": "1.5rem",
         }
       }
       variant="standalone"
@@ -190,7 +190,7 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       <mdc-spinner
         style={
           Object {
-            "--mdc-spinner-size": "24px",
+            "--mdc-spinner-size": "1.5rem",
           }
         }
         suppressHydrationWarning={true}

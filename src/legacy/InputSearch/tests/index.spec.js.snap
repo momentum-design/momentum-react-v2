@@ -74,7 +74,7 @@ exports[`tests for <InputSearch /> should match loading SnapShot 1`] = `
                   inverted={false}
                   style={
                     Object {
-                      "--mdc-spinner-size": "20px",
+                      "--mdc-spinner-size": "1.25rem",
                     }
                   }
                   variant="button"
@@ -82,7 +82,7 @@ exports[`tests for <InputSearch /> should match loading SnapShot 1`] = `
                   <mdc-spinner
                     style={
                       Object {
-                        "--mdc-spinner-size": "20px",
+                        "--mdc-spinner-size": "1.25rem",
                       }
                     }
                     suppressHydrationWarning={true}

@@ -138,7 +138,7 @@ describe('<LoadingSpinner />', () => {
         .find(MdcSpinner)
         .getDOMNode();
 
-      expect(element.getAttribute('style')).toBe('--mdc-spinner-size: 32px;');
+      expect(element.getAttribute('style')).toBe('--mdc-spinner-size: 2rem;');
     });
 
     it('should pass size through to web component if provided', async () => {
@@ -176,7 +176,7 @@ describe('<LoadingSpinner />', () => {
         size: undefined,
         variant: 'standalone',
         inverted: true,
-        style: { '--mdc-spinner-size': '24px' },
+        style: { '--mdc-spinner-size': '1.5rem' },
       });
     });
 
@@ -192,7 +192,7 @@ describe('<LoadingSpinner />', () => {
       expect(elementProps).toStrictEqual({
         size: undefined,
         inverted: false,
-        style: { '--mdc-spinner-size': '24px' },
+        style: { '--mdc-spinner-size': '1.5rem' },
         variant: 'button',
       });
     });

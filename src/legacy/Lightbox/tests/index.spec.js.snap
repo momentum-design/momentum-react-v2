@@ -134,7 +134,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                             role="img"
                           >
                             <mdc-spinner
-                              style="--mdc-spinner-size: 32px;"
+                              style="--mdc-spinner-size: 2rem;"
                             />
                           </div>
                           <div
@@ -605,7 +605,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     inverted={false}
                                     style={
                                       Object {
-                                        "--mdc-spinner-size": "32px",
+                                        "--mdc-spinner-size": "2rem",
                                       }
                                     }
                                     variant="standalone"
@@ -613,7 +613,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                     <mdc-spinner
                                       style={
                                         Object {
-                                          "--mdc-spinner-size": "32px",
+                                          "--mdc-spinner-size": "2rem",
                                         }
                                       }
                                       suppressHydrationWarning={true}

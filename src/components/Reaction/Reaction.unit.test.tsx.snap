@@ -469,7 +469,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
         inverted={false}
         style={
           Object {
-            "--mdc-spinner-size": "16px",
+            "--mdc-spinner-size": "1rem",
           }
         }
         variant="button"
@@ -477,7 +477,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
         <mdc-spinner
           style={
             Object {
-              "--mdc-spinner-size": "16px",
+              "--mdc-spinner-size": "1rem",
             }
           }
           suppressHydrationWarning={true}

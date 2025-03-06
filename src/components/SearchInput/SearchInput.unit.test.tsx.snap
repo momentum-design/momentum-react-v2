@@ -379,7 +379,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
               inverted={false}
               style={
                 Object {
-                  "--mdc-spinner-size": "16px",
+                  "--mdc-spinner-size": "1rem",
                 }
               }
               variant="button"
@@ -387,7 +387,7 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
               <mdc-spinner
                 style={
                   Object {
-                    "--mdc-spinner-size": "16px",
+                    "--mdc-spinner-size": "1rem",
                   }
                 }
                 suppressHydrationWarning={true}
