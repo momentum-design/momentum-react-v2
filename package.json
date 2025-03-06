@@ -99,7 +99,8 @@
   "resolutions": {
     "@react-aria/button": "3.4.3",
     "@types/node": "22.7.4",
-    "@momentum-design/icons": "0.10.0"
+    "@momentum-design/icons": "0.10.0",
+    "@momentum-design/tokens": "0.3.2"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
@@ -107,7 +108,7 @@
     "@momentum-design/components": "0.27.3",
     "@momentum-design/fonts": "0.0.8",
     "@momentum-design/icons": "0.10.0",
-    "@momentum-design/tokens": "0.1.2",
+    "@momentum-design/tokens": "0.3.2",
     "@momentum-ui/design-tokens": "^0.0.63",
     "@momentum-ui/icons": "8.28.4",
     "@momentum-ui/tokens": "^1.7.1",

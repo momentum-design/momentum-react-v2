@@ -73,7 +73,7 @@
   &[data-shallow-disabled='true'] {
     background-color: var(--mds-color-theme-background-primary-disabled);
     color: var(--mds-color-theme-text-primary-disabled);
-    border-color: var(--mds-color-theme-background-primary-ghost);
+    border-color: var(--mds-color-theme-outline-primary-disabled);
     cursor: default;
   }
 }
