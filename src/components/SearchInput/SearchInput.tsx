@@ -127,6 +127,7 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
             aria-hidden
             scale={ICON_HEIGHT_MAPPING[height]}
             className={STYLE.searching}
+            variant="button"
           />
         ) : (
           <Icon

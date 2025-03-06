@@ -255,36 +255,37 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
         htmlFor="test-ID"
       />
       <div>
-        <Icon
+        <LoadingSpinner
+          aria-hidden={true}
           className="md-global-search-input-search"
-          name="spinner"
           scale={18}
-          strokeColor="var(--mds-color-theme-text-primary-normal)"
-          weight="light"
+          variant="button"
         >
           <div
-            aria-hidden="true"
-            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-global-search-input-search md-icon-no-shrink"
+            aria-hidden={true}
+            className="md-global-search-input-search md-loading-spinner-wrapper"
             role="img"
           >
-            <svg
-              aria-hidden="true"
-              className=""
-              data-autoscale={false}
-              data-scale={18}
-              data-test="spinner"
-              fill="currentColor"
-              height="100%"
+            <Spinner
+              inverted={false}
               style={
                 Object {
-                  "stroke": "var(--mds-color-theme-text-primary-normal)",
+                  "--mdc-spinner-size": "1.125rem",
                 }
               }
-              viewBox="0, 0, 32, 32"
-              width="100%"
-            />
+              variant="button"
+            >
+              <mdc-spinner
+                style={
+                  Object {
+                    "--mdc-spinner-size": "1.125rem",
+                  }
+                }
+                suppressHydrationWarning={true}
+              />
+            </Spinner>
           </div>
-        </Icon>
+        </LoadingSpinner>
       </div>
       <div
         className="md-global-search-input-container"

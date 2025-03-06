@@ -18,7 +18,7 @@ describe('tests for <ContentItem />', () => {
 
   it('should show spinner when loading is true', () => {
     const container = mount(<ContentItem aspect="sixteenNine" loading={true} type={type} />);
-    expect(container.find('.md-spinner').length).toEqual(1);
+    expect(container.find('.md-loading-spinner-wrapper').exists()).toEqual(true);
   });
 
   it('should show content image when content present', () => {

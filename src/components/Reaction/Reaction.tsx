@@ -60,7 +60,7 @@ const Reaction: FC<Props> = (props: Props) => {
     );
   }
   if (!animationData) {
-    return <LoadingSpinner scale={size} aria-hidden />;
+    return <LoadingSpinner scale={size || DEFAULTS.SIZE} aria-hidden variant="button" />;
   }
 };
 
