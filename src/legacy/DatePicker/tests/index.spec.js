@@ -155,7 +155,7 @@ describe('tests for <DatePicker />', () => {
     document.dispatchEvent(evt);
 
     container.update();
-    expect(container.find('.md-event-overlay')).toHaveLength({});
+    expect(container.find('.md-event-overlay')).toHaveLength(0);
   });
 
   it('should selectedDate if valid, after the DatePicker is loaded', () => {
