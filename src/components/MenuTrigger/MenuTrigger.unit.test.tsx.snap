@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   isOpen={true}
   triggerComponent={
@@ -22,13 +22,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -40,7 +41,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -84,12 +85,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -141,12 +142,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -198,13 +199,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -225,6 +227,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -253,6 +256,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -2208,11 +2212,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   className="example-class"
   isOpen={true}
@@ -2234,13 +2238,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -2252,7 +2257,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -2296,12 +2301,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -2353,12 +2358,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -2410,13 +2415,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -2437,6 +2443,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -2465,6 +2472,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -4420,11 +4428,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   color="secondary"
   isOpen={true}
@@ -4446,13 +4454,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -4464,7 +4473,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -4508,12 +4517,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -4565,12 +4574,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -4622,13 +4631,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -4649,6 +4659,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -4677,6 +4688,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -6632,11 +6644,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   id="example-id"
   isOpen={true}
@@ -6659,13 +6671,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -6677,7 +6690,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -6721,12 +6734,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -6778,12 +6791,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -6835,13 +6848,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -6862,6 +6876,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -6890,6 +6905,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -8848,11 +8864,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   isOpen={true}
   placement="top"
@@ -8874,13 +8890,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -8892,7 +8909,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -8936,12 +8953,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -8993,12 +9010,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -9050,13 +9067,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -9077,6 +9095,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -9105,6 +9124,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -11060,11 +11080,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   isOpen={true}
   showArrow={true}
@@ -11086,13 +11106,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
     role="generic"
     setInstance={[Function]}
     showArrow={true}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -11104,7 +11125,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -11148,12 +11169,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -11205,12 +11226,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -11262,13 +11283,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -11289,6 +11311,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -11317,6 +11340,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -13338,11 +13362,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   isOpen={true}
   style={
@@ -13373,13 +13397,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         "color": "pink",
       }
     }
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -13391,7 +13416,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -13435,12 +13460,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -13492,12 +13517,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -13549,13 +13574,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -13576,6 +13602,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -13604,6 +13631,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -15570,11 +15598,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   isOpen={true}
   triggerComponent={
@@ -15596,13 +15624,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -15614,7 +15643,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -15658,12 +15687,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -15715,12 +15744,12 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -15772,13 +15801,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
         >
           <ButtonPill
             aria-controls="test-ID"
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -15799,6 +15829,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -15827,6 +15858,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -17782,11 +17814,11 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;
 
 exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`] = `
-<ForwardRef
+<MenuTrigger
   aria-label="Menu Trigger Component "
   isOpen={true}
   triggerComponent={
@@ -17808,13 +17840,14 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
     role="generic"
     setInstance={[Function]}
     showArrow={false}
-    trigger="click"
+    trigger="manual"
     triggerComponent={
       <ButtonPill
         aria-controls="test-ID"
         aria-expanded={true}
         aria-haspopup={true}
         id="test-ID"
+        onKeyDown={[Function]}
         onPress={[Function]}
         onPressStart={[Function]}
       >
@@ -17827,7 +17860,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
     <LazyTippy
       animation={false}
       appendTo="parent"
-      hideOnClick={true}
+      hideOnClick={false}
       interactive={true}
       offset={
         Array [
@@ -17871,13 +17904,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
       }
       render={[Function]}
       setInstance={[Function]}
-      trigger="click"
+      trigger="manual"
       zIndex={9998}
     >
       <ForwardRef(TippyWrapper)
         animation={false}
         appendTo="parent"
-        hideOnClick={true}
+        hideOnClick={false}
         interactive={true}
         offset={
           Array [
@@ -17929,13 +17962,13 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
           }
         }
         render={[Function]}
-        trigger="click"
+        trigger="manual"
         zIndex={9998}
       >
         <Tippy
           animation={false}
           appendTo="parent"
-          hideOnClick={true}
+          hideOnClick={false}
           interactive={true}
           offset={
             Array [
@@ -17987,7 +18020,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
             }
           }
           render={[Function]}
-          trigger="click"
+          trigger="manual"
           zIndex={9998}
         >
           <ButtonPill
@@ -17995,6 +18028,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
             aria-expanded={true}
             aria-haspopup={true}
             id="test-ID"
+            onKeyDown={[Function]}
             onPress={[Function]}
             onPressStart={[Function]}
             useNativeKeyDown={true}
@@ -18015,6 +18049,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
               data-shallow-disabled={false}
               data-size={40}
               id="test-ID"
+              onKeyDown={[Function]}
               onPress={[Function]}
               onPressStart={[Function]}
               useNativeKeyDown={true}
@@ -18043,6 +18078,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                     onClick={[Function]}
                     onDragStart={[Function]}
                     onFocus={[Function]}
+                    onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     onMouseDown={[Function]}
                     onMouseEnter={[Function]}
@@ -19998,5 +20034,5 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
       </ForwardRef(TippyWrapper)>
     </LazyTippy>
   </Popover>
-</ForwardRef>
+</MenuTrigger>
 `;

@@ -190,6 +190,7 @@ export {
   RadioSimpleGroup,
   ScreenReaderAnnouncer,
   Tooltip as TooltipNext,
+  TooltipMenuTriggerCombo,
   TooltipPopoverCombo,
   Toggletip,
   Link as LinkNext,
