@@ -1,7 +1,8 @@
-import { CSSProperties, ReactNode } from 'react';
-import { AriaLinkProps } from '@react-types/link';
-import { Props as IconProps } from '../Icon/Icon.types';
-import { TooltipTypes } from '../Tooltip/Tooltip.types';
+import type { CSSProperties, ReactNode } from 'react';
+import type { AriaLinkProps } from '@react-types/link';
+import type { Props as IconProps } from '../Icon/Icon.types';
+import type { TooltipTypes } from '../Tooltip/Tooltip.types';
+import type { PlacementType } from '../Popover/Popover.types';
 
 export interface Props extends AriaLinkProps {
   /**
@@ -62,6 +63,12 @@ export interface Props extends AriaLinkProps {
    * `label`、`description`、`none`
    */
   tooltipType?: TooltipTypes;
+
+  /**
+   * Determines the placement of the tooltip
+   * Defaults to 'bottom'
+   */
+  tooltipPlacement?: PlacementType;
 
   /**
    * tabIndex for <a> tag

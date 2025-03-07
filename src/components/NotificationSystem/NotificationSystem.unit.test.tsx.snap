@@ -47,23 +47,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -88,23 +79,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -177,23 +158,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <mdc-text
                     class="md-text-wrapper md-toast-notification-content"
@@ -218,23 +190,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -307,23 +269,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -348,23 +301,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -437,23 +380,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -478,23 +412,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -567,23 +491,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -608,23 +523,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -697,23 +602,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -738,23 +634,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -827,23 +713,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -868,23 +745,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -957,23 +824,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -998,23 +856,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1083,23 +931,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1124,23 +963,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1206,23 +1035,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1247,23 +1067,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1340,23 +1150,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1381,23 +1182,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1470,23 +1261,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1511,23 +1293,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1600,23 +1372,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1641,23 +1404,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1730,23 +1483,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1771,23 +1515,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1860,23 +1594,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -1901,23 +1626,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>
@@ -1990,23 +1705,14 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                   <div
                     class="md-toast-notification-leading-visual"
                   >
-                    <div
-                      aria-hidden="true"
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales icon md-icon-no-shrink"
-                      role="img"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class=""
-                        data-autoscale="false"
-                        data-scale="24"
-                        data-test="info-circle"
-                        height="100%"
-                        style="fill: lightblue;"
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
-                      />
-                    </div>
+                    <mdc-icon
+                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink icon"
+                      data-autoscale="false"
+                      data-scale="24"
+                      data-test="info-circle"
+                      name="info-circle-filled"
+                      style="--mdc-icon-fill-color: lightblue;"
+                    />
                   </div>
                   <div
                     class="md-toast-notification-content"
@@ -2031,23 +1737,13 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                       data-size="20"
                       type="button"
                     >
-                      <div
-                        aria-hidden="true"
+                      <mdc-icon
                         class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        role="img"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class=""
-                          data-autoscale="false"
-                          data-scale="16"
-                          data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
-                        />
-                      </div>
+                        data-autoscale="false"
+                        data-scale="16"
+                        data-test="cancel"
+                        name="cancel-bold"
+                      />
                     </button>
                   </div>
                 </div>

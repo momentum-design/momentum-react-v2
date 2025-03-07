@@ -3,8 +3,8 @@ import classnames from 'classnames';
 import lottie, { AnimationItem } from 'lottie-web/build/player/lottie_light';
 import { useDynamicJSONImport } from '../../hooks/useDynamicJSONImport';
 
-import { DEFAULTS, STYLE } from './Reaction.constants';
-import { STYLE as ICON_STYLE, GLYPH_NOT_FOUND } from '../Icon/Icon.constants';
+import { DEFAULTS, STYLE, GLYPH_NOT_FOUND } from './Reaction.constants';
+import { STYLE as ICON_STYLE } from '../Icon/Icon.constants';
 import { Props } from './Reaction.types';
 import './Reaction.style.scss';
 import LoadingSpinner from '../LoadingSpinner';

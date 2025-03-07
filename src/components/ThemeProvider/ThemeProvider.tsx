@@ -12,7 +12,10 @@ import '@momentum-design/tokens/dist/css/typography/complete.css';
 // import Momentum theme tokens:
 import '@momentum-design/tokens/dist/css/theme/webex/dark-stable.css';
 import '@momentum-design/tokens/dist/css/theme/webex/light-stable.css';
-import { ThemeProvider as MdcThemeProvider } from '@momentum-design/components/dist/react';
+import {
+  ThemeProvider as MdcThemeProvider,
+  IconProvider as MdcIconProvider,
+} from '@momentum-design/components/dist/react';
 
 import {
   DEFAULTS,
@@ -36,9 +39,11 @@ const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => {
       themeclass={themeClassStable}
       className={classNames(themeClass, STYLE.typography)}
     >
-      <div className={`${STYLE.wrapper} ${STYLE.globals}`} style={style} id={id}>
-        {children}
-      </div>
+      <MdcIconProvider>
+        <div className={`${STYLE.wrapper} ${STYLE.globals}`} style={style} id={id}>
+          {children}
+        </div>
+      </MdcIconProvider>
     </MdcThemeProvider>
   );
 };

@@ -1,5 +1,3 @@
-.icon {
-  svg {
-    fill: var(--mds-color-theme-text-accent-normal) !important;
-  }
+.icon::part(icon) {
+  fill: var(--mds-color-theme-text-accent-normal) !important;
 }

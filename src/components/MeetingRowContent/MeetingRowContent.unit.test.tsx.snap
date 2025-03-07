@@ -148,7 +148,25 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
             key="participants-icon"
             name="participant-list"
             scale={16}
-          />
+          >
+            <Icon
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              data-autoscale={false}
+              data-scale={16}
+              data-test="participant-list"
+              name="participant-list-regular"
+              style={Object {}}
+            >
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                data-autoscale={false}
+                data-scale={16}
+                data-test="participant-list"
+                style={Object {}}
+                suppressHydrationWarning={true}
+              />
+            </Icon>
+          </Icon>
           <ButtonPill
             color="join"
             key="join-button"

@@ -42,6 +42,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -65,6 +71,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -88,6 +100,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot 1`] = `
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -126,6 +144,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -149,6 +173,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -172,6 +202,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with child thats se
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -209,6 +245,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -232,6 +274,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -255,6 +303,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children 1`] =
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -293,6 +347,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -316,6 +376,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -339,6 +405,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -378,6 +450,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -402,6 +480,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -426,6 +510,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with children with 
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -463,6 +553,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -486,6 +582,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -509,6 +611,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with className 1`] 
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -554,6 +662,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -577,6 +691,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -600,6 +720,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with description 1`
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -637,6 +763,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with id 1`] = `
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -660,6 +792,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with id 1`] = `
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -683,6 +821,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with id 1`] = `
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -721,6 +865,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
           value="red"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessibility"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -744,6 +894,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
           value="blue"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="search"
+      />
       <mdc-text
         class="md-text-wrapper"
       >
@@ -767,6 +923,12 @@ exports[`<RadioSimpleGroup /> snapshot should match snapshot with style 1`] = `
           value="yellow"
         />
       </div>
+      <mdc-icon
+        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+        data-autoscale="true"
+        data-scale="false"
+        data-test="accessories"
+      />
       <mdc-text
         class="md-text-wrapper"
       >

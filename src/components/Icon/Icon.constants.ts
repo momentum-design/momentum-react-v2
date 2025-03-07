@@ -1,5 +1,5 @@
 import { IconScale } from '.';
-import type { IconWeight, InferredIconName } from './Icon.types';
+import type { IconWeight } from './Icon.types';
 
 const CLASS_PREFIX = 'md-icon';
 const COLOR_INHERIT = 'currentColor';
@@ -10,8 +10,6 @@ const WEIGHTS: Record<string, IconWeight> = {
   bold: 'bold',
   filled: 'filled',
 };
-
-const GLYPH_NOT_FOUND = String.fromCharCode(0x20de);
 
 const SCALES = {
   25: 25,
@@ -47,27 +45,11 @@ const SIZES: Record<IconScale, IconScale> = {
   inherit: 'inherit',
 };
 
-const VIEW_BOX_SPECS = {
-  NORMAL: '0, 0, 32, 32',
-  SMALL: '0, 0, 14, 14',
-};
-
 const DEFAULTS = {
   WEIGHT: WEIGHTS.regular,
-  SCALE: SIZES[32],
   AUTO_SCALE: false,
-  VIEW_BOX_SPEC: VIEW_BOX_SPECS.NORMAL,
   WEIGHTLESS: false,
 };
-
-const EXCEPTION_ICONS_LIST: Array<InferredIconName> = [
-  'check-circle-badge',
-  'error-legacy-badge',
-  'info-badge',
-  'priority-badge',
-  'draft-indicator-small',
-  'warning-badge',
-];
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
@@ -78,15 +60,4 @@ const STYLE = {
   scales: `${CLASS_PREFIX}-scales`,
 };
 
-export {
-  CLASS_PREFIX,
-  COLOR_INHERIT,
-  DEFAULTS,
-  EXCEPTION_ICONS_LIST,
-  GLYPH_NOT_FOUND,
-  SCALES,
-  SIZES,
-  STYLE,
-  VIEW_BOX_SPECS,
-  WEIGHTS,
-};
+export { CLASS_PREFIX, COLOR_INHERIT, DEFAULTS, SCALES, SIZES, STYLE, WEIGHTS };

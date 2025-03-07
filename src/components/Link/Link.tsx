@@ -16,6 +16,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
     externalLinkIconProps,
     tooltipContent,
     tooltipType = 'description',
+    tooltipPlacement = 'bottom',
     disabled,
     inverted,
     style,
@@ -71,7 +72,7 @@ const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>
   return (
     <FocusRing disabled={disabled}>
       {tooltipContent ? (
-        <Tooltip type={tooltipType} placement="bottom" triggerComponent={content}>
+        <Tooltip type={tooltipType} placement={tooltipPlacement} triggerComponent={content}>
           {tooltipContent}
         </Tooltip>
       ) : (

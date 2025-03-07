@@ -251,31 +251,25 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
                 className="md-navigation-tab-icon"
                 name="contacts"
                 scale={24}
-                strokeColor="none"
                 weight="filled"
               >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
-                  role="img"
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-navigation-tab-icon"
+                  data-autoscale={false}
+                  data-scale={24}
+                  data-test="contacts"
+                  name="contacts-filled"
+                  style={Object {}}
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-navigation-tab-icon"
                     data-autoscale={false}
                     data-scale={24}
                     data-test="contacts"
-                    fill="currentColor"
-                    height="100%"
-                    style={
-                      Object {
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                    style={Object {}}
+                    suppressHydrationWarning={true}
                   />
-                </div>
+                </Icon>
               </Icon>
             </button>
           </FocusRing>
@@ -579,31 +573,25 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                 className="md-navigation-tab-icon"
                 name="contacts"
                 scale={24}
-                strokeColor="none"
                 weight="filled"
               >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
-                  role="img"
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-navigation-tab-icon"
+                  data-autoscale={false}
+                  data-scale={24}
+                  data-test="contacts"
+                  name="contacts-filled"
+                  style={Object {}}
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-navigation-tab-icon"
                     data-autoscale={false}
                     data-scale={24}
                     data-test="contacts"
-                    fill="currentColor"
-                    height="100%"
-                    style={
-                      Object {
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                    style={Object {}}
+                    suppressHydrationWarning={true}
                   />
-                </div>
+                </Icon>
               </Icon>
             </button>
           </FocusRing>
@@ -663,31 +651,25 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                 className="md-navigation-tab-icon"
                 name="contacts"
                 scale={24}
-                strokeColor="none"
                 weight="filled"
               >
-                <div
-                  aria-hidden="true"
-                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-navigation-tab-icon md-icon-no-shrink"
-                  role="img"
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-navigation-tab-icon"
+                  data-autoscale={false}
+                  data-scale={24}
+                  data-test="contacts"
+                  name="contacts-filled"
+                  style={Object {}}
                 >
-                  <svg
-                    aria-hidden="true"
-                    className=""
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-navigation-tab-icon"
                     data-autoscale={false}
                     data-scale={24}
                     data-test="contacts"
-                    fill="currentColor"
-                    height="100%"
-                    style={
-                      Object {
-                        "stroke": "none",
-                      }
-                    }
-                    viewBox="0, 0, 32, 32"
-                    width="100%"
+                    style={Object {}}
+                    suppressHydrationWarning={true}
                   />
-                </div>
+                </Icon>
               </Icon>
             </button>
           </FocusRing>

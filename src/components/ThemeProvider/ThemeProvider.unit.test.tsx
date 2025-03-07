@@ -3,7 +3,6 @@ import { mount } from 'enzyme';
 import ThemeProvider from './ThemeProvider';
 
 import {
-  DEFAULTS,
   STYLE,
   THEME_CLASS_PREFIX,
   THEME_CLASS_PREFIX_STABLE,

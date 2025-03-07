@@ -191,24 +191,23 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -253,24 +252,23 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -315,24 +313,23 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -469,24 +466,23 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -865,24 +861,23 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -927,24 +922,23 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -989,24 +983,23 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -1143,24 +1136,23 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -1538,24 +1530,23 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -1600,24 +1591,23 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -1662,24 +1652,23 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -1816,24 +1805,23 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -2167,24 +2155,23 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -2229,24 +2216,23 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -2291,24 +2277,23 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -2446,24 +2431,23 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -2784,24 +2768,23 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -2846,24 +2829,23 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -2908,24 +2890,23 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -3063,24 +3044,23 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -3444,24 +3424,23 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -3506,24 +3485,23 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -3568,24 +3546,23 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -3722,24 +3699,23 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -4118,24 +4094,23 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -4180,24 +4155,23 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -4242,24 +4216,23 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -4396,24 +4369,23 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -4800,24 +4772,23 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       name="cancel"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="cancel"
+                        name="cancel-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="cancel"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -4862,24 +4833,23 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       name="arrow-up"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-up"
+                        name="arrow-up-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-up"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -4924,24 +4894,23 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                       name="arrow-down"
                       weight="bold"
                     >
-                      <div
-                        aria-hidden="true"
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                        role="img"
+                      <Icon
+                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                        data-autoscale={true}
+                        data-scale={false}
+                        data-test="arrow-down"
+                        name="arrow-down-bold"
+                        style={Object {}}
                       >
-                        <svg
-                          aria-hidden="true"
-                          className=""
+                        <mdc-icon
+                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                           data-autoscale={true}
                           data-scale={false}
                           data-test="arrow-down"
-                          fill="currentColor"
-                          height="100%"
                           style={Object {}}
-                          viewBox="0, 0, 32, 32"
-                          width="100%"
+                          suppressHydrationWarning={true}
                         />
-                      </div>
+                      </Icon>
                     </Icon>
                   </button>
                 </FocusRing>
@@ -5078,24 +5047,23 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>
@@ -5417,24 +5385,23 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     name="cancel"
                     weight="bold"
                   >
-                    <div
-                      aria-hidden="true"
-                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                      role="img"
+                    <Icon
+                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      data-autoscale={true}
+                      data-scale={false}
+                      data-test="cancel"
+                      name="cancel-bold"
+                      style={Object {}}
                     >
-                      <svg
-                        aria-hidden="true"
-                        className=""
+                      <mdc-icon
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                         data-autoscale={true}
                         data-scale={false}
                         data-test="cancel"
-                        fill="currentColor"
-                        height="100%"
                         style={Object {}}
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
+                        suppressHydrationWarning={true}
                       />
-                    </div>
+                    </Icon>
                   </Icon>
                 </button>
               </FocusRing>
@@ -5476,24 +5443,23 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     name="arrow-up"
                     weight="bold"
                   >
-                    <div
-                      aria-hidden="true"
-                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                      role="img"
+                    <Icon
+                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      data-autoscale={true}
+                      data-scale={false}
+                      data-test="arrow-up"
+                      name="arrow-up-bold"
+                      style={Object {}}
                     >
-                      <svg
-                        aria-hidden="true"
-                        className=""
+                      <mdc-icon
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                         data-autoscale={true}
                         data-scale={false}
                         data-test="arrow-up"
-                        fill="currentColor"
-                        height="100%"
                         style={Object {}}
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
+                        suppressHydrationWarning={true}
                       />
-                    </div>
+                    </Icon>
                   </Icon>
                 </button>
               </FocusRing>
@@ -5535,24 +5501,23 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                     name="arrow-down"
                     weight="bold"
                   >
-                    <div
-                      aria-hidden="true"
-                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                      role="img"
+                    <Icon
+                      className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                      data-autoscale={true}
+                      data-scale={false}
+                      data-test="arrow-down"
+                      name="arrow-down-bold"
+                      style={Object {}}
                     >
-                      <svg
-                        aria-hidden="true"
-                        className=""
+                      <mdc-icon
+                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                         data-autoscale={true}
                         data-scale={false}
                         data-test="arrow-down"
-                        fill="currentColor"
-                        height="100%"
                         style={Object {}}
-                        viewBox="0, 0, 32, 32"
-                        width="100%"
+                        suppressHydrationWarning={true}
                       />
-                    </div>
+                    </Icon>
                   </Icon>
                 </button>
               </FocusRing>
@@ -5751,24 +5716,23 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         name="alarm"
                         weight="bold"
                       >
-                        <div
-                          aria-hidden="true"
-                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales"
-                          role="img"
+                        <Icon
+                          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                          data-autoscale={125}
+                          data-scale={false}
+                          data-test="alarm"
+                          name="alarm-bold"
+                          style={Object {}}
                         >
-                          <svg
-                            aria-hidden="true"
-                            className=""
+                          <mdc-icon
+                            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
                             data-autoscale={125}
                             data-scale={false}
                             data-test="alarm"
-                            fill="currentColor"
-                            height="100%"
                             style={Object {}}
-                            viewBox="0, 0, 32, 32"
-                            width="100%"
+                            suppressHydrationWarning={true}
                           />
-                        </div>
+                        </Icon>
                       </Icon>
                     </button>
                   </FocusRing>

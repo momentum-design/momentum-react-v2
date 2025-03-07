@@ -30,28 +30,28 @@ describe('InputMessage', () => {
       const component = (
         await mountAndWait(<InputMessage message="some message" level="error" />)
       ).childAt(0);
-      expect(component.find('svg').length).toBe(1);
+      expect(component.find('mdc-icon').length).toBe(1);
     });
 
     it('should render warning triangle for a warning', async () => {
       const component = (
         await mountAndWait(<InputMessage message="some message" level="warning" />)
       ).childAt(0);
-      expect(component.find('svg').length).toBe(1);
+      expect(component.find('mdc-icon').length).toBe(1);
     });
 
     it('should not render an icon (right now anyway) for the success case', async () => {
       const component = (
         await mountAndWait(<InputMessage message="some message" level="success" />)
       ).childAt(0);
-      expect(component.find('svg').length).toBe(0);
+      expect(component.find('mdc-icon').length).toBe(0);
     });
 
     it('should not render an icon for the no level case', async () => {
       const component = (
         await mountAndWait(<InputMessage message="some message" level="none" />)
       ).childAt(0);
-      expect(component.find('svg').length).toBe(0);
+      expect(component.find('mdc-icon').length).toBe(0);
     });
 
     it('should have custom class if provided', async () => {

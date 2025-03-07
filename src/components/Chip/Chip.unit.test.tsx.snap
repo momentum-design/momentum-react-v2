@@ -1098,7 +1098,25 @@ exports[`<Chip /> snapshot should match snapshot with left icon 1`] = `
               <Icon
                 name="placeholder"
                 scale={16}
-              />
+              >
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="placeholder"
+                  name="placeholder-regular"
+                  style={Object {}}
+                >
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    data-autoscale={false}
+                    data-scale={16}
+                    data-test="placeholder"
+                    style={Object {}}
+                    suppressHydrationWarning={true}
+                  />
+                </Icon>
+              </Icon>
             </div>
             <Text
               className="md-chip-center-section"
@@ -1241,7 +1259,25 @@ exports[`<Chip /> snapshot should match snapshot with right icon 1`] = `
               <Icon
                 name="placeholder"
                 scale={16}
-              />
+              >
+                <Icon
+                  className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                  data-autoscale={false}
+                  data-scale={16}
+                  data-test="placeholder"
+                  name="placeholder-regular"
+                  style={Object {}}
+                >
+                  <mdc-icon
+                    class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                    data-autoscale={false}
+                    data-scale={16}
+                    data-test="placeholder"
+                    style={Object {}}
+                    suppressHydrationWarning={true}
+                  />
+                </Icon>
+              </Icon>
             </div>
           </button>
         </FocusRing>
