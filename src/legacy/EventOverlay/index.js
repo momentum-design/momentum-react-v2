@@ -27,12 +27,15 @@ function eventPath(evt) {
 
   // check if any of the elements in the next 3 elements in the path are a shadow root
   // this is a work around to make the deprecated EventOverlay to work with the Shadow DOM
-  for (let i = 1; i < 4; i++) {
-    if (path[i].toString() === '[object ShadowRoot]') {
-      isPathInShadowRoot = true;
-      pathElementsInShadowRootToDelete = i + 1;
+  if (path?.length > 1) {
+    for (let i = 1; i < 4; i++) {
+      if (path[i]?.toString() === '[object ShadowRoot]') {
+        isPathInShadowRoot = true;
+        pathElementsInShadowRootToDelete = i + 1;
+      }
     }
   }
+
   if (isPathInShadowRoot) {
     // if path is in shadowroot, then we need to get rid of the first 2 elements in the path
     path = path.slice(pathElementsInShadowRootToDelete);
