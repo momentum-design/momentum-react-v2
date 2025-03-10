@@ -36,9 +36,6 @@ export default class LightboxKitchenSink extends React.Component {
             index={this.state.index}
             height={250}
             width={250}
-            iconUrl="/icons/svg"
-            iconCacheStrategy="in-memory-cache"
-            iconCacheName="momentum"
             pages={[
               {
                 decrypting: false,
