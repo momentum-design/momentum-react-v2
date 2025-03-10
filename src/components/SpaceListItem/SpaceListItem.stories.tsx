@@ -191,7 +191,7 @@ Common.parameters = {
             <Text type="body-secondary" tagName="small">
               23
             </Text>
-            <Icon name="participant-list" weight="bold" strokeColor="none" scale={16} />
+            <Icon name="participant-list" weight="bold" scale={16} />
           </Flex>
           <ButtonPill color="join" size={28}>
             00:00

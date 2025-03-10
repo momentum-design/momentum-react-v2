@@ -40,7 +40,7 @@ const Example: Story<TooltipPopoverComboProps> = () => {
       }}
       id="storybook-id-example"
     >
-      <Icon name="cancel" weight="bold" strokeColor="transparent" />
+      <Icon name="cancel" weight="bold" />
     </ButtonCircle>
   );
 

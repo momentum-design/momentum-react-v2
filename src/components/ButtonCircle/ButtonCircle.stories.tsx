@@ -295,7 +295,7 @@ Common.parameters = {
       disabled: true,
     },
     {
-      children: <Icon name="pen" weight="filled" autoScale={150} />,
+      children: <Icon name="edit" weight="filled" autoScale={150} />,
       disabled: true,
       outline: true,
     },
