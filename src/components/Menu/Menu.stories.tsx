@@ -137,7 +137,7 @@ SelectionGroups.parameters = {
           }}
           title={
             <Flex direction="row" alignItems="center" xgap="0.25rem">
-              <Icon scale={16} name="speaker" strokeColor="none" />
+              <Icon scale={16} name="speaker" />
               <Text type="body-secondary" tagName="small">
                 Speaker (you can choose many)
               </Text>
@@ -164,7 +164,7 @@ SelectionGroups.parameters = {
           }}
           title={
             <Flex direction="row" alignItems="center" xgap="0.25rem">
-              <Icon scale={16} name="microphone" strokeColor="none" />
+              <Icon scale={16} name="microphone" />
               <Text type="body-secondary" tagName="small">
                 Microphone (you can choose one)
               </Text>
@@ -196,7 +196,7 @@ SelectionGroups.parameters = {
           }}
           title={
             <Flex direction="row" alignItems="center" xgap="0.25rem">
-              <Icon scale={16} name="adjust-microphone" strokeColor="none" />
+              <Icon scale={16} name="adjust-microphone" />
               <Text type="body-secondary" tagName="small">
                 Webex smart audio (You can choose one)
               </Text>
@@ -230,7 +230,7 @@ SelectionGroups.parameters = {
           }}
           title={
             <Flex direction="row" alignItems="center" xgap="0.25rem">
-              <Icon scale={16} name="accessibility" strokeColor="none" />
+              <Icon scale={16} name="accessibility" />
               <Text type="body-secondary" tagName="small">
                 Layout
               </Text>

@@ -154,9 +154,14 @@ describe('<Accordion />', () => {
 
       expect(component.find('button').prop('aria-expanded')).toBe(true);
       expect(component.find('div[role="region"]').exists()).toBe(true);
-      expect(component.find('Icon').props()).toStrictEqual({
-        name: 'arrow-down',
-        scale: 12,
+      expect(component.find('mdc-icon').props()).toStrictEqual({
+        'aria-label': undefined,
+        class: 'md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink',
+        'data-autoscale': false,
+        'data-scale': 12,
+        'data-test': 'arrow-down',
+        style: {},
+        suppressHydrationWarning: true,
       });
     });
 
@@ -167,9 +172,14 @@ describe('<Accordion />', () => {
 
       expect(component.find('button').prop('aria-expanded')).toBe(false);
       expect(component.find('div[role="region"]').exists()).toBe(false);
-      expect(component.find('Icon').props()).toStrictEqual({
-        name: 'arrow-right',
-        scale: 12,
+      expect(component.find('mdc-icon').props()).toStrictEqual({
+        'aria-label': undefined,
+        class: 'md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink',
+        'data-autoscale': false,
+        'data-scale': 12,
+        'data-test': 'arrow-right',
+        style: {},
+        suppressHydrationWarning: true,
       });
     });
   });

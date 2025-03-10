@@ -29,7 +29,7 @@ Example.args = {
   children: (
     <>
       <ListItemBaseSection position="start">
-        <Icon name="speaker" scale={16} weight="bold" strokeColor="none" />
+        <Icon name="speaker" scale={16} weight="bold" />
       </ListItemBaseSection>
       <ListItemBaseSection position="fill">
         <Text type="body-secondary" tagName="small">
@@ -79,7 +79,7 @@ Common.parameters = {
       children: (
         <>
           <ListItemBaseSection position="start">
-            <Icon name="speaker" scale={16} weight="bold" strokeColor="none" />
+            <Icon name="speaker" scale={16} weight="bold" />
           </ListItemBaseSection>
           <ListItemBaseSection position="fill">
             <Text type="body-secondary" tagName="small">
@@ -113,7 +113,6 @@ Common.parameters = {
               scale={16}
               weight="bold"
               fillColor="var(--mds-color-theme-text-warning-normal)"
-              strokeColor="none"
             />
           </ListItemBaseSection>
         </>
