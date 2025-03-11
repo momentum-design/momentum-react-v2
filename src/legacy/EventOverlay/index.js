@@ -32,6 +32,7 @@ function eventPath(evt) {
       if (path[i]?.toString() === '[object ShadowRoot]') {
         isPathInShadowRoot = true;
         pathElementsInShadowRootToDelete = i + 1;
+        break;
       }
     }
   }
