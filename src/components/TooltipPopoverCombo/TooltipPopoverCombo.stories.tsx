@@ -83,7 +83,7 @@ const AsDescription: Story<TooltipPopoverComboProps> = () => {
       id="storybook-id-example"
     >
       <Flex xgap="0.5rem" alignItems="center">
-        <Icon name="plus" />
+        <Icon name="plus" scale={32} />
         <Text tagName="p">Create</Text>
       </Flex>
     </ButtonPill>
