@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useContext } from 'react';
+import React, { useContext } from 'react';
 import { ListContextValue } from './List.types';
 import { ListItemBaseIndex } from '../ListItemBase/ListItemBase.types';
 import { isNumber } from 'lodash';
@@ -7,14 +7,22 @@ export const ListContext = React.createContext<ListContextValue>(null);
 
 export const useListContext = (): ListContextValue => useContext(ListContext);
 
+/**
+ * Calculate the next (or previous) index of a list
+ *
+ * @param isBackward Increase or decrease the index
+ * @param listSize List size
+ * @param currentFocus Current index
+ * @param noLoop loop back to the front or the back of the list
+ * @param allItemIndexes available indexes in order
+ */
 export const setNextFocus = (
-  isBackward: boolean,
-  listSize: number,
   currentFocus: ListItemBaseIndex,
+  listSize: number,
+  isBackward: boolean,
   noLoop: boolean,
-  setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>,
   allItemIndexes: ListItemBaseIndex[]
-): void => {
+): ListItemBaseIndex => {
   let nextIndex: ListItemBaseIndex;
   let currentIndex: number;
 
@@ -45,15 +53,14 @@ export const setNextFocus = (
   if (allItemIndexes) {
     nextIndex = allItemIndexes[nextIndex];
   }
-  setFocus(nextIndex);
+  return nextIndex;
 };
 
 export const onCurrentFocusNotFound = (
   currentFocus: ListItemBaseIndex,
   allItemIndexes: ListItemBaseIndex[],
   previousAllItemIndexes: ListItemBaseIndex[],
-  setFocus: Dispatch<SetStateAction<ListItemBaseIndex>>
-): void => {
+): ListItemBaseIndex => {
   const previousIndexOfCurrentFocus = previousAllItemIndexes.indexOf(currentFocus);
 
   const allItemIndexesPositions = allItemIndexes.map((itemIndex) =>
@@ -66,5 +73,5 @@ export const onCurrentFocusNotFound = (
 
   const nextIndex = allItemIndexes[differences.lastIndexOf(Math.min(...differences))];
 
-  setFocus(nextIndex);
+  return nextIndex;
 };

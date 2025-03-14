@@ -75,12 +75,14 @@ const AriaToolbar: FC<Props> = (props: Props) => {
     // When the toolbar is rendered inside a list, only the first item in the toolbar
     // should be focusable. This is to preserve the tab order as the
     // List uses a roving tab index.
-    getKeyboardFocusableElements(ref.current, false).forEach((el, index) => {
-      if (index === 0) {
-        return;
+    getKeyboardFocusableElements(ref.current, { includeTabbableOnly: false }).forEach(
+      (el, index) => {
+        if (index === 0) {
+          return;
+        }
+        el.setAttribute('data-exclude-focus', 'true');
       }
-      el.setAttribute('data-exclude-focus', 'true');
-    });
+    );
   }, [ref]);
 
   return (
