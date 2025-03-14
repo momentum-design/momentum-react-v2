@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NavigationTab /> snapshot should match snapshot 1`] = `
-<NavigationTab>
+<NavigationTab
+  aria-label="chat"
+>
   <FocusRing>
     <FocusRing
       focusClass="md-focus-ring-wrapper children"
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -20,6 +23,7 @@ exports[`<NavigationTab /> snapshot should match snapshot 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -50,6 +54,7 @@ exports[`<NavigationTab /> snapshot should match snapshot 1`] = `
 exports[`<NavigationTab /> snapshot should match snapshot with active 1`] = `
 <NavigationTab
   active={true}
+  aria-label="chat"
 >
   <FocusRing>
     <FocusRing
@@ -57,6 +62,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with active 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={true}
         data-size={48}
@@ -69,6 +75,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with active 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={true}
               data-size={48}
@@ -98,6 +105,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with active 1`] = `
 
 exports[`<NavigationTab /> snapshot should match snapshot with className 1`] = `
 <NavigationTab
+  aria-label="chat"
   className="example-class"
 >
   <FocusRing>
@@ -106,6 +114,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with className 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper example-class"
         data-active={false}
         data-size={48}
@@ -118,6 +127,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with className 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper example-class md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -147,6 +157,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with className 1`] = `
 
 exports[`<NavigationTab /> snapshot should match snapshot with count 1`] = `
 <NavigationTab
+  aria-label="chat"
   count={100}
 >
   <FocusRing>
@@ -155,6 +166,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with count 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -167,6 +179,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with count 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -208,6 +221,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with count 1`] = `
 
 exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
 <NavigationTab
+  aria-label="chat"
   icon="contacts"
 >
   <FocusRing>
@@ -216,6 +230,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -228,6 +243,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -282,6 +298,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
 
 exports[`<NavigationTab /> snapshot should match snapshot with id 1`] = `
 <NavigationTab
+  aria-label="chat"
   id="example-id"
 >
   <FocusRing>
@@ -290,6 +307,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with id 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -303,6 +321,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with id 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -341,6 +360,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with label 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="Example label"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -353,6 +373,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with label 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="Example label"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -383,6 +404,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with label 1`] = `
 exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
 <div>
   <NavigationTab
+    aria-label="chat"
     key="0"
     size={40}
   >
@@ -392,6 +414,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <ButtonSimple
+          aria-label="chat"
           className="md-navigation-tab-wrapper"
           data-active={false}
           data-size={40}
@@ -404,6 +427,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
+                aria-label="chat"
                 className="md-navigation-tab-wrapper md-button-simple-wrapper"
                 data-active={false}
                 data-size={40}
@@ -430,6 +454,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
     </FocusRing>
   </NavigationTab>
   <NavigationTab
+    aria-label="chat"
     key="1"
     size={48}
   >
@@ -439,6 +464,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <ButtonSimple
+          aria-label="chat"
           className="md-navigation-tab-wrapper"
           data-active={false}
           data-size={48}
@@ -451,6 +477,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
+                aria-label="chat"
                 className="md-navigation-tab-wrapper md-button-simple-wrapper"
                 data-active={false}
                 data-size={48}
@@ -477,6 +504,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
     </FocusRing>
   </NavigationTab>
   <NavigationTab
+    aria-label="chat"
     key="2"
     size={200}
   >
@@ -486,6 +514,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
         focusRingClass="md-focus-ring-wrapper children"
       >
         <ButtonSimple
+          aria-label="chat"
           className="md-navigation-tab-wrapper"
           data-active={false}
           data-size={200}
@@ -498,6 +527,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
               focusRingClass="md-focus-ring-wrapper children"
             >
               <button
+                aria-label="chat"
                 className="md-navigation-tab-wrapper md-button-simple-wrapper"
                 data-active={false}
                 data-size={200}
@@ -528,6 +558,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size 1`] = `
 
 exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon 1`] = `
 <NavigationTab
+  aria-label="chat"
   icon="contacts"
   label="Contacts"
   size={48}
@@ -538,6 +569,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -550,6 +582,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -605,6 +638,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
 exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon, count, active 1`] = `
 <NavigationTab
   active={false}
+  aria-label="chat"
   count={0}
   icon="contacts"
   label="Contacts"
@@ -616,6 +650,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -628,6 +663,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
@@ -682,6 +718,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
 
 exports[`<NavigationTab /> snapshot should match snapshot with style 1`] = `
 <NavigationTab
+  aria-label="chat"
   style={
     Object {
       "color": "pink",
@@ -694,6 +731,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with style 1`] = `
       focusRingClass="md-focus-ring-wrapper children"
     >
       <ButtonSimple
+        aria-label="chat"
         className="md-navigation-tab-wrapper"
         data-active={false}
         data-size={48}
@@ -711,6 +749,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with style 1`] = `
             focusRingClass="md-focus-ring-wrapper children"
           >
             <button
+              aria-label="chat"
               className="md-navigation-tab-wrapper md-button-simple-wrapper"
               data-active={false}
               data-size={48}
