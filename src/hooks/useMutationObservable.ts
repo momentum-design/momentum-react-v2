@@ -26,7 +26,12 @@ export const useMutationObservable = (
   const [observer, setObserver] = useState<MutationObserver>(null);
 
   useEffect(() => {
+    // disconnect previous observer here to make sure
+    // the old observer is disconnected in time (because between
+    // this useEffect and the useEffect below might have a time gap)
+    observer?.disconnect();
     setObserver(() => new MutationObserver(callback));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [callback, config]);
 
   useEffect(() => {
