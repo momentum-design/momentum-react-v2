@@ -1,242 +1,103 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
-
-import ButtonPill from '../ButtonPill';
+import { mount } from 'enzyme';
 
 import Coachmark from './';
 
-jest.mock('uuid', () => {
-  return {
-    v4: () => '1',
-  };
-});
-
 describe('<Coachmark />', () => {
-  const iconName = 'placeholder';
-  const children = 'Children';
-
   describe('snapshot', () => {
-    it('should match snapshot without header', async () => {
+    it('should match snapshot', () => {
       expect.assertions(1);
 
-      const { container } = render(
-        <Coachmark
-          actions={[
-            <ButtonPill key={0}>Button A</ButtonPill>,
-            <ButtonPill key={1}>Button B</ButtonPill>,
-          ]}
-          isVisible
-          triggerComponent={<div />}
-        >
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
+      const container = mount(<Coachmark />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with header', async () => {
+    it('should match snapshot with className', () => {
       expect.assertions(1);
 
-      const { container } = render(
-        <Coachmark
-          actions={[
-            <ButtonPill key={0}>Button A</ButtonPill>,
-            <ButtonPill key={1}>Button B</ButtonPill>,
-          ]}
-          icon={iconName}
-          image={
-            <img
-              alt="example"
-              src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png"
-            />
-          }
-          isVisible
-          title="Title"
-          triggerComponent={<div />}
-        >
-          {children}
-        </Coachmark>
-      );
+      const className = 'example-class';
 
-      await screen.findByText(children);
+      const container = mount(<Coachmark className={className} />);
 
       expect(container).toMatchSnapshot();
     });
+
+    it('should match snapshot with id', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const container = mount(<Coachmark id={id} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with style', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+
+      const container = mount(<Coachmark style={style} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
-    it('should allow actions', async () => {
-      expect.assertions(2);
-      const user = userEvent.setup();
-
-      const onPressMock = jest.fn();
-
-      render(
-        <Coachmark
-          actions={[
-            <ButtonPill key={0} onPress={onPressMock}>
-              Button A
-            </ButtonPill>,
-          ]}
-          isVisible
-          triggerComponent={<div />}
-        >
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
-
-      const button = screen.getByRole('button', { name: 'Button A' });
-
-      expect(button).toBeVisible();
-
-      await user.click(button);
-
-      expect(onPressMock).toHaveBeenCalledTimes(1);
-    });
-
-    it('should allow icon', async () => {
+    it('should have its wrapper class', () => {
       expect.assertions(1);
 
-      render(
-        <Coachmark isVisible icon={iconName} triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
+      const element = mount(<Coachmark />)
+        .find(Coachmark)
+        .getDOMNode();
 
-      await screen.findByText(children);
-
-      const icon = screen.getByTestId(iconName);
-
-      expect(icon).toBeVisible();
+      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
 
-    it('should allow image', async () => {
-      expect.assertions(2);
-
-      const alt = 'example';
-      const src =
-        'https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png';
-
-      render(
-        <Coachmark isVisible image={<img alt={alt} src={src} />} triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
-
-      const image = screen.getByAltText<HTMLImageElement>(alt);
-
-      expect(image).toBeVisible();
-      expect(image.src).toBe(src);
-    });
-
-    it('should allow dismiss via keypress', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
-
-      const mockDismiss = jest.fn();
-
-      render(
-        <Coachmark isVisible onDismiss={mockDismiss} triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
-
-      const dismissButton = screen.getByRole('button', { name: 'dismiss' });
-
-      expect(dismissButton).toBeVisible();
-
-      await user.tab();
-      await user.keyboard('{enter}');
-
-      await waitFor(() => {
-        expect(screen.queryByText(children)).not.toBeInTheDocument();
-      });
-
-      expect(mockDismiss).toHaveBeenCalledTimes(1);
-    });
-
-    it('should allow dismiss via click', async () => {
-      expect.assertions(3);
-      const user = userEvent.setup();
-
-      const mockDismiss = jest.fn();
-
-      render(
-        <Coachmark isVisible onDismiss={mockDismiss} triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
-
-      const dismissButton = screen.getByRole('button', { name: 'dismiss' });
-
-      expect(dismissButton).toBeVisible();
-
-      await user.click(dismissButton);
-
-      await waitFor(() => {
-        expect(screen.queryByText(children)).not.toBeInTheDocument();
-      });
-
-      expect(mockDismiss).toHaveBeenCalledTimes(1);
-    });
-
-    it('should respond to isVisible prop', async () => {
-      expect.assertions(3);
-
-      const { rerender } = render(
-        <Coachmark isVisible triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
-
-      expect(screen.getByText(children)).toBeVisible();
-
-      rerender(<Coachmark triggerComponent={<div />}>{children}</Coachmark>);
-
-      await waitFor(() => {
-        expect(screen.queryByText(children)).not.toBeInTheDocument();
-      });
-
-      rerender(
-        <Coachmark isVisible triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
-
-      await screen.findByText(children);
-
-      expect(screen.getByText(children)).toBeVisible();
-    });
-
-    it('should allow title', async () => {
+    it('should have provided class when className is provided', () => {
       expect.assertions(1);
 
-      const title = 'Title';
+      const className = 'example-class';
 
-      render(
-        <Coachmark isVisible title={title} triggerComponent={<div />}>
-          {children}
-        </Coachmark>
-      );
+      const element = mount(<Coachmark className={className} />)
+        .find(Coachmark)
+        .getDOMNode();
 
-      await screen.findByText(children);
-
-      expect(screen.getByText(title)).toBeVisible();
+      expect(element.classList.contains(className)).toBe(true);
     });
+
+    it('should have provided id when id is provided', () => {
+      expect.assertions(1);
+
+      const id = 'example-id';
+
+      const element = mount(<Coachmark id={id} />)
+        .find(Coachmark)
+        .getDOMNode();
+
+      expect(element.id).toBe(id);
+    });
+
+    it('should have provided style when style is provided', () => {
+      expect.assertions(1);
+
+      const style = { color: 'pink' };
+      const styleString = 'color: pink;';
+
+      const element = mount(<Coachmark style={style} />)
+        .find(Coachmark)
+        .getDOMNode();
+
+      expect(element.getAttribute('style')).toBe(styleString);
+    });
+
+    /* ...additional attribute tests... */
+  });
+
+  describe('actions', () => {
+    /* ...action tests... */
   });
 });

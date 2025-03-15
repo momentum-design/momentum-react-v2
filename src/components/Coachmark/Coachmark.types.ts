@@ -1,47 +1,34 @@
-import type { ReactElement, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
+import { AriaLabelRequired } from 'src/utils/a11y';
 
-import { ButtonSimpleProps } from '../ButtonSimple';
-import { PopoverProps } from '../Popover';
-import { InferredIconName } from '../Icon/Icon.types';
-
-export interface CoachmarkWithoutHeaderProps {
+export type Props = {
   /**
-   * Actions associated with this Coachmark.
-   */
-  actions?: ReactElement<ButtonSimpleProps> | Array<ReactElement<ButtonSimpleProps>>;
-
-  /**
-   * Content to display on this Coachmark.
+   * Child components of this Coachmark.
    */
   children: ReactNode;
 
   /**
-   * Event handler to handle dismissing the Coachmark.
+   * Custom class for overriding this component's CSS.
    */
-  onDismiss?: () => void;
-}
-
-export interface CoachmarkWithHeaderProps extends CoachmarkWithoutHeaderProps {
-  /**
-   * Icon to display to the left of the title.
-   */
-  icon?: InferredIconName;
+  className?: string;
 
   /**
-   * Image associated with this Coachmark.
+   * Custom style for overriding this component's CSS.
    */
-  image?: ReactElement<HTMLImageElement>;
+  style?: CSSProperties;
 
   /**
-   * Title of this Coachmark.
+   * ID of the coachmark.
    */
-  title?: string;
-}
+  id: string;
 
-export type Props = PopoverProps &
-  CoachmarkWithHeaderProps & {
-    /**
-     * Whether or not this Coachmark is to be visible.
-     */
-    isVisible?: boolean;
-  };
+  /**
+   * ID of the element that triggers the coachmark.
+   */
+  triggerID: string;
+
+  /**
+   * Arial label for the close button.
+   */
+  'close-button-aria-label'?: string;
+} & AriaLabelRequired;
