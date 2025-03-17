@@ -70,7 +70,7 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                 tabindex="-1"
               >
                 <mdc-themeprovider
-                  class="md-theme-darkWebex mds-typography"
+                  class="md-theme-darkWebex mds-typography mds-elevation"
                 >
                   <mdc-iconprovider>
                     <div
@@ -300,11 +300,11 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                   theme="darkWebex"
                 >
                   <ThemeProvider
-                    className="md-theme-darkWebex mds-typography"
+                    className="md-theme-darkWebex mds-typography mds-elevation"
                     themeclass="mds-theme-stable-darkWebex"
                   >
                     <mdc-themeprovider
-                      class="md-theme-darkWebex mds-typography"
+                      class="md-theme-darkWebex mds-typography mds-elevation"
                       suppressHydrationWarning={true}
                     >
                       <IconProvider>
