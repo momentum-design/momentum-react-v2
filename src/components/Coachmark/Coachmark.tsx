@@ -7,7 +7,7 @@ import { Coachmark as MdcCoachmark } from '@momentum-design/components/dist/reac
  * The Coachmark component.
  */
 const Coachmark: FC<Props> = (props: Props) => {
-  return <MdcCoachmark {...props} triggerID="1" />;
+  return <MdcCoachmark {...props} />;
 };
 
 export default Coachmark;
