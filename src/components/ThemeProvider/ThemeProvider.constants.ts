@@ -7,6 +7,7 @@ const STYLE = {
   globals: `${CLASS_PREFIX}-globals`,
   // momentum-design typography class to be set
   typography: 'mds-typography',
+  elevation: 'mds-elevation',
 };
 
 // Some themes are disabled until tokens are properly imported.

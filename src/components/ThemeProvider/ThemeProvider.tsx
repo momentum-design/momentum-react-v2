@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import '@momentum-ui/design-tokens/dist/index.css';
 // TODO: we should not use core colors, only theme colors - to be removed:
 import '@momentum-design/tokens/dist/css/core/complete.css';
+import '@momentum-design/tokens/dist/css/elevation/complete.css';
 
 // import Momentum fonts and typography defaults:
 import '@momentum-design/fonts/dist/css/fonts.css';
@@ -49,7 +50,7 @@ const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => {
   return (
     <MdcThemeProvider
       themeclass={themeClassStable}
-      className={classNames(themeClass, STYLE.typography)}
+      className={classNames(themeClass, STYLE.typography, STYLE.elevation)}
     >
       <MdcIconProvider>
         <div className={`${STYLE.wrapper} ${STYLE.globals}`} style={style} id={id}>
