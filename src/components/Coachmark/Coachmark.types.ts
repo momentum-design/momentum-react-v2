@@ -1,6 +1,6 @@
 import { PopoverPlacement } from '@momentum-design/components';
 import { CSSProperties, ReactNode } from 'react';
-import { AriaLabelRequired } from 'src/utils/a11y';
+import { AriaLabelRequired } from '../../utils/a11y';
 
 export type Props = {
   /**
