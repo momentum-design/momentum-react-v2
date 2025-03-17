@@ -2940,10 +2940,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/tokens@npm:0.3.2":
-  version: 0.3.2
-  resolution: "@momentum-design/tokens@npm:0.3.2"
-  checksum: 738b7eecc03ba151fe2562a7147105c8dbdfc75f7ac8f9767e8b3b95c33f48f34e0164105c46bdbdbce4e6b607ff9d935b28088233a95dc8ec79e9b615afceb7
+"@momentum-design/tokens@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@momentum-design/tokens@npm:0.5.0"
+  checksum: db11bcb07f369fa08df84520cd1788202330a1d978166fb8b12668c605d6c48ad6f472bf49c7286c4f9f1abc69a3f191dd9ddc5d64ae372001a41bdf65da1cd0
   languageName: node
   linkType: hard
 
@@ -2987,7 +2987,7 @@ __metadata:
     "@momentum-design/components": 0.33.2
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.10.0
-    "@momentum-design/tokens": 0.3.2
+    "@momentum-design/tokens": 0.5.0
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
     "@momentum-ui/tokens": ^1.7.1
