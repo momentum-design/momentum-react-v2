@@ -2,14 +2,14 @@
 
 exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
 <ThemeProvider
-  theme="darkWebex"
+  theme="darkBronzeWebex"
 >
   <ThemeProvider
-    className="md-theme-darkWebex mds-typography"
-    themeclass="mds-theme-stable-darkWebex"
+    className="md-theme-darkBronzeWebex mds-typography"
+    themeclass="mds-theme-stable-darkBronzeWebex"
   >
     <mdc-themeprovider
-      class="md-theme-darkWebex mds-typography"
+      class="md-theme-darkBronzeWebex mds-typography"
       suppressHydrationWarning={true}
     >
       <IconProvider>
