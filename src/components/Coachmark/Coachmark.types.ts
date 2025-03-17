@@ -1,3 +1,4 @@
+import { PopoverPlacement } from '@momentum-design/components';
 import { CSSProperties, ReactNode } from 'react';
 import { AriaLabelRequired } from 'src/utils/a11y';
 
@@ -28,7 +29,17 @@ export type Props = {
   triggerID: string;
 
   /**
+   * Whether the close button should be shown.
+   */
+  'close-button'?: boolean;
+
+  /**
    * Arial label for the close button.
    */
   'close-button-aria-label'?: string;
+
+  /**
+   * Placement of the coachmark.
+   */
+  placement?: PopoverPlacement;
 } & AriaLabelRequired;

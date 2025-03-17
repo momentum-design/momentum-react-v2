@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Coachmark /> snapshot should match snapshot 1`] = `
+<div>
+  <div
+    id="trigger"
+  >
+    trigger
+  </div>
+  <Coachmark
+    aria-label="Coachmark"
+    close-button-aria-label="Close"
+    id="coachmark"
+    triggerID="trigger"
+  >
+    <Coachmark
+      aria-label="Coachmark"
+      close-button-aria-label="Close"
+      id="coachmark"
+      triggerID="trigger"
+    >
+      <mdc-coachmark
+        aria-label="Coachmark"
+        close-button-aria-label="Close"
+        suppressHydrationWarning={true}
+      >
+        This is a coachmark
+      </mdc-coachmark>
+    </Coachmark>
+  </Coachmark>
+</div>
+`;
+
+exports[`<Coachmark /> snapshot should match snapshot with className 1`] = `
+<div>
+  <div
+    id="trigger"
+  >
+    trigger
+  </div>
+  <Coachmark
+    aria-label="Coachmark"
+    className="example-class"
+    close-button-aria-label="Close"
+    id="coachmark"
+    triggerID="trigger"
+  >
+    <Coachmark
+      aria-label="Coachmark"
+      className="example-class"
+      close-button-aria-label="Close"
+      id="coachmark"
+      triggerID="trigger"
+    >
+      <mdc-coachmark
+        aria-label="Coachmark"
+        class="example-class"
+        close-button-aria-label="Close"
+        suppressHydrationWarning={true}
+      >
+        This is a coachmark
+      </mdc-coachmark>
+    </Coachmark>
+  </Coachmark>
+</div>
+`;

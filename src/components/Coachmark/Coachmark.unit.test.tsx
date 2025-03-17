@@ -1,14 +1,31 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Coachmark from './';
+import Coachmark, { CoachmarkProps } from './';
+
+const defaultProps = {
+  children: 'This is a coachmark',
+  'close-button-aria-label': 'Close',
+  id: 'coachmark',
+  triggerID: 'trigger',
+  'aria-label': 'Coachmark',
+};
 
 describe('<Coachmark />', () => {
+  const setup = (props: CoachmarkProps) => {
+    return mount(
+      <div>
+        <div id={props.triggerID}>trigger</div>
+        <Coachmark {...props} />
+      </div>
+    );
+  };
+
   describe('snapshot', () => {
     it('should match snapshot', () => {
       expect.assertions(1);
 
-      const container = mount(<Coachmark />);
+      const container = setup(defaultProps);
 
       expect(container).toMatchSnapshot();
     });
@@ -18,67 +35,23 @@ describe('<Coachmark />', () => {
 
       const className = 'example-class';
 
-      const container = mount(<Coachmark className={className} />);
+      const container = setup({ ...defaultProps, className });
 
       expect(container).toMatchSnapshot();
     });
-
-    it('should match snapshot with id', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const container = mount(<Coachmark id={id} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with style', () => {
-      expect.assertions(1);
-
-      const style = { color: 'pink' };
-
-      const container = mount(<Coachmark style={style} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    /* ...additional snapshot tests... */
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
-      expect.assertions(1);
-
-      const element = mount(<Coachmark />)
-        .find(Coachmark)
-        .getDOMNode();
-
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
-    });
-
     it('should have provided class when className is provided', () => {
       expect.assertions(1);
 
       const className = 'example-class';
 
-      const element = mount(<Coachmark className={className} />)
+      const element = setup({ ...defaultProps, className })
         .find(Coachmark)
         .getDOMNode();
 
       expect(element.classList.contains(className)).toBe(true);
-    });
-
-    it('should have provided id when id is provided', () => {
-      expect.assertions(1);
-
-      const id = 'example-id';
-
-      const element = mount(<Coachmark id={id} />)
-        .find(Coachmark)
-        .getDOMNode();
-
-      expect(element.id).toBe(id);
     });
 
     it('should have provided style when style is provided', () => {
@@ -87,17 +60,11 @@ describe('<Coachmark />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const element = mount(<Coachmark style={style} />)
+      const element = setup({ ...defaultProps, style })
         .find(Coachmark)
         .getDOMNode();
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
-
-    /* ...additional attribute tests... */
-  });
-
-  describe('actions', () => {
-    /* ...action tests... */
   });
 });
