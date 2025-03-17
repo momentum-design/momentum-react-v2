@@ -11,17 +11,17 @@ const STYLE = {
 
 // Some themes are disabled until tokens are properly imported.
 const THEME_NAMES = {
-  // DARK_BRONZE: 'darkBronze',
-  // DARK_INDIGO: 'darkIndigo',
-  // DARK_JADE: 'darkJade',
-  // DARK_LAVENDER: 'darkLavender',
-  // DARK_ROSE: 'darkRose',
+  DARK_BRONZE: 'darkBronzeWebex',
+  DARK_INDIGO: 'darkIndigoWebex',
+  DARK_JADE: 'darkJadeWebex',
+  DARK_LAVENDER: 'darkLavenderWebex',
+  DARK_ROSE: 'darkRoseWebex',
   DARK_WEBEX: 'darkWebex',
-  // LIGHT_BRONZE: 'lightBronze',
-  // LIGHT_INDIGO: 'lightIndigo',
-  // LIGHT_JADE: 'lightJade',
-  // LIGHT_LAVENDER: 'lightLavender',
-  // LIGHT_ROSE: 'lightRose',
+  LIGHT_BRONZE: 'lightBronzeWebex',
+  LIGHT_INDIGO: 'lightIndigoWebex',
+  LIGHT_JADE: 'lightJadeWebex',
+  LIGHT_LAVENDER: 'lightLavenderWebex',
+  LIGHT_ROSE: 'lightRoseWebex',
   LIGHT_WEBEX: 'lightWebex',
 };
 

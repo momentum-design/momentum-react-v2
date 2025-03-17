@@ -11,7 +11,19 @@ import '@momentum-design/tokens/dist/css/typography/complete.css';
 
 // import Momentum theme tokens:
 import '@momentum-design/tokens/dist/css/theme/webex/dark-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/dark-bronze-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/dark-indigo-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/dark-jade-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/dark-lavender-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/dark-rose-stable.css';
+
 import '@momentum-design/tokens/dist/css/theme/webex/light-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/light-bronze-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/light-indigo-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/light-jade-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/light-lavender-stable.css';
+import '@momentum-design/tokens/dist/css/theme/webex/light-rose-stable.css';
+
 import {
   ThemeProvider as MdcThemeProvider,
   IconProvider as MdcIconProvider,
