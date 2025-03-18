@@ -42,4 +42,9 @@ export type Props = {
    * Placement of the coachmark.
    */
   placement?: PopoverPlacement;
+
+  /**
+   * Focus back to trigger on hide.
+   */
+  'focus-back-to-trigger'?: boolean;
 } & AriaLabelRequired;

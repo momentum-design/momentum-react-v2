@@ -52,6 +52,18 @@ const coachmarkArgTypes = {
       },
     },
   },
+  'focus-back-to-trigger': {
+    description: 'Whether the focus should shift to trigger on hide.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: false,
+      },
+    },
+  },
 };
 
 export { coachmarkArgTypes };
