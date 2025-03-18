@@ -24,7 +24,7 @@ const Example: Story<CoachmarkProps> = (args: CoachmarkProps) => (
   <div style={{ minHeight: '300px', display: 'inline-block' }}>
     <ButtonPill onPress={() => document.getElementById(args.id)?.showPopover()}>open</ButtonPill>
     <ButtonPill onPress={() => document.getElementById(args.id)?.hidePopover()}>close</ButtonPill>
-    <div id={args.triggerID}>Trigger</div>
+    <ButtonPill id={args.triggerID}>Trigger (dummy)</ButtonPill>
     <Coachmark {...args} />
   </div>
 );
