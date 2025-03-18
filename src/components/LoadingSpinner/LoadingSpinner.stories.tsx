@@ -5,11 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import LoadingSpinner, { LoadingSpinnerProps } from './';
 import argTypes from './LoadingSpinner.stories.args';
 import Documentation from './LoadingSpinner.stories.docs.mdx';
-import { SIZES } from '../Icon/Icon.constants';
-
-const sizesWithoutAutoInherit = Object.values(SIZES).filter(
-  (size) => !['auto', 'inherit'].includes(size as string)
-);
+import { SCALES, SIZES } from './LoadingSpinner.constants';
 
 export default {
   title: 'Momentum UI/LoadingSpinner',
@@ -32,7 +28,10 @@ Common.argTypes = { ...argTypes };
 delete Common.argTypes.scale;
 
 Common.parameters = {
-  variants: [...sizesWithoutAutoInherit.map((scale) => ({ scale }))],
+  variants: [
+    ...Object.values(SIZES).map((size) => ({ size })),
+    ...Object.values(SCALES).map((scale) => ({ scale })),
+  ],
 };
 
 export { Example, Common };

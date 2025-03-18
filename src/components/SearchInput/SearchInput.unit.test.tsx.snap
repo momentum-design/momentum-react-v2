@@ -364,12 +364,31 @@ exports[`<SearchInput /> snapshot should match snapshot when searching 1`] = `
           aria-hidden={true}
           className="md-search-input-searching"
           scale={16}
+          variant="button"
         >
           <div
             aria-hidden={true}
             className="md-search-input-searching md-loading-spinner-wrapper"
             role="img"
           >
+            <Spinner
+              inverted={false}
+              style={
+                Object {
+                  "--mdc-spinner-size": "1rem",
+                }
+              }
+              variant="button"
+            >
+              <mdc-spinner
+                style={
+                  Object {
+                    "--mdc-spinner-size": "1rem",
+                  }
+                }
+                suppressHydrationWarning={true}
+              />
+            </Spinner>
             <Icon
               name="spinner"
               scale={16}

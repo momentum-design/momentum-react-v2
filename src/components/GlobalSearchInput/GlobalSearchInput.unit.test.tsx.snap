@@ -260,7 +260,8 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
         htmlFor="test-ID"
       />
       <div>
-        <Icon
+        <LoadingSpinner
+          aria-hidden={true}
           className="md-global-search-input-search"
           fillColor="var(--mds-color-theme-text-primary-normal)"
           name="spinner"

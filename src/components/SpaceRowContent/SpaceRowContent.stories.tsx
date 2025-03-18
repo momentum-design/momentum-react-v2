@@ -1,7 +1,6 @@
 import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
-import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
 import SpaceRowContent, { SpaceRowContentProps } from '.';
 import argTypes from './SpaceRowContent.stories.args';

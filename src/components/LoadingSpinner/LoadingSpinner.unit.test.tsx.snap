@@ -9,6 +9,14 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
     className="md-loading-spinner-wrapper"
     role="img"
   >
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "1.5rem",
+        }
+      }
+      variant="standalone"
     <Icon
       name="spinner"
       scale={24}
@@ -38,6 +46,15 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
       scale={24}
       weight="regular"
     >
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "1.5rem",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
       <Icon
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
         data-autoscale={false}
@@ -69,6 +86,14 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
     className="md-loading-spinner-wrapper"
     role="img"
   >
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "1.5rem",
+        }
+      }
+      variant="standalone"
     <Icon
       name="spinner"
       scale={24}
@@ -98,6 +123,15 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
       scale={24}
       weight="regular"
     >
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "1.5rem",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
       <Icon
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
         data-autoscale={false}
@@ -130,6 +164,14 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
     className="example-class md-loading-spinner-wrapper"
     role="img"
   >
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "1.5rem",
+        }
+      }
+      variant="standalone"
     <Icon
       name="spinner"
       scale={24}
@@ -159,6 +201,15 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
       scale={24}
       weight="regular"
     >
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "1.5rem",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
       <Icon
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
         data-autoscale={false}
@@ -192,6 +243,14 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
     id="example-id"
     role="img"
   >
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "1.5rem",
+        }
+      }
+      variant="standalone"
     <Icon
       name="spinner"
       scale={24}
@@ -221,6 +280,15 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
       scale={24}
       weight="regular"
     >
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "1.5rem",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
       <Icon
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
         data-autoscale={false}
@@ -253,6 +321,14 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
     className="md-loading-spinner-wrapper"
     role="img"
   >
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "2rem",
+        }
+      }
+      variant="standalone"
     <Icon
       name="spinner"
       scale={32}
@@ -282,6 +358,15 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
       scale={32}
       weight="regular"
     >
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "2rem",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
       <Icon
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
         data-autoscale={false}
@@ -323,6 +408,14 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       }
     }
   >
+    <Spinner
+      inverted={false}
+      style={
+        Object {
+          "--mdc-spinner-size": "1.5rem",
+        }
+      }
+      variant="standalone"
     <Icon
       name="spinner"
       scale={24}
@@ -352,6 +445,15 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
       scale={24}
       weight="regular"
     >
+      <mdc-spinner
+        style={
+          Object {
+            "--mdc-spinner-size": "1.5rem",
+          }
+        }
+        suppressHydrationWarning={true}
+      />
+    </Spinner>
       <Icon
         className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
         data-autoscale={false}
