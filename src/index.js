@@ -203,6 +203,7 @@ export {
   TabList as TabListNext,
   TabsProvider as TabsProviderNext,
   TabPanel as TabPanelNext,
+  VirtualizedList,
 } from './components';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
