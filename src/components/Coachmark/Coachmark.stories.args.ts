@@ -2,11 +2,53 @@ import { commonStyles } from '../../storybook/helper.stories.argtypes';
 
 const coachmarkArgTypes = {
   children: {
-    description: 'Content of the coachmark.', // NOTE: Description of this prop.
-    control: { type: 'text' }, // NOTE: Control type for this prop.
+    description: 'Content of the coachmark.',
+    control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode', // NOTE: Explicit type of this prop.
+        summary: 'ReactNode',
+      },
+    },
+  },
+  triggerID: {
+    description: 'ID of the element that triggers the coachmark.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  'close-button': {
+    description: 'Whether the close button should be shown.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: true,
+      },
+    },
+  },
+  'close-button-aria-label': {
+    description: 'Arial label for the close button.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+    },
+  },
+  placement: {
+    description: 'Placement of the coachmark.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'bottom',
       },
     },
   },
