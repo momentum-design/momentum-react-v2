@@ -17,34 +17,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
         }
       }
       variant="standalone"
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
-    >
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner"
-        name="spinner-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
     >
       <mdc-spinner
         style={
@@ -55,24 +27,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot 1`] = `
         suppressHydrationWarning={true}
       />
     </Spinner>
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner-in-progress"
-        name="spinner-in-progress-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
   </div>
 </LoadingSpinner>
 `;
@@ -94,34 +48,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
         }
       }
       variant="standalone"
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
-    >
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner"
-        name="spinner-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
     >
       <mdc-spinner
         style={
@@ -132,24 +58,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with aria-hidden 1`] 
         suppressHydrationWarning={true}
       />
     </Spinner>
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner-in-progress"
-        name="spinner-in-progress-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
   </div>
 </LoadingSpinner>
 `;
@@ -172,34 +80,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
         }
       }
       variant="standalone"
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
-    >
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner"
-        name="spinner-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
     >
       <mdc-spinner
         style={
@@ -210,24 +90,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with className 1`] = 
         suppressHydrationWarning={true}
       />
     </Spinner>
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner-in-progress"
-        name="spinner-in-progress-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
   </div>
 </LoadingSpinner>
 `;
@@ -251,34 +113,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
         }
       }
       variant="standalone"
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
-    >
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner"
-        name="spinner-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
     >
       <mdc-spinner
         style={
@@ -289,24 +123,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with id 1`] = `
         suppressHydrationWarning={true}
       />
     </Spinner>
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner-in-progress"
-        name="spinner-in-progress-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
   </div>
 </LoadingSpinner>
 `;
@@ -329,34 +145,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
         }
       }
       variant="standalone"
-    <Icon
-      name="spinner"
-      scale={32}
-      weight="regular"
-    >
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        data-autoscale={false}
-        data-scale={32}
-        data-test="spinner"
-        name="spinner-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={32}
-          data-test="spinner"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={32}
-      weight="regular"
     >
       <mdc-spinner
         style={
@@ -367,24 +155,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with scale 1`] = `
         suppressHydrationWarning={true}
       />
     </Spinner>
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-        data-autoscale={false}
-        data-scale={32}
-        data-test="spinner-in-progress"
-        name="spinner-in-progress-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={32}
-          data-test="spinner-in-progress"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
   </div>
 </LoadingSpinner>
 `;
@@ -416,34 +186,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
         }
       }
       variant="standalone"
-    <Icon
-      name="spinner"
-      scale={24}
-      weight="regular"
-    >
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner"
-        name="spinner-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
-    <Icon
-      className="md-loading-spinner-arch"
-      name="spinner-in-progress"
-      scale={24}
-      weight="regular"
     >
       <mdc-spinner
         style={
@@ -454,24 +196,6 @@ exports[`<LoadingSpinner /> snapshot should match snapshot with style 1`] = `
         suppressHydrationWarning={true}
       />
     </Spinner>
-      <Icon
-        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-        data-autoscale={false}
-        data-scale={24}
-        data-test="spinner-in-progress"
-        name="spinner-in-progress-regular"
-        style={Object {}}
-      >
-        <mdc-icon
-          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={24}
-          data-test="spinner-in-progress"
-          style={Object {}}
-          suppressHydrationWarning={true}
-        />
-      </Icon>
-    </Icon>
   </div>
 </LoadingSpinner>
 `;

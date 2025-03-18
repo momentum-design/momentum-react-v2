@@ -465,53 +465,24 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
       className="md-loading-spinner-wrapper"
       role="img"
     >
-      <Icon
-        name="spinner"
-        scale={16}
-        weight="regular"
+      <Spinner
+        inverted={false}
+        style={
+          Object {
+            "--mdc-spinner-size": "1rem",
+          }
+        }
+        variant="button"
       >
-        <Icon
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-          data-autoscale={false}
-          data-scale={16}
-          data-test="spinner"
-          name="spinner-regular"
-          style={Object {}}
-        >
-          <mdc-icon
-            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-            data-autoscale={false}
-            data-scale={16}
-            data-test="spinner"
-            style={Object {}}
-            suppressHydrationWarning={true}
-          />
-        </Icon>
-      </Icon>
-      <Icon
-        className="md-loading-spinner-arch"
-        name="spinner-in-progress"
-        scale={16}
-        weight="regular"
-      >
-        <Icon
-          className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-          data-autoscale={false}
-          data-scale={16}
-          data-test="spinner-in-progress"
-          name="spinner-in-progress-regular"
-          style={Object {}}
-        >
-          <mdc-icon
-            class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-loading-spinner-arch"
-            data-autoscale={false}
-            data-scale={16}
-            data-test="spinner-in-progress"
-            style={Object {}}
-            suppressHydrationWarning={true}
-          />
-        </Icon>
-      </Icon>
+        <mdc-spinner
+          style={
+            Object {
+              "--mdc-spinner-size": "1rem",
+            }
+          }
+          suppressHydrationWarning={true}
+        />
+      </Spinner>
     </div>
   </LoadingSpinner>
 </Reaction>

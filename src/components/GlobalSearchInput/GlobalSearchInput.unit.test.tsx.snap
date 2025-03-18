@@ -263,37 +263,34 @@ exports[`<GlobalSearchInput /> snapshot should match snapshot when searching 1`]
         <LoadingSpinner
           aria-hidden={true}
           className="md-global-search-input-search"
-          fillColor="var(--mds-color-theme-text-primary-normal)"
-          name="spinner"
           scale={18}
-          weight="bold"
+          variant="button"
         >
-          <Icon
-            className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-global-search-input-search"
-            data-autoscale={false}
-            data-scale={18}
-            data-test="spinner"
-            name="spinner-bold"
-            style={
-              Object {
-                "--mdc-icon-fill-color": "var(--mds-color-theme-text-primary-normal)",
-              }
-            }
+          <div
+            aria-hidden={true}
+            className="md-global-search-input-search md-loading-spinner-wrapper"
+            role="img"
           >
-            <mdc-icon
-              class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-global-search-input-search"
-              data-autoscale={false}
-              data-scale={18}
-              data-test="spinner"
+            <Spinner
+              inverted={false}
               style={
                 Object {
-                  "--mdc-icon-fill-color": "var(--mds-color-theme-text-primary-normal)",
+                  "--mdc-spinner-size": "1.125rem",
                 }
               }
-              suppressHydrationWarning={true}
-            />
-          </Icon>
-        </Icon>
+              variant="button"
+            >
+              <mdc-spinner
+                style={
+                  Object {
+                    "--mdc-spinner-size": "1.125rem",
+                  }
+                }
+                suppressHydrationWarning={true}
+              />
+            </Spinner>
+          </div>
+        </LoadingSpinner>
       </div>
       <div
         className="md-global-search-input-container"

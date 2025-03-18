@@ -137,9 +137,15 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                           <div
                             class="md-lightbox__viewport md-lightbox__viewport--decrypting"
                           >
-                            <i
-                              class="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
-                            />
+                            <div
+                              aria-hidden="true"
+                              class="md-lightbox__decrypting-spinner md-loading-spinner-wrapper"
+                              role="img"
+                            >
+                              <mdc-spinner
+                                style="--mdc-spinner-size: 2rem;"
+                              />
+                            </div>
                             <div
                               class="md-lightbox__viewport-wrapper"
                               style="width: 100px; height: 100px;"
@@ -649,18 +655,36 @@ exports[`tests for <Lightbox /> should match SnapShot 1`] = `
                                 <div
                                   className="md-lightbox__viewport md-lightbox__viewport--decrypting"
                                 >
-                                  <Spinner
+                                  <LoadingSpinner
+                                    aria-hidden={true}
                                     className="md-lightbox__decrypting-spinner"
-                                    color="black"
-                                    percentage={null}
-                                    showCheck={false}
-                                    showPercentage={false}
-                                    size={36}
+                                    scale={32}
                                   >
-                                    <i
-                                      className="md-spinner md-spinner--36 md-spinner--black md-lightbox__decrypting-spinner"
-                                    />
-                                  </Spinner>
+                                    <div
+                                      aria-hidden={true}
+                                      className="md-lightbox__decrypting-spinner md-loading-spinner-wrapper"
+                                      role="img"
+                                    >
+                                      <Spinner
+                                        inverted={false}
+                                        style={
+                                          Object {
+                                            "--mdc-spinner-size": "2rem",
+                                          }
+                                        }
+                                        variant="standalone"
+                                      >
+                                        <mdc-spinner
+                                          style={
+                                            Object {
+                                              "--mdc-spinner-size": "2rem",
+                                            }
+                                          }
+                                          suppressHydrationWarning={true}
+                                        />
+                                      </Spinner>
+                                    </div>
+                                  </LoadingSpinner>
                                   <div
                                     className="md-lightbox__viewport-wrapper"
                                     style={
