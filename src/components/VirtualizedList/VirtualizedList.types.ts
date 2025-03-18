@@ -1,8 +1,8 @@
-import {
+import type {
   SetListDataProps,
   VirtualizerProps,
 } from '@momentum-design/components/dist/components/virtualizedlist/virtualizedlist.types.js';
-import { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 export interface Props extends VirtualizerProps {
   /**
