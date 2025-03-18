@@ -2,7 +2,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Input, Spinner } from '@momentum-ui/react-collaboration';
+import { Icon, Input } from '@momentum-ui/react-collaboration';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 /**
  * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
@@ -12,7 +13,13 @@ const SearchInput = (props) => {
 
   return (
     <Input
-      inputBefore={isLoading ? <Spinner size={20} /> : <Icon name="search_20" />}
+      inputBefore={
+        isLoading ? (
+          <LoadingSpinner scale={20} aria-hidden variant="button" />
+        ) : (
+          <Icon name="search_20" />
+        )
+      }
       {...otherProps}
     />
   );

@@ -2,6 +2,7 @@ import React from 'react';
 
 import LoadingSpinner, { LOADING_SPINNER_CONSTANTS as CONSTANTS } from './';
 import { mountAndWait } from '../../../test/utils';
+import { Spinner as MdcSpinner } from '@momentum-design/components/dist/react';
 
 describe('<LoadingSpinner />', () => {
   describe('snapshot', () => {
@@ -126,16 +127,74 @@ describe('<LoadingSpinner />', () => {
       expect(element.getAttribute('style')).toBe(styleString);
     });
 
-    it('should have provided correct icons scale when scale is provided', async () => {
+    it('should override --mdc-spinner-size if scale is provided', async () => {
+      expect.assertions(1);
+
+      const scale = 32 as const;
+
+      const element = (
+        await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" scale={scale} />)
+      )
+        .find(MdcSpinner)
+        .getDOMNode();
+
+      expect(element.getAttribute('style')).toBe('--mdc-spinner-size: 2rem;');
+    });
+
+    it('should pass size through to web component if provided', async () => {
       expect.assertions(2);
 
       const scale = 32 as const;
 
-      (await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" scale={scale} />))
-        .find('mdc-icon')
-        .forEach((icon) => {
-          expect(icon.getDOMNode().getAttribute('data-scale')).toBe(`${scale}`);
-        });
+      const element = (
+        await mountAndWait(
+          <LoadingSpinner aria-label="Loading, please wait" size={'small'} scale={scale} />
+        )
+      ).find(MdcSpinner);
+      const elementNode = element.getDOMNode();
+      const elementProps = element.props();
+
+      expect(elementNode.getAttribute('style')).toBeNull();
+      expect(elementProps).toStrictEqual({
+        size: 'small',
+        variant: 'standalone',
+        inverted: false,
+        style: {},
+      });
+    });
+
+    it('should pass inverted through to web component if provided', async () => {
+      expect.assertions(1);
+
+      const elementProps = (
+        await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" inverted />)
+      )
+        .find(MdcSpinner)
+        .props();
+
+      expect(elementProps).toStrictEqual({
+        size: undefined,
+        variant: 'standalone',
+        inverted: true,
+        style: { '--mdc-spinner-size': '1.5rem' },
+      });
+    });
+
+    it('should pass variant through to web component if provided', async () => {
+      expect.assertions(1);
+
+      const elementProps = (
+        await mountAndWait(<LoadingSpinner aria-label="Loading, please wait" variant="button" />)
+      )
+        .find(MdcSpinner)
+        .props();
+
+      expect(elementProps).toStrictEqual({
+        size: undefined,
+        inverted: false,
+        style: { '--mdc-spinner-size': '1.5rem' },
+        variant: 'button',
+      });
     });
 
     it('should have provided aria-hidden when aria-hidden is provided', async () => {

@@ -458,6 +458,7 @@ exports[`<Reaction/> snapshot should match snapshot with spinner while animation
   <LoadingSpinner
     aria-hidden={true}
     scale={16}
+    variant="button"
   >
     <div
       aria-hidden={true}

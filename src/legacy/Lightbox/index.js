@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-aria-modal';
-import { Spinner, Icon } from '@momentum-ui/react-collaboration';
+import { Icon } from '@momentum-ui/react-collaboration';
 import ButtonSimple from '../../components/ButtonSimple';
 import TooltipNext from '../../components/Tooltip';
 import IconNext from '../../components/Icon';
@@ -603,7 +603,13 @@ class Lightbox extends React.Component {
                 }
                 ref={(ref) => (this.viewport = ref)}
               >
-                {pages[index].decrypting && <Spinner className="md-lightbox__decrypting-spinner" />}
+                {pages[index].decrypting && (
+                  <LoadingSpinner
+                    className="md-lightbox__decrypting-spinner"
+                    aria-hidden
+                    scale={32}
+                  />
+                )}
                 {getViewport()}
               </div>
               {showColumn && leftArrowControl}

@@ -14,6 +14,7 @@ import { difference } from 'lodash';
 import Icon from '../Icon';
 import { BaseEvent } from '@react-types/shared';
 import { useFocusState } from '../../hooks/useFocusState';
+import LoadingSpinner from '../LoadingSpinner';
 /**
  * Global search input. Used for global search only
  */
@@ -43,6 +44,7 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
       setAriaAlert(newFilters[0].translations.filterAdded);
     }
     setPreviousFilters(filters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(filters)]);
 
@@ -118,13 +120,17 @@ const GlobalSearchInput: FC<Props> = (props: Props) => {
         {label}
       </label>
       <div>
-        <Icon
-          weight="bold"
-          scale={18}
-          className={STYLE.search}
-          fillColor="var(--mds-color-theme-text-primary-normal)"
-          name={searching ? 'spinner' : 'search'}
-        />
+        {searching ? (
+          <LoadingSpinner className={STYLE.search} variant="button" scale={18} aria-hidden />
+        ) : (
+          <Icon
+            weight="bold"
+            scale={18}
+            className={STYLE.search}
+            fillColor="var(--mds-color-theme-text-primary-normal)"
+            name="search"
+          />
+        )}
       </div>
       <div className={STYLE.container}>
         {filterArray}

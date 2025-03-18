@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from '../../utils/snakeCase';
-import { Spinner } from '@momentum-ui/react-collaboration';
+import LoadingSpinner from '../../../components/LoadingSpinner';
 
 /**
  * @deprecated - Components in the legacy folder (/src/legacy) are deprecated. Please use a component from the components folder (/src/components) instead. Legacy components may not follow accessibility standards.
@@ -74,7 +74,7 @@ const ChatContentItem = (props) => {
       >
         {loading && (
           <div className={`${content ? ' md-content--opacity' : ' md-content--centered'}`}>
-            <Spinner />
+            <LoadingSpinner scale={32} aria-hidden />
           </div>
         )}
         {gifIcon && <i className={`${gifIcon} md-content__gif`} />}

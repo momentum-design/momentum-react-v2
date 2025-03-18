@@ -1,13 +1,22 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import { DEFAULTS, STYLE } from './LoadingSpinner.constants';
+import { DEFAULTS, SCALE_TO_REM, STYLE } from './LoadingSpinner.constants';
 import { Props } from './LoadingSpinner.types';
 import './LoadingSpinner.style.scss';
-import Icon from '../Icon';
+import { Spinner as MdcSpinner } from '@momentum-design/components/dist/react';
 
 const LoadingSpinner: FC<Props> = (props: Props) => {
-  const { className, id, style, scale = DEFAULTS.SCALE, ...rest } = props;
+  const {
+    className,
+    id,
+    style,
+    scale = DEFAULTS.SCALE,
+    variant = DEFAULTS.VARIANT,
+    inverted = DEFAULTS.INVERTED,
+    size = DEFAULTS.SIZE,
+    ...rest
+  } = props;
 
   return (
     <div
@@ -17,8 +26,18 @@ const LoadingSpinner: FC<Props> = (props: Props) => {
       {...rest}
       role="img"
     >
-      <Icon scale={scale} name="spinner" weight="regular" />
-      <Icon scale={scale} className={STYLE.arch} name="spinner-in-progress" weight="regular" />
+      <MdcSpinner
+        size={size}
+        variant={variant}
+        inverted={inverted}
+        style={
+          size
+            ? {}
+            : ({
+                '--mdc-spinner-size': `${SCALE_TO_REM[scale as keyof typeof SCALE_TO_REM]}rem`,
+              } as React.CSSProperties)
+        }
+      />
     </div>
   );
 };
