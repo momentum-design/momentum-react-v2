@@ -50,11 +50,11 @@ const loadingSpinnerArgTypes = {
   },
   'aria-label': {
     defaultValue: undefined,
-    description: 'The variant of the spinner.',
+    description: 'The aria-label of the spinner.',
     control: { type: 'text' },
     table: {
       type: {
-        summary: 'SpinnerVariant',
+        summary: 'Text',
       },
     },
   },
