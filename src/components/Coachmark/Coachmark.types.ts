@@ -47,4 +47,24 @@ export type Props = {
    * Focus back to trigger on hide.
    */
   'focus-back-to-trigger'?: boolean;
+
+  /**
+   * Callback for when the coachmark is shown.
+   */
+  onShown?: () => void;
+
+  /**
+   * Callback for when the coachmark is hidden.
+   */
+  onHidden?: () => void;
+
+  /**
+   * Callback for when the coachmark is created (added to the DOM).
+   */
+  onCreated?: () => void;
+
+  /**
+   * Callback for when the coachmark is destroyed (removed from the DOM).
+   */
+  onDestroyed?: () => void;
 } & AriaLabelRequired;

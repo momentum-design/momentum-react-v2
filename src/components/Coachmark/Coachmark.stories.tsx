@@ -8,6 +8,7 @@ import Documentation from './Coachmark.stories.docs.mdx';
 import ButtonPill from '../ButtonPill';
 import React from 'react';
 import Text from '../Text';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/Coachmark',
@@ -44,6 +45,10 @@ Example.args = {
       </Text>
     </div>
   ),
+  onShown: action('onShown'),
+  onHidden: action('onHidden'),
+  onCreated: action('onCreated'),
+  onDestroyed: action('onDestroyed'),
 };
 
 export { Example };
