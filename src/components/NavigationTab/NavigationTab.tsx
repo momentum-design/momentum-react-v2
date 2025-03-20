@@ -12,7 +12,17 @@ import { Props } from './NavigationTab.types';
 import './NavigationTab.style.scss';
 
 const NavigationTab: FC<Props> = (props: Props) => {
-  const { icon, label, count = 0, className, id, size, style, active, ...otherProps } = props;
+  const {
+    icon,
+    label,
+    count = DEFAULTS.COUNT,
+    className,
+    id,
+    size,
+    style,
+    active,
+    ...otherProps
+  } = props;
 
   const iconComponent = icon ? (
     <Icon className={STYLE.icon} name={icon} scale={24} weight={'filled'} />
@@ -25,16 +35,15 @@ const NavigationTab: FC<Props> = (props: Props) => {
       </Text>
     ) : null;
 
-  //If the count is 100 or more, the count displayed should be :).
-  const countToDisplay = (n: number) => {
-    return n < 100 ? n.toString() : '+99';
-  };
-
   const badgeComponent =
     count > 0 ? (
-      <Badge className={STYLE.count} size={18}>
-        {countToDisplay(count) || DEFAULTS.COUNT.toString()}
-      </Badge>
+      <Badge
+        className={STYLE.count}
+        type="counter"
+        counter={count}
+        maxCounter={99}
+        overlay={size !== 200}
+      />
     ) : null;
 
   return (

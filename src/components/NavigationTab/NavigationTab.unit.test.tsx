@@ -194,19 +194,6 @@ describe('<NavigationTab />', () => {
       expect(target.innerHTML).toBe(label);
     });
 
-    it('should have provided count when count is provided and is >0', async () => {
-      expect.assertions(1);
-
-      const count = 1;
-
-      const wrapper = await mountAndWait(<NavigationTab count={count} />);
-      const element = wrapper.find(NavigationTab).getDOMNode();
-
-      const target = element.getElementsByClassName(STYLE.count)[0];
-
-      expect(parseInt(target.innerHTML)).toBe(count);
-    });
-
     it('should have provided active when active is provided', async () => {
       expect.assertions(1);
 

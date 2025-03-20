@@ -188,14 +188,23 @@ exports[`<NavigationTab /> snapshot should match snapshot with count 1`] = `
             >
               <Badge
                 className="md-navigation-tab-count"
-                size={18}
+                counter={100}
+                maxCounter={99}
+                overlay={true}
+                type="counter"
               >
-                <div
-                  className="md-badge-wrapper md-navigation-tab-count"
-                  data-size={18}
+                <Badge
+                  className="md-navigation-tab-count"
+                  counter={100}
+                  maxCounter={99}
+                  overlay={true}
+                  type="counter"
                 >
-                  +99
-                </div>
+                  <mdc-badge
+                    class="md-navigation-tab-count"
+                    suppressHydrationWarning={true}
+                  />
+                </Badge>
               </Badge>
             </button>
           </FocusRing>

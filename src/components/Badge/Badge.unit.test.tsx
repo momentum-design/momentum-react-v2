@@ -1,55 +1,74 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, waitFor } from '@testing-library/react';
 import Badge from '.';
-import { mountAndWait } from '../../../test/utils';
-import { SIZES, STYLE } from './Badge.constants';
 
 describe('Badge', () => {
   let container;
 
   describe('snapshot', () => {
-    it('should match snapshot', () => {
-      expect.assertions(1);
-      container = mount(<Badge>10</Badge>);
+    const setup = async (component: any) => {
+      const { container } = render(component);
+
+      // we have to wait for the web component to be rendered
+      await waitFor(() => {
+        expect(container.querySelector('mdc-badge')).toBeTruthy();
+      });
+
+      return container;
+    };
+    it('should match snapshot without attributes', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge className="test" />);
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size 12', async () => {
-      expect.assertions(1);
-      const size = 12;
-      container = await mountAndWait(<Badge data-size={size} />);
+    it('should match snapshot with type = dot', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge type="dot" />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size 18', () => {
-      expect.assertions(1);
-      const size = 18;
-      container = mount(<Badge data-size={size}>10</Badge>);
+    it('should match snapshot with type = icon', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge type="icon" iconName="accessibility-regular" />);
 
       expect(container).toMatchSnapshot();
     });
-  });
 
-  describe('attributes', () => {
-    it('should have its main class', () => {
-      expect.assertions(1);
+    it('should match snapshot with type = counter', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge type="counter" counter={9} maxCounter={20} />);
 
-      const element = mount(<Badge />)
-        .find(Badge)
-        .getDOMNode();
-      expect(element.classList.contains(STYLE.wrapper)).toBe(true);
+      expect(container).toMatchSnapshot();
     });
 
-    it('should pass size prop', () => {
-      expect.assertions(1);
+    it('should match snapshot with type = success', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge type="success" />);
 
-      const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
-      const element = mount(<Badge size={size} />)
-        .find(Badge)
-        .getDOMNode();
+      expect(container).toMatchSnapshot();
+    });
 
-      expect(element.getAttribute('data-size')).toBe(`${size}`);
+    it('should match snapshot with type = warning', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge type="warning" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with type = error', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge type="error" />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with overlay = true', async () => {
+      expect.assertions(2);
+      container = await setup(<Badge overlay />);
+
+      expect(container).toMatchSnapshot();
     });
   });
 });

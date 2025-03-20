@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { FC } from 'react';
 import { Story } from '@storybook/react';
 import {
@@ -11,6 +12,7 @@ import {
 
 import Badge, { BadgeProps, BADGE_CONSTANTS as CONSTANTS } from './';
 import Documentation from './Badge.documentation.mdx';
+import { TYPES } from './Badge.constants';
 
 const DocsPage: FC = () => (
   <>
@@ -35,8 +37,45 @@ export default {
 };
 
 const argTypes = {
-  children: {
-    description: 'Provides the child text for this element.',
+  type: {
+    description: 'Modifies the type of the badge',
+    options: [undefined, ...TYPES],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: CONSTANTS.DEFAULTS.TYPE,
+      },
+    },
+  },
+  counter: {
+    description: 'Provides the counter number for this element. \n\n (when `type` === counter)',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
+  maxCounter: {
+    description: 'Provides the maxCounter number for this element. \n\n (when `type` === counter)',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
+  iconName: {
+    description: 'Provides the iconName for this element. \n\n (when `type` === icon)',
     control: { type: 'text' },
     table: {
       type: {
@@ -47,50 +86,25 @@ const argTypes = {
       },
     },
   },
-  size: {
-    description: 'Modifies the size of this element.',
-    options: [undefined, ...Object.values(CONSTANTS.SIZES)],
-    control: { type: 'select' },
+  overlay: {
+    description: 'Provides the overlay attribute for this element.',
+    control: { type: 'boolean' },
     table: {
       type: {
-        summary: 'number',
+        summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
+        summary: undefined,
       },
     },
   },
 };
 
 const Template: Story<BadgeProps> = (args: BadgeProps) => {
-  return <Badge {...args}>{args.children}</Badge>;
-};
-
-const MultiTemplate: Story<BadgeProps> = (args: BadgeProps, { parameters }) => {
-  const mutatedArgs = { ...args };
-  const { children } = mutatedArgs;
-  delete mutatedArgs.children;
-
-  const { variants } = parameters;
-
-  const items = variants.map((variant, index: number) => (
-    <Badge key={index} {...variant} {...args}>
-      {children}
-    </Badge>
-  ));
-
-  return <>{items}</>;
+  return <Badge {...args} />;
 };
 
 const Example = Template.bind({});
 Example.argTypes = { ...argTypes };
 
-const Sizes = MultiTemplate.bind({});
-Sizes.parameters = {
-  variants: [{}, { size: 18 }, { size: 12 }],
-};
-
-Sizes.argTypes = { ...argTypes };
-delete Sizes.argTypes.size;
-
-export { Example, Sizes };
+export { Example };
