@@ -1,32 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge snapshot should match snapshot 1`] = `
-<Badge>
-  <div
-    className="md-badge-wrapper"
-    data-size={18}
+exports[`Badge snapshot should match snapshot with overlay = true 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    type="dot"
+    variant="primary"
   />
-</Badge>
+</div>
 `;
 
-exports[`Badge snapshot should match snapshot with size 12 1`] = `
-<Badge
-  data-size={12}
->
-  <div
-    className="md-badge-wrapper"
-    data-size={18}
+exports[`Badge snapshot should match snapshot with type = counter 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    max-counter="20"
+    type="counter"
+    variant="primary"
   />
-</Badge>
+</div>
 `;
 
-exports[`Badge snapshot should match snapshot with size 18 1`] = `
-<Badge
-  data-size={18}
->
-  <div
-    className="md-badge-wrapper"
-    data-size={18}
+exports[`Badge snapshot should match snapshot with type = dot 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    type="dot"
+    variant="primary"
   />
-</Badge>
+</div>
+`;
+
+exports[`Badge snapshot should match snapshot with type = error 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    type="error"
+    variant="primary"
+  />
+</div>
+`;
+
+exports[`Badge snapshot should match snapshot with type = icon 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    type="icon"
+    variant="primary"
+  />
+</div>
+`;
+
+exports[`Badge snapshot should match snapshot with type = success 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    type="success"
+    variant="primary"
+  />
+</div>
+`;
+
+exports[`Badge snapshot should match snapshot with type = warning 1`] = `
+<div>
+  <mdc-badge
+    class=""
+    type="warning"
+    variant="primary"
+  />
+</div>
+`;
+
+exports[`Badge snapshot should match snapshot without attributes 1`] = `
+<div>
+  <mdc-badge
+    class="test"
+    type="dot"
+    variant="primary"
+  />
+</div>
 `;

@@ -1,32 +1,33 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import './Badge.style.scss';
-import { Props } from './Badge.types';
-import { DEFAULTS, STYLE } from './Badge.constants';
-
-import Icon from '../Icon/Icon';
+import type { Props } from './Badge.types';
+import { DEFAULTS } from './Badge.constants';
+import { Badge as MdcBadge } from '@momentum-design/components/dist/react';
 
 const Badge: FC<Props> = (props: Props) => {
-  const { className, id, size, style } = props;
+  const {
+    className,
+    id,
+    style,
+    type = DEFAULTS.TYPE,
+    counter,
+    maxCounter,
+    iconName,
+    overlay,
+  } = props;
+
   return (
-    <div
-      className={classnames(STYLE.wrapper, className)}
+    <MdcBadge
+      type={type}
+      counter={counter}
+      maxCounter={maxCounter}
+      iconName={iconName}
+      overlay={overlay}
+      className={classnames(className)}
       id={id}
       style={style}
-      data-size={size || DEFAULTS.SIZE}
-    >
-      {props.size == 18 ? (
-        props.children
-      ) : props.size == 12 ? (
-        <Icon
-          name="unread"
-          weight="bold"
-          scale={12}
-          fillColor={'var(--mds-color-theme-background-accent-normal)'}
-        />
-      ) : null}
-    </div>
+    />
   );
 };
 

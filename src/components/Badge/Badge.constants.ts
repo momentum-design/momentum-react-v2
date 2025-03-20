@@ -1,16 +1,9 @@
-const CLASS_PREFIX = 'md-badge';
+import { TYPE } from '@momentum-design/components/dist/components/badge/badge.constants.js';
+
+const TYPES = Object.values(TYPE);
 
 const DEFAULTS = {
-  SIZE: 18,
-};
+  TYPE: 'dot',
+} as const;
 
-const SIZES = {
-  18: 18,
-  12: 12,
-};
-
-const STYLE = {
-  wrapper: `${CLASS_PREFIX}-wrapper`,
-};
-
-export { CLASS_PREFIX, DEFAULTS, SIZES, STYLE };
+export { DEFAULTS, TYPES };
