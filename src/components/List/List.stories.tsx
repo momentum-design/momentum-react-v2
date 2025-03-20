@@ -288,8 +288,7 @@ const DynamicListWrapper = () => {
   return (
     <>
       <Text type="body-primary" tagName="p">
-        List will update in:
-        <Badge size={18} style={{ display: 'inline' }}>{`${INTERVAL_COUNT - time}`}</Badge>
+        List will update in: {INTERVAL_COUNT - time}
       </Text>
       <List listSize={list.length}>
         {list.map((item, index) => (

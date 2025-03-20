@@ -83,7 +83,7 @@ const LabelAndIcon = (
 );
 const smallBadgeAndLabel = (
   <>
-    <Badge size={12} />
+    <Badge />
     <Text type="subheader-secondary" tagName="h3">
       Small badge and Label
     </Text>
@@ -92,7 +92,7 @@ const smallBadgeAndLabel = (
 
 const bigBadgeAndLabel = (
   <>
-    <Badge size={18}>2</Badge>
+    <Badge type="counter" counter={2} />
     <Text type="subheader-secondary" tagName="h3">
       Big badge and Label
     </Text>

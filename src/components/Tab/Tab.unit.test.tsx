@@ -246,15 +246,7 @@ describe('<Tab />', () => {
       it('should match snapshot', () => {
         expect.assertions(1);
 
-        const container = mount(
-          <Tab>
-            {[
-              <Badge key="1" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        );
+        const container = mount(<Tab>{[<Badge key="1">2</Badge>]}</Tab>);
 
         expect(container).toMatchSnapshot();
       });
@@ -264,15 +256,7 @@ describe('<Tab />', () => {
 
         const className = 'example-class';
 
-        const container = mount(
-          <Tab className={className}>
-            {[
-              <Badge key="2" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        );
+        const container = mount(<Tab className={className}>{[<Badge key="2">2</Badge>]}</Tab>);
 
         expect(container).toMatchSnapshot();
       });
@@ -282,15 +266,7 @@ describe('<Tab />', () => {
 
         const id = 'example-id';
 
-        const container = mount(
-          <Tab id={id}>
-            {[
-              <Badge key="3" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        );
+        const container = mount(<Tab id={id}>{[<Badge key="3">2</Badge>]}</Tab>);
 
         expect(container).toMatchSnapshot();
       });
@@ -300,15 +276,7 @@ describe('<Tab />', () => {
 
         const style = { color: 'pink' };
 
-        const container = mount(
-          <Tab style={style}>
-            {[
-              <Badge key="4" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        );
+        const container = mount(<Tab style={style}>{[<Badge key="4">2</Badge>]}</Tab>);
 
         expect(container).toMatchSnapshot();
       });
@@ -317,15 +285,7 @@ describe('<Tab />', () => {
 
         const active = DEFAULTS.ACTIVE;
 
-        const container = mount(
-          <Tab active={active}>
-            {[
-              <Badge key="5" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        );
+        const container = mount(<Tab active={active}>{[<Badge key="5">2</Badge>]}</Tab>);
 
         expect(container).toMatchSnapshot();
       });
@@ -334,15 +294,7 @@ describe('<Tab />', () => {
 
         const disabled = DEFAULTS.DISABLED;
 
-        const container = mount(
-          <Tab disabled={disabled}>
-            {[
-              <Badge key="6" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        );
+        const container = mount(<Tab disabled={disabled}>{[<Badge key="6">2</Badge>]}</Tab>);
 
         expect(container).toMatchSnapshot();
       });
@@ -618,15 +570,7 @@ describe('<Tab />', () => {
       it('should have its wrapper class', () => {
         expect.assertions(1);
 
-        const element = mount(
-          <Tab>
-            {[
-              <Badge key="1" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        )
+        const element = mount(<Tab>{[<Badge key="1">2</Badge>]}</Tab>)
           .find(Tab)
           .getDOMNode();
 
@@ -638,15 +582,7 @@ describe('<Tab />', () => {
 
         const className = 'example-class';
 
-        const element = mount(
-          <Tab className={className}>
-            {[
-              <Badge key="2" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        )
+        const element = mount(<Tab className={className}>{[<Badge key="2">2</Badge>]}</Tab>)
           .find(Tab)
           .getDOMNode();
 
@@ -658,15 +594,7 @@ describe('<Tab />', () => {
 
         const id = 'example-id';
 
-        const element = mount(
-          <Tab id={id}>
-            {[
-              <Badge key="3" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        )
+        const element = mount(<Tab id={id}>{[<Badge key="3">2</Badge>]}</Tab>)
           .find(Tab)
           .getDOMNode();
 
@@ -679,15 +607,7 @@ describe('<Tab />', () => {
         const style = { color: 'pink' };
         const styleString = 'color: pink;';
 
-        const element = mount(
-          <Tab style={style}>
-            {[
-              <Badge key="4" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        )
+        const element = mount(<Tab style={style}>{[<Badge key="4">2</Badge>]}</Tab>)
           .find(Tab)
           .getDOMNode();
 
@@ -699,15 +619,7 @@ describe('<Tab />', () => {
 
         const active = DEFAULTS.ACTIVE;
 
-        const element = mount(
-          <Tab active={active}>
-            {[
-              <Badge key="5" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        )
+        const element = mount(<Tab active={active}>{[<Badge key="5">2</Badge>]}</Tab>)
           .find(Tab)
           .getDOMNode();
 
@@ -719,15 +631,7 @@ describe('<Tab />', () => {
 
         const disabled = DEFAULTS.DISABLED;
 
-        const element = mount(
-          <Tab disabled={disabled}>
-            {[
-              <Badge key="6" size={18}>
-                2
-              </Badge>,
-            ]}
-          </Tab>
-        )
+        const element = mount(<Tab disabled={disabled}>{[<Badge key="6">2</Badge>]}</Tab>)
           .find(Tab)
           .getDOMNode();
 
