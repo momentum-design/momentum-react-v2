@@ -39,10 +39,20 @@ export const calculateAutoClose = (options: NotifyOptionsType): number | false =
  * @returns the toastId of the triggered notification
  */
 export const notify = (content: ToastContent, options: NotifyOptionsType): Id => {
-  const { notificationSystemId, screenReaderAnnouncement, toastId, attention, onClose, role } =
-    options;
+  const {
+    notificationSystemId,
+    screenReaderAnnouncement,
+    toastId,
+    attention,
+    onClose,
+    role,
+    announcerIdentity,
+  } = options;
   if (screenReaderAnnouncement) {
-    ScreenReaderAnnouncer.announce({ body: screenReaderAnnouncement }, notificationSystemId);
+    ScreenReaderAnnouncer.announce(
+      { body: screenReaderAnnouncement },
+      announcerIdentity || notificationSystemId
+    );
   }
   return toast(content, {
     toastId: toastId,
@@ -60,9 +70,18 @@ export const notify = (content: ToastContent, options: NotifyOptionsType): Id =>
  * @param options several options to pass in (for details check type)
  */
 export const update = (toastId: Id, options: UpdateOptionsType): void => {
-  const { notificationSystemId, attention, screenReaderAnnouncement, ...updateOptions } = options;
+  const {
+    notificationSystemId,
+    attention,
+    screenReaderAnnouncement,
+    announcerIdentity,
+    ...updateOptions
+  } = options;
   if (screenReaderAnnouncement) {
-    ScreenReaderAnnouncer.announce({ body: screenReaderAnnouncement }, notificationSystemId);
+    ScreenReaderAnnouncer.announce(
+      { body: screenReaderAnnouncement },
+      announcerIdentity || notificationSystemId
+    );
   }
   toast.update(toastId, {
     ...updateOptions,
