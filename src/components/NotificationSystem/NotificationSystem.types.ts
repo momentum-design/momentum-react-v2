@@ -26,6 +26,10 @@ type CustomOptions = {
    * No announcement will be made if this is not provided.
    */
   screenReaderAnnouncement?: string;
+  /**
+   * Screen reader announcer to use for this message (overrides notification system default)
+   */
+  announcerIdentity?: string;
 };
 
 export type UpdateOptionsType = UpdateOptions & CustomOptions;
