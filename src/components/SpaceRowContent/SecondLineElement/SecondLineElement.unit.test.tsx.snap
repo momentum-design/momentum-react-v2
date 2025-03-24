@@ -13,9 +13,15 @@ exports[`<SecondLineElement /> snapshot should match snapshot with children and 
   <DividerDot
     data-test="multiple-string-second-line-divider-dot"
   >
-    <div
+    <Bullet
       className="md-divider-dot-wrapper"
-    />
+      size="small"
+    >
+      <mdc-bullet
+        class="md-divider-dot-wrapper"
+        suppressHydrationWarning={true}
+      />
+    </Bullet>
   </DividerDot>
   example-text
 </SecondLineElement>

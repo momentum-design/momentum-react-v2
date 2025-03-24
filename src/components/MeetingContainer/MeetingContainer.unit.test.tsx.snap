@@ -516,9 +516,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <Text
                     data-color="secondary"
@@ -978,9 +984,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <ButtonHyperlink
                     className="md-meeting-container-space-link"
@@ -1596,9 +1608,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <Text
                     data-color="secondary"
@@ -2134,9 +2152,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <Text
                     data-color="secondary"
@@ -2269,9 +2293,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <Text
                     data-color="success"
@@ -2392,9 +2422,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <ButtonHyperlink
                     className="md-meeting-container-space-link"
@@ -2453,9 +2489,15 @@ exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supp
                     </Text>
                   </Text>
                   <DividerDot>
-                    <div
+                    <Bullet
                       className="md-divider-dot-wrapper"
-                    />
+                      size="small"
+                    >
+                      <mdc-bullet
+                        class="md-divider-dot-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Bullet>
                   </DividerDot>
                   <Text
                     data-color="secondary"
