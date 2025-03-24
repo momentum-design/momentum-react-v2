@@ -2,6 +2,13 @@ import { CSSProperties } from 'react';
 
 export interface Props {
   /**
+   * Size of the Divider dot
+   *
+   * @default 'small'
+   */
+  size?: 'small' | 'medium' | 'large';
+
+  /**
    * Custom class for overriding this component's CSS.
    */
   className?: string;

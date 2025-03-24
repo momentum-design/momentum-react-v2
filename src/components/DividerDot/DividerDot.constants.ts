@@ -1,6 +1,8 @@
 const CLASS_PREFIX = 'md-divider-dot';
 
-const DEFAULTS = {};
+const DEFAULTS = {
+  SIZE: 'small' as const,
+};
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
