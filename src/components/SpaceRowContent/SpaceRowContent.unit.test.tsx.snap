@@ -47,9 +47,15 @@ exports[`<SpaceRowContent /> snapshot checks divider dot position in compact mod
       <DividerDot
         data-test="compact-mode-divider-dot"
       >
-        <div
+        <Bullet
           className="md-divider-dot-wrapper"
-        />
+          size="small"
+        >
+          <mdc-bullet
+            class="md-divider-dot-wrapper"
+            suppressHydrationWarning={true}
+          />
+        </Bullet>
       </DividerDot>
       <Text
         aria-label="testteam"
@@ -1482,9 +1488,15 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with multiple string
               <DividerDot
                 data-test="multiple-string-second-line-divider-dot"
               >
-                <div
+                <Bullet
                   className="md-divider-dot-wrapper"
-                />
+                  size="small"
+                >
+                  <mdc-bullet
+                    class="md-divider-dot-wrapper"
+                    suppressHydrationWarning={true}
+                  />
+                </Bullet>
               </DividerDot>
               two
             </SecondLineElement>
@@ -1495,9 +1507,15 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with multiple string
               <DividerDot
                 data-test="multiple-string-second-line-divider-dot"
               >
-                <div
+                <Bullet
                   className="md-divider-dot-wrapper"
-                />
+                  size="small"
+                >
+                  <mdc-bullet
+                    class="md-divider-dot-wrapper"
+                    suppressHydrationWarning={true}
+                  />
+                </Bullet>
               </DividerDot>
               three
             </SecondLineElement>
