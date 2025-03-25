@@ -1,7 +1,10 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+
+import ScreenReaderAnnouncer from '../ScreenReaderAnnouncer';
+
 import { ATTENTION, DEFAULTS } from './NotificationSystem.constants';
 import * as utils from './NotificationSystem.utils';
-import { toast } from 'react-toastify';
 
 const { getContainerID, calculateAutoClose, notify, update, dismiss, isActive } = utils;
 
@@ -65,14 +68,26 @@ describe('NotificationSystem utils', () => {
   });
 
   describe('notify', () => {
+    const toastId = 'test';
+    const notificationSystemId = 'test_containerbla';
+    const autoClose = 5000;
+    const onClose = jest.fn();
+    const attention = ATTENTION.MEDIUM;
+    const screenReaderAnnouncement = 'some announcement';
+    const announcerIdentity = 'some_announcer_id';
+
+    let spies;
+
+    const setup = () => {
+      spies = {
+        autoClose: jest.spyOn(utils, 'calculateAutoClose'),
+        getContainerID: jest.spyOn(utils, 'getContainerID'),
+        announce: jest.spyOn(ScreenReaderAnnouncer, 'announce').mockReturnValue(),
+      };
+    };
+
     it('should fire the right functions and returns correctly when firing the toast function', () => {
-      const autoCloseSpy = jest.spyOn(utils, 'calculateAutoClose');
-      const getContainerIDSpy = jest.spyOn(utils, 'getContainerID');
-      const toastId = 'test';
-      const notificationSystemId = 'test_containerbla';
-      const autoClose = 5000;
-      const onClose = jest.fn();
-      const attention = ATTENTION.MEDIUM;
+      setup();
 
       const options = { toastId, onClose, autoClose, notificationSystemId, attention };
       expect(notify(<div />, options)).toBe(toastId);
@@ -83,15 +98,81 @@ describe('NotificationSystem utils', () => {
         onClose: onClose,
         toastId: toastId,
       });
-      expect(autoCloseSpy).toHaveBeenCalledWith(options);
-      expect(getContainerIDSpy).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.autoClose).toHaveBeenCalledWith(options);
+      expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.announce).not.toHaveBeenCalled();
+    });
+
+    it('should announce the screenReaderAnnouncement if provided, using the notificationSystemId', () => {
+      setup();
+
+      const options = {
+        toastId,
+        onClose,
+        autoClose,
+        notificationSystemId,
+        attention,
+        screenReaderAnnouncement,
+      };
+      expect(notify(<div />, options)).toBe(toastId);
+
+      expect(toast).toHaveBeenCalledWith(<div />, {
+        autoClose: autoClose,
+        containerId: 'test_containerbla_medium_notification_container',
+        onClose: onClose,
+        toastId: toastId,
+      });
+      expect(spies.autoClose).toHaveBeenCalledWith(options);
+      expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.announce).toHaveBeenCalledWith(
+        { body: screenReaderAnnouncement },
+        notificationSystemId
+      );
+    });
+
+    it('should announce the screenReaderAnnouncement using the announcerIdentity, if provided', () => {
+      setup();
+
+      const options = {
+        toastId,
+        onClose,
+        autoClose,
+        notificationSystemId,
+        attention,
+        screenReaderAnnouncement,
+        announcerIdentity,
+      };
+      expect(notify(<div />, options)).toBe(toastId);
+
+      expect(toast).toHaveBeenCalledWith(<div />, {
+        autoClose: autoClose,
+        containerId: 'test_containerbla_medium_notification_container',
+        onClose: onClose,
+        toastId: toastId,
+      });
+      expect(spies.autoClose).toHaveBeenCalledWith(options);
+      expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.announce).toHaveBeenCalledWith(
+        { body: screenReaderAnnouncement },
+        announcerIdentity
+      );
     });
   });
 
   describe('update', () => {
+    let toastId;
+    let spies;
+
+    const setup = () => {
+      toastId = notify(<div />, { notificationSystemId: 'id' });
+      spies = {
+        getContainerID: jest.spyOn(utils, 'getContainerID'),
+        announce: jest.spyOn(ScreenReaderAnnouncer, 'announce').mockReturnValue(),
+      };
+    };
+
     it('should fire the right functions when updating an existing toast', () => {
-      const toastId = notify(<div />, { notificationSystemId: 'id' });
-      const getContainerIDSpy = jest.spyOn(utils, 'getContainerID');
+      setup();
 
       update(toastId, {
         toastId: 'new',
@@ -104,7 +185,50 @@ describe('NotificationSystem utils', () => {
         toastId: 'new',
         render: <p />,
       });
-      expect(getContainerIDSpy).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.announce).not.toHaveBeenCalled();
+    });
+
+    it('should announce the screenReaderAnnouncement if provided, using the notificationSystemId', () => {
+      setup();
+
+      update(toastId, {
+        toastId: 'new',
+        render: <p />,
+        attention: ATTENTION.MEDIUM,
+        notificationSystemId: 'id',
+        screenReaderAnnouncement: 'some screenreader announcement',
+      });
+      expect(toast.update).toHaveBeenCalledWith(toastId, {
+        containerId: 'id_medium_notification_container',
+        toastId: 'new',
+        render: <p />,
+      });
+      expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.announce).toHaveBeenCalledWith({ body: 'some screenreader announcement' }, 'id');
+    });
+
+    it('should announce the screenReaderAnnouncement using the announcerIdentity, if provided', () => {
+      setup();
+
+      update(toastId, {
+        toastId: 'new',
+        render: <p />,
+        attention: ATTENTION.MEDIUM,
+        notificationSystemId: 'id',
+        screenReaderAnnouncement: 'some screenreader announcement',
+        announcerIdentity: 'some_announcer_id',
+      });
+      expect(toast.update).toHaveBeenCalledWith(toastId, {
+        containerId: 'id_medium_notification_container',
+        toastId: 'new',
+        render: <p />,
+      });
+      expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.announce).toHaveBeenCalledWith(
+        { body: 'some screenreader announcement' },
+        'some_announcer_id'
+      );
     });
   });
 
