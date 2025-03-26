@@ -78,10 +78,13 @@ describe('NotificationSystem utils', () => {
 
     let spies;
 
-    const setup = () => {
+    const setup = ({ screenReaderAnnouncerIsRegistered = true } = {}) => {
       spies = {
         autoClose: jest.spyOn(utils, 'calculateAutoClose'),
         getContainerID: jest.spyOn(utils, 'getContainerID'),
+        isRegistered: jest
+          .spyOn(ScreenReaderAnnouncer, 'isRegistered')
+          .mockReturnValue(screenReaderAnnouncerIsRegistered),
         announce: jest.spyOn(ScreenReaderAnnouncer, 'announce').mockReturnValue(),
       };
     };
@@ -100,6 +103,7 @@ describe('NotificationSystem utils', () => {
       });
       expect(spies.autoClose).toHaveBeenCalledWith(options);
       expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.isRegistered).not.toHaveBeenCalled();
       expect(spies.announce).not.toHaveBeenCalled();
     });
 
@@ -124,13 +128,14 @@ describe('NotificationSystem utils', () => {
       });
       expect(spies.autoClose).toHaveBeenCalledWith(options);
       expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.isRegistered).not.toHaveBeenCalled();
       expect(spies.announce).toHaveBeenCalledWith(
         { body: screenReaderAnnouncement },
         notificationSystemId
       );
     });
 
-    it('should announce the screenReaderAnnouncement using the announcerIdentity, if provided', () => {
+    it('should announce the screenReaderAnnouncement using the announcerIdentity, if provided and registered', () => {
       setup();
 
       const options = {
@@ -152,9 +157,39 @@ describe('NotificationSystem utils', () => {
       });
       expect(spies.autoClose).toHaveBeenCalledWith(options);
       expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.isRegistered).toHaveBeenCalledWith(announcerIdentity);
       expect(spies.announce).toHaveBeenCalledWith(
         { body: screenReaderAnnouncement },
         announcerIdentity
+      );
+    });
+
+    it('should announce the screenReaderAnnouncement using the notificationSystemId, if announcerIdentity not registered', () => {
+      setup({ screenReaderAnnouncerIsRegistered: false });
+
+      const options = {
+        toastId,
+        onClose,
+        autoClose,
+        notificationSystemId,
+        attention,
+        screenReaderAnnouncement,
+        announcerIdentity,
+      };
+      expect(notify(<div />, options)).toBe(toastId);
+
+      expect(toast).toHaveBeenCalledWith(<div />, {
+        autoClose: autoClose,
+        containerId: 'test_containerbla_medium_notification_container',
+        onClose: onClose,
+        toastId: toastId,
+      });
+      expect(spies.autoClose).toHaveBeenCalledWith(options);
+      expect(spies.getContainerID).toHaveBeenCalledWith(notificationSystemId, ATTENTION.MEDIUM);
+      expect(spies.isRegistered).toHaveBeenCalledWith(announcerIdentity);
+      expect(spies.announce).toHaveBeenCalledWith(
+        { body: screenReaderAnnouncement },
+        notificationSystemId
       );
     });
   });
@@ -163,10 +198,13 @@ describe('NotificationSystem utils', () => {
     let toastId;
     let spies;
 
-    const setup = () => {
+    const setup = ({ screenReaderAnnouncerIsRegistered = true } = {}) => {
       toastId = notify(<div />, { notificationSystemId: 'id' });
       spies = {
         getContainerID: jest.spyOn(utils, 'getContainerID'),
+        isRegistered: jest
+          .spyOn(ScreenReaderAnnouncer, 'isRegistered')
+          .mockReturnValue(screenReaderAnnouncerIsRegistered),
         announce: jest.spyOn(ScreenReaderAnnouncer, 'announce').mockReturnValue(),
       };
     };
@@ -186,6 +224,7 @@ describe('NotificationSystem utils', () => {
         render: <p />,
       });
       expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.isRegistered).not.toHaveBeenCalled();
       expect(spies.announce).not.toHaveBeenCalled();
     });
 
@@ -205,10 +244,11 @@ describe('NotificationSystem utils', () => {
         render: <p />,
       });
       expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.isRegistered).not.toHaveBeenCalled();
       expect(spies.announce).toHaveBeenCalledWith({ body: 'some screenreader announcement' }, 'id');
     });
 
-    it('should announce the screenReaderAnnouncement using the announcerIdentity, if provided', () => {
+    it('should announce the screenReaderAnnouncement using the announcerIdentity, if provided and registered', () => {
       setup();
 
       update(toastId, {
@@ -225,10 +265,32 @@ describe('NotificationSystem utils', () => {
         render: <p />,
       });
       expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.isRegistered).toHaveBeenCalledWith('some_announcer_id');
       expect(spies.announce).toHaveBeenCalledWith(
         { body: 'some screenreader announcement' },
         'some_announcer_id'
       );
+    });
+
+    it('should announce the screenReaderAnnouncement using the notificationSystemId, if announcerIdentity not registered', () => {
+      setup({ screenReaderAnnouncerIsRegistered: false });
+
+      update(toastId, {
+        toastId: 'new',
+        render: <p />,
+        attention: ATTENTION.MEDIUM,
+        notificationSystemId: 'id',
+        screenReaderAnnouncement: 'some screenreader announcement',
+        announcerIdentity: 'some_announcer_id',
+      });
+      expect(toast.update).toHaveBeenCalledWith(toastId, {
+        containerId: 'id_medium_notification_container',
+        toastId: 'new',
+        render: <p />,
+      });
+      expect(spies.getContainerID).toHaveBeenCalledWith('id', 'medium');
+      expect(spies.isRegistered).toHaveBeenCalledWith('some_announcer_id');
+      expect(spies.announce).toHaveBeenCalledWith({ body: 'some screenreader announcement' }, 'id');
     });
   });
 

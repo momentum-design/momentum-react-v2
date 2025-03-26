@@ -11,6 +11,7 @@ import {
   AnnouncerProps,
   CompoundProps,
   ScreenReaderAnnouncerAnnounce,
+  ScreenReaderAnnouncerIsRegistered,
 } from './ScreenReaderAnnouncer.types';
 
 const registry: Record<string, { announce: Announce }> = {};
@@ -36,6 +37,9 @@ const register = (identity: string, announce: Announce) => {
 const deregister = (identity: string) => {
   delete registry[identity];
 };
+
+const isRegistered: ScreenReaderAnnouncerIsRegistered = (announcerIdentity) =>
+  !!registry[announcerIdentity];
 
 /**
  * Announce a message via a screen reader.
@@ -146,3 +150,4 @@ const ScreenReaderAnnouncer: FC<AnnouncerProps> & CompoundProps = ({
 export default ScreenReaderAnnouncer;
 
 ScreenReaderAnnouncer.announce = announce;
+ScreenReaderAnnouncer.isRegistered = isRegistered;
