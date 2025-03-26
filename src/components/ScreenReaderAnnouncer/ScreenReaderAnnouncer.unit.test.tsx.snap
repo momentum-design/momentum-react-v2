@@ -1500,6 +1500,16 @@ exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity errors wh
 </div>
 `;
 
+exports[`<ScreenReaderAnnouncer /> Announcer identity: custom-identity isRegistered returns correctly 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
 exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined announces react node with default configuration 1`] = `
 <div>
   <div
@@ -2991,6 +3001,16 @@ exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined errors when ann
 `;
 
 exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined errors when registering a duplicate announcer 1`] = `
+<div>
+  <div
+    class="md-screen-reader-announcer-wrapper"
+    data-testid="screen-reader-announcer"
+    style="clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; width: 1px; white-space: nowrap;"
+  />
+</div>
+`;
+
+exports[`<ScreenReaderAnnouncer /> Announcer identity: undefined isRegistered returns correctly 1`] = `
 <div>
   <div
     class="md-screen-reader-announcer-wrapper"

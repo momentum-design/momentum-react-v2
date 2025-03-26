@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 type Level = 'assertive' | 'polite';
 export interface CompoundProps {
   announce: ScreenReaderAnnouncerAnnounce;
+  isRegistered: ScreenReaderAnnouncerIsRegistered;
 }
 
 type AnnounceOptions = {
@@ -29,6 +30,7 @@ type AnnounceOptions = {
   timeout?: number;
 };
 type ScreenReaderAnnouncerAnnounce = (options: AnnounceOptions, announcerIdentity?: string) => void;
+type ScreenReaderAnnouncerIsRegistered = (announcerIdentity: string) => boolean;
 type Announce = (options: AnnounceOptions) => void;
 type Clear = (options: { messageIdentity: string }) => void;
 type Message = {
@@ -50,6 +52,7 @@ type AnnouncerProps = { identity?: string };
 
 export type {
   ScreenReaderAnnouncerAnnounce,
+  ScreenReaderAnnouncerIsRegistered,
   Level,
   AnnounceOptions,
   Announce,

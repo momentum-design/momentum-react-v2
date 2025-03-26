@@ -46,13 +46,20 @@ export const notify = (content: ToastContent, options: NotifyOptionsType): Id =>
     attention,
     onClose,
     role,
-    announcerIdentity,
+    announcerIdentity: announcerIdentityFromOptions,
   } = options;
   if (screenReaderAnnouncement) {
-    ScreenReaderAnnouncer.announce(
-      { body: screenReaderAnnouncement },
-      announcerIdentity || notificationSystemId
-    );
+    let announcerIdentity = notificationSystemId;
+    if (announcerIdentityFromOptions) {
+      if (ScreenReaderAnnouncer.isRegistered(announcerIdentityFromOptions)) {
+        announcerIdentity = announcerIdentityFromOptions;
+      } else {
+        console.warn(
+          `ScreenReaderAnnouncer with identity ${announcerIdentityFromOptions} is not registered, falling back to ${notificationSystemId}`
+        );
+      }
+    }
+    ScreenReaderAnnouncer.announce({ body: screenReaderAnnouncement }, announcerIdentity);
   }
   return toast(content, {
     toastId: toastId,
@@ -74,14 +81,21 @@ export const update = (toastId: Id, options: UpdateOptionsType): void => {
     notificationSystemId,
     attention,
     screenReaderAnnouncement,
-    announcerIdentity,
+    announcerIdentity: announcerIdentityFromOptions,
     ...updateOptions
   } = options;
   if (screenReaderAnnouncement) {
-    ScreenReaderAnnouncer.announce(
-      { body: screenReaderAnnouncement },
-      announcerIdentity || notificationSystemId
-    );
+    let announcerIdentity = notificationSystemId;
+    if (announcerIdentityFromOptions) {
+      if (ScreenReaderAnnouncer.isRegistered(announcerIdentityFromOptions)) {
+        announcerIdentity = announcerIdentityFromOptions;
+      } else {
+        console.warn(
+          `ScreenReaderAnnouncer with identity ${announcerIdentityFromOptions} is not registered, falling back to ${notificationSystemId}`
+        );
+      }
+    }
+    ScreenReaderAnnouncer.announce({ body: screenReaderAnnouncement }, announcerIdentity);
   }
   toast.update(toastId, {
     ...updateOptions,

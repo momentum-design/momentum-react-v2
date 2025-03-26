@@ -404,5 +404,17 @@ describe('<ScreenReaderAnnouncer />', () => {
       // This would error if the announcement timer was not cleared
       advanceTimers(delay);
     });
+
+    it('isRegistered returns correctly', () => {
+      setup();
+
+      if (announcerIdentity) {
+        expect(ScreenReaderAnnouncer.isRegistered(announcerIdentity)).toBe(true);
+        expect(ScreenReaderAnnouncer.isRegistered('default')).toBe(false);
+      } else {
+        expect(ScreenReaderAnnouncer.isRegistered('custom-identity')).toBe(false);
+        expect(ScreenReaderAnnouncer.isRegistered('default')).toBe(true);
+      }
+    });
   });
 });
