@@ -148,7 +148,7 @@ exports[`<RadioGroup /> snapshot should match snapshot with child 1`] = `
         class="md-radio-label"
       >
         <input
-          aria-label="Option 1"
+          aria-label="Test Group Option 1"
           class="md-radio-button"
           name="test-ID"
           tabindex="0"
