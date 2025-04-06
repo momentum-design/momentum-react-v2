@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Checkbox, Label, InputHelper } from '@momentum-ui/react-collaboration';
+import Checkbox from '../../Checkbox';
+import Label from '../../Label';
 
 describe('tests for <Checkbox />', () => {
   it('should match SnapShot', () => {
@@ -40,16 +41,6 @@ describe('tests for <Checkbox />', () => {
     const container = shallow(<Checkbox htmlId="test123" disabled />);
 
     expect(container.find('input').props().disabled).toEqual(true);
-  });
-
-  it('should render children', () => {
-    const container = shallow(
-      <Checkbox htmlId="test123">
-        <InputHelper message={"I'm here to help"} />
-      </Checkbox>
-    );
-
-    expect(container.children().length).toEqual(3);
   });
 
   it('should handle other DOM events if passed', () => {

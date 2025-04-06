@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  EditableTextfield,
-  Menu,
-  MenuContent,
-  MenuItem,
-  MenuOverlay,
-} from '@momentum-ui/react-collaboration';
+import { Button, Menu, MenuItem, MenuOverlay } from '@momentum-ui/react-collaboration';
 export default class MenuOverlayDefault extends React.PureComponent {
   onClick(event, value) {
     alert(`${value} clicked`);
@@ -20,9 +13,6 @@ export default class MenuOverlayDefault extends React.PureComponent {
           </Button>
         }
       >
-        <MenuContent>
-          <EditableTextfield inputText="Content Area" />
-        </MenuContent>
         <Menu>
           <MenuItem onClick={this.onClick} label="Language" />
           <MenuItem onClick={this.onClick} label="Profile" />

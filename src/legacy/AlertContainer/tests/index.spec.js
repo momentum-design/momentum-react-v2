@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Alert, AlertContainer } from '@momentum-ui/react-collaboration';
+import { AlertContainer } from '@momentum-ui/react-collaboration';
 
 describe('tests for <AlertContainer />', () => {
   const alertTitle = 'Now Hear This!';
@@ -74,64 +74,6 @@ describe('tests for <AlertContainer />', () => {
     );
 
     expect(container.find('.md-alert__container--bottom-right').length).toEqual(1);
-  });
-
-  it('should render an info Alert when info() is called', () => {
-    const container = mount(
-      <AlertContainer ariaLabel={alertAriaLabel}>
-        <Alert title={alertTitle} message={alertMessage} type="info" show closable={false} />
-      </AlertContainer>
-    );
-    container.update();
-    expect(container.find('.md-alert--info').length).toEqual(1);
-  });
-
-  it('should render a success Alert when success() is called', () => {
-    const container = mount(
-      <AlertContainer ariaLabel={alertAriaLabel}>
-        <Alert title={alertTitle} message={alertMessage} type="success" show closable={false} />
-      </AlertContainer>
-    );
-
-    container.update();
-    expect(container.find('.md-alert--success').length).toEqual(1);
-  });
-
-  it('should render a warning Alert when warning() is called', () => {
-    const container = mount(
-      <AlertContainer ariaLabel={alertAriaLabel}>
-        <Alert title={alertTitle} message={alertMessage} type="warning" show closable={false} />
-      </AlertContainer>
-    );
-    container.update();
-    expect(container.find('.md-alert--warning').length).toEqual(1);
-  });
-
-  it('should render an error Alert when error() is called', () => {
-    const container = mount(
-      <AlertContainer ariaLabel={alertAriaLabel}>
-        <Alert title={alertTitle} message={alertMessage} type="error" show closable={false} />
-      </AlertContainer>
-    );
-    container.update();
-    expect(container.find('.md-alert--error').length).toEqual(1);
-  });
-
-  it('should pass any other HTML props to Alert', () => {
-    const container = mount(
-      <AlertContainer ariaLabel={alertAriaLabel}>
-        <Alert
-          title={alertTitle}
-          message={alertMessage}
-          type="info"
-          show
-          dismissBtnProps={{ ariaLabel: 'Close', id: 'testProp', onClick: () => {} }}
-        />
-      </AlertContainer>
-    );
-
-    container.update();
-    expect(container.find('button').props().id).toEqual('testProp');
   });
 
   it('should pass otherProps to container', () => {

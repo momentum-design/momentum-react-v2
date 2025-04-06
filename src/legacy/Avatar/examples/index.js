@@ -1,6 +1,5 @@
 export { default as AvatarActive } from './Active';
 export { default as AvatarBot } from './Bot';
-export { default as AvatarComposite } from './Composite';
 export { default as AvatarDefault } from './Default';
 export { default as AvatarFailure } from './Failure';
 export { default as AvatarGroup } from './Group';
