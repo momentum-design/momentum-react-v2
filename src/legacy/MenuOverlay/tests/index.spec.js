@@ -1,13 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  Menu,
-  MenuContent,
-  MenuItem,
-  MenuOverlay,
-  Button,
-  EventOverlay,
-} from '@momentum-ui/react-collaboration';
+import { Menu, MenuContent, MenuItem, MenuOverlay, Button } from '@momentum-ui/react-collaboration';
+import EventOverlay from '../../EventOverlay';
 import { ButtonPill } from '../../../components';
 import { triggerPress } from '../../../../test/utils';
 describe('tests for <MenuOverlay />', () => {

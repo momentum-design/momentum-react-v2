@@ -2,7 +2,9 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 
-import { Icon, Input, InputMessage, InputHelper, Label } from '@momentum-ui/react-collaboration';
+import { Icon, Input } from '@momentum-ui/react-collaboration';
+import Label from '../../Label';
+import InputHelper from '../../InputHelper';
 
 describe('tests for <Input />', () => {
   it('should match text SnapShot', () => {
@@ -232,19 +234,6 @@ describe('tests for <Input />', () => {
     );
 
     expect(container.find('.md-input-container').hasClass('md-error')).toEqual(true);
-  });
-
-  it('should render Error Component', () => {
-    const container = shallow(
-      <Input
-        htmlId="test123"
-        name="test"
-        label="test"
-        messageArr={[{ message: 'test', type: 'error' }]}
-      />
-    );
-
-    expect(container.contains(<InputMessage message={'test'} />)).toEqual(true);
   });
 
   it('should support input ref', () => {

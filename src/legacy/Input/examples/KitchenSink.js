@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Input, InputSearch } from '@momentum-ui/react-collaboration';
+import { Icon, Input } from '@momentum-ui/react-collaboration';
 
 export default class InputKitchenSink extends React.PureComponent {
   render() {
@@ -362,65 +362,6 @@ export default class InputKitchenSink extends React.PureComponent {
           containerSize="small-12"
           secondaryLabel="Secondary Label"
           helpText="Help Text"
-        />
-        <InputSearch
-          name={`defaultInputSearch${value}`}
-          htmlId={`defaultInputSearch${value}`}
-          containerSize="small-12"
-          label="Default Search"
-        />
-        <InputSearch
-          name={`loadingInputSearch${value}`}
-          htmlId={`loadingInputSearch${value}`}
-          containerSize="small-12"
-          label="Loading Search"
-          isLoading
-        />
-        <InputSearch
-          name={`searchclear${value}`}
-          htmlId={`searchclear${value}`}
-          containerSize="small-12"
-          label="Search with Clear"
-          clear
-        />
-        <InputSearch
-          name={`searchpill${value}`}
-          htmlId={`searchpill${value}`}
-          containerSize="small-12"
-          shape="pill"
-          clear
-        />
-        <InputSearch
-          name={`defaultInputSearchFilled${value}`}
-          htmlId={`defaultInputSearchFilled${value}`}
-          containerSize="small-12"
-          label="Search Filled"
-          isFilled
-        />
-        <InputSearch
-          name={`filledLoadingInputSearch${value}`}
-          htmlId={`filledLoadingInputSearch${value}`}
-          containerSize="small-12"
-          label="Loading Filled Search"
-          isFilled
-          isLoading
-        />
-        <InputSearch
-          name={`searchclearFilled${value}`}
-          htmlId={`searchclearFilled${value}`}
-          containerSize="small-12"
-          label="Search with Clear Filled"
-          clear
-          isFilled
-        />
-        <InputSearch
-          name={`searchpillFilled${value}`}
-          htmlId={`searchpillFilled${value}`}
-          containerSize="small-12"
-          label="Search Pill Filled"
-          shape="pill"
-          clear
-          isFilled
         />
       </React.Fragment>
     );
