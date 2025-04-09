@@ -2,6 +2,13 @@ import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.a
 
 import { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 
+delete commonAriaButton.onPress;
+delete commonAriaButton.onPressStart;
+delete commonAriaButton.onPressEnd;
+delete commonAriaButton.onPressChange;
+delete commonAriaButton.onPressUp;
+delete commonAriaButton.onFocusChange;
+
 export default {
   ...commonAriaButton,
   ...commonStyles,

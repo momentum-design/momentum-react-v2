@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
 
 describe('<AddReactionButton />', () => {
-  const setup = async (component: any) => {
+  const setup = async (component: React.ReactElement) => {
     return renderWithWebComponent(component);
   };
 
@@ -13,7 +13,7 @@ describe('<AddReactionButton />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await setup(<AddReactionButton />);
+      const { container } = await setup(<AddReactionButton />);
 
       expect(container).toMatchSnapshot();
     });
@@ -23,7 +23,7 @@ describe('<AddReactionButton />', () => {
 
       const className = 'example-class';
 
-      const container = await setup(<AddReactionButton className={className} />);
+      const { container } = await setup(<AddReactionButton className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -33,7 +33,7 @@ describe('<AddReactionButton />', () => {
 
       const id = 'example-id';
 
-      const container = await setup(<AddReactionButton id={id} />);
+      const { container } = await setup(<AddReactionButton id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -43,7 +43,7 @@ describe('<AddReactionButton />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await setup(<AddReactionButton style={style} />);
+      const { container } = await setup(<AddReactionButton style={style} />);
 
       expect(container).toMatchSnapshot();
     });

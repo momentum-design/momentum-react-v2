@@ -12,7 +12,7 @@ describe('<DividerDot />', () => {
     it('should match snapshot', async () => {
       expect.assertions(2);
 
-      const container = await setup(<DividerDot />);
+      const { container } = await setup(<DividerDot />);
 
       expect(container).toMatchSnapshot();
     });
@@ -22,7 +22,7 @@ describe('<DividerDot />', () => {
 
       const className = 'example-class';
 
-      const container = await setup(<DividerDot className={className} />);
+      const { container } = await setup(<DividerDot className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe('<DividerDot />', () => {
 
       const id = 'example-id';
 
-      const container = await setup(<DividerDot id={id} />);
+      const { container } = await setup(<DividerDot id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe('<DividerDot />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await setup(<DividerDot style={style} />);
+      const { container } = await setup(<DividerDot style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -52,7 +52,7 @@ describe('<DividerDot />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(2);
 
-      const container = await setup(<DividerDot />);
+      const { container } = await setup(<DividerDot />);
       const element = container.querySelector('mdc-bullet');
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
@@ -63,7 +63,7 @@ describe('<DividerDot />', () => {
 
       const className = 'example-class';
 
-      const container = await setup(<DividerDot className={className} />);
+      const { container } = await setup(<DividerDot className={className} />);
       const element = container.querySelector('mdc-bullet');
 
       expect(element.classList.contains(className)).toBe(true);
@@ -74,7 +74,7 @@ describe('<DividerDot />', () => {
 
       const id = 'example-id';
 
-      const container = await setup(<DividerDot id={id} />);
+      const { container } = await setup(<DividerDot id={id} />);
       const element = container.querySelector('mdc-bullet');
 
       expect(element.id).toBe(id);
@@ -86,7 +86,7 @@ describe('<DividerDot />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const container = await setup(<DividerDot style={style} />);
+      const { container } = await setup(<DividerDot style={style} />);
       const element = container.querySelector('mdc-bullet');
 
       expect(element.getAttribute('style')).toBe(styleString);
@@ -97,7 +97,7 @@ describe('<DividerDot />', () => {
 
       const size = 'large';
 
-      const container = await setup(<DividerDot size={size} />);
+      const { container } = await setup(<DividerDot size={size} />);
       const element = container.querySelector('mdc-bullet');
 
       expect(element.getAttribute('size')).toBe(size);
