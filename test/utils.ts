@@ -1,4 +1,4 @@
-import { render, waitFor } from '@testing-library/react';
+import { render, RenderResult, waitFor } from '@testing-library/react';
 import { mount, ReactWrapper } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 
@@ -111,15 +111,15 @@ export const sypOnEventListener = (target: EventTarget, spyOnEvents?: string[]) 
 export const renderWithWebComponent = async (
   component: React.ReactElement,
   selector?: string
-): Promise<HTMLElement> => {
-  const { container } = render(component);
+): Promise<RenderResult> => {
+  const returnValue = render(component);
 
   // we have to wait for the web component to be rendered
   await waitFor(() => {
     if (selector) {
-      expect(container.querySelector(selector)).toBeTruthy();
+      expect(returnValue.container.querySelector(selector)).toBeTruthy();
     }
   });
 
-  return container;
+  return returnValue;
 };

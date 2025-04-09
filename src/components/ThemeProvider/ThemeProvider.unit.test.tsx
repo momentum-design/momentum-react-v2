@@ -63,7 +63,7 @@ describe('<ThemeProvider />', () => {
 
       const themeName = THEMES[Object.keys(THEMES)[0]];
 
-      const container = await renderWithWebComponent(
+      const { container } = await renderWithWebComponent(
         <ThemeProvider theme={themeName} />,
         'mdc-themeprovider'
       );

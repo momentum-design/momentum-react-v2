@@ -11,7 +11,7 @@ import { screen } from '@testing-library/react';
 describe('<ReactionBadge name="haha" />', () => {
   const reactionProp = <Reaction name="haha" />;
 
-  const setup = async (component: any) => {
+  const setup = async (component: React.ReactElement) => {
     return renderWithWebComponent(component);
   };
   describe('snapshot', () => {
@@ -22,7 +22,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await setup(<ReactionBadge reaction={reactionProp} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const className = 'example-class';
 
-      const container = await setup(
+      const { container } = await setup(
         <ReactionBadge reaction={reactionProp} className={className} />
       );
 
@@ -44,7 +44,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const id = 'example-id';
 
-      const container = await setup(<ReactionBadge reaction={reactionProp} id={id} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -54,7 +54,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await setup(<ReactionBadge reaction={reactionProp} style={style} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -62,7 +62,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot with reacted', async () => {
       expect.assertions(1);
 
-      const container = await setup(<ReactionBadge reaction={reactionProp} reacted={true} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} reacted={true} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -70,7 +70,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot with count', async () => {
       expect.assertions(1);
 
-      const container = await setup(<ReactionBadge reaction={reactionProp} count={1} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} count={1} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -148,7 +148,7 @@ describe('<ReactionBadge name="haha" />', () => {
       const name = 'haha';
       const reactionName = 'haha';
 
-      const container = await setup(<ReactionBadge reaction={<Reaction name={name} />} />);
+      const { container } = await setup(<ReactionBadge reaction={<Reaction name={name} />} />);
       const child = container.querySelector(`div[data-name="${reactionName}"]`);
 
       expect(child).not.toBeNull();
