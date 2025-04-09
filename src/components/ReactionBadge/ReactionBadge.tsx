@@ -3,10 +3,11 @@ import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 
 import { DEFAULTS, STYLE } from './ReactionBadge.constants';
-import { Props } from './ReactionBadge.types';
 import './ReactionBadge.style.scss';
+import type { Props } from './ReactionBadge.types';
+import type { Button } from '@momentum-design/components';
 
-const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const { className, count, reacted, reaction, ...otherProps } = props;
 
   return (

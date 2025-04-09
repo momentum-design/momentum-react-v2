@@ -1,19 +1,3 @@
-import { ButtonCircleProps } from './../ButtonCircle/index';
+import type { MdcButtonProps } from '../../types';
 
-export type Props = Omit<
-  ButtonCircleProps,
-  | 'color'
-  | 'onPress'
-  | 'onPressStart'
-  | 'onPressEnd'
-  | 'onPressChange'
-  | 'onPressUp'
-  | 'onFocusChange'
-> & {
-  /**
-   * onClick handler for the button
-   * @param e Mouse event
-   * @returns
-   */
-  onClick?: (e: React.MouseEvent) => void;
-};
+export type Props = MdcButtonProps;

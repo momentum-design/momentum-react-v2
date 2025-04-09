@@ -1,16 +1,9 @@
-import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonMdcButton, commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 
-delete commonAriaButton.onPress;
-delete commonAriaButton.onPressStart;
-delete commonAriaButton.onPressEnd;
-delete commonAriaButton.onPressChange;
-delete commonAriaButton.onPressUp;
-delete commonAriaButton.onFocusChange;
-
 export default {
-  ...commonAriaButton,
+  ...commonMdcButton,
   ...commonStyles,
   count: {
     description: 'Number of reactions.',
@@ -43,18 +36,6 @@ export default {
     table: {
       type: {
         summary: 'Reaction',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  onClick: {
-    action: 'onClick',
-    description: 'Handler that is called when the button is clicked',
-    table: {
-      type: {
-        summary: '(e: MouseEvent) => void',
       },
       defaultValue: {
         summary: 'undefined',

@@ -304,6 +304,237 @@ const commonAriaPressProps = {
   },
 };
 
+const commonMdcButton = {
+  disabled: {
+    control: { type: 'boolean' },
+    description: 'Whether the button is disabled',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'soft-disabled': {
+    control: { type: 'boolean' },
+    description: `Whether the button is soft disabled. When set to true, the button appears visually disabled but still allows focus, click, and keyboard actions to be passed through.
+
+Important: When using soft disabled, consumers must ensure that the button behaves like a disabled button, allowing only focus and preventing any interactions (clicks or keyboard actions) from triggering unintended actions.`,
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  type: {
+    control: { type: 'string' },
+    description: 'The behavior of the button when used in an HTML form.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: '"button" | "submit" | "reset"',
+      },
+      defaultValue: {
+        summary: '"button"',
+      },
+    },
+  },
+  children: {
+    control: { type: 'text' },
+    description:
+      'The content to display in the button (passed to the default slot of <mdc-button>)',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'ReactNode',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onClick: {
+    action: 'onClick',
+    description: 'Handler that is called when the element is clicked',
+    table: {
+      type: {
+        summary: '(e: MouseEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onFocus: {
+    action: 'onFocus',
+    description: 'Handler that is called when the element receives focus.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: '(e: FocusEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onBlur: {
+    action: 'onBlur',
+    description: 'Handler that is called when the element loses focus.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: '(e: FocusEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onKeyDown: {
+    action: 'onKeyDown',
+    description: 'Handler that is called when a key is pressed.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: '(e: KeyboardEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  onKeyUp: {
+    action: 'onKeyUp',
+    description: 'Handler that is called when a key is released.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: '(e: KeyboardEvent) => void',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-expanded': {
+    control: { type: 'boolean' },
+    description:
+      'Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-haspopup': {
+    control: { type: 'text' },
+    description:
+      'Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'boolean | "menu" | "listbox" | "tree" | "grid" | "dialog"',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-controls': {
+    control: { type: 'text' },
+    description:
+      'Identifies the element (or elements) whose contents or presence are controlled by the current element.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  id: {
+    control: { type: 'text' },
+    description:
+      "The element's unique identifier. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id).",
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-label': {
+    control: { type: 'text' },
+    description: 'Defines a string value that labels the current element.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-labelledby': {
+    control: { type: 'text' },
+    description: 'Identifies the element (or elements) that labels the current element.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-describedby': {
+    control: { type: 'text' },
+    description: 'Identifies the element (or elements) that describes the object.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  'aria-details': {
+    control: { type: 'text' },
+    description:
+      'Identifies the element (or elements) that provide a detailed, extended description for the object.',
+    table: {
+      category: 'Mdc Button Attributes',
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+};
+
 const commonAriaButton = {
   isDisabled: {
     control: { type: 'boolean' },
@@ -974,4 +1205,5 @@ export {
   extendArgTypes,
   commonAriaPressProps,
   commonAriaLink,
+  commonMdcButton,
 };
