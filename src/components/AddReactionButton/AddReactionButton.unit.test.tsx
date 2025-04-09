@@ -1,14 +1,19 @@
 import React from 'react';
-import { mountAndWait } from '../../../test/utils';
-
+import { renderWithWebComponent } from '../../../test/utils';
 import AddReactionButton, { ADD_REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';
+import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 
 describe('<AddReactionButton />', () => {
+  const setup = async (component: any) => {
+    return renderWithWebComponent(component);
+  };
+
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<AddReactionButton />);
+      const container = await setup(<AddReactionButton />);
 
       expect(container).toMatchSnapshot();
     });
@@ -18,7 +23,7 @@ describe('<AddReactionButton />', () => {
 
       const className = 'example-class';
 
-      const container = await mountAndWait(<AddReactionButton className={className} />);
+      const container = await setup(<AddReactionButton className={className} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +33,7 @@ describe('<AddReactionButton />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<AddReactionButton id={id} />);
+      const container = await setup(<AddReactionButton id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -38,7 +43,7 @@ describe('<AddReactionButton />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<AddReactionButton style={style} />);
+      const container = await setup(<AddReactionButton style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -48,8 +53,8 @@ describe('<AddReactionButton />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<AddReactionButton />);
-      const element = wrapper.find(AddReactionButton).getDOMNode();
+      await setup(<AddReactionButton />);
+      const element = screen.getByRole('button');
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
@@ -59,8 +64,8 @@ describe('<AddReactionButton />', () => {
 
       const className = 'example-class';
 
-      const wrapper = await mountAndWait(<AddReactionButton className={className} />);
-      const element = wrapper.find(AddReactionButton).getDOMNode();
+      await setup(<AddReactionButton className={className} />);
+      const element = screen.getByRole('button');
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -70,8 +75,8 @@ describe('<AddReactionButton />', () => {
 
       const id = 'example-id';
 
-      const wrapper = await mountAndWait(<AddReactionButton id={id} />);
-      const element = wrapper.find(AddReactionButton).getDOMNode();
+      await setup(<AddReactionButton id={id} />);
+      const element = screen.getByRole('button');
 
       expect(element.id).toBe(id);
     });
@@ -82,31 +87,26 @@ describe('<AddReactionButton />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const wrapper = await mountAndWait(<AddReactionButton style={style} />);
-      const element = wrapper.find(AddReactionButton).getDOMNode();
+      await setup(<AddReactionButton style={style} />);
+      const element = screen.getByRole('button');
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
   });
 
   describe('actions', () => {
-    it('should handle mouse press events', async () => {
+    const user = userEvent.setup();
+
+    it('should handle mouse click events', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(<AddReactionButton onPress={mockCallback} />);
-      const component = wrapper.find(AddReactionButton);
+      await setup(<AddReactionButton onClick={mockCallback} />);
 
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        altKey: false,
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-      });
+      const component = screen.getByRole('button');
+
+      await user.click(component);
 
       expect(mockCallback).toBeCalledTimes(1);
     });

@@ -1,26 +1,27 @@
 import React, { forwardRef, RefObject } from 'react';
 import classnames from 'classnames';
+import { Button as MdcButton } from '@momentum-design/components/dist/react';
 
 import { DEFAULTS, STYLE } from './ReactionBadge.constants';
 import { Props } from './ReactionBadge.types';
 import './ReactionBadge.style.scss';
-import ButtonPill from '../ButtonPill';
 
 const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, count, reacted, reaction, ...otherProps } = props;
 
   return (
-    <ButtonPill
+    <MdcButton
       className={classnames(className, STYLE.wrapper)}
       data-count={count || DEFAULTS.COUNT}
       data-reacted={reacted || DEFAULTS.REACTED}
       ref={providedRef}
-      size={20}
-      {...otherProps}
+      size={24}
+      variant="secondary"
+      {...(otherProps as any)}
     >
       {reaction}
       <span className="reaction-badge-count">{count}</span>
-    </ButtonPill>
+    </MdcButton>
   );
 });
 

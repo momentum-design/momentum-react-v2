@@ -2902,20 +2902,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.39.5":
-  version: 0.39.5
-  resolution: "@momentum-design/components@npm:0.39.5"
+"@momentum-design/brand-visuals@npm:0.5.1":
+  version: 0.5.1
+  resolution: "@momentum-design/brand-visuals@npm:0.5.1"
+  checksum: b4e76d04abad87f205253cbbc3db6931a6e74e7fb8e9c6ac4e341f9f2f3563de7d9b36b6e0c3e73b994e84bb2970dbadebfc9686efd6d854d796d12930bc760a
+  languageName: node
+  linkType: hard
+
+"@momentum-design/components@npm:0.51.1":
+  version: 0.51.1
+  resolution: "@momentum-design/components@npm:0.51.1"
   dependencies:
     "@floating-ui/dom": ^1.6.12
     "@lit/context": ^1.1.2
     "@lit/react": ^1.0.5
+    "@momentum-design/brand-visuals": "*"
     "@momentum-design/fonts": "*"
     "@momentum-design/icons": "*"
     "@momentum-design/tokens": "*"
     "@tanstack/lit-virtual": ^3.11.3
     lit: ^3.2.0
     uuid: ^11.0.5
-  checksum: 44e1511caf0c37d4d287af3309280b8bdea12114d4c83c2630ab8fa32371fa7c748fd0b5324a69cb99502f45a6eddda4fd9f77b2b89a98da99ecaaebac2e7206
+  checksum: 7dd40c8db743faf321c87d72ede280804a4191c1c9413dd2fbb1e4ff94ba83ec15106c0dad5a75b7d2ffbdae92cc0868f3f399b3fabec049b3d97e0f7aafa07e
   languageName: node
   linkType: hard
 
@@ -2984,7 +2992,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/components": 0.39.5
+    "@momentum-design/components": 0.51.1
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.10.0
     "@momentum-design/tokens": 0.5.0
@@ -3055,6 +3063,7 @@ __metadata:
     cross-env: ^7.0.3
     css-loader: 0.28.8
     dom-helpers: ^3.4.0
+    element-internals-polyfill: 1.3.13
     enzyme: ^3.11.0
     enzyme-adapter-react-16: ^1.7.1
     enzyme-to-json: ^3.6.2
@@ -13314,6 +13323,13 @@ __metadata:
   version: 1.5.39
   resolution: "electron-to-chromium@npm:1.5.39"
   checksum: cd3b644c20f30fc1c393168bafa0e42a3dde576129603266ab61248b76a36837084073895a845676f8fe90dbb31d385bbef53901b60381f3ae82b40a5bece352
+  languageName: node
+  linkType: hard
+
+"element-internals-polyfill@npm:1.3.13":
+  version: 1.3.13
+  resolution: "element-internals-polyfill@npm:1.3.13"
+  checksum: 7aa05eeacd6fa6458501ae2a3a1d2e8cd18557d9ea3744b7bb94ea47d1b507f35e1bfe6c8065d39cf1b78cee0de929bae8b1828775f4b91c621172072141aab5
   languageName: node
   linkType: hard
 

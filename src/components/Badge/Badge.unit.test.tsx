@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
 import Badge from '.';
+import { renderWithWebComponent } from '../../../test/utils';
 
 describe('Badge', () => {
   let container;
 
   describe('snapshot', () => {
     const setup = async (component: any) => {
-      const { container } = render(component);
-
-      // we have to wait for the web component to be rendered
-      await waitFor(() => {
-        expect(container.querySelector('mdc-badge')).toBeTruthy();
-      });
-
-      return container;
+      return renderWithWebComponent(component, 'mdc-badge');
     };
+
     it('should match snapshot without attributes', async () => {
       expect.assertions(2);
       container = await setup(<Badge className="test" />);

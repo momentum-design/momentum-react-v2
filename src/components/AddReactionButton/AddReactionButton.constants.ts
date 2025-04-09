@@ -1,6 +1,8 @@
 const CLASS_PREFIX = 'md-add-reaction-button';
 
-const DEFAULTS = { ICON_SIZE: 12, SIZE: 20 };
+// setting to 24, cause momentum-design doesn't support size 20 for variant secondary
+// overridding it in css to size 20
+const DEFAULTS = { SIZE: 24 };
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
