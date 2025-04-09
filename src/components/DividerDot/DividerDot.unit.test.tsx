@@ -1,18 +1,11 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
 
 import DividerDot, { DIVIDER_DOT_CONSTANTS as CONSTANTS } from './';
+import { renderWithWebComponent } from '../../../test/utils';
 
 describe('<DividerDot />', () => {
   const setup = async (component: any) => {
-    const { container } = render(component);
-
-    // we have to wait for the web component to be rendered
-    await waitFor(() => {
-      expect(container.querySelector('mdc-bullet')).toBeTruthy();
-    });
-
-    return container;
+    return renderWithWebComponent(component, 'mdc-bullet');
   };
 
   describe('snapshot', () => {

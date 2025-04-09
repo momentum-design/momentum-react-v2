@@ -8,7 +8,7 @@ import {
   THEME_CLASS_PREFIX_STABLE,
   THEMES,
 } from './ThemeProvider.constants';
-import { render, waitFor } from '@testing-library/react';
+import { renderWithWebComponent } from '../../../test/utils';
 
 describe('<ThemeProvider />', () => {
   let container;
@@ -63,11 +63,10 @@ describe('<ThemeProvider />', () => {
 
       const themeName = THEMES[Object.keys(THEMES)[0]];
 
-      const { container } = render(<ThemeProvider theme={themeName} />);
-
-      await waitFor(() => {
-        expect(container.querySelector('mdc-themeprovider')).toBeTruthy();
-      });
+      const container = await renderWithWebComponent(
+        <ThemeProvider theme={themeName} />,
+        'mdc-themeprovider'
+      );
 
       const element = container.querySelector('mdc-themeprovider');
 

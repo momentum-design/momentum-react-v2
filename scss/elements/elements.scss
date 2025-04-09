@@ -10,6 +10,7 @@
   }
 }
 
-*:focus {
+// focus selector for all elements except mdc-button, since mdc-button has its own focus styles
+*:not(mdc-button):focus {
   @include focus-styles;
 }

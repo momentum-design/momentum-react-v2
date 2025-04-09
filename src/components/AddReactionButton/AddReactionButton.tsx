@@ -1,26 +1,31 @@
-import React, { ForwardedRef, forwardRef } from 'react';
+import React, { forwardRef, RefObject, useRef } from 'react';
 import classnames from 'classnames';
-import ButtonCircle, { ButtonCircleSize } from '../ButtonCircle';
+import { Button as MdcButton } from '@momentum-design/components/dist/react';
+import { IconButtonSize } from '@momentum-design/components';
+import type { Button } from '@momentum-design/components';
 
 import { DEFAULTS, STYLE } from './AddReactionButton.constants';
 import { Props } from './AddReactionButton.types';
 import './AddReactionButton.style.scss';
-import Icon, { IconScale } from '../Icon';
 
-const AddReactionButton = forwardRef((props: Props, ref: ForwardedRef<HTMLButtonElement>) => {
+// todo: fix typing once React keyboard events are properly typed in momentum-design
+const AddReactionButton = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const { className, id, style, ...otherProps } = props;
   delete otherProps.size;
+  const internalRef = useRef();
+  const ref = providedRef || internalRef;
+
   return (
-    <ButtonCircle
+    <MdcButton
       ref={ref}
       className={classnames(className, STYLE.wrapper)}
       id={id}
-      size={DEFAULTS.SIZE as ButtonCircleSize}
+      size={DEFAULTS.SIZE as IconButtonSize}
       style={style}
-      {...otherProps}
-    >
-      <Icon name="reactions" scale={DEFAULTS.ICON_SIZE as IconScale} />
-    </ButtonCircle>
+      variant="secondary"
+      prefixIcon="reactions-regular"
+      {...(otherProps as any)}
+    />
   );
 });
 

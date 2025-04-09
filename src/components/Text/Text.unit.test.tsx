@@ -4,21 +4,14 @@ import Text from '.';
 import { AllowedTagNames, FontStyle } from './Text.types';
 
 import { TYPES, STYLE } from './Text.constants';
-import { render, waitFor } from '@testing-library/react';
 import { TYPE as FONT_TYPE } from '@momentum-design/components/dist/components/text/text.constants.js';
+import { renderWithWebComponent } from '../../../test/utils';
 
 describe('Text', () => {
   let container;
 
   const setup = async (component: any) => {
-    const { container } = render(component);
-
-    // we have to wait for the web component to be rendered
-    await waitFor(() => {
-      expect(container.querySelector('mdc-text')).toBeTruthy();
-    });
-
-    return container;
+    return renderWithWebComponent(component, 'mdc-text');
   };
 
   it('should match snapshot', async () => {

@@ -29,9 +29,10 @@ const isMDLTokenValid = function (token) {
 };
 
 const isVarTokenValid = function (token) {
-  // exclude locally defined css vars
+  // exclude locally defined css vars and momentum design component overrides
   if (
     token.match('--md-globals') ||
+    token.match('--mdc-') ||
     token.match('--local') ||
     token.match('--none') ||
     token.match('transparent') ||

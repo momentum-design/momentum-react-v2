@@ -4,7 +4,7 @@ import { ReactionProps } from '../Reaction';
 
 export type SupportedReactions = ReactionProps;
 
-export interface Props extends AriaButtonProps {
+export interface Props extends Omit<AriaButtonProps, 'onPress'> {
   /**
    * Custom class for overriding this component's CSS.
    */
@@ -34,4 +34,11 @@ export interface Props extends AriaButtonProps {
    * Custom style for overriding this component's CSS.
    */
   style?: CSSProperties;
+
+  /**
+   * onClick handler for the button
+   * @param e Mouse event
+   * @returns
+   */
+  onClick?: (e: React.MouseEvent) => void;
 }
