@@ -4,7 +4,11 @@ import { ReactionProps } from '../Reaction';
 
 export type SupportedReactions = ReactionProps;
 
-export interface Props extends Omit<AriaButtonProps, 'onPress'> {
+export interface Props
+  extends Omit<
+    AriaButtonProps,
+    'onPress' | 'onPressStart' | 'onPressEnd' | 'onPressChange' | 'onPressUp' | 'onFocusChange'
+  > {
   /**
    * Custom class for overriding this component's CSS.
    */
