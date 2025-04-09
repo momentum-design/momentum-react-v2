@@ -7,6 +7,12 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useTreeState } from '@react-stately/tree';
 import ContentSeparator from '../ContentSeparator';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<MenuSection />', () => {
   const { result } = renderHook(() =>
     useTreeState({

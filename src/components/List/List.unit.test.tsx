@@ -17,6 +17,12 @@ import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { ListRefObject } from './List.types';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<List />', () => {
   const commonProps = {
     'aria-label': 'test',

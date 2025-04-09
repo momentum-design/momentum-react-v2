@@ -108,6 +108,7 @@ const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
       isDisabled={isDisabled}
       isPadded={true}
       {...menuItemProps}
+      tooltipProps={item.props.tooltipProps}
     >
       {renderSections()}
     </ListItemBase>

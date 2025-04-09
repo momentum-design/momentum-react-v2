@@ -18,6 +18,7 @@ exports[`ListItemBase snapshot should match snapshot 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -63,6 +64,7 @@ exports[`ListItemBase snapshot should match snapshot with allowTextSelection=tru
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -108,6 +110,7 @@ exports[`ListItemBase snapshot should match snapshot with className 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -151,6 +154,7 @@ exports[`ListItemBase snapshot should match snapshot with empty list item 1`] = 
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -186,6 +190,7 @@ exports[`ListItemBase snapshot should match snapshot with focusChild 1`] = `
     data-padded={false}
     data-shape="rectangle"
     data-size={40}
+    id="1"
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -328,6 +333,7 @@ exports[`ListItemBase snapshot should match snapshot with interactive=false 1`] 
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -373,6 +379,7 @@ exports[`ListItemBase snapshot should match snapshot with isDisabled 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -418,6 +425,7 @@ exports[`ListItemBase snapshot should match snapshot with isSelected 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -463,6 +471,7 @@ exports[`ListItemBase snapshot should match snapshot with lang 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         lang="en-US"
         onBlur={[Function]}
         onClick={[Function]}
@@ -509,6 +518,7 @@ exports[`ListItemBase snapshot should match snapshot with role 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -554,6 +564,7 @@ exports[`ListItemBase snapshot should match snapshot with shape 1`] = `
         data-padded={false}
         data-shape="isPilled"
         data-size={50}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -599,6 +610,7 @@ exports[`ListItemBase snapshot should match snapshot with size 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -648,6 +660,7 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
         data-padded={false}
         data-shape="rectangle"
         data-size={40}
+        id="1"
         onBlur={[Function]}
         onClick={[Function]}
         onDragStart={[Function]}
@@ -673,6 +686,69 @@ exports[`ListItemBase snapshot should match snapshot with style 1`] = `
       >
         Test
       </li>
+    </FocusRing>
+  </FocusRing>
+</ListItemBase>
+`;
+
+exports[`ListItemBase snapshot should match snapshot with tooltipProps 1`] = `
+<ListItemBase
+  tooltipProps={
+    Object {
+      "content": "This is a tooltip",
+    }
+  }
+>
+  <FocusRing
+    isInset={false}
+  >
+    <FocusRing
+      focusClass="md-focus-ring-wrapper children"
+      focusRingClass="md-focus-ring-wrapper children"
+      isInset={false}
+    >
+      <li
+        className="md-list-item-base-wrapper"
+        data-allow-text-select={false}
+        data-disabled={false}
+        data-interactive={true}
+        data-padded={false}
+        data-shape="rectangle"
+        data-size={40}
+        id="1"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragStart={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onPointerDown={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="listitem"
+        tabIndex={-1}
+      >
+        Test
+      </li>
+      <Tooltip
+        content="This is a tooltip"
+        placement="top"
+        showArrow={true}
+        triggerID="1"
+      >
+        <mdc-tooltip
+          content="This is a tooltip"
+          suppressHydrationWarning={true}
+        >
+          This is a tooltip
+        </mdc-tooltip>
+      </Tooltip>
     </FocusRing>
   </FocusRing>
 </ListItemBase>

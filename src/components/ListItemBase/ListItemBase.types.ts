@@ -92,4 +92,10 @@ export interface Props
    * Allows text selection of text contents of the ListItemBase. Cannot be used in conjunction with an onPress prop.
    */
   allowTextSelection?: boolean;
+
+  /**
+   * Props to be passed through to MdcTooltip, with the addition of "content" which is the content of the tooltip.
+   * A tooltip will only be rendered if the content prop is provided. triggerID is handled internally.
+   */
+  tooltipProps?: Record<string, unknown>;
 }
