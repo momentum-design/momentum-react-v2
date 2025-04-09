@@ -313,6 +313,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -334,6 +335,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -355,6 +357,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -388,6 +391,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -409,6 +413,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -430,6 +435,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -749,6 +755,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -1026,6 +1033,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -1303,6 +1311,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -1606,6 +1615,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -1883,6 +1893,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -2160,6 +2171,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -2525,6 +2537,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -2546,6 +2559,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -2567,6 +2581,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -2600,6 +2615,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -2621,6 +2637,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -2642,6 +2659,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -2961,6 +2979,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -3238,6 +3257,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -3515,6 +3535,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -3818,6 +3839,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -4095,6 +4117,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -4372,6 +4395,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -4737,6 +4761,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -4758,6 +4783,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -4779,6 +4805,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -4812,6 +4839,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -4833,6 +4861,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -4854,6 +4883,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -5173,6 +5203,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -5450,6 +5481,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -5727,6 +5759,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -6030,6 +6063,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -6307,6 +6341,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -6584,6 +6619,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -6951,6 +6987,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -6972,6 +7009,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -6993,6 +7031,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -7026,6 +7065,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -7047,6 +7087,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -7068,6 +7109,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -7389,6 +7431,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -7666,6 +7709,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -7943,6 +7987,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -8246,6 +8291,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -8523,6 +8569,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -8800,6 +8847,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -9165,6 +9213,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -9186,6 +9235,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -9207,6 +9257,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -9240,6 +9291,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -9261,6 +9313,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -9282,6 +9335,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -9601,6 +9655,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -9878,6 +9933,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -10155,6 +10211,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -10458,6 +10515,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -10735,6 +10793,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -11012,6 +11071,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -11377,6 +11437,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -11398,6 +11459,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -11419,6 +11481,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -11452,6 +11515,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -11473,6 +11537,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -11494,6 +11559,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -11844,6 +11910,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -12121,6 +12188,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -12398,6 +12466,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -12701,6 +12770,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -12978,6 +13048,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -13255,6 +13326,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -13665,6 +13737,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -13686,6 +13759,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -13707,6 +13781,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -13740,6 +13815,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -13761,6 +13837,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -13782,6 +13859,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -14111,6 +14189,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -14388,6 +14467,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -14665,6 +14745,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -14968,6 +15049,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -15245,6 +15327,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -15522,6 +15605,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -15887,6 +15971,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -15908,6 +15993,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -15929,6 +16015,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -15962,6 +16049,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -15983,6 +16071,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -16004,6 +16093,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -16323,6 +16413,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -16600,6 +16691,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -16877,6 +16969,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -17180,6 +17273,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -17457,6 +17551,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -17734,6 +17829,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -18103,6 +18199,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="0"
                     >
@@ -18124,6 +18221,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -18145,6 +18243,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemradio"
                       tabindex="-1"
                     >
@@ -18178,6 +18277,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -18199,6 +18299,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -18220,6 +18321,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                       data-padded="true"
                       data-shape="rectangle"
                       data-size="40"
+                      id="1"
                       role="menuitemcheckbox"
                       tabindex="-1"
                     >
@@ -18539,6 +18641,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -18816,6 +18919,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -19093,6 +19197,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -19396,6 +19501,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -19673,6 +19779,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}
@@ -19950,6 +20057,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
                                 data-padded={true}
                                 data-shape="rectangle"
                                 data-size={40}
+                                id="1"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onDragStart={[Function]}

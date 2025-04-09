@@ -15,6 +15,12 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import List from '../List';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<MeetingListItem />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {

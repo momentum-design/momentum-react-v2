@@ -4,6 +4,12 @@ import { mount } from 'enzyme';
 import ListHeader, { LIST_HEADER_CONSTANTS as CONSTANTS } from './';
 import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<ListHeader />', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {

@@ -9,6 +9,12 @@ import { useTreeState } from '@react-stately/tree';
 import MenuItem from '../MenuItem';
 import ContentSeparator from '../ContentSeparator';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<MenuSelectionGroup />', () => {
   const { result } = renderHook(() =>
     useTreeState({

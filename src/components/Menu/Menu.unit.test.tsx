@@ -21,6 +21,12 @@ import ListItemBaseSection from '../ListItemBaseSection';
 import ContentSeparator from '../ContentSeparator';
 import { FocusRing } from 'react-aria';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('useMenuAppearanceContext', () => {
   const fakeMenuAppearanceContextValue: MenuAppearanceContextValue = {
     tickPosition: 'left',

@@ -10,6 +10,12 @@ import ListItemBase from '../ListItemBase';
 import * as ListContext from '../List/List.utils';
 import DividerDot from '../DividerDot';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<SpaceListItem />', () => {
   beforeEach(() => {
     jest

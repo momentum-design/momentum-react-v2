@@ -90,7 +90,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "index": 2,
             "key": "$.2",
             "level": 0,
-            "nextKey": undefined,
+            "nextKey": "$.3",
             "parentKey": null,
             "prevKey": "$.1",
             "props": Object {
@@ -105,8 +105,35 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
+          "$.3" => Object {
+            "aria-label": "3",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 3,
+            "key": "$.3",
+            "level": 0,
+            "nextKey": undefined,
+            "parentKey": null,
+            "prevKey": "$.2",
+            "props": Object {
+              "aria-label": "3",
+              "children": "Item 4",
+              "closeOnSelect": false,
+              "tooltipProps": Object {
+                "content": "This is a tooltip",
+              },
+            },
+            "rendered": "Item 4",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 4",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
         },
-        "lastKey": "$.2",
+        "lastKey": "$.3",
       },
       "disabledKeys": Set {},
       "expandedKeys": Set {},
@@ -174,7 +201,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "index": 2,
               "key": "$.2",
               "level": 0,
-              "nextKey": undefined,
+              "nextKey": "$.3",
               "parentKey": null,
               "prevKey": "$.1",
               "props": Object {
@@ -189,8 +216,35 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
+            "$.3" => Object {
+              "aria-label": "3",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 3,
+              "key": "$.3",
+              "level": 0,
+              "nextKey": undefined,
+              "parentKey": null,
+              "prevKey": "$.2",
+              "props": Object {
+                "aria-label": "3",
+                "children": "Item 4",
+                "closeOnSelect": false,
+                "tooltipProps": Object {
+                  "content": "This is a tooltip",
+                },
+              },
+              "rendered": "Item 4",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 4",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
           },
-          "lastKey": "$.2",
+          "lastKey": "$.3",
         },
         "state": Object {
           "childFocusStrategy": null,
@@ -254,6 +308,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
           data-padded={true}
           data-shape="rectangle"
           data-size={40}
+          id="1"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -420,7 +475,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "index": 2,
             "key": "$.2",
             "level": 0,
-            "nextKey": undefined,
+            "nextKey": "$.3",
             "parentKey": null,
             "prevKey": "$.1",
             "props": Object {
@@ -435,8 +490,35 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             "value": undefined,
             "wrapper": undefined,
           },
+          "$.3" => Object {
+            "aria-label": "3",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 3,
+            "key": "$.3",
+            "level": 0,
+            "nextKey": undefined,
+            "parentKey": null,
+            "prevKey": "$.2",
+            "props": Object {
+              "aria-label": "3",
+              "children": "Item 4",
+              "closeOnSelect": false,
+              "tooltipProps": Object {
+                "content": "This is a tooltip",
+              },
+            },
+            "rendered": "Item 4",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 4",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
         },
-        "lastKey": "$.2",
+        "lastKey": "$.3",
       },
       "disabledKeys": Set {},
       "expandedKeys": Set {},
@@ -504,7 +586,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "index": 2,
               "key": "$.2",
               "level": 0,
-              "nextKey": undefined,
+              "nextKey": "$.3",
               "parentKey": null,
               "prevKey": "$.1",
               "props": Object {
@@ -519,8 +601,35 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
               "value": undefined,
               "wrapper": undefined,
             },
+            "$.3" => Object {
+              "aria-label": "3",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 3,
+              "key": "$.3",
+              "level": 0,
+              "nextKey": undefined,
+              "parentKey": null,
+              "prevKey": "$.2",
+              "props": Object {
+                "aria-label": "3",
+                "children": "Item 4",
+                "closeOnSelect": false,
+                "tooltipProps": Object {
+                  "content": "This is a tooltip",
+                },
+              },
+              "rendered": "Item 4",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 4",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
           },
-          "lastKey": "$.2",
+          "lastKey": "$.3",
         },
         "state": Object {
           "childFocusStrategy": null,
@@ -584,6 +693,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
           data-padded={true}
           data-shape="rectangle"
           data-size={30}
+          id="1"
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -654,6 +764,373 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             </div>
           </ListItemBaseSection>
         </li>
+      </FocusRing>
+    </FocusRing>
+  </ListItemBase>
+</MenuItem>
+`;
+
+exports[`<MenuItem /> snapshot should match snapshot with tooltipProps passed 1`] = `
+<MenuItem
+  item={
+    Object {
+      "aria-label": "3",
+      "childNodes": Object {
+        Symbol(Symbol.iterator): [Function],
+      },
+      "hasChildNodes": false,
+      "index": 3,
+      "key": "$.3",
+      "level": 0,
+      "nextKey": undefined,
+      "parentKey": null,
+      "prevKey": "$.2",
+      "props": Object {
+        "aria-label": "3",
+        "children": "Item 4",
+        "closeOnSelect": false,
+        "tooltipProps": Object {
+          "content": "This is a tooltip",
+        },
+      },
+      "rendered": "Item 4",
+      "shouldInvalidate": undefined,
+      "textValue": "Item 4",
+      "type": "item",
+      "value": undefined,
+      "wrapper": undefined,
+    }
+  }
+  state={
+    Object {
+      "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+        "firstKey": "$.0",
+        "iterable": Object {
+          Symbol(Symbol.iterator): [Function],
+        },
+        "keyMap": Map {
+          "$.0" => Object {
+            "aria-label": "0",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 0,
+            "key": "$.0",
+            "level": 0,
+            "nextKey": "$.1",
+            "parentKey": null,
+            "prevKey": undefined,
+            "props": Object {
+              "aria-label": "0",
+              "children": "Item 1",
+            },
+            "rendered": "Item 1",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 1",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+          "$.1" => Object {
+            "aria-label": "1",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 1,
+            "key": "$.1",
+            "level": 0,
+            "nextKey": "$.2",
+            "parentKey": null,
+            "prevKey": "$.0",
+            "props": Object {
+              "aria-label": "1",
+              "children": "Item 2",
+            },
+            "rendered": "Item 2",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 2",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+          "$.2" => Object {
+            "aria-label": "2",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 2,
+            "key": "$.2",
+            "level": 0,
+            "nextKey": "$.3",
+            "parentKey": null,
+            "prevKey": "$.1",
+            "props": Object {
+              "aria-label": "2",
+              "children": "Item 3",
+              "closeOnSelect": false,
+            },
+            "rendered": "Item 3",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 3",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+          "$.3" => Object {
+            "aria-label": "3",
+            "childNodes": Object {
+              Symbol(Symbol.iterator): [Function],
+            },
+            "hasChildNodes": false,
+            "index": 3,
+            "key": "$.3",
+            "level": 0,
+            "nextKey": undefined,
+            "parentKey": null,
+            "prevKey": "$.2",
+            "props": Object {
+              "aria-label": "3",
+              "children": "Item 4",
+              "closeOnSelect": false,
+              "tooltipProps": Object {
+                "content": "This is a tooltip",
+              },
+            },
+            "rendered": "Item 4",
+            "shouldInvalidate": undefined,
+            "textValue": "Item 4",
+            "type": "item",
+            "value": undefined,
+            "wrapper": undefined,
+          },
+        },
+        "lastKey": "$.3",
+      },
+      "disabledKeys": Set {},
+      "expandedKeys": Set {},
+      "selectionManager": SelectionManager {
+        "_isSelectAll": null,
+        "allowsCellSelection": false,
+        "collection": $f4c7caecb598119f63e2918a55ec91a9$export$TreeCollection {
+          "firstKey": "$.0",
+          "iterable": Object {
+            Symbol(Symbol.iterator): [Function],
+          },
+          "keyMap": Map {
+            "$.0" => Object {
+              "aria-label": "0",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 0,
+              "key": "$.0",
+              "level": 0,
+              "nextKey": "$.1",
+              "parentKey": null,
+              "prevKey": undefined,
+              "props": Object {
+                "aria-label": "0",
+                "children": "Item 1",
+              },
+              "rendered": "Item 1",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 1",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+            "$.1" => Object {
+              "aria-label": "1",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 1,
+              "key": "$.1",
+              "level": 0,
+              "nextKey": "$.2",
+              "parentKey": null,
+              "prevKey": "$.0",
+              "props": Object {
+                "aria-label": "1",
+                "children": "Item 2",
+              },
+              "rendered": "Item 2",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 2",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+            "$.2" => Object {
+              "aria-label": "2",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 2,
+              "key": "$.2",
+              "level": 0,
+              "nextKey": "$.3",
+              "parentKey": null,
+              "prevKey": "$.1",
+              "props": Object {
+                "aria-label": "2",
+                "children": "Item 3",
+                "closeOnSelect": false,
+              },
+              "rendered": "Item 3",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 3",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+            "$.3" => Object {
+              "aria-label": "3",
+              "childNodes": Object {
+                Symbol(Symbol.iterator): [Function],
+              },
+              "hasChildNodes": false,
+              "index": 3,
+              "key": "$.3",
+              "level": 0,
+              "nextKey": undefined,
+              "parentKey": null,
+              "prevKey": "$.2",
+              "props": Object {
+                "aria-label": "3",
+                "children": "Item 4",
+                "closeOnSelect": false,
+                "tooltipProps": Object {
+                  "content": "This is a tooltip",
+                },
+              },
+              "rendered": "Item 4",
+              "shouldInvalidate": undefined,
+              "textValue": "Item 4",
+              "type": "item",
+              "value": undefined,
+              "wrapper": undefined,
+            },
+          },
+          "lastKey": "$.3",
+        },
+        "state": Object {
+          "childFocusStrategy": null,
+          "disabledKeys": Set {},
+          "disallowEmptySelection": undefined,
+          "focusedKey": null,
+          "isFocused": false,
+          "selectedKeys": Set {
+            "$.0",
+          },
+          "selectionMode": "none",
+          "setFocused": [Function],
+          "setFocusedKey": [Function],
+          "setSelectedKeys": [Function],
+        },
+      },
+      "toggleKey": [Function],
+    }
+  }
+>
+  <ListItemBase
+    aria-disabled={false}
+    aria-label="3"
+    aria-labelledby={null}
+    className="md-menu-item-wrapper"
+    data-key="$.3"
+    isDisabled={false}
+    isPadded={true}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onFocus={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="menuitem"
+    shape="rectangle"
+    size={40}
+    tabIndex={-1}
+    tooltipProps={
+      Object {
+        "content": "This is a tooltip",
+      }
+    }
+  >
+    <FocusRing
+      isInset={false}
+    >
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+        isInset={false}
+      >
+        <li
+          aria-disabled={false}
+          aria-label="3"
+          aria-labelledby={null}
+          className="md-menu-item-wrapper md-list-item-base-wrapper"
+          data-allow-text-select={false}
+          data-disabled={false}
+          data-interactive={true}
+          data-key="$.3"
+          data-padded={true}
+          data-shape="rectangle"
+          data-size={40}
+          id="1"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onPointerDown={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="menuitem"
+          tabIndex={-1}
+        >
+          <ListItemBaseSection
+            position="fill"
+            title="Item 4"
+          >
+            <div
+              data-position="fill"
+              title="Item 4"
+            >
+              Item 4
+            </div>
+          </ListItemBaseSection>
+        </li>
+        <Tooltip
+          content="This is a tooltip"
+          placement="top"
+          showArrow={true}
+          triggerID="1"
+        >
+          <mdc-tooltip
+            content="This is a tooltip"
+            suppressHydrationWarning={true}
+          >
+            This is a tooltip
+          </mdc-tooltip>
+        </Tooltip>
       </FocusRing>
     </FocusRing>
   </ListItemBase>

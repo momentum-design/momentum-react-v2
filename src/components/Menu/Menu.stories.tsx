@@ -268,7 +268,7 @@ Common.parameters = {
         <Section key="0" title="Colors">
           <Item>Red</Item>
           <Item>Blue</Item>
-          <Item>Yellow</Item>
+          <Item {...{ tooltipProps: { content: 'This is my favourite my colour' } }}>Yellow</Item>
         </Section>,
         <Section key="1" title="Animals">
           <Item>Dog</Item>

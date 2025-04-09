@@ -10,6 +10,12 @@ import * as menu from '../Menu/Menu';
 import { ListItemBaseSize } from '../ListItemBase/ListItemBase.types';
 import ListItemBaseSection from '../ListItemBaseSection';
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('<MenuItem />', () => {
   const { result } = renderHook(() =>
     useTreeState({
@@ -22,6 +28,14 @@ describe('<MenuItem />', () => {
         </Item>,
         <Item key="$.2" aria-label="2" closeOnSelect={false}>
           Item 3
+        </Item>,
+        <Item
+          key="$.3"
+          aria-label="3"
+          closeOnSelect={false}
+          {...{ tooltipProps: { content: 'This is a tooltip' } }}
+        >
+          Item 4
         </Item>,
       ],
       selectedKeys: ['$.0'],
@@ -62,6 +76,17 @@ describe('<MenuItem />', () => {
         itemSize: 30 as ListItemBaseSize,
         tickPosition: 'left',
       });
+
+      const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should match snapshot with tooltipProps passed', () => {
+      const item = state.collection.getItem('$.3');
+      jest
+        .spyOn(menu, 'useMenuContext')
+        .mockReturnValue({ onClose: jest.fn(), closeOnSelect: true });
 
       const wrapper = mount(<MenuItem state={state} key={item.key} item={item} />);
 
