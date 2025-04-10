@@ -55,7 +55,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     ...rest
   } = props;
 
-  const [itemId] = useState(rest.id || uuidv4);
+  const [itemId] = useState(rest.id || uuidv4());
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
