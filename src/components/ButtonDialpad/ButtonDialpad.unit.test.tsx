@@ -2,7 +2,7 @@ import React from 'react';
 import { renderWithWebComponent } from '../../../test/utils';
 import { ButtonDialpad } from '@momentum-ui/react-collaboration';
 import userEvent from '@testing-library/user-event';
-import { DEFAULTS, STYLE } from './ButtonDialpad.constants';
+import { STYLE } from './ButtonDialpad.constants';
 import { screen } from '@testing-library/react';
 
 describe('<ButtonPill />', () => {
@@ -46,10 +46,8 @@ describe('<ButtonPill />', () => {
     it('should match snapshot when disabled', async () => {
       expect.assertions(1);
 
-      const disabled = !DEFAULTS.DISABLED;
-
       const { container } = await setup(
-        <ButtonDialpad disabled={disabled} primaryText="Example Text" />
+        <ButtonDialpad disabled={true} primaryText="Example Text" />
       );
 
       expect(container).toMatchSnapshot();

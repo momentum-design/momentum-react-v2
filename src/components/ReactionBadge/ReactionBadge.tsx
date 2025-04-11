@@ -18,7 +18,7 @@ const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<Button>) 
       ref={providedRef}
       size={24}
       variant="secondary"
-      {...(otherProps as any)}
+      {...otherProps}
     >
       {reaction}
       <span className="reaction-badge-count">{count}</span>
