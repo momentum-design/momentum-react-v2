@@ -24,7 +24,7 @@ const AddReactionButton = forwardRef((props: Props, providedRef: RefObject<Butto
       style={style}
       variant="secondary"
       prefixIcon="reactions-regular"
-      {...(otherProps as any)}
+      {...otherProps}
     />
   );
 });

@@ -19,7 +19,7 @@ const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<Button>) 
       // size in scss file to 64px
       size={40}
       variant="tertiary"
-      {...(otherProps as any)}
+      {...otherProps}
     >
       <div className={STYLE.innerWrapper}>
         <div className={STYLE.primaryText}>{props.primaryText}</div>
