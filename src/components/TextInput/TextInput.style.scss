@@ -36,6 +36,13 @@
     font-size: 1rem;
     padding-left: 0.75rem;
 
+    // remove focus from input since focus ring is applied to parent div
+    &:focus {
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+
     &::placeholder {
       color: var(--mds-color-theme-text-secondary-normal);
       opacity: 1;

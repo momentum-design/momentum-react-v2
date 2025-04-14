@@ -48,6 +48,13 @@
     display: inline-block;
     flex: 1;
 
+    // remove focus from input since focus ring is applied to parent div (md-global-search-input-wrapper)
+    &:focus {
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+
     &:focus-visible {
       outline: none;
     }
