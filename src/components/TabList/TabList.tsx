@@ -127,6 +127,7 @@ const TabList: FC<Props> = (props: Props) => {
       data-has-background={hasBackground}
       role="tablist"
       className={classnames(STYLE.wrapper, props.className)}
+      orientation={orientation}
     >
       {children.map(cloneWithCommonProps)}
     </ButtonGroup>
