@@ -24,12 +24,12 @@ export interface Props extends AriaButtonProps {
   size?: number;
 
   /**
-   * Size index of this NavTab.
+   * Label to the right of the icon when expanded for this NavTab.
    */
   label?: string;
 
   /**
-   * Size index of this NavTab.
+   * Icon for this NavTab.
    */
   icon?: InferredIconName;
 
