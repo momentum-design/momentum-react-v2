@@ -9,6 +9,7 @@ import React, {
   useState,
 } from 'react';
 import classnames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 
 import './ListItemBase.style.scss';
 import { Props } from './ListItemBase.types';
@@ -24,6 +25,7 @@ import { useMutationObservable } from '../../hooks/useMutationObservable';
 import { usePrevious } from '../../hooks/usePrevious';
 import { getKeyboardFocusableElements } from '../../utils/navigation';
 import { useFocusAndFocusWithinState } from '../../hooks/useFocusState';
+import { Tooltip as MdcTooltip } from '@momentum-design/components/dist/react';
 
 type RefOrCallbackRef = RefObject<HTMLLIElement> | ((instance: HTMLLIElement) => void);
 
@@ -49,8 +51,11 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
     onBlur,
     onBlurWithin,
     onFocusWithin,
+    tooltipProps,
     ...rest
   } = props;
+
+  const [itemId] = useState(rest.id || uuidv4());
 
   let content: ReactNode, start: ReactNode, middle: ReactNode, end: ReactNode;
 
@@ -252,9 +257,7 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 
       const firstFocusable = getKeyboardFocusableElements(ref.current, {
         includeTabbableOnly: false,
-      }).filter(
-        (el) => el.closest(`.${STYLE.wrapper}`) === ref.current
-      )[0];
+      }).filter((el) => el.closest(`.${STYLE.wrapper}`) === ref.current)[0];
 
       if (focusChild) {
         firstFocusable?.focus();
@@ -295,25 +298,33 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
   }, [itemHasFocus, setUpdateFocusBlocked]);
 
   const listElement = (
-    <li
-      tabIndex={focusChild ? -1 : listItemTabIndex}
-      style={style}
-      ref={ref}
-      data-size={size}
-      data-disabled={isDisabled}
-      data-padded={isPadded}
-      data-shape={shape}
-      data-interactive={interactive && !focusChild}
-      data-allow-text-select={allowTextSelection}
-      className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
-      role={role}
-      lang={lang}
-      {...focusProps}
-      {...listItemPressProps}
-      {...rest}
-    >
-      {content}
-    </li>
+    <>
+      <li
+        tabIndex={focusChild ? -1 : listItemTabIndex}
+        style={style}
+        ref={ref}
+        data-size={size}
+        data-disabled={isDisabled}
+        data-padded={isPadded}
+        data-shape={shape}
+        data-interactive={interactive && !focusChild}
+        data-allow-text-select={allowTextSelection}
+        className={classnames(className, STYLE.wrapper, { active: isPressed || isSelected })}
+        role={role}
+        lang={lang}
+        {...focusProps}
+        {...listItemPressProps}
+        {...rest}
+        id={itemId}
+      >
+        {content}
+      </li>
+      {!!tooltipProps?.content && (
+        <MdcTooltip showArrow placement="top" triggerID={itemId} {...tooltipProps}>
+          {tooltipProps.content}
+        </MdcTooltip>
+      )}
+    </>
   );
 
   if (focusChild) {

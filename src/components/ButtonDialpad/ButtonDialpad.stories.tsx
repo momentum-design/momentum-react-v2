@@ -27,15 +27,6 @@ const Example = Template<ButtonDialpadProps>(ButtonDialpad).bind({});
 
 Example.argTypes = { ...argTypes };
 
-const Sizes = MultiTemplate<ButtonDialpadProps>(ButtonDialpad).bind({});
-
-Sizes.parameters = {
-  variants: [{}, { size: 52 }],
-};
-
-Sizes.argTypes = { ...argTypes };
-delete Sizes.argTypes.size;
-
 const States = MultiTemplate<ButtonDialpadProps>(ButtonDialpad).bind({});
 
 States.parameters = {
@@ -69,4 +60,4 @@ delete Common.argTypes.children;
 delete Common.argTypes.primaryText;
 delete Common.argTypes.secondaryText;
 
-export { Example, Sizes, States, Common };
+export { Example, States, Common };

@@ -1,17 +1,6 @@
-import {
-  commonAriaButton,
-  commonStyles,
-  extendArgTypes,
-} from '../../storybook/helper.stories.argtypes';
-import { buttonCircleArgTypes } from '../ButtonCircle/ButtonCircle.stories.args';
-
-const addReactionButtonArgTypes = {};
-
-export { addReactionButtonArgTypes };
+import { commonMdcButton, commonStyles } from '../../storybook/helper.stories.argtypes';
 
 export default {
-  ...addReactionButtonArgTypes,
   ...commonStyles,
-  ...commonAriaButton,
-  ...extendArgTypes('ButtonCircle', buttonCircleArgTypes, ['children', 'size']),
+  ...commonMdcButton,
 };

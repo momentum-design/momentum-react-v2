@@ -1,234 +1,154 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { renderWithWebComponent } from '../../../test/utils';
 import { ButtonDialpad } from '@momentum-ui/react-collaboration';
-
-import { DEFAULTS, SIZES, STYLE } from './ButtonDialpad.constants';
-
-import ButtonSimple from '../ButtonSimple';
+import userEvent from '@testing-library/user-event';
+import { STYLE } from './ButtonDialpad.constants';
+import { screen } from '@testing-library/react';
 
 describe('<ButtonPill />', () => {
-  let container;
+  const setup = async (component: React.ReactElement) => {
+    return renderWithWebComponent(component);
+  };
 
   describe('snapshot', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot', async () => {
       expect.assertions(1);
 
-      container = mount(<ButtonDialpad>1</ButtonDialpad>);
+      const { container } = await setup(<ButtonDialpad primaryText="1" />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with primaryText', () => {
+    it('should match snapshot with primaryText', async () => {
       expect.assertions(1);
 
-      container = mount(<ButtonDialpad primaryText="1" />);
+      const { container } = await setup(<ButtonDialpad primaryText="1" />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with secondaryText', () => {
+    it('should match snapshot with secondaryText', async () => {
       expect.assertions(1);
 
-      container = mount(<ButtonDialpad secondaryText="ABC" />);
+      const { container } = await setup(<ButtonDialpad secondaryText="ABC" />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with primaryText and secondaryText', () => {
+    it('should match snapshot with primaryText and secondaryText', async () => {
       expect.assertions(1);
 
-      container = mount(<ButtonDialpad primaryText="1" secondaryText="ABC" />);
+      const { container } = await setup(<ButtonDialpad primaryText="1" secondaryText="ABC" />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with primaryText and children', () => {
+    it('should match snapshot when disabled', async () => {
       expect.assertions(1);
 
-      container = mount(<ButtonDialpad primaryText="1">2</ButtonDialpad>);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with primaryText, secondaryText and children', () => {
-      expect.assertions(1);
-
-      container = mount(
-        <ButtonDialpad primaryText="1" secondaryText="ABC">
-          2
-        </ButtonDialpad>
+      const { container } = await setup(
+        <ButtonDialpad disabled={true} primaryText="Example Text" />
       );
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with size', () => {
-      expect.assertions(1);
-
-      const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
-
-      container = mount(<ButtonDialpad size={size}>Example Text</ButtonDialpad>);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot when disabled', () => {
-      expect.assertions(1);
-
-      const disabled = !DEFAULTS.DISABLED;
-
-      container = mount(<ButtonDialpad disabled={disabled}>Example Text</ButtonDialpad>);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with title', () => {
+    it('should match snapshot with title', async () => {
       expect.assertions(1);
 
       const title = 'Example Text';
 
-      const container = mount(<ButtonDialpad title={title} />);
+      const { container } = await setup(<ButtonDialpad title={title} />);
 
       expect(container).toMatchSnapshot();
     });
   });
 
   describe('attributes', () => {
-    it('should have its main class', () => {
+    it('should have its main class', async () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonDialpad />)
-        .find(ButtonDialpad)
-        .getDOMNode();
+      await setup(<ButtonDialpad primaryText="Example Text" />);
+      const element = screen.getByRole('button');
 
       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
     });
 
-    it('should pass disabled prop', () => {
+    it('should pass disabled prop', async () => {
       expect.assertions(1);
 
-      const disabled = !DEFAULTS.DISABLED;
+      await setup(<ButtonDialpad disabled={true} primaryText="Example Text" />);
+      const element = screen.getByRole('button');
 
-      const element = mount(<ButtonDialpad disabled={disabled} />)
-        .find(ButtonDialpad)
-        .getDOMNode();
-
-      expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
+      expect(element.getAttribute('disabled')).not.toBeNull();
     });
 
-    it('should have custom class if provided', () => {
+    it('should have custom class if provided', async () => {
       const testClass = 'testClass';
 
-      const wrapper = mount(<ButtonDialpad className={testClass} />);
-      const element = wrapper.find(ButtonDialpad).getDOMNode();
+      await setup(<ButtonDialpad className={testClass} primaryText="Example Text" />);
+      const element = screen.getByRole('button');
 
       expect(element.classList.contains(testClass)).toBe(true);
     });
 
-    it('should pass size prop', () => {
-      expect.assertions(1);
-
-      const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
-
-      const element = mount(<ButtonDialpad size={size} />)
-        .find(ButtonDialpad)
-        .getDOMNode();
-
-      expect(element.getAttribute('data-size')).toBe(`${size}`);
-    });
-
-    it('should pass child prop', () => {
-      expect.assertions(1);
-
-      const child = '1';
-
-      const element = mount(<ButtonDialpad>{child}</ButtonDialpad>)
-        .find(ButtonDialpad)
-        .getDOMNode();
-      const target = element.getElementsByClassName(STYLE.primaryText)[0];
-
-      expect(target.innerHTML).toBe(child);
-    });
-
-    it('should pass primaryText prop', () => {
+    it('should pass primaryText prop', async () => {
       expect.assertions(1);
 
       const primaryText = '1';
 
-      const element = mount(<ButtonDialpad primaryText={primaryText} />)
-        .find(ButtonDialpad)
-        .getDOMNode();
+      await setup(<ButtonDialpad primaryText={primaryText} />);
+      const element = screen.getByRole('button');
       const target = element.getElementsByClassName(STYLE.primaryText)[0];
 
       expect(target.innerHTML).toBe(primaryText);
     });
 
-    it('should pass secondaryText prop', () => {
+    it('should pass secondaryText prop', async () => {
       expect.assertions(1);
 
       const secondaryText = 'ABC';
 
-      const element = mount(<ButtonDialpad secondaryText={secondaryText} />)
-        .find(ButtonDialpad)
-        .getDOMNode();
+      await setup(<ButtonDialpad secondaryText={secondaryText} />);
+      const element = screen.getByRole('button');
       const target = element.getElementsByClassName(STYLE.secondaryText)[0];
 
       expect(target.innerHTML).toBe(secondaryText);
     });
 
-    it('should override primaryText prop with child prop', () => {
-      expect.assertions(2);
-
-      const primaryText = '1';
-      const child = '2';
-
-      const element = mount(<ButtonDialpad primaryText={primaryText}>{child}</ButtonDialpad>)
-        .find(ButtonDialpad)
-        .getDOMNode();
-      const target = element.getElementsByClassName(STYLE.primaryText)[0];
-
-      expect(target.innerHTML).toBe(child);
-      expect(target.innerHTML).not.toBe(primaryText);
-    });
-
-    it('should have provided title when title is provided', () => {
+    it('should have provided title when title is provided', async () => {
       expect.assertions(1);
 
       const title = 'Example Text';
 
-      const element = mount(<ButtonDialpad title={title} />)
-        .find(ButtonDialpad)
-        .getDOMNode();
+      await setup(<ButtonDialpad title={title} primaryText="Example Text" />);
+      const element = screen.getByRole('button');
 
       expect(element.getAttribute('title')).toBe(title);
     });
 
-    it('should render ButtonSimple', () => {
+    it('should render MdcButton', async () => {
       expect.assertions(1);
 
-      const container = mount(<ButtonDialpad />);
+      const { container } = await setup(<ButtonDialpad primaryText="Example Text" />);
+      const element = container.querySelector('mdc-button');
 
-      expect(container.find(ButtonSimple).exists()).toBe(true);
+      expect(element).not.toBeNull();
     });
   });
 
   describe('actions', () => {
-    it('should handle mouse press events', () => {
+    const user = userEvent.setup();
+
+    it('should handle mouse click events', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ButtonDialpad onPress={mockCallback} />).find(ButtonDialpad);
+      await setup(<ButtonDialpad onClick={mockCallback} primaryText="Example Text" />);
 
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        altKey: false,
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-      });
+      const component = screen.getByRole('button');
+      await user.click(component);
 
       expect(mockCallback).toBeCalledTimes(1);
     });

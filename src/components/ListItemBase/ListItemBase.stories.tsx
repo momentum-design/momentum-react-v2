@@ -297,4 +297,25 @@ const ChangingContent = Template(ListItemWithChangingContent).bind({});
 
 ChangingContent.argTypes = { ...argTypes };
 
-export { Example, Sizes, Shapes, Common, ChangingContent };
+const WithTooltip = Template<ListItemBaseProps>((args) => (
+  <>
+    {getComponentStates(
+      ListItemBase,
+      {
+        ...args,
+        tooltipProps: { content: 'This is a tooltip' },
+        children: (
+          <>
+            <ListItemBaseSection position="fill">Hover over me!</ListItemBaseSection>
+          </>
+        ),
+        onPress: action('onPress'),
+      },
+      {}
+    )}
+  </>
+)).bind({});
+
+WithTooltip.argTypes = { ...argTypes };
+
+export { Example, Sizes, Shapes, Common, ChangingContent, WithTooltip };

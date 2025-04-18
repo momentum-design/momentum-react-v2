@@ -13,6 +13,12 @@ jest.mock('@react-aria/listbox', () => {
   };
 });
 
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
+
 describe('ListBoxSection', () => {
   let wrapper: any;
   const { result } = renderHook(() =>

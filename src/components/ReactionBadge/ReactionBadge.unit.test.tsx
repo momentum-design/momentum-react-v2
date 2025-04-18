@@ -1,15 +1,19 @@
 import React from 'react';
-import { mountAndWait } from '../../../test/utils';
+import { renderWithWebComponent } from '../../../test/utils';
+import userEvent from '@testing-library/user-event';
 
 import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 import Reaction from '../Reaction';
 import * as jsonImport from '../../hooks/useDynamicJSONImport';
 import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
-
-import ButtonSimple from '../ButtonSimple';
+import { screen } from '@testing-library/react';
 
 describe('<ReactionBadge name="haha" />', () => {
   const reactionProp = <Reaction name="haha" />;
+
+  const setup = async (component: React.ReactElement) => {
+    return renderWithWebComponent(component);
+  };
   describe('snapshot', () => {
     beforeEach(() => {
       jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
@@ -18,7 +22,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -28,7 +32,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const className = 'example-class';
 
-      const container = await mountAndWait(
+      const { container } = await setup(
         <ReactionBadge reaction={reactionProp} className={className} />
       );
 
@@ -40,7 +44,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const id = 'example-id';
 
-      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} id={id} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} id={id} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -50,7 +54,7 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const style = { color: 'pink' };
 
-      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} style={style} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} style={style} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -58,9 +62,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot with reacted', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(
-        <ReactionBadge reaction={reactionProp} reacted={true} />
-      );
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} reacted={true} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -68,7 +70,7 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should match snapshot with count', async () => {
       expect.assertions(1);
 
-      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} count={1} />);
+      const { container } = await setup(<ReactionBadge reaction={reactionProp} count={1} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -78,8 +80,8 @@ describe('<ReactionBadge name="haha" />', () => {
     it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} />);
-      const element = wrapper.find(ReactionBadge).getDOMNode();
+      await setup(<ReactionBadge reaction={reactionProp} />);
+      const element = screen.getByRole('button');
 
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
@@ -89,10 +91,8 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const className = 'example-class';
 
-      const wrapper = await mountAndWait(
-        <ReactionBadge reaction={reactionProp} className={className} />
-      );
-      const element = wrapper.find(ReactionBadge).getDOMNode();
+      await setup(<ReactionBadge reaction={reactionProp} className={className} />);
+      const element = screen.getByRole('button');
 
       expect(element.classList.contains(className)).toBe(true);
     });
@@ -102,8 +102,8 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const id = 'example-id';
 
-      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} id={id} />);
-      const element = wrapper.find(ReactionBadge).getDOMNode();
+      await setup(<ReactionBadge reaction={reactionProp} id={id} />);
+      const element = screen.getByRole('button');
 
       expect(element.id).toBe(id);
     });
@@ -114,8 +114,8 @@ describe('<ReactionBadge name="haha" />', () => {
       const style = { color: 'pink' };
       const styleString = 'color: pink;';
 
-      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} style={style} />);
-      const element = wrapper.find(ReactionBadge).getDOMNode();
+      await setup(<ReactionBadge reaction={reactionProp} style={style} />);
+      const element = screen.getByRole('button');
 
       expect(element.getAttribute('style')).toBe(styleString);
     });
@@ -125,10 +125,8 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const reacted = true;
 
-      const wrapper = await mountAndWait(
-        <ReactionBadge reaction={reactionProp} reacted={reacted} />
-      );
-      const element = wrapper.find(ReactionBadge).getDOMNode();
+      await setup(<ReactionBadge reaction={reactionProp} reacted={reacted} />);
+      const element = screen.getByRole('button');
 
       expect(element.getAttribute('data-reacted')).toBe(`${reacted}`);
     });
@@ -138,8 +136,8 @@ describe('<ReactionBadge name="haha" />', () => {
 
       const count = 1;
 
-      const wrapper = await mountAndWait(<ReactionBadge reaction={reactionProp} count={count} />);
-      const element = wrapper.find(ReactionBadge).getDOMNode();
+      await setup(<ReactionBadge reaction={reactionProp} count={count} />);
+      const element = screen.getByRole('button');
 
       expect(element.getAttribute('data-count')).toBe(`${count}`);
     });
@@ -150,41 +148,24 @@ describe('<ReactionBadge name="haha" />', () => {
       const name = 'haha';
       const reactionName = 'haha';
 
-      const wrapper = await mountAndWait(<ReactionBadge reaction={<Reaction name={name} />} />);
-      const child = wrapper.find(Reaction);
+      const { container } = await setup(<ReactionBadge reaction={<Reaction name={name} />} />);
+      const child = container.querySelector(`div[data-name="${reactionName}"]`);
 
-      expect(child.props().name).toBe(reactionName);
-    });
-
-    it('should render ButtonSimple', async () => {
-      expect.assertions(1);
-
-      const container = await mountAndWait(<ReactionBadge reaction={reactionProp} />);
-
-      expect(container.find(ButtonSimple).exists()).toBe(true);
+      expect(child).not.toBeNull();
     });
   });
 
   describe('actions', () => {
-    it('should handle mouse press events', async () => {
+    const user = userEvent.setup();
+    it('should handle mouse click events', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(
-        <ReactionBadge reaction={reactionProp} onPress={mockCallback} />
-      );
-      const component = wrapper.find(ReactionBadge);
+      await setup(<ReactionBadge reaction={reactionProp} onClick={mockCallback} />);
+      const component = screen.getByRole('button');
 
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        altKey: false,
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-      });
+      await user.click(component);
 
       expect(mockCallback).toBeCalledTimes(1);
     });

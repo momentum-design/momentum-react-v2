@@ -1,24 +1,22 @@
+// color overrides, cause Design specs deviate from Momentum Design specs
 .md-add-reaction-button-wrapper {
-  border-color: var(--mds-color-theme-outline-secondary-normal);
-  border-width: 0.0625rem;
+  height: var(--mdc-button-height-size-20);
   margin: 0 0.125rem;
-  padding: 0;
-
-  /* Colorization */
-  background-color: var(--mds-color-theme-background-secondary-normal);
-  color: var(--mds-color-theme-text-primary-normal);
+  background-color: var(--mds-color-theme-background-solid-primary-normal);
 
   .reaction-badge-count {
     margin-left: 0.25rem;
   }
 
   &:hover {
-    background-color: var(--mds-color-theme-background-secondary-hover);
-    color: var(--mds-color-theme-text-primary-normal);
+    background-color: var(--mds-color-theme-background-solid-secondary-normal);
   }
 
   &:active {
-    background-color: var(--mds-color-theme-background-secondary-active);
-    color: var(--mds-color-theme-text-primary-normal);
+    background-color: var(--mds-color-theme-background-solid-tertiary-normal);
   }
+}
+
+.md-add-reaction-button-wrapper::part(prefix-icon) {
+  --mdc-icon-size: 0.75rem;
 }

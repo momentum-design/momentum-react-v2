@@ -4,13 +4,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import omit from 'lodash/omit';
 import toLower from 'lodash/toLower';
-import {
-  InputHelper,
-  InputMessage,
-  InputSection,
-  Label,
-  Icon,
-} from '@momentum-ui/react-collaboration';
+import { Icon } from '@momentum-ui/react-collaboration';
+import InputHelper from '../InputHelper';
+import InputMessage from '../InputMessage';
+import InputSection from '../InputSection';
+import Label from '../Label';
 import IconNext from '../../components/Icon';
 
 const determineMessageType = (array) => {

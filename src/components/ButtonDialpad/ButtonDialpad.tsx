@@ -1,28 +1,31 @@
 import React, { forwardRef, RefObject } from 'react';
-import ButtonSimple from '../ButtonSimple';
+import { Button as MdcButton } from '@momentum-design/components/dist/react';
 
-import { DEFAULTS, STYLE } from './ButtonDialpad.constants';
-import { Props } from './ButtonDialpad.types';
+import { STYLE } from './ButtonDialpad.constants';
 import './ButtonDialpad.style.scss';
 import classnames from 'classnames';
 
-const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
-  const { className, disabled, size, ...otherProps } = props;
+import type { Button } from '@momentum-design/components';
+import type { Props } from './ButtonDialpad.types';
 
-  const children = props.children || props.primaryText;
+const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<Button>) => {
+  const { className, ...otherProps } = props;
 
   return (
-    <ButtonSimple
+    <MdcButton
       className={classnames(STYLE.wrapper, className)}
       ref={providedRef}
-      data-size={size || DEFAULTS.SIZE}
-      data-disabled={disabled || DEFAULTS.DISABLED}
-      isDisabled={disabled}
+      // size 40 is maximum size for MdcButton, setting it here and overriding
+      // size in scss file to 64px
+      size={40}
+      variant="tertiary"
       {...otherProps}
     >
-      <div className={STYLE.primaryText}>{children}</div>
-      <div className={STYLE.secondaryText}>{props.secondaryText}</div>
-    </ButtonSimple>
+      <div className={STYLE.innerWrapper}>
+        <div className={STYLE.primaryText}>{props.primaryText}</div>
+        <div className={STYLE.secondaryText}>{props.secondaryText}</div>
+      </div>
+    </MdcButton>
   );
 });
 

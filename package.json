@@ -100,12 +100,13 @@
     "@react-aria/button": "3.4.3",
     "@types/node": "22.7.4",
     "@momentum-design/icons": "0.10.0",
+    "@momentum-design/brand-visuals": "0.5.1",
     "@momentum-design/tokens": "0.5.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@momentum-design/animations": "^0.0.4",
-    "@momentum-design/components": "0.39.5",
+    "@momentum-design/components": "0.51.1",
     "@momentum-design/fonts": "0.0.8",
     "@momentum-design/icons": "0.10.0",
     "@momentum-design/tokens": "0.5.0",
@@ -210,6 +211,7 @@
     "coveralls": "^3.0.1",
     "cross-env": "^7.0.3",
     "css-loader": "0.28.8",
+    "element-internals-polyfill": "1.3.13",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.6.2",

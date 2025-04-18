@@ -361,7 +361,7 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox 1`] 
         >
           <input
             aria-checked={false}
-            aria-label="Example text"
+            aria-label="Checkbox"
             checked={false}
             disabled={false}
             onBlur={[Function]}
@@ -425,7 +425,7 @@ exports[`<Checkbox /> snapshot should match snapshot with labelled checkbox and 
           <input
             aria-checked={false}
             aria-describedby="checkbox-description-test-ID"
-            aria-label="Example text"
+            aria-label="Checkbox"
             checked={false}
             disabled={false}
             onBlur={[Function]}

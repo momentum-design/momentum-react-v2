@@ -20,7 +20,7 @@ const Radio: FC<RadioProps> = (props: RadioProps) => {
   const radioId = useId(id);
 
   const radioProps = {
-    'aria-label': label,
+    'aria-label': props['aria-label'] || label,
     ...props,
     ...(description
       ? {

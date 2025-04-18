@@ -10,6 +10,13 @@ import userEvent from '@testing-library/user-event';
 import { fireEvent, render, screen } from '@testing-library/react';
 import List from '../List/List';
 import { ListContextValue } from '../List/List.types';
+import { Tooltip as MdcTooltip } from '@momentum-design/components/dist/react';
+
+jest.mock('uuid', () => {
+  return {
+    v4: () => '1',
+  };
+});
 
 describe('ListItemBase', () => {
   let container;
@@ -159,6 +166,16 @@ describe('ListItemBase', () => {
       const allowTextSelection = true;
 
       container = mount(<ListItemBase allowTextSelection={allowTextSelection}>Test</ListItemBase>);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with tooltipProps', () => {
+      expect.assertions(1);
+
+      container = mount(
+        <ListItemBase tooltipProps={{ content: 'This is a tooltip' }}>Test</ListItemBase>
+      );
 
       expect(container).toMatchSnapshot();
     });
@@ -335,6 +352,36 @@ describe('ListItemBase', () => {
         expect(element.getAttribute('data-allow-text-select')).toBe(`${allowTextSelection}`);
       }
     );
+
+    it('should have MdcTooltip when tooltipProps are provided with content', () => {
+      expect.assertions(2);
+
+      container = mount(
+        <ListItemBase tooltipProps={{ content: 'This is a tooltip' }}>Test</ListItemBase>
+      );
+
+      const element = container.find(ListItemBase);
+
+      expect(element.props().tooltipProps).toStrictEqual({ content: 'This is a tooltip' });
+      expect(container.find(ListItemBase).find(MdcTooltip).props()).toStrictEqual({
+        children: 'This is a tooltip',
+        content: 'This is a tooltip',
+        placement: 'top',
+        showArrow: true,
+        triggerID: expect.any(String),
+      });
+    });
+
+    it('should not have MdcTooltip when tooltipProps are provided without content', () => {
+      expect.assertions(2);
+
+      container = mount(<ListItemBase tooltipProps={{ content: undefined }}>Test</ListItemBase>);
+
+      const element = container.find(ListItemBase);
+
+      expect(element.props().tooltipProps).toStrictEqual({ content: undefined });
+      expect(container.find(ListItemBase).find(MdcTooltip).exists()).toBe(false);
+    });
   });
 
   describe('actions', () => {

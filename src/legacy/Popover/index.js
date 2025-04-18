@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { EventOverlay } from '@momentum-ui/react-collaboration';
+import EventOverlay from '../EventOverlay';
 import omit from 'lodash/omit';
 import { isMRv2Button } from '../../helpers/verifyTypes';
 

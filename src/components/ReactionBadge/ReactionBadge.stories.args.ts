@@ -1,9 +1,9 @@
-import { commonAriaButton, commonStyles } from '../../storybook/helper.stories.argtypes';
+import { commonMdcButton, commonStyles } from '../../storybook/helper.stories.argtypes';
 
 import { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 
 export default {
-  ...commonAriaButton,
+  ...commonMdcButton,
   ...commonStyles,
   count: {
     description: 'Number of reactions.',

@@ -104,6 +104,7 @@ describe('<RadioGroup />', () => {
             {
               label: 'Option 1',
               value: 'option1',
+              'aria-label': 'Test Group Option 1',
             },
           ]}
         />
@@ -448,6 +449,28 @@ describe('<RadioGroup />', () => {
       const radio = screen.getByText('Option 1');
 
       expect(radio.id).toBe(id);
+    });
+
+    it('should have child aria-label when aria-label is provided to child', () => {
+      expect.assertions(1);
+
+      const ariaLabel = 'Test Group Option 1';
+
+      render(
+        <RadioGroup
+          label="Test Radio Group"
+          options={[
+            {
+              label: 'Option 1',
+              value: 'option1',
+              'aria-label': ariaLabel,
+            },
+          ]}
+        />
+      );
+      const radio = screen.getByRole('radio');
+
+      expect(radio.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
     it('should have child style when style is provided to child', () => {

@@ -1,3 +1,3 @@
-import { ButtonCircleProps } from './../ButtonCircle/index';
+import type { MdcButtonProps } from '../../types';
 
-export type Props = ButtonCircleProps;
+export type Props = MdcButtonProps;
