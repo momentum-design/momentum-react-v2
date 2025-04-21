@@ -1,99 +1,84 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { renderWithWebComponent } from '../../../test/utils';
 
 import ButtonCircleToggle, { BUTTON_CIRCLE_TOGGLE_CONSTANTS as CONSTANTS } from './';
-import { triggerPress } from '../../../test/utils';
+import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('<ButtonCircleToggle />', () => {
+  const setup = async (component: React.ReactElement) => {
+    return renderWithWebComponent(component);
+  };
+
   describe('snapshot', () => {
-    it('should match snapshot', () => {
+    it('should match snapshot', async () => {
       expect.assertions(1);
 
-      const container = mount(<ButtonCircleToggle />);
+      const { container } = await setup(<ButtonCircleToggle />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSelected being true', () => {
+    it('should match snapshot with isSelected being true', async () => {
       expect.assertions(1);
 
       const isSelected = true;
 
-      const container = mount(<ButtonCircleToggle isSelected={isSelected} />);
+      const { container } = await setup(<ButtonCircleToggle isSelected={isSelected} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with isSelected being false', () => {
+    it('should match snapshot with isSelected being false', async () => {
       expect.assertions(1);
 
       const isSelected = false;
 
-      const container = mount(<ButtonCircleToggle isSelected={isSelected} />);
+      const { container } = await setup(<ButtonCircleToggle isSelected={isSelected} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with ghost being true', () => {
-      expect.assertions(1);
-
-      const ghost = true;
-
-      const container = mount(<ButtonCircleToggle ghost={ghost} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with ghost being false', () => {
-      expect.assertions(1);
-
-      const ghost = false;
-
-      const container = mount(<ButtonCircleToggle ghost={ghost} />);
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with outline being true', () => {
+    it('should match snapshot with outline being true', async () => {
       expect.assertions(1);
 
       const outline = true;
 
-      const container = mount(<ButtonCircleToggle outline={outline} />);
+      const { container } = await setup(<ButtonCircleToggle outline={outline} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot with outline being false', () => {
+    it('should match snapshot with outline being false', async () => {
       expect.assertions(1);
 
       const outline = false;
 
-      const container = mount(<ButtonCircleToggle outline={outline} />);
+      const { container } = await setup(<ButtonCircleToggle outline={outline} />);
 
       expect(container).toMatchSnapshot();
     });
 
-    it("should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being true", () => {
+    it("should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being true", async () => {
       expect.assertions(1);
 
       const ariaStateKey = 'aria-expanded';
       const isSelected = true;
 
-      const container = mount(
+      const { container } = await setup(
         <ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />
       );
 
       expect(container).toMatchSnapshot();
     });
 
-    it("should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being false", () => {
+    it("should match snapshot with ariaStateKey being 'aria-expanded' and isSelected being false", async () => {
       expect.assertions(1);
 
       const ariaStateKey = 'aria-expanded';
       const isSelected = false;
 
-      const container = mount(
+      const { container } = await setup(
         <ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />
       );
 
@@ -102,60 +87,66 @@ describe('<ButtonCircleToggle />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', () => {
+    it('should have its wrapper class', async () => {
       expect.assertions(1);
 
-      const element = mount(<ButtonCircleToggle />)
-        .find(ButtonCircleToggle)
-        .getDOMNode();
+      await setup(<ButtonCircleToggle />);
 
+      const element = screen.getByRole('button');
       expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
     });
 
-    it('should have provided outline when outline is provided', () => {
+    it('should have variant set to secondary when outline is provided', async () => {
       expect.assertions(1);
 
       const outline = true;
 
-      const element = mount(<ButtonCircleToggle outline={outline} />)
-        .find(ButtonCircleToggle)
-        .getDOMNode();
+      await setup(<ButtonCircleToggle outline={outline} />);
+      const element = screen.getByRole('button');
 
-      expect(element.getAttribute('data-outline')).toBe(`${outline}`);
+      expect(element.getAttribute('variant')).toBe('secondary');
     });
 
-    it('should have provided ghost when ghost is provided', () => {
+    it('should have variant set to tertiary when outline is not provided', async () => {
       expect.assertions(1);
 
-      const ghost = true;
+      const outline = false;
 
-      const element = mount(<ButtonCircleToggle ghost={ghost} />)
-        .find(ButtonCircleToggle)
-        .getDOMNode();
+      await setup(<ButtonCircleToggle outline={outline} />);
+      const element = screen.getByRole('button');
 
-      expect(element.getAttribute('data-ghost')).toBe(`${ghost}`);
+      expect(element.getAttribute('variant')).toBe('tertiary');
     });
 
-    it('should have provided isSelected when isSelected is provided', () => {
+    it('should have provided active as "" when isSelected is provided', async () => {
       expect.assertions(1);
 
       const isSelected = true;
 
-      const element = mount(<ButtonCircleToggle isSelected={isSelected} />)
-        .find(ButtonCircleToggle)
-        .getDOMNode();
+      await setup(<ButtonCircleToggle isSelected={isSelected} />);
+      const element = screen.getByRole('button');
 
-      expect(element.getAttribute('data-selected')).toBe(`${isSelected}`);
+      expect(element.getAttribute('active')).toBe('');
+    });
+
+    it('should have provided active as null when isSelected is provided', async () => {
+      expect.assertions(1);
+
+      const isSelected = false;
+
+      await setup(<ButtonCircleToggle isSelected={isSelected} />);
+      const element = screen.getByRole('button');
+
+      expect(element.getAttribute('active')).toBe(null);
     });
 
     it.each([[false], [true]])(
       'should use default ariaStateKey when ariaStateKey is not provided (isSelected=%s)',
-      (isSelected) => {
+      async (isSelected) => {
         expect.assertions(2);
 
-        const element = mount(<ButtonCircleToggle isSelected={isSelected} />)
-          .find(ButtonCircleToggle)
-          .getDOMNode();
+        await setup(<ButtonCircleToggle isSelected={isSelected} />);
+        const element = screen.getByRole('button');
 
         expect(element.getAttribute('aria-pressed')).toBe(`${isSelected}`);
         expect(element.getAttribute('aria-expanded')).toBe(null);
@@ -164,16 +155,13 @@ describe('<ButtonCircleToggle />', () => {
 
     it.each([[false], [true]])(
       'should use provided ariaStateKey when ariaStateKey is provided (isSelected=%s)',
-      (isSelected) => {
+      async (isSelected) => {
         expect.assertions(2);
 
         const ariaStateKey = 'aria-expanded';
 
-        const element = mount(
-          <ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />
-        )
-          .find(ButtonCircleToggle)
-          .getDOMNode();
+        await setup(<ButtonCircleToggle ariaStateKey={ariaStateKey} isSelected={isSelected} />);
+        const element = screen.getByRole('button');
 
         expect(element.getAttribute('aria-pressed')).toBe(null);
         expect(element.getAttribute('aria-expanded')).toBe(`${isSelected}`);
@@ -182,59 +170,51 @@ describe('<ButtonCircleToggle />', () => {
   });
 
   describe('actions', () => {
-    it('onChange callback is called correctly when provided', () => {
+    const user = userEvent.setup();
+
+    it('onChange callback is called correctly when provided', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
 
-      const initialIsSelected = false;
+      await setup(<ButtonCircleToggle onChange={mockCallback} />);
+      const element = screen.getByRole('button');
 
-      const component = mount(<ButtonCircleToggle onChange={mockCallback} />).find(
-        ButtonCircleToggle
-      );
+      await user.click(element);
 
-      component.props().onChange(initialIsSelected);
-
-      expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toHaveBeenCalledWith(true);
     });
 
-    it('should handle mouse press events', () => {
+    it('should handle mouse press events', async () => {
       expect.assertions(4);
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ButtonCircleToggle onChange={mockCallback} />).find(
-        ButtonCircleToggle
-      );
+      await setup(<ButtonCircleToggle onChange={mockCallback} />);
+      const element = screen.getByRole('button');
 
-      triggerPress(component);
-
+      await user.click(element);
       expect(mockCallback).toHaveBeenCalledWith(true);
 
-      triggerPress(component);
-
+      await user.click(element);
       expect(mockCallback).toHaveBeenCalledWith(false);
 
-      triggerPress(component);
-
+      await user.click(element);
       expect(mockCallback).toHaveBeenCalledWith(true);
 
-      triggerPress(component);
-
+      await user.click(element);
       expect(mockCallback).toHaveBeenCalledWith(false);
     });
 
-    it('should handle mouse press event when disabled', () => {
+    it('should handle mouse press event when disabled', async () => {
       expect.assertions(1);
 
       const mockCallback = jest.fn();
 
-      const component = mount(<ButtonCircleToggle onChange={mockCallback} disabled />).find(
-        ButtonCircleToggle
-      );
+      await setup(<ButtonCircleToggle onChange={mockCallback} disabled />);
+      const element = screen.getByRole('button');
 
-      triggerPress(component);
-
+      await user.click(element);
       expect(mockCallback).toBeCalledTimes(0);
     });
   });

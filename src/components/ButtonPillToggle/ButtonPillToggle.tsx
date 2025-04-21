@@ -1,51 +1,48 @@
-import React, { RefObject, forwardRef, useRef } from 'react';
+import React, { RefObject, forwardRef, useRef, useCallback, useEffect, useState } from 'react';
 import classnames from 'classnames';
-import ButtonPill from '../ButtonPill';
-import { useToggleState } from '@react-stately/toggle';
+import { Button as MdcButton } from '@momentum-design/components/dist/react';
+import type { Button, IconButtonSize } from '@momentum-design/components';
 
 import { DEFAULTS, STYLE } from './ButtonPillToggle.constants';
 import { DEFAULTS as BUTTON_PILL_DEFAULTS } from '../ButtonPill/ButtonPill.constants';
 import { Props } from './ButtonPillToggle.types';
 import './ButtonPillToggle.style.scss';
-import { chain } from '@react-aria/utils';
 
-const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
-    ariaStateKey = DEFAULTS.ARIA_STATE_KEY,
-    children,
+    isSelected = DEFAULTS.SELECTED,
     className,
-    ghost = DEFAULTS.GHOST,
     outline = DEFAULTS.OUTLINE,
-    disabled = DEFAULTS.DISABLED,
     size = BUTTON_PILL_DEFAULTS.SIZE,
-    onPress,
     ...otherProps
   } = props;
 
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
-  const state = useToggleState(props);
+  const [selected, setSelected] = useState(isSelected);
 
-  if (ghost === false) {
-    console.warn('MRV2: Momentum does not support non-ghost ButtonPillToggle.');
-  }
+  useEffect(() => {
+    setSelected(isSelected);
+  }, [isSelected]);
+
+  // MdcButton is uncontrolled, so we need to handle the state manually
+  const handleToggle = useCallback(() => {
+    const newValue = !selected;
+    setSelected(newValue);
+    otherProps.onChange?.(newValue);
+  }, [selected, otherProps]);
 
   return (
-    <ButtonPill
-      className={classnames(STYLE.wrapper, className)}
-      outline={outline}
-      ghost={ghost}
-      disabled={disabled}
-      size={size}
-      data-selected={state.isSelected || DEFAULTS.SELECTED}
-      onPress={chain(state.toggle, onPress)}
-      {...{ [ariaStateKey]: state.isSelected }}
-      {...otherProps}
+    <MdcButton
+      active={selected}
       ref={ref}
-    >
-      {children}
-    </ButtonPill>
+      className={classnames(className, STYLE.wrapper)}
+      size={size as IconButtonSize}
+      variant={outline ? 'secondary' : 'tertiary'}
+      onClick={handleToggle}
+      {...otherProps}
+    />
   );
 });
 

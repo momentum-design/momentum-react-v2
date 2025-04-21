@@ -3,11 +3,8 @@ import { SIZES } from '../ButtonPill/ButtonPill.constants';
 const CLASS_PREFIX = 'md-button-pill-toggle';
 
 const DEFAULTS = {
-  SELECTED: false,
+  SELECTED: undefined,
   OUTLINE: undefined,
-  GHOST: true,
-  DISABLED: false,
-  ARIA_STATE_KEY: 'aria-pressed',
 };
 
 const STYLE = {

@@ -8,9 +8,8 @@ const buttonCircleToggleArgTypes = {
 };
 
 delete buttonCircleToggleArgTypes.color;
+delete buttonCircleToggleArgTypes.ghost;
 
-buttonCircleToggleArgTypes.disabled.table.defaultValue.summary = CONSTANTS.DEFAULTS.DISABLED;
-buttonCircleToggleArgTypes.ghost.table.defaultValue.summary = CONSTANTS.DEFAULTS.GHOST;
 buttonCircleToggleArgTypes.outline.table.defaultValue.summary = CONSTANTS.DEFAULTS.OUTLINE;
 
 export { buttonCircleToggleArgTypes };
