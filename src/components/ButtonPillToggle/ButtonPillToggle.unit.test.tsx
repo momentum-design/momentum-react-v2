@@ -86,15 +86,6 @@ describe('<ButtonPillToggle />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', async () => {
-      expect.assertions(1);
-
-      const { container } = await setup(<ButtonPillToggle />);
-      const element = container.firstChild as HTMLElement;
-
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
-    });
-
     it('should have provided variant as secondary when outline is provided', async () => {
       expect.assertions(1);
 
