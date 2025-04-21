@@ -8,9 +8,8 @@ const buttonPillToggleArgTypes = {
 };
 
 delete buttonPillToggleArgTypes.color;
+delete buttonPillToggleArgTypes.ghost;
 
-buttonPillToggleArgTypes.disabled.table.defaultValue.summary = CONSTANTS.DEFAULTS.DISABLED;
-buttonPillToggleArgTypes.ghost.table.defaultValue.summary = CONSTANTS.DEFAULTS.GHOST;
 buttonPillToggleArgTypes.outline.table.defaultValue.summary = CONSTANTS.DEFAULTS.OUTLINE;
 
 export { buttonPillToggleArgTypes };

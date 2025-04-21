@@ -9,6 +9,8 @@ import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
+import ButtonCircleToggle from '../ButtonCircleToggle';
+import ButtonPillToggle from '../ButtonPillToggle';
 import Icon from '../Icon';
 
 import ButtonGroup, { ButtonGroupProps } from './';
@@ -86,14 +88,12 @@ const separatorCommonChildren = [
 ];
 
 const callControlsCommonChildren = [
-  <ButtonCircle key="0" ghost size={40}>
-    <Icon key="0" name="raise-hand" autoScale={125} />
-  </ButtonCircle>,
+  <ButtonCircleToggle key="0" size={40} prefixIcon="raise-hand-regular" data-buttongroup-child />,
   <MenuTrigger
     key="1"
     placement="top-end"
     triggerComponent={
-      <ButtonCircle ghost size={40}>
+      <ButtonCircle ghost size={40} data-buttongroup-child>
         <Icon name="reactions" autoScale={125} />
       </ButtonCircle>
     }
@@ -300,6 +300,29 @@ AudioVideoControls.parameters = {
             <Icon name="arrow-down" scale={16} />
           </ButtonCircle>
         </div>,
+      ],
+      round: true,
+      compressed: true,
+    },
+    {
+      children: [
+        <ButtonPillToggle
+          outline
+          size={40}
+          style={{ minWidth: '8.3rem' }}
+          key="0"
+          prefixIcon="camera-on-regular"
+          data-buttongroup-child
+        >
+          Long Label Possibly German
+        </ButtonPillToggle>,
+        <ButtonCircleToggle
+          outline
+          size={40}
+          prefixIcon="arrow-down-regular"
+          key="1"
+          data-buttongroup-child
+        />,
       ],
       round: true,
       compressed: true,

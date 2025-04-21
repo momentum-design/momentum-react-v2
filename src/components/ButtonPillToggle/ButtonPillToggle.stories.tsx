@@ -5,6 +5,7 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import ButtonPillToggle, { ButtonPillToggleProps } from './';
 import argTypes from './ButtonPillToggle.stories.args';
 import Documentation from './ButtonPillToggle.stories.docs.mdx';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Momentum UI/ButtonPillToggle',
@@ -26,13 +27,14 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   children: 'Example text',
+  onChange: action('onChange'),
+  onPress: action('onPress'),
 };
 
 const Outline = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillToggle).bind({});
 
 Outline.argTypes = { ...argTypes };
 delete Outline.argTypes.children;
-delete Outline.argTypes.ghost;
 delete Outline.argTypes.outline;
 delete Outline.argTypes.isSelected;
 
@@ -51,7 +53,6 @@ const Ghost = MultiTemplateWithPseudoStates<ButtonPillToggleProps>(ButtonPillTog
 
 Ghost.argTypes = { ...argTypes };
 delete Ghost.argTypes.children;
-delete Ghost.argTypes.ghost;
 delete Ghost.argTypes.outline;
 delete Ghost.argTypes.isSelected;
 

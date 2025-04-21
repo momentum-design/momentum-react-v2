@@ -1,10 +1,7 @@
-import React from 'react';
-
 import { MultiTemplateWithPseudoStates, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import Icon from '../Icon';
 import ButtonCircleToggle, { ButtonCircleToggleProps } from './';
 import argTypes from './ButtonCircleToggle.stories.args';
 import Documentation from './ButtonCircleToggle.stories.docs.mdx';
@@ -29,7 +26,7 @@ const Example = Template<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
 Example.argTypes = { ...argTypes };
 
 Example.args = {
-  children: <Icon name="cancel" autoScale={150} />,
+  prefixIcon: 'raise-hand-regular',
   onChange: action('onChange'),
   onPress: action('onPress'),
 };
@@ -48,7 +45,7 @@ Outline.parameters = {
       isSelected,
       outline: true,
       label: `isSelected: ${isSelected}`,
-      children: <Icon name="cancel" autoScale={150} />,
+      prefixIcon: 'cancel-regular',
     })),
   ],
 };
@@ -67,7 +64,7 @@ Ghost.parameters = {
       isSelected,
       ghost: true,
       label: `isSelected: ${isSelected}`,
-      children: <Icon name="cancel" autoScale={150} />,
+      prefixIcon: 'cancel-regular',
     })),
   ],
 };

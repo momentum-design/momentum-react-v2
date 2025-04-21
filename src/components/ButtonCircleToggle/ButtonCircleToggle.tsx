@@ -1,52 +1,47 @@
-import React, { RefObject, forwardRef, useRef } from 'react';
+import React, { RefObject, forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
-import ButtonCircle from '../ButtonCircle';
-import { useToggleState } from '@react-stately/toggle';
-
+import { Button as MdcButton } from '@momentum-design/components/dist/react';
+import type { Button, IconButtonSize } from '@momentum-design/components';
 import { DEFAULTS, STYLE } from './ButtonCircleToggle.constants';
 import { DEFAULTS as BUTTON_CIRCLE_DEFAULTS } from '../ButtonCircle/ButtonCircle.constants';
-import { Size as ButtonCircleSize } from '../ButtonCircle/ButtonCircle.types';
-import { Props } from './ButtonCircleToggle.types';
+import type { Props } from './ButtonCircleToggle.types';
 import './ButtonCircleToggle.style.scss';
-import { chain } from '@react-aria/utils';
 
-const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
-    ariaStateKey = DEFAULTS.ARIA_STATE_KEY,
-    children,
+    isSelected = DEFAULTS.SELECTED,
     className,
-    ghost = DEFAULTS.GHOST,
     outline = DEFAULTS.OUTLINE,
-    disabled = DEFAULTS.DISABLED,
     size = BUTTON_CIRCLE_DEFAULTS.SIZE,
-    onPress,
     ...otherProps
   } = props;
 
   const internalRef = useRef();
   const ref = providedRef || internalRef;
 
-  const state = useToggleState(props);
+  const [selected, setSelected] = useState(isSelected);
 
-  if (ghost === false) {
-    console.warn('MRV2: Momentum does not support non-ghost ButtonCircleToggle.');
-  }
+  useEffect(() => {
+    setSelected(isSelected);
+  }, [isSelected]);
+
+  // MdcButton is uncontrolled, so we need to handle the state manually
+  const handleToggle = useCallback(() => {
+    const newValue = !selected;
+    setSelected(newValue);
+    otherProps.onChange?.(newValue);
+  }, [selected, otherProps]);
 
   return (
-    <ButtonCircle
-      className={classnames(STYLE.wrapper, className)}
-      outline={outline}
-      ghost={ghost}
-      disabled={disabled}
-      size={size as ButtonCircleSize}
-      data-selected={state.isSelected || DEFAULTS.SELECTED}
-      onPress={chain(state.toggle, onPress)}
-      {...{ [ariaStateKey]: state.isSelected }}
-      {...otherProps}
+    <MdcButton
+      active={selected}
       ref={ref}
-    >
-      {children}
-    </ButtonCircle>
+      className={classnames(className, STYLE.wrapper)}
+      size={size as IconButtonSize}
+      variant={outline ? 'secondary' : 'tertiary'}
+      onClick={handleToggle}
+      {...otherProps}
+    />
   );
 });
 

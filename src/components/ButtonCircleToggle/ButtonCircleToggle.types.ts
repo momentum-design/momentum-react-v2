@@ -1,11 +1,7 @@
-import { ButtonCircleProps } from '../ButtonCircle';
-import { AriaButtonProps, AriaToggleButtonProps } from '@react-types/button';
+import type { MdcButtonProps } from '../../types';
 
-export interface Props
-  extends Omit<ButtonCircleProps, keyof AriaButtonProps>,
-    AriaToggleButtonProps {
-  /**
-   * Whether pressed state should set 'aria-pressed' (default) or 'aria-expanded'
-   */
-  ariaStateKey?: 'aria-pressed' | 'aria-expanded';
-}
+export type Props = Omit<MdcButtonProps, 'active'> & {
+  isSelected?: boolean;
+  outline?: boolean;
+  onChange?: (isSelected: boolean) => void;
+};
