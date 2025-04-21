@@ -87,15 +87,6 @@ describe('<ButtonCircleToggle />', () => {
   });
 
   describe('attributes', () => {
-    it('should have its wrapper class', async () => {
-      expect.assertions(1);
-
-      await setup(<ButtonCircleToggle />);
-
-      const element = screen.getByRole('button');
-      expect(element.classList.contains(CONSTANTS.STYLE.wrapper)).toBe(true);
-    });
-
     it('should have variant set to secondary when outline is provided', async () => {
       expect.assertions(1);
 

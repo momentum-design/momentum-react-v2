@@ -2,11 +2,9 @@ import React, { RefObject, forwardRef, useCallback, useEffect, useRef, useState 
 import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 import type { Button, IconButtonSize } from '@momentum-design/components';
-import { DEFAULTS, STYLE } from './ButtonCircleToggle.constants';
+import { DEFAULTS } from './ButtonCircleToggle.constants';
 import { DEFAULTS as BUTTON_CIRCLE_DEFAULTS } from '../ButtonCircle/ButtonCircle.constants';
 import type { Props } from './ButtonCircleToggle.types';
-import './ButtonCircleToggle.style.scss';
-
 const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
     isSelected = DEFAULTS.SELECTED,
@@ -36,7 +34,7 @@ const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<Butt
     <MdcButton
       active={selected}
       ref={ref}
-      className={classnames(className, STYLE.wrapper)}
+      className={classnames(className)}
       size={size as IconButtonSize}
       variant={outline ? 'secondary' : 'tertiary'}
       onClick={handleToggle}

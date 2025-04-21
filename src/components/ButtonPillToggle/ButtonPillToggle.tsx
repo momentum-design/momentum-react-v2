@@ -3,10 +3,9 @@ import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 import type { Button, IconButtonSize } from '@momentum-design/components';
 
-import { DEFAULTS, STYLE } from './ButtonPillToggle.constants';
+import { DEFAULTS } from './ButtonPillToggle.constants';
 import { DEFAULTS as BUTTON_PILL_DEFAULTS } from '../ButtonPill/ButtonPill.constants';
 import { Props } from './ButtonPillToggle.types';
-import './ButtonPillToggle.style.scss';
 
 const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
@@ -37,7 +36,7 @@ const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<Button
     <MdcButton
       active={selected}
       ref={ref}
-      className={classnames(className, STYLE.wrapper)}
+      className={classnames(className)}
       size={size as IconButtonSize}
       variant={outline ? 'secondary' : 'tertiary'}
       onClick={handleToggle}

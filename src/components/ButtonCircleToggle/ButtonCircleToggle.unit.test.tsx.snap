@@ -3,7 +3,7 @@
 exports[`<ButtonCircleToggle /> snapshot should match snapshot 1`] = `
 <div>
   <mdc-button
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
@@ -19,7 +19,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ariaStateKey
   <mdc-button
     aria-expanded="false"
     ariastatekey="aria-expanded"
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
@@ -36,7 +36,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with ariaStateKey
     active=""
     aria-expanded="true"
     ariastatekey="aria-expanded"
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
@@ -52,7 +52,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
   <mdc-button
     aria-pressed="false"
     ariastatekey="aria-pressed"
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
@@ -69,7 +69,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
     active=""
     aria-pressed="true"
     ariastatekey="aria-pressed"
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
@@ -83,7 +83,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with isSelected b
 exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline being false 1`] = `
 <div>
   <mdc-button
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
@@ -97,7 +97,7 @@ exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline bein
 exports[`<ButtonCircleToggle /> snapshot should match snapshot with outline being true 1`] = `
 <div>
   <mdc-button
-    class="md-button-circle-toggle-wrapper"
+    class=""
     color="default"
     role="button"
     size="40"
