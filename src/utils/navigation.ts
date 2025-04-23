@@ -1,5 +1,6 @@
 export const PRESERVE_TABINDEX_CLASSNAME = 'md-nav-preserve-tabindex';
-const FOCUSABLE_ELEMENT_SELECTORS = 'a[href], button, input, textarea, select, details, [tabindex]';
+const FOCUSABLE_ELEMENT_SELECTORS =
+  'a[href], button, mdc-button, input, textarea, select, details, [tabindex]';
 const PRESERVE_TABINDEX_SELECTORS = `[data-preserve-tabindex],.${PRESERVE_TABINDEX_CLASSNAME}`;
 
 type Options = {
