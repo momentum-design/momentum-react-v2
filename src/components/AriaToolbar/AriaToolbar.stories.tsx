@@ -8,6 +8,7 @@ import ButtonCircle from '../ButtonCircle';
 import ButtonPill from '../ButtonPill';
 import ButtonSimple from '../ButtonSimple';
 import Popover from '../Popover';
+import ButtonCircleToggle from '../ButtonCircleToggle';
 
 import argTypes from './AriaToolbar.stories.args';
 import { Props } from './AriaToolbar.types';
@@ -237,4 +238,63 @@ RenderedAsButtonGroup.args = {
   ],
 };
 
-export { Horizontal, Vertical, WithinPopover, IncludesPopoverAndTooltips, RenderedAsButtonGroup };
+const WithButtonCircleToggles = () => {
+  return (
+    <>
+      <AriaToolbar
+        orientation="vertical"
+        aria-controls="textInput"
+        aria-label="toolbar 1"
+        style={{ display: 'flex', rowGap: '0.5rem', flexDirection: 'column' }}
+        ariaToolbarItemsSize={3}
+      >
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonCircleToggle onChange={onPressHandler}>1</ButtonCircleToggle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonCircleToggle onChange={onPressHandler}>2</ButtonCircleToggle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonCircleToggle onChange={onPressHandler}>3</ButtonCircleToggle>
+        </AriaToolbarItem>
+      </AriaToolbar>
+      <AriaToolbar
+        orientation="vertical"
+        aria-controls="textInput"
+        aria-label="toolbar 2"
+        style={{
+          display: 'flex',
+          rowGap: '0.5rem',
+          flexDirection: 'column',
+          marginTop: '1rem',
+          marginBottom: '1rem',
+        }}
+        ariaToolbarItemsSize={3}
+      >
+        <AriaToolbarItem itemIndex={0}>
+          <ButtonCircleToggle onChange={onPressHandler}>1</ButtonCircleToggle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={1}>
+          <ButtonCircleToggle onChange={onPressHandler}>2</ButtonCircleToggle>
+        </AriaToolbarItem>
+
+        <AriaToolbarItem itemIndex={2}>
+          <ButtonCircleToggle onChange={onPressHandler}>3</ButtonCircleToggle>
+        </AriaToolbarItem>
+      </AriaToolbar>
+      <input type="text" id="textInput" aria-label="A text input" />
+    </>
+  );
+};
+
+export {
+  Horizontal,
+  Vertical,
+  WithinPopover,
+  IncludesPopoverAndTooltips,
+  RenderedAsButtonGroup,
+  WithButtonCircleToggles,
+};

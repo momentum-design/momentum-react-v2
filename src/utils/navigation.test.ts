@@ -29,10 +29,11 @@ describe('navigation', () => {
       <button aria-hidden='true' id='12'></button>
       <button aria-hidden='false' id='13'></button>
       <button disabled id='14'></button>
+      <mdc-button id='15'></mdc-button>
     `)
       ).map((n) => n.id);
 
-      expect(ids).toEqual(['2', '3', '4', '5', '6', '7', '8', '13']);
+      expect(ids).toEqual(['2', '3', '4', '5', '6', '7', '8', '13', '15']);
     });
 
     it('should return with focusable tags for any elements which can be focused', () => {

@@ -1,8 +1,7 @@
+/* eslint-disable react/display-name */
 import { Props } from './AriaToolbarItem.types';
 
 import React, { forwardRef, useCallback } from 'react';
-
-import { useKeyboard } from '@react-aria/interactions';
 import { useAriaToolbarContext } from '../AriaToolbar/AriaToolbar.utils';
 import { useProvidedRef } from '../../utils/useProvidedRef';
 import { defaults } from 'lodash';
@@ -14,16 +13,12 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
 
   const ref = useProvidedRef<HTMLButtonElement>(providedRef, null);
 
-  const { keyboardProps } = useKeyboard({
-    onKeyDown: (e) => {
+  const onKeyDown = useCallback(
+    (e) => {
       if (!ariaToolbarContext) return;
 
       const { orientation, setCurrentFocus, ariaToolbarItemsSize, currentFocus, onTabPress } =
         ariaToolbarContext;
-
-      // for the escape key (and other key presses), continue propagation to let Popovers / Modals know that
-      // they should close
-      e.continuePropagation();
 
       switch (e.key) {
         case orientation === 'horizontal' ? 'ArrowLeft' : 'ArrowUp':
@@ -45,7 +40,8 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
           break;
       }
     },
-  });
+    [ariaToolbarContext]
+  );
 
   const getPropsForChildren = useCallback(
     (child, index) => {
@@ -69,13 +65,13 @@ const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef
             child.props?.onPress?.();
           },
           useNativeKeyDown: true,
-          ...keyboardProps,
+          onKeyDown,
         },
         children?.props, // specified props of children should take precedent over drilled props from parent
         rest
       );
     },
-    [ariaToolbarContext?.currentFocus, rest, children]
+    [ariaToolbarContext, onKeyDown, children.props, rest, ref]
   );
 
   return React.cloneElement(children, getPropsForChildren(children, itemIndex));
