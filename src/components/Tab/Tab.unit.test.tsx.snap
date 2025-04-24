@@ -6,6 +6,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -16,6 +17,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -60,6 +62,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with active 1`] =
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -70,6 +73,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with active 1`] =
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -114,6 +118,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with className 1`
     className="md-tab-wrapper example-class"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -124,6 +129,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with className 1`
           className="md-tab-wrapper example-class md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -168,6 +174,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`]
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     isDisabled={false}
   >
     <FocusRing
@@ -182,6 +189,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with disabled 1`]
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -227,6 +235,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with id 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     id="example-id"
   >
     <FocusRing>
@@ -238,6 +247,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with id 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -287,6 +297,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     style={
       Object {
         "color": "pink",
@@ -302,6 +313,7 @@ exports[`<Tab /> snapshot Badge children should match snapshot with style 1`] = 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -349,6 +361,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -359,6 +372,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -414,6 +428,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -424,6 +439,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with active 1`] = 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -479,6 +495,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
     className="md-tab-wrapper example-class"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -489,6 +506,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with className 1`]
           className="md-tab-wrapper example-class md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -544,6 +562,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     isDisabled={false}
   >
     <FocusRing
@@ -558,6 +577,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with disabled 1`] 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -614,6 +634,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     id="example-id"
   >
     <FocusRing>
@@ -625,6 +646,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -673,6 +695,73 @@ exports[`<Tab /> snapshot Icon children should match snapshot with id 1`] = `
 </Tab>
 `;
 
+exports[`<Tab /> snapshot Icon children should match snapshot with shallowDisabled 1`] = `
+<Tab
+  shallowDisabled={true}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    data-shallow-disabled={true}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper md-button-simple-wrapper"
+          data-active={false}
+          data-disabled={false}
+          data-shallow-disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        >
+          <Icon
+            key="5"
+            name="plus"
+            scale={12}
+            weight="bold"
+          >
+            <Icon
+              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+              data-autoscale={false}
+              data-scale={12}
+              data-test="plus"
+              name="plus-bold"
+              style={Object {}}
+            >
+              <mdc-icon
+                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="plus"
+                style={Object {}}
+                suppressHydrationWarning={true}
+              />
+            </Icon>
+          </Icon>
+        </button>
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
 exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
 <Tab
   style={
@@ -685,6 +774,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     style={
       Object {
         "color": "pink",
@@ -700,6 +790,7 @@ exports[`<Tab /> snapshot Icon children should match snapshot with style 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -758,6 +849,7 @@ exports[`<Tab /> snapshot Text children should match snapshot 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -768,6 +860,7 @@ exports[`<Tab /> snapshot Text children should match snapshot 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -817,6 +910,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with active 1`] = 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -827,6 +921,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with active 1`] = 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -876,6 +971,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with className 1`]
     className="md-tab-wrapper example-class"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -886,6 +982,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with className 1`]
           className="md-tab-wrapper example-class md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -935,6 +1032,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     isDisabled={false}
   >
     <FocusRing
@@ -949,6 +1047,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with disabled 1`] 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -999,6 +1098,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     id="example-id"
   >
     <FocusRing>
@@ -1010,6 +1110,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with id 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           id="example-id"
           onBlur={[Function]}
           onClick={[Function]}
@@ -1064,6 +1165,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     style={
       Object {
         "color": "pink",
@@ -1079,6 +1181,7 @@ exports[`<Tab /> snapshot Text children should match snapshot with style 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -1131,6 +1234,7 @@ exports[`<Tab /> snapshot string children should match snapshot 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -1141,6 +1245,7 @@ exports[`<Tab /> snapshot string children should match snapshot 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -1194,6 +1299,7 @@ exports[`<Tab /> snapshot string children should match snapshot with active 1`] 
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -1204,6 +1310,7 @@ exports[`<Tab /> snapshot string children should match snapshot with active 1`] 
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -1234,6 +1341,7 @@ exports[`<Tab /> snapshot string children should match snapshot with className 1
     className="md-tab-wrapper example-class"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
   >
     <FocusRing>
       <FocusRing
@@ -1244,6 +1352,7 @@ exports[`<Tab /> snapshot string children should match snapshot with className 1
           className="md-tab-wrapper example-class md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -1274,6 +1383,7 @@ exports[`<Tab /> snapshot string children should match snapshot with disabled 1`
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     isDisabled={false}
   >
     <FocusRing
@@ -1288,6 +1398,7 @@ exports[`<Tab /> snapshot string children should match snapshot with disabled 1`
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -1319,6 +1430,7 @@ exports[`<Tab /> snapshot string children should match snapshot with id 1`] = `
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     id="example-id"
   >
     <FocusRing>
@@ -1330,7 +1442,50 @@ exports[`<Tab /> snapshot string children should match snapshot with id 1`] = `
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           id="example-id"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragStart={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          type="button"
+        />
+      </FocusRing>
+    </FocusRing>
+  </ButtonSimple>
+</Tab>
+`;
+
+exports[`<Tab /> snapshot string children should match snapshot with shallowDisabled 1`] = `
+<Tab
+  shallowDisabled={true}
+>
+  <ButtonSimple
+    className="md-tab-wrapper"
+    data-active={false}
+    data-disabled={false}
+    data-shallow-disabled={true}
+  >
+    <FocusRing>
+      <FocusRing
+        focusClass="md-focus-ring-wrapper children"
+        focusRingClass="md-focus-ring-wrapper children"
+      >
+        <button
+          className="md-tab-wrapper md-button-simple-wrapper"
+          data-active={false}
+          data-disabled={false}
+          data-shallow-disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}
@@ -1365,6 +1520,7 @@ exports[`<Tab /> snapshot string children should match snapshot with style 1`] =
     className="md-tab-wrapper"
     data-active={false}
     data-disabled={false}
+    data-shallow-disabled={false}
     style={
       Object {
         "color": "pink",
@@ -1380,6 +1536,7 @@ exports[`<Tab /> snapshot string children should match snapshot with style 1`] =
           className="md-tab-wrapper md-button-simple-wrapper"
           data-active={false}
           data-disabled={false}
+          data-shallow-disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onDragStart={[Function]}

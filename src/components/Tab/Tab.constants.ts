@@ -3,6 +3,7 @@ const CLASS_PREFIX = 'md-tab';
 const DEFAULTS = {
   ACTIVE: false,
   DISABLED: false,
+  SHALLOW_DISABLED: false,
 };
 
 const STYLE = {

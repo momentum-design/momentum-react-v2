@@ -3,10 +3,11 @@ import { mount } from 'enzyme';
 
 import Tab, { TAB_CONSTANTS as CONSTANTS } from './';
 const { DEFAULTS } = CONSTANTS;
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, triggerPress } from '../../../test/utils';
 import Icon from '../Icon';
 import Text from '../Text';
 import Badge from '../Badge';
+import ButtonSimple from '../ButtonSimple';
 
 describe('<Tab />', () => {
   describe('snapshot', () => {
@@ -63,6 +64,15 @@ describe('<Tab />', () => {
         const disabled = DEFAULTS.DISABLED;
 
         const container = mount(<Tab disabled={disabled} />);
+
+        expect(container).toMatchSnapshot();
+      });
+      it('should match snapshot with shallowDisabled', () => {
+        expect.assertions(1);
+
+        const shallowDisabled = true;
+
+        const container = mount(<Tab shallowDisabled={shallowDisabled} />);
 
         expect(container).toMatchSnapshot();
       });
@@ -132,6 +142,19 @@ describe('<Tab />', () => {
 
         const container = await mountAndWait(
           <Tab disabled={disabled}>{[<Icon key="5" name="plus" scale={12} weight="bold" />]}</Tab>
+        );
+
+        expect(container).toMatchSnapshot();
+      });
+      it('should match snapshot with shallowDisabled', async () => {
+        expect.assertions(1);
+
+        const shallowDisabled = true;
+
+        const container = await mountAndWait(
+          <Tab shallowDisabled={shallowDisabled}>
+            {[<Icon key="5" name="plus" scale={12} weight="bold" />]}
+          </Tab>
         );
 
         expect(container).toMatchSnapshot();
@@ -373,6 +396,27 @@ describe('<Tab />', () => {
 
         expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
       });
+
+      it('should have provided data-shallow-disabled when shallowDisabled provided', () => {
+        expect.assertions(1);
+
+        const shallowDisabled = true;
+
+        const element = mount(<Tab shallowDisabled={shallowDisabled} />)
+          .find(Tab)
+          .getDOMNode();
+
+        expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
+      });
+
+      it('should forward ref to the button simple', () => {
+        expect.assertions(1);
+
+        const ref = React.createRef<HTMLButtonElement>();
+        const element = mount(<Tab ref={ref} />);
+
+        expect(ref.current).toBe(element.find(ButtonSimple).getDOMNode());
+      });
     });
     describe('string children', () => {
       it('should have its wrapper class', () => {
@@ -444,6 +488,18 @@ describe('<Tab />', () => {
           .getDOMNode();
 
         expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
+      });
+
+      it('should have provided data-shallow-disabled when shallowDisabled provided', () => {
+        expect.assertions(1);
+
+        const shallowDisabled = DEFAULTS.DISABLED;
+
+        const element = mount(<Tab shallowDisabled={shallowDisabled}>Example Text</Tab>)
+          .find(Tab)
+          .getDOMNode();
+
+        expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
       });
     });
     describe('Text children', () => {
@@ -565,6 +621,26 @@ describe('<Tab />', () => {
 
         expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
       });
+
+      it('should have provided data-shallow-disabled when shallowDisabled provided', () => {
+        expect.assertions(1);
+
+        const shallowDisabled = DEFAULTS.SHALLOW_DISABLED;
+
+        const element = mount(
+          <Tab shallowDisabled={shallowDisabled}>
+            {[
+              <Text key="6" type="subheader-secondary" tagName="h3">
+                Icon and Label
+              </Text>,
+            ]}
+          </Tab>
+        )
+          .find(Tab)
+          .getDOMNode();
+
+        expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
+      });
     });
     describe('Badge children', () => {
       it('should have its wrapper class', () => {
@@ -636,6 +712,20 @@ describe('<Tab />', () => {
           .getDOMNode();
 
         expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
+      });
+
+      it('should have provided data-shallow-disabled when shallowDisabled provided', () => {
+        expect.assertions(1);
+
+        const shallowDisabled = DEFAULTS.SHALLOW_DISABLED;
+
+        const element = mount(
+          <Tab shallowDisabled={shallowDisabled}>{[<Badge key="6">2</Badge>]}</Tab>
+        )
+          .find(Tab)
+          .getDOMNode();
+
+        expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
       });
     });
     describe('Icon children', () => {
@@ -727,6 +817,22 @@ describe('<Tab />', () => {
 
         expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
       });
+
+      it('should have provided data-shallow-disabled when shallowDisabled provided', async () => {
+        expect.assertions(1);
+
+        const shallowDisabled = DEFAULTS.SHALLOW_DISABLED;
+
+        const wrapper = await mountAndWait(
+          <Tab shallowDisabled={shallowDisabled}>
+            {[<Icon key="6" name="arrow-down" scale={12} weight="filled" />]}
+          </Tab>
+        );
+
+        const element = wrapper.find(Tab).getDOMNode();
+
+        expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
+      });
     });
   });
 
@@ -738,17 +844,21 @@ describe('<Tab />', () => {
 
       const component = mount(<Tab onPress={mockCallback} />).find(Tab);
 
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-        altKey: false,
-      });
+      triggerPress(component);
 
-      expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toHaveBeenCalledTimes(1);
+    });
+
+    it('should still handle mouse events when shallow disabled', () => {
+      expect.assertions(1);
+
+      const mockCallback = jest.fn();
+
+      const component = mount(<Tab onPress={mockCallback} shallowDisabled />).find(Tab);
+
+      triggerPress(component);
+
+      expect(mockCallback).toHaveBeenCalledTimes(1);
     });
   });
 });
