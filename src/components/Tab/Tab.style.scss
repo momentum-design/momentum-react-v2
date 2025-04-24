@@ -10,7 +10,7 @@
 
   /* Colorization */
   &[data-active='false'] {
-    &[data-disabled='false'] {
+    &[data-disabled='false'][data-shallow-disabled='false'] {
       background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,
@@ -40,7 +40,8 @@
       }
     }
 
-    &[data-disabled='true'] {
+    &[data-disabled='true'],
+    &[data-shallow-disabled='true'] {
       background-color: var(--mds-color-theme-button-secondary-normal);
 
       .md-text-wrapper,

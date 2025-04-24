@@ -47,6 +47,9 @@ States.parameters = {
     { disabled: undefined, children: 'Disabled undefined' },
     { disabled: true, children: 'Disabled true' },
     { disabled: false, children: 'Disabled false' },
+    { shallowDisabled: undefined, children: 'Shallow Disabled undefined' },
+    { shallowDisabled: true, children: 'Shallow Disabled true' },
+    { shallowDisabled: false, children: 'Shallow Disabled false' },
   ],
 };
 

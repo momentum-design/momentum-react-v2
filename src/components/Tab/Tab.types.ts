@@ -36,6 +36,11 @@ export interface Props extends AriaButtonProps {
   disabled?: boolean;
 
   /**
+   * Whether or not this Tab should look disabled, but allowing actions like onPress to be passed.
+   */
+  shallowDisabled?: boolean;
+
+  /**
    * Tabindex for accessibility
    */
   tabIndex?: number;
