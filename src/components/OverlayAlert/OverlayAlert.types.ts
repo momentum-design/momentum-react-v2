@@ -1,5 +1,5 @@
-import type { CSSProperties, ReactElement, ReactNode, ComponentProps } from 'react';
-import FocusLock from 'react-focus-lock';
+import type { CSSProperties, ReactElement, ReactNode } from 'react';
+import type { FocusScopeProps } from '@react-aria/focus';
 
 import type { ButtonControlProps } from '../ButtonControl';
 import type { ButtonSimpleProps } from '../ButtonSimple';
@@ -21,8 +21,9 @@ export type Props = OverlayProps &
          */
         title: string;
       }
-    | ({ title?: never } & AriaLabelRequired) // if a title is not provided, a label is required
+    | ({ title?: never } & AriaLabelRequired)
   ) & {
+    // if a title is not provided, a label is required
     /**
      * Actions associated with this OverlayAlert.
      */
@@ -71,7 +72,7 @@ export type Props = OverlayProps &
     /**
      * Props to be passed to Overlay for FocusLock, default `{returnFocus: true}`
      */
-    focusLockProps?: Omit<ComponentProps<typeof FocusLock>, 'children'>;
+    focusLockProps?: Omit<FocusScopeProps, 'children' | 'key' | 'css'>;
 
     /**
      * Callback function to be fired when Escape key is pressed.

@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import omit from 'lodash/omit';
-import FocusLock from 'react-focus-lock';
+import { FocusScope } from '@react-aria/focus';
 
 const defaultDims = {
   offsetTop: 0,
@@ -984,7 +984,13 @@ class EventOverlay extends React.Component {
     );
 
     const withFocusLock = (content) =>
-      shouldLockFocus ? <FocusLock {...focusLockProps}>{content}</FocusLock> : content;
+      shouldLockFocus ? (
+        <FocusScope {...focusLockProps} contain>
+          {content}
+        </FocusScope>
+      ) : (
+        content
+      );
 
     const withPortal = (content) =>
       portalNode ? ReactDOM.createPortal(content, portalNode) : content;
