@@ -1,6 +1,6 @@
-import { CSSProperties, ReactNode, ComponentProps, AriaRole } from 'react';
+import { CSSProperties, ReactNode, AriaRole } from 'react';
 import type { PlacementType } from '../ModalArrow/ModalArrow.types';
-import { FocusScope } from '@react-aria/focus';
+import type { FocusScopeProps } from '@react-aria/focus';
 import { AriaLabelRequired } from '../../utils/a11y';
 
 export type Color = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
@@ -86,5 +86,5 @@ export type Props = AriaLabelRequired & {
   /**
    * Props to be passed to FocusLock
    */
-  focusLockProps?: Omit<ComponentProps<typeof FocusScope>, 'children' | 'key' | 'css'>;
+  focusLockProps?: Omit<FocusScopeProps, 'children' | 'key' | 'css'>;
 };
