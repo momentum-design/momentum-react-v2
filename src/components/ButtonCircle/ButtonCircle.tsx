@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React, { Children, forwardRef, ReactElement, RefObject } from 'react';
+import React, { Children, forwardRef, ReactElement, RefObject, useMemo } from 'react';
 import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 import type { Button, ButtonVariant } from '@momentum-design/components';
+import type IconKeys from '@momentum-design/icons/dist/types/types';
 
 import { Props } from './ButtonCircle.types';
 import './ButtonCircle.style.scss';
@@ -46,19 +47,19 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) =
     variant = 'secondary';
   }
 
-  let prefixIcon;
-
-  if (children && Children.count(children) === 1) {
-    const Icon = children as ReactElement;
-    // @ts-ignore
-    if (Icon.type?.name === 'Icon') {
-      prefixIcon = [Icon.props.name, Icon.props.weight || 'regular'].join('-');
+  const prefixIcon = useMemo(() => {
+    if (children && Children.count(children) === 1) {
+      const Icon = children as ReactElement;
+      // @ts-ignore
+      if (Icon.type?.name === 'Icon') {
+        return [Icon.props.name, Icon.props.weight || 'regular'].join('-');
+      }
     }
-  }
+  }, [children]);
 
   return (
     <MdcButton
-      prefixIcon={prefixIcon}
+      prefixIcon={prefixIcon as IconKeys}
       variant={variant}
       color={newColor}
       ref={providedRef}
