@@ -8,14 +8,9 @@ const DEFAULTS = {
   ORIENTATION: 'horizontal',
 };
 
-const CHILD_OF = {
-  KEY: 'data-mrv2-childof',
-  VALUE: 'button-group',
-} as const;
-
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   separator: `${CLASS_PREFIX}-separator`,
 };
 
-export { CLASS_PREFIX, DEFAULTS, STYLE, CHILD_OF };
+export { CLASS_PREFIX, DEFAULTS, STYLE };

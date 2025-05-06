@@ -1,5 +1,3 @@
-import { Size } from './ButtonCircle.types';
-
 const CLASS_PREFIX = 'md-button-circle';
 
 const DEFAULTS = {
@@ -10,7 +8,7 @@ const DEFAULTS = {
   OUTLINE: false,
   SIZE: 40,
   INVERTED: false,
-};
+} as const;
 
 const COLORS = {
   JOIN: 'join',
@@ -18,17 +16,9 @@ const COLORS = {
   MESSAGE: 'message',
 };
 
-const SIZES: Record<number, Size> = {
-  64: 64,
-  52: 52,
-  40: 40,
-  32: 32,
-  28: 28,
-  20: 20,
-};
-
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
+  widthOverride: `${CLASS_PREFIX}-width-override`,
 };
 
-export { CLASS_PREFIX, COLORS, DEFAULTS, SIZES, STYLE };
+export { CLASS_PREFIX, COLORS, DEFAULTS, STYLE };

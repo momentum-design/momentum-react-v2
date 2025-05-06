@@ -1,9 +1,8 @@
 import React, { FC, ReactNode } from 'react';
 import ButtonSimple from '../components/ButtonSimple';
-import ButtonCircle from '../components/ButtonCircle';
 import ButtonPill from '../components/ButtonPill';
 
-export const MRv2Buttons = [ButtonPill, ButtonCircle, ButtonSimple];
+export const MRv2Buttons = [ButtonPill, ButtonSimple];
 
 /**
  * Returns true if all children are the correct type, false otherwise
@@ -22,7 +21,7 @@ export const verifyTypes = <T extends unknown>(children: ReactNode, type: FC<T>)
  * @param type
  * @returns
  */
-export const verifyType = <T extends unknown>(element: ReactNode, type: FC<T>): boolean => {
+export const verifyType = <T extends unknown>(element: ReactNode, type: FC<T> | any): boolean => {
   return (
     React.isValidElement(element) &&
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

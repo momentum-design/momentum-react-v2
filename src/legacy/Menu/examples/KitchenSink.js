@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuCustomMenuItems, MenuDefault, MenuSubMenu } from './index';
+import { MenuCustomMenuItems, MenuDefault, MenuSubMenu, MenuWithButtonCircle } from './index';
 
 export default class MenuKitchenSink extends React.Component {
   render() {
@@ -7,6 +7,7 @@ export default class MenuKitchenSink extends React.Component {
       <React.Fragment>
         <MenuCustomMenuItems />
         <MenuDefault />
+        <MenuWithButtonCircle />
         <MenuSubMenu />
       </React.Fragment>
     );

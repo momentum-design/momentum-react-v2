@@ -50,9 +50,13 @@ const ToastNotification: FC<Props> = (props: Props) => {
         )}
         {onClose && (
           <div className={classnames(className, STYLE.closeButton)}>
-            <ButtonCircle size={20} ghost onPress={onClose} aria-label={closeButtonLabel}>
-              <Icon name="cancel" weight="bold" scale={16} />
-            </ButtonCircle>
+            <ButtonCircle
+              size={20}
+              variant="tertiary"
+              onClick={onClose}
+              aria-label={closeButtonLabel}
+              prefixIcon="cancel-bold"
+            />
           </div>
         )}
       </div>

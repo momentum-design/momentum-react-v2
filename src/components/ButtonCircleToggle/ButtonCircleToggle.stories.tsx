@@ -28,7 +28,6 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   prefixIcon: 'raise-hand-regular',
   onChange: action('onChange'),
-  onPress: action('onPress'),
 };
 
 const Outline = MultiTemplateWithPseudoStates<ButtonCircleToggleProps>(ButtonCircleToggle).bind({});
@@ -43,9 +42,9 @@ Outline.parameters = {
   variants: [
     ...[false, true].map((isSelected) => ({
       isSelected,
-      outline: true,
       label: `isSelected: ${isSelected}`,
-      prefixIcon: 'cancel-regular',
+      outline: true,
+      prefixIcon: 'placeholder-regular',
     })),
   ],
 };
@@ -62,9 +61,9 @@ Ghost.parameters = {
   variants: [
     ...[true, false].map((isSelected) => ({
       isSelected,
-      ghost: true,
       label: `isSelected: ${isSelected}`,
-      prefixIcon: 'cancel-regular',
+      outline: false,
+      prefixIcon: 'placeholder-regular',
     })),
   ],
 };

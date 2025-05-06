@@ -1,10 +1,8 @@
+import type { IconButtonSize } from '@momentum-design/components';
 import { default as ButtonCircle } from './ButtonCircle';
-import * as CONSTANTS from './ButtonCircle.constants';
-import { Props, Size as ButtonCircleSizeType } from './ButtonCircle.types';
-
-export { CONSTANTS as BUTTON_CIRCLE_CONSTANTS };
+import type { Props } from './ButtonCircle.types';
 
 export type ButtonCircleProps = Props;
-export type ButtonCircleSize = ButtonCircleSizeType;
+export type ButtonCircleSize = IconButtonSize;
 
 export default ButtonCircle;

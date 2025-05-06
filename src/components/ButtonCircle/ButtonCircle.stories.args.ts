@@ -1,30 +1,30 @@
 import {
-  commonAriaButton,
+  commonMdcButton,
   commonHTMLAttributes,
   commonStyles,
 } from '../../storybook/helper.stories.argtypes';
 
-import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from './';
+import { BUTTON_VARIANTS, ICON_BUTTON_SIZES, BUTTON_COLORS } from '@momentum-design/components';
+
+// buttoncircle does not support children
+delete commonMdcButton.children;
 
 const buttonCircleArgTypes = {
-  /**
-   * Below is an example. See [Storybook argTypes documentation]{@link https://storybook.js.org/docs/react/api/argtypes}.
-   */
-  children: {
-    description: 'Provides the child nodes for this element.',
+  prefixIcon: {
+    description: 'The icon to display in the button.',
     control: { type: 'text' },
     table: {
       type: {
-        summary: 'ReactNode',
+        summary: 'string',
       },
       defaultValue: {
-        summary: 'undefined',
+        summary: undefined,
       },
     },
   },
-  color: {
-    description: 'Modifies the color of this component.',
-    options: [undefined, ...Object.values(CONSTANTS.COLORS)],
+  variant: {
+    description: 'Modifies the variant of this component.',
+    options: [undefined, ...Object.values(BUTTON_VARIANTS)],
     control: { type: 'select' },
     table: {
       type: {
@@ -35,83 +35,43 @@ const buttonCircleArgTypes = {
       },
     },
   },
-  disabled: {
-    description: 'Whether to render the component is disabled.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED,
-      },
-    },
-  },
-  shallowDisabled: {
-    description:
-      'Whether to render the component looking as if disabled, but allowing onPress actions to still be passed.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
-      },
-    },
-  },
-  ghost: {
-    description: 'Whether this component has a transparent background.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GHOST,
-      },
-    },
-  },
-  outline: {
-    description: 'Whether this component has an outline/border.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OUTLINE,
-      },
-    },
-  },
-  inverted: {
-    description:
-      'Whether this component has inverted background (black for dark mode and white for light mode)',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.INVERTED,
-      },
-    },
-  },
   size: {
-    description: 'Modifies the size of this component.',
-    options: [undefined, ...Object.values(CONSTANTS.SIZES)],
+    description:
+      'Modifies the size of this component. \n\n**NOTE:** Size 20 is only supported for `variant="tertiary"`',
+    options: [undefined, ...Object.values(ICON_BUTTON_SIZES)],
     control: { type: 'select' },
     table: {
       type: {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
+        summary: 32,
+      },
+    },
+  },
+  color: {
+    description:
+      'Modifies the color of this component. \n\n**NOTE:** Coloring is only supported for variants `primary` & `secondary`',
+    options: [undefined, ...Object.values(BUTTON_COLORS)],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
+  inverted: {
+    description: 'Inverts the color of the button.',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: false,
       },
     },
   },
@@ -121,7 +81,7 @@ export { buttonCircleArgTypes };
 
 export default {
   ...commonStyles,
-  ...commonAriaButton,
+  ...commonMdcButton,
   ...commonHTMLAttributes,
   ...buttonCircleArgTypes,
 };

@@ -2,7 +2,6 @@ import React, { ForwardedRef, forwardRef, useCallback, useEffect, useRef } from 
 import './Popover.style.scss';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
-import Icon from '../Icon';
 import { LazyTippy } from './LazyTippy';
 import { ARROW_ID, ELEVATIONS, ROUNDS } from '../ModalContainer/ModalContainer.constants';
 import { ARROW_PADDING, DEFAULTS, STYLE } from './Popover.constants';
@@ -203,12 +202,10 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
               {...closeButtonProps}
               className={classNames(STYLE.closeButton, closeButtonProps?.className)}
               data-placement={closeButtonPlacement}
-              ghost
               size={20}
-              onPress={handleOnCloseButtonClick}
-            >
-              <Icon name="cancel" weight="bold" scale={16} />
-            </ButtonCircle>
+              prefixIcon="cancel-bold"
+              onClick={handleOnCloseButtonClick}
+            />
           )}
           {children}
         </ModalContainer>

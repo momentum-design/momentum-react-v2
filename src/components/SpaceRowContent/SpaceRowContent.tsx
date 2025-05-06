@@ -209,13 +209,12 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
             <MenuTrigger
               triggerComponent={
                 <ButtonCircle
-                  ghost
+                  variant="tertiary"
                   size={isCompact ? 20 : 28}
                   aria-label={menuTriggerLabel}
                   data-testid="menu-trigger-button"
-                >
-                  <Icon name="more" weight="bold" scale={isCompact ? 16 : 24} />
-                </ButtonCircle>
+                  prefixIcon="more-bold"
+                />
               }
             >
               <Menu selectionMode="single" onAction={onSelectMenuItem}>

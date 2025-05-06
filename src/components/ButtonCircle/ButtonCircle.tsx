@@ -1,49 +1,75 @@
-import React, { Children, forwardRef, RefObject } from 'react';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import React, { Children, forwardRef, ReactElement, RefObject } from 'react';
 import classnames from 'classnames';
-import ButtonSimple from '../ButtonSimple';
+import { Button as MdcButton } from '@momentum-design/components/dist/react';
+import type { Button, ButtonVariant } from '@momentum-design/components';
 
-import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 import { Props } from './ButtonCircle.types';
 import './ButtonCircle.style.scss';
+import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 
-const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
+const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
-    children,
-    className,
     color,
-    disabled,
-    shallowDisabled,
+    className,
+    size = DEFAULTS.SIZE,
+    children,
+    onPress,
     ghost,
     outline,
-    inverted,
-    size,
-    ...otherProps
+    shallowDisabled,
+    ...rest
   } = props;
 
-  if (ghost && inverted) {
-    console.warn('MRV2: Momentum does not support a ghost inverted ButtonCircle.');
+  let newColor;
+  switch (color) {
+    case 'join':
+      newColor = 'positive';
+      break;
+    case 'cancel':
+      newColor = 'negative';
+      break;
+    case 'message':
+      newColor = 'accent';
+      break;
+    default:
+      newColor = 'default';
+      break;
   }
 
-  const multipleChildren = Children.count(children) > 1;
+  let variant: ButtonVariant = 'primary';
+
+  if (ghost) {
+    variant = 'tertiary';
+  }
+  if (outline) {
+    variant = 'secondary';
+  }
+
+  let prefixIcon;
+
+  if (children && Children.count(children) === 1) {
+    const Icon = children as ReactElement;
+    // @ts-ignore
+    if (Icon.type?.name === 'Icon') {
+      prefixIcon = [Icon.props.name, Icon.props.weight || 'regular'].join('-');
+    }
+  }
 
   return (
-    <ButtonSimple
-      className={classnames(STYLE.wrapper, className)}
+    <MdcButton
+      prefixIcon={prefixIcon}
+      variant={variant}
+      color={newColor}
       ref={providedRef}
-      data-color={color || DEFAULTS.COLOR}
-      data-ghost={ghost || DEFAULTS.GHOST}
-      data-multiple-children={multipleChildren}
-      data-outline={outline || DEFAULTS.OUTLINE}
-      data-size={size || DEFAULTS.SIZE}
-      data-inverted={inverted || DEFAULTS.INVERTED}
-      data-disabled={disabled || DEFAULTS.DISABLED}
-      data-shallow-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
-      aria-disabled={shallowDisabled || DEFAULTS.SHALLOW_DISABLED}
-      isDisabled={disabled}
-      {...otherProps}
+      size={size}
+      onClick={onPress}
+      softDisabled={shallowDisabled}
+      className={classnames({ [STYLE.widthOverride]: !!prefixIcon }, STYLE.wrapper, className)}
+      {...rest}
     >
-      {children}
-    </ButtonSimple>
+      {!prefixIcon && children}
+    </MdcButton>
   );
 });
 

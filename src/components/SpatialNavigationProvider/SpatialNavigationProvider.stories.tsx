@@ -115,9 +115,12 @@ const Form = Template(({ back }) => {
               key="2"
               placement="top-end"
               triggerComponent={
-                <ButtonCircle outline ghost key="1" size={40}>
-                  <Icon name="arrow-down" autoScale={100} />
-                </ButtonCircle>
+                <ButtonCircle
+                  key="1"
+                  size={40}
+                  variant="secondary"
+                  prefixIcon="arrow-down-regular"
+                />
               }
               children={[
                 <Menu key="0" selectionMode="single">
@@ -156,7 +159,7 @@ Form.argTypes = { ...argTypes };
 const exampleTree =
   tNode('root', true, [
     tNode('1', false, [
-      tNode('1.1',true, [
+      tNode('1.1', true, [
         tNode('1.1.1'),
         tNode('1.1.2')]),
       tNode('1.2')]),
@@ -208,9 +211,12 @@ const ExampleTreeNode = ({ node }: { node: TreeNodeRecord }) => {
             <MenuTrigger
               className={PRESERVE_TABINDEX_CLASSNAME}
               triggerComponent={
-                <ButtonCircle size={20} ghost aria-label="More menu">
-                  <Icon name="more" weight="bold" autoScale={100} />
-                </ButtonCircle>
+                <ButtonCircle
+                  size={20}
+                  aria-label="More menu"
+                  variant="tertiary"
+                  prefixIcon="more-bold"
+                />
               }
             >
               <Menu selectionMode="single" key="2">

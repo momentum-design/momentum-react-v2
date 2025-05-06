@@ -92,9 +92,12 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
             <MenuTrigger
               className={PRESERVE_TABINDEX_CLASSNAME}
               triggerComponent={
-                <ButtonCircle size={20} ghost aria-label="More menu">
-                  <Icon name="more" weight="bold" autoScale={100} />
-                </ButtonCircle>
+                <ButtonCircle
+                  size={20}
+                  aria-label="More menu"
+                  variant="tertiary"
+                  prefixIcon="more-bold"
+                />
               }
             >
               <Menu selectionMode="single" key="2">

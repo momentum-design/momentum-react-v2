@@ -1,6 +1,7 @@
-import React, { FC, RefObject, forwardRef } from 'react';
+import React, { RefObject, forwardRef } from 'react';
 import classnames from 'classnames';
 import ButtonCircle, { ButtonCircleSize } from '../ButtonCircle';
+import type { Button } from '@momentum-design/components';
 
 import { DEFAULTS, STYLE } from './ReactionButton.constants';
 import { Props } from './ReactionButton.types';
@@ -9,7 +10,7 @@ import './ReactionButton.style.scss';
 /**
  * Button within the ReactionPicker
  */
-const ReactionButton = forwardRef((props: Props, ref: RefObject<HTMLButtonElement>) => {
+const ReactionButton = forwardRef((props: Props, ref: RefObject<Button>) => {
   const { className, children, id, reacted, style, ...otherProps } = props;
   delete otherProps.size;
   return (
@@ -20,7 +21,7 @@ const ReactionButton = forwardRef((props: Props, ref: RefObject<HTMLButtonElemen
       id={id}
       size={DEFAULTS.SIZE as ButtonCircleSize}
       style={style}
-      ghost
+      variant="tertiary"
       {...otherProps}
     >
       {children}
