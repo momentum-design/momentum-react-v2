@@ -3,7 +3,6 @@ import { isString } from 'lodash';
 import classnames from 'classnames';
 import ModalContainer from '../ModalContainer';
 import ButtonCircle from '../ButtonCircle';
-import Icon from '../Icon';
 
 import { STYLE } from './ToastNotification.constants';
 import { Props } from './ToastNotification.types';

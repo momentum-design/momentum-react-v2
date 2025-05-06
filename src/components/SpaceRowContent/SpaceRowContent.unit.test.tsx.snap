@@ -1067,15 +1067,10 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
           <ButtonCircle
             aria-label="Menu trigger label"
             data-testid="menu-trigger-button"
-            ghost={true}
+            prefixIcon="more-bold"
             size={28}
-          >
-            <Icon
-              name="more"
-              scale={24}
-              weight="bold"
-            />
-          </ButtonCircle>
+            variant="tertiary"
+          />
         }
       >
         <Popover
@@ -1098,18 +1093,13 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
               aria-haspopup={true}
               aria-label="Menu trigger label"
               data-testid="menu-trigger-button"
-              ghost={true}
               id="test-ID"
               onPress={[Function]}
               onPressStart={[Function]}
+              prefixIcon="more-bold"
               size={28}
-            >
-              <Icon
-                name="more"
-                scale={24}
-                weight="bold"
-              />
-            </ButtonCircle>
+              variant="tertiary"
+            />
           }
           variant="medium"
         >
@@ -1282,97 +1272,39 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                   aria-haspopup={true}
                   aria-label="Menu trigger label"
                   data-testid="menu-trigger-button"
-                  ghost={true}
                   id="test-ID"
                   onPress={[Function]}
                   onPressStart={[Function]}
+                  prefixIcon="more-bold"
                   size={28}
-                  useNativeKeyDown={true}
+                  variant="tertiary"
                 >
-                  <ButtonSimple
+                  <Button
                     aria-controls={null}
-                    aria-disabled={false}
                     aria-expanded={false}
                     aria-haspopup={true}
                     aria-label="Menu trigger label"
                     className="md-button-circle-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={true}
-                    data-inverted={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={28}
+                    color="default"
                     data-testid="menu-trigger-button"
                     id="test-ID"
-                    onPress={[Function]}
+                    onClick={[Function]}
                     onPressStart={[Function]}
-                    useNativeKeyDown={true}
+                    prefixIcon="more-bold"
+                    size={28}
+                    variant="tertiary"
                   >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
-                      >
-                        <button
-                          aria-controls={null}
-                          aria-expanded={false}
-                          aria-haspopup={true}
-                          aria-label="Menu trigger label"
-                          className="md-button-circle-wrapper md-button-simple-wrapper"
-                          data-color="primary"
-                          data-disabled={false}
-                          data-ghost={true}
-                          data-inverted={false}
-                          data-multiple-children={false}
-                          data-outline={false}
-                          data-shallow-disabled={false}
-                          data-size={28}
-                          data-testid="menu-trigger-button"
-                          id="test-ID"
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          type="button"
-                        >
-                          <Icon
-                            name="more"
-                            scale={24}
-                            weight="bold"
-                          >
-                            <Icon
-                              className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                              data-autoscale={false}
-                              data-scale={24}
-                              data-test="more"
-                              name="more-bold"
-                              style={Object {}}
-                            >
-                              <mdc-icon
-                                class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                                data-autoscale={false}
-                                data-scale={24}
-                                data-test="more"
-                                style={Object {}}
-                                suppressHydrationWarning={true}
-                              />
-                            </Icon>
-                          </Icon>
-                        </button>
-                      </FocusRing>
-                    </FocusRing>
-                  </ButtonSimple>
+                    <mdc-button
+                      aria-controls={null}
+                      aria-expanded={false}
+                      aria-haspopup={true}
+                      aria-label="Menu trigger label"
+                      class="md-button-circle-wrapper"
+                      data-testid="menu-trigger-button"
+                      onPressStart={[Function]}
+                      suppressHydrationWarning={true}
+                    />
+                  </Button>
                 </ButtonCircle>
                 <Portal
                   containerInfo={

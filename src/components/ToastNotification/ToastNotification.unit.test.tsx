@@ -1,12 +1,14 @@
 import React, { ReactElement } from 'react';
 
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import Icon, { IconProps } from '../Icon';
 import ButtonPill, { ButtonPillProps } from '../ButtonPill';
-import ButtonCircle from '../ButtonCircle';
+import '@testing-library/jest-dom';
 
 import ToastNotification, { TOAST_NOTIFICATION_CONSTANTS as CONSTANTS } from './';
 import Text from '../Text';
+import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 
 describe('<ToastNotification />', () => {
   let leadingVisual: ReactElement<IconProps>;
@@ -246,20 +248,20 @@ describe('<ToastNotification />', () => {
     it('should wrap the onClose inside when onClose is provided and closeButtonLabel is undefined', async () => {
       expect.assertions(2);
 
-      const wrapper = await mountAndWait(
+      const { container } = await renderWithWebComponent(
         <ToastNotification aria-label="Some label" onClose={onClose} content={exampleContent} />
       );
-      const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
-      const button = wrapper.find('.md-toast-notification-close-button button');
+      const element = container.querySelector('.md-toast-notification-close-button');
+      const button = container.querySelector('.md-toast-notification-close-button mdc-button');
 
       expect(element).toBeDefined();
-      expect(button.props()['aria-label']).toBe(undefined);
+      expect(button).not.toHaveAttribute('aria-label');
     });
 
     it('should have label of the close button when both onClose and closeButtonLabel defined', async () => {
       expect.assertions(2);
 
-      const wrapper = await mountAndWait(
+      const { container } = await renderWithWebComponent(
         <ToastNotification
           aria-label="Some label"
           onClose={onClose}
@@ -267,11 +269,11 @@ describe('<ToastNotification />', () => {
           content={exampleContent}
         />
       );
-      const element = wrapper.find('.md-toast-notification-close-button').getDOMNode();
-      const button = wrapper.find('.md-toast-notification-close-button button');
+      const element = container.querySelector('.md-toast-notification-close-button');
+      const button = container.querySelector('.md-toast-notification-close-button mdc-button');
 
       expect(element).toBeDefined();
-      expect(button.props()['aria-label']).toBe('close');
+      expect(button).toHaveAttribute('aria-label', 'close');
     });
 
     it('should wrap Icon inside leadingVisual when Icon is provided', async () => {
@@ -338,27 +340,21 @@ describe('<ToastNotification />', () => {
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(
+      await renderWithWebComponent(
         <ToastNotification
-          aria-label='Some label'
+          aria-label="Some label"
           onClose={mockCallback}
           content={exampleContent}
           closeButtonLabel="Close notification"
         />
       );
-      const component = wrapper.find(ButtonCircle);
-
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-        altKey: false,
+      const component = screen.getByRole('button', {
+        name: 'Close notification',
       });
 
-      expect(mockCallback).toBeCalledTimes(1);
+      await userEvent.click(component);
+
+      expect(mockCallback).toHaveBeenCalledTimes(1);
     });
   });
 });

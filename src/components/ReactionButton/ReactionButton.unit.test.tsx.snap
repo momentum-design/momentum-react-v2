@@ -5,67 +5,32 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
   <ButtonCircle
     className="md-reaction-button-wrapper"
     data-reacted={false}
-    ghost={true}
     size={32}
+    variant="tertiary"
   >
-    <ButtonSimple
-      aria-disabled={false}
+    <Button
       className="md-button-circle-wrapper md-reaction-button-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-ghost={true}
-      data-inverted={false}
-      data-multiple-children={false}
-      data-outline={false}
+      color="default"
       data-reacted={false}
-      data-shallow-disabled={false}
-      data-size={32}
+      size={32}
+      variant="tertiary"
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+      <mdc-button
+        class="md-button-circle-wrapper md-reaction-button-wrapper"
+        data-reacted={false}
+        suppressHydrationWarning={true}
+      >
+        <Reaction
+          name="haha"
         >
-          <button
-            className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-ghost={true}
-            data-inverted={false}
-            data-multiple-children={false}
-            data-outline={false}
-            data-reacted={false}
-            data-shallow-disabled={false}
-            data-size={32}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <Reaction
-              name="haha"
-            >
-              <div
-                className="md-reaction-wrapper md-icon-scales"
-                data-name="haha"
-                data-scale={12}
-              />
-            </Reaction>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+          <div
+            className="md-reaction-wrapper md-icon-scales"
+            data-name="haha"
+            data-scale={12}
+          />
+        </Reaction>
+      </mdc-button>
+    </Button>
   </ButtonCircle>
 </ReactionButton>
 `;
@@ -77,67 +42,32 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
   <ButtonCircle
     className="example-class md-reaction-button-wrapper"
     data-reacted={false}
-    ghost={true}
     size={32}
+    variant="tertiary"
   >
-    <ButtonSimple
-      aria-disabled={false}
+    <Button
       className="md-button-circle-wrapper example-class md-reaction-button-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-ghost={true}
-      data-inverted={false}
-      data-multiple-children={false}
-      data-outline={false}
+      color="default"
       data-reacted={false}
-      data-shallow-disabled={false}
-      data-size={32}
+      size={32}
+      variant="tertiary"
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+      <mdc-button
+        class="md-button-circle-wrapper example-class md-reaction-button-wrapper"
+        data-reacted={false}
+        suppressHydrationWarning={true}
+      >
+        <Reaction
+          name="haha"
         >
-          <button
-            className="md-button-circle-wrapper example-class md-reaction-button-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-ghost={true}
-            data-inverted={false}
-            data-multiple-children={false}
-            data-outline={false}
-            data-reacted={false}
-            data-shallow-disabled={false}
-            data-size={32}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <Reaction
-              name="haha"
-            >
-              <div
-                className="md-reaction-wrapper md-icon-scales"
-                data-name="haha"
-                data-scale={12}
-              />
-            </Reaction>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+          <div
+            className="md-reaction-wrapper md-icon-scales"
+            data-name="haha"
+            data-scale={12}
+          />
+        </Reaction>
+      </mdc-button>
+    </Button>
   </ButtonCircle>
 </ReactionButton>
 `;
@@ -149,70 +79,34 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
   <ButtonCircle
     className="md-reaction-button-wrapper"
     data-reacted={false}
-    ghost={true}
     id="example-id"
     size={32}
+    variant="tertiary"
   >
-    <ButtonSimple
-      aria-disabled={false}
+    <Button
       className="md-button-circle-wrapper md-reaction-button-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-ghost={true}
-      data-inverted={false}
-      data-multiple-children={false}
-      data-outline={false}
+      color="default"
       data-reacted={false}
-      data-shallow-disabled={false}
-      data-size={32}
       id="example-id"
+      size={32}
+      variant="tertiary"
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+      <mdc-button
+        class="md-button-circle-wrapper md-reaction-button-wrapper"
+        data-reacted={false}
+        suppressHydrationWarning={true}
+      >
+        <Reaction
+          name="haha"
         >
-          <button
-            className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-ghost={true}
-            data-inverted={false}
-            data-multiple-children={false}
-            data-outline={false}
-            data-reacted={false}
-            data-shallow-disabled={false}
-            data-size={32}
-            id="example-id"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <Reaction
-              name="haha"
-            >
-              <div
-                className="md-reaction-wrapper md-icon-scales"
-                data-name="haha"
-                data-scale={12}
-              />
-            </Reaction>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+          <div
+            className="md-reaction-wrapper md-icon-scales"
+            data-name="haha"
+            data-scale={12}
+          />
+        </Reaction>
+      </mdc-button>
+    </Button>
   </ButtonCircle>
 </ReactionButton>
 `;
@@ -224,67 +118,32 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
   <ButtonCircle
     className="md-reaction-button-wrapper"
     data-reacted={true}
-    ghost={true}
     size={32}
+    variant="tertiary"
   >
-    <ButtonSimple
-      aria-disabled={false}
+    <Button
       className="md-button-circle-wrapper md-reaction-button-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-ghost={true}
-      data-inverted={false}
-      data-multiple-children={false}
-      data-outline={false}
+      color="default"
       data-reacted={true}
-      data-shallow-disabled={false}
-      data-size={32}
+      size={32}
+      variant="tertiary"
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+      <mdc-button
+        class="md-button-circle-wrapper md-reaction-button-wrapper"
+        data-reacted={true}
+        suppressHydrationWarning={true}
+      >
+        <Reaction
+          name="haha"
         >
-          <button
-            className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-ghost={true}
-            data-inverted={false}
-            data-multiple-children={false}
-            data-outline={false}
-            data-reacted={true}
-            data-shallow-disabled={false}
-            data-size={32}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <Reaction
-              name="haha"
-            >
-              <div
-                className="md-reaction-wrapper md-icon-scales"
-                data-name="haha"
-                data-scale={12}
-              />
-            </Reaction>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+          <div
+            className="md-reaction-wrapper md-icon-scales"
+            data-name="haha"
+            data-scale={12}
+          />
+        </Reaction>
+      </mdc-button>
+    </Button>
   </ButtonCircle>
 </ReactionButton>
 `;
@@ -300,82 +159,47 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
   <ButtonCircle
     className="md-reaction-button-wrapper"
     data-reacted={false}
-    ghost={true}
     size={32}
     style={
       Object {
         "color": "pink",
       }
     }
+    variant="tertiary"
   >
-    <ButtonSimple
-      aria-disabled={false}
+    <Button
       className="md-button-circle-wrapper md-reaction-button-wrapper"
-      data-color="primary"
-      data-disabled={false}
-      data-ghost={true}
-      data-inverted={false}
-      data-multiple-children={false}
-      data-outline={false}
+      color="default"
       data-reacted={false}
-      data-shallow-disabled={false}
-      data-size={32}
+      size={32}
       style={
         Object {
           "color": "pink",
         }
       }
+      variant="tertiary"
     >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
+      <mdc-button
+        class="md-button-circle-wrapper md-reaction-button-wrapper"
+        data-reacted={false}
+        style={
+          Object {
+            "color": "pink",
+          }
+        }
+        suppressHydrationWarning={true}
+      >
+        <Reaction
+          name="haha"
         >
-          <button
-            className="md-button-circle-wrapper md-reaction-button-wrapper md-button-simple-wrapper"
-            data-color="primary"
-            data-disabled={false}
-            data-ghost={true}
-            data-inverted={false}
-            data-multiple-children={false}
-            data-outline={false}
-            data-reacted={false}
-            data-shallow-disabled={false}
-            data-size={32}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            style={
-              Object {
-                "color": "pink",
-              }
-            }
-            type="button"
-          >
-            <Reaction
-              name="haha"
-            >
-              <div
-                className="md-reaction-wrapper md-icon-scales"
-                data-name="haha"
-                data-scale={12}
-              />
-            </Reaction>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
+          <div
+            className="md-reaction-wrapper md-icon-scales"
+            data-name="haha"
+            data-scale={12}
+          />
+        </Reaction>
+      </mdc-button>
+    </Button>
   </ButtonCircle>
 </ReactionButton>
 `;

@@ -66,27 +66,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot 1`] = `
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -177,27 +168,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -288,27 +270,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot if notification c
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -399,27 +372,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot when limit is set
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -510,27 +474,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with ariaLabel pr
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -621,27 +576,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with body class n
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -732,27 +678,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with className 1`
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -843,27 +780,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with container cl
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -950,27 +878,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different at
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1054,27 +973,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different po
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1169,27 +1079,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with different zI
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1280,27 +1181,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with enter animat
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1391,27 +1283,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with id 1`] = `
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1502,27 +1385,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with newest on to
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1613,27 +1487,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with style 1`] = 
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>
@@ -1724,27 +1589,18 @@ exports[`<NotificationSystem /> snapshot should match snapshot with toast class 
                   <div
                     class="md-toast-notification-close-button"
                   >
-                    <button
+                    <mdc-button
                       aria-label="Close notification"
-                      class="md-button-circle-wrapper md-button-simple-wrapper"
-                      data-color="primary"
-                      data-disabled="false"
-                      data-ghost="true"
-                      data-inverted="false"
-                      data-multiple-children="false"
-                      data-outline="false"
-                      data-shallow-disabled="false"
-                      data-size="20"
+                      class="md-button-circle-wrapper"
+                      color="default"
+                      data-btn-type="icon"
+                      prefix-icon="cancel-bold"
+                      role="button"
+                      size="20"
+                      tabindex="0"
                       type="button"
-                    >
-                      <mdc-icon
-                        class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale="false"
-                        data-scale="16"
-                        data-test="cancel"
-                        name="cancel-bold"
-                      />
-                    </button>
+                      variant="tertiary"
+                    />
                   </div>
                 </div>
               </div>

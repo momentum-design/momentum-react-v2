@@ -69,56 +69,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -195,56 +158,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -322,56 +248,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot with aria-label 1`] = `
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -381,52 +270,17 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
 <ButtonCircle
   className="example-class"
 >
-  <ButtonSimple
-    aria-disabled={false}
+  <Button
     className="md-button-circle-wrapper example-class"
-    data-color="primary"
-    data-disabled={false}
-    data-ghost={false}
-    data-inverted={false}
-    data-multiple-children={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+    color="default"
+    size={40}
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper example-class md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-inverted={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
+    <mdc-button
+      class="md-button-circle-wrapper example-class"
+      suppressHydrationWarning={true}
+    />
+  </Button>
 </ButtonCircle>
 `;
 
@@ -434,54 +288,18 @@ exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
 <ButtonCircle
   id="example-id"
 >
-  <ButtonSimple
-    aria-disabled={false}
+  <Button
     className="md-button-circle-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-ghost={false}
-    data-inverted={false}
-    data-multiple-children={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+    color="default"
     id="example-id"
+    size={40}
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-inverted={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          id="example-id"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
+    <mdc-button
+      class="md-button-circle-wrapper"
+      suppressHydrationWarning={true}
+    />
+  </Button>
 </ButtonCircle>
 `;
 
@@ -556,56 +374,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -683,56 +464,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -809,56 +553,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -935,56 +642,19 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
     <ButtonCircle
       key="1"
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-circle-wrapper"
-        data-color="primary"
-        data-disabled={false}
-        data-ghost={false}
-        data-inverted={false}
-        data-multiple-children={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        color="default"
+        size={40}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-circle-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={false}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                A
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-circle-wrapper"
+          suppressHydrationWarning={true}
+        >
+          A
+        </mdc-button>
+      </Button>
     </ButtonCircle>
   </div>
 </ButtonGroup>
@@ -998,61 +668,26 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
     }
   }
 >
-  <ButtonSimple
-    aria-disabled={false}
+  <Button
     className="md-button-circle-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-ghost={false}
-    data-inverted={false}
-    data-multiple-children={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+    color="default"
+    size={40}
     style={
       Object {
         "color": "pink",
       }
     }
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-circle-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-ghost={false}
-          data-inverted={false}
-          data-multiple-children={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "pink",
-            }
-          }
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
+    <mdc-button
+      class="md-button-circle-wrapper"
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+      suppressHydrationWarning={true}
+    />
+  </Button>
 </ButtonCircle>
 `;

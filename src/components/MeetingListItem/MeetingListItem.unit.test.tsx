@@ -7,8 +7,8 @@ import Icon from '../Icon';
 import Avatar from '../Avatar';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
-import { mountAndWait } from '../../../test/utils';
-import { render } from '@testing-library/react';
+import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
+import { render, screen } from '@testing-library/react';
 import Text from '../Text';
 import ButtonHyperlink from '../ButtonHyperlink';
 import '@testing-library/jest-dom';
@@ -162,18 +162,18 @@ describe('<MeetingListItem />', () => {
       expect(element.getAttribute('data-disabled')).toBe('true');
     });
 
-    it('should have disable buttons inside if isDisabled is provided', () => {
+    it('should have disable buttons inside if isDisabled is provided', async () => {
       expect.assertions(3);
 
       const isDisabled = true;
 
-      const container = mount(
+      await renderWithWebComponent(
         <MeetingListItem
           isDisabled={isDisabled}
           buttonGroup={
             <ButtonGroup>
-              <ButtonCircle key="1">Test</ButtonCircle>
-              <ButtonPill key="2">Test</ButtonPill>
+              <ButtonCircle key="1">Test 1</ButtonCircle>
+              <ButtonPill key="2">Test 2</ButtonPill>
             </ButtonGroup>
           }
         >
@@ -181,13 +181,13 @@ describe('<MeetingListItem />', () => {
         </MeetingListItem>
       );
 
-      const element = container.find(MeetingListItem).getDOMNode();
-      const buttonCircle = container.find(ButtonCircle).getDOMNode();
-      const buttonPill = container.find(ButtonPill).getDOMNode();
+      const element = screen.getByRole('listitem');
+      const buttonCircle = screen.getByRole('button', { name: 'Test 1' });
+      const buttonPill = screen.getByRole('button', { name: 'Test 2' });
 
       expect(element.getAttribute('data-disabled')).toBe('true');
-      expect(buttonCircle.getAttribute('data-disabled')).toBe('true');
-      expect(buttonPill.getAttribute('data-disabled')).toBe('true');
+      expect(buttonCircle).toBeDisabled();
+      expect(buttonPill).toBeDisabled();
     });
 
     it('should have provided data-size', () => {
@@ -211,32 +211,35 @@ describe('<MeetingListItem />', () => {
     });
 
     it('should have appropriate sizes for button group', async () => {
-      expect.assertions(5);
+      expect.assertions(4);
 
-      const container = await mountAndWait(
+      await renderWithWebComponent(
         <MeetingListItem
           buttonGroup={
             <ButtonGroup>
-              <ButtonPill key="1" className="button-pill" />
+              <ButtonPill key="1" className="button-pill">
+                Test 1
+              </ButtonPill>
               <ButtonCircle key="2" className="button-circle">
+                Test 2
                 <Icon name="chat" />
               </ButtonCircle>
-              <Icon key="3" name="placeholder" />
-              <Avatar key="4" className="avatar" />
+              <Icon key="3" name="placeholder" data-testid="icon-testid" />
+              <Avatar key="4" className="avatar" data-testid="avatar-testid" />
             </ButtonGroup>
           }
         />
       );
 
-      const element = container.find(MeetingListItem).getDOMNode();
+      const buttonPill = screen.getByRole('button', { name: 'Test 1' });
+      const buttonCircle = screen.getByRole('button', { name: 'Test 2' });
+      const icon = screen.getByTestId('icon-testid');
+      const avatar = screen.getByTestId('avatar-testid');
 
-      expect(element.getElementsByClassName('button-pill')[0].getAttribute('data-size')).toBe('28');
-      expect(element.getElementsByClassName('button-circle')[0].getAttribute('data-size')).toBe(
-        '32'
-      );
-      expect(element.getElementsByTagName('mdc-icon')[0].getAttribute('data-scale')).toBe('12');
-      expect(element.getElementsByTagName('mdc-icon')[1].getAttribute('data-scale')).toBe('12');
-      expect(element.getElementsByClassName('avatar')[0].getAttribute('data-size')).toBe('32');
+      expect(buttonPill).toHaveAttribute('data-size', '28');
+      expect(buttonCircle).toHaveAttribute('size', '32');
+      expect(icon).toHaveAttribute('data-scale', '12');
+      expect(avatar).toHaveAttribute('data-size', '32');
     });
   });
 
