@@ -31,7 +31,7 @@ const Example: Story<TooltipPopoverComboProps> = () => {
   const triggerComponent = (
     <ButtonCircle
       size={40}
-      color="negative"
+      color="cancel"
       prefixIcon="cancel-bold"
       style={{
         alignItems: 'center',
