@@ -264,9 +264,12 @@ const ListItemWithChangingContent = () => {
               trigger="mouseenter"
               placement="bottom"
               triggerComponent={
-                <ButtonCircle size={20} ghost outline onPress={handleShowTextInstead}>
-                  <Icon name="plus" weight="bold" scale={16} />
-                </ButtonCircle>
+                <ButtonCircle
+                  size={20}
+                  variant="secondary"
+                  onClick={handleShowTextInstead}
+                  prefixIcon="plus-bold"
+                />
               }
             >
               Extra button to toggle text

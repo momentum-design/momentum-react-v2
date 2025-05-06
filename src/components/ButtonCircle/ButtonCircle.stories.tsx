@@ -53,6 +53,7 @@ NotGhostNotOutlineNotInverted.args = {
   outline: false,
   ghost: false,
   inverted: false,
+  children: <Icon name="chat-group" autoScale={150} />,
 };
 
 NotGhostNotOutlineNotInverted.parameters = {
@@ -78,6 +79,7 @@ GhostNotOutlineNotInverted.args = {
   outline: false,
   ghost: true,
   inverted: false,
+  children: <Icon name="chat-group" autoScale={150} />,
 };
 
 GhostNotOutlineNotInverted.parameters = {
@@ -103,6 +105,7 @@ NotGhostOutlineNotInverted.args = {
   outline: true,
   ghost: false,
   inverted: false,
+  children: <Icon name="chat-group" autoScale={150} />,
 };
 
 NotGhostOutlineNotInverted.parameters = {
@@ -128,6 +131,7 @@ NotGhostNotOutlineInverted.args = {
   outline: false,
   ghost: false,
   inverted: true,
+  children: <Icon name="chat-group" autoScale={150} />,
 };
 
 NotGhostNotOutlineInverted.parameters = {
@@ -153,6 +157,7 @@ GhostOutlineNotInverted.args = {
   outline: true,
   ghost: true,
   inverted: false,
+  children: <Icon name="chat-group" autoScale={150} />,
 };
 
 GhostOutlineNotInverted.parameters = {
@@ -178,6 +183,7 @@ NotGhostOutlineInverted.args = {
   outline: true,
   ghost: false,
   inverted: true,
+  children: <Icon name="chat-group" autoScale={150} />,
 };
 
 NotGhostOutlineInverted.parameters = {

@@ -318,7 +318,7 @@ const commonMdcButton = {
       },
     },
   },
-  'soft-disabled': {
+  softDisabled: {
     control: { type: 'boolean' },
     description: `Whether the button is soft disabled. When set to true, the button appears visually disabled but still allows focus, click, and keyboard actions to be passed through.
 
@@ -364,6 +364,7 @@ Important: When using soft disabled, consumers must ensure that the button behav
     action: 'onClick',
     description: 'Handler that is called when the element is clicked',
     table: {
+      category: 'Mdc Button Attributes',
       type: {
         summary: '(e: MouseEvent) => void',
       },
@@ -913,24 +914,10 @@ const commonAriaButtonToggle = {
       },
     },
   },
-  defaultSelected: {
-    description: 'Whether the element should be selected (uncontrolled).',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
   onChange: {
     action: 'onPress',
     description: "Handler that is called when the element's selection state chnges.",
     table: {
-      category: 'React Aria - ButtonToggle',
       type: {
         summary: '(isSelected: boolean) => void',
       },

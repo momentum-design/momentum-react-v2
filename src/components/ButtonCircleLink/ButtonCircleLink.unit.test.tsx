@@ -2,8 +2,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ButtonCircleLink, { BUTTON_CIRCLE_LINK_CONSTANTS as CONSTANTS } from './';
-import { COLORS, DEFAULTS, SIZES } from '../ButtonCircle/ButtonCircle.constants';
 import { triggerPress } from '../../../test/utils';
+
+const { COLORS, SIZES, DEFAULTS } = CONSTANTS;
 
 const href = 'https://www.webex.com';
 

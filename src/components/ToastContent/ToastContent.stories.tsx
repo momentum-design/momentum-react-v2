@@ -7,7 +7,6 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import ButtonCircle from '../ButtonCircle';
 import ButtonGroup from '../ButtonGroup';
 import ButtonPill from '../ButtonPill';
-import Icon from '../Icon';
 
 import ToastContent, { ToastContentProps } from './';
 import argTypes from './ToastContent.stories.args';
@@ -33,9 +32,7 @@ Example.args = {
   actionColor: 'success',
   actions: (
     <ButtonGroup spaced>
-      <ButtonCircle outline size={28}>
-        <Icon name="alarm" weight="bold" autoScale={125} />
-      </ButtonCircle>
+      <ButtonCircle size={28} variant="secondary" prefixIcon="alarm-bold" />
       <ButtonPill color="message" size={28}>
         Message
       </ButtonPill>
@@ -84,9 +81,7 @@ Common.parameters = {
       actionColor: 'join',
       actions: (
         <ButtonGroup spaced>
-          <ButtonCircle outline inverted size={28}>
-            <Icon name="alarm" weight="bold" autoScale={125} />
-          </ButtonCircle>
+          <ButtonCircle inverted size={28} variant="secondary" prefixIcon="alarm-bold" />
           <ButtonPill color="message" size={28}>
             Message
           </ButtonPill>
@@ -108,9 +103,7 @@ Common.parameters = {
       info: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing.',
       actions: (
         <ButtonGroup spaced>
-          <ButtonCircle outline inverted size={28}>
-            <Icon name="alarm" weight="bold" autoScale={125} />
-          </ButtonCircle>
+          <ButtonCircle inverted variant="secondary" prefixIcon="alarm-bold" size={28} />
           <ButtonPill color="join" size={28}>
             Accept
           </ButtonPill>

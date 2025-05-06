@@ -47,13 +47,12 @@ Example.args = {
   ),
   triggerComponent: (
     <ButtonCircle
-      ghost
       size={64}
       aria-label="About toggletip"
       style={{ margin: '10rem auto', display: 'flex' }}
-    >
-      <Icon name="info-badge" weight="filled" scale={32} />
-    </ButtonCircle>
+      prefixIcon="info-badge-filled"
+      variant="tertiary"
+    />
   ),
 };
 

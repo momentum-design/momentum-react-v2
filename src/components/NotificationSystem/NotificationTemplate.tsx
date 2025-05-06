@@ -39,17 +39,16 @@ export type NotificationTemplateProps = AriaLabelRequired & {
    * aria-label used for the toast close (x) button.
    */
   toastCloseButtonLabel: string;
-}
+};
 
 /**
  * NOTE: this component is only used for the stories
  */
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
-  const { content, closeToast, closeButtonText, className, toastCloseButtonLabel, ...rest } =
-    props;
+  const { content, closeToast, closeButtonText, className, toastCloseButtonLabel, ...rest } = props;
 
   const handleClose = React.useCallback(
-    (e: PressEvent) => {
+    (e: MouseEvent | PressEvent) => {
       closeToast?.(e as unknown as React.MouseEvent<HTMLElement, MouseEvent>);
     },
     [closeToast]

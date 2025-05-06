@@ -83,15 +83,13 @@ Common.parameters = {
       label: 'Recording with buttons',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonCircle key="btn-info" ghost={true}>
-            <Icon name="info-circle" />
-          </ButtonCircle>
-          <ButtonCircle key="btn-share" ghost={true}>
-            <Icon name="share-c-native-iph" />
-          </ButtonCircle>
-          <ButtonCircle key="btn-chat" ghost={true}>
-            <Icon name="chat" />
-          </ButtonCircle>
+          <ButtonCircle key="btn-info" variant="tertiary" prefixIcon="info-circle-regular" />
+          <ButtonCircle
+            key="btn-share"
+            variant="tertiary"
+            prefixIcon="share-c-native-iph-regular"
+          />
+          <ButtonCircle key="btn-chat" variant="tertiary" prefixIcon="chat-regular" />
         </ButtonGroup>
       ),
       children: (
@@ -115,10 +113,10 @@ Common.parameters = {
       buttonGroup: (
         <ButtonGroup spaced>
           <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
-          <ButtonCircle key="btn-info" ghost={true}>
+          <ButtonCircle key="btn-info" variant="tertiary">
             <Icon name="info-circle" />
           </ButtonCircle>
-          <ButtonCircle key="btn-chat" ghost={true}>
+          <ButtonCircle key="btn-chat" variant="tertiary">
             <Icon name="chat" />
           </ButtonCircle>
         </ButtonGroup>
@@ -252,12 +250,8 @@ Common.parameters = {
       buttonGroup: (
         <ButtonGroup spaced>
           <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
-          <ButtonCircle key="button-copy" ghost={true}>
-            <Icon name="copy" />
-          </ButtonCircle>
-          <ButtonCircle key="button-chat" ghost={true}>
-            <Icon name="chat" />
-          </ButtonCircle>
+          <ButtonCircle key="button-copy" variant="tertiary" prefixIcon="copy-regular" />
+          <ButtonCircle key="button-chat" variant="tertiary" prefixIcon="chat-regular" />
         </ButtonGroup>
       ),
       image: <Icon key="placeholder-icon" name="placeholder" />,

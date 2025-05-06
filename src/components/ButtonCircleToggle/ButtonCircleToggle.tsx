@@ -3,14 +3,14 @@ import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 import type { Button, IconButtonSize } from '@momentum-design/components';
 import { DEFAULTS } from './ButtonCircleToggle.constants';
-import { DEFAULTS as BUTTON_CIRCLE_DEFAULTS } from '../ButtonCircle/ButtonCircle.constants';
 import type { Props } from './ButtonCircleToggle.types';
+
 const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
     isSelected = DEFAULTS.SELECTED,
     className,
     outline = DEFAULTS.OUTLINE,
-    size = BUTTON_CIRCLE_DEFAULTS.SIZE,
+    size = DEFAULTS.SIZE,
     ...otherProps
   } = props;
 

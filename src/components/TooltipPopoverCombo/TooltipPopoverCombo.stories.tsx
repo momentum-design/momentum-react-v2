@@ -31,7 +31,8 @@ const Example: Story<TooltipPopoverComboProps> = () => {
   const triggerComponent = (
     <ButtonCircle
       size={40}
-      color="cancel"
+      color="negative"
+      prefixIcon="cancel-bold"
       style={{
         alignItems: 'center',
         justifyContent: 'center',
@@ -39,9 +40,7 @@ const Example: Story<TooltipPopoverComboProps> = () => {
         display: 'flex',
       }}
       id="storybook-id-example"
-    >
-      <Icon name="cancel" weight="bold" />
-    </ButtonCircle>
+    />
   );
 
   const [popoverInstance, setPopoverInstance] = useState<PopoverInstance>();

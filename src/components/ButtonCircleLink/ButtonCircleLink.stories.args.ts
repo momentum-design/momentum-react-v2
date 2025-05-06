@@ -1,11 +1,11 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
 import LinkArgTypes from '../Link/Link.stories.args';
-import { BUTTON_CIRCLE_CONSTANTS as CONSTANTS } from '../ButtonCircle';
+import { DEFAULTS, COLORS, SIZES } from './ButtonCircleLink.constants';
 
 const buttonCircleLinkArgTypes = {
   color: {
     description: 'Modifies the color of this component.',
-    options: [undefined, ...Object.values(CONSTANTS.COLORS)],
+    options: [undefined, ...Object.values(COLORS)],
     control: { type: 'select' },
     table: {
       type: {
@@ -25,7 +25,7 @@ const buttonCircleLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED,
+        summary: DEFAULTS.DISABLED,
       },
     },
   },
@@ -39,7 +39,7 @@ const buttonCircleLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+        summary: DEFAULTS.SHALLOW_DISABLED,
       },
     },
   },
@@ -52,7 +52,7 @@ const buttonCircleLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GHOST,
+        summary: DEFAULTS.GHOST,
       },
     },
   },
@@ -65,7 +65,7 @@ const buttonCircleLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OUTLINE,
+        summary: DEFAULTS.OUTLINE,
       },
     },
   },
@@ -79,20 +79,20 @@ const buttonCircleLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.INVERTED,
+        summary: DEFAULTS.INVERTED,
       },
     },
   },
   size: {
     description: 'Modifies the size of this component.',
-    options: [undefined, ...Object.values(CONSTANTS.SIZES)],
+    options: [undefined, ...Object.values(SIZES)],
     control: { type: 'select' },
     table: {
       type: {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
+        summary: DEFAULTS.SIZE,
       },
     },
   },

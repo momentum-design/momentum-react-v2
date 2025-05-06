@@ -9,7 +9,6 @@ import ButtonCircle from '../ButtonCircle';
 import ButtonControl from '../ButtonControl';
 import ButtonGroup from '../ButtonGroup';
 import ButtonPill from '../ButtonPill';
-import Icon from '../Icon';
 import ToastContent from '../ToastContent';
 import ToastDetails from '../ToastDetails';
 
@@ -30,9 +29,7 @@ export default {
 
 const commonButtons = (
   <ButtonGroup spaced>
-    <ButtonCircle outline ghost size={28}>
-      <Icon name="alarm" weight="bold" autoScale={125} />
-    </ButtonCircle>
+    <ButtonCircle size={28} prefixIcon="alarm-bold" variant="secondary" />
     <ButtonPill color="message" size={28}>
       Message
     </ButtonPill>

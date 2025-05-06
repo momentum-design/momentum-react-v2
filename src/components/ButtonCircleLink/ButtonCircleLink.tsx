@@ -1,7 +1,6 @@
 import React, { Children, RefObject, forwardRef, useRef } from 'react';
 import classnames from 'classnames';
-import { STYLE } from './ButtonCircleLink.constants';
-import { DEFAULTS } from '../ButtonCircle/ButtonCircle.constants';
+import { STYLE, DEFAULTS } from './ButtonCircleLink.constants';
 import { Props } from './ButtonCircleLink.types';
 import './ButtonCircleLink.style.scss';
 import Link from '../Link';

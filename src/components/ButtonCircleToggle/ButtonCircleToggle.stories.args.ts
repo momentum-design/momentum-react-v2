@@ -1,16 +1,34 @@
 import { commonStyles, commonAriaButtonToggle } from '../../storybook/helper.stories.argtypes';
-import { BUTTON_CIRCLE_TOGGLE_CONSTANTS as CONSTANTS } from './';
-import { buttonCircleArgTypes } from '../ButtonCircle/ButtonCircle.stories.args';
+import { DEFAULTS } from './ButtonCircleToggle.constants';
 
 const buttonCircleToggleArgTypes = {
-  ...buttonCircleArgTypes,
+  prefixIcon: {
+    description: 'The icon to display in the button.',
+    control: { type: 'text' },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+  },
+  isSelected: {
+    description: 'Whether the element should be selected (controlled).',
+    options: [true, false],
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.SELECTED,
+      },
+    },
+  },
   ...commonAriaButtonToggle,
 };
-
-delete buttonCircleToggleArgTypes.color;
-delete buttonCircleToggleArgTypes.ghost;
-
-buttonCircleToggleArgTypes.outline.table.defaultValue.summary = CONSTANTS.DEFAULTS.OUTLINE;
 
 export { buttonCircleToggleArgTypes };
 
