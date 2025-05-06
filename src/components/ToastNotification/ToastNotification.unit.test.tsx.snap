@@ -623,83 +623,26 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
         >
           <ButtonCircle
             aria-label="Close toast"
-            ghost={true}
-            onPress={[Function]}
+            onClick={[Function]}
+            prefixIcon="cancel-bold"
             size={20}
+            variant="tertiary"
           >
-            <ButtonSimple
-              aria-disabled={false}
+            <Button
               aria-label="Close toast"
               className="md-button-circle-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-ghost={true}
-              data-inverted={false}
-              data-multiple-children={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={20}
-              onPress={[Function]}
+              color="default"
+              onClick={[Function]}
+              prefixIcon="cancel-bold"
+              size={20}
+              variant="tertiary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-label="Close toast"
-                    className="md-button-circle-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-ghost={true}
-                    data-inverted={false}
-                    data-multiple-children={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={20}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <Icon
-                      name="cancel"
-                      scale={16}
-                      weight="bold"
-                    >
-                      <Icon
-                        className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                        data-autoscale={false}
-                        data-scale={16}
-                        data-test="cancel"
-                        name="cancel-bold"
-                        style={Object {}}
-                      >
-                        <mdc-icon
-                          class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
-                          data-autoscale={false}
-                          data-scale={16}
-                          data-test="cancel"
-                          style={Object {}}
-                          suppressHydrationWarning={true}
-                        />
-                      </Icon>
-                    </Icon>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-label="Close toast"
+                class="md-button-circle-wrapper"
+                suppressHydrationWarning={true}
+              />
+            </Button>
           </ButtonCircle>
         </div>
       </div>

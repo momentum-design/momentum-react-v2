@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderWithWebComponent } from '../../../test/utils';
 
-import ButtonCircleToggle, { BUTTON_CIRCLE_TOGGLE_CONSTANTS as CONSTANTS } from './';
+import ButtonCircleToggle from './';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

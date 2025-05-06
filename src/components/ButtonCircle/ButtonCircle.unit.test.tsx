@@ -1,357 +1,190 @@
-// import React from 'react';
-// import { mount } from 'enzyme';
-
-// import ButtonCircle from './';
-
-// import ButtonSimple from '../ButtonSimple';
-
-// // const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
-
-// describe('<ButtonCircle />', () => {
-//   describe('snapshot', () => {
-//     it('should match snapshot', () => {
-//       expect.assertions(1);
-
-//       const container = mount(<ButtonCircle />);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with multiple children', () => {
-//       expect.assertions(1);
-
-//       const container = mount(
-//         <ButtonCircle>
-//           <div>X</div>
-//           <div>Y</div>
-//         </ButtonCircle>
-//       );
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with className', () => {
-//       expect.assertions(1);
-
-//       const className = 'example-class';
-
-//       const container = mount(<ButtonCircle className={className} />);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with id', () => {
-//       expect.assertions(1);
-
-//       const id = 'example-id';
-
-//       const container = mount(<ButtonCircle id={id} />);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with style', () => {
-//       expect.assertions(1);
-
-//       const style = { color: 'pink' };
-
-//       const container = mount(<ButtonCircle style={style} />);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with color', () => {
-//       expect.assertions(1);
-
-//       const color = COLORS[Object.keys(COLORS)[Object.keys(COLORS).length - 1]];
-
-//       const container = mount(<ButtonCircle color={color}>X</ButtonCircle>);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with size', () => {
-//       expect.assertions(1);
-
-//       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
-
-//       const container = mount(<ButtonCircle size={size}>X</ButtonCircle>);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot when disabled', () => {
-//       expect.assertions(1);
-
-//       const disabled = !DEFAULTS.DISABLED;
-
-//       const container = mount(<ButtonCircle disabled={disabled}>X</ButtonCircle>);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot when shallow disabled', () => {
-//       expect.assertions(1);
-
-//       const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
-
-//       const container = mount(<ButtonCircle shallowDisabled={shallowDisabled}>X</ButtonCircle>);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot when a ghost', () => {
-//       expect.assertions(1);
-
-//       const ghost = !DEFAULTS.GHOST;
-
-//       const container = mount(<ButtonCircle ghost={ghost}>X</ButtonCircle>);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot when a ghost and disabled', () => {
-//       expect.assertions(1);
-
-//       const ghost = !DEFAULTS.GHOST;
-//       const disabled = !DEFAULTS.DISABLED;
-
-//       const container = mount(
-//         <ButtonCircle ghost={ghost} disabled={disabled}>
-//           X
-//         </ButtonCircle>
-//       );
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot when color is outlined', () => {
-//       expect.assertions(1);
-
-//       const outline = !DEFAULTS.OUTLINE;
-
-//       const container = mount(<ButtonCircle outline={outline}>X</ButtonCircle>);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot with title', () => {
-//       expect.assertions(1);
-
-//       const title = 'Example Text';
-
-//       const container = mount(<ButtonCircle title={title} />);
-
-//       expect(container).toMatchSnapshot();
-//     });
-
-//     it('should match snapshot when color is outlined and inverted is set', () => {
-//       expect.assertions(1);
-
-//       const outline = !DEFAULTS.OUTLINE;
-//       const inverted = !DEFAULTS.INVERTED;
-
-//       const container = mount(<ButtonCircle outline={outline} inverted={inverted} />);
-
-//       expect(container).toMatchSnapshot();
-//     });
-//   });
-
-//   describe('attributes', () => {
-//     it('should have its wrapper class', () => {
-//       expect.assertions(1);
-
-//       const element = mount(<ButtonCircle />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.classList.contains(STYLE.wrapper)).toBe(true);
-//     });
-
-//     it('should have provided class when className is provided', () => {
-//       expect.assertions(1);
-
-//       const className = 'example-class';
-
-//       const element = mount(<ButtonCircle className={className} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.classList.contains(className)).toBe(true);
-//     });
-
-//     it('should have provided id when id is provided', () => {
-//       expect.assertions(1);
-
-//       const id = 'example-id';
-
-//       const element = mount(<ButtonCircle id={id} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.id).toBe(id);
-//     });
-
-//     it('should have provided style when style is provided', () => {
-//       expect.assertions(1);
-
-//       const style = { color: 'pink' };
-//       const styleString = 'color: pink;';
-
-//       const element = mount(<ButtonCircle style={style} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('style')).toBe(styleString);
-//     });
-
-//     it('should pass disabled prop', () => {
-//       expect.assertions(1);
-
-//       const disabled = !DEFAULTS.DISABLED;
-
-//       const element = mount(<ButtonCircle disabled={disabled} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-disabled')).toBe(`${disabled}`);
-//     });
-
-//     it('should pass shallow disabled prop', () => {
-//       expect.assertions(2);
-
-//       const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
-
-//       const element = mount(<ButtonCircle shallowDisabled={shallowDisabled} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-shallow-disabled')).toBe(`${shallowDisabled}`);
-//       expect(element.getAttribute('aria-disabled')).toBe('true');
-//     });
-
-//     it('should pass ghost prop', () => {
-//       expect.assertions(1);
-
-//       const ghost = !DEFAULTS.GHOST;
-
-//       const element = mount(<ButtonCircle ghost={ghost} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-ghost')).toBe(`${ghost}`);
-//     });
-
-//     it('should pass outline prop', () => {
-//       expect.assertions(1);
-
-//       const outline = !DEFAULTS.OUTLINE;
-
-//       const element = mount(<ButtonCircle outline={outline} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-outline')).toBe(`${outline}`);
-//     });
-
-//     it('should pass size prop', () => {
-//       expect.assertions(1);
-
-//       const size = SIZES[Object.keys(SIZES)[Object.keys(SIZES).length - 1]];
-
-//       const element = mount(<ButtonCircle size={size} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-size')).toBe(`${size}`);
-//     });
-
-//     it('should pass color prop', () => {
-//       expect.assertions(1);
-
-//       const color = COLORS[Object.keys(COLORS)[Object.keys(COLORS).length - 1]];
-
-//       const element = mount(<ButtonCircle color={color} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-color')).toBe(`${color}`);
-//     });
-
-//     it('should have provided title when title is provided', () => {
-//       expect.assertions(1);
-
-//       const title = 'Example Text';
-
-//       const element = mount(<ButtonCircle title={title} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('title')).toBe(title);
-//     });
-
-//     it('should pass inverted prop', () => {
-//       expect.assertions(1);
-
-//       const inverted = !DEFAULTS.INVERTED;
-
-//       const element = mount(<ButtonCircle inverted={inverted} />)
-//         .find(ButtonCircle)
-//         .getDOMNode();
-
-//       expect(element.getAttribute('data-inverted')).toBe(`${inverted}`);
-//     });
-
-//     it('should render ButtonSimple', () => {
-//       expect.assertions(1);
-
-//       const container = mount(<ButtonCircle />);
-
-//       expect(container.find(ButtonSimple).exists()).toBe(true);
-//     });
-//   });
-
-//   describe('actions', () => {
-//     it('should handle mouse press events', () => {
-//       expect.assertions(1);
-
-//       const mockCallback = jest.fn();
-
-//       const component = mount(<ButtonCircle onPress={mockCallback} />).find(ButtonCircle);
-
-//       component.props().onPress({
-//         type: 'press',
-//         pointerType: 'mouse',
-//         altKey: false,
-//         shiftKey: false,
-//         ctrlKey: false,
-//         metaKey: false,
-//         target: component.getDOMNode(),
-//       });
-
-//       expect(mockCallback).toBeCalledTimes(1);
-//     });
-
-//     it('should handle mouse press events if shallow disabled', () => {
-//       expect.assertions(1);
-
-//       const mockCallback = jest.fn();
-
-//       const component = mount(<ButtonCircle shallowDisabled onPress={mockCallback} />).find(
-//         ButtonCircle
-//       );
-
-//       component.props().onPress({
-//         type: 'press',
-//         pointerType: 'mouse',
-//         altKey: false,
-//         shiftKey: false,
-//         ctrlKey: false,
-//         metaKey: false,
-//         target: component.getDOMNode(),
-//       });
-
-//       expect(mockCallback).toBeCalledTimes(1);
-//     });
-//   });
-// });
+import React from 'react';
+import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
+
+import ButtonCircle from './';
+import { renderWithWebComponent } from '../../../test/utils';
+import Icon from '../Icon';
+
+describe('<ButtonCircle />', () => {
+  const setup = async (component: React.ReactElement) => {
+    return renderWithWebComponent(component);
+  };
+
+  describe('snapshot', () => {
+    it('should match snapshot', async () => {
+      const { container } = await setup(<ButtonCircle />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with multiple children', async () => {
+      const { container } = await setup(
+        <ButtonCircle>
+          <div>X</div>
+          <div>Y</div>
+        </ButtonCircle>
+      );
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with className', async () => {
+      const className = 'example-class';
+      const { container } = await setup(<ButtonCircle className={className} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with id', async () => {
+      const id = 'example-id';
+      const { container } = await setup(<ButtonCircle id={id} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with style', async () => {
+      const style = { color: 'pink' };
+      const { container } = await setup(<ButtonCircle style={style} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with color', async () => {
+      const color = 'join';
+      const { container } = await setup(<ButtonCircle color={color}>X</ButtonCircle>);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with size', async () => {
+      const size = 52;
+      const { container } = await setup(<ButtonCircle size={size}>X</ButtonCircle>);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when disabled', async () => {
+      const { container } = await setup(<ButtonCircle disabled>X</ButtonCircle>);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when shallow disabled', async () => {
+      const { container } = await setup(<ButtonCircle shallowDisabled>X</ButtonCircle>);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when a ghost', async () => {
+      const { container } = await setup(<ButtonCircle ghost>X</ButtonCircle>);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when color is outlined', async () => {
+      const { container } = await setup(<ButtonCircle outline>X</ButtonCircle>);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with title', async () => {
+      const title = 'Example Text';
+      const { container } = await setup(<ButtonCircle title={title} />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when color is outlined and inverted is set', async () => {
+      const { container } = await setup(<ButtonCircle outline inverted />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when prefixIcon is set', async () => {
+      const { container } = await setup(<ButtonCircle prefixIcon="placeholder-regular" />);
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot when variant is set', async () => {
+      const { container } = await setup(<ButtonCircle variant="secondary" />);
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  describe('attributes', () => {
+    it('should have variant set to secondary when outline is provided', async () => {
+      await setup(<ButtonCircle outline />);
+      expect(screen.getByRole('button')).toHaveAttribute('variant', 'secondary');
+    });
+
+    it('should have variant set to tertiary when ghost is provided', async () => {
+      await setup(<ButtonCircle ghost />);
+      expect(screen.getByRole('button')).toHaveAttribute('variant', 'tertiary');
+    });
+
+    it('should have variant set to primary when no variant is provided', async () => {
+      await setup(<ButtonCircle />);
+      expect(screen.getByRole('button')).toHaveAttribute('variant', 'primary');
+    });
+
+    it('should have color set to positive when color is join', async () => {
+      await setup(<ButtonCircle color="join" />);
+      expect(screen.getByRole('button')).toHaveAttribute('color', 'positive');
+    });
+
+    it('should have color set to negative when color is cancel', async () => {
+      await setup(<ButtonCircle color="cancel" />);
+      expect(screen.getByRole('button')).toHaveAttribute('color', 'negative');
+    });
+
+    it('should have color set to accent when color is message', async () => {
+      await setup(<ButtonCircle color="message" />);
+      expect(screen.getByRole('button')).toHaveAttribute('color', 'accent');
+    });
+
+    it('should have color set to default when no color is provided', async () => {
+      await setup(<ButtonCircle />);
+      expect(screen.getByRole('button')).toHaveAttribute('color', 'default');
+    });
+
+    it('should have prefixIcon not set when no Icon child is provided', async () => {
+      await setup(
+        <ButtonCircle>
+          <div>Not an Icon</div>
+          <div>Also not an Icon</div>
+        </ButtonCircle>
+      );
+      expect(screen.getByRole('button')).not.toHaveAttribute('prefix-icon');
+    });
+
+    it('should have prefixIcon set to the icon name when a single Icon child is provided', async () => {
+      await setup(
+        <ButtonCircle>
+          <Icon name="placeholder" weight="bold" />
+        </ButtonCircle>
+      );
+      expect(screen.getByRole('button')).toHaveAttribute('prefix-icon', 'placeholder-bold');
+    });
+
+    it('should have prefixIcon set to the icon name and regular weight when a single Icon child without weight is provided', async () => {
+      await setup(
+        <ButtonCircle>
+          <Icon name="placeholder" />
+        </ButtonCircle>
+      );
+      expect(screen.getByRole('button')).toHaveAttribute('prefix-icon', 'placeholder-regular');
+    });
+  });
+
+  describe('actions', () => {
+    it('should call onPress when clicked', async () => {
+      const onPress = jest.fn();
+      await setup(<ButtonCircle onPress={onPress} />);
+      await userEvent.click(screen.getByRole('button'));
+      expect(onPress).toHaveBeenCalled();
+    });
+
+    it('should not call onPress when disabled', async () => {
+      const onPress = jest.fn();
+      await setup(<ButtonCircle onPress={onPress} disabled />);
+      await userEvent.click(screen.getByRole('button'));
+      expect(onPress).not.toHaveBeenCalled();
+    });
+
+    it('should call onPress when shallowDisabled', async () => {
+      const onPress = jest.fn();
+      await setup(<ButtonCircle onPress={onPress} shallowDisabled />);
+      await userEvent.click(screen.getByRole('button'));
+      expect(onPress).toHaveBeenCalled();
+    });
+  });
+});
