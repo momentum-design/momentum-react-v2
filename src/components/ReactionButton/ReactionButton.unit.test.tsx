@@ -1,12 +1,14 @@
 import React, { ReactElement } from 'react';
 
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import ReactionButton, { REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';
 import Reaction, { ReactionProps } from '../Reaction';
 import { REACTIONS } from '../Reaction/Reaction.constants';
 import * as jsonImport from '../../hooks/useDynamicJSONImport';
 
 import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
+import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('<ReactionButton />', () => {
   let children: ReactElement<ReactionProps>;
@@ -136,22 +138,14 @@ describe('<ReactionButton />', () => {
 
       const mockCallback = jest.fn();
 
-      const wrapper = await mountAndWait(
+      await renderWithWebComponent(
         <ReactionButton onPress={mockCallback}>{children}</ReactionButton>
       );
-      const component = wrapper.find(ReactionButton);
 
-      component.props().onPress({
-        type: 'press',
-        pointerType: 'mouse',
-        altKey: false,
-        shiftKey: false,
-        ctrlKey: false,
-        metaKey: false,
-        target: component.getDOMNode(),
-      });
+      const button = screen.getByRole('button');
+      await userEvent.click(button);
 
-      expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toHaveBeenCalledTimes(1);
     });
   });
 });
