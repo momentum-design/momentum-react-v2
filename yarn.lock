@@ -2909,9 +2909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.61.1":
-  version: 0.61.1
-  resolution: "@momentum-design/components@npm:0.61.1"
+"@momentum-design/components@npm:0.66.3":
+  version: 0.66.3
+  resolution: "@momentum-design/components@npm:0.66.3"
   dependencies:
     "@floating-ui/dom": ^1.6.12
     "@lit/context": ^1.1.2
@@ -2923,7 +2923,7 @@ __metadata:
     "@tanstack/lit-virtual": ^3.11.3
     lit: ^3.2.0
     uuid: ^11.0.5
-  checksum: 787d135f419d14917c5ae72083667b23f6f9545f4346c815228745cf3c01955d0089312d391d2fa2a75e16e6011fdcccbc426f52bb5f7db0b144909ced57d608
+  checksum: b282f7e3ee22ec599914a21f409c2001347357b716f913a9935abeb5d6e1b8d091bcd8100ae592a52930d0a93b87ba1a905b447785996772100730d3060bfdac
   languageName: node
   linkType: hard
 
@@ -2992,7 +2992,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": ^0.0.4
-    "@momentum-design/components": 0.61.1
+    "@momentum-design/components": 0.66.3
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.10.0
     "@momentum-design/tokens": 0.5.0
