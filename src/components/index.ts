@@ -86,3 +86,4 @@ export { default as TabList } from './TabList';
 export { default as TabPanel } from './TabPanel';
 export { default as VirtualizedList } from './VirtualizedList';
 export { default as SpatialNavigationProvider } from './SpatialNavigationProvider';
+export type { ButtonRefType } from './ButtonCircle';

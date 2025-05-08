@@ -142,6 +142,7 @@ export {
   TabPanel as TabPanelNext,
   VirtualizedList,
   SpatialNavigationProvider,
+  ButtonRefType,
 } from './components';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
