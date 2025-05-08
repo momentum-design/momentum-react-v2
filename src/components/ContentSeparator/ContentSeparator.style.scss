@@ -5,6 +5,7 @@
   flex-direction: row;
 
   &[data-gradient='true'] {
+    &:before,
     &:after {
       border-bottom: none;
       height: 1px;
@@ -12,6 +13,7 @@
     }
   }
 
+  &:before,
   &:after {
     content: '';
     flex: 1 1;
