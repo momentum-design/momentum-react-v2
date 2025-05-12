@@ -1,9 +1,8 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-import { CHIP_CONSTANTS } from '.';
-
+import {} from '@momentum-design/components';
 const chipArgTypes = {
-  children: {
-    description: 'Text of the chip. Overwritten by text prop',
+  label: {
+    description: 'The visible label text of the chip',
     control: { type: 'text' },
     table: {
       type: {
@@ -14,63 +13,40 @@ const chipArgTypes = {
       },
     },
   },
-  leftIcon: {
-    description: 'The icon displayed on the left if it exists, overwritten by avatar',
+  iconName: {
+    description:
+      'The name of the icon in the chip (must match the icon name in the Icon component)',
     control: { type: 'text' },
     table: {
       type: {
-        summary: 'SupportedIcon',
+        summary: 'string',
       },
       defaultValue: {
         summary: 'undefined',
       },
     },
   },
-  rightIcon: {
-    description: 'The icon displayed on the right if it exists',
-    control: { type: 'none' },
+  color: {
+    description: 'Sets the chip color',
+    control: { type: 'select' },
+    options: [
+      undefined,
+      'default',
+      'cobalt',
+      'gold',
+      'lime',
+      'mint',
+      'pink',
+      'purple',
+      'slate',
+      'violet',
+    ],
     table: {
       type: {
-        summary: 'SupportedIcon',
+        summary: 'Color',
       },
       defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  avatar: {
-    description: 'Avatar supplied by consumer, overrides leftIcon',
-    control: { type: 'none' },
-    table: {
-      type: {
-        summary: 'SupportedAvatar',
-      },
-      defaultValue: {
-        summary: 'undefined',
-      },
-    },
-  },
-  outline: {
-    description: 'Sets the chip to have outline styling',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.OUTLINE,
-      },
-    },
-  },
-  ghost: {
-    description: 'Sets the chip to have ghost background styling',
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.GHOST,
+        summary: 'default',
       },
     },
   },
@@ -82,70 +58,72 @@ const chipArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.DISABLED,
+        summary: false,
       },
     },
   },
-  error: {
-    description: 'Sets whether the chip is in error state',
-    control: { type: 'boolean' },
+  onClick: {
+    action: 'onClick',
+    description: 'Handler that is called when the element is clicked',
     table: {
+      category: 'Mdc Button Attributes',
       type: {
-        summary: 'boolean',
+        summary: '(e: MouseEvent) => void',
       },
       defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.ERROR,
+        summary: 'undefined',
       },
     },
   },
-  chipColor: {
-    description: 'Sets the chip color',
-    control: { type: 'select' },
-    options: [undefined, ...Object.values(CHIP_CONSTANTS.MULTILINE_COLORS)],
+  onFocus: {
+    action: 'onFocus',
+    description: 'Handler that is called when the element receives focus.',
     table: {
+      category: 'Mdc Button Attributes',
       type: {
-        summary: 'TeamColor',
+        summary: '(e: FocusEvent) => void',
       },
       defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.COLOR,
+        summary: 'undefined',
       },
     },
   },
-  multiline: {
-    description: 'Sets whether the chip is using the multiline modifier',
-    control: { type: 'boolean' },
+  onBlur: {
+    action: 'onBlur',
+    description: 'Handler that is called when the element loses focus.',
     table: {
+      category: 'Mdc Button Attributes',
       type: {
-        summary: 'boolean',
+        summary: '(e: FocusEvent) => void',
       },
       defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.MULTILINE,
+        summary: 'undefined',
       },
     },
   },
-  search: {
-    description: 'Sets whether the chip is using the search modifier',
-    control: { type: 'boolean' },
+  onKeyDown: {
+    action: 'onKeyDown',
+    description: 'Handler that is called when a key is pressed.',
     table: {
+      category: 'Mdc Button Attributes',
       type: {
-        summary: 'boolean',
+        summary: '(e: KeyboardEvent) => void',
       },
       defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.SEARCH,
+        summary: 'undefined',
       },
     },
   },
-  size: {
-    description:
-      'Sets the chip size. `28` is default, `28` and `24` are expected to be used for the `search` modifier, `16` is expected used for the `multiline` modifier.',
-    control: { type: 'select' },
-    options: [undefined, 16, 24, 28],
+  onKeyUp: {
+    action: 'onKeyUp',
+    description: 'Handler that is called when a key is released.',
     table: {
+      category: 'Mdc Button Attributes',
       type: {
-        summary: 'number',
+        summary: '(e: KeyboardEvent) => void',
       },
       defaultValue: {
-        summary: CHIP_CONSTANTS.DEFAULTS.SIZE,
+        summary: 'undefined',
       },
     },
   },
