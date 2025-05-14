@@ -72,11 +72,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot 1`] = `
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -161,11 +166,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot when spaced 1`] = `
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -251,11 +261,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with aria-label 1`] = `
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -273,11 +288,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with className 1`] = `
   <Button
     className="md-button-circle-wrapper example-class"
     color="default"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
     size={40}
     variant="primary"
   >
     <mdc-button
       class="md-button-circle-wrapper example-class"
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Button>
@@ -292,11 +312,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with id 1`] = `
     className="md-button-circle-wrapper"
     color="default"
     id="example-id"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
     size={40}
     variant="primary"
   >
     <mdc-button
       class="md-button-circle-wrapper"
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Button>
@@ -377,11 +402,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with orientation = verti
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -467,11 +497,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with role 1`] = `
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -556,11 +591,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with round 1`] = `
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -645,11 +685,16 @@ exports[`<ButtonGroup /> snapshot should match snapshot with separator 1`] = `
       <Button
         className="md-button-circle-wrapper"
         color="default"
+        onClick={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         size={40}
         variant="primary"
       >
         <mdc-button
           class="md-button-circle-wrapper"
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
           suppressHydrationWarning={true}
         >
           A
@@ -671,6 +716,9 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
   <Button
     className="md-button-circle-wrapper"
     color="default"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
     size={40}
     style={
       Object {
@@ -681,6 +729,8 @@ exports[`<ButtonGroup /> snapshot should match snapshot with style 1`] = `
   >
     <mdc-button
       class="md-button-circle-wrapper"
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       style={
         Object {
           "color": "pink",

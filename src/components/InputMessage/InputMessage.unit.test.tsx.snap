@@ -15,7 +15,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
       <div
         className="md-input-message--icon"
       >
-        <Icon
+        <Mrv2Icon
           fillColor="var(--mds-color-theme-text-error-normal)"
           name="warning"
           scale={16}
@@ -46,7 +46,7 @@ exports[`InputMessage snapshot should match snapshot 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <Text
         className="md-input-message--text"

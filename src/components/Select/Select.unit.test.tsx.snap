@@ -309,7 +309,7 @@ exports[`Select snapshot should match snapshot 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -517,7 +517,7 @@ exports[`Select snapshot should match snapshot 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -539,7 +539,7 @@ exports[`Select snapshot should match snapshot 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -870,7 +870,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -1078,7 +1078,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -1100,7 +1100,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -1432,7 +1432,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-up"
               scale={16}
               weight="bold"
@@ -1640,7 +1640,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-up"
                   scale={16}
                   weight="bold"
@@ -1662,7 +1662,7 @@ exports[`Select snapshot should match snapshot before and after opening select d
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -2529,7 +2529,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -2737,7 +2737,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -2759,7 +2759,7 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -3091,7 +3091,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -3299,7 +3299,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -3321,7 +3321,7 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -3653,7 +3653,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -3861,7 +3861,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -3883,7 +3883,7 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -4225,7 +4225,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-up"
               scale={16}
               weight="bold"
@@ -4433,7 +4433,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-up"
                   scale={16}
                   weight="bold"
@@ -4455,7 +4455,7 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -5325,7 +5325,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -5533,7 +5533,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -5555,7 +5555,7 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -5662,7 +5662,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -5869,7 +5869,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -5891,7 +5891,7 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -6224,7 +6224,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-up"
               scale={16}
               weight="bold"
@@ -6432,7 +6432,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-up"
                   scale={16}
                   weight="bold"
@@ -6454,7 +6454,7 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -7319,7 +7319,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-up"
               scale={16}
               weight="bold"
@@ -7526,7 +7526,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-up"
                   scale={16}
                   weight="bold"
@@ -7548,7 +7548,7 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -8413,7 +8413,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-up"
               scale={16}
               weight="bold"
@@ -8620,7 +8620,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-up"
                   scale={16}
                   weight="bold"
@@ -8642,7 +8642,7 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -9513,7 +9513,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -9723,7 +9723,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -9745,7 +9745,7 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -10106,7 +10106,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -10317,7 +10317,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -10339,7 +10339,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -10702,7 +10702,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-up"
               scale={16}
               weight="bold"
@@ -10913,7 +10913,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-up"
                   scale={16}
                   weight="bold"
@@ -10935,7 +10935,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -11397,7 +11397,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                           <div
                                             data-position="end"
                                           >
-                                            <Icon
+                                            <Mrv2Icon
                                               fillColor="var(--mds-color-theme-control-active-normal)"
                                               name="check"
                                               scale={16}
@@ -11428,7 +11428,7 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                                                   suppressHydrationWarning={true}
                                                 />
                                               </Icon>
-                                            </Icon>
+                                            </Mrv2Icon>
                                           </div>
                                         </ListItemBaseSection>
                                       </li>
@@ -11876,7 +11876,7 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -12085,7 +12085,7 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -12107,7 +12107,7 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -12444,7 +12444,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -12652,7 +12652,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -12674,7 +12674,7 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal
@@ -13004,7 +13004,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
             aria-hidden="true"
             className="md-select-icon-wrapper"
           >
-            <Icon
+            <Mrv2Icon
               name="arrow-down"
               scale={16}
               weight="bold"
@@ -13212,7 +13212,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                 aria-hidden="true"
                 className="md-select-icon-wrapper"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={16}
                   weight="bold"
@@ -13234,7 +13234,7 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </span>
             </button>
             <Portal

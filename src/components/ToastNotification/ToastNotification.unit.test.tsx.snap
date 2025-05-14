@@ -447,7 +447,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
   aria-label="Some label"
   content="Example text"
   leadingVisual={
-    <Icon
+    <Mrv2Icon
       name="help-circle"
       scale={24}
       weight="bold"
@@ -479,7 +479,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
         <div
           className="md-toast-notification-leading-visual"
         >
-          <Icon
+          <Mrv2Icon
             name="help-circle"
             scale={24}
             weight="bold"
@@ -501,7 +501,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with leading visua
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
         <Text
           className="md-toast-notification-content"
@@ -633,6 +633,8 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
               className="md-button-circle-wrapper"
               color="default"
               onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               prefixIcon="cancel-bold"
               size={20}
               variant="tertiary"
@@ -640,6 +642,8 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
               <mdc-button
                 aria-label="Close toast"
                 class="md-button-circle-wrapper"
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 suppressHydrationWarning={true}
               />
             </Button>

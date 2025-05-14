@@ -30,7 +30,7 @@ exports[`<ButtonControl /> snapshot should match snapshot 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <Icon
+          <Mrv2Icon
             autoScale={true}
             name="cancel"
             weight="bold"
@@ -52,7 +52,7 @@ exports[`<ButtonControl /> snapshot should match snapshot 1`] = `
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -91,7 +91,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with className 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <Icon
+          <Mrv2Icon
             autoScale={true}
             name="cancel"
             weight="bold"
@@ -113,7 +113,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with className 1`] = `
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -154,7 +154,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with id 1`] = `
           onTouchStart={[Function]}
           type="button"
         >
-          <Icon
+          <Mrv2Icon
             autoScale={true}
             name="cancel"
             weight="bold"
@@ -176,7 +176,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with id 1`] = `
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -217,7 +217,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isCircular 1`] = 
           onTouchStart={[Function]}
           type="button"
         >
-          <Icon
+          <Mrv2Icon
             autoScale={true}
             name="cancel"
             weight="bold"
@@ -239,7 +239,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isCircular 1`] = 
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -285,7 +285,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isDisabled 1`] = 
           onTouchStart={[Function]}
           type="button"
         >
-          <Icon
+          <Mrv2Icon
             autoScale={true}
             name="cancel"
             weight="bold"
@@ -307,7 +307,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with isDisabled 1`] = 
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </button>
       </FocusRing>
     </FocusRing>
@@ -360,7 +360,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with style 1`] = `
           }
           type="button"
         >
-          <Icon
+          <Mrv2Icon
             autoScale={true}
             name="cancel"
             weight="bold"
@@ -382,7 +382,7 @@ exports[`<ButtonControl /> snapshot should match snapshot with style 1`] = `
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </button>
       </FocusRing>
     </FocusRing>

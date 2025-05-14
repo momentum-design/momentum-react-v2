@@ -572,11 +572,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                       <Button
                         className="md-button-circle-wrapper"
                         color="positive"
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
                         size={28}
                         variant="secondary"
                       >
                         <mdc-button
                           class="md-button-circle-wrapper"
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
                           suppressHydrationWarning={true}
                         >
                           T
@@ -593,11 +598,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                       <Button
                         className="md-button-circle-wrapper"
                         color="positive"
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
                         size={28}
                         variant="secondary"
                       >
                         <mdc-button
                           class="md-button-circle-wrapper"
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
                           suppressHydrationWarning={true}
                         >
                           T
@@ -614,11 +624,16 @@ exports[`<MeetingContainer /> snapshot should match snapshot with circle action 
                       <Button
                         className="md-button-circle-wrapper"
                         color="positive"
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
                         size={28}
                         variant="secondary"
                       >
                         <mdc-button
                           class="md-button-circle-wrapper"
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
                           suppressHydrationWarning={true}
                         >
                           T

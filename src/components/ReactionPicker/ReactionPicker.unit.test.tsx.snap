@@ -66,6 +66,8 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
               onClick={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               size={32}
               tabIndex={0}
               useNativeKeyDown={true}
@@ -74,6 +76,8 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
               <mdc-button
                 class="md-button-circle-wrapper md-reaction-button-wrapper"
                 data-reacted={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 suppressHydrationWarning={true}
                 useNativeKeyDown={true}
               />

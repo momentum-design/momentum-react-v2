@@ -57,7 +57,7 @@ exports[`<Accordion /> snapshot should match snapshot 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={12}
                 >
@@ -78,7 +78,7 @@ exports[`<Accordion /> snapshot should match snapshot 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
                 <Text
                   tagName="small"
                   type="body-secondary"
@@ -169,7 +169,7 @@ exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={12}
                 >
@@ -190,7 +190,7 @@ exports[`<Accordion /> snapshot should match snapshot with className 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
                 <Text
                   tagName="small"
                   type="body-secondary"
@@ -281,7 +281,7 @@ exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={12}
                 >
@@ -302,7 +302,7 @@ exports[`<Accordion /> snapshot should match snapshot with headingRightContent 1
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
                 <Text
                   tagName="small"
                   type="body-secondary"
@@ -393,7 +393,7 @@ exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={12}
                 >
@@ -414,7 +414,7 @@ exports[`<Accordion /> snapshot should match snapshot with id 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
                 <Text
                   tagName="small"
                   type="body-secondary"
@@ -514,7 +514,7 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   name="arrow-down"
                   scale={12}
                 >
@@ -535,7 +535,7 @@ exports[`<Accordion /> snapshot should match snapshot with style 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
                 <Text
                   tagName="small"
                   type="body-secondary"

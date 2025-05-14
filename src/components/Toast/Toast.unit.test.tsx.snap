@@ -14,7 +14,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -186,7 +186,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -208,7 +208,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -247,7 +247,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -269,7 +269,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -308,7 +308,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -330,7 +330,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -350,7 +350,7 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -421,12 +421,17 @@ exports[`<Toast /> snapshot should match snapshot 1`] = `
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -625,7 +630,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -798,7 +803,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -820,7 +825,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -859,7 +864,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -881,7 +886,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -920,7 +925,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -942,7 +947,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -962,7 +967,7 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -1033,12 +1038,17 @@ exports[`<Toast /> snapshot should match snapshot with aria-live 1`] = `
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -1237,7 +1247,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -1409,7 +1419,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -1431,7 +1441,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -1470,7 +1480,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -1492,7 +1502,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -1531,7 +1541,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -1553,7 +1563,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -1573,7 +1583,7 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -1644,12 +1654,17 @@ exports[`<Toast /> snapshot should match snapshot with className 1`] = `
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -1976,7 +1991,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -1998,7 +2013,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2037,7 +2052,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -2059,7 +2074,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2098,7 +2113,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -2120,7 +2135,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2140,7 +2155,7 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -2212,12 +2227,17 @@ exports[`<Toast /> snapshot should match snapshot with content children and deta
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -2531,7 +2551,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -2553,7 +2573,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2592,7 +2612,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -2614,7 +2634,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2653,7 +2673,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -2675,7 +2695,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -2695,7 +2715,7 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -2767,12 +2787,17 @@ exports[`<Toast /> snapshot should match snapshot with details and content child
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -2970,7 +2995,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -3129,7 +3154,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -3151,7 +3176,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -3190,7 +3215,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -3212,7 +3237,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -3251,7 +3276,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -3273,7 +3298,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -3293,7 +3318,7 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -3364,12 +3389,17 @@ exports[`<Toast /> snapshot should match snapshot with details children and cont
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -3567,7 +3597,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -3741,7 +3771,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -3763,7 +3793,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -3802,7 +3832,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -3824,7 +3854,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -3863,7 +3893,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -3885,7 +3915,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -3905,7 +3935,7 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -3976,12 +4006,17 @@ exports[`<Toast /> snapshot should match snapshot with id 1`] = `
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -4179,7 +4214,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -4361,7 +4396,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="cancel"
                       weight="bold"
@@ -4383,7 +4418,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -4422,7 +4457,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-up"
                       weight="bold"
@@ -4444,7 +4479,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -4483,7 +4518,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                     onTouchStart={[Function]}
                     type="button"
                   >
-                    <Icon
+                    <Mrv2Icon
                       autoScale={true}
                       name="arrow-down"
                       weight="bold"
@@ -4505,7 +4540,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
                           suppressHydrationWarning={true}
                         />
                       </Icon>
-                    </Icon>
+                    </Mrv2Icon>
                   </button>
                 </FocusRing>
               </FocusRing>
@@ -4525,7 +4560,7 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -4596,12 +4631,17 @@ exports[`<Toast /> snapshot should match snapshot with style 1`] = `
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>
@@ -4799,7 +4839,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -4916,7 +4956,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                   onTouchStart={[Function]}
                   type="button"
                 >
-                  <Icon
+                  <Mrv2Icon
                     autoScale={true}
                     name="cancel"
                     weight="bold"
@@ -4938,7 +4978,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         suppressHydrationWarning={true}
                       />
                     </Icon>
-                  </Icon>
+                  </Mrv2Icon>
                 </button>
               </FocusRing>
             </FocusRing>
@@ -4974,7 +5014,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                   onTouchStart={[Function]}
                   type="button"
                 >
-                  <Icon
+                  <Mrv2Icon
                     autoScale={true}
                     name="arrow-up"
                     weight="bold"
@@ -4996,7 +5036,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         suppressHydrationWarning={true}
                       />
                     </Icon>
-                  </Icon>
+                  </Mrv2Icon>
                 </button>
               </FocusRing>
             </FocusRing>
@@ -5032,7 +5072,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                   onTouchStart={[Function]}
                   type="button"
                 >
-                  <Icon
+                  <Mrv2Icon
                     autoScale={true}
                     name="arrow-down"
                     weight="bold"
@@ -5054,7 +5094,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
                         suppressHydrationWarning={true}
                       />
                     </Icon>
-                  </Icon>
+                  </Mrv2Icon>
                 </button>
               </FocusRing>
             </FocusRing>
@@ -5136,7 +5176,7 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
             outline={true}
             size={28}
           >
-            <Icon
+            <Mrv2Icon
               autoScale={125}
               name="alarm"
               weight="bold"
@@ -5207,12 +5247,17 @@ exports[`<Toast /> snapshot should match snapshot with title 1`] = `
               <Button
                 className="md-button-circle-width-override md-button-circle-wrapper"
                 color="default"
+                onClick={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
                 prefixIcon="alarm-bold"
                 size={28}
                 variant="secondary"
               >
                 <mdc-button
                   class="md-button-circle-width-override md-button-circle-wrapper"
+                  onPointerDown={[Function]}
+                  onPointerUp={[Function]}
                   suppressHydrationWarning={true}
                 />
               </Button>

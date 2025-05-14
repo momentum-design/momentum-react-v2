@@ -12,12 +12,17 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       color="default"
       data-reacted={false}
+      onClick={[Function]}
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       size={32}
       variant="tertiary"
     >
       <mdc-button
         class="md-button-circle-wrapper md-reaction-button-wrapper"
         data-reacted={false}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         suppressHydrationWarning={true}
       >
         <Reaction
@@ -49,12 +54,17 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
       className="md-button-circle-wrapper example-class md-reaction-button-wrapper"
       color="default"
       data-reacted={false}
+      onClick={[Function]}
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       size={32}
       variant="tertiary"
     >
       <mdc-button
         class="md-button-circle-wrapper example-class md-reaction-button-wrapper"
         data-reacted={false}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         suppressHydrationWarning={true}
       >
         <Reaction
@@ -88,12 +98,17 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
       color="default"
       data-reacted={false}
       id="example-id"
+      onClick={[Function]}
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       size={32}
       variant="tertiary"
     >
       <mdc-button
         class="md-button-circle-wrapper md-reaction-button-wrapper"
         data-reacted={false}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         suppressHydrationWarning={true}
       >
         <Reaction
@@ -125,12 +140,17 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       color="default"
       data-reacted={true}
+      onClick={[Function]}
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       size={32}
       variant="tertiary"
     >
       <mdc-button
         class="md-button-circle-wrapper md-reaction-button-wrapper"
         data-reacted={true}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         suppressHydrationWarning={true}
       >
         <Reaction
@@ -171,6 +191,9 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
       className="md-button-circle-wrapper md-reaction-button-wrapper"
       color="default"
       data-reacted={false}
+      onClick={[Function]}
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       size={32}
       style={
         Object {
@@ -182,6 +205,8 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
       <mdc-button
         class="md-button-circle-wrapper md-reaction-button-wrapper"
         data-reacted={false}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
         style={
           Object {
             "color": "pink",

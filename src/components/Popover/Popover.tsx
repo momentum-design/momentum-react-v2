@@ -200,6 +200,7 @@ const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
           {closeButtonPlacement !== 'none' && (
             <ButtonCircle
               {...closeButtonProps}
+              stopPropagation={false}
               className={classNames(STYLE.closeButton, closeButtonProps?.className)}
               data-placement={closeButtonPlacement}
               size={20}

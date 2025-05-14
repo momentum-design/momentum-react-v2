@@ -46,7 +46,7 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
       >
         17
       </div>
-      <Icon
+      <Mrv2Icon
         name="participant-list"
         scale={16}
       />
@@ -144,7 +144,7 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
           >
             17
           </div>
-          <Icon
+          <Mrv2Icon
             key="participants-icon"
             name="participant-list"
             scale={16}
@@ -166,7 +166,7 @@ exports[`<MeetingRowContent /> snapshot should match snapshot with buttonGroup 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
           <ButtonPill
             color="join"
             key="join-button"

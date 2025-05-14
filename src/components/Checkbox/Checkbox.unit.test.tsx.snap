@@ -300,7 +300,7 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
       <div
         className="md-checkbox-selected checkbox"
       >
-        <Icon
+        <Mrv2Icon
           className="md-checkbox-icon"
           name="minus"
           scale={12}
@@ -323,7 +323,7 @@ exports[`<Checkbox /> snapshot should match snapshot with indeterminate checkbox
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
     </label>
   </div>
@@ -593,7 +593,7 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
       <div
         className="md-checkbox-selected checkbox"
       >
-        <Icon
+        <Mrv2Icon
           className="md-checkbox-icon"
           name="check"
           scale={12}
@@ -616,7 +616,7 @@ exports[`<Checkbox /> snapshot should match snapshot with selected checkbox 1`] 
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
     </label>
   </div>
