@@ -8,6 +8,7 @@ const DEFAULTS = {
   OUTLINE: false,
   SIZE: 40,
   INVERTED: false,
+  STOP_PROPAGATION: true,
 } as const;
 
 const COLORS = {

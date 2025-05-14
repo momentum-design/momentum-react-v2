@@ -71,4 +71,6 @@ const Icon: React.FC<Props> = (props: Props) => {
   );
 };
 
+Icon.displayName = 'Mrv2Icon';
+
 export default Icon;
