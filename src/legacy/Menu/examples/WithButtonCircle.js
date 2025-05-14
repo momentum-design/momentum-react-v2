@@ -11,7 +11,7 @@ export default class MenuOverlayDefault extends React.PureComponent {
         menuTrigger={
           <div>
             <Tooltip tooltip="Text">
-              <ButtonCircle id="default" ariaLabel="Show Menu">
+              <ButtonCircle id="default" ariaLabel="Show Menu" stopPropagation={false}>
                 A
               </ButtonCircle>
             </Tooltip>

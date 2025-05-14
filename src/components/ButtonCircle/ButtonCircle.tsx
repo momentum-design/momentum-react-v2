@@ -19,6 +19,7 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) =
     ghost,
     outline,
     shallowDisabled,
+    stopPropagation = DEFAULTS.STOP_PROPAGATION,
     ...rest
   } = props;
 
@@ -51,7 +52,7 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) =
   if (children && Children.count(children) === 1) {
     const Icon = children as ReactElement;
     // @ts-ignore
-    if (Icon.type?.name === 'Icon') {
+    if (Icon.type?.displayName === 'Mrv2Icon') {
       prefixIcon = [Icon.props.name, Icon.props.weight || 'regular'].join('-');
     }
   }
@@ -61,8 +62,10 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) =
   // this can be removed once ListItemBase is refactored to use the new momentum-design listitem component
   const preventBubble = (event: any) => {
     // Prevent the event from bubbling up to the parent element
-    event.stopPropagation();
-    event.preventDefault();
+    if (stopPropagation) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
   };
 
   const handleClick = (event: MouseEvent) => {
