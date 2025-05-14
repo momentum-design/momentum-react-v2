@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React, { Children, forwardRef, ReactElement, RefObject, useMemo } from 'react';
+import React, { Children, forwardRef, ReactElement, RefObject } from 'react';
 import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 import type { Button, ButtonVariant } from '@momentum-design/components';
@@ -47,15 +47,30 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) =
     variant = 'secondary';
   }
 
-  const prefixIcon = useMemo(() => {
-    if (children && Children.count(children) === 1) {
-      const Icon = children as ReactElement;
-      // @ts-ignore
-      if (Icon.type?.name === 'Icon') {
-        return [Icon.props.name, Icon.props.weight || 'regular'].join('-');
-      }
+  let prefixIcon;
+  if (children && Children.count(children) === 1) {
+    const Icon = children as ReactElement;
+    // @ts-ignore
+    if (Icon.type?.name === 'Icon') {
+      prefixIcon = [Icon.props.name, Icon.props.weight || 'regular'].join('-');
     }
-  }, [children]);
+  }
+
+  // this is a workaround for now for cases where usePress from react-aria is used on a parent
+  // of the button. We want to avoid the event bubbling up to the parent in those cases
+  // this can be removed once ListItemBase is refactored to use the new momentum-design listitem component
+  const preventBubble = (event: any) => {
+    // Prevent the event from bubbling up to the parent element
+    event.stopPropagation();
+    event.preventDefault();
+  };
+
+  const handleClick = (event: MouseEvent) => {
+    preventBubble(event);
+    if (onPress) {
+      onPress(event);
+    }
+  };
 
   return (
     <MdcButton
@@ -64,7 +79,9 @@ const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) =
       color={newColor}
       ref={providedRef}
       size={size}
-      onClick={onPress}
+      onClick={handleClick}
+      onPointerUp={preventBubble}
+      onPointerDown={preventBubble}
       softDisabled={shallowDisabled}
       className={classnames({ [STYLE.widthOverride]: !!prefixIcon }, STYLE.wrapper, className)}
       {...rest}

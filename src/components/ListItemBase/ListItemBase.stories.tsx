@@ -100,6 +100,25 @@ Common.parameters = {
       ),
     },
     {
+      label: 'With ButtonCircle',
+      onPress: action('onPressButtonListItemBase'),
+      children: (state) => (
+        <>
+          <ListItemBaseSection position="fill">Text</ListItemBaseSection>
+          <ListItemBaseSection position="end">
+            <ButtonCircle
+              disabled={state === 'Disable'}
+              color="join"
+              size={24}
+              onPress={action('onPressButtonCircle')}
+            >
+              <Icon name="placeholder" scale={16} />
+            </ButtonCircle>
+          </ListItemBaseSection>
+        </>
+      ),
+    },
+    {
       label: 'With 2 Icons',
       children: (
         <>
