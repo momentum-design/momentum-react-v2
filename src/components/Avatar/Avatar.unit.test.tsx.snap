@@ -93,7 +93,7 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
         className="md-avatar-presence-icon-wrapper"
         data-shape={true}
       >
-        <Icon
+        <Mrv2Icon
           fillColor="var(--mds-color-theme-indicator-attention)"
           name="warning"
           scale={14}
@@ -124,7 +124,7 @@ exports[`Avatar snapshot should match snapshot with failureBadge 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
     </Presence>
   </div>
@@ -143,7 +143,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
     data-size={24}
     role="img"
   >
-    <Icon
+    <Mrv2Icon
       className="md-avatar-wrapper-children md-avatar-icon-wrapper"
       name="check"
       scale={16}
@@ -166,7 +166,7 @@ exports[`Avatar snapshot should match snapshot with icon 1`] = `
           suppressHydrationWarning={true}
         />
       </Icon>
-    </Icon>
+    </Mrv2Icon>
   </div>
 </Avatar>
 `;
@@ -186,7 +186,7 @@ exports[`Avatar snapshot should match snapshot with iconOnHover 1`] = `
     <div
       className="md-avatar-wrapper-children md-avatar-icon-on-hover-wrapper"
     >
-      <Icon
+      <Mrv2Icon
         className="md-avatar-wrapper-children md-avatar-icon-wrapper"
         name="check"
         scale={16}
@@ -209,7 +209,7 @@ exports[`Avatar snapshot should match snapshot with iconOnHover 1`] = `
             suppressHydrationWarning={true}
           />
         </Icon>
-      </Icon>
+      </Mrv2Icon>
     </div>
   </div>
 </Avatar>
@@ -476,7 +476,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={true}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-stable)"
             name="unread"
             scale={14}
@@ -507,7 +507,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -548,7 +548,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="camera-presence"
             scale={14}
@@ -579,7 +579,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -620,7 +620,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="meetings-presence"
             scale={14}
@@ -651,7 +651,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -692,7 +692,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="handset"
             scale={14}
@@ -723,7 +723,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -764,7 +764,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={true}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-attention)"
             name="dnd-presence"
             scale={14}
@@ -795,7 +795,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -836,7 +836,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-attention)"
             name="share-screen"
             scale={14}
@@ -867,7 +867,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -908,7 +908,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={true}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="quiet-hours-presence"
             scale={14}
@@ -939,7 +939,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -980,7 +980,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={true}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="recents-presence"
             scale={14}
@@ -1011,7 +1011,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -1052,7 +1052,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={true}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="pto-presence"
             scale={14}
@@ -1083,7 +1083,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -1124,7 +1124,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={true}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-unstable)"
             name="busy-presence"
             scale={14}
@@ -1155,7 +1155,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -1196,7 +1196,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="phone"
             scale={14}
@@ -1227,7 +1227,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -1268,7 +1268,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="generic-device-video"
             scale={14}
@@ -1299,7 +1299,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>
@@ -1340,7 +1340,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
           className="md-avatar-presence-icon-wrapper"
           data-shape={false}
         >
-          <Icon
+          <Mrv2Icon
             fillColor="var(--mds-color-theme-indicator-locked)"
             name="pause"
             scale={14}
@@ -1371,7 +1371,7 @@ exports[`Avatar snapshot should match snapshot with presence and presenceLabel 1
                 suppressHydrationWarning={true}
               />
             </Icon>
-          </Icon>
+          </Mrv2Icon>
         </div>
       </Presence>
     </div>

@@ -344,7 +344,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
             <div
               data-position="end"
             >
-              <Icon
+              <Mrv2Icon
                 fillColor="var(--mds-color-theme-control-active-normal)"
                 name="check"
                 scale={16}
@@ -375,7 +375,7 @@ exports[`<MenuItem /> snapshot should match snapshot 1`] = `
                     suppressHydrationWarning={true}
                   />
                 </Icon>
-              </Icon>
+              </Mrv2Icon>
             </div>
           </ListItemBaseSection>
         </li>
@@ -718,7 +718,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
             <div
               data-position="start"
             >
-              <Icon
+              <Mrv2Icon
                 fillColor="var(--mds-color-theme-control-active-normal)"
                 name="check"
                 scale={16}
@@ -749,7 +749,7 @@ exports[`<MenuItem /> snapshot should match snapshot with tickPosition 1`] = `
                     suppressHydrationWarning={true}
                   />
                 </Icon>
-              </Icon>
+              </Mrv2Icon>
             </div>
           </ListItemBaseSection>
           <ListItemBaseSection

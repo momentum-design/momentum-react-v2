@@ -74,7 +74,7 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
     className="md-text-toast-wrapper"
     data-text-alignment="center"
   >
-    <Icon
+    <Mrv2Icon
       name="noise-removal"
     >
       <Icon
@@ -92,7 +92,7 @@ exports[`<TextToast /> snapshot should match snapshot with icon 1`] = `
           suppressHydrationWarning={true}
         />
       </Icon>
-    </Icon>
+    </Mrv2Icon>
     <Text
       className="md-text-toast-text"
       tagName="small"

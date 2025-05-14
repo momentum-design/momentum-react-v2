@@ -13,7 +13,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -36,7 +36,7 @@ exports[`<SearchInput /> snapshot should match snapshot 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -126,7 +126,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -149,7 +149,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -199,7 +199,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
               onTouchStart={[Function]}
               type="button"
             >
-              <Icon
+              <Mrv2Icon
                 name="cancel"
                 scale={16}
                 weight="bold"
@@ -221,7 +221,7 @@ exports[`<SearchInput /> snapshot should match snapshot when filters are set 1`]
                     suppressHydrationWarning={true}
                   />
                 </Icon>
-              </Icon>
+              </Mrv2Icon>
             </button>
           </FocusRing>
         </FocusRing>
@@ -272,7 +272,7 @@ exports[`<SearchInput /> snapshot should match snapshot when isCombobox is true 
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -295,7 +295,7 @@ exports[`<SearchInput /> snapshot should match snapshot when isCombobox is true 
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -454,7 +454,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -477,7 +477,7 @@ exports[`<SearchInput /> snapshot should match snapshot with a label 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -541,7 +541,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -564,7 +564,7 @@ exports[`<SearchInput /> snapshot should match snapshot with className 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -628,7 +628,7 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={12}
@@ -651,7 +651,7 @@ exports[`<SearchInput /> snapshot should match snapshot with height 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -715,7 +715,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
       onClick={[Function]}
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -738,7 +738,7 @@ exports[`<SearchInput /> snapshot should match snapshot with id 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"
@@ -811,7 +811,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
       }
     >
       <div>
-        <Icon
+        <Mrv2Icon
           className="md-search-input-search"
           name="search"
           scale={16}
@@ -834,7 +834,7 @@ exports[`<SearchInput /> snapshot should match snapshot with style 1`] = `
               suppressHydrationWarning={true}
             />
           </Icon>
-        </Icon>
+        </Mrv2Icon>
       </div>
       <div
         className="md-search-input-container"

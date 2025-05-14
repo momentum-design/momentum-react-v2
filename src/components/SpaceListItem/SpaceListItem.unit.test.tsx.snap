@@ -783,7 +783,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-text-primary-normal)"
                   name="alert"
                   scale={14}
@@ -817,7 +817,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlert 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
@@ -922,7 +922,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-text-primary-normal)"
                   name="alert-muted"
                   scale={14}
@@ -956,7 +956,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isAlertMuted 1`] 
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
@@ -1163,7 +1163,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-control-active-normal)"
                   name="enter-room"
                   scale={14}
@@ -1197,7 +1197,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isEnterRoom 1`] =
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
@@ -1302,7 +1302,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-text-error-normal)"
                   name="priority-circle"
                   scale={14}
@@ -1336,7 +1336,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isError 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
@@ -1441,7 +1441,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-control-active-normal)"
                   name="mention"
                   scale={14}
@@ -1475,7 +1475,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isMention 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
@@ -1790,7 +1790,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-text-primary-normal)"
                   name="draft-indicator"
                   scale={14}
@@ -1824,7 +1824,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isSelected and dr
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>
@@ -1929,7 +1929,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
               <div
                 data-position="end"
               >
-                <Icon
+                <Mrv2Icon
                   fillColor="var(--mds-color-theme-control-active-normal)"
                   name="unread"
                   scale={14}
@@ -1963,7 +1963,7 @@ exports[`<SpaceListItem /> snapshot should match snapshot with isUnread 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
           </SpaceRowContent>

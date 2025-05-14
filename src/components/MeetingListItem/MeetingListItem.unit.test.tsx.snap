@@ -423,7 +423,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with id 1`] = `
 exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
 <MeetingListItem
   image={
-    <Icon
+    <Mrv2Icon
       name="placeholder"
     />
   }
@@ -473,7 +473,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
           <MeetingRowContent
             color="Transparent"
             image={
-              <Icon
+              <Mrv2Icon
                 name="placeholder"
               />
             }
@@ -490,7 +490,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                   className="md-meeting-row-content-border"
                   data-color="Transparent"
                 />
-                <Icon
+                <Mrv2Icon
                   name="placeholder"
                   scale={12}
                   strokeColor="none"
@@ -515,7 +515,7 @@ exports[`<MeetingListItem /> snapshot should match snapshot with image 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </div>
             </ListItemBaseSection>
             <ListItemBaseSection

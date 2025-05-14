@@ -256,7 +256,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
               onTouchStart={[Function]}
               type="button"
             >
-              <Icon
+              <Mrv2Icon
                 className="md-navigation-tab-icon"
                 name="contacts"
                 scale={24}
@@ -279,7 +279,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with icon 1`] = `
                     suppressHydrationWarning={true}
                   />
                 </Icon>
-              </Icon>
+              </Mrv2Icon>
             </button>
           </FocusRing>
         </FocusRing>
@@ -578,7 +578,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
               onTouchStart={[Function]}
               type="button"
             >
-              <Icon
+              <Mrv2Icon
                 className="md-navigation-tab-icon"
                 name="contacts"
                 scale={24}
@@ -601,7 +601,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                     suppressHydrationWarning={true}
                   />
                 </Icon>
-              </Icon>
+              </Mrv2Icon>
             </button>
           </FocusRing>
         </FocusRing>
@@ -656,7 +656,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
               onTouchStart={[Function]}
               type="button"
             >
-              <Icon
+              <Mrv2Icon
                 className="md-navigation-tab-icon"
                 name="contacts"
                 scale={24}
@@ -679,7 +679,7 @@ exports[`<NavigationTab /> snapshot should match snapshot with size, label, icon
                     suppressHydrationWarning={true}
                   />
                 </Icon>
-              </Icon>
+              </Mrv2Icon>
             </button>
           </FocusRing>
         </FocusRing>

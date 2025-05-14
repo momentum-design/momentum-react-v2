@@ -163,7 +163,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -186,7 +186,7 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>
@@ -355,7 +355,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -378,7 +378,7 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>
@@ -547,7 +547,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -570,7 +570,7 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>
@@ -739,7 +739,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -762,7 +762,7 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>
@@ -936,7 +936,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -959,7 +959,7 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>
@@ -1128,7 +1128,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -1151,7 +1151,7 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>
@@ -1333,7 +1333,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                 onTouchStart={[Function]}
                 type="button"
               >
-                <Icon
+                <Mrv2Icon
                   className="md-combo-box-arrow-icon"
                   name="arrow-down"
                   scale={12}
@@ -1356,7 +1356,7 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
                       suppressHydrationWarning={true}
                     />
                   </Icon>
-                </Icon>
+                </Mrv2Icon>
               </button>
             </FocusRing>
           </FocusRing>

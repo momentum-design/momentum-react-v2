@@ -408,7 +408,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
                           onTouchStart={[Function]}
                           type="button"
                         >
-                          <Icon
+                          <Mrv2Icon
                             autoScale={true}
                             name="cancel"
                             weight="bold"
@@ -430,7 +430,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with controls 1`] = `
                                 suppressHydrationWarning={true}
                               />
                             </Icon>
-                          </Icon>
+                          </Mrv2Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
@@ -1021,7 +1021,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                           onTouchStart={[Function]}
                           type="button"
                         >
-                          <Icon
+                          <Mrv2Icon
                             autoScale={true}
                             name="cancel"
                             weight="bold"
@@ -1043,7 +1043,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                                 suppressHydrationWarning={true}
                               />
                             </Icon>
-                          </Icon>
+                          </Mrv2Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
@@ -1080,7 +1080,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                           onTouchStart={[Function]}
                           type="button"
                         >
-                          <Icon
+                          <Mrv2Icon
                             autoScale={true}
                             fillColor="var(--mds-color-theme-text-warning-normal)"
                             name="favorite"
@@ -1111,7 +1111,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                                 suppressHydrationWarning={true}
                               />
                             </Icon>
-                          </Icon>
+                          </Mrv2Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
@@ -1148,7 +1148,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                           onTouchStart={[Function]}
                           type="button"
                         >
-                          <Icon
+                          <Mrv2Icon
                             autoScale={true}
                             name="arrow-up"
                             weight="bold"
@@ -1170,7 +1170,7 @@ exports[`<OverlayAlert /> snapshot should match snapshot with multiple controls 
                                 suppressHydrationWarning={true}
                               />
                             </Icon>
-                          </Icon>
+                          </Mrv2Icon>
                         </button>
                       </FocusRing>
                     </FocusRing>
