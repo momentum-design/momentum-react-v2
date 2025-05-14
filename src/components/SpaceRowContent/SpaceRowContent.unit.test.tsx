@@ -8,8 +8,9 @@ import Icon from '../Icon';
 import { mountAndWait } from '../../../test/utils';
 import DividerDot from '../DividerDot';
 import ListItemBaseSection from '../ListItemBaseSection';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 
 // poppy uses uuid, which causes snapshot comparison failures
 jest.mock('uuid', () => {
@@ -524,8 +525,6 @@ describe('<SpaceRowContent />', () => {
     it('should show menu when menuItems is provided', async () => {
       expect.assertions(2);
 
-      const user = userEvent.setup();
-
       render(
         <SpaceRowContent
           menuItems={[{ key: 'item-1', text: 'Item 1' }]}
@@ -536,8 +535,11 @@ describe('<SpaceRowContent />', () => {
       const triggerButton = screen.getByTestId('menu-trigger-button');
       expect(triggerButton.getAttribute('aria-label')).toBe('Menu trigger label');
 
-      await user.click(triggerButton);
-      expect(screen.getByRole('menuitemradio', { name: 'Item 1' })).toBeTruthy();
+      fireEvent.click(triggerButton);
+
+      await waitFor(() => {
+        expect(screen.getByRole('menuitemradio', { name: 'Item 1' })).toBeInTheDocument();
+      });
     });
   });
 });

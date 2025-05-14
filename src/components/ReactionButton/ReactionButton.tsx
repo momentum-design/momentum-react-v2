@@ -22,6 +22,7 @@ const ReactionButton = forwardRef((props: Props, ref: RefObject<Button>) => {
       size={DEFAULTS.SIZE as ButtonCircleSize}
       style={style}
       variant="tertiary"
+      stopPropagation={false}
       {...otherProps}
     >
       {children}
