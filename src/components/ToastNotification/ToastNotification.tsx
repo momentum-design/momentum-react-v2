@@ -55,6 +55,7 @@ const ToastNotification: FC<Props> = (props: Props) => {
               onClick={onClose}
               aria-label={closeButtonLabel}
               prefixIcon="cancel-bold"
+              stopPropagation={false}
             />
           </div>
         )}

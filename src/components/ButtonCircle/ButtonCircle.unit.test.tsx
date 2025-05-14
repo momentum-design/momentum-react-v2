@@ -168,21 +168,21 @@ describe('<ButtonCircle />', () => {
   describe('actions', () => {
     it('should call onPress when clicked', async () => {
       const onPress = jest.fn();
-      await setup(<ButtonCircle onPress={onPress} />);
+      await setup(<ButtonCircle onPress={onPress} stopPropagation={false} />);
       await userEvent.click(screen.getByRole('button'));
       expect(onPress).toHaveBeenCalled();
     });
 
     it('should not call onPress when disabled', async () => {
       const onPress = jest.fn();
-      await setup(<ButtonCircle onPress={onPress} disabled />);
+      await setup(<ButtonCircle onPress={onPress} disabled stopPropagation={false} />);
       await userEvent.click(screen.getByRole('button'));
       expect(onPress).not.toHaveBeenCalled();
     });
 
     it('should call onPress when shallowDisabled', async () => {
       const onPress = jest.fn();
-      await setup(<ButtonCircle onPress={onPress} shallowDisabled />);
+      await setup(<ButtonCircle onPress={onPress} shallowDisabled stopPropagation={false} />);
       await userEvent.click(screen.getByRole('button'));
       expect(onPress).toHaveBeenCalled();
     });

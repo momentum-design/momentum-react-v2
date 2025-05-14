@@ -34,6 +34,7 @@ Example.args = {
   firstLine: 'Cisco Webex',
   secondLine: 'Webex Teams',
   onPress: action(`Space Row Content Press`),
+  menuItems: [{ key: 'item-1', text: 'Item 1' }],
 };
 
 const Common = MultiTemplate<SpaceRowContentProps>(SpaceRowContent).bind({});

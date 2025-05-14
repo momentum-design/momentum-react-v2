@@ -626,6 +626,7 @@ exports[`<ToastNotification /> snapshot should match snapshot with onClose and c
             onClick={[Function]}
             prefixIcon="cancel-bold"
             size={20}
+            stopPropagation={false}
             variant="tertiary"
           >
             <Button

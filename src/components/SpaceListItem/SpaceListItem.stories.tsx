@@ -35,6 +35,7 @@ Example.args = {
   firstLine: 'Cisco Webex',
   secondLine: 'Webex Teams',
   onPress: action(`Space List Item Press`),
+  menuItems: [{ key: 'item-1', text: 'Item 1' }],
 };
 
 const Common = MultiTemplate<SpaceListItemProps>(SpaceListItem).bind({});

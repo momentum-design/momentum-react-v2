@@ -55,6 +55,7 @@ exports[`<ReactionPicker /> snapshot should match snapshot with children 1`] = `
             onKeyDown={[Function]}
             onPress={[Function]}
             size={32}
+            stopPropagation={false}
             tabIndex={0}
             useNativeKeyDown={true}
             variant="tertiary"
