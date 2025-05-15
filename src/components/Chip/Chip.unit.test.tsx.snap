@@ -6,8 +6,13 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
 >
   <Chip
     disabled={true}
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
   >
     <mdc-chip
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Chip>
@@ -16,8 +21,14 @@ exports[`<Chip /> snapshot it should match snapshot with disabled 1`] = `
 
 exports[`<Chip /> snapshot should match snapshot 1`] = `
 <Chip>
-  <Chip>
+  <Chip
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
+  >
     <mdc-chip
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Chip>
@@ -30,9 +41,14 @@ exports[`<Chip /> snapshot should match snapshot with className 1`] = `
 >
   <Chip
     className="example-class"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
   >
     <mdc-chip
       class="example-class"
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Chip>
@@ -45,8 +61,13 @@ exports[`<Chip /> snapshot should match snapshot with icon 1`] = `
 >
   <Chip
     iconName="accessibility-regular"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
   >
     <mdc-chip
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Chip>
@@ -59,8 +80,13 @@ exports[`<Chip /> snapshot should match snapshot with id 1`] = `
 >
   <Chip
     id="example-id"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
   >
     <mdc-chip
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Chip>
@@ -76,6 +102,9 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
   }
 >
   <Chip
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
     style={
       Object {
         "color": "pink",
@@ -83,6 +112,8 @@ exports[`<Chip /> snapshot should match snapshot with style 1`] = `
     }
   >
     <mdc-chip
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       style={
         Object {
           "color": "pink",
@@ -100,8 +131,13 @@ exports[`<Chip /> snapshot should match snapshot with text 1`] = `
 >
   <Chip
     label="Some chip text"
+    onClick={[Function]}
+    onPointerDown={[Function]}
+    onPointerUp={[Function]}
   >
     <mdc-chip
+      onPointerDown={[Function]}
+      onPointerUp={[Function]}
       suppressHydrationWarning={true}
     />
   </Chip>
