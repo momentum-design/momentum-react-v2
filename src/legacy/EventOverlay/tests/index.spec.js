@@ -257,7 +257,9 @@ describe('tests for <EventOverlay />', () => {
           content={'test'}
           popoverTrigger={'Click'}
         >
-          <ButtonPill aria-label="Hello">Hello</ButtonPill>
+          <ButtonPill aria-label="Hello" stopPropagation={false}>
+            Hello
+          </ButtonPill>
         </Popover>
       </div>,
       { attachTo: focusContainer }

@@ -480,7 +480,7 @@ describe('tests for <Popover />', () => {
   it('should add onPress handler to trigger if isMRv2Button used & if popover trigger is click', () => {
     const container = mount(
       <Popover content={<h1>hi</h1>} popoverTrigger={'Click'}>
-        <ButtonPill tabIndex="0" className="anchor">
+        <ButtonPill tabIndex="0" className="anchor" stopPropagation={false}>
           Hello
         </ButtonPill>
       </Popover>

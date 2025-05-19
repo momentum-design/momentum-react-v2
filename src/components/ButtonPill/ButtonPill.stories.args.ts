@@ -1,5 +1,5 @@
 import {
-  commonAriaButton,
+  commonMdcButton,
   commonHTMLAttributes,
   commonStyles,
 } from '../../storybook/helper.stories.argtypes';
@@ -9,9 +9,10 @@ import { BUTTON_PILL_CONSTANTS as CONSTANTS } from './';
 export default {
   ...commonStyles,
   ...commonHTMLAttributes,
-  ...commonAriaButton,
+  ...commonMdcButton,
   children: {
-    description: 'Provides the child nodes for this element.',
+    description:
+      'Provides the child nodes for this element, passed into default slot of momentum-design button.',
     control: { type: 'text' },
     table: {
       type: {
@@ -35,22 +36,9 @@ export default {
       },
     },
   },
-  disabled: {
-    description: 'Whether to render the `<ButtonPill />` as disabled.',
-    options: [true, false],
-    control: { type: 'boolean' },
-    table: {
-      type: {
-        summary: 'boolean',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED,
-      },
-    },
-  },
   shallowDisabled: {
     description:
-      'Whether to render the `<ButtonPill />` looking as if disabled, but allowing onPress actions to still be passed.',
+      'Whether to render the `<ButtonPill />` looking as if disabled, but allowing onPress actions to still be passed. Maps to softDisabled internally.',
     options: [true, false],
     control: { type: 'boolean' },
     table: {
@@ -125,7 +113,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.INVERTED,
+        summary: false,
       },
     },
   },

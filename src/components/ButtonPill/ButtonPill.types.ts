@@ -1,7 +1,14 @@
 import { ReactNode } from 'react';
-import { ButtonSimpleProps } from '../ButtonSimple';
+import type { MdcButtonProps } from '../../types';
 
-export interface Props extends ButtonSimpleProps {
+export type Props = Omit<MdcButtonProps, 'active' | 'color'> & {
+  /**
+   * onPress event handler, which internally maps to the onClick event.
+   *
+   * @deprecated Use `onClick` instead.
+   */
+  onPress?: (event: MouseEvent) => void;
+
   /**
    * Child components of this ButtonPill.
    */
@@ -13,9 +20,26 @@ export interface Props extends ButtonSimpleProps {
   color?: 'join' | 'cancel' | 'message';
 
   /**
-   * Whether or not this ButtonPill is disabled.
+   * Whether or not this ButtonPill has a transparent background.
+   *
+   * @deprecated Use `variant` property to style the Button instead.
    */
-  disabled?: boolean;
+  ghost?: boolean;
+
+  /**
+   * Whether or not this ButtonPill has an outline/border.
+   *
+   * @deprecated Use `variant` property to style the Button instead.
+   */
+  outline?: boolean;
+
+  /**
+   * Whether or not this ButtonPill should look disabled, but allowing actions like onPress to be passed.
+   * Maps to softDisabled internally.
+   *
+   * @deprecated Use `softDisabled` instead.
+   */
+  shallowDisabled?: boolean;
 
   /**
    * Whether or not this ButtonPill has an outline even when disabled. Respects existing outline prop and will not display outline if outline is false.
@@ -23,32 +47,12 @@ export interface Props extends ButtonSimpleProps {
   disabledOutline?: boolean;
 
   /**
-   * Whether or not this ButtonPill should look disabled, but allowing actions like onPress to be passed.
-   */
-  shallowDisabled?: boolean;
-
-  /**
-   * Whether or not this ButtonPill has a transparent background.
-   */
-  ghost?: boolean;
-
-  /**
    * If this component show grow its width to the parent container.
    */
   grown?: boolean;
 
   /**
-   * Whether or not this ButtonPill has an outline/border.
+   * Whether or not to stop the event from bubbling up.
    */
-  outline?: boolean;
-
-  /**
-   * Whether or not this ButtonCircle has inverted background (black for dark mode and white for light mode).
-   */
-  inverted?: boolean;
-
-  /**
-   * Size index of this ButtonPill.
-   */
-  size?: number;
-}
+  stopPropagation?: boolean;
+};

@@ -30,11 +30,11 @@ export default {
 };
 
 const commonChildren = [
-  <ButtonPill key="0" size={40} data-buttongroup-child>
+  <ButtonPill key="0" size={40}>
     Example
   </ButtonPill>,
-  <ButtonCircle key="1" size={40} data-buttongroup-child prefixIcon="redo-regular" />,
-  <ButtonCircle key="2" size={40} data-buttongroup-child prefixIcon="cancel-regular" />,
+  <ButtonCircle key="1" size={40} prefixIcon="redo-regular" />,
+  <ButtonCircle key="2" size={40} prefixIcon="cancel-regular" />,
 ];
 
 const Example = Template<ButtonGroupProps>(ButtonGroup).bind({});
@@ -74,38 +74,19 @@ delete Spacing.argTypes.spaced;
 const Separator = MultiTemplate<ButtonGroupProps>(ButtonGroup).bind({});
 
 const separatorCommonChildren = [
-  <ButtonPill ghost key="0" size={40} data-buttongroup-child>
+  <ButtonPill ghost key="0" size={40}>
     Example
   </ButtonPill>,
-  <ButtonCircle
-    variant="tertiary"
-    key="1"
-    size={40}
-    prefixIcon="redo-regular"
-    data-buttongroup-child
-  />,
-  <ButtonCircle
-    variant="tertiary"
-    key="2"
-    size={40}
-    prefixIcon="cancel-regular"
-    data-buttongroup-child
-  />,
+  <ButtonCircle variant="tertiary" key="1" size={40} prefixIcon="redo-regular" />,
+  <ButtonCircle variant="tertiary" key="2" size={40} prefixIcon="cancel-regular" />,
 ];
 
 const callControlsCommonChildren = [
-  <ButtonCircleToggle key="0" size={40} prefixIcon="raise-hand-regular" data-buttongroup-child />,
+  <ButtonCircleToggle key="0" size={40} prefixIcon="raise-hand-regular" />,
   <MenuTrigger
     key="1"
     placement="top-end"
-    triggerComponent={
-      <ButtonCircle
-        size={40}
-        data-buttongroup-child
-        variant="tertiary"
-        prefixIcon="reactions-regular"
-      />
-    }
+    triggerComponent={<ButtonCircle size={40} variant="tertiary" prefixIcon="reactions-regular" />}
     children={[
       <Menu key="0" selectionMode="single">
         <Item>Item 1</Item>
@@ -165,14 +146,7 @@ AudioVideoControls.parameters = {
   variants: [
     {
       children: [
-        <ButtonPill
-          outline
-          ghost
-          key="0"
-          size={40}
-          style={{ minWidth: '6.8rem' }}
-          data-buttongroup-child
-        >
+        <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '6.8rem' }}>
           <Icon key="0" name="microphone-on" autoScale={125} style={{ marginLeft: 'auto' }} />
           <div key="1" style={{ marginRight: 'auto' }}>
             Mute
@@ -182,13 +156,7 @@ AudioVideoControls.parameters = {
           key="2"
           placement="top-end"
           triggerComponent={
-            <ButtonCircle
-              variant="secondary"
-              key="1"
-              size={40}
-              data-buttongroup-child
-              prefixIcon="arrow-down-regular"
-            />
+            <ButtonCircle variant="secondary" key="1" size={40} prefixIcon="arrow-down-regular" />
           }
           children={[
             <Menu key="0" selectionMode="single">
@@ -211,7 +179,6 @@ AudioVideoControls.parameters = {
           key="0"
           size={40}
           style={{ minWidth: '6.8rem' }}
-          data-buttongroup-child
         >
           <Icon
             key="0"
@@ -224,39 +191,20 @@ AudioVideoControls.parameters = {
             Unmute
           </div>
         </ButtonPill>,
-        <ButtonCircle
-          key="1"
-          size={40}
-          variant="secondary"
-          prefixIcon="arrow-down-regular"
-          data-buttongroup-child
-        />,
+        <ButtonCircle key="1" size={40} variant="secondary" prefixIcon="arrow-down-regular" />,
       ],
       round: true,
       compressed: true,
     },
     {
       children: [
-        <ButtonPill
-          outline
-          ghost
-          key="0"
-          size={40}
-          style={{ minWidth: '8.3rem' }}
-          data-buttongroup-child
-        >
+        <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
           <Icon key="0" name="camera-on" autoScale={125} style={{ marginLeft: 'auto' }} />
           <div key="1" style={{ marginRight: 'auto' }}>
             Stop Video
           </div>
         </ButtonPill>,
-        <ButtonCircle
-          key="1"
-          size={40}
-          variant="secondary"
-          prefixIcon="arrow-down-regular"
-          data-buttongroup-child
-        />,
+        <ButtonCircle key="1" size={40} variant="secondary" prefixIcon="arrow-down-regular" />,
       ],
       round: true,
       compressed: true,
@@ -271,42 +219,22 @@ AudioVideoControls.parameters = {
           key="0"
           size={40}
           style={{ minWidth: '8.3rem' }}
-          data-buttongroup-child
         >
           <Icon key="0" name="camera-muted" fillColor="#FC8B98" autoScale={125} />
           <div key="1">Start Video</div>
         </ButtonPill>,
-        <ButtonCircle
-          key="1"
-          size={40}
-          variant="secondary"
-          prefixIcon="arrow-down-regular"
-          data-buttongroup-child
-        />,
+        <ButtonCircle key="1" size={40} variant="secondary" prefixIcon="arrow-down-regular" />,
       ],
       round: true,
       compressed: true,
     },
     {
       children: [
-        <ButtonPill
-          outline
-          ghost
-          key="0"
-          size={40}
-          style={{ minWidth: '8.3rem' }}
-          data-buttongroup-child
-        >
+        <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '8.3rem' }}>
           <Icon key="0" name="camera-on" autoScale={125} />
           <div key="1">Long Label Possibly German</div>
         </ButtonPill>,
-        <ButtonCircle
-          key="1"
-          size={40}
-          variant="secondary"
-          prefixIcon="arrow-down-regular"
-          data-buttongroup-child
-        />,
+        <ButtonCircle key="1" size={40} variant="secondary" prefixIcon="arrow-down-regular" />,
       ],
       round: true,
       compressed: true,
@@ -319,17 +247,10 @@ AudioVideoControls.parameters = {
           style={{ minWidth: '8.3rem' }}
           key="0"
           prefixIcon="camera-on-regular"
-          data-buttongroup-child
         >
           Long Label Possibly German
         </ButtonPillToggle>,
-        <ButtonCircleToggle
-          outline
-          size={40}
-          prefixIcon="arrow-down-regular"
-          key="1"
-          data-buttongroup-child
-        />,
+        <ButtonCircleToggle outline size={40} prefixIcon="arrow-down-regular" key="1" />,
       ],
       round: true,
       compressed: true,
@@ -348,56 +269,36 @@ Common.parameters = {
   variants: [
     {
       children: [
-        <ButtonPill key="0" data-buttongroup-child>
-          Example
-        </ButtonPill>,
-        <ButtonCircle key="1" prefixIcon="redo-regular" size={40} data-buttongroup-child />,
-        <ButtonCircle key="2" prefixIcon="cancel-regular" size={40} data-buttongroup-child />,
+        <ButtonPill key="0">Example</ButtonPill>,
+        <ButtonCircle key="1" prefixIcon="redo-regular" size={40} />,
+        <ButtonCircle key="2" prefixIcon="cancel-regular" size={40} />,
       ],
       round: true,
     },
     {
       children: [
-        <ButtonPill color="message" key="0" data-buttongroup-child>
+        <ButtonPill color="message" key="0">
           Message
         </ButtonPill>,
-        <ButtonCircle
-          color="message"
-          key="1"
-          prefixIcon="send-regular"
-          size={40}
-          data-buttongroup-child
-        />,
+        <ButtonCircle color="message" key="1" prefixIcon="send-regular" size={40} />,
       ],
       round: true,
     },
     {
       children: [
-        <ButtonPill color="join" key="0" data-buttongroup-child>
+        <ButtonPill color="join" key="0">
           Join
         </ButtonPill>,
-        <ButtonCircle
-          color="join"
-          key="1"
-          prefixIcon="enter-room-regular"
-          size={40}
-          data-buttongroup-child
-        />,
+        <ButtonCircle color="join" key="1" prefixIcon="enter-room-regular" size={40} />,
       ],
       round: true,
     },
     {
       children: [
-        <ButtonPill color="cancel" key="0" data-buttongroup-child>
+        <ButtonPill color="cancel" key="0">
           Cancel
         </ButtonPill>,
-        <ButtonCircle
-          color="cancel"
-          size={40}
-          key="1"
-          prefixIcon="cancel-regular"
-          data-buttongroup-child
-        />,
+        <ButtonCircle color="cancel" size={40} key="1" prefixIcon="cancel-regular" />,
       ],
       round: true,
     },
