@@ -1,4 +1,3 @@
-import { ICON_CONSTANTS } from '../Icon';
 import {
   OnVideoReactionName,
   OriginalReactionName,
@@ -14,17 +13,19 @@ const CLASS_PREFIX = 'md-reaction';
 const GLYPH_NOT_FOUND = String.fromCharCode(0x20de);
 
 const DEFAULTS = {
+  SHOW_LOADING_SPINNER: true,
   SIZE: 12,
 };
-
-const SIZES = ICON_CONSTANTS.SIZES;
 
 const STYLE = {
   wrapper: `${CLASS_PREFIX}-wrapper`,
   notFound: `${CLASS_PREFIX}-not-found`,
+  loading: `${CLASS_PREFIX}-loading`,
+  loaded: `${CLASS_PREFIX}-loaded`,
+  error: `${CLASS_PREFIX}-error`,
 };
 
-const ON_VIDEO_PATH = 'on_video/';
+const ON_VIDEO_PREFIX = 'on_video_';
 
 const SKIN_TONES: Record<SkinTone, SkinTone> = {
   yellow: 'yellow',
@@ -66,12 +67,12 @@ const ORIGINAL_REACTIONS = {
 const ON_VIDEO_REACTIONS = {
   // append on video path prefix to each.
   ...Object.values(REACTIONS_WITHOUT_SKIN_TONE).reduce(
-    (acc, name) => ({ ...acc, [`${ON_VIDEO_PATH}${name}`]: `${ON_VIDEO_PATH}${name}` }),
+    (acc, name) => ({ ...acc, [`${ON_VIDEO_PREFIX}${name}`]: `${ON_VIDEO_PREFIX}${name}` }),
     {}
   ),
   ...generateReactionsWithSkinTone(
     cartesian(Object.values(REACTIONS_WITH_SKIN_TONE), Object.values(SKIN_TONES)),
-    ({ type, skinTone }) => `${ON_VIDEO_PATH}${type}_${skinTone}`
+    ({ type, skinTone }) => `${ON_VIDEO_PREFIX}${type}_${skinTone}`
   ),
 } as Record<OnVideoReactionName, OnVideoReactionName>;
 
@@ -87,8 +88,7 @@ export {
   SKIN_TONES,
   REACTIONS_WITH_SKIN_TONE,
   REACTIONS_WITHOUT_SKIN_TONE,
-  ON_VIDEO_PATH,
-  SIZES,
+  ON_VIDEO_PREFIX,
   STYLE,
   ON_VIDEO_REACTIONS,
   ORIGINAL_REACTIONS,

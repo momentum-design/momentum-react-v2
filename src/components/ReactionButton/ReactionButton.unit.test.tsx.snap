@@ -30,10 +30,51 @@ exports[`<ReactionButton /> snapshot should match snapshot 1`] = `
           name="haha"
         >
           <div
-            className="md-reaction-wrapper md-icon-scales"
-            data-name="haha"
+            className="md-reaction-wrapper md-icon-scales md-reaction-loading"
             data-scale={12}
-          />
+          >
+            <Animation
+              data-name="haha"
+              name="haha"
+              onError={[Function]}
+              onLoad={[Function]}
+            >
+              <mdc-animation
+                data-name="haha"
+                suppressHydrationWarning={true}
+              />
+            </Animation>
+            <LoadingSpinner
+              aria-hidden={true}
+              scale={12}
+              variant="button"
+            >
+              <div
+                aria-hidden={true}
+                className="md-loading-spinner-wrapper"
+                role="img"
+              >
+                <Spinner
+                  inverted={false}
+                  style={
+                    Object {
+                      "--mdc-spinner-size": "0.75rem",
+                    }
+                  }
+                  variant="button"
+                >
+                  <mdc-spinner
+                    style={
+                      Object {
+                        "--mdc-spinner-size": "0.75rem",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Spinner>
+              </div>
+            </LoadingSpinner>
+          </div>
         </Reaction>
       </mdc-button>
     </Button>
@@ -73,10 +114,51 @@ exports[`<ReactionButton /> snapshot should match snapshot with className 1`] = 
           name="haha"
         >
           <div
-            className="md-reaction-wrapper md-icon-scales"
-            data-name="haha"
+            className="md-reaction-wrapper md-icon-scales md-reaction-loading"
             data-scale={12}
-          />
+          >
+            <Animation
+              data-name="haha"
+              name="haha"
+              onError={[Function]}
+              onLoad={[Function]}
+            >
+              <mdc-animation
+                data-name="haha"
+                suppressHydrationWarning={true}
+              />
+            </Animation>
+            <LoadingSpinner
+              aria-hidden={true}
+              scale={12}
+              variant="button"
+            >
+              <div
+                aria-hidden={true}
+                className="md-loading-spinner-wrapper"
+                role="img"
+              >
+                <Spinner
+                  inverted={false}
+                  style={
+                    Object {
+                      "--mdc-spinner-size": "0.75rem",
+                    }
+                  }
+                  variant="button"
+                >
+                  <mdc-spinner
+                    style={
+                      Object {
+                        "--mdc-spinner-size": "0.75rem",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Spinner>
+              </div>
+            </LoadingSpinner>
+          </div>
         </Reaction>
       </mdc-button>
     </Button>
@@ -118,10 +200,51 @@ exports[`<ReactionButton /> snapshot should match snapshot with id 1`] = `
           name="haha"
         >
           <div
-            className="md-reaction-wrapper md-icon-scales"
-            data-name="haha"
+            className="md-reaction-wrapper md-icon-scales md-reaction-loading"
             data-scale={12}
-          />
+          >
+            <Animation
+              data-name="haha"
+              name="haha"
+              onError={[Function]}
+              onLoad={[Function]}
+            >
+              <mdc-animation
+                data-name="haha"
+                suppressHydrationWarning={true}
+              />
+            </Animation>
+            <LoadingSpinner
+              aria-hidden={true}
+              scale={12}
+              variant="button"
+            >
+              <div
+                aria-hidden={true}
+                className="md-loading-spinner-wrapper"
+                role="img"
+              >
+                <Spinner
+                  inverted={false}
+                  style={
+                    Object {
+                      "--mdc-spinner-size": "0.75rem",
+                    }
+                  }
+                  variant="button"
+                >
+                  <mdc-spinner
+                    style={
+                      Object {
+                        "--mdc-spinner-size": "0.75rem",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Spinner>
+              </div>
+            </LoadingSpinner>
+          </div>
         </Reaction>
       </mdc-button>
     </Button>
@@ -161,10 +284,51 @@ exports[`<ReactionButton /> snapshot should match snapshot with reacted 1`] = `
           name="haha"
         >
           <div
-            className="md-reaction-wrapper md-icon-scales"
-            data-name="haha"
+            className="md-reaction-wrapper md-icon-scales md-reaction-loading"
             data-scale={12}
-          />
+          >
+            <Animation
+              data-name="haha"
+              name="haha"
+              onError={[Function]}
+              onLoad={[Function]}
+            >
+              <mdc-animation
+                data-name="haha"
+                suppressHydrationWarning={true}
+              />
+            </Animation>
+            <LoadingSpinner
+              aria-hidden={true}
+              scale={12}
+              variant="button"
+            >
+              <div
+                aria-hidden={true}
+                className="md-loading-spinner-wrapper"
+                role="img"
+              >
+                <Spinner
+                  inverted={false}
+                  style={
+                    Object {
+                      "--mdc-spinner-size": "0.75rem",
+                    }
+                  }
+                  variant="button"
+                >
+                  <mdc-spinner
+                    style={
+                      Object {
+                        "--mdc-spinner-size": "0.75rem",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Spinner>
+              </div>
+            </LoadingSpinner>
+          </div>
         </Reaction>
       </mdc-button>
     </Button>
@@ -223,10 +387,51 @@ exports[`<ReactionButton /> snapshot should match snapshot with style 1`] = `
           name="haha"
         >
           <div
-            className="md-reaction-wrapper md-icon-scales"
-            data-name="haha"
+            className="md-reaction-wrapper md-icon-scales md-reaction-loading"
             data-scale={12}
-          />
+          >
+            <Animation
+              data-name="haha"
+              name="haha"
+              onError={[Function]}
+              onLoad={[Function]}
+            >
+              <mdc-animation
+                data-name="haha"
+                suppressHydrationWarning={true}
+              />
+            </Animation>
+            <LoadingSpinner
+              aria-hidden={true}
+              scale={12}
+              variant="button"
+            >
+              <div
+                aria-hidden={true}
+                className="md-loading-spinner-wrapper"
+                role="img"
+              >
+                <Spinner
+                  inverted={false}
+                  style={
+                    Object {
+                      "--mdc-spinner-size": "0.75rem",
+                    }
+                  }
+                  variant="button"
+                >
+                  <mdc-spinner
+                    style={
+                      Object {
+                        "--mdc-spinner-size": "0.75rem",
+                      }
+                    }
+                    suppressHydrationWarning={true}
+                  />
+                </Spinner>
+              </div>
+            </LoadingSpinner>
+          </div>
         </Reaction>
       </mdc-button>
     </Button>

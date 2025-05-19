@@ -19,6 +19,9 @@ export default {
     docs: {
       page: DocumentationPage(Documentation, StyleDocs),
     },
+    a11y: {
+      manual: true,
+    },
   },
   args: {
     name: REACTIONS.celebrate,
@@ -32,21 +35,22 @@ const Example = Template<ReactionProps>(Reaction).bind({});
 
 Example.argTypes = { ...argTypes };
 
-const ReactionWithLabel = (props: ReactionProps) => (
-  <Flex direction="column" alignItems="center" ygap="1rem" style={{ margin: '1.5rem' }}>
-    <Reaction {...props} style={{ border: '1px solid gray' }} />
-    <p>{props.name}</p>
-  </Flex>
-);
+const ReactionWithLabel = (labelProp: string) => (props: ReactionProps) =>
+  (
+    <Flex direction="column" alignItems="center" ygap="1rem" style={{ margin: '1.5rem' }}>
+      <Reaction {...props} style={{ border: '1px solid gray' }} />
+      <p>{props[labelProp]}</p>
+    </Flex>
+  );
 
-const Sizes = MultiTemplate<ReactionProps>(Reaction).bind({});
+const Sizes = MultiTemplate<ReactionProps>(ReactionWithLabel('size')).bind({});
 Sizes.parameters = {
   variants: [...Object.values(ICON_CONSTANTS.SIZES).map((size) => ({ name: 'haha', size }))],
 };
 Sizes.argTypes = { ...argTypes };
 delete Sizes.argTypes.size;
 
-const Original = MultiTemplate<ReactionProps>(ReactionWithLabel).bind({});
+const Original = MultiTemplate<ReactionProps>(ReactionWithLabel('name')).bind({});
 
 Original.argTypes = { ...argTypes };
 delete Original.argTypes.children;
@@ -55,7 +59,7 @@ Original.parameters = {
   variants: [...Object.values(ORIGINAL_REACTIONS).map((name) => ({ name, size: 'auto' }))],
 };
 
-const OnVideo = MultiTemplate<ReactionProps>(ReactionWithLabel).bind({});
+const OnVideo = MultiTemplate<ReactionProps>(ReactionWithLabel('name')).bind({});
 
 OnVideo.argTypes = { ...argTypes };
 delete OnVideo.argTypes.children;

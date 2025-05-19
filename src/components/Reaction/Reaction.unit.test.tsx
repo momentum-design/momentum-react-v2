@@ -1,19 +1,12 @@
+import '@testing-library/jest-dom';
 import React from 'react';
+import { render, waitFor } from '@testing-library/react';
 import { mountAndWait } from '../../../test/utils';
-
 import Reaction, { REACTION_CONSTANTS as CONSTANTS } from './';
-import lottie from 'lottie-web/build/player/lottie_light';
-import * as jsonImport from '../../hooks/useDynamicJSONImport';
-import { REACTIONS, STYLE, GLYPH_NOT_FOUND } from './Reaction.constants';
-import LoadingSpinner from '../LoadingSpinner';
 
-import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
+import { REACTIONS, GLYPH_NOT_FOUND } from './Reaction.constants';
 
 describe('<Reaction/>', () => {
-  beforeEach(() => {
-    jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-  });
-
   describe('snapshot', () => {
     it('should match snapshot', async () => {
       expect.assertions(1);
@@ -56,9 +49,7 @@ describe('<Reaction/>', () => {
     it('should match snapshot with glyph not found if error', async () => {
       expect.assertions(1);
 
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ error: new Error('error') });
-
-      const container = await mountAndWait(<Reaction name="haha" size={16} />);
+      const container = await mountAndWait(<Reaction name="haha" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -66,9 +57,7 @@ describe('<Reaction/>', () => {
     it('should match snapshot with spinner while animation data is not defined', async () => {
       expect.assertions(1);
 
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: undefined });
-
-      const container = await mountAndWait(<Reaction name="haha" size={16} />);
+      const container = await mountAndWait(<Reaction name="haha" />);
 
       expect(container).toMatchSnapshot();
     });
@@ -116,7 +105,7 @@ describe('<Reaction/>', () => {
       const id = 'example-id';
 
       const wrapper = await mountAndWait(<Reaction name="haha" id={id} />);
-      const element = wrapper.find(Reaction).getDOMNode();
+      const element = wrapper.find('Animation').getDOMNode();
 
       expect(element.id).toBe(id);
     });
@@ -146,63 +135,33 @@ describe('<Reaction/>', () => {
   });
 
   describe('actions', () => {
-    it('should set/remove listeners correctly', async () => {
-      const addEventListener = jest.fn();
-      const removeEventListener = jest.fn();
-      const destroy = jest.fn();
-      const onComplete = jest.fn();
+    it('should render loading spinner first', () => {
+      const { container } = render(<Reaction name="haha" />);
 
-      jest
-        .spyOn(lottie, 'loadAnimation')
-        .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-      const wrapper = await mountAndWait(
-        <Reaction name="haha" size={16} onComplete={onComplete} />
-      );
-
-      expect(addEventListener).toHaveBeenCalledWith('complete', onComplete);
-      expect(removeEventListener).not.toHaveBeenCalledWith('complete', onComplete);
-
-      wrapper.unmount();
-
-      expect(destroy).toBeCalledTimes(1);
-      expect(removeEventListener).toBeCalledWith('complete', onComplete);
+      expect(container.querySelector('.md-loading-spinner-wrapper')).toBeInTheDocument();
     });
 
-    it('should not set/remove listeners if onComplete not provided', async () => {
-      const addEventListener = jest.fn();
-      const removeEventListener = jest.fn();
-      const destroy = jest.fn();
+    it('should render not loading spinner when hideLoadingSpinner=false passes', () => {
+      const { container } = render(<Reaction name="haha" hideLoadingSpinner={false} />);
 
-      jest
-        .spyOn(lottie, 'loadAnimation')
-        .mockReturnValue({ addEventListener, removeEventListener, destroy } as never);
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
-
-      expect(addEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
-      expect(removeEventListener).not.toHaveBeenCalledWith('complete', expect.any(Function));
-
-      wrapper.unmount();
-
-      expect(destroy).toBeCalledTimes(1);
-      expect(removeEventListener).not.toBeCalledWith('complete', expect.any(Function));
+      expect(container.querySelector('.md-loading-spinner-wrapper')).not.toBeInTheDocument();
     });
 
-    it('should render glyph not found if error', async () => {
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ error: new Error('error') });
+    it('should render not found when an error happen', async () => {
+      const { queryByText, container } = render(<Reaction name={'hahaha' as any} />);
 
-      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
+      await waitFor(() => !container.querySelector('.md-loading-spinner-wrapper'));
 
-      expect(wrapper.find(`.${STYLE.notFound}`).text()).toEqual(GLYPH_NOT_FOUND);
+      expect(queryByText(GLYPH_NOT_FOUND)).toBeInTheDocument();
     });
 
-    it('should render spinner while animation data is not defined', async () => {
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: undefined });
+    it('should render animation without loading or error message', async () => {
+      const { queryByText, container } = render(<Reaction name="haha" />);
 
-      const wrapper = await mountAndWait(<Reaction name="haha" size={16} />);
+      await waitFor(() => !container.querySelector('.md-loading-spinner-wrapper'));
 
-      expect(wrapper.find(LoadingSpinner)).toBeDefined();
+      expect(queryByText(GLYPH_NOT_FOUND)).not.toBeInTheDocument();
+      expect(container.querySelector('mdc-animation')).toBeVisible();
     });
   });
 });

@@ -1,10 +1,11 @@
-const {swcLoaderOptions} = require('./config/swc/loaderOptions'); // eslint-disable-line
+const { swcLoaderOptions } = require('./config/swc/loaderOptions'); // eslint-disable-line
 
 module.exports = {
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   modulePathIgnorePatterns: ['<rootDir>/src/app/'],
   transformIgnorePatterns: [
-    'node_modules/(?!(@lit/react|lit|lit-html|lit-element|@lit/reactive-element|@lit/context|@momentum-design/components|element-internals-polyfill)/)',
+    // Note: this regex means, ignore everything except the listed packages after `?!`
+    'node_modules/(?!(@lit/react|lit|lit-html|lit-element|@lit/reactive-element|@lit/context|@momentum-design/components|@momentum-design/animations|element-internals-polyfill)/)',
   ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   snapshotResolver: '<rootDir>/config/jest/jest.snapshot-resolver.js',
@@ -18,8 +19,8 @@ module.exports = {
       '<rootDir>/tools/assetsTransformer.js',
     '\\.(scss|css|less)$': '<rootDir>/tools/assetsTransformer.js',
     '\\.svg\\?svgr$': '<rootDir>/tools/svgMock.js',
-    '\\/reactions/.*\\.json\\?lottie$': '<rootDir>/tools/reactionMock.js',
+    '\\@momentum-design/animations.*\\.json\\$': '<rootDir>/tools/reactionMock.js',
     '^@momentum-ui/react-collaboration(.*)$': '<rootDir>/src',
   },
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
 };

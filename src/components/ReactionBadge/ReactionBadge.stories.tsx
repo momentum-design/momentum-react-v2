@@ -21,7 +21,7 @@ export default {
     },
   },
   args: {
-    reaction: <Reaction name={REACTIONS.haha} autoPlay loop />,
+    reaction: <Reaction name={REACTIONS.haha} autoPlay loop="true" />,
     count: '1',
   },
 };
@@ -42,15 +42,15 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      reaction: <Reaction name={REACTIONS.celebrate} autoPlay loop />,
+      reaction: <Reaction name={REACTIONS.celebrate} autoPlay loop="true" />,
       count: 1,
     },
     {
-      reaction: <Reaction name={REACTIONS.heart} autoPlay loop />,
+      reaction: <Reaction name={REACTIONS.heart} autoPlay loop="true" />,
       count: 1,
     },
     {
-      reaction: <Reaction name={REACTIONS.sad} autoPlay loop />,
+      reaction: <Reaction name={REACTIONS.sad} autoPlay loop="true" />,
       count: 1,
     },
   ],

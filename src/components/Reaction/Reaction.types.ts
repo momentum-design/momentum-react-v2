@@ -2,9 +2,10 @@ import { AnimationEventCallback } from 'lottie-web';
 import { CSSProperties } from 'react';
 import { IconScale } from '../Icon/Icon.types';
 
-import { ON_VIDEO_PATH } from './Reaction.constants';
+import { ON_VIDEO_PREFIX } from './Reaction.constants';
+import type { LoopType } from '@momentum-design/components/dist/components/animation/animation.types.d.ts';
 
-type OnVideoPrefix = typeof ON_VIDEO_PATH;
+type OnVideoPrefix = typeof ON_VIDEO_PREFIX;
 
 export type ReactionWithSkinTone = 'clap' | 'thumb_up' | 'thumb_down' | 'prayer' | 'raise_hand';
 
@@ -46,6 +47,8 @@ export type OnVideoReactionName = OnVideoReactionWithoutSkinTone | OnVideoReacti
 // ALL
 export type ReactionName = OriginalReactionName | OnVideoReactionName;
 
+export type AnimationLoadingState = 'loading' | 'loaded' | 'error';
+
 export interface Props {
   /**
    * Custom boolean to autoplay SVG or not.
@@ -65,7 +68,7 @@ export interface Props {
   /**
    * Custom prop for how many times to loop or true false for no loop vs. infinite loop
    */
-  loop?: boolean | number;
+  loop?: LoopType;
 
   /**
    * Name of the specific animation to render.
@@ -73,6 +76,14 @@ export interface Props {
    * in the @momentum-design/animations repo. Path starts under /animations/reactions;
    */
   name: ReactionName;
+
+  /**
+   * Hide loading spinner.
+   * It useful when the spinner is distracting for example with the on video reactions.
+   *
+   * @default true
+   */
+  hideLoadingSpinner?: boolean;
 
   /**
    * Size index of this Reaction.

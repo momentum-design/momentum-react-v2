@@ -105,8 +105,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@momentum-design/animations": "^0.0.4",
-    "@momentum-design/components": "0.66.3",
+    "@momentum-design/animations": "0.3.1",
+    "@momentum-design/components": "0.73.6",
     "@momentum-design/fonts": "0.0.8",
     "@momentum-design/icons": "0.10.0",
     "@momentum-design/tokens": "0.5.0",
@@ -144,7 +144,6 @@
     "globby": "^11.0.4",
     "handlebars": "^4.1.0",
     "lodash": "4.17.21",
-    "lottie-web": "5.10.2",
     "moment": "^2.24.0",
     "node-sass-tilde-importer": "^1.0.2",
     "object-assign": "4.1.1",

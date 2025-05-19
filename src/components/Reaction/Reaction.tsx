@@ -1,67 +1,69 @@
-import React, { FC, useRef, useEffect } from 'react';
+import React, { FC, useCallback, useLayoutEffect, useState } from 'react';
 import classnames from 'classnames';
-import lottie, { AnimationItem } from 'lottie-web/build/player/lottie_light';
-import { useDynamicJSONImport } from '../../hooks/useDynamicJSONImport';
 
-import { DEFAULTS, STYLE, GLYPH_NOT_FOUND } from './Reaction.constants';
+import { STYLE, GLYPH_NOT_FOUND, DEFAULTS } from './Reaction.constants';
 import { STYLE as ICON_STYLE } from '../Icon/Icon.constants';
-import { Props } from './Reaction.types';
+import { AnimationLoadingState, Props } from './Reaction.types';
 import './Reaction.style.scss';
 import LoadingSpinner from '../LoadingSpinner';
+import { Animation as MdcAnimation } from '@momentum-design/components/dist/react';
 
 const Reaction: FC<Props> = (props: Props) => {
-  const { autoPlay, className, id, loop, name, size, style, onComplete, ...otherProps } = props;
-  const { animationData, error } = useDynamicJSONImport(name);
-  const svgContainer = useRef<HTMLDivElement>(null);
+  const {
+    autoPlay,
+    className,
+    id,
+    loop,
+    name,
+    style,
+    onComplete,
+    size,
+    hideLoadingSpinner = DEFAULTS.SHOW_LOADING_SPINNER,
+    ...otherProps
+  } = props;
 
-  useEffect(() => {
-    let animation: AnimationItem;
-    if (animationData) {
-      animation = lottie.loadAnimation({
-        container: svgContainer.current, // the dom element that will contain the animation
-        renderer: 'svg',
-        loop: loop,
-        autoplay: autoPlay,
-        animationData: animationData,
-        name,
-      });
-      if (onComplete) {
-        animation.addEventListener('complete', onComplete);
-      }
-    }
-    return () => {
-      if (animation) {
-        if (onComplete) {
-          animation.removeEventListener('complete', onComplete);
-        }
-        animation.destroy();
-      }
-    };
-  }, [svgContainer, animationData, autoPlay, loop, name, onComplete]);
+  const [loadingState, setLoadingState] = useState<AnimationLoadingState>(() => 'loading');
 
-  if (error) {
-    return (
-      <div data-error={`not-found:${name}`} className={STYLE.notFound}>
-        {GLYPH_NOT_FOUND}
-      </div>
-    );
-  }
-  if (animationData) {
-    return (
-      <div
-        className={classnames(className, STYLE.wrapper, ICON_STYLE.scales)}
-        data-scale={size || DEFAULTS.SIZE}
+  const onLoad = useCallback(() => setLoadingState('loaded'), []);
+  const onError = useCallback(() => setLoadingState(() => 'error'), []);
+
+  // useEffect runs after dynamic import is resolved and sets the wrong state when
+  // the component rendered with the first animation
+  useLayoutEffect(() => setLoadingState('loading'), [name]);
+
+  return (
+    <div
+      className={classnames(className, STYLE.wrapper, ICON_STYLE.scales, STYLE[loadingState])}
+      data-scale={size || DEFAULTS.SIZE}
+      style={style}
+    >
+      <MdcAnimation
+        name={name}
+        loop={loop}
+        autoplay={autoPlay}
+        onLoad={onLoad}
+        onError={onError}
+        onComplete={onComplete}
         data-name={name}
         id={id}
-        ref={svgContainer}
-        style={style}
         {...otherProps}
       />
-    );
-  }
-  if (!animationData) {
-    return <LoadingSpinner scale={size || DEFAULTS.SIZE} aria-hidden variant="button" />;
-  }
+
+      {hideLoadingSpinner && loadingState === 'loading' && (
+        <LoadingSpinner
+          scale={Math.min(Number(size) || DEFAULTS.SIZE, DEFAULTS.SIZE)}
+          aria-hidden
+          variant="button"
+        />
+      )}
+
+      {loadingState === 'error' && (
+        <div data-error={`not-found:${name}`} className={STYLE.notFound}>
+          {GLYPH_NOT_FOUND}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Reaction;

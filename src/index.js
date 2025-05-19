@@ -145,5 +145,7 @@ export {
   ButtonRefType,
 } from './components';
 
+export { MdcAnimation as Animation } from '@momentum-design/components';
+
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
 export { AriaLabelRequired } from './utils/a11y';
