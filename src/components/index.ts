@@ -55,7 +55,6 @@ export { default as Popover } from './Popover';
 export type { PopoverInstance } from './Popover';
 export { default as ListHeader } from './ListHeader';
 export { default as LoadingSpinner } from './LoadingSpinner';
-export { default as Tag } from './Tag';
 export { default as MeetingContainer } from './MeetingContainer';
 export { default as TextToast } from './TextToast';
 export { default as Checkbox } from './Checkbox';
