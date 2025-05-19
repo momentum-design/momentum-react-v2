@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import List, { LIST_CONSTANTS as CONSTANTS } from './';
 import ListItemBase from '../ListItemBase';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import {
@@ -16,6 +16,7 @@ import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { ListRefObject } from './List.types';
+import { renderWithWebComponent } from '../../../test/utils';
 
 jest.mock('uuid', () => {
   return {
@@ -517,10 +518,10 @@ describe('<List />', () => {
     });
 
     it('should handle menu in the list item', async () => {
-      expect.assertions(2);
+      expect.assertions(1);
       const user = userEvent.setup();
 
-      const { getAllByRole, findAllByText } = render(
+      await renderWithWebComponent(
         <List listSize={1}>
           <ListItemBase key="0" itemIndex={0}>
             <MenuTrigger triggerComponent={<ButtonPill size={28}>Menu</ButtonPill>}>
@@ -533,7 +534,7 @@ describe('<List />', () => {
           </ListItemBase>
         </List>
       );
-      const listItems = getAllByRole('listitem');
+      const listItems = screen.getAllByRole('listitem');
 
       await user.tab();
 
@@ -542,7 +543,7 @@ describe('<List />', () => {
       await user.tab();
       await user.keyboard('{Enter}');
 
-      const firstMenuItem = (await findAllByText('menu item 1'))[0].closest('li');
+      const firstMenuItem = (await screen.findAllByText('menu item 1'))[0].closest('li');
       expect(firstMenuItem).toHaveFocus();
     });
 

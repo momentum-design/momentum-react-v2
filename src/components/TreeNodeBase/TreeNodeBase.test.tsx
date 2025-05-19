@@ -562,10 +562,10 @@ describe('TreeNodeBase', () => {
             <TreeNodeBase key={node.id} nodeId={node.id} data-testid={`node-${node.id}`}>
               {() =>(<ListItemBaseSection position="end">
                 {numOfButtons > 0 ?
-                  (<ButtonPill data-testid={`first-button-${node.id}`} color="join" size={24}>Join 1</ButtonPill>) :
+                  (<ButtonPill data-testid={`first-button-${node.id}`} color="join" size={24} stopPropagation={false}>Join 1</ButtonPill>) :
                   (<span>Empty</span>)}
                 {numOfButtons > 1 ?
-                  (<ButtonPill data-testid={`second-button-${node.id}`} color="join" size={24}>Join 2</ButtonPill>) :
+                  (<ButtonPill data-testid={`second-button-${node.id}`} color="join" size={24} stopPropagation={false}>Join 2</ButtonPill>) :
                   (<span>Empty</span>)}
               </ListItemBaseSection>)}
             </TreeNodeBase>

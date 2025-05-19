@@ -117,80 +117,52 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>
@@ -309,80 +281,52 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>
@@ -501,80 +445,52 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>
@@ -693,80 +609,52 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>
@@ -890,80 +778,52 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>
@@ -1082,80 +942,52 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>
@@ -1287,80 +1119,52 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
         ghost={true}
         onPress={[Function]}
       >
-        <ButtonSimple
-          aria-disabled={false}
+        <Button
           className="md-button-pill-wrapper md-combo-box-button"
-          data-color="primary"
-          data-disabled={false}
+          color="default"
           data-disabled-outline={false}
-          data-ghost={true}
           data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onPress={[Function]}
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          size={40}
+          softDisabled={false}
+          variant="tertiary"
         >
-          <FocusRing>
-            <FocusRing
-              focusClass="md-focus-ring-wrapper children"
-              focusRingClass="md-focus-ring-wrapper children"
+          <mdc-button
+            class="md-button-pill-wrapper md-combo-box-button"
+            data-disabled-outline={false}
+            data-grown={false}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          >
+            <Mrv2Icon
+              className="md-combo-box-arrow-icon"
+              name="arrow-down"
+              scale={12}
+              weight="filled"
             >
-              <button
-                className="md-button-pill-wrapper md-combo-box-button md-button-simple-wrapper"
-                data-color="primary"
-                data-disabled={false}
-                data-disabled-outline={false}
-                data-ghost={true}
-                data-grown={false}
-                data-inverted={false}
-                data-outline={false}
-                data-shallow-disabled={false}
-                data-size={40}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onDragStart={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                type="button"
+              <Icon
+                className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                data-autoscale={false}
+                data-scale={12}
+                data-test="arrow-down"
+                name="arrow-down-filled"
+                style={Object {}}
               >
-                <Mrv2Icon
-                  className="md-combo-box-arrow-icon"
-                  name="arrow-down"
-                  scale={12}
-                  weight="filled"
-                >
-                  <Icon
-                    className="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                    data-autoscale={false}
-                    data-scale={12}
-                    data-test="arrow-down"
-                    name="arrow-down-filled"
-                    style={Object {}}
-                  >
-                    <mdc-icon
-                      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
-                      data-autoscale={false}
-                      data-scale={12}
-                      data-test="arrow-down"
-                      style={Object {}}
-                      suppressHydrationWarning={true}
-                    />
-                  </Icon>
-                </Mrv2Icon>
-              </button>
-            </FocusRing>
-          </FocusRing>
-        </ButtonSimple>
+                <mdc-icon
+                  class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink md-combo-box-arrow-icon"
+                  data-autoscale={false}
+                  data-scale={12}
+                  data-test="arrow-down"
+                  style={Object {}}
+                  suppressHydrationWarning={true}
+                />
+              </Icon>
+            </Mrv2Icon>
+          </mdc-button>
+        </Button>
       </ButtonPill>
     </div>
   </div>

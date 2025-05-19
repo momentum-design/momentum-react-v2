@@ -209,68 +209,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -2433,68 +2405,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -4657,68 +4601,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -6882,68 +6798,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -9109,68 +8997,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -11333,68 +11193,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -13632,68 +13464,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -15867,68 +15671,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
@@ -18095,68 +17871,40 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
             onPressStart={[Function]}
             useNativeKeyDown={true}
           >
-            <ButtonSimple
+            <Button
               aria-controls="test-ID"
-              aria-disabled={false}
               aria-expanded={true}
               aria-haspopup={true}
               className="md-button-pill-wrapper"
-              data-color="primary"
-              data-disabled={false}
+              color="default"
               data-disabled-outline={false}
-              data-ghost={false}
               data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
               id="test-ID"
-              onPress={[Function]}
+              onClick={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
               onPressStart={[Function]}
+              size={40}
+              softDisabled={false}
               useNativeKeyDown={true}
+              variant="primary"
             >
-              <FocusRing>
-                <FocusRing
-                  focusClass="md-focus-ring-wrapper children"
-                  focusRingClass="md-focus-ring-wrapper children"
-                >
-                  <button
-                    aria-controls="test-ID"
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    className="md-button-pill-wrapper md-button-simple-wrapper"
-                    data-color="primary"
-                    data-disabled={false}
-                    data-disabled-outline={false}
-                    data-ghost={false}
-                    data-grown={false}
-                    data-inverted={false}
-                    data-outline={false}
-                    data-shallow-disabled={false}
-                    data-size={40}
-                    id="test-ID"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragStart={[Function]}
-                    onFocus={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchCancel={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
-                  >
-                    <span>
-                      Hello world
-                    </span>
-                  </button>
-                </FocusRing>
-              </FocusRing>
-            </ButtonSimple>
+              <mdc-button
+                aria-controls="test-ID"
+                aria-expanded={true}
+                aria-haspopup={true}
+                class="md-button-pill-wrapper"
+                data-disabled-outline={false}
+                data-grown={false}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                onPressStart={[Function]}
+                suppressHydrationWarning={true}
+                useNativeKeyDown={true}
+              >
+                Hello world
+              </mdc-button>
+            </Button>
           </ButtonPill>
           <Portal
             containerInfo={
