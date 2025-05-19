@@ -2,13 +2,13 @@ import { ReactElement } from 'react';
 import type { CardProps } from '../Card';
 import type { ButtonCircleProps } from '../ButtonCircle';
 import type { ButtonPillProps } from '../ButtonPill';
-import type { TagProps } from '../Tag';
+import type { ChipProps } from '../Chip';
 import type { AvatarProps } from '../Avatar';
 import type { ButtonHyperlinkProps } from '../ButtonHyperlink';
 import type { AllowedTagNames, FontStyle } from '../Text/Text.types';
 
 export type SupportedActionButton = ReactElement<ButtonPillProps | ButtonCircleProps>;
-export type SupportedTag = ReactElement<TagProps>;
+export type SupportedChips = ReactElement<ChipProps>;
 export type SupportedAvatar = ReactElement<AvatarProps>;
 export type SupportedButtonHyperlink = ReactElement<ButtonHyperlinkProps | ButtonPillProps>;
 export type ScheduleInfoColor = 'secondary' | 'success' | 'primary';
@@ -32,7 +32,7 @@ export interface Props extends CardProps {
   /**
    * Tags supplied by consumer, renders tags if present.
    */
-  tags?: Array<SupportedTag>;
+  tags?: Array<SupportedChips>;
 
   /**
    * User avatar supplied by consumer.

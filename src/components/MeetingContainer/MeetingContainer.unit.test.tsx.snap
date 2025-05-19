@@ -816,12 +816,12 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
   }
   tags={
     Array [
-      <Tag>
+      <Chip>
         Messages
-      </Tag>,
-      <Tag>
+      </Chip>,
+      <Chip>
         Recording
-      </Tag>,
+      </Chip>,
     ]
   }
 >
@@ -974,126 +974,40 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                 <div
                   className="md-meeting-container-tags"
                 >
-                  <Tag
+                  <Chip
                     key="0"
                   >
-                    <ButtonSimple
-                      className="md-tag-wrapper"
-                      data-color="primary"
-                      data-format="normal"
-                      isDisabled={false}
+                    <Chip
+                      onClick={[Function]}
+                      onPointerDown={[Function]}
+                      onPointerUp={[Function]}
                     >
-                      <FocusRing
-                        disabled={false}
+                      <mdc-chip
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        suppressHydrationWarning={true}
                       >
-                        <FocusRing
-                          disabled={false}
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
-                        >
-                          <button
-                            className="md-tag-wrapper md-button-simple-wrapper"
-                            data-color="primary"
-                            data-format="normal"
-                            disabled={false}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Text
-                              tagName="h3"
-                              type="subheader-secondary"
-                            >
-                              <Text
-                                className="md-text-wrapper"
-                                tagname="h3"
-                                type="body-midsize-medium"
-                              >
-                                <mdc-text
-                                  class="md-text-wrapper"
-                                  suppressHydrationWarning={true}
-                                >
-                                  Messages
-                                </mdc-text>
-                              </Text>
-                            </Text>
-                          </button>
-                        </FocusRing>
-                      </FocusRing>
-                    </ButtonSimple>
-                  </Tag>
-                  <Tag
+                        Messages
+                      </mdc-chip>
+                    </Chip>
+                  </Chip>
+                  <Chip
                     key="1"
                   >
-                    <ButtonSimple
-                      className="md-tag-wrapper"
-                      data-color="primary"
-                      data-format="normal"
-                      isDisabled={false}
+                    <Chip
+                      onClick={[Function]}
+                      onPointerDown={[Function]}
+                      onPointerUp={[Function]}
                     >
-                      <FocusRing
-                        disabled={false}
+                      <mdc-chip
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        suppressHydrationWarning={true}
                       >
-                        <FocusRing
-                          disabled={false}
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
-                        >
-                          <button
-                            className="md-tag-wrapper md-button-simple-wrapper"
-                            data-color="primary"
-                            data-format="normal"
-                            disabled={false}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Text
-                              tagName="h3"
-                              type="subheader-secondary"
-                            >
-                              <Text
-                                className="md-text-wrapper"
-                                tagname="h3"
-                                type="body-midsize-medium"
-                              >
-                                <mdc-text
-                                  class="md-text-wrapper"
-                                  suppressHydrationWarning={true}
-                                >
-                                  Recording
-                                </mdc-text>
-                              </Text>
-                            </Text>
-                          </button>
-                        </FocusRing>
-                      </FocusRing>
-                    </ButtonSimple>
-                  </Tag>
+                        Recording
+                      </mdc-chip>
+                    </Chip>
+                  </Chip>
                 </div>
               </div>
               <div
@@ -2600,12 +2514,12 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
 <MeetingContainer
   tags={
     Array [
-      <Tag>
+      <Chip>
         Messages
-      </Tag>,
-      <Tag>
+      </Chip>,
+      <Chip>
         Recording
-      </Tag>,
+      </Chip>,
     ]
   }
 >
@@ -2709,126 +2623,40 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
                 <div
                   className="md-meeting-container-tags"
                 >
-                  <Tag
+                  <Chip
                     key="0"
                   >
-                    <ButtonSimple
-                      className="md-tag-wrapper"
-                      data-color="primary"
-                      data-format="normal"
-                      isDisabled={false}
+                    <Chip
+                      onClick={[Function]}
+                      onPointerDown={[Function]}
+                      onPointerUp={[Function]}
                     >
-                      <FocusRing
-                        disabled={false}
+                      <mdc-chip
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        suppressHydrationWarning={true}
                       >
-                        <FocusRing
-                          disabled={false}
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
-                        >
-                          <button
-                            className="md-tag-wrapper md-button-simple-wrapper"
-                            data-color="primary"
-                            data-format="normal"
-                            disabled={false}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Text
-                              tagName="h3"
-                              type="subheader-secondary"
-                            >
-                              <Text
-                                className="md-text-wrapper"
-                                tagname="h3"
-                                type="body-midsize-medium"
-                              >
-                                <mdc-text
-                                  class="md-text-wrapper"
-                                  suppressHydrationWarning={true}
-                                >
-                                  Messages
-                                </mdc-text>
-                              </Text>
-                            </Text>
-                          </button>
-                        </FocusRing>
-                      </FocusRing>
-                    </ButtonSimple>
-                  </Tag>
-                  <Tag
+                        Messages
+                      </mdc-chip>
+                    </Chip>
+                  </Chip>
+                  <Chip
                     key="1"
                   >
-                    <ButtonSimple
-                      className="md-tag-wrapper"
-                      data-color="primary"
-                      data-format="normal"
-                      isDisabled={false}
+                    <Chip
+                      onClick={[Function]}
+                      onPointerDown={[Function]}
+                      onPointerUp={[Function]}
                     >
-                      <FocusRing
-                        disabled={false}
+                      <mdc-chip
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        suppressHydrationWarning={true}
                       >
-                        <FocusRing
-                          disabled={false}
-                          focusClass="md-focus-ring-wrapper children"
-                          focusRingClass="md-focus-ring-wrapper children"
-                        >
-                          <button
-                            className="md-tag-wrapper md-button-simple-wrapper"
-                            data-color="primary"
-                            data-format="normal"
-                            disabled={false}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onDragStart={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            onMouseDown={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseUp={[Function]}
-                            onTouchCancel={[Function]}
-                            onTouchEnd={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            type="button"
-                          >
-                            <Text
-                              tagName="h3"
-                              type="subheader-secondary"
-                            >
-                              <Text
-                                className="md-text-wrapper"
-                                tagname="h3"
-                                type="body-midsize-medium"
-                              >
-                                <mdc-text
-                                  class="md-text-wrapper"
-                                  suppressHydrationWarning={true}
-                                >
-                                  Recording
-                                </mdc-text>
-                              </Text>
-                            </Text>
-                          </button>
-                        </FocusRing>
-                      </FocusRing>
-                    </ButtonSimple>
-                  </Tag>
+                        Recording
+                      </mdc-chip>
+                    </Chip>
+                  </Chip>
                 </div>
               </div>
               <div
