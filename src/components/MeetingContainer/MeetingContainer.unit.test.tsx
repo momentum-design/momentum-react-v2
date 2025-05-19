@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Tag from '../Tag';
+import Chip from '../Chip';
 import ButtonPill from '../ButtonPill';
 import Text, { TEXT_CONSTANTS } from '../Text';
 import Avatar from '../Avatar';
@@ -18,7 +18,7 @@ const testProps = {
   scheduleInfoSecond: 'Mon, Jan 1, 2023',
   scheduleInfoSecondColor: undefined,
 };
-const tags = [<Tag key={0}>Messages</Tag>, <Tag key={1}>Recording</Tag>];
+const tags = [<Chip key={0}>Messages</Chip>, <Chip key={1}>Recording</Chip>];
 
 const pillButtons = [
   <ButtonPill key={0} outline ghost={true} color="join" size={28}>
@@ -277,7 +277,7 @@ describe('attributes', () => {
 
   it('should have tags when they are provided', () => {
     const element = mount(<MeetingContainer tags={tags} meetingTitle={meetingTitle} />)
-      .find(Tag)
+      .find(Chip)
       .exists();
 
     expect(element).toBe(true);
@@ -302,9 +302,9 @@ describe('attributes', () => {
         meetingTitle="Meeting"
       />
     )
-      .find(Tag)
+      .find(Chip)
       .first()
-      .props().isDisabled;
+      .props().disabled;
 
     expect(element).toBe(true);
   });

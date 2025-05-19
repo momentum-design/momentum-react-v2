@@ -9,7 +9,7 @@ import React from 'react';
 import ButtonPill from '../ButtonPill';
 import Icon from '../Icon';
 import Avatar from '../Avatar';
-import Tag from '../Tag';
+import Chip from '../Chip';
 import Text from '../Text';
 import ButtonHyperlink from '../ButtonHyperlink';
 import { CARD_CONSTANTS } from '../Card';
@@ -27,7 +27,7 @@ export default {
 
 const Example = Template<MeetingContainerProps>(MeetingContainer).bind({});
 
-const tags = [<Tag key={0}>Messages</Tag>, <Tag key={1}>Recording</Tag>];
+const tags = [<Chip key={0}>Messages</Chip>, <Chip key={1}>Recording</Chip>];
 
 const pillButtons = [
   <ButtonPill key={0} outline ghost={true} color="join" size={28}>

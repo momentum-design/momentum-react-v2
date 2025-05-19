@@ -41,9 +41,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
       : actionButtons;
 
   const changedTags =
-    !!tags && isDisabled
-      ? tags.map((tags) => cloneElement(tags, { isDisabled: true, format: 'static' }))
-      : tags;
+    !!tags && isDisabled ? tags.map((tags) => cloneElement(tags, { disabled: true })) : tags;
 
   const changedSpaceLink =
     !!spaceLink && cloneElement(spaceLink, { disabled: isDisabled, className: STYLE.spaceLink });
