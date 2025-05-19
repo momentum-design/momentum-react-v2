@@ -1032,142 +1032,88 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                       outline={true}
                       size={28}
                     >
-                      <ButtonSimple
-                        aria-disabled={false}
+                      <Button
                         className="md-button-pill-wrapper"
-                        data-color="join"
-                        data-disabled={false}
+                        color="positive"
                         data-disabled-outline={false}
-                        data-ghost={true}
                         data-grown={false}
-                        data-inverted={false}
-                        data-outline={true}
-                        data-shallow-disabled={false}
-                        data-size={28}
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        size={28}
+                        softDisabled={false}
+                        variant="secondary"
                       >
-                        <FocusRing>
-                          <FocusRing
-                            focusClass="md-focus-ring-wrapper children"
-                            focusRingClass="md-focus-ring-wrapper children"
+                        <mdc-button
+                          class="md-button-pill-wrapper"
+                          data-disabled-outline={false}
+                          data-grown={false}
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
+                          suppressHydrationWarning={true}
+                        >
+                          <Text
+                            tagName="p"
                           >
-                            <button
-                              className="md-button-pill-wrapper md-button-simple-wrapper"
-                              data-color="join"
-                              data-disabled={false}
-                              data-disabled-outline={false}
-                              data-ghost={true}
-                              data-grown={false}
-                              data-inverted={false}
-                              data-outline={true}
-                              data-shallow-disabled={false}
-                              data-size={28}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onDragStart={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyUp={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              onMouseUp={[Function]}
-                              onTouchCancel={[Function]}
-                              onTouchEnd={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              type="button"
+                            <Text
+                              className="md-text-wrapper"
+                              tagname="p"
+                              type="body-large-regular"
                             >
-                              <Text
-                                tagName="p"
+                              <mdc-text
+                                class="md-text-wrapper"
+                                suppressHydrationWarning={true}
                               >
-                                <Text
-                                  className="md-text-wrapper"
-                                  tagname="p"
-                                  type="body-large-regular"
-                                >
-                                  <mdc-text
-                                    class="md-text-wrapper"
-                                    suppressHydrationWarning={true}
-                                  >
-                                    Message
-                                  </mdc-text>
-                                </Text>
-                              </Text>
-                            </button>
-                          </FocusRing>
-                        </FocusRing>
-                      </ButtonSimple>
+                                Message
+                              </mdc-text>
+                            </Text>
+                          </Text>
+                        </mdc-button>
+                      </Button>
                     </ButtonPill>
                     <ButtonPill
                       color="join"
                       key="1"
                       size={28}
                     >
-                      <ButtonSimple
-                        aria-disabled={false}
+                      <Button
                         className="md-button-pill-wrapper"
-                        data-color="join"
-                        data-disabled={false}
+                        color="positive"
                         data-disabled-outline={false}
-                        data-ghost={false}
                         data-grown={false}
-                        data-inverted={false}
-                        data-outline={false}
-                        data-shallow-disabled={false}
-                        data-size={28}
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        size={28}
+                        softDisabled={false}
+                        variant="primary"
                       >
-                        <FocusRing>
-                          <FocusRing
-                            focusClass="md-focus-ring-wrapper children"
-                            focusRingClass="md-focus-ring-wrapper children"
+                        <mdc-button
+                          class="md-button-pill-wrapper"
+                          data-disabled-outline={false}
+                          data-grown={false}
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
+                          suppressHydrationWarning={true}
+                        >
+                          <Text
+                            tagName="p"
                           >
-                            <button
-                              className="md-button-pill-wrapper md-button-simple-wrapper"
-                              data-color="join"
-                              data-disabled={false}
-                              data-disabled-outline={false}
-                              data-ghost={false}
-                              data-grown={false}
-                              data-inverted={false}
-                              data-outline={false}
-                              data-shallow-disabled={false}
-                              data-size={28}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onDragStart={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyUp={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              onMouseUp={[Function]}
-                              onTouchCancel={[Function]}
-                              onTouchEnd={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              type="button"
+                            <Text
+                              className="md-text-wrapper"
+                              tagname="p"
+                              type="body-large-regular"
                             >
-                              <Text
-                                tagName="p"
+                              <mdc-text
+                                class="md-text-wrapper"
+                                suppressHydrationWarning={true}
                               >
-                                <Text
-                                  className="md-text-wrapper"
-                                  tagname="p"
-                                  type="body-large-regular"
-                                >
-                                  <mdc-text
-                                    class="md-text-wrapper"
-                                    suppressHydrationWarning={true}
-                                  >
-                                    Join
-                                  </mdc-text>
-                                </Text>
-                              </Text>
-                            </button>
-                          </FocusRing>
-                        </FocusRing>
-                      </ButtonSimple>
+                                Join
+                              </mdc-text>
+                            </Text>
+                          </Text>
+                        </mdc-button>
+                      </Button>
                     </ButtonPill>
                   </div>
                 </ButtonGroup>
@@ -1479,142 +1425,88 @@ exports[`<MeetingContainer /> snapshot should match snapshot with pill action bu
                       outline={true}
                       size={28}
                     >
-                      <ButtonSimple
-                        aria-disabled={false}
+                      <Button
                         className="md-button-pill-wrapper"
-                        data-color="join"
-                        data-disabled={false}
+                        color="positive"
                         data-disabled-outline={false}
-                        data-ghost={true}
                         data-grown={false}
-                        data-inverted={false}
-                        data-outline={true}
-                        data-shallow-disabled={false}
-                        data-size={28}
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        size={28}
+                        softDisabled={false}
+                        variant="secondary"
                       >
-                        <FocusRing>
-                          <FocusRing
-                            focusClass="md-focus-ring-wrapper children"
-                            focusRingClass="md-focus-ring-wrapper children"
+                        <mdc-button
+                          class="md-button-pill-wrapper"
+                          data-disabled-outline={false}
+                          data-grown={false}
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
+                          suppressHydrationWarning={true}
+                        >
+                          <Text
+                            tagName="p"
                           >
-                            <button
-                              className="md-button-pill-wrapper md-button-simple-wrapper"
-                              data-color="join"
-                              data-disabled={false}
-                              data-disabled-outline={false}
-                              data-ghost={true}
-                              data-grown={false}
-                              data-inverted={false}
-                              data-outline={true}
-                              data-shallow-disabled={false}
-                              data-size={28}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onDragStart={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyUp={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              onMouseUp={[Function]}
-                              onTouchCancel={[Function]}
-                              onTouchEnd={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              type="button"
+                            <Text
+                              className="md-text-wrapper"
+                              tagname="p"
+                              type="body-large-regular"
                             >
-                              <Text
-                                tagName="p"
+                              <mdc-text
+                                class="md-text-wrapper"
+                                suppressHydrationWarning={true}
                               >
-                                <Text
-                                  className="md-text-wrapper"
-                                  tagname="p"
-                                  type="body-large-regular"
-                                >
-                                  <mdc-text
-                                    class="md-text-wrapper"
-                                    suppressHydrationWarning={true}
-                                  >
-                                    Message
-                                  </mdc-text>
-                                </Text>
-                              </Text>
-                            </button>
-                          </FocusRing>
-                        </FocusRing>
-                      </ButtonSimple>
+                                Message
+                              </mdc-text>
+                            </Text>
+                          </Text>
+                        </mdc-button>
+                      </Button>
                     </ButtonPill>
                     <ButtonPill
                       color="join"
                       key="1"
                       size={28}
                     >
-                      <ButtonSimple
-                        aria-disabled={false}
+                      <Button
                         className="md-button-pill-wrapper"
-                        data-color="join"
-                        data-disabled={false}
+                        color="positive"
                         data-disabled-outline={false}
-                        data-ghost={false}
                         data-grown={false}
-                        data-inverted={false}
-                        data-outline={false}
-                        data-shallow-disabled={false}
-                        data-size={28}
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                        size={28}
+                        softDisabled={false}
+                        variant="primary"
                       >
-                        <FocusRing>
-                          <FocusRing
-                            focusClass="md-focus-ring-wrapper children"
-                            focusRingClass="md-focus-ring-wrapper children"
+                        <mdc-button
+                          class="md-button-pill-wrapper"
+                          data-disabled-outline={false}
+                          data-grown={false}
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
+                          suppressHydrationWarning={true}
+                        >
+                          <Text
+                            tagName="p"
                           >
-                            <button
-                              className="md-button-pill-wrapper md-button-simple-wrapper"
-                              data-color="join"
-                              data-disabled={false}
-                              data-disabled-outline={false}
-                              data-ghost={false}
-                              data-grown={false}
-                              data-inverted={false}
-                              data-outline={false}
-                              data-shallow-disabled={false}
-                              data-size={28}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onDragStart={[Function]}
-                              onFocus={[Function]}
-                              onKeyDown={[Function]}
-                              onKeyUp={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              onMouseUp={[Function]}
-                              onTouchCancel={[Function]}
-                              onTouchEnd={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              type="button"
+                            <Text
+                              className="md-text-wrapper"
+                              tagname="p"
+                              type="body-large-regular"
                             >
-                              <Text
-                                tagName="p"
+                              <mdc-text
+                                class="md-text-wrapper"
+                                suppressHydrationWarning={true}
                               >
-                                <Text
-                                  className="md-text-wrapper"
-                                  tagname="p"
-                                  type="body-large-regular"
-                                >
-                                  <mdc-text
-                                    class="md-text-wrapper"
-                                    suppressHydrationWarning={true}
-                                  >
-                                    Join
-                                  </mdc-text>
-                                </Text>
-                              </Text>
-                            </button>
-                          </FocusRing>
-                        </FocusRing>
-                      </ButtonSimple>
+                                Join
+                              </mdc-text>
+                            </Text>
+                          </Text>
+                        </mdc-button>
+                      </Button>
                     </ButtonPill>
                   </div>
                 </ButtonGroup>

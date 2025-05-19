@@ -1,965 +1,291 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ButtonPill /> snapshot should match snapshot 1`] = `
-<ButtonPill>
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when a ghost 1`] = `
-<ButtonPill
-  ghost={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={true}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="tertiary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when a ghost and disabled 1`] = `
-<ButtonPill
-  disabled={true}
-  ghost={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={true}
-    data-disabled-outline={false}
-    data-ghost={true}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
-    isDisabled={true}
+<div>
+  <mdc-button
+    aria-disabled="true"
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    disabled=""
+    internals-disabled=""
+    role="button"
+    size="40"
+    tabindex="-1"
+    type="button"
+    variant="tertiary"
   >
-    <FocusRing
-      disabled={true}
-    >
-      <FocusRing
-        disabled={true}
-        focusClass="md-focus-ring-wrapper-disabled"
-        focusRingClass="md-focus-ring-wrapper-disabled"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={true}
-          data-disabled-outline={false}
-          data-ghost={true}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          disabled={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when color is outlined 1`] = `
-<ButtonPill
-  outline={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={true}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="secondary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={true}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when color is outlined and inverted is set 1`] = `
-<ButtonPill
-  inverted={true}
-  outline={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={true}
-    data-outline={true}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    inverted=""
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="secondary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={true}
-          data-outline={true}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when disabled 1`] = `
-<ButtonPill
-  disabled={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={true}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
-    isDisabled={true}
+<div>
+  <mdc-button
+    aria-disabled="true"
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    disabled=""
+    internals-disabled=""
+    role="button"
+    size="40"
+    tabindex="-1"
+    type="button"
+    variant="primary"
   >
-    <FocusRing
-      disabled={true}
-    >
-      <FocusRing
-        disabled={true}
-        focusClass="md-focus-ring-wrapper-disabled"
-        focusRingClass="md-focus-ring-wrapper-disabled"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={true}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          disabled={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when disabledOutline 1`] = `
-<ButtonPill
-  disabledOutline={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={true}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="true"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={true}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when disabledOutline and disabled and outline 1`] = `
-<ButtonPill
-  disabled={true}
-  disabledOutline={true}
-  outline={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={true}
-    data-disabled-outline={true}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={true}
-    data-shallow-disabled={false}
-    data-size={40}
-    isDisabled={true}
+<div>
+  <mdc-button
+    aria-disabled="true"
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="true"
+    data-grown="false"
+    disabled=""
+    internals-disabled=""
+    role="button"
+    size="40"
+    tabindex="-1"
+    type="button"
+    variant="secondary"
   >
-    <FocusRing
-      disabled={true}
-    >
-      <FocusRing
-        disabled={true}
-        focusClass="md-focus-ring-wrapper-disabled"
-        focusRingClass="md-focus-ring-wrapper-disabled"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={true}
-          data-disabled-outline={true}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={true}
-          data-shallow-disabled={false}
-          data-size={40}
-          disabled={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when shallow disabled 1`] = `
-<ButtonPill
-  shallowDisabled={true}
->
-  <ButtonSimple
-    aria-disabled={true}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={true}
-    data-size={40}
+<div>
+  <mdc-button
+    aria-disabled="true"
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    soft-disabled=""
+    tabindex="0"
+    type="button"
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          aria-disabled={true}
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={true}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] = `
-<ButtonPill
-  grown={true}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={true}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="true"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={true}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
-<ButtonPill
-  className="example-class"
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper example-class"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
-  >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper example-class md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper example-class"
+    color="default"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
+  />
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with color 1`] = `
-<ButtonPill
-  color="message"
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="message"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="accent"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="message"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with id 1`] = `
-<ButtonPill
-  id="example-id"
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-disabled-outline="false"
+    data-grown="false"
     id="example-id"
-  >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          id="example-id"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
+  />
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with size 1`] = `
-<ButtonPill
-  size={40}
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
   >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          type="button"
-        >
-          <span>
-            Example Text
-          </span>
-        </button>
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+    Example Text
+  </mdc-button>
+</div>
 `;
 
 exports[`<ButtonPill /> snapshot should match snapshot with style 1`] = `
-<ButtonPill
-  style={
-    Object {
-      "color": "pink",
-    }
-  }
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
-    style={
-      Object {
-        "color": "pink",
-      }
-    }
-  >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          style={
-            Object {
-              "color": "pink",
-            }
-          }
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
-`;
-
-exports[`<ButtonPill /> snapshot should match snapshot with title 1`] = `
-<ButtonPill
-  title="Example Text"
->
-  <ButtonSimple
-    aria-disabled={false}
-    className="md-button-pill-wrapper"
-    data-color="primary"
-    data-disabled={false}
-    data-disabled-outline={false}
-    data-ghost={false}
-    data-grown={false}
-    data-inverted={false}
-    data-outline={false}
-    data-shallow-disabled={false}
-    data-size={40}
-    title="Example Text"
-  >
-    <FocusRing>
-      <FocusRing
-        focusClass="md-focus-ring-wrapper children"
-        focusRingClass="md-focus-ring-wrapper children"
-      >
-        <button
-          className="md-button-pill-wrapper md-button-simple-wrapper"
-          data-color="primary"
-          data-disabled={false}
-          data-disabled-outline={false}
-          data-ghost={false}
-          data-grown={false}
-          data-inverted={false}
-          data-outline={false}
-          data-shallow-disabled={false}
-          data-size={40}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragStart={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchCancel={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          title="Example Text"
-          type="button"
-        />
-      </FocusRing>
-    </FocusRing>
-  </ButtonSimple>
-</ButtonPill>
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    style="color: pink;"
+    tabindex="0"
+    type="button"
+    variant="primary"
+  />
+</div>
 `;

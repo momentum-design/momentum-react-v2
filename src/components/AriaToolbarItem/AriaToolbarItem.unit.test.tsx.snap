@@ -12,63 +12,34 @@ exports[`<AriaToolbarItem /> snapshot should match snapshot 1`] = `
       tabIndex={0}
       useNativeKeyDown={true}
     >
-      <ButtonSimple
-        aria-disabled={false}
+      <Button
         className="md-button-pill-wrapper"
-        data-color="primary"
-        data-disabled={false}
+        color="default"
         data-disabled-outline={false}
-        data-ghost={false}
         data-grown={false}
-        data-inverted={false}
-        data-outline={false}
-        data-shallow-disabled={false}
-        data-size={40}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
-        onPress={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        size={40}
+        softDisabled={false}
         tabIndex={0}
         useNativeKeyDown={true}
+        variant="primary"
       >
-        <FocusRing>
-          <FocusRing
-            focusClass="md-focus-ring-wrapper children"
-            focusRingClass="md-focus-ring-wrapper children"
-          >
-            <button
-              className="md-button-pill-wrapper md-button-simple-wrapper"
-              data-color="primary"
-              data-disabled={false}
-              data-disabled-outline={false}
-              data-ghost={false}
-              data-grown={false}
-              data-inverted={false}
-              data-outline={false}
-              data-shallow-disabled={false}
-              data-size={40}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onDragStart={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchCancel={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              type="button"
-            >
-              <span>
-                Test
-              </span>
-            </button>
-          </FocusRing>
-        </FocusRing>
-      </ButtonSimple>
+        <mdc-button
+          class="md-button-pill-wrapper"
+          data-disabled-outline={false}
+          data-grown={false}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          suppressHydrationWarning={true}
+          useNativeKeyDown={true}
+        >
+          Test
+        </mdc-button>
+      </Button>
     </ButtonPill>
   </ForwardRef>
 </TestComponent>
