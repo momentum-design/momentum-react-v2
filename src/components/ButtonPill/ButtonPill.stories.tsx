@@ -1,10 +1,6 @@
 import React from 'react';
 
 import Icon from '../Icon';
-import { Story } from '@storybook/react';
-import Tooltip from '../Tooltip';
-import Flex from '../Flex';
-import Text from '../Text';
 
 import {
   MultiTemplate,
@@ -44,7 +40,7 @@ Example.argTypes = { ...argTypes };
 const Overflow = Template<ButtonPillProps>(ButtonPill).bind({});
 
 Overflow.args = {
-  children: 'This is a very long label',
+  children: <span>This is a very long label</span>,
   title: 'This is a very long label',
   style: { width: '12rem' },
 };

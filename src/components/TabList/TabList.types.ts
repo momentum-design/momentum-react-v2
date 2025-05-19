@@ -4,7 +4,7 @@ import { ButtonGroupProps } from '../ButtonGroup';
 import { TabProps } from '../Tab';
 import { AriaLabelRequired } from '../../utils/a11y';
 
-interface TabListProps extends ButtonGroupProps {
+interface TabListProps extends Omit<ButtonGroupProps, 'children'> {
   /**
    * Child components of this TabList.
    */

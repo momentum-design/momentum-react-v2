@@ -1,10 +1,9 @@
 import React, { RefObject, forwardRef, useRef } from 'react';
 import classnames from 'classnames';
 
-import { STYLE } from './ButtonPillLink.constants';
+import { STYLE, DEFAULTS } from './ButtonPillLink.constants';
 import { Props } from './ButtonPillLink.types';
 import './ButtonPillLink.style.scss';
-import { DEFAULTS } from '../ButtonPill/ButtonPill.constants';
 import Link from '../Link';
 
 const ButtonPillLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {

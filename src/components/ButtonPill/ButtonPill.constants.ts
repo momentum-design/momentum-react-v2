@@ -2,15 +2,14 @@ const CLASS_PREFIX = 'md-button-pill';
 
 const DEFAULTS = {
   COLOR: 'primary',
-  DISABLED: false,
   DISABLED_OUTLINE: false,
   SHALLOW_DISABLED: false,
   GHOST: false,
   GROWN: false,
   OUTLINE: false,
   SIZE: 40,
-  INVERTED: false,
-};
+  STOP_PROPAGATION: true,
+} as const;
 
 const COLORS = {
   JOIN: 'join',
@@ -23,7 +22,6 @@ const SIZES = {
   32: 32,
   28: 28,
   24: 24,
-  20: 20,
 };
 
 const STYLE = {

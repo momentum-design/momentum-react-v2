@@ -79,7 +79,13 @@ describe('tests for <MenuOverlay />', () => {
     const focusContainer = document.createElement('div');
     document.body.append(focusContainer);
     const wrapper = mount(
-      <MenuOverlay menuTrigger={<ButtonPill className="trigger">Trigger</ButtonPill>}>
+      <MenuOverlay
+        menuTrigger={
+          <ButtonPill className="trigger" stopPropagation={false}>
+            Trigger
+          </ButtonPill>
+        }
+      >
         <MenuContent>test</MenuContent>
         <Menu>
           <MenuItem label="one" />
