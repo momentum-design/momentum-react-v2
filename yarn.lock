@@ -2895,10 +2895,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/animations@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@momentum-design/animations@npm:0.0.4"
-  checksum: e8248421fd6dc933728008901c363e9047651cc4c65dcf3189da8d8921f8872a272f76277b7e1bd745e380538f56147b3617492eaf5ca346c1f83b4a70121396
+"@momentum-design/animations@npm:*, @momentum-design/animations@npm:0.3.1":
+  version: 0.3.1
+  resolution: "@momentum-design/animations@npm:0.3.1"
+  checksum: c59402ae3d2f160a368bc683ebd63672b3d7dfd60c8b64ceb8d79921b40f91af15aa50fb1aca9c22759ef8e1e139af87b69e39e283be3e1bad4b39bc2f9f6726
   languageName: node
   linkType: hard
 
@@ -2909,28 +2909,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.66.3":
-  version: 0.66.3
-  resolution: "@momentum-design/components@npm:0.66.3"
+"@momentum-design/components@npm:0.73.6":
+  version: 0.73.6
+  resolution: "@momentum-design/components@npm:0.73.6"
   dependencies:
     "@floating-ui/dom": ^1.6.12
     "@lit/context": ^1.1.2
     "@lit/react": ^1.0.5
+    "@momentum-design/animations": "*"
     "@momentum-design/brand-visuals": "*"
     "@momentum-design/fonts": "*"
     "@momentum-design/icons": "*"
     "@momentum-design/tokens": "*"
     "@tanstack/lit-virtual": ^3.11.3
     lit: ^3.2.0
+    lottie-web: ^5.12.2
     uuid: ^11.0.5
-  checksum: b282f7e3ee22ec599914a21f409c2001347357b716f913a9935abeb5d6e1b8d091bcd8100ae592a52930d0a93b87ba1a905b447785996772100730d3060bfdac
+  checksum: b5112e97f769871c25cd39b56ebb6e726beb40e4867e60fbf0d690ad255881adc7b577f49d70d021b9705c9b587d16719877ca9a7d8e993096ce6fdb28d4bc99
   languageName: node
   linkType: hard
 
 "@momentum-design/fonts@npm:*":
-  version: 0.1.0
-  resolution: "@momentum-design/fonts@npm:0.1.0"
-  checksum: 8a1c23258d0f031830c0f647e4063e8af733fe68b79f3362482eb435d006d851458395ce203519eb2d2efddcd96d285418c75b2075a19e8ce22a8fa3ed9c8756
+  version: 0.2.1
+  resolution: "@momentum-design/fonts@npm:0.2.1"
+  checksum: ff4671cd4cbdc752ba814473f1678b2c4ac4b9987ff862e4cfd9196a2669789fc283eb44f395f79d68db0164b522ae7dee4a8dd666a95b50f5023f73a84b3ce3
   languageName: node
   linkType: hard
 
@@ -2991,8 +2993,8 @@ __metadata:
     "@commitlint/cli": ^12.0.1
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
-    "@momentum-design/animations": ^0.0.4
-    "@momentum-design/components": 0.66.3
+    "@momentum-design/animations": 0.3.1
+    "@momentum-design/components": 0.73.6
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.10.0
     "@momentum-design/tokens": 0.5.0
@@ -3090,7 +3092,6 @@ __metadata:
     jest-cli: 26.6.3
     lint-staged: ^11.1.2
     lodash: 4.17.21
-    lottie-web: 5.10.2
     mini-css-extract-plugin: 0.7.0
     moment: ^2.24.0
     moment-timezone: ^0.5.14
@@ -20229,10 +20230,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lottie-web@npm:5.10.2":
-  version: 5.10.2
-  resolution: "lottie-web@npm:5.10.2"
-  checksum: 9ec80b479d8d03c079bd4f246d301f0c4aac2c4d6f8daaa79f6f3fc285aaba377c64879f6748d49c1db52b9854aea81c3203d858e9c686f7a47cd8b771d112d0
+"lottie-web@npm:^5.12.2":
+  version: 5.12.2
+  resolution: "lottie-web@npm:5.12.2"
+  checksum: af5bc3bc405fd760de8b17a36158d5a8c3e8c586c711d0c63681ddf056b65bc6b54ea36b1fcad782fb02dbe12e696a40e0ba72daf41b8f10ab5b5d1113793636
   languageName: node
   linkType: hard
 

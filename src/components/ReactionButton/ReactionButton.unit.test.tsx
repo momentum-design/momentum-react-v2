@@ -4,9 +4,7 @@ import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import ReactionButton, { REACTION_BUTTON_CONSTANTS as CONSTANTS } from './';
 import Reaction, { ReactionProps } from '../Reaction';
 import { REACTIONS } from '../Reaction/Reaction.constants';
-import * as jsonImport from '../../hooks/useDynamicJSONImport';
 
-import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -14,7 +12,6 @@ describe('<ReactionButton />', () => {
   let children: ReactElement<ReactionProps>;
 
   beforeEach(() => {
-    jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
     children = <Reaction name={REACTIONS.haha} />;
   });
 

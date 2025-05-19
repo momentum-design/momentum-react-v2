@@ -4,8 +4,6 @@ import userEvent from '@testing-library/user-event';
 
 import ReactionBadge, { REACTION_BADGE_CONSTANTS as CONSTANTS } from './';
 import Reaction from '../Reaction';
-import * as jsonImport from '../../hooks/useDynamicJSONImport';
-import smile from '@momentum-design/animations/dist/lottie/reactions/smile.json';
 import { screen } from '@testing-library/react';
 
 describe('<ReactionBadge name="haha" />', () => {
@@ -15,10 +13,6 @@ describe('<ReactionBadge name="haha" />', () => {
     return renderWithWebComponent(component);
   };
   describe('snapshot', () => {
-    beforeEach(() => {
-      jest.spyOn(jsonImport, 'useDynamicJSONImport').mockReturnValue({ animationData: smile });
-    });
-
     it('should match snapshot', async () => {
       expect.assertions(1);
 
@@ -149,7 +143,7 @@ describe('<ReactionBadge name="haha" />', () => {
       const reactionName = 'haha';
 
       const { container } = await setup(<ReactionBadge reaction={<Reaction name={name} />} />);
-      const child = container.querySelector(`div[data-name="${reactionName}"]`);
+      const child = container.querySelector(`[data-name="${reactionName}"]`);
 
       expect(child).not.toBeNull();
     });

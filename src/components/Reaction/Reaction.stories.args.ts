@@ -1,9 +1,20 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
-
-import { REACTION_CONSTANTS as CONSTANTS } from './';
+import { DEFAULTS } from './Reaction.constants';
 
 export default {
   ...commonStyles,
+  hideLoadingSpinner: {
+    description: 'Boolean to show loading spinner or not',
+    control: { type: 'boolean' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.SHOW_LOADING_SPINNER,
+      },
+    },
+  },
   autoPlay: {
     description: 'Boolean to autoplay the reaction emoji or not',
     control: { type: 'boolean' },
@@ -37,19 +48,6 @@ export default {
       },
       defaultValue: {
         summary: '',
-      },
-    },
-  },
-  size: {
-    description: 'Modifies the size of this `<Reaction />`.',
-    options: [undefined, ...Object.values(CONSTANTS.SIZES)],
-    control: { type: 'select' },
-    table: {
-      type: {
-        summary: 'IconScale',
-      },
-      defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
       },
     },
   },

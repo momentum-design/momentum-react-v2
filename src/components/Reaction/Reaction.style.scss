@@ -1,5 +1,8 @@
-.md-reaction-wrapper,
-.md-reaction-not-found {
+.md-reaction-wrapper {
+  &:not(.md-reaction-loaded) mdc-animation {
+    display: none;
+  }
+
   align-items: center;
   display: flex;
   height: fit-content;
