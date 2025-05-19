@@ -112,7 +112,6 @@ export {
   MenuTrigger,
   ListHeader,
   LoadingSpinner,
-  Tag,
   MeetingContainer,
   TextToast,
   Toggle,
