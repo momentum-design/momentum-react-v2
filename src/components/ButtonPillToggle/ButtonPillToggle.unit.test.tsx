@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { renderWithWebComponent } from '../../../test/utils';
 
 import ButtonPillToggle, { BUTTON_PILL_TOGGLE_CONSTANTS as CONSTANTS } from './';
-import { screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 describe('<ButtonPillToggle />', () => {
@@ -166,19 +166,51 @@ describe('<ButtonPillToggle />', () => {
   describe('actions', () => {
     const user = userEvent.setup();
 
-    it('onChange callback is called correctly when provided', async () => {
-      expect.assertions(1);
+    it('onChange callback is called correctly when provided when component is uncontrolled', async () => {
+      expect.assertions(4);
 
       const mockCallback = jest.fn();
 
       const initialIsSelected = false;
 
-      await setup(<ButtonPillToggle onChange={mockCallback} isSelected={initialIsSelected} />);
+      await setup(
+        <ButtonPillToggle onChange={mockCallback} initialIsSelected={initialIsSelected} />
+      );
 
       const button = screen.getByRole('button');
+      expect(button.attributes['aria-pressed'].value).toBe('false');
+
       await user.click(button);
 
+      expect(button.attributes['aria-pressed'].value).toBe('true');
       expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toHaveBeenCalledWith(!initialIsSelected);
+    });
+
+    it('onChange callback is called correctly when provided when component is controlled', async () => {
+      expect.assertions(2);
+
+      const mockCallback = jest.fn();
+
+      const ExampleParent = () => {
+        const [isSelected, setIsSelected] = useState(false);
+
+        const onPress = () => {
+          setIsSelected(true);
+          mockCallback();
+        };
+
+        return <ButtonPillToggle onChange={onPress} isSelected={isSelected} />;
+      };
+
+      await renderWithWebComponent(<ExampleParent />);
+
+      const button = screen.getByRole('button');
+      expect(button.attributes['aria-pressed'].value).toBe('false');
+
+      await user.click(button);
+
+      expect(button.attributes['aria-pressed'].value).toBe('true');
     });
 
     it('should handle mouse press events', async () => {

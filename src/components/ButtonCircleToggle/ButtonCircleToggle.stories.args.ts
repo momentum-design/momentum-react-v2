@@ -2,6 +2,7 @@ import { commonStyles, commonAriaButtonToggle } from '../../storybook/helper.sto
 import { DEFAULTS } from './ButtonCircleToggle.constants';
 
 const buttonCircleToggleArgTypes = {
+  ...commonAriaButtonToggle,
   prefixIcon: {
     description: 'The icon to display in the button.',
     control: { type: 'text' },
@@ -15,9 +16,9 @@ const buttonCircleToggleArgTypes = {
     },
   },
   isSelected: {
-    description: 'Whether the element should be selected (controlled).',
-    options: [true, false],
-    control: { type: 'boolean' },
+    description: 'For controlled toggle: whether toggle button is selected or not.',
+    options: [true, false, undefined],
+    control: { type: 'select' },
     table: {
       type: {
         summary: 'boolean',
@@ -27,7 +28,19 @@ const buttonCircleToggleArgTypes = {
       },
     },
   },
-  ...commonAriaButtonToggle,
+  initialIsSelected: {
+    description: 'For uncontrolled toggle: whether toggle button starts selected or not.',
+    options: [true, false, undefined],
+    control: { type: 'select' },
+    table: {
+      type: {
+        summary: 'boolean',
+      },
+      defaultValue: {
+        summary: DEFAULTS.SELECTED,
+      },
+    },
+  },
 };
 
 export { buttonCircleToggleArgTypes };
