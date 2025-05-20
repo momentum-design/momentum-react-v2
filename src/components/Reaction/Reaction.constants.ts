@@ -13,7 +13,7 @@ const CLASS_PREFIX = 'md-reaction';
 const GLYPH_NOT_FOUND = String.fromCharCode(0x20de);
 
 const DEFAULTS = {
-  SHOW_LOADING_SPINNER: true,
+  HIDE_LOADING_SPINNER: false,
   SIZE: 12,
 };
 

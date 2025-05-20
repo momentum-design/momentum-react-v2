@@ -141,10 +141,8 @@ describe('<Reaction/>', () => {
       expect(container.querySelector('.md-loading-spinner-wrapper')).toBeInTheDocument();
     });
 
-    it('should render not loading spinner when hideLoadingSpinner=false passes', async () => {
-      const { container } = await renderWithWebComponent(
-        <Reaction name="haha" hideLoadingSpinner={false} />
-      );
+    it('should render not loading spinner when hideLoadingSpinner=false passes', () => {
+      const { container } = render(<Reaction name="haha" hideLoadingSpinner={true} />);
 
       expect(container.querySelector('.md-loading-spinner-wrapper')).not.toBeInTheDocument();
     });
