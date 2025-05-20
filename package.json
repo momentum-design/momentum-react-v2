@@ -99,6 +99,7 @@
   "resolutions": {
     "@react-aria/button": "3.4.3",
     "@types/node": "22.7.4",
+    "@momentum-design/animations": "0.3.1",
     "@momentum-design/icons": "0.10.0",
     "@momentum-design/brand-visuals": "0.5.1",
     "@momentum-design/tokens": "0.5.0"

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import Reaction, { REACTION_CONSTANTS as CONSTANTS } from './';
 
 import { REACTIONS, GLYPH_NOT_FOUND } from './Reaction.constants';
@@ -135,20 +135,24 @@ describe('<Reaction/>', () => {
   });
 
   describe('actions', () => {
-    it('should render loading spinner first', () => {
-      const { container } = render(<Reaction name="haha" />);
+    it('should render loading spinner first', async () => {
+      const { container } = await renderWithWebComponent(<Reaction name="haha" />);
 
       expect(container.querySelector('.md-loading-spinner-wrapper')).toBeInTheDocument();
     });
 
-    it('should render not loading spinner when hideLoadingSpinner=false passes', () => {
-      const { container } = render(<Reaction name="haha" hideLoadingSpinner={false} />);
+    it('should render not loading spinner when hideLoadingSpinner=false passes', async () => {
+      const { container } = await renderWithWebComponent(
+        <Reaction name="haha" hideLoadingSpinner={false} />
+      );
 
       expect(container.querySelector('.md-loading-spinner-wrapper')).not.toBeInTheDocument();
     });
 
     it('should render not found when an error happen', async () => {
-      const { queryByText, container } = render(<Reaction name={'hahaha' as any} />);
+      const { queryByText, container } = await renderWithWebComponent(
+        <Reaction name={'hahaha' as any} />
+      );
 
       await waitFor(() => !container.querySelector('.md-loading-spinner-wrapper'));
 
@@ -156,7 +160,7 @@ describe('<Reaction/>', () => {
     });
 
     it('should render animation without loading or error message', async () => {
-      const { queryByText, container } = render(<Reaction name="haha" />);
+      const { queryByText, container } = await renderWithWebComponent(<Reaction name="haha" />);
 
       await waitFor(() => !container.querySelector('.md-loading-spinner-wrapper'));
 

@@ -2895,7 +2895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/animations@npm:*, @momentum-design/animations@npm:0.3.1":
+"@momentum-design/animations@npm:0.3.1":
   version: 0.3.1
   resolution: "@momentum-design/animations@npm:0.3.1"
   checksum: c59402ae3d2f160a368bc683ebd63672b3d7dfd60c8b64ceb8d79921b40f91af15aa50fb1aca9c22759ef8e1e139af87b69e39e283be3e1bad4b39bc2f9f6726
