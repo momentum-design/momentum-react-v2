@@ -18,7 +18,7 @@ const Reaction: FC<Props> = (props: Props) => {
     style,
     onComplete,
     size,
-    hideLoadingSpinner = DEFAULTS.SHOW_LOADING_SPINNER,
+    hideLoadingSpinner = DEFAULTS.HIDE_LOADING_SPINNER,
     ...otherProps
   } = props;
 
@@ -49,7 +49,7 @@ const Reaction: FC<Props> = (props: Props) => {
         {...otherProps}
       />
 
-      {hideLoadingSpinner && loadingState === 'loading' && (
+      {!hideLoadingSpinner && loadingState === 'loading' && (
         <LoadingSpinner
           scale={Math.min(Number(size) || DEFAULTS.SIZE, DEFAULTS.SIZE)}
           aria-hidden

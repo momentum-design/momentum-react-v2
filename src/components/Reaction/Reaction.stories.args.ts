@@ -11,7 +11,7 @@ export default {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: DEFAULTS.SHOW_LOADING_SPINNER,
+        summary: DEFAULTS.HIDE_LOADING_SPINNER,
       },
     },
   },
