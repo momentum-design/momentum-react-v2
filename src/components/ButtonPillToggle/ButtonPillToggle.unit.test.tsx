@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { renderWithWebComponent } from '../../../test/utils';
 
-import ButtonPillToggle, { BUTTON_PILL_TOGGLE_CONSTANTS as CONSTANTS } from './';
-import { render, screen } from '@testing-library/react';
+import ButtonPillToggle from './';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 describe('<ButtonPillToggle />', () => {
