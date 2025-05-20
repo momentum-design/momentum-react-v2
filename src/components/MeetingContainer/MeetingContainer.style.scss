@@ -52,8 +52,14 @@
       }
 
       > .md-meeting-container-tags {
+        padding-top: 0.25rem;
+
         > :first-child {
           margin-left: 0;
+        }
+
+        > :not(:first-child) {
+          margin-left: 0.5rem;
         }
       }
     }
