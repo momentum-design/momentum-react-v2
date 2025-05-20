@@ -27,7 +27,12 @@ export default {
 
 const Example = Template<MeetingContainerProps>(MeetingContainer).bind({});
 
-const tags = [<Chip key={0}>Messages</Chip>, <Chip key={1}>Recording</Chip>];
+const tags = [
+  <Chip key={0} label="Messages" />,
+  <Chip key={1} label="Recording">
+    Recording
+  </Chip>,
+];
 
 const pillButtons = [
   <ButtonPill key={0} outline ghost={true} color="join" size={28}>
