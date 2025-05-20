@@ -22,10 +22,10 @@ const Reaction: FC<Props> = (props: Props) => {
     ...otherProps
   } = props;
 
-  const [loadingState, setLoadingState] = useState<AnimationLoadingState>(() => 'loading');
+  const [loadingState, setLoadingState] = useState<AnimationLoadingState>('loading');
 
   const onLoad = useCallback(() => setLoadingState('loaded'), []);
-  const onError = useCallback(() => setLoadingState(() => 'error'), []);
+  const onError = useCallback(() => setLoadingState('error'), []);
 
   // useEffect runs after dynamic import is resolved and sets the wrong state when
   // the component rendered with the first animation
