@@ -135,8 +135,8 @@ describe('<Reaction/>', () => {
   });
 
   describe('actions', () => {
-    it('should render loading spinner first', async () => {
-      const { container } = await renderWithWebComponent(<Reaction name="haha" />);
+    it('should render loading spinner first', () => {
+      const { container } = render(<Reaction name="haha" />);
 
       expect(container.querySelector('.md-loading-spinner-wrapper')).toBeInTheDocument();
     });
