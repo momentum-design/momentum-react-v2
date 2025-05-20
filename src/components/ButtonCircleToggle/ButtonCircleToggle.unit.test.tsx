@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { renderWithWebComponent } from '../../../test/utils';
 
 import ButtonCircleToggle from './';
@@ -163,17 +163,51 @@ describe('<ButtonCircleToggle />', () => {
   describe('actions', () => {
     const user = userEvent.setup();
 
-    it('onChange callback is called correctly when provided', async () => {
-      expect.assertions(1);
+    it('onChange callback is called correctly when provided when component is uncontrolled', async () => {
+      expect.assertions(4);
 
       const mockCallback = jest.fn();
 
-      await setup(<ButtonCircleToggle onChange={mockCallback} />);
-      const element = screen.getByRole('button');
+      const initialIsSelected = false;
 
-      await user.click(element);
+      await setup(
+        <ButtonCircleToggle onChange={mockCallback} initialIsSelected={initialIsSelected} />
+      );
 
-      expect(mockCallback).toHaveBeenCalledWith(true);
+      const button = screen.getByRole('button');
+      expect(button.attributes['aria-pressed'].value).toBe('false');
+
+      await user.click(button);
+
+      expect(button.attributes['aria-pressed'].value).toBe('true');
+      expect(mockCallback).toBeCalledTimes(1);
+      expect(mockCallback).toHaveBeenCalledWith(!initialIsSelected);
+    });
+
+    it('onChange callback is called correctly when provided when component is controlled', async () => {
+      expect.assertions(2);
+
+      const mockCallback = jest.fn();
+
+      const ExampleParent = () => {
+        const [isSelected, setIsSelected] = useState(false);
+
+        const onPress = () => {
+          setIsSelected(true);
+          mockCallback();
+        };
+
+        return <ButtonCircleToggle onChange={onPress} isSelected={isSelected} />;
+      };
+
+      await renderWithWebComponent(<ExampleParent />);
+
+      const button = screen.getByRole('button');
+      expect(button.attributes['aria-pressed'].value).toBe('false');
+
+      await user.click(button);
+
+      expect(button.attributes['aria-pressed'].value).toBe('true');
     });
 
     it('should handle mouse press events', async () => {
