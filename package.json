@@ -149,7 +149,7 @@
     "node-sass-tilde-importer": "^1.0.2",
     "object-assign": "4.1.1",
     "react-aria": "^3.10.0",
-    "react-aria-modal": "^2.11.1",
+    "react-aria-modal": "4.0.2",
     "react-toastify": "^9.0.8",
     "react-uid": "^2.2.0",
     "react-verification-input": "^4.1.2",
