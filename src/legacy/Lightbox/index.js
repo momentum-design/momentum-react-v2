@@ -555,6 +555,9 @@ class Lightbox extends React.Component {
         dialogClass="md-lightbox"
         underlayClass="md-lightbox__container"
         aria-labelledby={this.nameId}
+        focusTrapOptions={{
+          fallbackFocus: () => document.createElement('div'),
+        }}
       >
         {/* adding this so that focus styling applies to components inside the modal. */}
         <MomentumThemeProvider theme={this.props.theme}>
