@@ -14,7 +14,11 @@ describe('tests for <Modal />', () => {
   });
 
   it('should render a Modal', () => {
-    wrapper = mount(<Modal onHide={() => {}} applicationId="test" show htmlId="testModal" />);
+    wrapper = mount(
+      <Modal onHide={() => {}} applicationId="test" show htmlId="testModal">
+        <button>Focusable Element</button>
+      </Modal>
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -119,7 +123,9 @@ describe('tests for <Modal />', () => {
     mount(
       <div>
         <Modal onHide={() => {}} applicationId="test" show htmlId="testModal" renderTo="test-id">
-          <div className="testchild" />
+          <div className="testchild">
+            <button>Focusable Element</button>
+          </div>
         </Modal>
       </div>
     );
@@ -159,7 +165,9 @@ describe('tests for <Modal />', () => {
         htmlId="testModal"
         ContentWrapper={TestWrapper}
       >
-        <div className="testchild" />
+        <div className="testchild">
+          <button>Focusable Element</button>
+        </div>
       </Modal>
     );
     const contentWrapper = wrapper.find('.test-wrapper');
@@ -175,7 +183,9 @@ describe('tests for <Modal />', () => {
   it('should not render content wrapper if prop not provided', () => {
     wrapper = mount(
       <Modal onHide={() => {}} applicationId="test" show htmlId="testModal">
-        <div className="testchild" />
+        <div className="testchild">
+          <button>Focusable Element</button>
+        </div>
       </Modal>
     );
     expect(wrapper.find('.md-modal').children().at(0).hasClass('md-modal__content')).toBe(true);
