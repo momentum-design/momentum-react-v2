@@ -2428,17 +2428,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hot-loader/react-dom@npm:~16.8.0":
-  version: 16.8.6
-  resolution: "@hot-loader/react-dom@npm:16.8.6"
+"@hot-loader/react-dom@npm:~17.0.0":
+  version: 17.0.2
+  resolution: "@hot-loader/react-dom@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    prop-types: ^15.6.2
-    scheduler: ^0.13.6
+    scheduler: ^0.20.2
   peerDependencies:
-    react: ^16.0.0
-  checksum: 77bbd7298e73de79972389e7a65fdd3926ab0509c3b4df988b38ee1bc5613d9a661d7ac26a86639e30f0f183838401e911ea45bfca3c446cd97d14ad0ad3ed20
+    react: 17.0.2
+  checksum: 180de3211aff1d60fd9d2a9130ba7977e2e356b1ecd2e7c50a98e6507bb7873f0523b44fa63142f0ffdc629d2933994f4add86e1f19288941f9d223bd28f5e48
   languageName: node
   linkType: hard
 
@@ -2992,7 +2991,7 @@ __metadata:
     "@babel/runtime": ^7.0.0
     "@commitlint/cli": ^12.0.1
     "@commitlint/config-conventional": ^12.0.1
-    "@hot-loader/react-dom": ~16.8.0
+    "@hot-loader/react-dom": ~17.0.0
     "@momentum-design/animations": 0.3.3
     "@momentum-design/components": 0.92.5
     "@momentum-design/fonts": 0.0.8
@@ -3113,7 +3112,7 @@ __metadata:
     react-dom: 17.0.2
     react-hot-loader: ^4.2.0
     react-router-dom: ^5.0.0
-    react-test-renderer: ^16.8.0
+    react-test-renderer: ^17.0.0
     react-toastify: ^9.0.8
     react-uid: ^2.2.0
     react-verification-input: ^4.1.2
@@ -3144,6 +3143,9 @@ __metadata:
     webpack-hot-middleware: ^2.22.2
     webpack-md5-hash: 0.0.6
     yarn: ^1.12.1
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -24927,7 +24929,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.12.0, react-is@npm:^16.13.1, react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1, react-is@npm:^16.8.6":
+"react-is@npm:^16.12.0, react-is@npm:^16.13.1, react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -25075,20 +25077,6 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: fa03880a887bc0c79c0be25fc35924980d75f684f8d05620272bdfcbb9f119f45bb7f8ddd92b9e944103964a4e094b99750d0b19c992fd86f2ce0b70266e89c3
-  languageName: node
-  linkType: hard
-
-"react-test-renderer@npm:^16.8.0":
-  version: 16.14.0
-  resolution: "react-test-renderer@npm:16.14.0"
-  dependencies:
-    object-assign: ^4.1.1
-    prop-types: ^15.6.2
-    react-is: ^16.8.6
-    scheduler: ^0.19.1
-  peerDependencies:
-    react: ^16.14.0
-  checksum: 96eb8a2566e67ebd246ef6e1b36d8c8498c68ebfdb94ca8399c19b4e3b73368caf0ffbe44767593e3499f2f58b4b5e57ba0565a47628048d2ab01b23a422724e
   languageName: node
   linkType: hard
 
@@ -26308,26 +26296,6 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: 5636b55cf15f7cf0baa73f2797bf992bdcf75d1b39d82c0aa4608555c774368f6ac321cb641fd5f3d3ceb87805122cd47540da6a7b5960fe0dbdb8f8c263f000
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.13.6":
-  version: 0.13.6
-  resolution: "scheduler@npm:0.13.6"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: c82c705f6d0d6df87b26bf2cca33f427e91889438c0435ade3ee7f41860eda4dd7f3171ca2d93e8fe9431f3bd831ca0e267a401a0296e4b14de05e389f82d320
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.19.1":
-  version: 0.19.1
-  resolution: "scheduler@npm:0.19.1"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: 73e185a59e2ff5aa3609f5b9cb97ddd376f89e1610579d29939d952411ca6eb7a24907a4ea4556569dacb931467a1a4a56d94fe809ef713aa76748642cd96a6c
   languageName: node
   linkType: hard
 
