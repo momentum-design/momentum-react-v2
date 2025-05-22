@@ -137,7 +137,7 @@ describe('<MeetingRowContent />', () => {
       const buttonCircle = screen.getByRole('button', { name: 'Test 2' });
       const avatar = container.querySelector('.md-avatar-wrapper');
 
-      expect(buttonPill.getAttribute('data-size')).toBe('28');
+      expect(buttonPill.getAttribute('size')).toBe('28');
       expect(buttonCircle.getAttribute('size')).toBe('32');
       expect(avatar.getAttribute('data-size')).toBe('32');
     });

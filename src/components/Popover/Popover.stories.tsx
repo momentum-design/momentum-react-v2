@@ -21,6 +21,7 @@ import List from '../List';
 import AriaToolbarItem from '../AriaToolbarItem';
 import ListItemBase from '../ListItemBase';
 import Select from '../Select';
+import type { ButtonRefType } from '../ButtonCircle';
 
 export default {
   title: 'Momentum UI/Popover',
@@ -139,7 +140,7 @@ AvatarExample.args = {
 };
 
 const PopoverWithFirstFocus = (props) => {
-  const [ref, setRef] = useState<HTMLButtonElement>();
+  const [ref, setRef] = useState<ButtonRefType>();
 
   return (
     <Popover firstFocusElement={ref} {...props}>

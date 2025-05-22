@@ -139,6 +139,15 @@ const MenuTrigger = forwardRef(
         color={color}
         onClickOutside={closeMenuTrigger}
         setInstance={setPopoverInstance}
+        // after migrating to new momentum-design components,
+        // ReactAria doesn't work as expected. Firing the onOpenChange
+        // manually after popover is shown / hidden
+        onShow={() => {
+          props.onOpenChange?.(true);
+        }}
+        onHidden={() => {
+          props.onOpenChange?.(false);
+        }}
         hideOnEsc={false}
         // Set autofocus to false if there are multiple menus, since the FocusScope in Popover shouldn't automatically focus anywhere, but the
         // MenuContext.Provider should take care of the auto focusing

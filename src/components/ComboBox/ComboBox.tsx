@@ -469,7 +469,12 @@ const ComboBox: React.FC<Props> = (props: Props) => {
             autoComplete="off"
           />
           <div className={STYLE.divider} />
-          <ButtonPill ghost onPress={onArrowButtonPress} className={STYLE.button}>
+          <ButtonPill
+            variant="tertiary"
+            onClick={onArrowButtonPress}
+            className={STYLE.button}
+            stopPropagation={false}
+          >
             <Icon
               className={STYLE.arrowIcon}
               name={isOpen ? 'arrow-up' : 'arrow-down'}

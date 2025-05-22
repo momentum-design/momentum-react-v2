@@ -236,7 +236,7 @@ describe('<MeetingListItem />', () => {
       const icon = screen.getByTestId('icon-testid');
       const avatar = screen.getByTestId('avatar-testid');
 
-      expect(buttonPill).toHaveAttribute('data-size', '28');
+      expect(buttonPill).toHaveAttribute('size', '28');
       expect(buttonCircle).toHaveAttribute('size', '32');
       expect(icon).toHaveAttribute('data-scale', '12');
       expect(avatar).toHaveAttribute('data-size', '32');

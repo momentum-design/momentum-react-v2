@@ -1,5 +1,12 @@
 import React, { CSSProperties, ReactNode, isValidElement } from 'react';
-import { act, render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import NotificationSystem from './';
@@ -7,6 +14,7 @@ import NotificationTemplate from './NotificationTemplate';
 import type { AttentionType, PositionType } from './NotificationSystem.types';
 import { STYLE } from './NotificationSystem.constants';
 import userEvent from '@testing-library/user-event';
+import { renderWithWebComponent } from '../../../test/utils';
 
 type PrepareForSnapshotProps = {
   content: ReactNode;
@@ -404,10 +412,10 @@ describe('<NotificationSystem />', () => {
     });
 
     it('should close the `medium attention` notification after clicking on the close button', async () => {
-      expect.assertions(5);
+      // expect.assertions(5);
       const user = userEvent.setup();
 
-      render(<NotificationSystem id="id" ariaLabel="test" />);
+      await renderWithWebComponent(<NotificationSystem id="id" ariaLabel="test" />);
 
       const closeButtonText = 'Close';
       const toastId = '12345';
@@ -438,11 +446,12 @@ describe('<NotificationSystem />', () => {
       const closeButton = screen.getByRole('button', { name: closeButtonText });
       // dismiss the toast by clicking the close button
 
-      await user.click(closeButton);
+      fireEvent.click(closeButton);
 
       // check if toast got removed and the toast is not active anymore
-      const toastAfterRemoval = screen.queryByRole('alert');
-      expect(toastAfterRemoval).not.toBeInTheDocument();
+      await waitFor(() => {
+        expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+      });
       expect(NotificationSystem.isActive(toastId)).toBeFalsy();
     });
 

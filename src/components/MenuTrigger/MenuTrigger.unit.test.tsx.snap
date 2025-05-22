@@ -17,7 +17,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -50,6 +52,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -99,6 +102,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -156,6 +160,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot 1`] = `
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -2213,7 +2218,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -2246,6 +2253,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -2295,6 +2303,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -2352,6 +2361,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with className 
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -4409,7 +4419,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -4442,6 +4454,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -4491,6 +4504,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -4548,6 +4562,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with color 1`] 
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -6606,7 +6621,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
     id="example-id"
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -6639,6 +6656,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -6688,6 +6706,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -6745,6 +6764,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with id 1`] = `
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -8805,7 +8825,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="top"
     role="generic"
     setInstance={[Function]}
@@ -8838,6 +8860,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="top"
       plugins={
         Array [
@@ -8887,6 +8910,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="top"
         plugins={
           Array [
@@ -8944,6 +8968,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with placement 
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="top"
           plugins={
             Array [
@@ -11001,7 +11026,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -11034,6 +11061,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -11083,6 +11111,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -11140,6 +11169,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with showArrow 
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -13267,7 +13297,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -13305,6 +13337,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -13354,6 +13387,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -13411,6 +13445,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with style 1`] 
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -15479,7 +15514,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -15512,6 +15549,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -15561,6 +15599,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -15618,6 +15657,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with variant 1`
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [
@@ -17675,7 +17715,9 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
     hideOnEsc={false}
     interactive={true}
     onClickOutside={[Function]}
+    onHidden={[Function]}
     onKeyDown={[Function]}
+    onShow={[Function]}
     placement="bottom-start"
     role="generic"
     setInstance={[Function]}
@@ -17709,6 +17751,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
       }
       onClickOutside={[Function]}
       onHidden={[Function]}
+      onShow={[Function]}
       placement="bottom-start"
       plugins={
         Array [
@@ -17759,6 +17802,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
         }
         onClickOutside={[Function]}
         onHidden={[Function]}
+        onShow={[Function]}
         placement="bottom-start"
         plugins={
           Array [
@@ -17817,6 +17861,7 @@ exports[`<MenuTrigger /> - Enzyme snapshot should match snapshot with zIndex 1`]
           }
           onClickOutside={[Function]}
           onHidden={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           plugins={
             Array [

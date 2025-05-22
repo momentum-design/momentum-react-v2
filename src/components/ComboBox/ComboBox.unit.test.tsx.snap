@@ -114,8 +114,9 @@ exports[`ComboBox snapshot should match snapshot label 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
@@ -278,8 +279,9 @@ exports[`ComboBox snapshot should match snapshot with className 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
@@ -442,8 +444,9 @@ exports[`ComboBox snapshot should match snapshot with noResultText 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
@@ -606,8 +609,9 @@ exports[`ComboBox snapshot should match snapshot with placeholder 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
@@ -775,8 +779,9 @@ exports[`ComboBox snapshot should match snapshot with style 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
@@ -939,8 +944,9 @@ exports[`ComboBox snapshot should match snapshot with width 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
@@ -1116,8 +1122,9 @@ exports[`ComboBox snapshot should match snapshot withSection 1`] = `
       />
       <ButtonPill
         className="md-combo-box-button"
-        ghost={true}
-        onPress={[Function]}
+        onClick={[Function]}
+        stopPropagation={false}
+        variant="tertiary"
       >
         <Button
           className="md-button-pill-wrapper md-combo-box-button"
