@@ -47,6 +47,9 @@ export type OnVideoReactionName = OnVideoReactionWithoutSkinTone | OnVideoReacti
 // ALL
 export type ReactionName = OriginalReactionName | OnVideoReactionName;
 
+/**
+ * The loading states of the animation data.
+ */
 export type AnimationLoadingState = 'loading' | 'loaded' | 'error';
 
 export interface Props {
