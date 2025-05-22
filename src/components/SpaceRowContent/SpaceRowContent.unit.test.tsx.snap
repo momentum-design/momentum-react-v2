@@ -1080,7 +1080,9 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
           hideOnEsc={false}
           interactive={true}
           onClickOutside={[Function]}
+          onHidden={[Function]}
           onKeyDown={[Function]}
+          onShow={[Function]}
           placement="bottom-start"
           role="generic"
           setInstance={[Function]}
@@ -1116,6 +1118,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
             }
             onClickOutside={[Function]}
             onHidden={[Function]}
+            onShow={[Function]}
             placement="bottom-start"
             plugins={
               Array [
@@ -1165,6 +1168,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
               }
               onClickOutside={[Function]}
               onHidden={[Function]}
+              onShow={[Function]}
               placement="bottom-start"
               plugins={
                 Array [
@@ -1222,6 +1226,7 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
                 }
                 onClickOutside={[Function]}
                 onHidden={[Function]}
+                onShow={[Function]}
                 placement="bottom-start"
                 plugins={
                   Array [

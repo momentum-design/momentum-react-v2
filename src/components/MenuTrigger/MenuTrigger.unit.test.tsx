@@ -4,11 +4,11 @@ import { Item } from '@react-stately/collections';
 import MenuTrigger, { MENU_TRIGGER_CONSTANTS as CONSTANTS } from './';
 import ButtonPill from '../ButtonPill';
 import Menu from '../Menu';
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import { ModalContainer, Popover } from '..';
 import { ROUNDS } from '../ModalContainer/ModalContainer.constants';
 
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import SpatialNavigationProvider from '../SpatialNavigationProvider';
@@ -251,7 +251,11 @@ describe('<MenuTrigger /> - Enzyme', () => {
 describe('<MenuTrigger /> - React Testing Library', () => {
   const defaultProps = {
     'aria-label': 'Label',
-    triggerComponent: <ButtonPill aria-label="Open Menu">Open Menu</ButtonPill>,
+    triggerComponent: (
+      <ButtonPill aria-label="Open Menu" stopPropagation={false}>
+        Open Menu
+      </ButtonPill>
+    ),
     children: [
       <Menu selectionMode="single" key="2" aria-label="Single Menu">
         <Item key="one">One</Item>
@@ -268,7 +272,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
   describe('accessibility properties', () => {
     it('triggerComponent has aria-haspopup true by default', async () => {
-      render(<MenuTrigger {...defaultProps} />);
+      await renderWithWebComponent(<MenuTrigger {...defaultProps} />);
 
       const button = screen.getByRole('button', { name: 'Open Menu' });
       expect(button).toBeVisible();
@@ -284,7 +288,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
         },
       };
 
-      render(<MenuTrigger {...defaultProps} ref={ref} />);
+      await renderWithWebComponent(<MenuTrigger {...defaultProps} ref={ref} />);
 
       const button = screen.getByRole('button', { name: 'Open Menu' });
 
@@ -293,7 +297,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     });
 
     it('triggerComponent can have aria-haspopup as passed in props', async () => {
-      render(
+      await renderWithWebComponent(
         <MenuTrigger
           {...defaultProps}
           triggerComponent={
@@ -312,8 +316,8 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
   describe('actions', () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const openMenu = async (user: any, screen: any) => {
-      await user.click(screen.getByRole('button', { name: 'Open Menu' }));
+    const openMenu = async (screen: any) => {
+      fireEvent.click(screen.getByRole('button', { name: 'Open Menu' }));
       await waitFor(() => {
         expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeInTheDocument();
       });
@@ -322,20 +326,20 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     };
 
     it('should callback correctly when onOpenChange is provided ', async () => {
-      const user = userEvent.setup();
-
       const onOpenChangeMock = jest.fn();
 
-      render(<MenuTrigger {...defaultProps} onOpenChange={onOpenChangeMock} />);
+      await renderWithWebComponent(
+        <MenuTrigger {...defaultProps} onOpenChange={onOpenChangeMock} />
+      );
       expect(onOpenChangeMock).not.toHaveBeenCalled();
 
-      await openMenu(user, screen);
+      await openMenu(screen);
 
       expect(onOpenChangeMock).toHaveBeenCalledWith(true);
       expect(onOpenChangeMock).toHaveBeenCalledTimes(1);
       onOpenChangeMock.mockClear();
 
-      await user.keyboard('{Escape}');
+      fireEvent.click(screen.getByRole('button', { name: 'Open Menu' }));
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
@@ -348,9 +352,9 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     it('should close the menu when closeOnSelect is true', async () => {
       const user = userEvent.setup();
 
-      render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
+      await renderWithWebComponent(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-      await openMenu(user, screen);
+      await openMenu(screen);
 
       await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
@@ -362,9 +366,9 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     it('should not close the menu when closeOnSelect is false', async () => {
       const user = userEvent.setup();
 
-      render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+      await renderWithWebComponent(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-      await openMenu(user, screen);
+      await openMenu(screen);
 
       await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
@@ -378,28 +382,28 @@ describe('<MenuTrigger /> - React Testing Library', () => {
 
       const children = [...defaultProps.children];
       children.push(
-        <Menu>
+        <Menu aria-label="Additional Menu">
           <Item key="close" closeOnSelect={true}>
             Close
           </Item>
         </Menu>
       );
 
-      render(
+      await renderWithWebComponent(
         <MenuTrigger {...defaultProps} closeOnSelect={false}>
           {children}
         </MenuTrigger>
       );
 
-      await openMenu(user, screen);
+      await openMenu(screen);
 
-      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+      fireEvent.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
       await waitFor(() => {
         expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
       });
 
-      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+      fireEvent.click(screen.getByRole('menuitem', { name: 'Close' }));
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
@@ -407,32 +411,30 @@ describe('<MenuTrigger /> - React Testing Library', () => {
     });
 
     it('should not close the menu when closeOnSelect is true but overridden by <Item closeOnSelect={false} />', async () => {
-      const user = userEvent.setup();
-
       const children = [...defaultProps.children];
       children.push(
-        <Menu>
+        <Menu aria-label="Additional Menu">
           <Item key="close" closeOnSelect={false}>
             Close
           </Item>
         </Menu>
       );
 
-      render(
+      await renderWithWebComponent(
         <MenuTrigger {...defaultProps} closeOnSelect={true}>
           {children}
         </MenuTrigger>
       );
 
-      await openMenu(user, screen);
+      await openMenu(screen);
 
-      user.click(screen.getByRole('menuitem', { name: 'Close' }));
+      fireEvent.click(screen.getByRole('menuitem', { name: 'Close' }));
 
       await waitFor(() => {
         expect(screen.getByRole('menu', { name: 'Single Menu' })).toBeVisible();
       });
 
-      await user.click(screen.getByRole('menuitemradio', { name: 'One' }));
+      fireEvent.click(screen.getByRole('menuitemradio', { name: 'One' }));
 
       await waitFor(() => {
         expect(screen.queryByRole('menu', { name: 'Single Menu' })).not.toBeInTheDocument();
@@ -457,7 +459,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
           </>
         );
       };
-      render(<ParentComponent />);
+      await renderWithWebComponent(<ParentComponent />);
 
       let menu = screen.queryByRole('menu', { name: 'Single Menu' });
       expect(menu).not.toBeInTheDocument();
@@ -477,10 +479,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('closes the menu on Escape', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} />);
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
 
-        await openMenu(user, screen);
+        await openMenu(screen);
 
+        await waitFor(() => {
+          expect(screen.getByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        });
         await user.keyboard('{Escape}');
 
         await waitFor(() => {
@@ -491,9 +498,11 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it("doesn't close the menu on Tab & Shift+Tab if only one menu present", async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} children={[defaultProps.children[0]]} />);
+        await renderWithWebComponent(
+          <MenuTrigger {...defaultProps} children={[defaultProps.children[0]]} />
+        );
 
-        const menu = await openMenu(user, screen);
+        const menu = await openMenu(screen);
 
         await user.tab();
 
@@ -507,9 +516,9 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it("doesn't close the menu on Tab if more than one menu present", async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} />);
 
-        const menu = await openMenu(user, screen);
+        const menu = await openMenu(screen);
 
         await user.tab();
 
@@ -523,10 +532,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('will focus back on trigger component after the menu trigger closes', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} />);
 
-        await openMenu(user, screen);
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
+        await openMenu(screen);
 
+        await waitFor(() => {
+          expect(screen.getByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        });
         await user.keyboard('{escape}');
 
         expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
@@ -535,19 +549,23 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('will focus on the first menu option when menu trigger is opened', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} closeOnSelect={true} />);
 
-        await openMenu(user, screen);
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
+        await openMenu(screen);
 
-        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        await waitFor(() => {
+          expect(screen.getByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        });
       });
 
       it('selects option on Space', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-        await openMenu(user, screen);
+        await openMenu(screen);
 
         screen.getByRole('menuitemradio', { name: 'One' }).focus();
 
@@ -561,9 +579,9 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('selects option on Enter', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} closeOnSelect={false} />);
 
-        await openMenu(user, screen);
+        await openMenu(screen);
 
         screen.getByRole('menuitemradio', { name: 'Two' }).focus();
 
@@ -577,10 +595,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('allows cycling through multiple menus with tab / shift+tab', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} />);
 
-        await openMenu(user, screen);
-        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
+
+        await openMenu(screen);
+        await waitFor(() => {
+          expect(screen.getByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        });
 
         await user.tab();
         expect(await screen.findByRole('menuitemcheckbox', { name: 'Four' })).toHaveFocus();
@@ -598,10 +621,15 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('allows cycling through multiple menus with tab / shift+tab & persists focus of menuitems inside', async () => {
         const user = userEvent.setup();
 
-        render(<MenuTrigger {...defaultProps} />);
+        await renderWithWebComponent(<MenuTrigger {...defaultProps} />);
 
-        await openMenu(user, screen);
-        expect(await screen.findByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
+
+        await openMenu(screen);
+        await waitFor(() => {
+          expect(screen.getByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        });
 
         await user.keyboard('{ArrowDown}');
         expect(await screen.findByRole('menuitemradio', { name: 'Two' })).toHaveFocus();
@@ -624,7 +652,7 @@ describe('<MenuTrigger /> - React Testing Library', () => {
       it('closes the menu on Escape', async () => {
         const user = userEvent.setup();
 
-        render(
+        await renderWithWebComponent(
           <SpatialNavigationProvider
             navigationKeyMapping={{
               ...DEFAULTS.SPATIAL_NAVIGATION_KEY_MAPPING,
@@ -635,8 +663,13 @@ describe('<MenuTrigger /> - React Testing Library', () => {
           </SpatialNavigationProvider>
         );
 
-        await openMenu(user, screen);
+        await user.tab();
+        expect(await screen.findByRole('button', { name: 'Open Menu' })).toHaveFocus();
 
+        await openMenu(screen);
+        await waitFor(() => {
+          expect(screen.getByRole('menuitemradio', { name: 'One' })).toHaveFocus();
+        });
         await user.keyboard('{GoBack}');
 
         await waitFor(() => {

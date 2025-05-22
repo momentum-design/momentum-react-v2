@@ -2,10 +2,10 @@ import ComboBox from '.';
 import React, { createRef } from 'react';
 import { Item, Section } from '@react-stately/collections';
 import { STYLE } from './ComboBox.constants';
-import { mountAndWait } from '../../../test/utils';
+import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { IComboBoxGroup } from './ComboBox.types';
 import { act } from 'react-dom/test-utils';
 import TextInput from '../TextInput';
@@ -356,7 +356,9 @@ describe('ComboBox', () => {
       it('should show menu on click', async () => {
         const user = userEvent.setup();
 
-        render(<ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>);
+        await renderWithWebComponent(
+          <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+        );
 
         const menuItem = screen.queryByRole('menu');
         expect(menuItem).not.toBeInTheDocument();
@@ -370,7 +372,7 @@ describe('ComboBox', () => {
         const user = userEvent.setup();
         const onArrowButtonPress = jest.fn();
 
-        render(
+        await renderWithWebComponent(
           <ComboBox onArrowButtonPress={onArrowButtonPress} comboBoxGroups={withoutSection}>
             {renderChildren}
           </ComboBox>
@@ -384,7 +386,7 @@ describe('ComboBox', () => {
       it('should call onInputChange when type on input', async () => {
         const onInputChange = jest.fn();
 
-        render(
+        await renderWithWebComponent(
           <ComboBox onInputChange={onInputChange} comboBoxGroups={withoutSection}>
             {renderChildren}
           </ComboBox>
@@ -399,7 +401,7 @@ describe('ComboBox', () => {
         const user = userEvent.setup();
         const onSelectionChange = jest.fn();
 
-        render(
+        await renderWithWebComponent(
           <ComboBox onSelectionChange={onSelectionChange} comboBoxGroups={withoutSection}>
             {renderChildren}
           </ComboBox>
@@ -412,7 +414,8 @@ describe('ComboBox', () => {
         act(() => {
           button.focus();
         });
-        await user.keyboard('{Enter}');
+
+        fireEvent.keyDown(button, { key: 'Enter' });
         expect(screen.getByRole('menu')).toBeVisible();
 
         const item = screen.getByText('item1').parentElement;
@@ -428,7 +431,7 @@ describe('ComboBox', () => {
         const user = userEvent.setup();
         const openStateChange = jest.fn();
 
-        render(
+        await renderWithWebComponent(
           <ComboBox openStateChange={openStateChange} comboBoxGroups={withoutSection}>
             {renderChildren}
           </ComboBox>
@@ -442,7 +445,7 @@ describe('ComboBox', () => {
           button.focus();
         });
         expect(openStateChange).toBeCalledWith(false);
-        await user.keyboard('{Enter}');
+        fireEvent.keyDown(button, { key: 'Enter' });
         expect(screen.getByRole('menu')).toBeVisible();
         expect(openStateChange).toBeCalledWith(true);
         await user.keyboard('{Escape}');
@@ -454,7 +457,7 @@ describe('ComboBox', () => {
 
         const disabledKeys = ['key1'];
 
-        const { container } = render(
+        const { container } = await renderWithWebComponent(
           <ComboBox disabledKeys={disabledKeys} comboBoxGroups={withoutSection}>
             {renderChildren}
           </ComboBox>
@@ -469,9 +472,9 @@ describe('ComboBox', () => {
       });
 
       it('should show menu when focused and pressing enter', async () => {
-        const user = userEvent.setup();
-
-        render(<ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>);
+        await renderWithWebComponent(
+          <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
+        );
 
         const menuItem = screen.queryByRole('menu');
         expect(menuItem).not.toBeInTheDocument();
@@ -482,14 +485,14 @@ describe('ComboBox', () => {
         });
         expect(button).toHaveFocus();
 
-        await user.keyboard('{Enter}');
-        expect(screen.getByRole('menu')).toBeVisible();
+        fireEvent.keyDown(button, { key: 'Enter' });
+        expect(await screen.findByRole('menu')).toBeVisible();
       });
 
       it('should hide menu when clicking outside', async () => {
         const user = userEvent.setup();
 
-        render(
+        await renderWithWebComponent(
           <>
             <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
             <button>button-outside</button>
@@ -513,7 +516,7 @@ describe('ComboBox', () => {
     it('should have show noResultText when items is empty', async () => {
       const noResultText = 'empty result';
 
-      render(
+      await renderWithWebComponent(
         <ComboBox noResultText={noResultText} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
@@ -528,7 +531,7 @@ describe('ComboBox', () => {
     });
 
     it('if shouldFilterOnArrowButton is false, should not filter when press arrowButton', async () => {
-      render(
+      await renderWithWebComponent(
         <ComboBox shouldFilterOnArrowButton={false} comboBoxGroups={withoutSection}>
           {renderChildren}
         </ComboBox>
@@ -552,7 +555,7 @@ describe('ComboBox', () => {
     it('When list is hidden, entering text in the input, list will display', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
         </>
@@ -573,7 +576,7 @@ describe('ComboBox', () => {
     it('when input is focused, list is hidden, press Enter, list will display, and item will be focused', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox selectedKey={'key2'} comboBoxGroups={withoutSection}>
             {renderChildren}
@@ -597,7 +600,7 @@ describe('ComboBox', () => {
     it('when input is focused, list is hidden, press ArrowDown, list will display, and item will be focused', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
         </>
@@ -619,7 +622,7 @@ describe('ComboBox', () => {
     it('when input is focused, list is displayed, press Escape, list will be hidden', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
         </>
@@ -641,7 +644,7 @@ describe('ComboBox', () => {
     it('when input is focused, input has value, press Escape, clear input value', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox selectedKey="key1" comboBoxGroups={withoutSection}>
             {renderChildren}
@@ -662,7 +665,7 @@ describe('ComboBox', () => {
     it('when listitem is focused, press Escape, input will be focused', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
         </>
@@ -688,7 +691,7 @@ describe('ComboBox', () => {
     it('when listitem is focused, press Tab, The focus will not escape.', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox comboBoxGroups={withoutSection}>{renderChildren}</ComboBox>
         </>
@@ -714,7 +717,7 @@ describe('ComboBox', () => {
     it('reset inputValue, when focus shifts from inside the component to outside', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox selectedKey="key1" comboBoxGroups={withoutSection}>
             {renderChildren}
@@ -742,7 +745,7 @@ describe('ComboBox', () => {
     it('reset inputValue, when mousedown outside the component', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox selectedKey="key1" comboBoxGroups={withoutSection}>
             {renderChildren}
@@ -774,7 +777,7 @@ describe('ComboBox', () => {
     it('filter list when the input is focused', async () => {
       const user = userEvent.setup();
 
-      render(
+      await renderWithWebComponent(
         <>
           <ComboBox
             selectedKey="key1"
@@ -794,7 +797,8 @@ describe('ComboBox', () => {
         expect(input).toHaveProperty('value', 'item1');
       });
       await user.click(button);
-      const menu = screen.getByRole('menu');
+
+      const menu = await screen.findByRole('menu');
       expect(menu).toBeVisible();
       const item2 = screen.getByText('item2').parentElement;
       await user.click(button);

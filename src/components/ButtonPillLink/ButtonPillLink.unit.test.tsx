@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import ButtonPillLink, { BUTTON_PILL_LINK_CONSTANTS as CONSTANTS } from './';
-import { COLORS, DEFAULTS, SIZES } from '../ButtonPill/ButtonPill.constants';
+import { COLORS, SIZES } from '../ButtonPill/ButtonPill.constants';
 import { triggerPress } from '../../../test/utils';
 
 const href = 'https://www.webex.com';
@@ -78,7 +78,7 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when disabled', () => {
       expect.assertions(1);
 
-      const disabled = !DEFAULTS.DISABLED;
+      const disabled = !CONSTANTS.DEFAULTS.DISABLED;
 
       const container = mount(
         <ButtonPillLink href={href} disabled={disabled}>
@@ -92,7 +92,7 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when shallow disabled', () => {
       expect.assertions(1);
 
-      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+      const shallowDisabled = !CONSTANTS.DEFAULTS.SHALLOW_DISABLED;
 
       const container = mount(
         <ButtonPillLink href={href} shallowDisabled={shallowDisabled}>
@@ -106,7 +106,7 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when a ghost', () => {
       expect.assertions(1);
 
-      const ghost = !DEFAULTS.GHOST;
+      const ghost = !CONSTANTS.DEFAULTS.GHOST;
 
       const container = mount(
         <ButtonPillLink href={href} ghost={ghost}>
@@ -120,8 +120,8 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when a ghost and disabled', () => {
       expect.assertions(1);
 
-      const ghost = !DEFAULTS.GHOST;
-      const disabled = !DEFAULTS.DISABLED;
+      const ghost = !CONSTANTS.DEFAULTS.GHOST;
+      const disabled = !CONSTANTS.DEFAULTS.DISABLED;
 
       const container = mount(
         <ButtonPillLink href={href} ghost={ghost} disabled={disabled}>
@@ -135,7 +135,7 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when color is outlined', () => {
       expect.assertions(1);
 
-      const outline = !DEFAULTS.OUTLINE;
+      const outline = !CONSTANTS.DEFAULTS.OUTLINE;
 
       const container = mount(
         <ButtonPillLink href={href} outline={outline}>
@@ -149,7 +149,7 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when width is grown', () => {
       expect.assertions(1);
 
-      const grown = !DEFAULTS.GROWN;
+      const grown = !CONSTANTS.DEFAULTS.GROWN;
 
       const container = mount(
         <ButtonPillLink href={href} grown={grown}>
@@ -163,8 +163,8 @@ describe('<ButtonPillLink />', () => {
     it('should match snapshot when color is outlined and inverted is set', () => {
       expect.assertions(1);
 
-      const outline = !DEFAULTS.OUTLINE;
-      const inverted = !DEFAULTS.INVERTED;
+      const outline = !CONSTANTS.DEFAULTS.OUTLINE;
+      const inverted = !CONSTANTS.DEFAULTS.INVERTED;
 
       const container = mount(
         <ButtonPillLink href={href} outline={outline} inverted={inverted}>
@@ -237,7 +237,7 @@ describe('<ButtonPillLink />', () => {
     it('should pass disabled prop', () => {
       expect.assertions(1);
 
-      const disabled = !DEFAULTS.DISABLED;
+      const disabled = !CONSTANTS.DEFAULTS.DISABLED;
 
       const element = mount(<ButtonPillLink href={href} disabled={disabled} />)
         .find(ButtonPillLink)
@@ -249,7 +249,7 @@ describe('<ButtonPillLink />', () => {
     it('should pass shallow disabled prop', () => {
       expect.assertions(2);
 
-      const shallowDisabled = !DEFAULTS.SHALLOW_DISABLED;
+      const shallowDisabled = !CONSTANTS.DEFAULTS.SHALLOW_DISABLED;
 
       const element = mount(<ButtonPillLink href={href} shallowDisabled={shallowDisabled} />)
         .find(ButtonPillLink)
@@ -262,7 +262,7 @@ describe('<ButtonPillLink />', () => {
     it('should pass ghost prop', () => {
       expect.assertions(1);
 
-      const ghost = !DEFAULTS.GHOST;
+      const ghost = !CONSTANTS.DEFAULTS.GHOST;
 
       const element = mount(<ButtonPillLink href={href} ghost={ghost} />)
         .find(ButtonPillLink)
@@ -274,7 +274,7 @@ describe('<ButtonPillLink />', () => {
     it('should pass outline prop', () => {
       expect.assertions(1);
 
-      const outline = !DEFAULTS.OUTLINE;
+      const outline = !CONSTANTS.DEFAULTS.OUTLINE;
 
       const element = mount(<ButtonPillLink href={href} outline={outline} />)
         .find(ButtonPillLink)
@@ -310,7 +310,7 @@ describe('<ButtonPillLink />', () => {
     it('should pass inverted prop', () => {
       expect.assertions(1);
 
-      const inverted = !DEFAULTS.INVERTED;
+      const inverted = !CONSTANTS.DEFAULTS.INVERTED;
 
       const element = mount(<ButtonPillLink href={href} inverted={inverted} />)
         .find(ButtonPillLink)

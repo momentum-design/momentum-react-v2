@@ -1,4 +1,5 @@
 import { commonStyles } from '../../storybook/helper.stories.argtypes';
+import { DEFAULTS } from './ButtonPillLink.constants';
 import { BUTTON_PILL_CONSTANTS as CONSTANTS } from '../ButtonPill';
 import LinkArgTypes from '../Link/Link.stories.args';
 
@@ -25,7 +26,7 @@ const buttonPillLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.DISABLED,
+        summary: DEFAULTS.DISABLED,
       },
     },
   },
@@ -39,7 +40,7 @@ const buttonPillLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SHALLOW_DISABLED,
+        summary: DEFAULTS.SHALLOW_DISABLED,
       },
     },
   },
@@ -52,7 +53,7 @@ const buttonPillLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GHOST,
+        summary: DEFAULTS.GHOST,
       },
     },
   },
@@ -65,7 +66,7 @@ const buttonPillLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.GROWN,
+        summary: DEFAULTS.GROWN,
       },
     },
   },
@@ -78,7 +79,7 @@ const buttonPillLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.OUTLINE,
+        summary: DEFAULTS.OUTLINE,
       },
     },
   },
@@ -92,7 +93,7 @@ const buttonPillLinkArgTypes = {
         summary: 'boolean',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.INVERTED,
+        summary: DEFAULTS.INVERTED,
       },
     },
   },
@@ -105,7 +106,7 @@ const buttonPillLinkArgTypes = {
         summary: 'number',
       },
       defaultValue: {
-        summary: CONSTANTS.DEFAULTS.SIZE,
+        summary: DEFAULTS.SIZE,
       },
     },
   },
