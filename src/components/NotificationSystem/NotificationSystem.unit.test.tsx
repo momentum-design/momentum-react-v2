@@ -412,9 +412,6 @@ describe('<NotificationSystem />', () => {
     });
 
     it('should close the `medium attention` notification after clicking on the close button', async () => {
-      // expect.assertions(5);
-      const user = userEvent.setup();
-
       await renderWithWebComponent(<NotificationSystem id="id" ariaLabel="test" />);
 
       const closeButtonText = 'Close';

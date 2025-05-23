@@ -53,6 +53,9 @@ export type Props = Omit<MdcButtonProps, 'active' | 'color'> & {
 
   /**
    * Whether or not to stop the event from bubbling up.
+   * This stops the click event and some other React aria events from bubbling up.
+   * This is a temporary solution until ListItems and other components are migrated
+   * to the new momentum-design library.
    */
   stopPropagation?: boolean;
 };
