@@ -83,7 +83,10 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
     if (errorMessage) {
       ScreenReaderAnnouncer.announce({ body: errorMessage }, announcerId);
     }
-  }, [announcerId, errorMessage]);
+    if ((inputProps as InputHTMLAttributes<HTMLInputElement>)?.['aria-label']) {
+      inputRef?.current?.removeAttribute('aria-labelledby');
+    }
+  }, [announcerId, errorMessage, inputProps, inputRef]);
 
   const spatialNav = useSpatialNavigationContext();
   const keydownHandler = useCallback(
