@@ -107,7 +107,7 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@momentum-design/animations": "0.3.3",
-    "@momentum-design/components": "0.80.3",
+    "@momentum-design/components": "0.81.0",
     "@momentum-design/fonts": "0.0.8",
     "@momentum-design/icons": "0.10.0",
     "@momentum-design/tokens": "0.5.0",
