@@ -113,6 +113,7 @@ export {
   ListHeader,
   LoadingSpinner,
   MeetingContainer,
+  TextArea,
   TextToast,
   Toggle,
   Chip as ChipNext,
