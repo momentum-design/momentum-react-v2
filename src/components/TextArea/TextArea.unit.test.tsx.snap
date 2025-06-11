@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextArea /> snapshot should match snapshot 1`] = `
+<div>
+  <mdc-textarea
+    aria-invalid="false"
+    class="md-text-area-wrapper"
+    help-text-type="default"
+    internals-valid=""
+    name=""
+    toggletip-placement="top"
+    value=""
+  />
+</div>
+`;
+
+exports[`<TextArea /> snapshot should match snapshot with className 1`] = `
+<div>
+  <mdc-textarea
+    aria-invalid="false"
+    class="example-class md-text-area-wrapper"
+    help-text-type="default"
+    internals-valid=""
+    name=""
+    toggletip-placement="top"
+    value=""
+  />
+</div>
+`;
+
+exports[`<TextArea /> snapshot should match snapshot with id 1`] = `
+<div>
+  <mdc-textarea
+    aria-invalid="false"
+    class="md-text-area-wrapper"
+    help-text-type="default"
+    internals-valid=""
+    name=""
+    toggletip-placement="top"
+    value=""
+  />
+</div>
+`;
+
+exports[`<TextArea /> snapshot should match snapshot with style 1`] = `
+<div>
+  <mdc-textarea
+    aria-invalid="false"
+    class="md-text-area-wrapper"
+    help-text-type="default"
+    internals-valid=""
+    name=""
+    style="color: pink;"
+    toggletip-placement="top"
+    value=""
+  />
+</div>
+`;

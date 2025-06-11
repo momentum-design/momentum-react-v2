@@ -6,4 +6,10 @@ import { POPOVER_PLACEMENT } from '@momentum-design/components/dist/components/p
 import { VALIDATION } from '@momentum-design/components/dist/components/formfieldwrapper/formfieldwrapper.constants.js';
 import { WRAP } from '@momentum-design/components/dist/components/textarea/textarea.constants.js';
 
-export { AUTO_CAPITALIZE, AUTO_COMPLETE, POPOVER_PLACEMENT, VALIDATION, WRAP };
+const CLASS_PREFIX = 'md-text-area';
+
+const STYLE = {
+  wrapper: `${CLASS_PREFIX}-wrapper`,
+};
+
+export { AUTO_CAPITALIZE, AUTO_COMPLETE, POPOVER_PLACEMENT, VALIDATION, WRAP, STYLE };

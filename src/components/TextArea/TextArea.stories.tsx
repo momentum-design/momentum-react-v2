@@ -17,8 +17,13 @@ export default {
     expanded: true,
     docs: {
       page: DocumentationPage(Documentation, StyleDocs),
-      source: { type: 'code' },
     },
+  },
+  args: {
+    label: 'Label',
+    helpText: 'Help text',
+    helpTextType: 'default',
+    placeholder: 'Placeholder',
   },
 };
 
@@ -31,16 +36,7 @@ const Example = Template<TextAreaProps>((props: TextAreaProps) => {
     console.log('example inputvalue', value);
   };
 
-  return (
-    <TextArea
-      label="Label"
-      helpText="Help text"
-      placeholder="Placeholder"
-      value={inputValue}
-      {...props}
-      onInput={handleInput}
-    />
-  );
+  return <TextArea value={inputValue} required {...props} onInput={handleInput} />;
 }).bind({});
 Example.argTypes = { ...argTypes };
 
@@ -76,14 +72,7 @@ AllVariants.argTypes = { ...argTypes };
 const Disabled = Template<TextAreaProps>((props: TextAreaProps) => {
   return (
     <div>
-      <TextArea
-        value="Disabled text area"
-        label="Disabled Label"
-        helpText="Disabled help text"
-        helpTextType="default"
-        disabled
-        {...props}
-      />
+      <TextArea value="Disabled text area" disabled {...props} />
     </div>
   );
 }).bind({});
@@ -92,17 +81,7 @@ Disabled.argTypes = { ...argTypes };
 const Readonly = Template<TextAreaProps>((props: TextAreaProps) => {
   return (
     <div>
-      <TextArea
-        value="Readonly text area"
-        label="Readonly Label"
-        helpText="Readonly help text"
-        helpTextType="default"
-        required
-        readonly
-        toggletipText="toggletip"
-        maxCharacterLimit={100}
-        {...props}
-      />
+      <TextArea value="Readonly text area" readonly {...props} />
     </div>
   );
 }).bind({});
@@ -122,10 +101,8 @@ const Form = Template<TextAreaProps>((props: TextAreaProps) => {
       <TextArea
         name="formTextarea"
         id="textarea"
-        label="Label"
-        helpText="Help text"
-        placeholder="Write anything here..."
         required
+        toggletipText="toggletip"
         maxCharacterLimit={100}
         {...props}
       />

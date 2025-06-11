@@ -1,10 +1,3 @@
-import type { Textarea } from '@momentum-design/components/dist/react';
+import type { MdcTextareaProps } from '../../types';
 
-type MdcTextAreaProps = React.ComponentProps<typeof Textarea>;
-
-export type Props = MdcTextAreaProps & {
-  /**
-   * Callback function for when the enter key is pressed on the textarea field.
-   */
-  onKeyDown?: (event: React.KeyboardEvent) => void;
-};
+export type Props = MdcTextareaProps;
