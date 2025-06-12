@@ -144,8 +144,7 @@ export {
   ButtonRefType,
 } from './components';
 
-export { Skeleton } from '@momentum-design/components/dist/react';
-export { Animation } from '@momentum-design/components/dist/react';
+export { Animation, Textarea as TextArea, Skeleton } from '@momentum-design/components/dist/react';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
 export { AriaLabelRequired } from './utils/a11y';
