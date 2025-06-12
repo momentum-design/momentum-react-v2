@@ -1,17 +1,17 @@
 import { CSSProperties, ReactNode } from 'react';
 
 export type ThemeNames =
-  | 'darkBronze'
-  | 'darkIndigo'
-  | 'darkJade'
-  | 'darkLavender'
-  | 'darkRose'
+  | 'darkBronzeWebex'
+  | 'darkIndigoWebex'
+  | 'darkJadeWebex'
+  | 'darkLavenderWebex'
+  | 'darkRoseWebex'
   | 'darkWebex'
-  | 'lightBronze'
-  | 'lightIndigo'
-  | 'lightJade'
-  | 'lightLavender'
-  | 'lightRose'
+  | 'lightBronzeWebex'
+  | 'lightIndigoWebex'
+  | 'lightJadeWebex'
+  | 'lightLavenderWebex'
+  | 'lightRoseWebex'
   | 'lightWebex';
 
 export type MDTheme = 'webex-dark' | 'webex-light';
