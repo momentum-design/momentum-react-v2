@@ -71,7 +71,7 @@ export {
   ModalArrow,
   ModalContainer,
   Overlay,
-  OverlayAlert,
+  Dialog,
   Toast,
   ToastDetails,
   ToastContent,
