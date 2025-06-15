@@ -11,6 +11,6 @@
 }
 
 // focus selector for all elements except mdc-button, mdc-chip etc since mdc-button has its own focus styles
-*:not(mdc-button, mdc-chip):focus {
+*:not(mdc-button, mdc-chip, mdc-dialog):focus {
   @include focus-styles;
 }
