@@ -2,6 +2,7 @@ import React, { FC, useCallback } from 'react';
 import { Dialog as MdcDialog } from '@momentum-design/components/dist/react';
 import { DialogProps } from './Dialog.types';
 import { DEFAULTS } from './Dialog.constants';
+import { useShouldCloseOnEsc } from '../../hooks/useShouldCloseOnEsc';
 
 const Dialog: FC<DialogProps> = (props) => {
   const {
@@ -14,6 +15,7 @@ const Dialog: FC<DialogProps> = (props) => {
     ...other
   } = props;
 
+  const { shouldCloseOnEsc } = useShouldCloseOnEsc();
   // Map OverlayAlert props to Dialog web component props
   const dialogProps = {
     visible: true, // Always visible when rendered, this is to match the behavior of OverlayAlert
@@ -23,8 +25,10 @@ const Dialog: FC<DialogProps> = (props) => {
 
   // Handle close event
   const handleClose = useCallback(() => {
-    onClose?.();
-  }, [onClose]);
+    if (shouldCloseOnEsc) {
+      onClose?.();
+    }
+  }, [onClose, shouldCloseOnEsc]);
 
   return (
     <MdcDialog {...dialogProps} size={size} onHidden={handleClose}>
