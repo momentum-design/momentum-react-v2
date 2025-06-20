@@ -2943,10 +2943,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/icons@npm:0.10.0":
-  version: 0.10.0
-  resolution: "@momentum-design/icons@npm:0.10.0"
-  checksum: 9695f817a4bebc88428a72201ae0d10bab18e279bf479142775f1b6bb0a3ddb36b4068940eedc81a98ae8a9d41ccfe8ef2c458f0910c24f314f76d22688430de
+"@momentum-design/icons@npm:0.26.0":
+  version: 0.26.0
+  resolution: "@momentum-design/icons@npm:0.26.0"
+  checksum: 982d111593457ec5e622a111cc2a8453789ea0b845e7242de22716128a4dfc3eb9785ce0d123aeeafe4895fca1570b8bed0f743cf69a7093b0ece5b32203294b
   languageName: node
   linkType: hard
 
@@ -2996,7 +2996,7 @@ __metadata:
     "@momentum-design/animations": 0.3.3
     "@momentum-design/components": 0.81.0
     "@momentum-design/fonts": 0.0.8
-    "@momentum-design/icons": 0.10.0
+    "@momentum-design/icons": 0.26.0
     "@momentum-design/tokens": 0.6.1
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4

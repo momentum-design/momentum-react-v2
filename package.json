@@ -100,7 +100,7 @@
     "@react-aria/button": "3.4.3",
     "@types/node": "22.7.4",
     "@momentum-design/animations": "0.3.3",
-    "@momentum-design/icons": "0.10.0",
+    "@momentum-design/icons": "0.26.0",
     "@momentum-design/brand-visuals": "0.5.1",
     "@momentum-design/tokens": "0.6.1"
   },
@@ -109,7 +109,7 @@
     "@momentum-design/animations": "0.3.3",
     "@momentum-design/components": "0.81.0",
     "@momentum-design/fonts": "0.0.8",
-    "@momentum-design/icons": "0.10.0",
+    "@momentum-design/icons": "0.26.0",
     "@momentum-design/tokens": "0.6.1",
     "@momentum-ui/design-tokens": "^0.0.63",
     "@momentum-ui/icons": "8.28.4",
