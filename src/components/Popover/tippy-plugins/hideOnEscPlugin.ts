@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Instance as TippyInstance, Plugin } from 'tippy.js';
 
 import { dispatchEvent, EventType } from '../Popover.events';
@@ -5,19 +6,29 @@ import { dispatchEvent, EventType } from '../Popover.events';
 type SetupPluginOptions = {
   hideKeys: string[];
   stopEventPropagation: boolean;
+  hideListenerTarget?: 'this' | 'window';
 };
 
 const openedTippyInstances: TippyInstance[] = [];
 
-const options: SetupPluginOptions = { hideKeys: ['Escape'], stopEventPropagation: false };
+const options: SetupPluginOptions = {
+  hideKeys: ['Escape'],
+  stopEventPropagation: false,
+  hideListenerTarget: 'window',
+};
 
 /**
  * Change plugin settings
  * @param options
  */
-export const setupHideOnPlugin = ({ hideKeys, stopEventPropagation }: SetupPluginOptions): void => {
+export const setupHideOnPlugin = ({
+  hideKeys,
+  stopEventPropagation,
+  hideListenerTarget,
+}: SetupPluginOptions): void => {
   options.hideKeys = hideKeys.slice();
   options.stopEventPropagation = stopEventPropagation;
+  options.hideListenerTarget = hideListenerTarget;
 };
 
 // hide the last opened popover when Escape key is pressed
@@ -43,7 +54,12 @@ const addInstance = (instance: TippyInstance) => {
   }
 
   if (openedTippyInstances.length === 0) {
-    window.addEventListener('keydown', onKeyDown);
+    if (options.hideListenerTarget === 'this') {
+      instance.reference.addEventListener('keydown', onKeyDown);
+      instance.popper.addEventListener('keydown', onKeyDown);
+    } else {
+      window.addEventListener('keydown', onKeyDown);
+    }
   }
 
   openedTippyInstances.push(instance);
@@ -60,7 +76,12 @@ const removeInstance = (instance: TippyInstance) => {
   openedTippyInstances.splice(openedTippyInstances.indexOf(instance), 1);
 
   if (openedTippyInstances.length === 0) {
-    window.removeEventListener('keydown', onKeyDown);
+    if (options.hideListenerTarget === 'this') {
+      instance.reference.removeEventListener('keydown', onKeyDown);
+      instance.popper.removeEventListener('keydown', onKeyDown);
+    } else {
+      window.removeEventListener('keydown', onKeyDown);
+    }
   }
   // Send custom event that tippy instance is no longer shown on screen. This event is listened for in instances of OverlayAlert to allow it to close once there are no tippy instances
   // still shown on screen that were opened after the render of the OverlayAlert.
