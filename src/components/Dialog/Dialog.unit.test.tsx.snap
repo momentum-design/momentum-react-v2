@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dialog /> snapshot should match snapshot 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with aria props 1`] = `
+<div>
+  <mdc-dialog
+    aria-describedby="test-aria-describedby"
+    aria-label="test-aria-label"
+    aria-labelledby="test-aria-labelledby"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    >
+      example-children
+    </div>
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with className 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    class="example-class"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with description 1`] = `
+<div>
+  <mdc-dialog
+    aria-description="example-description"
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    description-text="example-description"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with footerButtonPrimary 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+    <mdc-button
+      class="md-button-pill-wrapper"
+      color="default"
+      data-btn-type="pill"
+      data-disabled-outline="false"
+      data-grown="false"
+      role="button"
+      size="40"
+      slot="footer-button-primary"
+      tabindex="0"
+      type="button"
+      variant="primary"
+    >
+      Button Pill
+    </mdc-button>
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with footerButtonSecondary 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+    <mdc-button
+      class="md-button-pill-wrapper"
+      color="default"
+      data-btn-type="pill"
+      data-disabled-outline="false"
+      data-grown="false"
+      role="button"
+      size="40"
+      slot="footer-button-secondary"
+      tabindex="0"
+      type="button"
+      variant="secondary"
+    >
+      Button Pill
+    </mdc-button>
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with headerText 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    header-text="example-title"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with id 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id="example-id"
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`<Dialog /> snapshot should match snapshot with style 1`] = `
+<div>
+  <mdc-dialog
+    aria-label="Overlay alert"
+    aria-modal="true"
+    description-tag-name="p"
+    focustrap="true"
+    header-tag-name="h2"
+    id=""
+    role="dialog"
+    should-focus-trap-wrap=""
+    size="small"
+    style="color: pink; z-index: 1000;"
+    variant="default"
+    visible=""
+    z-index="1000"
+  >
+    <div
+      class="md-dialog-wrapper"
+      slot="dialog-body"
+    />
+  </mdc-dialog>
+  <div
+    class="dialog-backdrop"
+  >
+    <style>
+      
+      .dialog-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--mds-color-theme-common-overlays-secondary-normal);
+        z-index: 999;
+      }
+    
+    </style>
+  </div>
+</div>
+`;

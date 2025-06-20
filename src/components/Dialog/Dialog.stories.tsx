@@ -6,11 +6,10 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import ButtonPill from '../ButtonPill';
 
 import Dialog, { DialogProps } from './';
-import argTypes from './Dialog.stories.args';
 import Documentation from './Dialog.stories.docs.mdx';
-import Icon from '../Icon';
 import Tooltip from '../Tooltip';
 import ButtonCircle from '../ButtonCircle';
+import Popover from '../Popover';
 
 export default {
   title: 'Momentum UI/Dialog',
@@ -88,7 +87,7 @@ const coreArgs = {
 
 const Example = Template().bind({});
 
-Example.argTypes = { ...argTypes, onClose: { action: 'closed' } };
+Example.argTypes = { onClose: { action: 'closed' } };
 
 Example.parameters = {
   hasActions: true,
@@ -154,15 +153,20 @@ const ContainsPopovers: Story<DialogProps> = (args: DialogProps, { parameters })
             Focus on this button. Closing the tooltip using Esc will not close the OverlayAlert.
             <Tooltip
               placement="top"
-              triggerComponent={
-                <ButtonCircle>
-                  <Icon name="accessibility" />
-                </ButtonCircle>
-              }
+              triggerComponent={<ButtonCircle prefixIcon="accessibility-regular" />}
               type="label"
             >
               Tooltip content
             </Tooltip>
+            <Popover
+              interactive
+              placement="top"
+              triggerComponent={<ButtonCircle prefixIcon="accessories-regular" />}
+              trigger="click"
+            >
+              Popover content
+              <ButtonPill>Button Inside Popover</ButtonPill>
+            </Popover>
           </div>
         </Dialog>
       )}
@@ -170,7 +174,7 @@ const ContainsPopovers: Story<DialogProps> = (args: DialogProps, { parameters })
   );
 };
 
-ContainsPopovers.argTypes = { ...argTypes };
+ContainsPopovers.argTypes = {};
 
 ContainsPopovers.parameters = {
   hasActions: true,
