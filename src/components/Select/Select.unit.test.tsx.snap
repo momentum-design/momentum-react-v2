@@ -259,11 +259,10 @@ exports[`Select snapshot should match snapshot 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -336,6 +335,11 @@ exports[`Select snapshot should match snapshot 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -395,6 +399,11 @@ exports[`Select snapshot should match snapshot 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -451,6 +460,11 @@ exports[`Select snapshot should match snapshot 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -820,11 +834,10 @@ exports[`Select snapshot should match snapshot before and after opening select d
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -897,6 +910,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -956,6 +974,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -1012,6 +1035,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -1382,11 +1410,10 @@ exports[`Select snapshot should match snapshot before and after opening select d
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -1459,6 +1486,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -1518,6 +1550,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -1574,6 +1611,11 @@ exports[`Select snapshot should match snapshot before and after opening select d
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -1763,7 +1805,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                   }
                 }
                 isPadded={true}
-                onKeyDown={[Function]}
                 placement="bottom"
                 role={null}
                 round={50}
@@ -1793,7 +1834,6 @@ exports[`Select snapshot should match snapshot before and after opening select d
                     data-padded={true}
                     data-placement="bottom"
                     data-round={50}
-                    onKeyDown={[Function]}
                     role={null}
                     style={
                       Object {
@@ -2479,11 +2519,10 @@ exports[`Select snapshot should match snapshot with border 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -2556,6 +2595,11 @@ exports[`Select snapshot should match snapshot with border 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -2615,6 +2659,11 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -2671,6 +2720,11 @@ exports[`Select snapshot should match snapshot with border 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -3041,11 +3095,10 @@ exports[`Select snapshot should match snapshot with className 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -3118,6 +3171,11 @@ exports[`Select snapshot should match snapshot with className 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -3177,6 +3235,11 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -3233,6 +3296,11 @@ exports[`Select snapshot should match snapshot with className 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -3603,11 +3671,10 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="top"
       role={null}
       setInstance={[Function]}
@@ -3680,6 +3747,11 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -3739,6 +3811,11 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -3795,6 +3872,11 @@ exports[`Select snapshot should match snapshot with direction 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -4175,11 +4257,10 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -4252,6 +4333,11 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -4311,6 +4397,11 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -4367,6 +4458,11 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -4556,7 +4652,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                   }
                 }
                 isPadded={true}
-                onKeyDown={[Function]}
                 placement="bottom"
                 role={null}
                 round={50}
@@ -4586,7 +4681,6 @@ exports[`Select snapshot should match snapshot with disabled option 1`] = `
                     data-padded={true}
                     data-placement="bottom"
                     data-round={50}
-                    onKeyDown={[Function]}
                     role={null}
                     style={
                       Object {
@@ -5275,11 +5369,10 @@ exports[`Select snapshot should match snapshot with id 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -5352,6 +5445,11 @@ exports[`Select snapshot should match snapshot with id 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -5411,6 +5509,11 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -5467,6 +5570,11 @@ exports[`Select snapshot should match snapshot with id 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -5613,11 +5721,10 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
     </label>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -5689,6 +5796,11 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -5748,6 +5860,11 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -5804,6 +5921,11 @@ exports[`Select snapshot should match snapshot with isInForm = false 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -6174,11 +6296,10 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -6251,6 +6372,11 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -6310,6 +6436,11 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -6366,6 +6497,11 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -6555,7 +6691,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                   }
                 }
                 isPadded={true}
-                onKeyDown={[Function]}
                 placement="bottom"
                 role={null}
                 round={50}
@@ -6585,7 +6720,6 @@ exports[`Select snapshot should match snapshot with listbox opened 1`] = `
                     data-padded={true}
                     data-placement="bottom"
                     data-round={50}
-                    onKeyDown={[Function]}
                     role={null}
                     style={
                       Object {
@@ -7270,11 +7404,10 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -7346,6 +7479,11 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -7405,6 +7543,11 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -7461,6 +7604,11 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -7649,7 +7797,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                   }
                 }
                 isPadded={true}
-                onKeyDown={[Function]}
                 placement="bottom"
                 role={null}
                 round={50}
@@ -7679,7 +7826,6 @@ exports[`Select snapshot should match snapshot with listboxMaxHeight 1`] = `
                     data-padded={true}
                     data-placement="bottom"
                     data-round={50}
-                    onKeyDown={[Function]}
                     role={null}
                     style={
                       Object {
@@ -8364,11 +8510,10 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -8440,6 +8585,11 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -8499,6 +8649,11 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -8555,6 +8710,11 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -8743,7 +8903,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                   }
                 }
                 isPadded={true}
-                onKeyDown={[Function]}
                 placement="bottom"
                 role={null}
                 round={50}
@@ -8773,7 +8932,6 @@ exports[`Select snapshot should match snapshot with listboxWidth 1`] = `
                     data-padded={true}
                     data-placement="bottom"
                     data-round={50}
-                    onKeyDown={[Function]}
                     role={null}
                     style={
                       Object {
@@ -9461,11 +9619,10 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -9540,6 +9697,11 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -9599,6 +9761,11 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -9655,6 +9822,11 @@ exports[`Select snapshot should match snapshot with placeholder 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -10053,11 +10225,10 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -10133,6 +10304,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -10192,6 +10368,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -10248,6 +10429,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -10649,11 +10835,10 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -10729,6 +10914,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -10788,6 +10978,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -10844,6 +11039,11 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -11047,7 +11247,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                   }
                 }
                 isPadded={true}
-                onKeyDown={[Function]}
                 placement="bottom"
                 role={null}
                 round={50}
@@ -11077,7 +11276,6 @@ exports[`Select snapshot should match snapshot with selected option and listbox 
                     data-padded={true}
                     data-placement="bottom"
                     data-round={50}
-                    onKeyDown={[Function]}
                     role={null}
                     style={
                       Object {
@@ -11825,11 +12023,10 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -11903,6 +12100,11 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -11962,6 +12164,11 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -12018,6 +12225,11 @@ exports[`Select snapshot should match snapshot with shallowDisabled 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -12394,11 +12606,10 @@ exports[`Select snapshot should match snapshot with style 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -12471,6 +12682,11 @@ exports[`Select snapshot should match snapshot with style 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -12530,6 +12746,11 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -12586,6 +12807,11 @@ exports[`Select snapshot should match snapshot with style 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],
@@ -12954,11 +13180,10 @@ exports[`Select snapshot should match snapshot with title 1`] = `
     </HiddenSelect>
     <Popover
       className="md-select-popover"
-      hideOnEsc={false}
+      hideOnEsc={true}
       interactive={true}
       onClickOutside={[Function]}
       onHide={[Function]}
-      onKeyDown={[Function]}
       placement="bottom"
       role={null}
       setInstance={[Function]}
@@ -13031,6 +13256,11 @@ exports[`Select snapshot should match snapshot with title 1`] = `
         plugins={
           Array [
             Object {
+              "defaultValue": true,
+              "fn": [Function],
+              "name": "hideOnEsc",
+            },
+            Object {
               "fn": [Function],
               "name": "addBackdropPlugin",
             },
@@ -13090,6 +13320,11 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                 "fn": [Function],
               },
               Object {
+                "defaultValue": true,
+                "fn": [Function],
+                "name": "hideOnEsc",
+              },
+              Object {
                 "fn": [Function],
                 "name": "addBackdropPlugin",
               },
@@ -13146,6 +13381,11 @@ exports[`Select snapshot should match snapshot with title 1`] = `
                 },
                 Object {
                   "fn": [Function],
+                },
+                Object {
+                  "defaultValue": true,
+                  "fn": [Function],
+                  "name": "hideOnEsc",
                 },
                 Object {
                   "fn": [Function],

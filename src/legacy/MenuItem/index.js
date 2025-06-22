@@ -21,6 +21,7 @@ class MenuItem extends React.Component {
     this.state = {
       selectContext: {
         parentKeyDown: !props.isHeader ? this.handleKeyDown : null,
+        parentKeyUp: !props.isHeader ? this.handleKeyUp : null,
         parentOnSelect: !props.isHeader ? this.handleClick : null,
       },
     };
@@ -35,19 +36,41 @@ class MenuItem extends React.Component {
   };
 
   handleKeyDown = (e, opts) => {
-    const { onClick, parentKeyDown, parentOnSelect } = this.props;
+    const { onClick, parentKeyDown, parentOnSelect, fireClickOnSpaceKeydown } = this.props;
     const { eventKey } = opts;
+
+    const isEnter = e.which === 13 || e.charCode === 13;
+    const isSpace = e.which === 32 || e.charCode === 32;
 
     if (!e.target?.classList?.contains(`${prefix}-list-item`)) {
       return;
     }
 
-    if (e.which === 32 || e.which === 13 || e.charCode === 32 || e.charCode === 13) {
+    if (isEnter || (fireClickOnSpaceKeydown && isSpace)) {
       onClick && onClick(e);
       parentOnSelect && parentOnSelect(e, { eventKey, element: this });
       e.preventDefault();
     } else {
       parentKeyDown && parentKeyDown(e, { eventKey, element: this });
+    }
+  };
+
+  handleKeyUp = (e, opts) => {
+    const { onClick, parentKeyUp, fireClickOnSpaceKeydown, parentOnSelect } = this.props;
+    const { eventKey } = opts;
+
+    const isSpace = e.which === 32 || e.charCode === 32;
+
+    if (!e.target?.classList?.contains(`${prefix}-list-item`)) {
+      return;
+    }
+
+    if (!fireClickOnSpaceKeydown && isSpace) {
+      onClick && onClick(e);
+      parentOnSelect && parentOnSelect(e, { eventKey, element: this });
+      e.preventDefault();
+    } else {
+      parentKeyUp && parentKeyUp(e, { eventKey, element: this });
     }
   };
 
@@ -59,6 +82,7 @@ class MenuItem extends React.Component {
       'keepMenuOpen',
       'onClick',
       'parentKeyDown',
+      'parentKeyUp',
       'parentOnSelect',
     ]);
 
@@ -131,7 +155,11 @@ MenuItem.propTypes = {
   // Internal Context Use Only
   parentKeyDown: PropTypes.func,
   // Internal Context Use Only
+  parentKeyUp: PropTypes.func,
+  // Internal Context Use Only
   parentOnSelect: PropTypes.func,
+  /** @prop Determines if onClick should be fired once space is pressed onKeyDown - set to false to fire click on space keyup */
+  fireClickOnSpaceKeydown: PropTypes.bool,
 };
 
 MenuItem.defaultProps = {
@@ -143,7 +171,9 @@ MenuItem.defaultProps = {
   keepMenuOpen: false,
   onClick: null,
   parentKeyDown: null,
+  parentKeyUp: null,
   parentOnSelect: null,
+  fireClickOnSpaceKeydown: true,
 };
 
 MenuItem.displayName = 'MenuItem';

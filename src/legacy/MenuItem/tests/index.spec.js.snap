@@ -6,6 +6,7 @@ exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
 >
   <MenuItem
     className=""
+    fireClickOnSpaceKeydown={true}
     isHeader={false}
     isOpen={false}
     itemClassName=""
@@ -13,6 +14,7 @@ exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
     label="one"
     onClick={null}
     parentKeyDown={null}
+    parentKeyUp={null}
     parentOnSelect={null}
   >
     <Component
@@ -36,6 +38,7 @@ exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
           <ContextTransform(ListItem)
             active={null}
             className=""
+            fireClickOnSpaceKeydown={true}
             focusOnLoad={true}
             id="md-menu-item-1"
             isReadOnly={false}
@@ -49,6 +52,7 @@ exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
               customRefProp=""
               disabled={false}
               eventKey=""
+              fireClickOnSpaceKeydown={true}
               focus={false}
               focusLockTabbableChildren={false}
               focusLockTabbableChildrenProps={
@@ -68,7 +72,9 @@ exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
               onBlur={null}
               onClick={null}
               onKeyDown={null}
+              onKeyUp={null}
               parentKeyDown={[Function]}
+              parentKeyUp={[Function]}
               parentOnSelect={[Function]}
               refName="navLink"
               role="menuitem"
@@ -95,10 +101,12 @@ exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
                     className="md-list-item"
                     data-md-event-key="md-menu-item-1"
                     data-md-keyboard-key="one"
+                    fireClickOnSpaceKeydown={true}
                     id="md-menu-item-1"
                     onBlur={[Function]}
                     onClick={[Function]}
                     onKeyDown={[Function]}
+                    onKeyUp={[Function]}
                     role="menuitem"
                     tabIndex={-1}
                     title="one"

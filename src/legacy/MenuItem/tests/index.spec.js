@@ -11,6 +11,7 @@ beforeEach(() => {
 describe('tests for <MenuItem />', () => {
   const context = {
     parentKeyDown: jest.fn(),
+    parentKeyUp: jest.fn(),
     parentOnSelect: jest.fn(),
   };
 
@@ -94,6 +95,21 @@ describe('tests for <MenuItem />', () => {
     listItem.simulate('keydown');
     expect(context.parentKeyDown.mock.calls.length).toBe(1);
     expect(onKeyDown).toHaveBeenCalled();
+  });
+
+  it('should call handleKeyUp function of context when keyUp is fired on ListItem', () => {
+    const onKeyUp = jest.fn();
+
+    const wrapper = mount(
+      <SelectableContext.Provider value={context}>
+        <MenuItem onKeyUp={onKeyUp} label="one" value="test" />
+      </SelectableContext.Provider>
+    );
+
+    const listItem = wrapper.find('ListItem').first();
+    listItem.simulate('keyup');
+    expect(context.parentKeyUp.mock.calls.length).toBe(1);
+    expect(onKeyUp).toHaveBeenCalled();
   });
 
   it('should apply class for isHeader prop', () => {

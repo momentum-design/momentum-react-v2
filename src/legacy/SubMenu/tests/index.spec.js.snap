@@ -81,7 +81,9 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
                     onBlur={null}
                     onClick={null}
                     onKeyDown={null}
+                    onKeyUp={null}
                     parentKeyDown={[Function]}
+                    parentKeyUp={null}
                     parentOnSelect={[Function]}
                     refName="navLink"
                     role="menuitem"
@@ -111,6 +113,7 @@ exports[`tests for <SubMenu /> should render a SubMenu 1`] = `
                           onBlur={[Function]}
                           onClick={[Function]}
                           onKeyDown={[Function]}
+                          onKeyUp={[Function]}
                           role="menuitem"
                           tabIndex={-1}
                         >
