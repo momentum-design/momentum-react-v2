@@ -23,6 +23,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
         >
           <MenuItem
             className=""
+            fireClickOnSpaceKeydown={true}
             isHeader={false}
             isOpen={false}
             itemClassName=""
@@ -30,6 +31,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
             label="one"
             onClick={null}
             parentKeyDown={[Function]}
+            parentKeyUp={null}
             parentOnSelect={[Function]}
           >
             <Component
@@ -53,6 +55,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
                   <ContextTransform(ListItem)
                     active={false}
                     className=""
+                    fireClickOnSpaceKeydown={true}
                     focusOnLoad={true}
                     id="md-menu-item-1"
                     isReadOnly={false}
@@ -66,6 +69,7 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
                       customRefProp=""
                       disabled={false}
                       eventKey=""
+                      fireClickOnSpaceKeydown={true}
                       focus={false}
                       focusLockTabbableChildren={false}
                       focusLockTabbableChildrenProps={
@@ -85,7 +89,9 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
                       onBlur={null}
                       onClick={null}
                       onKeyDown={null}
+                      onKeyUp={null}
                       parentKeyDown={[Function]}
+                      parentKeyUp={[Function]}
                       parentOnSelect={[Function]}
                       refName="navLink"
                       role="menuitem"
@@ -113,10 +119,12 @@ exports[`tests for <Menu /> should render a Menu 1`] = `
                             className="md-list-item"
                             data-md-event-key="md-menu-item-1"
                             data-md-keyboard-key="one"
+                            fireClickOnSpaceKeydown={true}
                             id="md-menu-item-1"
                             onBlur={[Function]}
                             onClick={[Function]}
                             onKeyDown={[Function]}
+                            onKeyUp={[Function]}
                             role="menuitem"
                             tabIndex={0}
                             title="one"
