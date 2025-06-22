@@ -172,6 +172,7 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     </button>
   );
 
+  // special handling for spatial navigation
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
       if (spatialNav && event.key === spatialNav.back) {
@@ -221,11 +222,12 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         placement={direction}
         onClickOutside={closePopover}
         onHide={closePopover}
-        hideOnEsc={true}
+        hideOnEsc={!spatialNav} // disable hide on Esc key if spatial navigation is enabled
         style={{ maxHeight: listboxMaxHeight || 'none' }}
         className={STYLE.popover}
         strategy={listboxWidth ? 'fixed' : 'absolute'}
         singleOpenGroupId={popoverSingleOpenGroupId}
+        {...(spatialNav ? (keyboardProps as any) : {})}
       >
         <ListBoxBase
           {...menuProps}
