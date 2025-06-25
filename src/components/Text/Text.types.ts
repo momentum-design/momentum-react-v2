@@ -1,18 +1,7 @@
 import { CSSProperties, ReactNode } from 'react';
-import type { TextType } from '@momentum-design/components';
+import type { MdcTextProps } from '../../types';
 
-export type AllowedTagNames =
-  | (keyof JSX.IntrinsicElements & 'h1')
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'p'
-  | 'span'
-  | 'div'
-  | 'small';
-export interface Props {
+export interface Props extends Omit<MdcTextProps, 'type'> {
   /**
    * Custom class to be able to override the component's CSS
    */
@@ -39,7 +28,7 @@ export interface Props {
   /**
    * The tag used to surround the text (NB 'small' included for legacy reasons, it no longer affects the style)
    */
-  tagName: AllowedTagNames;
+  tagName: MdcTextProps['tagname'];
 }
 
 export type FontStyle =
@@ -61,4 +50,4 @@ export type FontStyle =
   | 'highlight-compact'
   | 'body-compact'
   | 'label-compact'
-  | TextType;
+  | MdcTextProps['type'];
