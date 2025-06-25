@@ -1,6 +1,8 @@
 import { CSSProperties, ReactNode } from 'react';
 import type { MdcTextProps } from '../../types';
 
+export type AllowedTagNames = MdcTextProps['tagname'];
+
 export interface Props extends Omit<MdcTextProps, 'type'> {
   /**
    * Custom class to be able to override the component's CSS
@@ -28,7 +30,7 @@ export interface Props extends Omit<MdcTextProps, 'type'> {
   /**
    * The tag used to surround the text (NB 'small' included for legacy reasons, it no longer affects the style)
    */
-  tagName: MdcTextProps['tagname'];
+  tagName: AllowedTagNames;
 }
 
 export type FontStyle =
