@@ -61,21 +61,19 @@ describe('<Dialog />', () => {
     });
 
     it('should match snapshot with footerButtonPrimary', async () => {
-      const footerButtonPrimary = <ButtonPill>Button Pill</ButtonPill>;
+      const footerButtonPrimary = <ButtonPill slot="footer-button-primary">Button Pill</ButtonPill>;
 
-      const { container } = await setup(
-        <Dialog {...defaultProps} footerButtonPrimary={footerButtonPrimary} />
-      );
+      const { container } = await setup(<Dialog {...defaultProps}>{footerButtonPrimary}</Dialog>);
 
       expect(container).toMatchSnapshot();
     });
 
     it('should match snapshot with footerButtonSecondary', async () => {
-      const footerButtonSecondary = <ButtonPill>Button Pill</ButtonPill>;
-
-      const { container } = await setup(
-        <Dialog {...defaultProps} footerButtonSecondary={footerButtonSecondary} />
+      const footerButtonSecondary = (
+        <ButtonPill slot="footer-button-secondary">Button Pill</ButtonPill>
       );
+
+      const { container } = await setup(<Dialog {...defaultProps}>{footerButtonSecondary}</Dialog>);
 
       expect(container).toMatchSnapshot();
     });
