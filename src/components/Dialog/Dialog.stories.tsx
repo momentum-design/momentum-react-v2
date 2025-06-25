@@ -66,24 +66,29 @@ function Template(): Story<StoryProps> {
       >
         <ButtonPill onClick={open}>Open</ButtonPill>
         {isOpen && (
-          <Dialog
-            {...args}
-            footerButtonPrimary={
-              args.hasActions ? (
-                <ButtonPill onClick={close} size={32}>
+          <Dialog {...args} onClose={close}>
+            {args.hasActions && (
+              <>
+                <ButtonPill
+                  onClick={close}
+                  size={32}
+                  slot="footer-button-primary"
+                  variant="primary"
+                >
                   Primary
                 </ButtonPill>
-              ) : undefined
-            }
-            footerButtonSecondary={
-              args.hasActions ? (
-                <ButtonPill variant="secondary" onClick={close} size={32}>
+                <ButtonPill
+                  variant="secondary"
+                  onClick={close}
+                  size={32}
+                  slot="footer-button-secondary"
+                >
                   Secondary
                 </ButtonPill>
-              ) : undefined
-            }
-            onClose={close}
-          />
+              </>
+            )}
+            {args.children}
+          </Dialog>
         )}
       </div>
     );
@@ -130,24 +135,22 @@ const ContainsPopovers: Story<StoryProps> = (args: StoryProps) => {
     >
       <ButtonPill onClick={open}>Open</ButtonPill>
       {isOpen && (
-        <Dialog
-          {...args}
-          footerButtonPrimary={
-            args.hasActions ? (
-              <ButtonPill onClick={close} size={32}>
+        <Dialog {...args} onClose={close}>
+          {args.hasActions && (
+            <>
+              <ButtonPill onClick={close} size={32} slot="footer-button-primary" variant="primary">
                 Primary
               </ButtonPill>
-            ) : undefined
-          }
-          footerButtonSecondary={
-            args.hasActions ? (
-              <ButtonPill variant="secondary" onClick={close} size={32}>
+              <ButtonPill
+                variant="secondary"
+                onClick={close}
+                size={32}
+                slot="footer-button-secondary"
+              >
                 Secondary
               </ButtonPill>
-            ) : undefined
-          }
-          onClose={close}
-        >
+            </>
+          )}
           <div
             style={{
               marginTop: '2rem',
@@ -156,6 +159,7 @@ const ContainsPopovers: Story<StoryProps> = (args: StoryProps) => {
               justifyContent: 'center',
               gap: '0.5rem',
             }}
+            slot="dialog-body"
           >
             Focus and interact with these buttons. Closing the popovers / tooltips using Esc will
             not close the OverlayAlert.

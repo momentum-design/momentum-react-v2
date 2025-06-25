@@ -16,12 +16,7 @@ exports[`<Dialog /> snapshot should match snapshot 1`] = `
     variant="default"
     visible=""
     z-index="1000"
-  >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
-  </mdc-dialog>
+  />
   <div
     class="dialog-backdrop"
   >
@@ -61,12 +56,7 @@ exports[`<Dialog /> snapshot should match snapshot with aria props 1`] = `
     visible=""
     z-index="1000"
   >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    >
-      example-children
-    </div>
+    example-children
   </mdc-dialog>
   <div
     class="dialog-backdrop"
@@ -105,12 +95,7 @@ exports[`<Dialog /> snapshot should match snapshot with className 1`] = `
     variant="default"
     visible=""
     z-index="1000"
-  >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
-  </mdc-dialog>
+  />
   <div
     class="dialog-backdrop"
   >
@@ -149,12 +134,7 @@ exports[`<Dialog /> snapshot should match snapshot with description 1`] = `
     variant="default"
     visible=""
     z-index="1000"
-  >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
-  </mdc-dialog>
+  />
   <div
     class="dialog-backdrop"
   >
@@ -192,10 +172,6 @@ exports[`<Dialog /> snapshot should match snapshot with footerButtonPrimary 1`] 
     visible=""
     z-index="1000"
   >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
     <mdc-button
       class="md-button-pill-wrapper"
       color="default"
@@ -249,10 +225,6 @@ exports[`<Dialog /> snapshot should match snapshot with footerButtonSecondary 1`
     visible=""
     z-index="1000"
   >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
     <mdc-button
       class="md-button-pill-wrapper"
       color="default"
@@ -306,12 +278,7 @@ exports[`<Dialog /> snapshot should match snapshot with headerText 1`] = `
     variant="default"
     visible=""
     z-index="1000"
-  >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
-  </mdc-dialog>
+  />
   <div
     class="dialog-backdrop"
   >
@@ -348,12 +315,7 @@ exports[`<Dialog /> snapshot should match snapshot with id 1`] = `
     variant="default"
     visible=""
     z-index="1000"
-  >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
-  </mdc-dialog>
+  />
   <div
     class="dialog-backdrop"
   >
@@ -390,12 +352,7 @@ exports[`<Dialog /> snapshot should match snapshot with style 1`] = `
     variant="default"
     visible=""
     z-index="1000"
-  >
-    <div
-      class="md-dialog-wrapper"
-      slot="dialog-body"
-    />
-  </mdc-dialog>
+  />
   <div
     class="dialog-backdrop"
   >
