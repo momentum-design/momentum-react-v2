@@ -64,7 +64,7 @@ const addInstance = (instance: TippyInstance) => {
 
   openedTippyInstances.push(instance);
 
-  // Send custom event that tippy instance is shown on screen. This event is listened for in instances of OverlayAlert to prevent it from closing unintentionally.
+  // Send custom event that tippy instance is shown on screen. This event is listened for in instances of Dialog to prevent it from closing unintentionally.
   dispatchEvent(EventType.TIPPY_INSTANCE_ADDED, instance);
 };
 
@@ -83,8 +83,8 @@ const removeInstance = (instance: TippyInstance) => {
       window.removeEventListener('keydown', onKeyDown);
     }
   }
-  // Send custom event that tippy instance is no longer shown on screen. This event is listened for in instances of OverlayAlert to allow it to close once there are no tippy instances
-  // still shown on screen that were opened after the render of the OverlayAlert.
+  // Send custom event that tippy instance is no longer shown on screen. This event is listened for in instances of Dialog to allow it to close once there are no tippy instances
+  // still shown on screen that were opened after the render of the Dialog.
   dispatchEvent(EventType.TIPPY_INSTANCE_REMOVED, instance);
 };
 
