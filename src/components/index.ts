@@ -5,7 +5,6 @@ export { default as Avatar, PresenceType } from './Avatar';
 export { default as Badge } from './Badge';
 export { default as ButtonCircle } from './ButtonCircle';
 export { default as ButtonCircleToggle } from './ButtonCircleToggle';
-export { default as ButtonControl } from './ButtonControl';
 export { default as ButtonDialpad } from './ButtonDialpad';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as ButtonHyperlink } from './ButtonHyperlink';

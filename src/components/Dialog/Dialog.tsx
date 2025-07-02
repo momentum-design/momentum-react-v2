@@ -11,7 +11,7 @@ const Dialog: FC<DialogProps> = (props) => {
   const { children, size = DEFAULTS.SIZE, ...other } = props;
 
   const dialogProps = {
-    visible: true, // Always visible when rendered, this is to match the behavior of OverlayAlert
+    visible: true, // Always visible when rendered
     ...other,
   };
 

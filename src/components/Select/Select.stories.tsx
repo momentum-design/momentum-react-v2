@@ -16,7 +16,7 @@ import argTypes from './Select.stories.args';
 
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { Story } from '@storybook/react';
-import OverlayAlert from '../OverlayAlert';
+import Dialog from '../Dialog';
 
 export default {
   title: 'Momentum UI/Select',
@@ -361,11 +361,11 @@ Common.parameters = {
 
 const InListItem: Story<any> = (args: any) => {
   return (
-    <OverlayAlert aria-label="Overlay alert" onClose={() => null}>
-      <div style={{ overflowY: 'scroll' }}>
+    <Dialog aria-label="Overlay alert" onClose={() => null}>
+      <div style={{ overflowY: 'scroll' }} slot="dialog-body">
         <Select {...args} />
       </div>
-    </OverlayAlert>
+    </Dialog>
   );
 };
 

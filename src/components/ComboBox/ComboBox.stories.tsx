@@ -11,7 +11,7 @@ import argTypes from './ComboBox.stories.args';
 
 import { Template } from '../../storybook/helper.stories.templates';
 import { IComboBoxGroup, IComboBoxItem, Props } from './ComboBox.types';
-import OverlayAlert from '../OverlayAlert';
+import Dialog from '../Dialog';
 
 export default {
   title: 'Momentum UI/ComboBox',
@@ -105,11 +105,11 @@ Sections.argTypes = { ...argTypes };
 
 const InListItemTemplate = (props: Props) => {
   return (
-    <OverlayAlert aria-label="Overlay alert" onClose={() => null}>
-      <div style={{ overflowY: 'scroll', height: '100px' }}>
+    <Dialog aria-label="Overlay alert" onClose={() => null}>
+      <div style={{ overflowY: 'scroll', height: '100px' }} slot="dialog-body">
         <ComboBoxWrapper {...props} />
       </div>
-    </OverlayAlert>
+    </Dialog>
   );
 };
 

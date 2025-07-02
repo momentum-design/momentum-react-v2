@@ -49,7 +49,6 @@ export {
   PresenceType,
   ButtonCircle,
   ButtonCircleToggle,
-  ButtonControl,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,

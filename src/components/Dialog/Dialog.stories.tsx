@@ -162,7 +162,7 @@ const ContainsPopovers: Story<StoryProps> = (args: StoryProps) => {
             slot="dialog-body"
           >
             Focus and interact with these buttons. Closing the popovers / tooltips using Esc will
-            not close the OverlayAlert.
+            not close the Dialog.
             <Tooltip
               placement="top"
               triggerComponent={<ButtonCircle prefixIcon="accessibility-regular" />}
