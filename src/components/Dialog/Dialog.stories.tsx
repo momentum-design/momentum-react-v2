@@ -101,7 +101,7 @@ const Example = Template().bind({});
 
 Example.argTypes = {
   onClose: { action: 'closed' },
-  size: { control: 'select', options: ['small', 'medium', 'large'] },
+  size: { control: 'select', options: ['small', 'medium', 'large', 'xlarge', 'fullscreen'] },
 };
 
 Example.args = {
