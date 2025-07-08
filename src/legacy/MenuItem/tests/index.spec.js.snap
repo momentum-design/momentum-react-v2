@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tests for <MenuItem /> should render a MenuItem 1`] = `
+exports[`tests for <MenuItemLegacy /> should render a MenuItem 1`] = `
 <ContextTransform(MenuItem)
   label="one"
 >
