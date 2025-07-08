@@ -270,7 +270,7 @@
     "webpack-bundle-analyzer": "3.3.2",
     "webpack-cli": "^4.7.2",
     "webpack-dev-middleware": "^2.0.4",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^5.2.1",
     "webpack-hot-middleware": "^2.22.2",
     "webpack-md5-hash": "0.0.6",
     "yarn": "^1.12.1"
