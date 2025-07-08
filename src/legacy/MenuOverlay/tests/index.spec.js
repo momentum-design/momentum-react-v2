@@ -1,6 +1,12 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Menu, MenuContent, MenuItem, MenuOverlay, Button } from '@momentum-ui/react-collaboration';
+import {
+  Menu,
+  MenuContent,
+  MenuItemLegacy,
+  MenuOverlay,
+  Button,
+} from '@momentum-ui/react-collaboration';
 import EventOverlay from '../../EventOverlay';
 import { ButtonPill } from '../../../components';
 import { triggerPress } from '../../../../test/utils';
@@ -9,7 +15,7 @@ describe('tests for <MenuOverlay />', () => {
     const wrapper = mount(
       <MenuOverlay menuTrigger={<div>Trigger</div>}>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>
     );
@@ -34,7 +40,7 @@ describe('tests for <MenuOverlay />', () => {
           </button>
         </MenuContent>
         <Menu focusFirst={false}>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>,
       { attachTo: focusContainer }
@@ -49,7 +55,7 @@ describe('tests for <MenuOverlay />', () => {
       <MenuOverlay menuTrigger={<div className="trigger">Trigger</div>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>
     );
@@ -63,7 +69,7 @@ describe('tests for <MenuOverlay />', () => {
       <MenuOverlay menuTrigger={<div className="trigger">Trigger</div>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>
     );
@@ -89,7 +95,7 @@ describe('tests for <MenuOverlay />', () => {
       >
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>,
       { attachTo: focusContainer }
@@ -108,12 +114,12 @@ describe('tests for <MenuOverlay />', () => {
     expect(document.activeElement.textContent).toEqual(trigger.text());
   });
 
-  it('when keepMenuOpen is set to true on MenuItem the MenuOverlay should not close', () => {
+  it('when keepMenuOpen is set to true on MenuItemLegacy the MenuOverlay should not close', () => {
     const wrapper = mount(
       <MenuOverlay menuTrigger={<div className="trigger">Trigger</div>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" keepMenuOpen />
+          <MenuItemLegacy label="one" keepMenuOpen />
         </Menu>
       </MenuOverlay>
     );
@@ -127,12 +133,12 @@ describe('tests for <MenuOverlay />', () => {
     expect(wrapper.find('.md-menu-content').length).toEqual(1);
   });
 
-  it('by default should close the MenuOverlay when an leaf MenuItem is clicked', () => {
+  it('by default should close the MenuOverlay when an leaf MenuItemLegacy is clicked', () => {
     const wrapper = mount(
       <MenuOverlay menuTrigger={<div className="trigger">Trigger</div>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>
     );
@@ -153,7 +159,7 @@ describe('tests for <MenuOverlay />', () => {
       <MenuOverlay onSelect={onSelectFn} menuTrigger={<div className="trigger">Trigger</div>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem onClick={onClickFn} label="one" keepMenuOpen />
+          <MenuItemLegacy onClick={onClickFn} label="one" keepMenuOpen />
         </Menu>
       </MenuOverlay>
     );
@@ -177,7 +183,7 @@ describe('tests for <MenuOverlay />', () => {
         <MenuOverlay menuTrigger={<div className="trigger">Trigger</div>}>
           <div>test</div>
           <Menu>
-            <MenuItem label="one" />
+            <MenuItemLegacy label="one" />
           </Menu>
         </MenuOverlay>
       );
@@ -202,7 +208,7 @@ describe('tests for <MenuOverlay />', () => {
       <MenuOverlay menuTrigger={<ButtonPill className="trigger">Trigger</ButtonPill>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>
     );
@@ -216,7 +222,7 @@ describe('tests for <MenuOverlay />', () => {
       <MenuOverlay menuTrigger={<Button className="trigger">Trigger</Button>}>
         <MenuContent>test</MenuContent>
         <Menu>
-          <MenuItem label="one" />
+          <MenuItemLegacy label="one" />
         </Menu>
       </MenuOverlay>
     );
