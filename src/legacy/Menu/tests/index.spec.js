@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Menu, MenuItem, SubMenu } from '@momentum-ui/react-collaboration';
+import { Menu, MenuItemLegacy, SubMenu } from '@momentum-ui/react-collaboration';
 import Icon from '../../../components/Icon';
 import ListItemBaseSection from '../../../components/ListItemBaseSection';
 
@@ -12,7 +12,7 @@ describe('tests for <Menu />', () => {
   it('should render a Menu', () => {
     const wrapper = mount(
       <Menu>
-        <MenuItem label="one" />
+        <MenuItemLegacy label="one" />
       </Menu>
     );
 
@@ -22,7 +22,7 @@ describe('tests for <Menu />', () => {
   it('should apply className to Menu', () => {
     const wrapper = mount(
       <Menu className="test">
-        <MenuItem label="one" />
+        <MenuItemLegacy label="one" />
       </Menu>
     );
 
@@ -32,9 +32,9 @@ describe('tests for <Menu />', () => {
   it('should not focus first if focusFirst={false}', () => {
     const wrapper = mount(
       <Menu focusFirst={false}>
-        <MenuItem label="one" eventKey="test-1" />
-        <MenuItem label="two" eventKey="test-2" />
-        <MenuItem label="three" eventKey="test-3" />
+        <MenuItemLegacy label="one" eventKey="test-1" />
+        <MenuItemLegacy label="two" eventKey="test-2" />
+        <MenuItemLegacy label="three" eventKey="test-3" />
       </Menu>
     );
     const instance = wrapper.find('Menu').instance();
@@ -50,9 +50,9 @@ describe('tests for <Menu />', () => {
     document.body.append(focusContainer);
     const wrapper = mount(
       <Menu>
-        <MenuItem label="one" isHeader eventKey="test-1" />
-        <MenuItem label="two" disabled eventKey="test-2" />
-        <MenuItem label="three" eventKey="test-3" />
+        <MenuItemLegacy label="one" isHeader eventKey="test-1" />
+        <MenuItemLegacy label="two" disabled eventKey="test-2" />
+        <MenuItemLegacy label="three" eventKey="test-3" />
       </Menu>,
       { attachTo: focusContainer }
     );
@@ -69,10 +69,10 @@ describe('tests for <Menu />', () => {
     const wrapper = mount(
       <Menu onSelect={onSelect}>
         <SubMenu label="one" eventKey="test-1">
-          <MenuItem label="one-one" key="0" eventKey="test-1-1" />
+          <MenuItemLegacy label="one-one" key="0" eventKey="test-1-1" />
         </SubMenu>
-        <MenuItem label="two" eventKey="test-2" />
-        <MenuItem label="three" eventKey="test-3" />
+        <MenuItemLegacy label="two" eventKey="test-2" />
+        <MenuItemLegacy label="three" eventKey="test-3" />
       </Menu>
     );
     let menuItem = wrapper.find('SubMenu').at(0);
@@ -99,16 +99,16 @@ describe('tests for <Menu />', () => {
     const wrapper = mount(
       <Menu onSelect={onSelect}>
         <SubMenu label="one" eventKey="test-1">
-          <MenuItem label="one-one" key="0" eventKey="test-1-1" />
-          <MenuItem eventKey="customized-submenu-item">
+          <MenuItemLegacy label="one-one" key="0" eventKey="test-1-1" />
+          <MenuItemLegacy eventKey="customized-submenu-item">
             <ListItemBaseSection position="left">customized subMenu item</ListItemBaseSection>
             <ListItemBaseSection position="middle">
               <Icon name="pop-out" scale={16} />
             </ListItemBaseSection>
-          </MenuItem>
+          </MenuItemLegacy>
         </SubMenu>
-        <MenuItem label="two" eventKey="test-2" />
-        <MenuItem label="three" eventKey="test-3" />
+        <MenuItemLegacy label="two" eventKey="test-2" />
+        <MenuItemLegacy label="three" eventKey="test-3" />
       </Menu>
     );
     let menuItem = wrapper.find('SubMenu').at(0);
@@ -137,10 +137,10 @@ describe('tests for <Menu />', () => {
     const wrapper = mount(
       <Menu onSelect={onSelect}>
         <SubMenu label="one" eventKey="test-1">
-          <MenuItem label="one-one" key="0" eventKey="test-1-1" />
+          <MenuItemLegacy label="one-one" key="0" eventKey="test-1-1" />
         </SubMenu>
-        <MenuItem label="two" eventKey="test-2" />
-        <MenuItem label="three" eventKey="test-3" />
+        <MenuItemLegacy label="two" eventKey="test-2" />
+        <MenuItemLegacy label="three" eventKey="test-3" />
       </Menu>
     );
     const instance = wrapper.find('Menu').instance();
@@ -196,7 +196,7 @@ describe('tests for <Menu />', () => {
     try {
       mount(
         <Menu>
-          <MenuItem>one</MenuItem>
+          <MenuItemLegacy>one</MenuItemLegacy>
         </Menu>
       );
     } catch (e) {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MenuItem, SubMenu } from '@momentum-ui/react-collaboration';
+import { MenuItemLegacy, SubMenu } from '@momentum-ui/react-collaboration';
 
 describe('tests for <SubMenu />', () => {
   it('should render a SubMenu', () => {
     const wrapper = mount(
       <SubMenu label="one">
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
     expect(wrapper).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('tests for <SubMenu />', () => {
   it('when handle customNodeProp', () => {
     const wrapper = mount(
       <SubMenu customNode={<div className="testNode">one</div>} isOpen>
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
 
@@ -26,7 +26,7 @@ describe('tests for <SubMenu />', () => {
   it('when SubMenu is open it should display the subMenu', () => {
     const wrapper = mount(
       <SubMenu label="one" isOpen>
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
 
@@ -48,7 +48,7 @@ describe('tests for <SubMenu />', () => {
   it('should display the selectedValue of the menu if selectedValue prop is set', () => {
     const wrapper = mount(
       <SubMenu selectedValue="SubMenu" label="one">
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
     expect(wrapper.find('.md-menu-item__selected-value').at(0).text()).toEqual('SubMenu');
@@ -57,7 +57,7 @@ describe('tests for <SubMenu />', () => {
   it('should display the contents in the content prop when provided', () => {
     const wrapper = mount(
       <SubMenu selectedValue="SubMenu" label="one" content={<div>test</div>}>
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
     expect(wrapper.find('.md-menu-item__content').at(0).text()).toEqual('test');
@@ -67,7 +67,7 @@ describe('tests for <SubMenu />', () => {
   it('when SubMenu is not open it should not display the subMenu', () => {
     const wrapper = mount(
       <SubMenu label="one">
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
 
@@ -84,7 +84,7 @@ describe('tests for <SubMenu />', () => {
   it('should display the selectedValue of the menu if selectedValue prop is set', () => {
     const wrapper = mount(
       <SubMenu selectedValue="SubMenu" label="one">
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
     expect(wrapper.find('.md-menu-item__selected-value').at(0).text()).toEqual('SubMenu');
@@ -93,7 +93,7 @@ describe('tests for <SubMenu />', () => {
   it('should display the contents in the content prop when provided', () => {
     const wrapper = mount(
       <SubMenu selectedValue="SubMenu" label="one" content={<div>test</div>}>
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
     expect(wrapper.find('.md-menu-item__content').at(0).text()).toEqual('test');
@@ -103,7 +103,7 @@ describe('tests for <SubMenu />', () => {
   it('should set ariaLabel of subMenu', () => {
     const wrapper = mount(
       <SubMenu label="one" isOpen>
-        <MenuItem label="two" />
+        <MenuItemLegacy label="two" />
       </SubMenu>
     );
     expect(

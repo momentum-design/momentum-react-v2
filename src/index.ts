@@ -24,7 +24,7 @@ export {
   Menu,
   MenuContent,
   MenuOverlay,
-  MenuItem,
+  MenuItem as MenuItemLegacy,
   Modal,
   ModalBody,
   ModalFooter,
@@ -36,7 +36,7 @@ export {
   SpaceListItem,
   Spinner,
   SubMenu,
-  Tooltip,
+  Tooltip as TooltipLegacy,
 } from './legacy';
 
 /** V2 Components [TypeScript] */
@@ -84,18 +84,9 @@ export {
   SpaceListItem as SpaceListItemNext,
   SpaceTreeNode,
   List as ListNext,
-  ListRefObject,
   Popover as PopoverNext,
-  PopoverInstance,
   Reaction,
-  OnVideoReactionName,
-  OriginalReactionName,
   REACTION_CONSTANTS,
-  ReactionName,
-  ReactionProps,
-  ReactionWithSkinTone,
-  ReactionWithoutSkinTone,
-  SkinTone,
   ReactionBadge,
   ReactionButton,
   ReactionPicker,
@@ -136,15 +127,45 @@ export {
   TabPanel as TabPanelNext,
   VirtualizedList,
   SpatialNavigationProvider,
+} from './components';
+
+/** V2 Components types [TypeScript] */
+export type {
+  ListRefObject,
+  PopoverInstance,
+  OnVideoReactionName,
+  OriginalReactionName,
+  ReactionName,
+  ReactionProps,
+  ReactionWithSkinTone,
+  ReactionWithoutSkinTone,
+  SkinTone,
   ButtonRefType,
 } from './components';
 
+/** Momentum Design Components */
 export {
   Animation,
-  Textarea as TextArea,
-  Skeleton,
+  AvatarButton,
+  Divider,
   Listheader as ListHeader,
+  MenuItem,
+  MenuItemCheckbox,
+  MenuItemRadio,
+  MenuPopover,
+  MenuSection,
+  Skeleton,
+  Textarea as TextArea,
+  Tooltip,
 } from '@momentum-design/components/dist/react';
 
+/** Momentum Design types */
+export type {
+  MenuPopoverActionEvent,
+  MenuPopoverChangeEvent,
+  MenuSectionChangeEvent,
+} from '@momentum-design/components';
+
+/** Other */
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
-export { AriaLabelRequired } from './utils/a11y';
+export type { AriaLabelRequired } from './utils/a11y';
