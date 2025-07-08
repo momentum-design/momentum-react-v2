@@ -19,6 +19,7 @@ exports[`<Dialog /> snapshot should match snapshot 1`] = `
   />
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -60,6 +61,7 @@ exports[`<Dialog /> snapshot should match snapshot with aria props 1`] = `
   </mdc-dialog>
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -98,6 +100,7 @@ exports[`<Dialog /> snapshot should match snapshot with className 1`] = `
   />
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -137,6 +140,7 @@ exports[`<Dialog /> snapshot should match snapshot with description 1`] = `
   />
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -190,6 +194,7 @@ exports[`<Dialog /> snapshot should match snapshot with footerButtonPrimary 1`] 
   </mdc-dialog>
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -243,6 +248,7 @@ exports[`<Dialog /> snapshot should match snapshot with footerButtonSecondary 1`
   </mdc-dialog>
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -281,6 +287,7 @@ exports[`<Dialog /> snapshot should match snapshot with headerText 1`] = `
   />
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -318,6 +325,7 @@ exports[`<Dialog /> snapshot should match snapshot with id 1`] = `
   />
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
@@ -355,6 +363,7 @@ exports[`<Dialog /> snapshot should match snapshot with style 1`] = `
   />
   <div
     class="dialog-backdrop"
+    style="z-index: 999;"
   >
     <style>
       
