@@ -14,7 +14,6 @@ import Menu from '../Menu';
 import { Item } from '@react-stately/collections';
 import { PopoverInstance } from '../Popover/Popover.types';
 import ButtonPill from '../ButtonPill';
-import Flex from '../Flex';
 
 export default {
   title: 'Momentum UI/TooltipPopoverCombo',
@@ -81,10 +80,10 @@ const AsDescription: Story<TooltipPopoverComboProps> = () => {
       }}
       id="storybook-id-example"
     >
-      <Flex xgap="0.5rem" alignItems="center">
+      <div style={{ gap: '0.5rem', display: 'flex', alignItems: 'center' }}>
         <Icon name="plus" scale={32} />
         <Text tagName="p">Create</Text>
-      </Flex>
+      </div>
     </ButtonPill>
   );
 
@@ -100,10 +99,10 @@ const AsDescription: Story<TooltipPopoverComboProps> = () => {
   const popoverContent = (
     <Menu onAction={onItemPress} style={{ width: '15rem' }}>
       <Item key="option-1">
-        <Flex xgap="0.5rem" alignItems="center">
+        <div style={{ gap: '0.5rem', display: 'flex', alignItems: 'center' }}>
           <Icon name="chat" scale={24} />
           <Text tagName="p">Space</Text>
-        </Flex>
+        </div>
       </Item>
     </Menu>
   );

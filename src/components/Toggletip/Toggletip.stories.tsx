@@ -10,8 +10,6 @@ import ButtonSimple from '../ButtonSimple';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Toggletip.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
-import Icon from '../Icon';
-import Flex from '../Flex';
 import Popover from '../Popover';
 import ButtonCircle from '../ButtonCircle';
 
@@ -112,11 +110,19 @@ Offset.args = {
     </ButtonPill>
   ),
   children: (
-    <Flex style={{ width: '10rem', height: '10rem' }} justifyContent="center" alignItems="center">
+    <div
+      style={{
+        width: '10rem',
+        height: '10rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Text type="display" tagName="h1">
         🏖
       </Text>
-    </Flex>
+    </div>
   ),
 };
 

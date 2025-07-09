@@ -12,7 +12,6 @@ import Menu from '../Menu';
 import { COLORS } from '../ModalContainer/ModalContainer.constants';
 import argTypes from './Popover.stories.args';
 import { PLACEMENTS } from '../ModalArrow/ModalArrow.constants';
-import Flex from '../Flex';
 import AriaToolbar from '../AriaToolbar';
 import Avatar from '../Avatar';
 import MeetingListItem from '../MeetingListItem';
@@ -199,11 +198,19 @@ WithCloseButton.args = {
     <ButtonPill style={{ margin: '10rem auto', display: 'flex' }}>Click me!</ButtonPill>
   ),
   children: (
-    <Flex style={{ width: '10rem', height: '10rem' }} justifyContent="center" alignItems="center">
+    <div
+      style={{
+        width: '10rem',
+        height: '10rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Text type="display" tagName="h1">
         🏖
       </Text>
-    </Flex>
+    </div>
   ),
 };
 
@@ -226,11 +233,19 @@ Offset.args = {
     </ButtonPill>
   ),
   children: (
-    <Flex style={{ width: '10rem', height: '10rem' }} justifyContent="center" alignItems="center">
+    <div
+      style={{
+        width: '10rem',
+        height: '10rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Text type="display" tagName="h1">
         🏖
       </Text>
-    </Flex>
+    </div>
   ),
 };
 

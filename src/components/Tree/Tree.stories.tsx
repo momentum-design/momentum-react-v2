@@ -16,7 +16,6 @@ import MenuTrigger from '../MenuTrigger';
 import ButtonCircle from '../ButtonCircle';
 import { TreeNodeRecord, TreeRefObject } from './Tree.types';
 import ButtonPill from '../ButtonPill';
-import Flex from '../Flex';
 import { v4 as uuidV4 } from 'uuid';
 import { PRESERVE_TABINDEX_CLASSNAME } from '../../utils/navigation';
 
@@ -24,7 +23,7 @@ import { PRESERVE_TABINDEX_CLASSNAME } from '../../utils/navigation';
 const exampleTree =
   tNode('root', true, [
     tNode('1', false, [
-      tNode('1.1',true, [
+      tNode('1.1', true, [
         tNode('1.1.1'),
         tNode('1.1.2')]),
       tNode('1.2')]),
@@ -224,7 +223,7 @@ const SelectableTree = ({
   return (
     <div>
       <h2 id={id}>{templateTitle}</h2>
-      <Flex alignItems={'center'} xgap={'0.5rem'}>
+      <div style={{ gap: '0.5rem', display: 'flex', alignItems: 'center' }}>
         <ButtonPill size={28} ghost outline onPress={clearAll}>
           Clear Selection
         </ButtonPill>
@@ -233,7 +232,7 @@ const SelectableTree = ({
             Select All
           </ButtonPill>
         )}
-      </Flex>
+      </div>
       {showSelectedItems && <Text tagName="p">Selected nodes: [{selected}]</Text>}
       <hr />
       <Tree
@@ -255,7 +254,7 @@ const SelectableTree = ({
 
 const NodeSelection = Template(() => {
   return (
-    <Flex justifyContent="space-around">
+    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
       <SelectableTree
         templateTitle="Single Selection, Leaf nodes only"
         showSelectedItems={true}
@@ -276,7 +275,7 @@ const NodeSelection = Template(() => {
         selectionMode="multiple"
         selectableNodes="leafOnly"
       />
-    </Flex>
+    </div>
   );
 }).bind({});
 
@@ -294,7 +293,7 @@ const ControlledSelection = Template(() => {
     <>
       <h2>Sync selection between trees</h2>
       <Text tagName="p">Selected nodes: [{selected.join(', ')}]</Text>
-      <Flex justifyContent="space-around">
+      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
         <SelectableTree
           templateTitle="Tree A"
           selectionMode="multiple"
@@ -310,7 +309,7 @@ const ControlledSelection = Template(() => {
           selectedItems={selected}
           onSelectionChange={onSelect}
         />
-      </Flex>
+      </div>
     </>
   );
 }).bind({});
