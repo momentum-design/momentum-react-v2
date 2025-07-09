@@ -74,7 +74,6 @@ export {
   ToastNotification,
   ThemeProvider,
   Text,
-  Flex,
   ContentSeparator,
   ListItemBase,
   ListItemBaseSection,

@@ -9,7 +9,6 @@ import { DocumentationPage } from '../../storybook/helper.stories.docs';
 
 import Documentation from './Select.documentation.mdx';
 import Icon from '../Icon';
-import Flex from '../Flex';
 
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import argTypes from './Select.stories.args';
@@ -167,30 +166,30 @@ Common.parameters = {
           id: 0,
           textValue: 'Accessories',
           value: (
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Icon name="accessories" scale={18} weight="bold" />
               <span>Accessories</span>
-            </Flex>
+            </div>
           ),
         },
         {
           id: 1,
           textValue: 'Active Speaker',
           value: (
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Icon name="active-speaker" scale={18} weight="bold" />
               <span>Active Speaker</span>
-            </Flex>
+            </div>
           ),
         },
         {
           id: 2,
           textValue: 'Accessibility',
           value: (
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Icon name="accessibility" scale={18} weight="bold" />
               <span>Accessibility</span>
-            </Flex>
+            </div>
           ),
         },
       ],
@@ -207,20 +206,20 @@ Common.parameters = {
               id: 1,
               textValue: 'Accessories',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="accessories" scale={18} weight="bold" />
                   <span>Accessories</span>
-                </Flex>
+                </div>
               ),
             },
             {
               id: 2,
               textValue: 'Accessibility',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="accessibility" scale={18} weight="bold" />
                   <span>Accessibility</span>
-                </Flex>
+                </div>
               ),
             },
           ],
@@ -233,20 +232,20 @@ Common.parameters = {
               id: 4,
               textValue: 'Active Speaker',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="active-speaker" scale={18} weight="bold" />
                   <span>Active Speaker</span>
-                </Flex>
+                </div>
               ),
             },
             {
               id: 5,
               textValue: 'Apps',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="accessories" scale={18} weight="bold" />
                   <span>Apps</span>
-                </Flex>
+                </div>
               ),
             },
           ],
@@ -272,20 +271,20 @@ Common.parameters = {
               id: 1,
               textValue: 'Accessories',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="accessories" scale={18} weight="bold" />
                   <span>Accessories</span>
-                </Flex>
+                </div>
               ),
             },
             {
               id: 2,
               textValue: 'Accessibility',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="accessibility" scale={18} weight="bold" />
                   <span>Accessibility</span>
-                </Flex>
+                </div>
               ),
             },
           ],
@@ -297,20 +296,20 @@ Common.parameters = {
               id: 4,
               textValue: 'Active Speaker',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="active-speaker" scale={18} weight="bold" />
                   <span>Active Speaker</span>
-                </Flex>
+                </div>
               ),
             },
             {
               id: 5,
               textValue: 'Apps',
               value: (
-                <Flex alignItems="center" xgap="0.875rem">
+                <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                   <Icon name="accessories" scale={18} weight="bold" />
                   <span>Apps</span>
-                </Flex>
+                </div>
               ),
             },
           ],

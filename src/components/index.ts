@@ -24,7 +24,6 @@ export { default as CodeInput } from './CodeInput';
 export { default as InputMessage } from './InputMessage';
 export { default as Icon } from './Icon';
 export { default as ContentSeparator } from './ContentSeparator';
-export { default as Flex } from './Flex';
 export { default as Select } from './Select';
 export { default as ListItemBase } from './ListItemBase';
 export { default as ListItemBaseSection } from './ListItemBaseSection';
