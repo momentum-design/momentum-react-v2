@@ -8,7 +8,6 @@ import argTypes from './Reaction.stories.args';
 import Documentation from './Reaction.stories.docs.mdx';
 import { ON_VIDEO_REACTIONS, ORIGINAL_REACTIONS, REACTIONS } from './Reaction.constants';
 import { action } from '@storybook/addon-actions';
-import Flex from '../Flex';
 import { ICON_CONSTANTS } from '../Icon';
 
 export default {
@@ -37,10 +36,18 @@ Example.argTypes = { ...argTypes };
 
 const ReactionWithLabel = (labelProp: string) => (props: ReactionProps) =>
   (
-    <Flex direction="column" alignItems="center" ygap="1rem" style={{ margin: '1.5rem' }}>
+    <div
+      style={{
+        margin: '1.5rem',
+        gap: '1rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
       <Reaction {...props} style={{ border: '1px solid gray' }} />
       <p>{props[labelProp]}</p>
-    </Flex>
+    </div>
   );
 
 const Sizes = MultiTemplate<ReactionProps>(ReactionWithLabel('size')).bind({});

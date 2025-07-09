@@ -8,7 +8,6 @@ import argTypes from './SpaceTreeNode.stories.args';
 import Documentation from './SpaceTreeNode.stories.docs.mdx';
 import { PresenceType } from '../Avatar/Avatar.types';
 import ButtonPill from '../ButtonPill';
-import Flex from '../Flex';
 import Text from '../Text';
 import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import Icon from '../Icon';
@@ -204,17 +203,17 @@ Common.parameters = {
       ),
       // eslint-disable-next-line react/display-name
       action: (
-        <Flex alignItems="center" xgap="0.5rem">
-          <Flex alignItems="center" xgap="0.125rem">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.125rem' }}>
             <Text type="body-secondary" tagName="small">
               23
             </Text>
             <Icon name="participant-list" weight="bold" scale={16} />
-          </Flex>
+          </div>
           <ButtonPill color="join" size={28}>
             00:00
           </ButtonPill>
-        </Flex>
+        </div>
       ) as JSX.Element,
       teamColor: TEAM_COLORS.mint,
       title: 'Tooltip that appears even on disabled',

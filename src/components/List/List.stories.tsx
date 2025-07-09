@@ -14,7 +14,6 @@ import { PresenceType } from '../Avatar/Avatar.types';
 import { TEAM_COLORS } from '../ThemeProvider/ThemeProvider.constants';
 import { TeamColor } from '../ThemeProvider/ThemeProvider.types';
 import Avatar from '../Avatar';
-import Flex from '../Flex';
 import Icon from '../Icon';
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
@@ -90,13 +89,13 @@ Common.parameters = {
                   />
                 }
                 action={
-                  <Flex alignItems="center" xgap="0.5rem">
-                    <Flex alignItems="center" xgap="0.125rem">
+                  <div style={{ gap: '0.5rem', display: 'flex', alignItems: 'center' }}>
+                    <div style={{ gap: '0.125rem', display: 'flex', alignItems: 'center' }}>
                       <Text type="body-secondary" tagName="small">
                         23
                       </Text>
                       <Icon name="participant-list" weight="bold" scale={16} />
-                    </Flex>
+                    </div>
                     <ButtonPill color="join" size={28}>
                       00:00
                     </ButtonPill>
@@ -119,7 +118,7 @@ Common.parameters = {
                         <Item key="three">Three</Item>
                       </Menu>
                     </MenuTrigger>
-                  </Flex>
+                  </div>
                 }
               />
             );
@@ -312,13 +311,13 @@ const ProgramaticFocus = Template<ListProps>((args) => {
 
   return (
     <>
-      <Flex xgap="0.5rem">
+      <div style={{ gap: '0.5rem', display: 'flex' }}>
         {Array.from(Array(10).keys()).map((index) => (
           <ButtonPill outline size={20} key={index} onPress={() => handleOnPress(index)}>
             Focus on {index}
           </ButtonPill>
         ))}
-      </Flex>
+      </div>
 
       <List {...args} listSize={10} ref={ref} shouldFocusOnPress>
         {Array.from(Array(10).keys()).map((index) => (
