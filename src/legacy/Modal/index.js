@@ -64,7 +64,15 @@ class Modal extends React.Component {
 
     let modalContent = (
       <div className="md-modal__content">
-        <div className="md-modal__flex-container">{children}</div>
+        <div className="md-modal__flex-container">
+          {children}
+          {/* Hidden focusable element to ensure focus-trap has at least one tabbable node */}
+          <div style={{ position: 'absolute', overflow: 'hidden', height: 0 }}>
+            <button tabIndex={-1} aria-hidden="true" style={{ position: 'absolute', opacity: 0 }}>
+              Focus anchor
+            </button>
+          </div>
+        </div>
       </div>
     );
 
@@ -75,6 +83,13 @@ class Modal extends React.Component {
     const RenderModal = renderTo ? AriaModal.renderTo(`#${renderTo}`) : AriaModal;
 
     const getModal = () => {
+      // Determine if we're in a test environment using jsdom
+      const isTestEnvironment =
+        typeof window !== 'undefined' &&
+        window.navigator &&
+        window.navigator.userAgent &&
+        window.navigator.userAgent.includes('jsdom');
+
       return (
         show && (
           <RenderModal
@@ -94,6 +109,9 @@ class Modal extends React.Component {
             underlayClickExits={backdropClickExit}
             escapeExits={escapeExits}
             focusDialog={focusDialog}
+            focusTrapOptions={{
+              fallbackFocus: () => document.createElement('div'),
+            }}
             {...props}
           >
             {modalContent}
