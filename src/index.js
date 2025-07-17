@@ -105,7 +105,7 @@ export {
   AddReactionButton,
   Menu as MenuNext,
   MenuTrigger,
-  ListHeader,
+  ListHeader as ListHeaderLegacy,
   LoadingSpinner,
   MeetingContainer,
   TextToast,
@@ -139,7 +139,12 @@ export {
   ButtonRefType,
 } from './components';
 
-export { Animation, Textarea as TextArea, Skeleton } from '@momentum-design/components/dist/react';
+export {
+  Animation,
+  Textarea as TextArea,
+  Skeleton,
+  Listheader as ListHeader,
+} from '@momentum-design/components/dist/react';
 
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
 export { AriaLabelRequired } from './utils/a11y';
