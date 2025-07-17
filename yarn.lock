@@ -2908,9 +2908,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.75.2":
-  version: 0.75.2
-  resolution: "@momentum-design/components@npm:0.75.2"
+"@momentum-design/components@npm:0.92.2":
+  version: 0.92.2
+  resolution: "@momentum-design/components@npm:0.92.2"
   dependencies:
     "@floating-ui/dom": ^1.6.12
     "@lit/context": ^1.1.2
@@ -2924,7 +2924,7 @@ __metadata:
     lit: ^3.2.0
     lottie-web: ^5.12.2
     uuid: ^11.0.5
-  checksum: c980e08dcce11d8d284537bae243ab870ca78c44fe2560d86e7dfc1cc761f195b746906e3624bd558e21ef0b2ef687e5a0d53cb8b11a2a35653f31c6a39ef155
+  checksum: 4571133e290c658410008309b0ebc2b539084444263bb1998f03c402a605b39743d37ef7c28f68aa74d895a9cc6525752fb08c66186d8d09d42b97cd0b246f30
   languageName: node
   linkType: hard
 
@@ -2942,17 +2942,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/icons@npm:0.10.0":
-  version: 0.10.0
-  resolution: "@momentum-design/icons@npm:0.10.0"
-  checksum: 9695f817a4bebc88428a72201ae0d10bab18e279bf479142775f1b6bb0a3ddb36b4068940eedc81a98ae8a9d41ccfe8ef2c458f0910c24f314f76d22688430de
+"@momentum-design/icons@npm:0.26.0":
+  version: 0.26.0
+  resolution: "@momentum-design/icons@npm:0.26.0"
+  checksum: 982d111593457ec5e622a111cc2a8453789ea0b845e7242de22716128a4dfc3eb9785ce0d123aeeafe4895fca1570b8bed0f743cf69a7093b0ece5b32203294b
   languageName: node
   linkType: hard
 
-"@momentum-design/tokens@npm:0.5.0":
-  version: 0.5.0
-  resolution: "@momentum-design/tokens@npm:0.5.0"
-  checksum: db11bcb07f369fa08df84520cd1788202330a1d978166fb8b12668c605d6c48ad6f472bf49c7286c4f9f1abc69a3f191dd9ddc5d64ae372001a41bdf65da1cd0
+"@momentum-design/tokens@npm:0.6.1":
+  version: 0.6.1
+  resolution: "@momentum-design/tokens@npm:0.6.1"
+  checksum: cd0070fecab822f1ce1be6f0ddbc8057b71bf939924519ba726963c3388e66ef009f06baf92650b489ff1d5cf9f367a9c09c3a32bb4121217546bf410807d94d
   languageName: node
   linkType: hard
 
@@ -2993,10 +2993,10 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~17.0.0
     "@momentum-design/animations": 0.3.3
-    "@momentum-design/components": 0.75.2
+    "@momentum-design/components": 0.92.2
     "@momentum-design/fonts": 0.0.8
-    "@momentum-design/icons": 0.10.0
-    "@momentum-design/tokens": 0.5.0
+    "@momentum-design/icons": 0.26.0
+    "@momentum-design/tokens": 0.6.1
     "@momentum-ui/design-tokens": ^0.0.63
     "@momentum-ui/icons": 8.28.4
     "@momentum-ui/tokens": ^1.7.1

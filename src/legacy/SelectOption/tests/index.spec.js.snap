@@ -55,7 +55,9 @@ exports[`tests for <SelectOption /> should match SnapShot 1`] = `
           onBlur={null}
           onClick={null}
           onKeyDown={null}
+          onKeyUp={null}
           parentKeyDown={null}
+          parentKeyUp={null}
           parentOnSelect={null}
           refName="navLink"
           role="listitem"
@@ -85,6 +87,7 @@ exports[`tests for <SelectOption /> should match SnapShot 1`] = `
                 onBlur={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
+                onKeyUp={[Function]}
                 role="listitem"
                 tabIndex={-1}
               >

@@ -17,13 +17,13 @@ import { Props } from './Select.types';
 import { DEFAULTS, STYLE } from './Select.constants';
 import { useSelectState } from '@react-stately/select';
 import { useButton } from '@react-aria/button';
-import { useKeyboard } from '@react-aria/interactions';
 import { HiddenSelect, useSelect } from '@react-aria/select';
 import Icon from '../Icon';
 import ListBoxBase from '../ListBoxBase';
 import Popover, { PopoverInstance } from '../Popover';
 import Text from '../Text';
 import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
+import { useKeyboard } from '@react-aria/interactions';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
@@ -172,13 +172,12 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
     </button>
   );
 
+  // special handling for spatial navigation
   const { keyboardProps } = useKeyboard({
     onKeyDown: (event) => {
-      if (event.key === 'Escape' || (spatialNav && event.key === spatialNav.back)) {
+      if (spatialNav && event.key === spatialNav.back) {
         closePopover();
-        if (spatialNav) {
-          event.nativeEvent.stopImmediatePropagation();
-        }
+        event.nativeEvent.stopImmediatePropagation();
       }
     },
   });
@@ -223,12 +222,12 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
         placement={direction}
         onClickOutside={closePopover}
         onHide={closePopover}
-        hideOnEsc={false}
-        {...(keyboardProps as Omit<React.HTMLAttributes<HTMLElement>, 'color'>)}
+        hideOnEsc={!spatialNav} // disable hide on Esc key if spatial navigation is enabled
         style={{ maxHeight: listboxMaxHeight || 'none' }}
         className={STYLE.popover}
         strategy={listboxWidth ? 'fixed' : 'absolute'}
         singleOpenGroupId={popoverSingleOpenGroupId}
+        {...(spatialNav ? (keyboardProps as any) : {})}
       >
         <ListBoxBase
           {...menuProps}

@@ -126,6 +126,19 @@ class ListItem extends React.Component {
     parentKeyDown && parentKeyDown(e, { value, label, eventKey });
   };
 
+  handleKeyUp = (e, eventKey) => {
+    const { disabled, onKeyUp, parentKeyUp, value, label } = this.props;
+
+    if (disabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    e.persist();
+    onKeyUp && onKeyUp(e);
+    parentKeyUp && parentKeyUp(e, { value, label, eventKey });
+  };
+
   handleBlur = (e) => {
     const { onBlur, focusLockTabbableChildren, focusLockTabbableChildrenProps } = this.props;
 
@@ -235,7 +248,9 @@ class ListItem extends React.Component {
       'onBlur',
       'onClick',
       'onKeyDown',
+      'onKeyUp',
       'parentKeyDown',
+      'parentKeyUp',
       'parentOnSelect',
       'value',
     ]);
@@ -268,6 +283,7 @@ class ListItem extends React.Component {
       ...(!isReadOnly && {
         onClick: (e) => this.handleClick(e, cxtProps.uniqueKey),
         onKeyDown: (e) => this.handleKeyDown(e, cxtProps.uniqueKey),
+        onKeyUp: (e) => this.handleKeyUp(e, cxtProps.uniqueKey),
         onBlur: (e) => this.handleBlur(e),
         tabIndex: !disabled && cxtProps.focus ? 0 : -1,
       }),
@@ -367,10 +383,14 @@ ListItem.propTypes = {
   onBlur: PropTypes.func,
   /** @prop Callback function invoked by user tapping on ListItem | null */
   onClick: PropTypes.func,
-  /** @prop Callback function invoked by user pressing on a key | null */
+  /** @prop Callback function invoked by user pressing down on a key | null */
   onKeyDown: PropTypes.func,
+  /** @prop Callback function invoked by user pressing up on a key | null */
+  onKeyUp: PropTypes.func,
   // Internal Context Use Only
   parentKeyDown: PropTypes.func,
+  // Internal Context Use Only
+  parentKeyUp: PropTypes.func,
   // Internal Context Use Only
   parentOnSelect: PropTypes.func,
   /** @prop ListItem ref name | 'navLink' */
@@ -420,7 +440,9 @@ ListItem.defaultProps = {
   onBlur: null,
   onClick: null,
   onKeyDown: null,
+  onKeyUp: null,
   parentKeyDown: null,
+  parentKeyUp: null,
   parentOnSelect: null,
   refName: 'navLink',
   role: 'listitem',

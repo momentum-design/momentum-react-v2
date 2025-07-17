@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react';
 import type IconKeys from '@momentum-design/icons/dist/types/types';
 import { Props as TooltipProps } from '../Tooltip/Tooltip.types';
+import type { MdcIconProps } from '../../types';
 
 export type IconWeight = 'light' | 'regular' | 'bold' | 'filled';
 
@@ -30,7 +31,7 @@ export type IconScale =
   | 'auto'
   | 'inherit';
 
-export interface Props {
+export interface Props extends Omit<MdcIconProps, 'name'> {
   /**
    * If set to true, then the icon size will scale according to the parent element.
    *

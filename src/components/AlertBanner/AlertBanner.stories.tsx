@@ -3,6 +3,7 @@ import React from 'react';
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
+import { Spinner as MdcSpinner } from '@momentum-design/components/dist/react';
 
 import ButtonSimple from '../ButtonSimple';
 import Icon from '../Icon';
@@ -244,12 +245,12 @@ Common.parameters = {
     // Pills.
     {
       isCentered: true,
-      image: <Icon name="spinner" autoScale />,
+      image: <MdcSpinner style={{ '--mdc-spinner-size': '1rem' } as React.CSSProperties} />,
       label: 'Transient State...',
       isPilled: true,
     },
     {
-      image: <Icon name="spinner" autoScale />,
+      image: <MdcSpinner style={{ '--mdc-spinner-size': '1rem' } as React.CSSProperties} />,
       label: 'Transient State...',
       isPilled: true,
     },
@@ -321,7 +322,7 @@ Common.parameters = {
 
     // Lorem Ipsum.
     {
-      image: <Icon name="spinner" autoScale />,
+      image: <MdcSpinner style={{ '--mdc-spinner-size': '1rem' } as React.CSSProperties} />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
     },
     {
@@ -330,7 +331,7 @@ Common.parameters = {
           <Icon name="cancel" autoScale />
         </ButtonSimple>
       ),
-      image: <Icon name="spinner" autoScale />,
+      image: <MdcSpinner style={{ '--mdc-spinner-size': '1rem' } as React.CSSProperties} />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
     },
     {
@@ -411,7 +412,7 @@ Common.parameters = {
 
     // Lorem Ipsum Small.
     {
-      image: <Icon name="spinner" autoScale />,
+      image: <MdcSpinner style={{ '--mdc-spinner-size': '1rem' } as React.CSSProperties} />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
       size: 'small',
     },
@@ -421,7 +422,7 @@ Common.parameters = {
           <Icon name="cancel" autoScale />
         </ButtonSimple>
       ),
-      image: <Icon name="spinner" autoScale />,
+      image: <MdcSpinner style={{ '--mdc-spinner-size': '1rem' } as React.CSSProperties} />,
       label: 'Lorem ipsum dolor site aw aetns ctetuer adipiscing elit nullam amarte.',
       size: 'small',
     },

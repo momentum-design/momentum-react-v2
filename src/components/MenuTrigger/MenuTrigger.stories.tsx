@@ -11,7 +11,6 @@ import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 import Menu, { SelectionGroup } from '../Menu';
 import Icon from '../Icon';
-import Flex from '../Flex';
 import Avatar from '../Avatar';
 import { PresenceType } from '../Avatar/Avatar.types';
 import { action } from '@storybook/addon-actions';
@@ -90,22 +89,22 @@ Common.parameters = {
       children: [
         <Menu selectionMode="single" key="2">
           <Item key="one" textValue="Apps">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Icon name="accessories" scale={18} weight="bold" />
               <span>This is a very long option name and should trim.</span>
-            </Flex>
+            </div>
           </Item>
           <Item key="two" textValue="Accessories">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Icon name="accessibility" scale={18} weight="bold" />
               <span>Accessories</span>
-            </Flex>
+            </div>
           </Item>
           <Item key="three" textValue="Favorites">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Icon name="favorite" scale={18} weight="bold" />
               <span>Favorites</span>
-            </Flex>
+            </div>
           </Item>
         </Menu>,
       ],
@@ -123,44 +122,44 @@ Common.parameters = {
         <Menu selectionMode="single" key="2">
           <Section title="Select single">
             <Item key="one" textValue="Apps">
-              <Flex alignItems="center" xgap="0.875rem">
+              <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                 <Icon name="accessories" scale={18} weight="bold" />
                 <span>Apps</span>
-              </Flex>
+              </div>
             </Item>
             <Item key="two" textValue="Accessories">
-              <Flex alignItems="center" xgap="0.875rem">
+              <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                 <Icon name="accessibility" scale={18} weight="bold" />
                 <span>Accessories</span>
-              </Flex>
+              </div>
             </Item>
             <Item key="three" textValue="Favorites">
-              <Flex alignItems="center" xgap="0.875rem">
+              <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                 <Icon name="favorite" scale={18} weight="bold" />
                 <span>Favorites</span>
-              </Flex>
+              </div>
             </Item>
           </Section>
         </Menu>,
         <Menu selectionMode="multiple" key="2">
           <Section title="Select multiple">
             <Item key="one" textValue="Apps">
-              <Flex alignItems="center" xgap="0.875rem">
+              <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                 <Icon name="accessories" scale={18} weight="bold" />
                 <span>Apps</span>
-              </Flex>
+              </div>
             </Item>
             <Item key="two" textValue="Accessories">
-              <Flex alignItems="center" xgap="0.875rem">
+              <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                 <Icon name="accessibility" scale={18} weight="bold" />
                 <span>Accessories</span>
-              </Flex>
+              </div>
             </Item>
             <Item key="three" textValue="Favorites">
-              <Flex alignItems="center" xgap="0.875rem">
+              <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
                 <Icon name="favorite" scale={18} weight="bold" />
                 <span>Favorites</span>
-              </Flex>
+              </div>
             </Item>
           </Section>
         </Menu>,
@@ -198,16 +197,16 @@ Common.parameters = {
           key="2"
         >
           <Item textValue="Cisco" key="one">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Avatar initials="C" size={32} presence={PresenceType.Active} />
               <span>Cisco Webex</span>
-            </Flex>
+            </div>
           </Item>
           <Item textValue="Josh" key="two">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div style={{ gap: '0.875rem', display: 'flex', alignItems: 'center' }}>
               <Avatar initials="J" size={32} presence={PresenceType.Meet} />
               <span>Josh Webex</span>
-            </Flex>
+            </div>
           </Item>
         </Menu>,
       ],

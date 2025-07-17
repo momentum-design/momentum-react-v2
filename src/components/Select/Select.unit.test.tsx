@@ -455,12 +455,11 @@ describe('Select', () => {
         placement: direction,
         onClickOutside: expect.any(Function),
         onHide: expect.any(Function),
-        hideOnEsc: false,
+        hideOnEsc: true,
         style: { maxHeight: 'none' },
         className: 'md-select-popover',
         children: expect.any(Object),
-        onKeyDown: expect.any(Function),
-        onKeyUp: undefined,
+        singleOpenGroupId: undefined,
         strategy: 'absolute',
       });
     });
@@ -493,12 +492,10 @@ describe('Select', () => {
         placement: direction,
         onClickOutside: expect.any(Function),
         onHide: expect.any(Function),
-        hideOnEsc: false,
+        hideOnEsc: true,
         style: { maxHeight: 'none' },
         className: 'md-select-popover',
         children: expect.any(Object),
-        onKeyDown: expect.any(Function),
-        onKeyUp: undefined,
         strategy: 'absolute',
       });
     });
@@ -529,12 +526,11 @@ describe('Select', () => {
         placement: direction,
         onClickOutside: expect.any(Function),
         onHide: expect.any(Function),
-        hideOnEsc: false,
+        hideOnEsc: true,
         style: { maxHeight: 'none' },
         className: 'md-select-popover',
         children: expect.any(Object),
-        onKeyDown: expect.any(Function),
-        onKeyUp: undefined,
+        singleOpenGroupId: undefined,
         strategy: 'fixed',
       });
     });

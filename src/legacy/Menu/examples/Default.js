@@ -14,7 +14,7 @@ export default class MenuOverlayDefault extends React.PureComponent {
         }
       >
         <Menu>
-          <MenuItem onClick={this.onClick} label="Language" />
+          <MenuItem onClick={this.onClick} label="Language" fireClickOnSpaceKeydown={false} />
           <MenuItem onClick={this.onClick} label="Profile" />
           <MenuItem onClick={this.onClick} label="Settings" />
         </Menu>

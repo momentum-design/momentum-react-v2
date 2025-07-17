@@ -1,18 +1,9 @@
 import { CSSProperties, ReactNode } from 'react';
-import type { TextType } from '@momentum-design/components';
+import type { MdcTextProps } from '../../types';
 
-export type AllowedTagNames =
-  | (keyof JSX.IntrinsicElements & 'h1')
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'p'
-  | 'span'
-  | 'div'
-  | 'small';
-export interface Props {
+export type AllowedTagNames = MdcTextProps['tagname'];
+
+export interface Props extends Omit<MdcTextProps, 'type'> {
   /**
    * Custom class to be able to override the component's CSS
    */
@@ -61,4 +52,4 @@ export type FontStyle =
   | 'highlight-compact'
   | 'body-compact'
   | 'label-compact'
-  | TextType;
+  | MdcTextProps['type'];

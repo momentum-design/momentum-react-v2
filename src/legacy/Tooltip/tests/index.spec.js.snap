@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tests for <Tooltip /> should match SnapShot 1`] = `
+exports[`tests for <TooltipLegacy /> should match SnapShot 1`] = `
 <Tooltip
   className=""
   popoverProps={Object {}}

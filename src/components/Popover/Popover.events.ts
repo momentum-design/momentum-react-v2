@@ -1,13 +1,13 @@
 import { v4 as uuidV4 } from 'uuid';
 
 /**
- * An event target to handle communication between instances of OverlayAlert and Popover.
+ * An event target to handle communication between instances of Dialog and Popover.
  * This will enable us to keep track of Popover instances (specifically those with hideOnEsc = true)
- * which are opened while an OverlayAlert is rendered. While such Popover instances remain open, the OverlayAlert
+ * which are opened while an Dialog is rendered. While such Popover instances remain open, the Dialog
  * will not close on Esc.
  *
- * This operates on the assumption that any Popover instance that is opened after an OverlayAlert is
- * rendered on the screen is part of the content of said OverlayAlert and should be closed before the OverlayAlert
+ * This operates on the assumption that any Popover instance that is opened after an Dialog is
+ * rendered on the screen is part of the content of said Dialog and should be closed before the Dialog
  * itself.
  */
 

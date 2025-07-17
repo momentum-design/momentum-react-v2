@@ -6,7 +6,6 @@ import StyleDocs from '../../storybook/docs.stories.style.mdx';
 import MenuListBackground, { MenuListBackgroundProps } from './';
 import argTypes from './MenuListBackground.stories.args';
 import Documentation from './MenuListBackground.stories.docs.mdx';
-import Flex from '../Flex';
 
 export default {
   title: 'Momentum UI/MenuListBackground',
@@ -24,9 +23,11 @@ export default {
  */
 const Example = Template<MenuListBackgroundProps>((args) => (
   <MenuListBackground {...args} style={{ width: '20rem', height: '20rem' }}>
-    <Flex justifyContent="center" alignItems="center" style={{ height: '100%' }}>
+    <div
+      style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+    >
       This is a Menu Background
-    </Flex>
+    </div>
   </MenuListBackground>
 )).bind({});
 
@@ -34,9 +35,11 @@ Example.argTypes = { ...argTypes };
 
 const Colors = MultiTemplate<MenuListBackgroundProps>((args) => (
   <MenuListBackground {...args} style={{ width: '20rem', height: '20rem', marginRight: '1rem' }}>
-    <Flex justifyContent="center" alignItems="center" style={{ height: '100%' }}>
+    <div
+      style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+    >
       This is a Menu Background
-    </Flex>
+    </div>
   </MenuListBackground>
 )).bind({});
 

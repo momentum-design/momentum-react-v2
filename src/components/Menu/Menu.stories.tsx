@@ -9,7 +9,6 @@ import Menu, { MenuProps, SelectionGroup } from './';
 import argTypes from './Menu.stories.args';
 import Documentation from './Menu.stories.docs.mdx';
 import { action } from '@storybook/addon-actions';
-import Flex from '../Flex';
 import Avatar from '../Avatar';
 import ContentSeparator from '../ContentSeparator';
 import { PresenceType } from '../Avatar/Avatar.types';
@@ -136,12 +135,19 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction1', rest);
           }}
           title={
-            <Flex direction="row" alignItems="center" xgap="0.25rem">
+            <div
+              style={{
+                gap: '0.25rem',
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
               <Icon scale={16} name="speaker" />
               <Text type="body-secondary" tagName="small">
                 Speaker (you can choose many)
               </Text>
-            </Flex>
+            </div>
           }
         >
           <Item key="00">System default speaker</Item>
@@ -163,12 +169,19 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction2', rest);
           }}
           title={
-            <Flex direction="row" alignItems="center" xgap="0.25rem">
+            <div
+              style={{
+                gap: '0.25rem',
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
               <Icon scale={16} name="microphone" />
               <Text type="body-secondary" tagName="small">
                 Microphone (you can choose one)
               </Text>
-            </Flex>
+            </div>
           }
         >
           <Item key="10">No Microphone</Item>
@@ -195,12 +208,19 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction3', rest);
           }}
           title={
-            <Flex direction="row" alignItems="center" xgap="0.25rem">
+            <div
+              style={{
+                gap: '0.25rem',
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
               <Icon scale={16} name="adjust-microphone" />
               <Text type="body-secondary" tagName="small">
                 Webex smart audio (You can choose one)
               </Text>
-            </Flex>
+            </div>
           }
         >
           {(item) => (
@@ -229,12 +249,19 @@ SelectionGroups.parameters = {
             console.log('selectionOnAction4', rest);
           }}
           title={
-            <Flex direction="row" alignItems="center" xgap="0.25rem">
+            <div
+              style={{
+                gap: '0.25rem',
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
               <Icon scale={16} name="accessibility" />
               <Text type="body-secondary" tagName="small">
                 Layout
               </Text>
-            </Flex>
+            </div>
           }
         >
           {(item) => (
@@ -302,16 +329,30 @@ Common.parameters = {
         // eslint-disable-next-line react/jsx-key
         <Section title="People">
           <Item textValue="Cisco">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div
+              style={{
+                gap: '0.875rem',
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
               <Avatar initials="CW" size={32} presence={PresenceType.Active} />
               <span>Cisco Webex</span>
-            </Flex>
+            </div>
           </Item>
           <Item textValue="Josh">
-            <Flex alignItems="center" xgap="0.875rem">
+            <div
+              style={{
+                gap: '0.875rem',
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
               <Avatar initials="CW" size={32} presence={PresenceType.Active} />
               <span>Josh Webex</span>
-            </Flex>
+            </div>
           </Item>
         </Section>,
       ],

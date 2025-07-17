@@ -24,7 +24,7 @@ export {
   Menu,
   MenuContent,
   MenuOverlay,
-  MenuItem,
+  MenuItem as MenuItemLegacy,
   Modal,
   ModalBody,
   ModalFooter,
@@ -36,7 +36,7 @@ export {
   SpaceListItem,
   Spinner,
   SubMenu,
-  Tooltip,
+  Tooltip as TooltipLegacy,
 } from './legacy';
 
 /** V2 Components [TypeScript] */
@@ -49,7 +49,6 @@ export {
   PresenceType,
   ButtonCircle,
   ButtonCircleToggle,
-  ButtonControl,
   ButtonDialpad,
   ButtonGroup as ButtonGroupNext,
   ButtonHyperlink,
@@ -60,7 +59,6 @@ export {
   Coachmark as CoachmarkNext,
   CodeInput,
   DividerDot,
-  FocusRing,
   Card as CardNext,
   NavigationTab,
   InputMessage as InputMessageNew,
@@ -68,17 +66,14 @@ export {
   Tab as TabNext,
   MeetingListItem,
   MeetingMarker,
-  ModalArrow,
   ModalContainer,
-  Overlay,
-  OverlayAlert,
+  Dialog,
   Toast,
   ToastDetails,
   ToastContent,
   ToastNotification,
   ThemeProvider,
   Text,
-  Flex,
   ContentSeparator,
   ListItemBase,
   ListItemBaseSection,
@@ -89,18 +84,9 @@ export {
   SpaceListItem as SpaceListItemNext,
   SpaceTreeNode,
   List as ListNext,
-  ListRefObject,
   Popover as PopoverNext,
-  PopoverInstance,
   Reaction,
-  OnVideoReactionName,
-  OriginalReactionName,
   REACTION_CONSTANTS,
-  ReactionName,
-  ReactionProps,
-  ReactionWithSkinTone,
-  ReactionWithoutSkinTone,
-  SkinTone,
   ReactionBadge,
   ReactionButton,
   ReactionPicker,
@@ -110,7 +96,7 @@ export {
   AddReactionButton,
   Menu as MenuNext,
   MenuTrigger,
-  ListHeader,
+  ListHeader as ListHeaderLegacy,
   LoadingSpinner,
   MeetingContainer,
   TextToast,
@@ -141,10 +127,45 @@ export {
   TabPanel as TabPanelNext,
   VirtualizedList,
   SpatialNavigationProvider,
+} from './components';
+
+/** V2 Components types [TypeScript] */
+export type {
+  ListRefObject,
+  PopoverInstance,
+  OnVideoReactionName,
+  OriginalReactionName,
+  ReactionName,
+  ReactionProps,
+  ReactionWithSkinTone,
+  ReactionWithoutSkinTone,
+  SkinTone,
   ButtonRefType,
 } from './components';
 
-export { MdcAnimation as Animation } from '@momentum-design/components';
+/** Momentum Design Components */
+export {
+  Animation,
+  AvatarButton,
+  Divider,
+  Listheader as ListHeader,
+  MenuItem,
+  MenuItemCheckbox,
+  MenuItemRadio,
+  MenuPopover,
+  MenuSection,
+  Skeleton,
+  Textarea as TextArea,
+  Tooltip,
+} from '@momentum-design/components/dist/react';
 
+/** Momentum Design types */
+export type {
+  MenuPopoverActionEvent,
+  MenuPopoverChangeEvent,
+  MenuSectionChangeEvent,
+} from '@momentum-design/components';
+
+/** Other */
 export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
-export { AriaLabelRequired } from './utils/a11y';
+export type { AriaLabelRequired } from './utils/a11y';

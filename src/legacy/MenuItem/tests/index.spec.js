@@ -1,21 +1,22 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import SelectableContext from '../../SelectableContext';
-import { Icon, ListItemSection, MenuItem } from '@momentum-ui/react-collaboration';
+import { Icon, ListItemSection, MenuItemLegacy } from '@momentum-ui/react-collaboration';
 import Toggle from '../../../components/Toggle';
 beforeEach(() => {
   jest.resetModules();
   jest.clearAllMocks();
 });
 
-describe('tests for <MenuItem />', () => {
+describe('tests for <MenuItemLegacy />', () => {
   const context = {
     parentKeyDown: jest.fn(),
+    parentKeyUp: jest.fn(),
     parentOnSelect: jest.fn(),
   };
 
   it('should render a MenuItem', () => {
-    const wrapper = mount(<MenuItem label="one" />);
+    const wrapper = mount(<MenuItemLegacy label="one" />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -24,7 +25,7 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onClick={onClick} label="one" />
+        <MenuItemLegacy onClick={onClick} label="one" />
       </SelectableContext.Provider>
     );
 
@@ -39,7 +40,7 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onClick={onClick} label="one" value="test" />
+        <MenuItemLegacy onClick={onClick} label="one" value="test" />
       </SelectableContext.Provider>
     );
 
@@ -54,7 +55,7 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onClick={onClick} label="one" value="test">
+        <MenuItemLegacy onClick={onClick} label="one" value="test">
           <ListItemSection position="left">
             <Icon name="edit_20" />
           </ListItemSection>
@@ -62,7 +63,7 @@ describe('tests for <MenuItem />', () => {
           <ListItemSection position="right">
             <Toggle aria-label="toggle" />
           </ListItemSection>
-        </MenuItem>
+        </MenuItemLegacy>
       </SelectableContext.Provider>
     );
 
@@ -86,7 +87,7 @@ describe('tests for <MenuItem />', () => {
 
     const wrapper = mount(
       <SelectableContext.Provider value={context}>
-        <MenuItem onKeyDown={onKeyDown} label="one" value="test" />
+        <MenuItemLegacy onKeyDown={onKeyDown} label="one" value="test" />
       </SelectableContext.Provider>
     );
 
@@ -96,21 +97,36 @@ describe('tests for <MenuItem />', () => {
     expect(onKeyDown).toHaveBeenCalled();
   });
 
+  it('should call handleKeyUp function of context when keyUp is fired on ListItem', () => {
+    const onKeyUp = jest.fn();
+
+    const wrapper = mount(
+      <SelectableContext.Provider value={context}>
+        <MenuItemLegacy onKeyUp={onKeyUp} label="one" value="test" />
+      </SelectableContext.Provider>
+    );
+
+    const listItem = wrapper.find('ListItem').first();
+    listItem.simulate('keyup');
+    expect(context.parentKeyUp.mock.calls.length).toBe(1);
+    expect(onKeyUp).toHaveBeenCalled();
+  });
+
   it('should apply class for isHeader prop', () => {
-    const container = mount(<MenuItem isHeader />);
+    const container = mount(<MenuItemLegacy isHeader />);
 
     expect(container.find('.md-menu-item__header').exists()).toEqual(true);
   });
 
   describe('tests for title Prop', () => {
     it('should not have title by default', () => {
-      const container = mount(<MenuItem />);
+      const container = mount(<MenuItemLegacy />);
 
       expect(container.find('.md-list-item').props().title).toEqual(undefined);
     });
 
     it('should handle title prop', () => {
-      const container = mount(<MenuItem title="testTitle" />);
+      const container = mount(<MenuItemLegacy title="testTitle" />);
 
       expect(container.find('.md-list-item').props().title).toEqual('testTitle');
     });

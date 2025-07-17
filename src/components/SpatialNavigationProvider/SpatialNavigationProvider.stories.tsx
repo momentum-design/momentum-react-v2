@@ -23,7 +23,6 @@ import Text from '../Text';
 import type { TreeNodeRecord } from '../Tree/Tree.types';
 import { PRESERVE_TABINDEX_CLASSNAME } from '../../utils/navigation';
 import Tree from '../Tree';
-import Flex from '../Flex';
 import argTypes from './SpatialNavigationProvider.stories.args';
 import { DEFAULTS } from './SpatialNavigationProvider.constants';
 import { visualDebugger } from './SpatialNavigationProvider.utils';
@@ -247,30 +246,30 @@ const TreeNavigation = Template(({ back }) => {
           gridTemplateRows: '1fr 8fr 1fr',
         }}
       >
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Top Left
           </ButtonPill>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Top
           </ButtonPill>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Top Right
           </ButtonPill>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Left
           </ButtonPill>
-        </Flex>
-        <Flex>
+        </div>
+        <div style={{ display: 'flex' }}>
           <Tree
             style={{ margin: 'auto', overflow: 'auto', maxHeight: '500px' }}
             treeStructure={exampleTree}
@@ -282,31 +281,31 @@ const TreeNavigation = Template(({ back }) => {
               <ExampleTreeNode key={node.id.toString()} node={node} />
             ))}
           </Tree>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Right
           </ButtonPill>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Bottom Left
           </ButtonPill>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Bottom
           </ButtonPill>
-        </Flex>
+        </div>
 
-        <Flex>
+        <div style={{ display: 'flex' }}>
           <ButtonPill outline inverted style={{ width: '10rem', margin: 'auto' }}>
             Bottom Right
           </ButtonPill>
-        </Flex>
+        </div>
       </main>
     </SpatialNavigationProvider>
   );
