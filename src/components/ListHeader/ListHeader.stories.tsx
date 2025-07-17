@@ -6,7 +6,7 @@ import React from 'react';
 import ListHeader, { ListHeaderProps } from './';
 import argTypes from './ListHeader.stories.args';
 import Documentation from './ListHeader.stories.docs.mdx';
-import { Icon, ListItemBaseSection, Text } from '..';
+import { ButtonPill, Icon, ListItemBaseSection, Text } from '..';
 import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
 
 export default {
@@ -143,6 +143,25 @@ Common.parameters = {
     {
       outline: true,
       style: { marginTop: '1rem' },
+    },
+    {
+      outline: true,
+      outlineColor: OUTLINE_COLOR.SECONDARY,
+      children: (
+        <>
+          <ListItemBaseSection position="start">
+            <Text type="body-secondary" tagName="small">
+              List header with focusable button
+            </Text>
+          </ListItemBaseSection>
+          <ListItemBaseSection position="end">
+            <ButtonPill variant="secondary" size={24} tabIndex={0}>
+              Test
+            </ButtonPill>
+          </ListItemBaseSection>
+        </>
+      ),
+      listItemBaseProps: { interactive: true, focusChild: true },
     },
   ],
 };

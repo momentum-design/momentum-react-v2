@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 
 import ListHeader, { LIST_HEADER_CONSTANTS as CONSTANTS } from './';
 import { OUTLINE_COLOR, OUTLINE_POSITION } from './ListHeader.constants';
+import ListItemBase from '../ListItemBase';
 
 jest.mock('uuid', () => {
   return {
@@ -195,6 +196,28 @@ describe('<ListHeader />', () => {
         .getDOMNode();
 
       expect(element.getAttribute('data-bold')).toBe(`${bold}`);
+    });
+
+    it('should pass listItemBaseProps through as expected', () => {
+      expect.assertions(1);
+
+      const listItemBaseProps = {
+        interactive: true,
+        focusChild: true,
+      };
+
+      const element = mount(<ListHeader listItemBaseProps={listItemBaseProps} />).find(
+        ListItemBase
+      );
+
+      expect(element.props()).toStrictEqual({
+        children: undefined,
+        className: 'md-list-header-list-item-base',
+        focusChild: true,
+        interactive: true,
+        isPadded: true,
+        size: 32,
+      });
     });
   });
 });

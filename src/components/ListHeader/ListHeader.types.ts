@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
+import { ListItemBaseProps } from '../ListItemBase';
 
 export type OutlinePosition = 'top' | 'bottom';
 export type OutlineColor = 'primary' | 'secondary';
@@ -47,4 +48,11 @@ export interface Props {
    * @default false
    */
   bold?: boolean;
+
+  /**
+   * Props to pass to the ListItemBase component.
+   * This is useful for passing additional props like `interactive`, `focusChild`, etc.
+   * @default {}
+   */
+  listItemBaseProps?: ListItemBaseProps;
 }

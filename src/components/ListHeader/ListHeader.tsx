@@ -8,7 +8,7 @@ import ListItemBase from '../ListItemBase';
 
 /**
  * The ListHeader component.
- * This is just the non-interactive version. (non-collapsible)
+ * By default, this is just the non-interactive version. (non-collapsible)
  */
 const ListHeader: FC<Props> = (props: Props) => {
   const {
@@ -20,6 +20,7 @@ const ListHeader: FC<Props> = (props: Props) => {
     outlinePosition = DEFAULTS.OUTLINE_POSITION,
     outlineColor = DEFAULTS.OUTLINE_COLOR,
     bold = DEFAULTS.BOLD,
+    listItemBaseProps = {},
   } = props;
 
   return (
@@ -34,7 +35,13 @@ const ListHeader: FC<Props> = (props: Props) => {
       id={id}
     >
       {outline && outlinePosition === 'top' && <div role="separator" className={STYLE.separator} />}
-      <ListItemBase interactive={false} isPadded={true} size={32} className={STYLE.listItemBase}>
+      <ListItemBase
+        interactive={false}
+        isPadded={true}
+        size={32}
+        className={STYLE.listItemBase}
+        {...listItemBaseProps}
+      >
         {children}
       </ListItemBase>
       {outline && outlinePosition === 'bottom' && (
