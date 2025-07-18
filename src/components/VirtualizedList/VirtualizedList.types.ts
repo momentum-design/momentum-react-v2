@@ -3,6 +3,7 @@ import type {
   VirtualizerProps,
 } from '@momentum-design/components/dist/components/virtualizedlist/virtualizedlist.types.js';
 import type { CSSProperties, ReactNode } from 'react';
+import { VirtualizedList as mdcVirtualizedListRef } from '@momentum-design/components';
 
 export interface Props extends VirtualizerProps {
   /**
@@ -40,3 +41,5 @@ export interface Props extends VirtualizerProps {
    */
   children: ReactNode;
 }
+
+export type VirtualizedListRef = mdcVirtualizedListRef;

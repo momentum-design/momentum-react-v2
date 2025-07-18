@@ -40,4 +40,16 @@ export default {
       },
     },
   },
+  scrollToIndex: {
+    description: 'index to scroll to in list',
+    control: { type: 'number' },
+    table: {
+      type: {
+        summary: 'number',
+      },
+      defaultValue: {
+        summary: '100',
+      },
+    },
+  },
 };

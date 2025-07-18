@@ -1,6 +1,5 @@
 import { default as VirtualizedList } from './VirtualizedList';
-import { Props } from './VirtualizedList.types';
 
-export type VirtualizedListProps = Props;
+export type { Props as VirtualizedListProps, VirtualizedListRef } from './VirtualizedList.types';
 
 export default VirtualizedList;
