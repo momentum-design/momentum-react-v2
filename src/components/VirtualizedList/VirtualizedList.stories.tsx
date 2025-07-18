@@ -41,7 +41,6 @@ const Example = Template<VirtualizedListPropsWithStoryBook>(
 
     const handleScrollToIndex = (index) => {
       if (virtualizedListRef.current) {
-        // Scroll to the last item in the list
         virtualizedListRef.current.virtualizer.scrollToIndex(index, { align: 'start' });
       }
     };
