@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import classnames from 'classnames';
+import { v4 as uuidV4 } from 'uuid';
 
 import { DEFAULTS, STYLE } from './SpaceRowContent.constants';
 import { Props } from './SpaceRowContent.types';
@@ -11,9 +12,10 @@ import DividerDot from '../DividerDot';
 import SecondLineElement from './SecondLineElement';
 import { cleanSecondLine } from './SpaceRowContent.utils';
 import ButtonCircle from '../ButtonCircle';
-import { Item } from '@react-stately/collections';
-import MenuTrigger from '../MenuTrigger';
-import Menu from '../Menu';
+import {
+  MenuPopover as MdcMenuPopover,
+  MenuItem as MdcMenuItem,
+} from '@momentum-design/components/dist/react';
 
 //TODO: support 2-line labels for right/position-end section.
 /**
@@ -42,6 +44,7 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
     onSelectMenuItem,
     menuTriggerLabel,
   } = props;
+  const [menuId] = useState(uuidV4);
 
   const renderText = () => {
     const secondLineArrayClean = cleanSecondLine(secondLine);
@@ -191,6 +194,13 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
     } else return null;
   };
 
+  const onMenuAction = useCallback(
+    ({ target }) => {
+      onSelectMenuItem?.(target.name);
+    },
+    [onSelectMenuItem]
+  );
+
   return (
     <>
       <ListItemBaseSection position="start">{avatar}</ListItemBaseSection>
@@ -205,25 +215,24 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
       <ListItemBaseSection position="end">{renderRightSection()}</ListItemBaseSection>
       {menuItems?.length ? (
         <ListItemBaseSection position="end" className={STYLE.menuTriggerWrapper}>
-          {
-            <MenuTrigger
-              triggerComponent={
-                <ButtonCircle
-                  variant="tertiary"
-                  size={isCompact ? 20 : 28}
-                  aria-label={menuTriggerLabel}
-                  data-testid="menu-trigger-button"
-                  prefixIcon="more-bold"
-                />
-              }
-            >
-              <Menu selectionMode="single" onAction={onSelectMenuItem}>
-                {menuItems.map(({ key, text }) => (
-                  <Item key={key}>{text}</Item>
-                ))}
-              </Menu>
-            </MenuTrigger>
-          }
+          <ButtonCircle
+            id={menuId}
+            variant="tertiary"
+            size={isCompact ? 20 : 28}
+            aria-label={menuTriggerLabel}
+            data-testid="menu-trigger-button"
+            prefixIcon="more-bold"
+          />
+          <MdcMenuPopover
+            onAction={onMenuAction}
+            showArrow
+            triggerID={menuId}
+            placement="bottom-end"
+          >
+            {menuItems.map(({ key, text }) => (
+              <MdcMenuItem key={key} name={key} label={text} />
+            ))}
+          </MdcMenuPopover>
         </ListItemBaseSection>
       ) : null}
     </>
