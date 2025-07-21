@@ -95,7 +95,6 @@ export {
   RadioGroup as RadioGroupNext,
   AddReactionButton,
   Menu as MenuNext,
-  MenuTrigger,
   ListHeader as ListHeaderLegacy,
   LoadingSpinner,
   MeetingContainer,

@@ -523,7 +523,7 @@ describe('<SpaceRowContent />', () => {
 
   describe('actions', () => {
     it('should show menu when menuItems is provided', async () => {
-      expect.assertions(2);
+      expect.assertions(3);
 
       render(
         <SpaceRowContent
@@ -538,7 +538,8 @@ describe('<SpaceRowContent />', () => {
       fireEvent.click(triggerButton);
 
       await waitFor(() => {
-        expect(screen.getByRole('menuitemradio', { name: 'Item 1' })).toBeInTheDocument();
+        expect(screen.getByRole('menu')).toBeInTheDocument();
+        expect(screen.getByRole('menu').children[0]['label']).toEqual('Item 1');
       });
     });
   });
