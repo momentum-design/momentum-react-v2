@@ -157,6 +157,7 @@ export {
   Skeleton,
   Textarea as TextArea,
   Tooltip,
+  ToggleTip,
 } from '@momentum-design/components/dist/react';
 
 /** Momentum Design types */
