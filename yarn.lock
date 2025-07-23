@@ -2909,9 +2909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/components@npm:0.95.2":
-  version: 0.95.2
-  resolution: "@momentum-design/components@npm:0.95.2"
+"@momentum-design/components@npm:0.95.3":
+  version: 0.95.3
+  resolution: "@momentum-design/components@npm:0.95.3"
   dependencies:
     "@floating-ui/dom": ^1.6.12
     "@lit/context": ^1.1.2
@@ -2925,7 +2925,7 @@ __metadata:
     lit: ^3.2.0
     lottie-web: ^5.12.2
     uuid: ^11.0.5
-  checksum: eeaeb1839828176041d821f1f38a1bfa6ecb7daf46a8f626f6c23ac0ba5f05abee706c7a0d862c00c477611b5bbcc59eeea47844fc125259ae8f92bb820a2401
+  checksum: b6479ee06496a1c8893e0b800d93eb7438d8c332e1dafda1faaeeb165bb3dc56c92b07a159d1d339c7eb01ca6f64bc71cef29aec1a8a01e14c5db64e41306ee8
   languageName: node
   linkType: hard
 
@@ -2994,7 +2994,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.1
     "@hot-loader/react-dom": ~16.8.0
     "@momentum-design/animations": 0.3.3
-    "@momentum-design/components": 0.95.2
+    "@momentum-design/components": 0.95.3
     "@momentum-design/fonts": 0.0.8
     "@momentum-design/icons": 0.26.0
     "@momentum-design/tokens": 0.6.1

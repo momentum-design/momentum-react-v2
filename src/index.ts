@@ -168,6 +168,8 @@ export type {
   MenuPopoverActionEvent,
   MenuPopoverChangeEvent,
   MenuSectionChangeEvent,
+  SelectChangeEvent,
+  SelectInputEvent,
 } from '@momentum-design/components';
 
 /** Other */
