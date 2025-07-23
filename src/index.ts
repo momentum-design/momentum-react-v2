@@ -147,6 +147,8 @@ export type {
 export {
   Animation,
   AvatarButton,
+  Brandvisual,
+  Bullet,
   Divider,
   Listheader as ListHeader,
   MenuItem,
