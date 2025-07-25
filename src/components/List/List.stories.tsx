@@ -22,12 +22,14 @@ import MeetingListItem from '../MeetingListItem';
 import { MeetingMarker } from '../MeetingListItem/MeetingListItem.types';
 import ButtonGroup from '../ButtonGroup';
 import ButtonHyperlink from '../ButtonHyperlink';
-import Badge from '../Badge';
-import Menu from '../Menu';
-import { Item } from '@react-stately/collections';
-import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, MenuTrigger, SearchInput } from '..';
+
+import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, SearchInput } from '..';
 import { omit, range, times } from 'lodash';
 import { ListRefObject } from './List.types';
+import {
+  MenuItem as MdcMenuItem,
+  MenuPopover as MdcMenuPopover,
+} from '@momentum-design/components/dist/react';
 
 const TEST_LIST_SIZE = 30;
 
@@ -105,19 +107,15 @@ Common.parameters = {
                     <ButtonPill disabled color="join" size={28}>
                       Button 3
                     </ButtonPill>
-                    <MenuTrigger
-                      triggerComponent={
-                        <ButtonPill size={28}>
-                          <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
-                        </ButtonPill>
-                      }
-                    >
-                      <Menu selectionMode="single" key="2">
-                        <Item key="one">One</Item>
-                        <Item key="two">Two</Item>
-                        <Item key="three">Three</Item>
-                      </Menu>
-                    </MenuTrigger>
+
+                    <ButtonPill size={28} id={`menu-trigger-${index}`}>
+                      <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+                    </ButtonPill>
+                    <MdcMenuPopover showArrow triggerID={`menu-trigger-${index}`}>
+                      <MdcMenuItem key="one" label="One" />
+                      <MdcMenuItem key="two" label="Two" />
+                      <MdcMenuItem key="three" label="Three" />
+                    </MdcMenuPopover>
                   </div>
                 }
               />

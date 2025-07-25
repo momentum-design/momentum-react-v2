@@ -42,7 +42,6 @@ export { default as ReactionBadge } from './ReactionBadge';
 export { default as ReactionButton } from './ReactionButton';
 export { default as ReactionPicker } from './ReactionPicker';
 export { default as AddReactionButton } from './AddReactionButton';
-export { default as MenuTrigger } from './MenuTrigger';
 export { default as Menu, SelectionGroup } from './Menu';
 export { default as DividerDot } from './DividerDot';
 export { default as Popover } from './Popover';
