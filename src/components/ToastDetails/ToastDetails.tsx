@@ -47,9 +47,7 @@ const ToastDetails: FC<Props> = (props: Props) => {
 
   const contentComponent = (
     <div className={STYLE.content}>
-      <div className={STYLE.title} data-centered={!(badges || info || subject)}>
-        {title || children}
-      </div>
+      <div className={STYLE.title}>{title || children}</div>
       {subject ? <div className={STYLE.subject}>{subject}</div> : null}
       {info || badges ? infoComponent : null}
     </div>
