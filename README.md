@@ -1,8 +1,16 @@
 # Momentum UI - React Collaboration
 
+> ⚠️ **Deprecation Notice:**  
+> This library is scheduled for deprecation and will no longer receive new features or updates.  
+> Please migrate to [Momentum Design Components](https://www.npmjs.com/package/@momentum-design/components) for ongoing support and future development.  
+> Existing consumers should plan their migration as soon as possible to avoid disruption.
+
+---
+
 [![license](https://img.shields.io/github/license/momentum-design/momentum-ui.svg?color=blueviolet)](https://github.com/momentum-design/momentum-ui/blob/master/react/LICENSE)
 ![state](https://img.shields.io/badge/state-alpha-blue)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 
 **Momentum React V2** is a reusable [React](https://reactjs.org/) component library for Cisco's
 Webex web applications derived from Cisco's [Momentum Design](https://momentum.design/).
