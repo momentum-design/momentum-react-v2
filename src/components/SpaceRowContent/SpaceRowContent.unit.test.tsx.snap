@@ -1062,275 +1062,57 @@ exports[`<SpaceRowContent /> snapshot should match snapshot with menuItems 1`] =
       className="md-space-row-content-menu-trigger-wrapper"
       data-position="end"
     >
-      <ForwardRef
-        triggerComponent={
-          <ButtonCircle
-            aria-label="Menu trigger label"
-            data-testid="menu-trigger-button"
-            prefixIcon="more-bold"
-            size={28}
-            variant="tertiary"
-          />
-        }
+      <ButtonCircle
+        aria-label="Menu trigger label"
+        data-testid="menu-trigger-button"
+        id="1"
+        prefixIcon="more-bold"
+        size={28}
+        variant="tertiary"
       >
-        <Popover
-          autoFocus={false}
-          className="md-menu-trigger-wrapper"
-          color="primary"
-          hideOnEsc={false}
-          interactive={true}
-          onClickOutside={[Function]}
-          onHidden={[Function]}
-          onKeyDown={[Function]}
-          onShow={[Function]}
-          placement="bottom-start"
-          role="generic"
-          setInstance={[Function]}
-          showArrow={false}
-          trigger="click"
-          triggerComponent={
-            <ButtonCircle
-              aria-controls={null}
-              aria-expanded={false}
-              aria-haspopup={true}
-              aria-label="Menu trigger label"
-              data-testid="menu-trigger-button"
-              id="test-ID"
-              onPress={[Function]}
-              onPressStart={[Function]}
-              prefixIcon="more-bold"
-              size={28}
-              variant="tertiary"
-            />
-          }
-          variant="medium"
+        <Button
+          aria-label="Menu trigger label"
+          className="md-button-circle-wrapper"
+          color="default"
+          data-testid="menu-trigger-button"
+          id="1"
+          onClick={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          prefixIcon="more-bold"
+          size={28}
+          variant="tertiary"
         >
-          <LazyTippy
-            animation={false}
-            appendTo="parent"
-            hideOnClick={true}
-            interactive={true}
-            offset={
-              Array [
-                0,
-                5,
-              ]
-            }
-            onClickOutside={[Function]}
-            onHidden={[Function]}
-            onShow={[Function]}
-            placement="bottom-start"
-            plugins={
-              Array [
-                Object {
-                  "fn": [Function],
-                  "name": "addBackdropPlugin",
-                },
-              ]
-            }
-            popperOptions={
-              Object {
-                "modifiers": Array [
-                  Object {
-                    "enabled": false,
-                    "name": "arrow",
-                    "options": Object {
-                      "element": "#arrow1",
-                      "padding": 5,
-                    },
-                  },
-                  Object {
-                    "name": "preventOverflow",
-                    "options": Object {
-                      "altAxis": true,
-                      "boundariesElement": "scrollParent",
-                      "padding": 8,
-                    },
-                  },
-                ],
-                "strategy": "absolute",
-              }
-            }
-            render={[Function]}
-            setInstance={[Function]}
-            trigger="click"
+          <mdc-button
+            aria-label="Menu trigger label"
+            class="md-button-circle-wrapper"
+            data-testid="menu-trigger-button"
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            suppressHydrationWarning={true}
+          />
+        </Button>
+      </ButtonCircle>
+      <MenuPopover
+        onAction={[Function]}
+        placement="bottom-end"
+        showArrow={true}
+        triggerID="1"
+      >
+        <mdc-menupopover
+          suppressHydrationWarning={true}
+        >
+          <MenuItem
+            key="item-1"
+            label="Item 1"
+            name="item-1"
           >
-            <ForwardRef(TippyWrapper)
-              animation={false}
-              appendTo="parent"
-              hideOnClick={true}
-              interactive={true}
-              offset={
-                Array [
-                  0,
-                  5,
-                ]
-              }
-              onClickOutside={[Function]}
-              onHidden={[Function]}
-              onShow={[Function]}
-              placement="bottom-start"
-              plugins={
-                Array [
-                  Object {
-                    "fn": [Function],
-                  },
-                  Object {
-                    "fn": [Function],
-                  },
-                  Object {
-                    "fn": [Function],
-                  },
-                  Object {
-                    "fn": [Function],
-                    "name": "addBackdropPlugin",
-                  },
-                ]
-              }
-              popperOptions={
-                Object {
-                  "modifiers": Array [
-                    Object {
-                      "enabled": false,
-                      "name": "arrow",
-                      "options": Object {
-                        "element": "#arrow1",
-                        "padding": 5,
-                      },
-                    },
-                    Object {
-                      "name": "preventOverflow",
-                      "options": Object {
-                        "altAxis": true,
-                        "boundariesElement": "scrollParent",
-                        "padding": 8,
-                      },
-                    },
-                  ],
-                  "strategy": "absolute",
-                }
-              }
-              render={[Function]}
-              trigger="click"
-            >
-              <Tippy
-                animation={false}
-                appendTo="parent"
-                hideOnClick={true}
-                interactive={true}
-                offset={
-                  Array [
-                    0,
-                    5,
-                  ]
-                }
-                onClickOutside={[Function]}
-                onHidden={[Function]}
-                onShow={[Function]}
-                placement="bottom-start"
-                plugins={
-                  Array [
-                    Object {
-                      "fn": [Function],
-                    },
-                    Object {
-                      "fn": [Function],
-                    },
-                    Object {
-                      "fn": [Function],
-                    },
-                    Object {
-                      "fn": [Function],
-                      "name": "addBackdropPlugin",
-                    },
-                  ]
-                }
-                popperOptions={
-                  Object {
-                    "modifiers": Array [
-                      Object {
-                        "enabled": false,
-                        "name": "arrow",
-                        "options": Object {
-                          "element": "#arrow1",
-                          "padding": 5,
-                        },
-                      },
-                      Object {
-                        "name": "preventOverflow",
-                        "options": Object {
-                          "altAxis": true,
-                          "boundariesElement": "scrollParent",
-                          "padding": 8,
-                        },
-                      },
-                    ],
-                    "strategy": "absolute",
-                  }
-                }
-                render={[Function]}
-                trigger="click"
-              >
-                <ButtonCircle
-                  aria-controls={null}
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  aria-label="Menu trigger label"
-                  data-testid="menu-trigger-button"
-                  id="test-ID"
-                  onPress={[Function]}
-                  onPressStart={[Function]}
-                  prefixIcon="more-bold"
-                  size={28}
-                  variant="tertiary"
-                >
-                  <Button
-                    aria-controls={null}
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    aria-label="Menu trigger label"
-                    className="md-button-circle-wrapper"
-                    color="default"
-                    data-testid="menu-trigger-button"
-                    id="test-ID"
-                    onClick={[Function]}
-                    onPointerDown={[Function]}
-                    onPointerUp={[Function]}
-                    onPressStart={[Function]}
-                    prefixIcon="more-bold"
-                    size={28}
-                    variant="tertiary"
-                  >
-                    <mdc-button
-                      aria-controls={null}
-                      aria-expanded={false}
-                      aria-haspopup={true}
-                      aria-label="Menu trigger label"
-                      class="md-button-circle-wrapper"
-                      data-testid="menu-trigger-button"
-                      onPointerDown={[Function]}
-                      onPointerUp={[Function]}
-                      onPressStart={[Function]}
-                      suppressHydrationWarning={true}
-                    />
-                  </Button>
-                </ButtonCircle>
-                <Portal
-                  containerInfo={
-                    <div
-                      data-tippy-root=""
-                      id="tippy-1"
-                      style="z-index: 9999;"
-                    >
-                      
-                    </div>
-                  }
-                />
-              </Tippy>
-            </ForwardRef(TippyWrapper)>
-          </LazyTippy>
-        </Popover>
-      </ForwardRef>
+            <mdc-menuitem
+              suppressHydrationWarning={true}
+            />
+          </MenuItem>
+        </mdc-menupopover>
+      </MenuPopover>
     </div>
   </ListItemBaseSection>
 </SpaceRowContent>

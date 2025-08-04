@@ -4,9 +4,6 @@ import { MultiTemplate, Template } from '../../storybook/helper.stories.template
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
 import StyleDocs from '../../storybook/docs.stories.style.mdx';
 
-import MenuTrigger from '../MenuTrigger';
-import Menu from '../Menu';
-import { Item } from '@react-stately/collections';
 import ButtonPill from '../ButtonPill';
 import ButtonCircle from '../ButtonCircle';
 import ButtonCircleToggle from '../ButtonCircleToggle';
@@ -16,6 +13,11 @@ import Icon from '../Icon';
 import ButtonGroup, { ButtonGroupProps } from './';
 import argTypes from './ButtonGroup.stories.args';
 import Documentation from './ButtonGroup.stories.docs.mdx';
+import {
+  MenuItem as MdcMenuItem,
+  MenuPopover as MdcMenuPopover,
+} from '@momentum-design/components/dist/react';
+import { PRESERVE_TABINDEX_CLASSNAME } from '@momentum-ui/react-collaboration';
 
 export default {
   title: 'Momentum UI/ButtonGroup',
@@ -83,17 +85,18 @@ const separatorCommonChildren = [
 
 const callControlsCommonChildren = [
   <ButtonCircleToggle key="0" size={40} prefixIcon="raise-hand-regular" />,
-  <MenuTrigger
-    key="1"
-    placement="top-end"
-    triggerComponent={<ButtonCircle size={40} variant="tertiary" prefixIcon="reactions-regular" />}
-    children={[
-      <Menu key="0" selectionMode="single">
-        <Item>Item 1</Item>
-        <Item>Item 2</Item>
-      </Menu>,
-    ]}
-  />,
+  <>
+    <ButtonCircle size={40} variant="tertiary" prefixIcon="reactions-regular" id="menu-trigger" />
+    <MdcMenuPopover
+      className={PRESERVE_TABINDEX_CLASSNAME}
+      showArrow
+      triggerID="menu-trigger"
+      placement="top-end"
+    >
+      <MdcMenuItem name="Item 1" label="Item 1" />
+      <MdcMenuItem name="Item 2" label="Item 2" />
+    </MdcMenuPopover>
+  </>,
 ];
 
 const paginationCommonChildren = [
@@ -152,19 +155,17 @@ AudioVideoControls.parameters = {
             Mute
           </div>
         </ButtonPill>,
-        <MenuTrigger
-          key="2"
-          placement="top-end"
-          triggerComponent={
-            <ButtonCircle variant="secondary" key="1" size={40} prefixIcon="arrow-down-regular" />
-          }
-          children={[
-            <Menu key="0" selectionMode="single">
-              <Item>Item 1</Item>
-              <Item>Item 2</Item>
-            </Menu>,
-          ]}
+        <ButtonCircle
+          variant="secondary"
+          key="1"
+          size={40}
+          prefixIcon="arrow-down-regular"
+          id="menu-trigger"
         />,
+        <MdcMenuPopover key="" showArrow triggerID="menu-trigger" placement="top-end">
+          <MdcMenuItem name="Item 1" label="Item 1" />
+          <MdcMenuItem name="Item 2" label="Item 2" />
+        </MdcMenuPopover>,
       ],
       round: true,
       compressed: true,

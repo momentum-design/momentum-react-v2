@@ -10,9 +10,10 @@ import Tree, { TreeProps, useTreeContext } from './';
 import { convertNestedTree2MappedTree, mapTree } from './Tree.utils';
 import TreeNodeBase from '../TreeNodeBase';
 import Icon from '../Icon';
-import Menu from '../Menu';
-import { Item } from '@react-stately/collections';
-import MenuTrigger from '../MenuTrigger';
+import {
+  MenuPopover as MdcMenuPopover,
+  MenuItem as MdcMenuItem,
+} from '@momentum-design/components/dist/react';
 import ButtonCircle from '../ButtonCircle';
 import { TreeNodeRecord, TreeRefObject } from './Tree.types';
 import ButtonPill from '../ButtonPill';
@@ -88,23 +89,25 @@ const ExampleTreeNode = ({ node }: ExampleTreeNodeProps) => {
             <Text tagName="p">Node {node.id}</Text>
           </div>
           {nodeDetails.isLeaf && (
-            <MenuTrigger
-              className={PRESERVE_TABINDEX_CLASSNAME}
-              triggerComponent={
-                <ButtonCircle
-                  size={20}
-                  aria-label="More menu"
-                  variant="tertiary"
-                  prefixIcon="more-bold"
-                />
-              }
-            >
-              <Menu selectionMode="single" key="2">
-                <Item key="one">One</Item>
-                <Item key="two">Two</Item>
-                <Item key="three">Three</Item>
-              </Menu>
-            </MenuTrigger>
+            <>
+              <ButtonCircle
+                id={`menu-trigger-${node.id}`}
+                variant="tertiary"
+                aria-label="More menu"
+                data-testid="menu-trigger-button"
+                prefixIcon="more-bold"
+              />
+              <MdcMenuPopover
+                className={PRESERVE_TABINDEX_CLASSNAME}
+                showArrow
+                triggerID={`menu-trigger-${node.id}`}
+                placement="bottom"
+              >
+                <MdcMenuItem name="One" label="One" />
+                <MdcMenuItem name="Two" label="Two" />
+                <MdcMenuItem name="Three" label="Three" />
+              </MdcMenuPopover>
+            </>
           )}
         </div>
       )}

@@ -16,17 +16,18 @@ import { mapTree, useTreeContext, convertNestedTree2MappedTree } from '../Tree/T
 import TreeNodeBase from '../TreeNodeBase';
 import Icon from '../Icon';
 import { createTreeNode as tNode } from '../Tree/test.utils';
-import MenuTrigger from '../MenuTrigger';
-import Menu from '../Menu';
 import ButtonCircle from '../ButtonCircle';
 import Text from '../Text';
 import type { TreeNodeRecord } from '../Tree/Tree.types';
-import { PRESERVE_TABINDEX_CLASSNAME } from '../../utils/navigation';
 import Tree from '../Tree';
 import argTypes from './SpatialNavigationProvider.stories.args';
 import { DEFAULTS } from './SpatialNavigationProvider.constants';
 import { visualDebugger } from './SpatialNavigationProvider.utils';
 import ButtonGroup from '../ButtonGroup';
+import {
+  MenuItem as MdcMenuItem,
+  MenuPopover as MdcMenuPopover,
+} from '@momentum-design/components/dist/react';
 
 export default {
   title: 'Momentum UI/SpatialNavigationProvider',
@@ -104,30 +105,23 @@ const Form = Template(({ back }) => {
           </Select>
 
           <ButtonGroup round compressed>
-            <ButtonPill outline ghost key="0" size={40} style={{ minWidth: '6.8rem' }}>
+            <ButtonPill
+              outline
+              ghost
+              key="0"
+              size={40}
+              style={{ minWidth: '6.8rem' }}
+              id="menu-trigger"
+            >
               <Icon key="0" name="microphone-on" autoScale={125} style={{ marginLeft: 'auto' }} />
               <div key="1" style={{ marginRight: 'auto' }}>
                 Mute
               </div>
             </ButtonPill>
-            <MenuTrigger
-              key="2"
-              placement="top-end"
-              triggerComponent={
-                <ButtonCircle
-                  key="1"
-                  size={40}
-                  variant="secondary"
-                  prefixIcon="arrow-down-regular"
-                />
-              }
-              children={[
-                <Menu key="0" selectionMode="single">
-                  <Item>Item 1</Item>
-                  <Item>Item 2</Item>
-                </Menu>,
-              ]}
-            />
+            <MdcMenuPopover showArrow triggerID="menu-trigger" placement="bottom">
+              <MdcMenuItem name="Item 1" label="Item 1" />
+              <MdcMenuItem name="Item 2" label="Item 2" />
+            </MdcMenuPopover>
           </ButtonGroup>
 
           <RadioGroup
@@ -207,23 +201,26 @@ const ExampleTreeNode = ({ node }: { node: TreeNodeRecord }) => {
             <Text tagName="p">Node {node.id}</Text>
           </div>
           {nodeDetails.isLeaf && (
-            <MenuTrigger
-              className={PRESERVE_TABINDEX_CLASSNAME}
-              triggerComponent={
-                <ButtonCircle
-                  size={20}
-                  aria-label="More menu"
-                  variant="tertiary"
-                  prefixIcon="more-bold"
-                />
-              }
-            >
-              <Menu selectionMode="single" key="2">
-                <Item key="one">One</Item>
-                <Item key="two">Two</Item>
-                <Item key="three">Three</Item>
-              </Menu>
-            </MenuTrigger>
+            <>
+              <ButtonCircle
+                id={`menu-trigger-${node.id}`}
+                size={20}
+                aria-label="More menu"
+                variant="tertiary"
+                prefixIcon="more-bold"
+              >
+                <div>Menu</div> <Icon name="arrow-down" weight="bold" autoScale={100} />
+              </ButtonCircle>
+              <MdcMenuPopover
+                showArrow
+                triggerID={`menu-trigger-${node.id}`}
+                placement="bottom-end"
+              >
+                <MdcMenuItem key="one" label="One" />
+                <MdcMenuItem key="two" label="Two" />
+                <MdcMenuItem key="three" label="Three" />
+              </MdcMenuPopover>
+            </>
           )}
         </div>
       )}

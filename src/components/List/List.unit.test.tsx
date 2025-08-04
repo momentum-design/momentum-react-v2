@@ -10,13 +10,14 @@ import {
   AriaToolbar,
   AriaToolbarItem,
   ListItemBaseSection,
-  MenuTrigger,
 } from '@momentum-ui/react-collaboration';
 import ButtonPill from '../ButtonPill';
-import Menu from '../Menu';
-import { Item } from '@react-stately/collections';
 import { ListRefObject } from './List.types';
 import { renderWithWebComponent } from '../../../test/utils';
+import {
+  MenuPopover as MdcMenuPopover,
+  MenuItem as MdcMenuItem,
+} from '@momentum-design/components/dist/react';
 
 jest.mock('uuid', () => {
   return {
@@ -525,13 +526,14 @@ describe('<List />', () => {
       await renderWithWebComponent(
         <List listSize={1}>
           <ListItemBase key="0" itemIndex={0}>
-            <MenuTrigger triggerComponent={<ButtonPill size={28}>Menu</ButtonPill>}>
-              <Menu selectionMode="single" key="2">
-                <Item key="one">menu item 1</Item>
-                <Item key="two">menu item 2</Item>
-                <Item key="three">menu item 3</Item>
-              </Menu>
-            </MenuTrigger>
+            <ButtonPill size={28} id="trigger-id">
+              Menu
+            </ButtonPill>
+            <MdcMenuPopover key="2" triggerId="trigger-id">
+              <MdcMenuItem key="one">menu item 1</MdcMenuItem>
+              <MdcMenuItem key="two">menu item 2</MdcMenuItem>
+              <MdcMenuItem key="three">menu item 3</MdcMenuItem>
+            </MdcMenuPopover>
           </ListItemBase>
         </List>
       );
