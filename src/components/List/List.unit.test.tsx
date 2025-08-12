@@ -529,7 +529,7 @@ describe('<List />', () => {
             <ButtonPill size={28} id="trigger-id">
               Menu
             </ButtonPill>
-            <MdcMenuPopover key="2" triggerId="trigger-id">
+            <MdcMenuPopover key="2" triggerID="trigger-id">
               <MdcMenuItem key="one">menu item 1</MdcMenuItem>
               <MdcMenuItem key="two">menu item 2</MdcMenuItem>
               <MdcMenuItem key="three">menu item 3</MdcMenuItem>
