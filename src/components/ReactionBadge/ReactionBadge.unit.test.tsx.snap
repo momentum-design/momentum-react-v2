@@ -5,7 +5,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
   <mdc-button
     class="md-reaction-badge-wrapper"
     color="default"
-    data-btn-type="pill"
+    data-btn-type="pill-with-icon"
     data-count="1"
     data-reacted="false"
     role="button"
@@ -15,13 +15,17 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot 1`] = `
     variant="secondary"
   >
     <div
-      class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
-      data-scale="12"
+      slot="prefix"
     >
-      <mdc-animation
-        data-name="haha"
-        name="haha"
-      />
+      <div
+        class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
+        data-scale="12"
+      >
+        <mdc-animation
+          data-name="haha"
+          name="haha"
+        />
+      </div>
     </div>
     <span
       class="reaction-badge-count"
@@ -35,7 +39,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
   <mdc-button
     class="example-class md-reaction-badge-wrapper"
     color="default"
-    data-btn-type="pill"
+    data-btn-type="pill-with-icon"
     data-count="1"
     data-reacted="false"
     role="button"
@@ -45,13 +49,17 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with class
     variant="secondary"
   >
     <div
-      class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
-      data-scale="12"
+      slot="prefix"
     >
-      <mdc-animation
-        data-name="haha"
-        name="haha"
-      />
+      <div
+        class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
+        data-scale="12"
+      >
+        <mdc-animation
+          data-name="haha"
+          name="haha"
+        />
+      </div>
     </div>
     <span
       class="reaction-badge-count"
@@ -65,7 +73,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
   <mdc-button
     class="md-reaction-badge-wrapper"
     color="default"
-    data-btn-type="pill"
+    data-btn-type="pill-with-icon"
     data-count="1"
     data-reacted="false"
     role="button"
@@ -75,13 +83,17 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with count
     variant="secondary"
   >
     <div
-      class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
-      data-scale="12"
+      slot="prefix"
     >
-      <mdc-animation
-        data-name="haha"
-        name="haha"
-      />
+      <div
+        class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
+        data-scale="12"
+      >
+        <mdc-animation
+          data-name="haha"
+          name="haha"
+        />
+      </div>
     </div>
     <span
       class="reaction-badge-count"
@@ -97,7 +109,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
   <mdc-button
     class="md-reaction-badge-wrapper"
     color="default"
-    data-btn-type="pill"
+    data-btn-type="pill-with-icon"
     data-count="1"
     data-reacted="false"
     id="example-id"
@@ -108,13 +120,17 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with id 1`
     variant="secondary"
   >
     <div
-      class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
-      data-scale="12"
+      slot="prefix"
     >
-      <mdc-animation
-        data-name="haha"
-        name="haha"
-      />
+      <div
+        class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
+        data-scale="12"
+      >
+        <mdc-animation
+          data-name="haha"
+          name="haha"
+        />
+      </div>
     </div>
     <span
       class="reaction-badge-count"
@@ -128,7 +144,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
   <mdc-button
     class="md-reaction-badge-wrapper"
     color="default"
-    data-btn-type="pill"
+    data-btn-type="pill-with-icon"
     data-count="1"
     data-reacted="true"
     role="button"
@@ -138,13 +154,17 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with react
     variant="secondary"
   >
     <div
-      class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
-      data-scale="12"
+      slot="prefix"
     >
-      <mdc-animation
-        data-name="haha"
-        name="haha"
-      />
+      <div
+        class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
+        data-scale="12"
+      >
+        <mdc-animation
+          data-name="haha"
+          name="haha"
+        />
+      </div>
     </div>
     <span
       class="reaction-badge-count"
@@ -158,7 +178,7 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
   <mdc-button
     class="md-reaction-badge-wrapper"
     color="default"
-    data-btn-type="pill"
+    data-btn-type="pill-with-icon"
     data-count="1"
     data-reacted="false"
     role="button"
@@ -169,13 +189,17 @@ exports[`<ReactionBadge name="haha" /> snapshot should match snapshot with style
     variant="secondary"
   >
     <div
-      class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
-      data-scale="12"
+      slot="prefix"
     >
-      <mdc-animation
-        data-name="haha"
-        name="haha"
-      />
+      <div
+        class="md-reaction-wrapper md-icon-scales md-reaction-loaded"
+        data-scale="12"
+      >
+        <mdc-animation
+          data-name="haha"
+          name="haha"
+        />
+      </div>
     </div>
     <span
       class="reaction-badge-count"

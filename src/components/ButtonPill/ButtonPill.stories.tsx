@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icon from '../Icon';
+import { Icon as MdcIcon } from '@momentum-design/components/dist/react';
 
 import { MultiTemplate, Template } from '../../storybook/helper.stories.templates';
 import { DocumentationPage } from '../../storybook/helper.stories.docs';
@@ -230,14 +231,11 @@ delete Common.argTypes.children;
 Common.parameters = {
   variants: [
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<MdcIcon key={0} name="open-pages-bold" />, <div key={1}>Example Text</div>],
     },
     {
       children: [
-        <Icon key={0} name="audio-call" autoScale={125} />,
+        <MdcIcon key={0} name="audio-call-bold" />,
         <div key={1}>Example Text</div>,
         <Icon key={2} name="arrow-down" weight="bold" autoScale={125} />,
       ],

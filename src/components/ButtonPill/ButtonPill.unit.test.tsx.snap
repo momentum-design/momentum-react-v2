@@ -202,6 +202,85 @@ exports[`<ButtonPill /> snapshot should match snapshot when width is grown 1`] =
 </div>
 `;
 
+exports[`<ButtonPill /> snapshot should match snapshot with a postfix icon 1`] = `
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill-with-icon"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
+  >
+    Example Text
+    <mdc-icon
+      name="placeholder-bold"
+      slot="postfix"
+    />
+  </mdc-button>
+</div>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot with a prefix icon 1`] = `
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill-with-icon"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
+  >
+    <mdc-icon
+      name="placeholder-bold"
+      slot="prefix"
+    />
+    Example Text
+  </mdc-button>
+</div>
+`;
+
+exports[`<ButtonPill /> snapshot should match snapshot with both a prefix and postfix icon 1`] = `
+<div>
+  <mdc-button
+    class="md-button-pill-wrapper"
+    color="default"
+    data-btn-type="pill-with-icon"
+    data-disabled-outline="false"
+    data-grown="false"
+    role="button"
+    size="40"
+    tabindex="0"
+    type="button"
+    variant="primary"
+  >
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+      data-autoscale="false"
+      data-test="placeholder"
+      name="placeholder-regular"
+      slot="prefix"
+    />
+    Example Text
+    <mdc-icon
+      class="md-icon-wrapper md-icon-auto-scales md-icon-scales md-icon-no-shrink"
+      data-autoscale="false"
+      data-test="placeholder"
+      name="placeholder-regular"
+      slot="postfix"
+    />
+  </mdc-button>
+</div>
+`;
+
 exports[`<ButtonPill /> snapshot should match snapshot with className 1`] = `
 <div>
   <mdc-button
