@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React, { forwardRef, RefObject } from 'react';
+import React, { forwardRef, ReactElement, RefObject } from 'react';
 import classnames from 'classnames';
 import { Button as MdcButton } from '@momentum-design/components/dist/react';
 import type { Button, ButtonVariant } from '@momentum-design/components';
@@ -67,6 +67,44 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<Button>) => 
     }
   };
 
+  const processChildren = (children: React.ReactNode) => {
+    const childArray = React.Children.toArray(children);
+
+    return React.Children.map(childArray, (child, index) => {
+      const ChildElement = child as ReactElement;
+
+      // @ts-ignore
+      const isMrv2Icon = ChildElement?.type?.displayName === 'Mrv2Icon';
+      // @ts-ignore
+      const isMdcIcon = ChildElement?.type?.displayName === 'Icon';
+
+      if (isMrv2Icon || isMdcIcon) {
+        // Check if there are meaningful children before or after this icon
+        const hasChildrenBefore = childArray
+          .slice(0, index)
+          .some((c) => React.isValidElement(c) || (typeof c === 'string' && c.trim()));
+        const hasChildrenAfter = childArray
+          .slice(index + 1)
+          .some((c) => React.isValidElement(c) || (typeof c === 'string' && c.trim()));
+
+        // Determine slot based on position
+        let slot = '';
+        if (!hasChildrenBefore && hasChildrenAfter) {
+          slot = 'prefix';
+        } else if (hasChildrenBefore && !hasChildrenAfter) {
+          slot = 'postfix';
+        }
+
+        // Clone the element with the slot prop if a slot was determined
+        return slot ? React.cloneElement(ChildElement, { slot }) : child;
+      }
+
+      return ChildElement;
+    });
+  };
+
+  const processedChildren = processChildren(children);
+
   return (
     <MdcButton
       variant={variant}
@@ -82,7 +120,7 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<Button>) => 
       className={classnames(STYLE.wrapper, className)}
       {...rest}
     >
-      {children}
+      {processedChildren}
     </MdcButton>
   );
 });

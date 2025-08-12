@@ -5,6 +5,8 @@ import '@testing-library/jest-dom';
 import { renderWithWebComponent } from '../../../test/utils';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { Icon as MdcIcon } from '@momentum-design/components/dist/react';
+import Icon from '../Icon';
 
 const { COLORS, DEFAULTS, SIZES, STYLE } = CONSTANTS;
 
@@ -162,6 +164,43 @@ describe('<ButtonPill />', () => {
       const { container } = await setup(
         <ButtonPill outline={outline} inverted={inverted}>
           Example Text
+        </ButtonPill>
+      );
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with a prefix icon', async () => {
+      expect.assertions(1);
+
+      const { container } = await setup(
+        <ButtonPill>
+          <MdcIcon name="placeholder-bold" />
+          Example Text
+        </ButtonPill>
+      );
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with a postfix icon', async () => {
+      expect.assertions(1);
+
+      const { container } = await setup(
+        <ButtonPill>
+          Example Text
+          <MdcIcon name="placeholder-bold" />
+        </ButtonPill>
+      );
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with both a prefix and postfix icon', async () => {
+      expect.assertions(1);
+
+      const { container } = await setup(
+        <ButtonPill>
+          <Icon name="placeholder" />
+          Example Text
+          <Icon name="placeholder" />
         </ButtonPill>
       );
       expect(container).toMatchSnapshot();

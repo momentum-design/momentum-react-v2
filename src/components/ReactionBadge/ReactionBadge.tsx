@@ -20,7 +20,7 @@ const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<Button>) 
       variant="secondary"
       {...otherProps}
     >
-      {reaction}
+      <div slot="prefix">{reaction}</div>
       <span className="reaction-badge-count">{count}</span>
     </MdcButton>
   );
