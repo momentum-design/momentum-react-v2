@@ -220,6 +220,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with a postfix icon 1`] =
     <mdc-icon
       name="placeholder-bold"
       slot="postfix"
+      style="flex-shrink: 0;"
     />
   </mdc-button>
 </div>
@@ -242,6 +243,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with a prefix icon 1`] = 
     <mdc-icon
       name="placeholder-bold"
       slot="prefix"
+      style="flex-shrink: 0;"
     />
     Example Text
   </mdc-button>
@@ -268,6 +270,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with both a prefix and po
       data-test="placeholder"
       name="placeholder-regular"
       slot="prefix"
+      style="flex-shrink: 0;"
     />
     Example Text
     <mdc-icon
@@ -276,6 +279,7 @@ exports[`<ButtonPill /> snapshot should match snapshot with both a prefix and po
       data-test="placeholder"
       name="placeholder-regular"
       slot="postfix"
+      style="flex-shrink: 0;"
     />
   </mdc-button>
 </div>

@@ -94,9 +94,14 @@ const ButtonPill = forwardRef((props: Props, providedRef: RefObject<Button>) => 
         } else if (hasChildrenBefore && !hasChildrenAfter) {
           slot = 'postfix';
         }
+        const existingStyle = ChildElement.props?.style || {};
+        const newStyle = {
+          ...existingStyle,
+          flexShrink: 0,
+        };
 
         // Clone the element with the slot prop if a slot was determined
-        return slot ? React.cloneElement(ChildElement, { slot }) : child;
+        return slot ? React.cloneElement(ChildElement, { slot, style: newStyle }) : child;
       }
 
       return ChildElement;
