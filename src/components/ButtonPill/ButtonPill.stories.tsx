@@ -51,50 +51,32 @@ const Grown = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 Grown.parameters = {
   variants: [
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'Example Text'],
       grown: true,
     },
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'Example Text'],
       outline: true,
       inverted: true,
       grown: true,
     },
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'Example Text'],
       color: 'join',
       grown: true,
     },
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'Example Text'],
       color: 'cancel',
       grown: true,
     },
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'Example Text'],
       color: 'message',
       grown: true,
     },
     {
-      children: [
-        <Icon key={0} name="open-pages" autoScale={125} />,
-        <div key={1}>Example Text</div>,
-      ],
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'Example Text'],
       ghost: true,
       outline: true,
       grown: true,
