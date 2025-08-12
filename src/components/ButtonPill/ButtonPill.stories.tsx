@@ -34,12 +34,35 @@ const Example = Template<ButtonPillProps>(ButtonPill).bind({});
 
 Example.argTypes = { ...argTypes };
 
-const Overflow = Template<ButtonPillProps>(ButtonPill).bind({});
+const Overflow = MultiTemplate<ButtonPillProps>(ButtonPill).bind({});
 
-Overflow.args = {
-  children: <span>This is a very long label</span>,
-  title: 'This is a very long label',
-  style: { width: '12rem' },
+Overflow.parameters = {
+  variants: [
+    {
+      children: <span>This is a very long label</span>,
+      title: 'This is a very long label',
+      style: { width: '12rem' },
+    },
+    {
+      children: [<Icon key={0} name="open-pages" autoScale={125} />, 'This is a very long label'],
+      title: 'This is a very long label',
+      style: { width: '12rem' },
+    },
+    {
+      children: ['This is a very long label', <Icon key={0} name="open-pages" autoScale={125} />],
+      title: 'This is a very long label',
+      style: { width: '12rem' },
+    },
+    {
+      children: [
+        <Icon key={0} name="open-pages" autoScale={125} />,
+        'This is a very long label',
+        <Icon key={0} name="open-pages" autoScale={125} />,
+      ],
+      title: 'This is a very long label',
+      style: { width: '12rem' },
+    },
+  ],
 };
 
 Overflow.argTypes = {
