@@ -21,10 +21,6 @@ export {
   ListItemSection,
   ListSeparator,
   Loading,
-  Menu,
-  MenuContent,
-  MenuOverlay,
-  MenuItem as MenuItemLegacy,
   Modal,
   ModalBody,
   ModalFooter,
@@ -33,7 +29,6 @@ export {
   ProgressBar,
   SpaceListItem,
   Spinner,
-  SubMenu,
   Tooltip as TooltipLegacy,
 } from './legacy';
 
@@ -90,7 +85,6 @@ export {
   SKIN_TONES,
   RadioGroup as RadioGroupNext,
   AddReactionButton,
-  Menu as MenuNext,
   ListHeader as ListHeaderLegacy,
   LoadingSpinner,
   MeetingContainer,
