@@ -3,12 +3,9 @@
  */
 export {
   AlertBanner,
-  AlertContainer,
-  Avatar,
   Badge,
   Button,
   ButtonGroup,
-  Chip,
   ContentItem,
   Icon,
   Input,
@@ -18,16 +15,13 @@ export {
   ListItem,
   ListItemHeader,
   ListItemSection,
-  ListSeparator,
   Loading,
   Modal,
   ModalBody,
   ModalFooter,
   ModalHeader,
   Popover,
-  ProgressBar,
   SpaceListItem,
-  Spinner,
   Tooltip as TooltipLegacy,
 } from './legacy';
 
