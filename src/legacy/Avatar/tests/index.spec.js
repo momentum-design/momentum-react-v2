@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Avatar, Icon } from '@momentum-ui/react-collaboration';
+import { Icon } from '@momentum-ui/react-collaboration';
+import Avatar from '../index';
 
 describe('tests for <Avatar />', () => {
   it('should match SnapShot', () => {
