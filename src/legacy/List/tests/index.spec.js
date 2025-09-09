@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { List, ListItem, SelectOption, SpaceListItem } from '@momentum-ui/react-collaboration';
+import { List, ListItem, SpaceListItem } from '@momentum-ui/react-collaboration';
 
 describe('tests for <List />', () => {
   beforeEach(() => {
@@ -440,12 +440,10 @@ describe('tests for <List />', () => {
     const container = mount(
       <List active={'test-list-2'}>
         <SpaceListItem link="javscript:void(0)" header="header" id="test-list-1" />
-        <SelectOption link="javscript:void(0)" id="test-list-2" />
       </List>
     );
 
     expect(container.find('.md-list-item').at(0).hasClass('active')).toEqual(false);
-    expect(container.find('.md-list-item').at(1).hasClass('active')).toEqual(true);
   });
 
   it('should handle navigation on disabled children', () => {

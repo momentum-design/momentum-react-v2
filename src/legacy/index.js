@@ -18,7 +18,6 @@ export { default as List } from './List';
 export { default as ListItem } from './ListItem';
 export { default as ListItemHeader } from './ListItemHeader';
 export { default as ListItemSection } from './ListItemSection';
-export { default as ListSeparator } from './ListSeparator';
 export { default as Loading } from './Loading';
 export { default as Menu } from './Menu';
 export { default as MenuContent } from './MenuContent';
