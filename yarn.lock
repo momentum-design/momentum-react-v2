@@ -2902,10 +2902,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@momentum-design/brand-visuals@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@momentum-design/brand-visuals@npm:0.5.1"
-  checksum: b4e76d04abad87f205253cbbc3db6931a6e74e7fb8e9c6ac4e341f9f2f3563de7d9b36b6e0c3e73b994e84bb2970dbadebfc9686efd6d854d796d12930bc760a
+"@momentum-design/brand-visuals@npm:0.21.0":
+  version: 0.21.0
+  resolution: "@momentum-design/brand-visuals@npm:0.21.0"
+  checksum: d68bbcbbece0869a52c24e25bd19815abbfae59a9eb012a0e995e5c6ecbfc2fa1ecff2fc01c11fc6af099d09ae9ebaa34f372d6039796128180915e8f098b6d3
   languageName: node
   linkType: hard
 

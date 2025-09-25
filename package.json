@@ -101,7 +101,7 @@
     "@types/node": "22.7.4",
     "@momentum-design/animations": "0.3.3",
     "@momentum-design/icons": "0.26.0",
-    "@momentum-design/brand-visuals": "0.5.1",
+    "@momentum-design/brand-visuals": "0.21.0",
     "@momentum-design/tokens": "0.6.1"
   },
   "dependencies": {
