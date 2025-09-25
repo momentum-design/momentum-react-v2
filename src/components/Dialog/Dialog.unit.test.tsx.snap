@@ -23,16 +23,16 @@ exports[`<Dialog /> snapshot should match snapshot 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -65,16 +65,16 @@ exports[`<Dialog /> snapshot should match snapshot with aria props 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -104,16 +104,16 @@ exports[`<Dialog /> snapshot should match snapshot with className 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -144,16 +144,16 @@ exports[`<Dialog /> snapshot should match snapshot with description 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -198,16 +198,16 @@ exports[`<Dialog /> snapshot should match snapshot with footerButtonPrimary 1`] 
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -252,16 +252,16 @@ exports[`<Dialog /> snapshot should match snapshot with footerButtonSecondary 1`
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -291,16 +291,16 @@ exports[`<Dialog /> snapshot should match snapshot with headerText 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -329,16 +329,16 @@ exports[`<Dialog /> snapshot should match snapshot with id 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
@@ -367,16 +367,16 @@ exports[`<Dialog /> snapshot should match snapshot with style 1`] = `
   >
     <style>
       
-      .dialog-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--mds-color-theme-common-overlays-secondary-normal);
-        z-index: 999;
-      }
-    
+        .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--mds-color-theme-common-overlays-secondary-normal);
+          z-index: 999;
+        }
+      
     </style>
   </div>
 </div>
