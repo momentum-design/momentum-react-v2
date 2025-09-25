@@ -28,6 +28,7 @@ import '@momentum-design/tokens/dist/css/theme/webex/light-rose-stable.css';
 import {
   ThemeProvider as MdcThemeProvider,
   IconProvider as MdcIconProvider,
+  IllustrationProvider as MdcIllustrationProvider,
 } from '@momentum-design/components/dist/react';
 
 import {
@@ -52,11 +53,13 @@ const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => {
       themeclass={themeClassStable}
       className={classNames(themeClass, STYLE.typography, STYLE.elevation)}
     >
-      <MdcIconProvider>
-        <div className={`${STYLE.wrapper} ${STYLE.globals}`} style={style} id={id}>
-          {children}
-        </div>
-      </MdcIconProvider>
+      <MdcIllustrationProvider>
+        <MdcIconProvider>
+          <div className={`${STYLE.wrapper} ${STYLE.globals}`} style={style} id={id}>
+            {children}
+          </div>
+        </MdcIconProvider>
+      </MdcIllustrationProvider>
     </MdcThemeProvider>
   );
 };

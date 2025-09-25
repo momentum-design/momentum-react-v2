@@ -21,7 +21,7 @@ const Chip: FC<Props> = (props: Props) => {
     }
   };
 
-  const handleClick = (event: MouseEvent) => {
+  const handleClick = (event: any) => {
     preventBubble(event);
     if (onClick) {
       onClick(event);
