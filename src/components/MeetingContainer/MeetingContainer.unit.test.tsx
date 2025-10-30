@@ -20,6 +20,8 @@ const testProps = {
 };
 const tags = [<Chip key={0}>Messages</Chip>, <Chip key={1}>Recording</Chip>];
 
+const classification = <Chip iconName="people-bold" label="Publish" color="mint" />;
+
 const pillButtons = [
   <ButtonPill key={0} outline ghost={true} color="join" size={28}>
     <Text tagName="p">Message</Text>
@@ -96,6 +98,14 @@ describe('<MeetingContainer />', () => {
       expect.assertions(1);
 
       container = mount(<MeetingContainer tags={tags} />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should match snapshot with classification supplied', () => {
+      expect.assertions(1);
+
+      container = mount(<MeetingContainer classification={classification} />);
 
       expect(container).toMatchSnapshot();
     });
