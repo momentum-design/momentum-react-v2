@@ -35,6 +35,11 @@ export interface Props extends CardProps {
   tags?: Array<SupportedChips>;
 
   /**
+   * classification supplied by consumer, renders tag if present.
+   */
+  classification?: SupportedChips;
+
+  /**
    * User avatar supplied by consumer.
    */
   avatar?: SupportedAvatar;

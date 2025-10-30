@@ -135,6 +135,18 @@ const meetingContainerArgTypes = {
       },
     },
   },
+  classification: {
+    description: 'classification tag supplied by the consumer.',
+    control: { type: 'none' },
+    table: {
+      type: {
+        summary: 'Tag',
+      },
+      defaultValue: {
+        summary: 'undefined',
+      },
+    },
+  },
   spaceLink: {
     description: 'Link to meeting space or conversation supplied by the consumer.',
     control: { type: 'none' },

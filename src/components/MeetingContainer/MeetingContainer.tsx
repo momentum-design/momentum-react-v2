@@ -21,6 +21,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
     avatar,
     children,
     spaceLink,
+    classification,
     scheduleInfoFirst,
     scheduleInfoSecond,
     scheduleInfoFirstColor = DEFAULTS.SCHEDULE_INFO_COLOR,
@@ -46,6 +47,9 @@ const MeetingContainer: FC<Props> = (props: Props) => {
   const changedSpaceLink =
     !!spaceLink && cloneElement(spaceLink, { disabled: isDisabled, className: STYLE.spaceLink });
 
+  const classificationTag =
+    !!classification && cloneElement(classification, { disabled: isDisabled });
+
   return (
     <Card
       className={classnames(className, STYLE.wrapper)}
@@ -68,6 +72,7 @@ const MeetingContainer: FC<Props> = (props: Props) => {
             </Text>
             {changedSpaceLink && <DividerDot />}
             {changedSpaceLink}
+            <div className={STYLE.classification}>{classificationTag}</div>
           </div>
           <div>
             <Text

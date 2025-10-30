@@ -25,6 +25,10 @@
         white-space: nowrap;
       }
 
+      .md-meeting-container-classification {
+        margin-left: 0.5rem;
+      }
+
       > *:first-child {
         > *:first-child {
           &[data-disabled='true'] {

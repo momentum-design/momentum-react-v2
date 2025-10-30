@@ -31,6 +31,7 @@ const STYLE = {
   avatar: `${CLASS_PREFIX}-avatar`,
   container: `${CLASS_PREFIX}-container`,
   spaceLink: `${CLASS_PREFIX}-space-link`,
+  classification: `${CLASS_PREFIX}-classification`,
 };
 
 export { CLASS_PREFIX, DEFAULTS, STYLE, SCHEDULE_INFO_COLORS, ANCHORS };

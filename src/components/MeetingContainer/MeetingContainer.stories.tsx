@@ -34,6 +34,8 @@ const tags = [
   </Chip>,
 ];
 
+const classification = <Chip iconName="people-bold" label="Publish" color="mint" />;
+
 const pillButtons = [
   <ButtonPill key={0} outline ghost={true} color="join" size={28}>
     <Icon name="chat" autoScale={100} />
@@ -57,6 +59,7 @@ Example.args = {
   spaceLink: spaceLink,
   actionButtons: pillButtons,
   tags: tags,
+  classification: classification,
   avatar: avatar,
   scheduleInfoFirst: 'In progress',
   scheduleInfoFirstColor: 'success',
@@ -90,6 +93,7 @@ Common.parameters = {
     {
       meetingTitle: 'Test Meeting 2',
       spaceLink: spaceLink,
+      classification: classification,
       actionButtons: pillButtons,
       avatar: avatar,
       scheduleInfoFirst: '10:00am - 11:00am',
@@ -99,6 +103,7 @@ Common.parameters = {
       meetingTitle: 'Test Meeting 3',
       actionButtons: pillButtons,
       tags: tags,
+      classification: classification,
       avatar: avatar,
       scheduleInfoFirst: '10:00am - 11:00am',
       scheduleInfoFirstColor: 'success',
