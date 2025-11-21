@@ -31,7 +31,7 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   firstLine: 'Cisco Webex',
-  secondLine: 'Webex Teams',
+  secondLine: <p>test</p>,
   onPress: action(`Space Row Content Press`),
   menuItems: [{ key: 'item-1', text: 'Item 1' }],
 };

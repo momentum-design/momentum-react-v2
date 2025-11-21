@@ -36,7 +36,7 @@ export interface Props extends SpaceRowContentMenuProps {
   /**
    * Text displayed on the second line of the item. (Can be more than one string)
    */
-  secondLine?: string | string[];
+  secondLine?: React.ReactNode | string | string[];
 
   /**
    * Determines whether there is content inside the space that is not read.

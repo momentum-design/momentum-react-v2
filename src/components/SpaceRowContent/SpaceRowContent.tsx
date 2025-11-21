@@ -46,8 +46,12 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
   } = props;
   const [menuId] = useState(uuidV4);
 
+  const isSecondLineReactElement = React.isValidElement(secondLine);
+
   const renderText = () => {
-    const secondLineArrayClean = cleanSecondLine(secondLine);
+    const secondLineArrayClean = !isSecondLineReactElement
+      ? cleanSecondLine(secondLine as string | string[] | undefined)
+      : [];
 
     // All --mds-color-theme-text-team* tokens have a dash before the color --mds-color-theme-text-team-cobalt-* --mds-color-theme-text-team-cyan-* etc
     // except for --mds-color-theme-teamdefault-*
@@ -56,7 +60,7 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
       ? 'var(--mds-color-theme-text-primary-disabled)'
       : `var(--mds-color-theme-text-team${teamColorForToken}-normal)`;
 
-    if (secondLineArrayClean.length) {
+    if (secondLineArrayClean.length || isSecondLineReactElement) {
       return (
         <>
           <Text
@@ -68,18 +72,21 @@ const SpaceRowContent: FC<Props> = (props: Props) => {
             {firstLine}
           </Text>
           {isCompact && <DividerDot data-test="compact-mode-divider-dot" />}
+
           <Text
             style={{ color: secondLineColor }}
             type="body-secondary"
             tagName="small"
             data-test="list-item-second-line"
-            aria-label={secondLineArrayClean.join(', ')}
+            aria-label={!isSecondLineReactElement ? secondLineArrayClean.join(', ') : undefined}
           >
-            {secondLineArrayClean.map((secondLineContent, i) => (
-              <SecondLineElement key={`second-line-item-${i}`} showDividerDot={i > 0}>
-                {secondLineContent}
-              </SecondLineElement>
-            ))}
+            {isSecondLineReactElement
+              ? secondLine
+              : secondLineArrayClean.map((secondLineContent, i) => (
+                  <SecondLineElement key={`second-line-item-${i}`} showDividerDot={i > 0}>
+                    {secondLineContent}
+                  </SecondLineElement>
+                ))}
           </Text>
         </>
       );
