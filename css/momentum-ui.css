@@ -210,6 +210,9 @@
 .icon-inverse {
   color: #FFFFFF; }
 
+.icon-3d-object_16::before {
+  content: "\f101"; }
+
 .icon-3d-object_20::before {
   content: "\f102"; }
 
