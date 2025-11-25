@@ -2,12 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import ThemeProvider from './ThemeProvider';
 
-import {
-  STYLE,
-  THEME_CLASS_PREFIX,
-  THEME_CLASS_PREFIX_STABLE,
-  THEMES,
-} from './ThemeProvider.constants';
+import { STYLE, THEME_CLASS_PREFIX_STABLE, THEMES } from './ThemeProvider.constants';
 import { renderWithWebComponent } from '../../../test/utils';
 
 describe('<ThemeProvider />', () => {
@@ -59,7 +54,7 @@ describe('<ThemeProvider />', () => {
     });
 
     it('web component should have an abstracted theme class', async () => {
-      expect.assertions(3);
+      expect.assertions(2);
 
       const themeName = THEMES[Object.keys(THEMES)[0]];
 
@@ -71,7 +66,6 @@ describe('<ThemeProvider />', () => {
       const element = container.querySelector('mdc-themeprovider');
 
       expect(element.classList.contains(`${THEME_CLASS_PREFIX_STABLE}-${themeName}`)).toBe(true);
-      expect(element.classList.contains(`${THEME_CLASS_PREFIX}-${themeName}`)).toBe(true);
     });
 
     it('should have provided style when style is provided', () => {

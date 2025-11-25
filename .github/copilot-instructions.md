@@ -8,7 +8,6 @@ applyTo: '**/*'
 - `momentum-react-v2` is a React component library using TypeScript
 - `momentum-react-v2` is a Shim Layer for React components from NPM package `@momentum-design/components/dist/react`
 - Components in the folder `src/components/` are the new components that are supposed to be maintained and used.
-- Components in the folder `src/legacy/` are the old components that are deprecated and should not be used in new code.
 
 # Project coding standards
 

@@ -6,7 +6,6 @@ import type { Props } from './Avatar.types';
 import { STYLE, DEFAULTS, AVATAR_ICON_SIZE_MAPPING } from './Avatar.constants';
 import Icon from '../Icon';
 import ButtonSimple from '../ButtonSimple';
-import Loading from '../../legacy/Loading';
 import Presence from './Presence';
 import Initials from './Initials';
 import { getInitials } from './Avatar.utils';
@@ -119,9 +118,7 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
           className={classnames(STYLE.wrapperChildren, STYLE.animationWrapper)}
           aria-hidden="true"
         >
-          <div style={{ transform: 'scale(0.4)' }}>
-            <Loading />
-          </div>
+          <div style={{ transform: 'scale(0.4)' }} className={STYLE.loadingAnimation} />
         </span>
       )}
 

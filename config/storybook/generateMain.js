@@ -1,14 +1,11 @@
 const path = require('path');
-const { COMPONENTS_DIR, LEGACY_COMPONENTS_DIR } = require('./constants');
+const { COMPONENTS_DIR } = require('./constants');
 
 const REPO_ROOT = path.resolve(__dirname, '../../');
 
 const generateMain = (dir) => {
   return {
-    stories: [
-      path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
-      path.join(REPO_ROOT, dir, LEGACY_COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)'),
-    ],
+    stories: [path.join(REPO_ROOT, dir, COMPONENTS_DIR, '**/*.stories.@(js|jsx|ts|tsx)')],
     addons: [
       '@storybook/addon-docs',
       '@storybook/addon-links',

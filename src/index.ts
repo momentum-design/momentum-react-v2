@@ -1,30 +1,3 @@
-/**
- * Entry file for momentum-ui-react module.
- */
-export {
-  AlertBanner,
-  Badge,
-  Button,
-  ButtonGroup,
-  ContentItem,
-  Icon,
-  Input,
-  Lightbox,
-  Link,
-  List,
-  ListItem,
-  ListItemHeader,
-  ListItemSection,
-  Loading,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  Popover,
-  SpaceListItem,
-  Tooltip as TooltipLegacy,
-} from './legacy';
-
 /** V2 Components [TypeScript] */
 export {
   Accordion as AccordionNext,

@@ -9,7 +9,6 @@ project, please fork this project.**
 - [Project Structure](#project-structure)
 - [Code Style](#code-style)
   - [New Components](#new-components)
-  - [Legacy Components](#legacy-components)
 - [Scripts](#scripts)
   - [CD](#cd)
   - [CI](#ci)
@@ -20,7 +19,6 @@ project, please fork this project.**
   - [storybook](#storybook)
   - [source](#source)
   - [styles](#styles)
-  - [legacy](#legacy)
 - [Submitting Changes](#submitting-changes)
 - [License](#license)
 
@@ -113,12 +111,9 @@ file structure of this project:
 +-+ config/ # configuration files for this project
 +-+ dist/ # built distributables
 +-+ docs/ # build documentation
-+-+ scss/ # legacy component styles ported from @momentum-ui/core
 +-+ src/ # source code for this project
   +-- components/ # typescript react components
-  +-- examples/ # legacy examples
   +-- helpers/ # enzyme test helpers
-  +-- legacy/ # legacy react components cloned from the original @momentum-ui/react project
   +-- storybook/ # storybook utilities
   +-- index.js # entry file for all module exports
 ```
@@ -196,34 +191,6 @@ When a changes occur against the new React components in this project, a few sta
 - Most components should have a `{component}.documentation.mdx` file that includes a description of
   the component.
 
-### Legacy Components
-
-Legacy components should not contain any larger feature work, and are currently in the
-**maintenance** SDLC state. Below is their directory model:
-
-```bash
-./ # project root directory
-+-+ scss/ # styling sub-module
-  +-+ components/ # scoped styling entry directory
-    +-+ {component}/ # scoped component styling
-      +-- {styles}.scss # various scoped styling definitions
-+-+ src/ # source code directory
-  +-- index.js # global react component module entry point
-  +-+ legacy/ # legacy react components directory
-    +-- index.js # legacy react component module entry point
-    +-+ {component}/ # legacy react component directory
-      +-- index.js # entry point for component, contains the component renderer
-      +-+ examples/ # examples documentation fo visual testing and docs
-        +-- index.js # examples module file, imports all files from directory needed
-        +-- KitchenSink.js # renderer for component states, includes all component states
-        +-- {state}.js # scoped state for this component
-      +-+ tests/ # scoped unit test directory
-        +-- index.spec.js # jest unit test file
-        +-- index.spec.js.snap # automatically-generated snapshot file
-```
-
-While most changes to these components wont require any changes to the module entry files, be aware
-that changes in those files may be needed in broad-scoped implementaitons.
 
 ## Scripts
 
