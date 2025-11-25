@@ -46,6 +46,7 @@ const STYLE = {
   presenceIconWrapper: `${CLASS_PREFIX}-presence-icon-wrapper`,
   buttonWrapper: `${CLASS_PREFIX}-button-wrapper`,
   animationWrapper: `${CLASS_PREFIX}-animation-wrapper`,
+  loadingAnimation: `${CLASS_PREFIX}-loading-animation`,
 };
 
 const DEFAULTS = {

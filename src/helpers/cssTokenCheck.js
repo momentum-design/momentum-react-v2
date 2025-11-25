@@ -139,7 +139,7 @@ const checkAllFiles = function (pathPattern) {
       try {
         if (
           filePath != 'src/helpers/cssTokenCheck.js' &&
-          filePath != 'src/examples/ThemeSelect/themes.js'
+          filePath != 'src/helpers/mdl-token-examples.js'
         ) {
           readAndCheckTokens(filePath);
         }
@@ -165,23 +165,21 @@ getTokensFromSource(
 ).then((resultMdsTokens) => {
   mdsTokens = resultMdsTokens;
 
-  getTokensFromSource('../../src/examples/ThemeSelect/themes.js', 'mdl-examples').then(
-    (resultMdlTokens) => {
-      mdlTokens = resultMdlTokens;
+  getTokensFromSource('./mdl-token-examples.js', 'mdl-examples').then((resultMdlTokens) => {
+    mdlTokens = resultMdlTokens;
 
-      if (file) {
-        readAndCheckTokens(file);
-      } else if (globPatterns.length) {
-        globPatterns.forEach((glob) => {
-          checkAllFiles(glob);
-        });
-      } else {
-        isMDSCheck = true;
-        checkAllFiles('src/**/*.*');
-        isMDSCheck = false;
-        checkAllFiles('scss/**/*.*');
-        checkAllFiles('css/**/*.*');
-      }
+    if (file) {
+      readAndCheckTokens(file);
+    } else if (globPatterns.length) {
+      globPatterns.forEach((glob) => {
+        checkAllFiles(glob);
+      });
+    } else {
+      isMDSCheck = true;
+      checkAllFiles('src/**/*.*');
+      isMDSCheck = false;
+      checkAllFiles('scss/**/*.*');
+      checkAllFiles('css/**/*.*');
     }
-  );
+  });
 });

@@ -8,7 +8,6 @@ const settingsFiles = [
   '../settings/rem.scss',
   '../settings/core.scss',
   '../settings/focus.scss',
-  '../settings/list-group.scss',
   '../settings/media.scss',
   '../settings/z-index.scss',
   '../settings/dropdown.scss',

@@ -274,30 +274,13 @@ exports[`Avatar snapshot should match snapshot with isTyping and typingLabel 1`]
       className="md-avatar-wrapper-children md-avatar-animation-wrapper"
     >
       <div
+        className="md-avatar-loading-animation"
         style={
           Object {
             "transform": "scale(0.4)",
           }
         }
-      >
-        <Loading
-          small={false}
-        >
-          <div
-            className="md-loading"
-          >
-            <span
-              className="md-loading__icon"
-            />
-            <span
-              className="md-loading__icon"
-            />
-            <span
-              className="md-loading__icon"
-            />
-          </div>
-        </Loading>
-      </div>
+      />
     </span>
   </div>
 </Avatar>

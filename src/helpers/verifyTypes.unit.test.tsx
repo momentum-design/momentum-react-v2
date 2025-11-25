@@ -2,7 +2,7 @@ import React from 'react';
 import ListItemBase from '../components/ListItemBase';
 import { verifyTypes, verifyType, isMRv2Button } from './verifyTypes';
 import { ButtonCircle, ButtonSimple, ButtonPill } from '../components';
-import { Button } from '@momentum-ui/react-collaboration';
+import { Button } from '@momentum-design/components/dist/react';
 
 describe('verifyTypes', () => {
   it('returns true if types are correct', () => {
