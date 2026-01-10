@@ -36,13 +36,14 @@ import './ThemeProvider.style.scss';
 /**
  * Provides a collection of CSSVariables based on a ThemeToken to all child elements inside of a rendered `<div />` element.
  */
-const ThemeProvider: FC<Props> = ({ children, id, style, theme }: Props) => {
+const ThemeProvider: FC<Props> = ({ children, id, style, theme, ...restProps }: Props) => {
   const themeClassStable = `${THEME_CLASS_PREFIX_STABLE}-${theme || DEFAULTS.THEME}`;
 
   return (
     <MdcThemeProvider
       themeclass={themeClassStable}
       className={classNames(STYLE.typography, STYLE.elevation)}
+      {...restProps}
     >
       <MdcIllustrationProvider>
         <MdcIconProvider>
