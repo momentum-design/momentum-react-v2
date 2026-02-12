@@ -10,6 +10,7 @@ import type IconKeys from '@momentum-design/icons/dist/types/types';
 
 /**
  * Icon component that can dynamically display SVG icons with a valid name.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Icon: React.FC<Props> = (props: Props) => {
   const {

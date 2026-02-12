@@ -6,6 +6,9 @@ import { Props } from './ReactionPicker.types';
 import './ReactionPicker.style.scss';
 import AriaToolbar from '../AriaToolbar';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ReactionPicker: FC<Props> = (props: Props) => {
   const { children, className, id, style, ...other } = props;
 

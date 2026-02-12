@@ -16,6 +16,7 @@ import Text from '../Text';
 
 /**
  * The Checkbox component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
   const { className, isDisabled, label, description, isIndeterminate, id, style } = props;
@@ -97,7 +98,9 @@ const Checkbox = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
     </div>
   );
 };
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _Checkbox = forwardRef(Checkbox);
 _Checkbox.displayName = 'Checkbox';
 

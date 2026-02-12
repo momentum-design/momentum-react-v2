@@ -10,6 +10,7 @@ import { getKeyboardFocusableElements } from '../../utils/navigation';
 /**
  * The AriaToolbar component. A style-less by default or button-group styled component implementing the Aria Toolbar pattern
  * see https://www.w3.org/WAI/ARIA/apg/patterns/toolbar
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const AriaToolbar: FC<Props> = (props: Props) => {
   const {

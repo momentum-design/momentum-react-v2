@@ -14,6 +14,7 @@ interface PresenceProps {
 
 /**
  * The Presence component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Presence: FC<PresenceProps> = (props: PresenceProps) => {
   const { presenceColor, presenceIcon, isCircularWrapper, size } = props;

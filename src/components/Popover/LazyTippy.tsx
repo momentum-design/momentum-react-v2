@@ -13,6 +13,7 @@ export type LazyTippyProps = TippyProps & {
  * By default the `tippy.js` library mounts the content of the Popover in the DOM (hidden through styling), before it is shown
  * (which means that it could, if its used a lot, polute the DOM tree). Therefore the Popover has to be
  * lazified so that it will only be mounted to the DOM, whenever it is triggered to do so.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
   ({ setInstance, continuePropagationOnTrigger, ...props }: LazyTippyProps, ref) => {
@@ -42,7 +43,7 @@ export const LazyTippy: FC<LazyTippyProps> = React.forwardRef(
           onDestroy: () => setInstance?.(undefined),
         }),
       }),
-      []
+      [setInstance]
     );
 
     const computedProps = { ...props };

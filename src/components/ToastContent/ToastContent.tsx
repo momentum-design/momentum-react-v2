@@ -7,6 +7,7 @@ import './ToastContent.style.scss';
 
 /**
  * The `<ToastContent />` component. This component is meant to be consumed by only the `<Toast />` component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ToastContent: FC<Props> = (props: Props) => {
   const { action, actionColor, actions, actor, children, className, id, info, style } = props;

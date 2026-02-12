@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, {
   ReactElement,
@@ -25,7 +26,9 @@ import Text from '../Text';
 import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 import { useKeyboard } from '@react-aria/interactions';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement>): ReactElement {
   const {
     'aria-labelledby': ariaLabelledBy,
@@ -246,7 +249,9 @@ function Select<T extends object>(props: Props<T>, ref: RefObject<HTMLDivElement
 /**
  * Dropdown / Select Element which displays a listbox with options.
  */
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _Select = forwardRef(Select);
 
 _Select.displayName = 'Select';

@@ -152,7 +152,9 @@ const Avatar = (props: Props, ref: RefObject<HTMLButtonElement>) => {
 /**
  * Avatar component that can contain an image or initials
  */
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _Avatar = forwardRef(Avatar);
 
 _Avatar.displayName = 'Avatar';

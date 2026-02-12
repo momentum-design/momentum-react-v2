@@ -8,6 +8,7 @@ import { useTabsContext } from '../TabsProvider/TabsProvider.utils';
 
 /**
  * The TabPanel Component
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 export const TabPanel: FC<Props> = <T extends AllowedTagNames>(props: Props<T>) => {
   const { tagName: Tag = DEFAULTS.tagName, ...componentProps } = props;

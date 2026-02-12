@@ -7,6 +7,9 @@ import { Props } from './ButtonHyperlink.types';
 import './ButtonHyperlink.style.scss';
 import classnames from 'classnames';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonHyperlink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
   const { className, title } = props;
   const internalRef = useRef();

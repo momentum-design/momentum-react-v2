@@ -12,6 +12,7 @@ import './ButtonSimple.style.scss';
  * A simple button component without overhead styling.
  * This is used as an injectable button component for other sibling components.
  * @internal use only. Should not be consumed from any external parties.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 
 const ButtonSimple = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {

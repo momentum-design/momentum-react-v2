@@ -6,6 +6,9 @@ import { useAriaToolbarContext } from '../AriaToolbar/AriaToolbar.utils';
 import { useProvidedRef } from '../../utils/useProvidedRef';
 import { defaults } from 'lodash';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const AriaToolbarItem = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
   const { children, itemIndex, ...rest } = props;
 

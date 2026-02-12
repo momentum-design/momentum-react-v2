@@ -1,13 +1,10 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 import { useId } from '@react-aria/utils';
 import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
 
-import {
-  useSpatialNavigationContext,
-  useSpatialRadioGroupNavigation,
-} from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
+import { useSpatialRadioGroupNavigation } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 import { STYLE, DEFAULTS } from './RadioGroup.constants';
 import { RadioGroupProps, RadioProps } from './RadioGroup.types';
 import './RadioGroup.style.scss';
@@ -16,9 +13,13 @@ import Text, { TEXT_CONSTANTS } from '../Text';
 
 /**
  * The RadioGroup component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 export const RadioContext = React.createContext(null);
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const RadioGroup: FC<RadioGroupProps> = (props: RadioGroupProps) => {
   const {
     className,

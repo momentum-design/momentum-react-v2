@@ -11,6 +11,9 @@ import { DEFAULTS, STYLE } from './NavigationTab.constants';
 import { Props } from './NavigationTab.types';
 import './NavigationTab.style.scss';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const NavigationTab: FC<Props> = (props: Props) => {
   const {
     icon,

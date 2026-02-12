@@ -5,6 +5,9 @@ import type { Props } from './Badge.types';
 import { DEFAULTS } from './Badge.constants';
 import { Badge as MdcBadge } from '@momentum-design/components/dist/react';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Badge: FC<Props> = (props: Props) => {
   const {
     className,

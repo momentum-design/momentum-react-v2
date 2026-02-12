@@ -7,6 +7,9 @@ import './Tab.style.scss';
 import ButtonSimple from '../ButtonSimple';
 import { PrimitiveConverter } from '../../utils/component-conversions';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Tab = forwardRef<HTMLButtonElement, Props>((props: Props, ref) => {
   const { children, className, active, disabled, shallowDisabled, ...otherProps } = props;
 

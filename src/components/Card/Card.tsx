@@ -11,6 +11,7 @@ import './Card.style.scss';
 
 /**
  * The Card component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Card: FC<Props> = (props: Props) => {
   const {

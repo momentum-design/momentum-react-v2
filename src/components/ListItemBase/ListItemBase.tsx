@@ -337,7 +337,9 @@ const ListItemBase = (props: Props, providedRef: RefOrCallbackRef) => {
 /**
  * List Item Base component that can be used inside Lists/Menus
  */
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _ListItemBase = forwardRef(ListItemBase);
 _ListItemBase.displayName = 'ListItemBase';
 

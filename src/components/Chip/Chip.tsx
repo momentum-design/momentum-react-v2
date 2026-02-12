@@ -6,6 +6,7 @@ import { Chip as MdcChip } from '@momentum-design/components/dist/react';
 
 /**
  * The Chip component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Chip: FC<Props> = (props: Props) => {
   const { onClick, stopPropagation = false, ...rest } = props;

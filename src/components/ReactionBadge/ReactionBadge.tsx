@@ -7,6 +7,9 @@ import './ReactionBadge.style.scss';
 import type { Props } from './ReactionBadge.types';
 import type { Button } from '@momentum-design/components';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ReactionBadge = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const { className, count, reacted, reaction, ...otherProps } = props;
 

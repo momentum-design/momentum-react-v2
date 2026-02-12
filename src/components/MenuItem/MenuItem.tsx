@@ -12,6 +12,9 @@ import Icon from '../Icon';
 import classNames from 'classnames';
 import { useMenuContext, useMenuAppearanceContext } from '../Menu/Menu';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const MenuItem = <T extends object>(props: Props<T>): ReactElement => {
   const {
     item,

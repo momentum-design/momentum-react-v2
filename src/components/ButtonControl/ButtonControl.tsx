@@ -11,6 +11,7 @@ import { InferredIconName } from '../Icon/Icon.types';
 
 /**
  * `<ControlButtons />` are used to control [close, maximize, minimize, etc] components [usually panels] they are assigned to.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ButtonControl = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { className, control, isCircular, ...otherProps } = props;

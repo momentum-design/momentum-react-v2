@@ -6,6 +6,9 @@ import classnames from 'classnames';
 import { Text as MdcText } from '@momentum-design/components/dist/react';
 import { mapOldToNewType } from './mappingUtils';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Text: FC<Props> = (props: Props) => {
   const { children, type = DEFAULTS.TYPE, className, id, style, tagName, ...rest } = props;
 

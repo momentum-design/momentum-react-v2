@@ -6,6 +6,7 @@ import { TabsProviderContext } from './TabsProvider.utils';
 
 /**
  * The Tabs component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const TabsProvider: FC<Props> = (props: Props) => {
   const { selectedTab, id: _id, children } = props;

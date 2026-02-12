@@ -25,6 +25,7 @@ import { useProvidedRef } from '../../utils/useProvidedRef';
 type RefOrCallbackRef = RefObject<HTMLInputElement> | ((instance: HTMLInputElement) => void);
 /**
  *  Search input
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement => {
   const {
@@ -156,6 +157,9 @@ const SearchInput = (props: Props, providedRef: RefOrCallbackRef): ReactElement 
   );
 };
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _SearchInput = forwardRef(SearchInput);
 
 _SearchInput.displayName = 'SearchInput';

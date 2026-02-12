@@ -9,6 +9,9 @@ import { Props } from './ButtonCircle.types';
 import './ButtonCircle.style.scss';
 import { DEFAULTS, STYLE } from './ButtonCircle.constants';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonCircle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
     color,

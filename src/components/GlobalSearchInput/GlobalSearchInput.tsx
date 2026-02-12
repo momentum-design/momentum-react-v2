@@ -17,6 +17,7 @@ import { useFocusState } from '../../hooks/useFocusState';
 import LoadingSpinner from '../LoadingSpinner';
 /**
  * Global search input. Used for global search only
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const GlobalSearchInput: FC<Props> = (props: Props) => {
   const {

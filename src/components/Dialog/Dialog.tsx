@@ -7,6 +7,9 @@ import { setupHideOnPlugin } from '../Popover/tippy-plugins/hideOnEscPlugin';
 // create a global stack of dialogs
 const dialogStack: Array<string> = [];
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Dialog: FC<DialogProps> = (props) => {
   const { children, size = DEFAULTS.SIZE, ...other } = props;
 

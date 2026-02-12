@@ -5,6 +5,9 @@ import { DEFAULTS, STYLE } from './AlertBanner.constants';
 import { Props } from './AlertBanner.types';
 import './AlertBanner.style.scss';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const AlertBanner: FC<Props> = (props: Props) => {
   const {
     buttons,

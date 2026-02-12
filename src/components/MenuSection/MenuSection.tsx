@@ -9,6 +9,9 @@ import MenuItem from '../MenuItem';
 import { useMenuSection } from '@react-aria/menu';
 import ContentSeparator from '../ContentSeparator';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const MenuSection = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction } = props;
 

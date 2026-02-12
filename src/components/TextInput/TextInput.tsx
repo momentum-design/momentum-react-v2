@@ -22,8 +22,10 @@ import { useFocusState } from '../../hooks/useFocusState';
 import { v4 as uuidV4 } from 'uuid';
 import { useId } from '@react-aria/utils';
 import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
-import { SPATIAL_NAVIGATION_DIRECTION_KEYS } from '../SpatialNavigationProvider/SpatialNavigationProvider.constants';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement => {
   const {
     messageArr = [],
@@ -172,7 +174,9 @@ const TextInput = (props: Props, ref: RefObject<HTMLInputElement>): ReactElement
 /**
  * Short text input
  */
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _TextInput = forwardRef(TextInput);
 
 _TextInput.displayName = 'TextInput';

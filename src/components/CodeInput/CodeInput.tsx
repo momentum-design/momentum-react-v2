@@ -7,6 +7,9 @@ import InputMessage, { getFilteredMessages } from '../InputMessage';
 import classnames from 'classnames';
 import { STYLE } from './CodeInput.constants';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
   const {
     numDigits,
@@ -42,11 +45,11 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
       onComplete(value);
       setComplete(true);
     }
-  }, [value]);
+  }, [numDigits, onChange, onComplete, value]);
 
   useEffect(() => {
     setInternalMessageArray(messageArr);
-  }, [JSON.stringify(messageArr)]);
+  }, [messageArr]);
 
   return (
     <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>

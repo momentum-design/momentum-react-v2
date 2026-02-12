@@ -9,6 +9,7 @@ import './ReactionButton.style.scss';
 
 /**
  * Button within the ReactionPicker
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ReactionButton = forwardRef((props: Props, ref: RefObject<Button>) => {
   const { className, children, id, reacted, style, ...otherProps } = props;

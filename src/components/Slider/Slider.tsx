@@ -6,6 +6,9 @@ import type { SliderProps } from './Slider.types';
 import './Slider.style.scss';
 import { useSliderSideEffects } from './Slider.hooks';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Slider: FC<SliderProps> = (props: SliderProps) => {
   const {
     ariaLabel,

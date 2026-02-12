@@ -30,6 +30,9 @@ import { usePrevious } from '../../hooks/usePrevious';
 import { useItemSelected } from '../../hooks/useItemSelected';
 import { useSpatialNavigationContext } from '../SpatialNavigationProvider/SpatialNavigationProvider.utils';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Tree = forwardRef((props: Props, ref: ForwardedRef<TreeRefObject>) => {
   const {
     className,

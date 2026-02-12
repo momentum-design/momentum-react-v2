@@ -11,6 +11,7 @@ import Text from '../Text';
 
 /**
  * The ToastNotification component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ToastNotification: FC<Props> = (props: Props) => {
   const {

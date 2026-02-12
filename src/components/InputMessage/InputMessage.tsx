@@ -34,6 +34,9 @@ export const getFilteredMessages = (allMessages: Message[]): GetFilteredMessages
   return [messageLevel, messages];
 };
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const InputMessage = (props: Props): ReactElement => {
   const { message, level = 'none', className, id } = props;
 

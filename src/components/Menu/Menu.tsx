@@ -22,6 +22,9 @@ import { defaults } from 'lodash';
 import { ListContext } from '../List/List.utils';
 import { useCheckAriaLabel } from '../../utils/a11y';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 export const MenuContext = React.createContext<MenuContextValue>({});
 
 export function useMenuContext(props: Partial<MenuContextValue> = {}): MenuContextValue {
@@ -154,7 +157,9 @@ const Menu = <T extends object>(props: Props<T>, providedRef: RefObject<HTMLDivE
 /**
  * Menu Element which displays a list of options/actions.
  */
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _Menu = forwardRef(Menu);
 _Menu.displayName = '_Menu';
 

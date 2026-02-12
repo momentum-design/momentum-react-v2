@@ -11,6 +11,7 @@ import './FocusRing.style.scss';
  *
  * @remarks
  * This does not support typical style inheritance via `className`, `id`, and `style`. See [react-aria/focus]{@link https://react-spectrum.adobe.com/react-aria/FocusRing.html}
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const FocusRing: FC<Props> = (props: Props) => {
   const mutatedProps = { ...props };

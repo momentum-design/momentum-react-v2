@@ -32,6 +32,9 @@ import { getKeyboardFocusableElements } from '../../utils/navigation';
 import { usePrevious } from '../../hooks/usePrevious';
 import { useDidUpdateEffect } from '../../hooks/useDidUpdateEffect';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): ReactElement => {
   const {
     id,
@@ -239,6 +242,9 @@ const TreeNodeBase = (props: Props, providedRef: TreeNodeBaseRefOrCallbackRef): 
 
 /**
  * Tree Node Base component that can be used inside Trees
+ */
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const _TreeNodeBase = forwardRef(TreeNodeBase);
 _TreeNodeBase.displayName = 'TreeNodeBase';
