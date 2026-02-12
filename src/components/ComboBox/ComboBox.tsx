@@ -17,6 +17,9 @@ import {
   getSumScrollTop as getSumScrollTopFunc,
 } from './ComboBox.utils';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ComboBox: React.FC<Props> = (props: Props) => {
   const {
     onArrowButtonPress: onArrowButtonPressCallback,

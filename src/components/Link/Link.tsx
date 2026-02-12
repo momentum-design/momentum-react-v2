@@ -8,6 +8,9 @@ import classnames from 'classnames';
 import Icon from '../Icon';
 import Tooltip from '../Tooltip';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Link = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
   const {
     className,

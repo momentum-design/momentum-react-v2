@@ -22,6 +22,7 @@ import { PopoverInstance } from '.';
  *
  * Popover uses @tippyjs/react under the hood - possible attributes for future modification
  * can be found here: https://atomiks.github.io/tippyjs/v6/all-props/
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Popover = forwardRef((props: Props, ref: ForwardedRef<HTMLElement>) => {
   const {

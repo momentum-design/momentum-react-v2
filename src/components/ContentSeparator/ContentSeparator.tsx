@@ -9,6 +9,9 @@ import { STYLE } from './ContentSeparator.constants';
 import { useSeparator } from '@react-aria/separator';
 import { PartialNode } from '@react-stately/collections';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ContentSeparator: React.FC<Props> = (props: Props) => {
   const { className, children, gradient } = props;
 

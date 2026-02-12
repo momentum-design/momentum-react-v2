@@ -10,6 +10,7 @@ import ButtonGroup from '../ButtonGroup';
 
 /**
  * The MeetingContainer component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const MeetingContainer: FC<Props> = (props: Props) => {
   const {

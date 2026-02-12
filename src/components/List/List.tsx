@@ -9,6 +9,9 @@ import useOrientationBasedKeyboardNavigation from '../../hooks/useOrientationBas
 import { mergeProps } from '@react-aria/utils';
 import { ListItemBaseIndex } from '../ListItemBase/ListItemBase.types';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const List = forwardRef((props: Props, ref: RefObject<ListRefObject>) => {
   const {
     allItemIndexes,

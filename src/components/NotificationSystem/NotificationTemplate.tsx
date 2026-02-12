@@ -43,6 +43,7 @@ export type NotificationTemplateProps = AriaLabelRequired & {
 
 /**
  * NOTE: this component is only used for the stories
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const NotificationTemplate: FC<NotificationTemplateProps> = (props: NotificationTemplateProps) => {
   const { content, closeToast, closeButtonText, className, toastCloseButtonLabel, ...rest } = props;

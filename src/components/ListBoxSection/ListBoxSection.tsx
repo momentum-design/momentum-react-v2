@@ -9,6 +9,9 @@ import { ListBoxContext } from '../ListBoxBase/ListBoxBase';
 import ListBoxItem from '../ListBoxItem';
 import ContentSeparator from '../ContentSeparator';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ListBoxSection = <T extends object>(props: Props<T>): ReactElement => {
   const { section } = props;
 

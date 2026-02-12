@@ -9,6 +9,9 @@ import type { Props } from './ModalContainer.types';
 import './ModalContainer.style.scss';
 import { getArrowOrientation } from './ModalContainer.utils';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   const {
     arrowId = ARROW_ID,
@@ -76,6 +79,9 @@ const ModalContainer = (props: Props, ref: RefObject<HTMLDivElement>) => {
   );
 };
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _ModalContainer = forwardRef(ModalContainer);
 _ModalContainer.displayName = 'ModalContainer';
 

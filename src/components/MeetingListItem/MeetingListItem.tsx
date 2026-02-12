@@ -7,6 +7,9 @@ import './MeetingListItem.style.scss';
 import ListItemBase from '../ListItemBase';
 import MeetingRowContent from '../MeetingRowContent';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const MeetingListItem: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLLIElement>) => {
     const {

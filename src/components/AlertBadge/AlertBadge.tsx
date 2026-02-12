@@ -8,6 +8,9 @@ import { STYLE } from './AlertBadge.constants';
 import { Props } from './AlertBadge.types';
 import './AlertBadge.style.scss';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const AlertBadge = forwardRef((props: Props, providedRef: RefObject<HTMLButtonElement>) => {
   const { children, className, color, image, label, ...otherProps } = props;
 

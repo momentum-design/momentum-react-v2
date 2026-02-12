@@ -59,6 +59,9 @@ const announce: ScreenReaderAnnouncerAnnounce = (
   throw Error(`ScreenReaderAnnouncer with identity ${announcerIdentity} is not registered`);
 };
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ScreenReaderAnnouncement = ({
   clear,
   delay,
@@ -95,6 +98,7 @@ const ScreenReaderAnnouncement = ({
  * To allow for multiple announcers to exist concurrently, each announcer must have a unique identity.
  * If no identity is provided, a default one is used (useful for a top level announcer).
  * If an announcer with a duplicate identity is mounted, an error will occur.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ScreenReaderAnnouncer: FC<AnnouncerProps> & CompoundProps = ({
   identity = DEFAULTS.IDENTITY,

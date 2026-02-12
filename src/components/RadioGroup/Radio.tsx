@@ -12,6 +12,9 @@ import Text from '../Text';
 
 import './RadioGroup.style.scss';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Radio: FC<RadioProps> = (props: RadioProps) => {
   const { className, isDisabled = DEFAULTS.OPTION_DISABLED, id, description, style, label } = props;
   const state = useContext(RadioContext);

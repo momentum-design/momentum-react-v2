@@ -8,6 +8,9 @@ import classnames from 'classnames';
 import type { Button } from '@momentum-design/components';
 import type { Props } from './ButtonDialpad.types';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonDialpad = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const { className, ...otherProps } = props;
 

@@ -9,6 +9,7 @@ import './Toggle.style.scss';
 
 /**
  * The Toggle component. Also known as Switch.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
   const { id, className, style, isDisabled } = props;
@@ -34,7 +35,9 @@ const Toggle = (props: Props, providedRef: RefObject<HTMLInputElement>) => {
     />
   );
 };
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ToggleWithRef: FC<Props> = forwardRef(Toggle);
 ToggleWithRef.displayName = 'Toggle';
 

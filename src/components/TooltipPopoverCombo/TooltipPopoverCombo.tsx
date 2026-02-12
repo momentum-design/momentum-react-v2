@@ -9,6 +9,7 @@ import { useId } from '@react-aria/utils';
 
 /**
  * The TooltipPopoverCombo component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const TooltipPopoverCombo: FC<Props> = (props: TooltipPopoverComboProps) => {
   const { triggerComponent, tooltipContent, popoverContent, otherPopoverProps, otherTooltipProps } =

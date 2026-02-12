@@ -11,9 +11,13 @@ import { useSpatialRadioGroupNavigation } from '../SpatialNavigationProvider/Spa
 
 /**
  * The RadioSimpleGroup component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 export const RadioSimpleGroupContext = React.createContext(null);
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const RadioSimpleGroup: FC<RadioSimpleGroupProps> = (props: RadioSimpleGroupProps) => {
   const { className, description, id, label, children, style } = props;
 

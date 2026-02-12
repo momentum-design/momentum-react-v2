@@ -9,6 +9,7 @@ import './ToastDetails.style.scss';
 
 /**
  * The `<ToastDetails />` component. This component is meant to be consumed by only the `<Toast />` component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ToastDetails: FC<Props> = (props: Props) => {
   const {

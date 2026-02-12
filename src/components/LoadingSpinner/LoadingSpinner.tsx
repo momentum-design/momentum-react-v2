@@ -6,6 +6,9 @@ import { Props } from './LoadingSpinner.types';
 import './LoadingSpinner.style.scss';
 import { Spinner as MdcSpinner } from '@momentum-design/components/dist/react';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const LoadingSpinner: FC<Props> = (props: Props) => {
   const {
     className,

@@ -8,6 +8,7 @@ import './Overlay.style.scss';
 
 /**
  * The Overlay component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Overlay: FC<Props> = (props: Props) => {
   const {

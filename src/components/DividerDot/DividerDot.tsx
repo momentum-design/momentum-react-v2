@@ -8,6 +8,7 @@ import './DividerDot.style.scss';
 
 /**
  * The DividerDot component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const DividerDot: FC<Props> = (props: Props) => {
   const { className, id, style, size = DEFAULTS.SIZE } = props;

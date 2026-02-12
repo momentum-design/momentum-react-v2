@@ -9,6 +9,7 @@ import TreeNodeBase from '../TreeNodeBase';
 
 /**
  * The SpaceTreeNode component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const SpaceTreeNode: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLDivElement>) => {

@@ -13,6 +13,9 @@ import FocusRing from '../FocusRing';
 
 //TODO: Implement Notch
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const MenuListBackground = (props: Props, ref: RefObject<HTMLUListElement>) => {
   const { className, children, color = DEFAULTS.COLOR, ...rest } = props;
 
@@ -24,7 +27,9 @@ const MenuListBackground = (props: Props, ref: RefObject<HTMLUListElement>) => {
     </FocusRing>
   );
 };
-
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const _MenuListBackground = forwardRef(MenuListBackground);
 _MenuListBackground.displayName = 'MenuListBackground';
 

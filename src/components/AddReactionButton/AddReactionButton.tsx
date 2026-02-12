@@ -9,6 +9,9 @@ import { Props } from './AddReactionButton.types';
 import './AddReactionButton.style.scss';
 
 // todo: fix typing once React keyboard events are properly typed in momentum-design
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const AddReactionButton = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const { className, id, style, ...otherProps } = props;
   delete otherProps.size;

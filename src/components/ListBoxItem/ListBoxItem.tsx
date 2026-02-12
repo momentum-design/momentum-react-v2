@@ -7,6 +7,9 @@ import Icon from '../Icon';
 import ListItemBaseSection from '../ListItemBaseSection';
 import ListItemBase from '../ListItemBase';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 function ListBoxItem<T>(props: Props<T>): ReactElement {
   const { item } = props;
   const ref = React.useRef<HTMLLIElement>(null);

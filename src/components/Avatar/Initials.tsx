@@ -11,6 +11,7 @@ interface InitialsProps {
  * The Initials component, rendering the passed in initials in a span
  * and throws console warnings in case the initials length is too big for the
  * specified type.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Initials: FC<InitialsProps> = (props: InitialsProps) => {
   const { initials, type, className } = props;

@@ -35,6 +35,7 @@ import './ThemeProvider.style.scss';
 
 /**
  * Provides a collection of CSSVariables based on a ThemeToken to all child elements inside of a rendered `<div />` element.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ThemeProvider: FC<Props> = ({ children, id, style, theme, ...restProps }: Props) => {
   const themeClassStable = `${THEME_CLASS_PREFIX_STABLE}-${theme || DEFAULTS.THEME}`;

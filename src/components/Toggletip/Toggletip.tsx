@@ -14,6 +14,7 @@ import ScreenReaderAnnouncer from '../ScreenReaderAnnouncer';
  * Toggletip content rendered in a interactive Popover.
  *
  * Consumer of the component need to take care of the label of the triggerComponent
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Toggletip = forwardRef(
   (
@@ -50,20 +51,23 @@ const Toggletip = forwardRef(
       if (isTooltipOpen) {
         ScreenReaderAnnouncer.announce({ body: children }, announcerId);
       }
-    }, [isTooltipOpen, children]);
+    }, [isTooltipOpen, children, announcerId]);
 
     // Update aria props manually, because "The `aria` attribute is reserved for future use in React."
     // see https://atomiks.github.io/tippyjs/v6/all-props/#aria
-    const setInstance = useCallback((popoverInstance: PopoverInstance | undefined) => {
-      popoverInstance?.setProps?.({ aria: { expanded: 'auto', content: null } });
-      tippyRef.current = popoverInstance;
-      otherProps?.setInstance?.(popoverInstance);
-    }, []);
+    const setInstance = useCallback(
+      (popoverInstance: PopoverInstance | undefined) => {
+        popoverInstance?.setProps?.({ aria: { expanded: 'auto', content: null } });
+        tippyRef.current = popoverInstance;
+        otherProps?.setInstance?.(popoverInstance);
+      },
+      [otherProps]
+    );
 
     // Hide popover on when the trigger component loose focus
     const hidePopoverOnBlur = useCallback(() => {
       tippyRef.current?.hide();
-    }, [tippyRef.current]);
+    }, []);
 
     useEffect(() => {
       const triggerRef = triggerComponentRef.current;
@@ -71,7 +75,7 @@ const Toggletip = forwardRef(
         triggerRef.addEventListener('blur', hidePopoverOnBlur);
         return () => triggerRef.removeEventListener('blur', hidePopoverOnBlur);
       }
-    }, [triggerComponentRef.current]);
+    }, [hidePopoverOnBlur]);
 
     /**
      * Toggletip's popover is interactive to make the content selectable and VoiceOver reads the whole content.

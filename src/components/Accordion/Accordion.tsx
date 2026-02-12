@@ -13,6 +13,9 @@ import { v4 as uuidV4 } from 'uuid';
 import Text from '../Text';
 import ButtonSimple from '../ButtonSimple';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const Accordion: FC<Props> = forwardRef<HTMLButtonElement, Props>((props, providedRef) => {
   const {
     children,

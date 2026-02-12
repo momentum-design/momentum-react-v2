@@ -5,6 +5,9 @@ import type { Button, IconButtonSize } from '@momentum-design/components';
 import { DEFAULTS } from './ButtonCircleToggle.constants';
 import type { Props } from './ButtonCircleToggle.types';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonCircleToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
     isSelected = DEFAULTS.SELECTED, // controlled

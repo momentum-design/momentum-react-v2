@@ -7,6 +7,7 @@ import './ModalArrow.style.scss';
 
 /**
  * The ModalArrow component. This is designed to be strictly consumed by the ModalContainer component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const ModalArrow: FC<Props> = (props: Props) => {
   const { className, color, id, placement = DEFAULTS.PLACEMENT, style } = props;

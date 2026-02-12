@@ -14,6 +14,7 @@ import Icon from '../Icon';
 
 /**
  * The MeetingRowContent component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const MeetingRowContent: FC<Props> = (props: Props) => {
   const {

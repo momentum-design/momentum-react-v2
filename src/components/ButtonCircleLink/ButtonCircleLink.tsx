@@ -5,6 +5,9 @@ import { Props } from './ButtonCircleLink.types';
 import './ButtonCircleLink.style.scss';
 import Link from '../Link';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonCircleLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
   const {
     id,

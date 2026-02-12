@@ -13,6 +13,7 @@ import './Tooltip.style.scss';
  * Shows a non-interactable popover component with `tooltip` role, and update the aria label/description of the trigger component
  *
  * @see [WCAG - Tooltip pattern]{@link https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/}
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const Tooltip = forwardRef(
   (
@@ -51,7 +52,7 @@ const Tooltip = forwardRef(
         });
         otherProps?.setInstance?.(popoverInstance);
       },
-      [isLabelTooltip, otherProps?.setInstance]
+      [otherProps]
     );
 
     const newTriggerComponent = React.cloneElement(triggerComponent, {

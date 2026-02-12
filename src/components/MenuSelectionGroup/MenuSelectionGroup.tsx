@@ -11,6 +11,9 @@ import { SelectionManager, useMultipleSelectionState } from '@react-stately/sele
 import { useMenuSection } from '@react-aria/menu';
 import ContentSeparator from '../ContentSeparator';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const MenuSelectionGroup = <T extends object>(props: Props<T>): ReactElement => {
   const { item, state, onAction, tickPosition, classNameSelectedItem, className, itemSize } = props;
 

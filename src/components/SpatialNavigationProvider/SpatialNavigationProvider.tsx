@@ -8,6 +8,7 @@ import { SpatialNavigation } from './SpatialNavigation';
 
 /**
  * Spatial Navigation Provider
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const SpatialNavigationProvider: FC<Props> = ({
   children,

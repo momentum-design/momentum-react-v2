@@ -15,6 +15,7 @@ import ScreenReaderAnnouncer from '../ScreenReaderAnnouncer';
  *
  * This is a component written in the compound component pattern way, which means utils to trigger a notification for example
  * are exposed on the component directly, like `NotificationSystem.notify` or `NotificationSystem.update`
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const NotificationSystem: FC<Props> & CompoundProps = (props: Props) => {
   const {

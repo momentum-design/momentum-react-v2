@@ -7,6 +7,9 @@ import { DEFAULTS } from './ButtonPillToggle.constants';
 import { DEFAULTS as BUTTON_PILL_DEFAULTS } from '../ButtonPill/ButtonPill.constants';
 import { Props } from './ButtonPillToggle.types';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonPillToggle = forwardRef((props: Props, providedRef: RefObject<Button>) => {
   const {
     isSelected = DEFAULTS.SELECTED, // controlled

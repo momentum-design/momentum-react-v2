@@ -9,6 +9,7 @@ import SpaceRowContent from '../SpaceRowContent';
 
 /**
  * The SpaceListItem component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const SpaceListItem: FC<Props> = forwardRef(
   (props: Props, providedRef: RefObject<HTMLLIElement>) => {

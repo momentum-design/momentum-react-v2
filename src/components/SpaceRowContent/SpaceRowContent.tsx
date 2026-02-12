@@ -20,6 +20,7 @@ import {
 //TODO: support 2-line labels for right/position-end section.
 /**
  * The SpaceRowContent component.
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
  */
 const SpaceRowContent: FC<Props> = (props: Props) => {
   const {

@@ -6,6 +6,9 @@ import { Props } from './ButtonPillLink.types';
 import './ButtonPillLink.style.scss';
 import Link from '../Link';
 
+/**
+ * @deprecated Use the equivalent from momentum.design (NPM: `@momentum-design/components/dist/react`)
+ */
 const ButtonPillLink = forwardRef((props: Props, providedRef: RefObject<HTMLAnchorElement>) => {
   const {
     id,
