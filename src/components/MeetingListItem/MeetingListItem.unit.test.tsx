@@ -10,7 +10,6 @@ import ButtonCircle from '../ButtonCircle';
 import { mountAndWait, renderWithWebComponent } from '../../../test/utils';
 import { render, screen } from '@testing-library/react';
 import Text from '../Text';
-import ButtonHyperlink from '../ButtonHyperlink';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import List from '../List';
@@ -254,9 +253,6 @@ describe('<MeetingListItem />', () => {
             data-testid="meeting-list-item"
             buttonGroup={
               <ButtonGroup spaced>
-                <ButtonHyperlink data-testid="buttonlink" key="link">
-                  Link
-                </ButtonHyperlink>
                 <div key="participants-list" style={{ paddingRight: 0 }}>
                   17
                 </div>
@@ -286,12 +282,6 @@ describe('<MeetingListItem />', () => {
       const listItem = getByTestId('meeting-list-item');
 
       expect(listItem).toHaveFocus();
-
-      await user.tab();
-
-      const buttonLink = getByTestId('buttonlink');
-
-      expect(buttonLink).toHaveFocus();
     });
   });
 });

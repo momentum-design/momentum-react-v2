@@ -21,7 +21,6 @@ import { action } from '@storybook/addon-actions';
 import MeetingListItem from '../MeetingListItem';
 import { MeetingMarker } from '../MeetingListItem/MeetingListItem.types';
 import ButtonGroup from '../ButtonGroup';
-import ButtonHyperlink from '../ButtonHyperlink';
 
 import { AriaToolbar, AriaToolbarItem, ListItemBaseSection, SearchInput } from '..';
 import { omit, range, times } from 'lodash';
@@ -192,11 +191,7 @@ CalendarList.parameters = {
                   itemIndex={index}
                   image={<Avatar initials="TU" />}
                   color={MeetingMarker.AcceptedActive}
-                  buttonGroup={
-                    <ButtonGroup spaced>
-                      <ButtonHyperlink>Link</ButtonHyperlink>
-                    </ButtonGroup>
-                  }
+                  buttonGroup={<ButtonGroup spaced />}
                 >
                   <Text type="header-primary" tagName="h3">
                     This is a meeting

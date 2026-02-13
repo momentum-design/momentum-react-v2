@@ -10,7 +10,6 @@ export {
   ButtonPill,
   ButtonPillToggle,
   ButtonSimple,
-  Checkbox as CheckboxNext,
   CodeInput,
   DividerDot,
   NavigationTab,

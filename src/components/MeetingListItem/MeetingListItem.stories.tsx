@@ -13,7 +13,6 @@ import argTypes from './MeetingListItem.stories.args';
 import Documentation from './MeetingListItem.stories.docs.mdx';
 import Icon from '../Icon';
 import Avatar from '../Avatar';
-import ButtonHyperlink from '../ButtonHyperlink';
 import ButtonPill from '../ButtonPill';
 import ButtonGroup from '../ButtonGroup';
 import ButtonCircle from '../ButtonCircle';
@@ -71,7 +70,6 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   buttonGroup: (
     <ButtonGroup spaced>
-      <ButtonHyperlink key="link">Link</ButtonHyperlink>
       <div key="participants-list" style={{ paddingRight: 0 }}>
         17
       </div>
@@ -134,7 +132,6 @@ Common.parameters = {
       label: 'Recording with buttons and link',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
           <ButtonCircle key="btn-info" variant="tertiary" prefixIcon="info-circle-regular" />
           <ButtonCircle key="btn-chat" variant="tertiary" prefixIcon="chat-regular" />
         </ButtonGroup>
@@ -155,7 +152,6 @@ Common.parameters = {
       label: 'Active meeting with participant count',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">Link</ButtonHyperlink>
           <div key="participant-list" style={{ paddingRight: 0, marginRight: 0 }}>
             17
           </div>
@@ -268,7 +264,6 @@ Common.parameters = {
       ),
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
           <ButtonCircle key="button-copy" variant="tertiary" prefixIcon="copy-regular" />
           <ButtonCircle key="button-chat" variant="tertiary" prefixIcon="chat-regular" />
         </ButtonGroup>
@@ -287,16 +282,7 @@ delete Colors.argTypes.children;
 Colors.parameters = {
   variants: [
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>
-            Link for Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-            unknown printer took a galley of type and scrambled it to make a type specimen book. It
-            has survived not only five centuries, but also the leap
-          </ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.AcceptedActive}
@@ -310,11 +296,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.AcceptedInactive}
@@ -328,16 +310,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>
-            Link for Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-            unknown printer took a galley of type and scrambled it to make a type specimen book. It
-            has survived not only five centuries, but also the leap
-          </ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.TentativeActive}
@@ -347,11 +320,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.TentativeInactive}
@@ -361,11 +330,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.Transparent}
@@ -375,11 +340,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.Gray}
@@ -389,11 +350,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.GrayStatic}

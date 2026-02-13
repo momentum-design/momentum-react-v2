@@ -5,7 +5,6 @@ import { mount } from 'enzyme';
 import MeetingRowContent from './';
 import ButtonPill from '../ButtonPill';
 import ButtonGroup from '../ButtonGroup';
-import ButtonHyperlink from '../ButtonHyperlink';
 import Icon from '../Icon';
 import { MeetingMarker } from '../MeetingListItem';
 import ButtonCircle from '../ButtonCircle';
@@ -39,7 +38,6 @@ describe('<MeetingRowContent />', () => {
 
       const buttonGroup = (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">Link</ButtonHyperlink>
           <div key="participants-list" style={{ paddingRight: 0 }}>
             17
           </div>

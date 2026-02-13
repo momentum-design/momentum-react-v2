@@ -4,13 +4,11 @@ import type { ButtonCircleProps } from '../ButtonCircle';
 import type { ButtonPillProps } from '../ButtonPill';
 import type { ChipProps } from '../Chip';
 import type { AvatarProps } from '../Avatar';
-import type { ButtonHyperlinkProps } from '../ButtonHyperlink';
 import type { AllowedTagNames, FontStyle } from '../Text/Text.types';
 
 export type SupportedActionButton = ReactElement<ButtonPillProps | ButtonCircleProps>;
 export type SupportedChips = ReactElement<ChipProps>;
 export type SupportedAvatar = ReactElement<AvatarProps>;
-export type SupportedButtonHyperlink = ReactElement<ButtonHyperlinkProps | ButtonPillProps>;
 export type ScheduleInfoColor = 'secondary' | 'success' | 'primary';
 
 export interface Props extends CardProps {
@@ -22,7 +20,7 @@ export interface Props extends CardProps {
   /**
    * Link to space or conversation if meeting is not space backed.
    */
-  spaceLink?: SupportedButtonHyperlink;
+  spaceLink?: any;
 
   /**
    * Action buttons supplied by consumer.
