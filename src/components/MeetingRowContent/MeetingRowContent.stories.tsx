@@ -11,7 +11,6 @@ import MeetingRowContent, { MeetingRowContentProps } from './';
 import argTypes from './MeetingRowContent.stories.args';
 import Documentation from './MeetingRowContent.stories.docs.mdx';
 import ButtonGroup from '../ButtonGroup';
-import ButtonHyperlink from '../ButtonHyperlink';
 import ButtonPill from '../ButtonPill';
 import Text from '../Text';
 import { MeetingMarker } from '../MeetingListItem';
@@ -41,7 +40,6 @@ Example.argTypes = { ...argTypes };
 Example.args = {
   buttonGroup: (
     <ButtonGroup spaced>
-      <ButtonHyperlink key="link">Link</ButtonHyperlink>
       <div key="participants-list" style={{ paddingRight: 0 }}>
         17
       </div>
@@ -112,7 +110,6 @@ Common.parameters = {
       label: 'Recording with buttons and link',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
           <ButtonCircle key="btn-info" variant="tertiary">
             <Icon name="info-circle" />
           </ButtonCircle>
@@ -141,7 +138,6 @@ Common.parameters = {
       label: 'Active meeting with participant count',
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">Link</ButtonHyperlink>
           <div key="participant-list" style={{ paddingRight: 0, marginRight: 0 }}>
             17
           </div>
@@ -249,7 +245,6 @@ Common.parameters = {
       ),
       buttonGroup: (
         <ButtonGroup spaced>
-          <ButtonHyperlink key="link">hyperlink</ButtonHyperlink>
           <ButtonCircle key="button-copy" variant="tertiary" prefixIcon="copy-regular" />
           <ButtonCircle key="button-chat" variant="tertiary" prefixIcon="chat-regular" />
         </ButtonGroup>
@@ -274,11 +269,7 @@ delete Colors.argTypes.children;
 Colors.parameters = {
   variants: [
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.AcceptedActive}
@@ -288,11 +279,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.AcceptedInactive}
@@ -302,11 +289,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.TentativeActive}
@@ -316,11 +299,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.TentativeInactive}
@@ -330,11 +309,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.Transparent}
@@ -344,11 +319,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.Gray}
@@ -358,11 +329,7 @@ Colors.parameters = {
       image: <Avatar initials="TU" />,
     },
     {
-      buttonGroup: (
-        <ButtonGroup spaced>
-          <ButtonHyperlink>Link</ButtonHyperlink>
-        </ButtonGroup>
-      ),
+      buttonGroup: <ButtonGroup spaced />,
       children: (
         <Text type="body-primary" tagName="p">
           {MeetingMarker.GrayStatic}

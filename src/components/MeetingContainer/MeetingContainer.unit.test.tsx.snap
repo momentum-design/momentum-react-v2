@@ -794,6 +794,163 @@ exports[`<MeetingContainer /> snapshot should match snapshot with className 1`] 
 </MeetingContainer>
 `;
 
+exports[`<MeetingContainer /> snapshot should match snapshot with classification supplied 1`] = `
+<MeetingContainer
+  classification={
+    <Chip
+      color="mint"
+      iconName="people-bold"
+      label="Publish"
+    />
+  }
+>
+  <Card
+    className="md-meeting-container-wrapper"
+    height="auto"
+  >
+    <ButtonSimple
+      className="md-meeting-container-wrapper md-card-wrapper"
+      data-color="inactive"
+      data-height="auto"
+      data-rounding={2}
+    >
+      <FocusRing>
+        <FocusRing
+          focusClass="md-focus-ring-wrapper children"
+          focusRingClass="md-focus-ring-wrapper children"
+        >
+          <button
+            className="md-meeting-container-wrapper md-card-wrapper md-button-simple-wrapper"
+            data-color="inactive"
+            data-height="auto"
+            data-rounding={2}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragStart={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            type="button"
+          >
+            <div
+              className="md-meeting-container-container"
+            >
+              <div
+                className="md-meeting-container-details"
+              >
+                <div>
+                  <Text
+                    tagName="h3"
+                    type="header-primary"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      tagname="h3"
+                      type="body-large-bold"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
+                  </Text>
+                  <div
+                    className="md-meeting-container-classification"
+                  >
+                    <Chip
+                      color="mint"
+                      iconName="people-bold"
+                      label="Publish"
+                    >
+                      <Chip
+                        color="mint"
+                        iconName="people-bold"
+                        label="Publish"
+                        onClick={[Function]}
+                        onPointerDown={[Function]}
+                        onPointerUp={[Function]}
+                      >
+                        <mdc-chip
+                          onPointerDown={[Function]}
+                          onPointerUp={[Function]}
+                          suppressHydrationWarning={true}
+                        />
+                      </Chip>
+                    </Chip>
+                  </div>
+                </div>
+                <div>
+                  <Text
+                    data-color="secondary"
+                    tagName="small"
+                    type="body-secondary"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      data-color="secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
+                  </Text>
+                  <Text
+                    data-color="secondary"
+                    tagName="small"
+                    type="body-secondary"
+                  >
+                    <Text
+                      className="md-text-wrapper"
+                      data-color="secondary"
+                      tagname="small"
+                      type="body-midsize-regular"
+                    >
+                      <mdc-text
+                        class="md-text-wrapper"
+                        data-color="secondary"
+                        suppressHydrationWarning={true}
+                      />
+                    </Text>
+                  </Text>
+                </div>
+              </div>
+              <div
+                className="md-meeting-container-actions"
+              >
+                <ButtonGroup
+                  spaced={true}
+                >
+                  <div
+                    className="md-button-group-wrapper"
+                    data-compressed={false}
+                    data-orientation="horizontal"
+                    data-round={false}
+                    data-separator={false}
+                    data-spaced={true}
+                  />
+                </ButtonGroup>
+              </div>
+            </div>
+          </button>
+        </FocusRing>
+      </FocusRing>
+    </ButtonSimple>
+  </Card>
+</MeetingContainer>
+`;
+
 exports[`<MeetingContainer /> snapshot should match snapshot with disable supplied 1`] = `
 <MeetingContainer
   actionButtons={
@@ -824,11 +981,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
   }
   disabled={true}
   meetingTitle="Test Meeting Title"
-  spaceLink={
-    <ButtonHyperlink>
-      Example Link
-    </ButtonHyperlink>
-  }
   tags={
     Array [
       <Chip>
@@ -902,51 +1054,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with disable suppli
                       </mdc-text>
                     </Text>
                   </Text>
-                  <DividerDot>
-                    <Bullet
-                      className="md-divider-dot-wrapper"
-                      size="small"
-                    >
-                      <mdc-bullet
-                        class="md-divider-dot-wrapper"
-                        suppressHydrationWarning={true}
-                      />
-                    </Bullet>
-                  </DividerDot>
-                  <ButtonHyperlink
-                    className="md-meeting-container-space-link"
-                  >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
-                      >
-                        <a
-                          className="md-button-hyperlink-wrapper md-meeting-container-space-link"
-                          data-disabled={false}
-                          data-inverted={false}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          role="button"
-                          tabIndex={0}
-                        >
-                          Example Link
-                        </a>
-                      </FocusRing>
-                    </FocusRing>
-                  </ButtonHyperlink>
                   <div
                     className="md-meeting-container-classification"
                   />
@@ -2100,205 +2207,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with scheduleInfoSe
 </MeetingContainer>
 `;
 
-exports[`<MeetingContainer /> snapshot should match snapshot with spacelink supplied 1`] = `
-<MeetingContainer
-  meetingTitle="TestMeeting"
-  scheduleInfoFirst="10:00am-11:00am"
-  scheduleInfoSecond="Mon, Jan 1, 2023"
-  spaceLink={
-    <ButtonHyperlink>
-      Example Link
-    </ButtonHyperlink>
-  }
->
-  <Card
-    className="md-meeting-container-wrapper"
-    height="auto"
-  >
-    <ButtonSimple
-      className="md-meeting-container-wrapper md-card-wrapper"
-      data-color="inactive"
-      data-height="auto"
-      data-rounding={2}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-meeting-container-wrapper md-card-wrapper md-button-simple-wrapper"
-            data-color="inactive"
-            data-height="auto"
-            data-rounding={2}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <div
-              className="md-meeting-container-container"
-            >
-              <div
-                className="md-meeting-container-details"
-              >
-                <div>
-                  <Text
-                    tagName="h3"
-                    type="header-primary"
-                  >
-                    <Text
-                      className="md-text-wrapper"
-                      tagname="h3"
-                      type="body-large-bold"
-                    >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      >
-                        TestMeeting
-                      </mdc-text>
-                    </Text>
-                  </Text>
-                  <DividerDot>
-                    <Bullet
-                      className="md-divider-dot-wrapper"
-                      size="small"
-                    >
-                      <mdc-bullet
-                        class="md-divider-dot-wrapper"
-                        suppressHydrationWarning={true}
-                      />
-                    </Bullet>
-                  </DividerDot>
-                  <ButtonHyperlink
-                    className="md-meeting-container-space-link"
-                  >
-                    <FocusRing>
-                      <FocusRing
-                        focusClass="md-focus-ring-wrapper children"
-                        focusRingClass="md-focus-ring-wrapper children"
-                      >
-                        <a
-                          className="md-button-hyperlink-wrapper md-meeting-container-space-link"
-                          data-disabled={false}
-                          data-inverted={false}
-                          onBlur={[Function]}
-                          onClick={[Function]}
-                          onDragStart={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          onMouseDown={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseUp={[Function]}
-                          onTouchCancel={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          role="button"
-                          tabIndex={0}
-                        >
-                          Example Link
-                        </a>
-                      </FocusRing>
-                    </FocusRing>
-                  </ButtonHyperlink>
-                  <div
-                    className="md-meeting-container-classification"
-                  />
-                </div>
-                <div>
-                  <Text
-                    data-color="secondary"
-                    tagName="small"
-                    type="body-secondary"
-                  >
-                    <Text
-                      className="md-text-wrapper"
-                      data-color="secondary"
-                      tagname="small"
-                      type="body-midsize-regular"
-                    >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        data-color="secondary"
-                        suppressHydrationWarning={true}
-                      >
-                        10:00am-11:00am
-                      </mdc-text>
-                    </Text>
-                  </Text>
-                  <DividerDot>
-                    <Bullet
-                      className="md-divider-dot-wrapper"
-                      size="small"
-                    >
-                      <mdc-bullet
-                        class="md-divider-dot-wrapper"
-                        suppressHydrationWarning={true}
-                      />
-                    </Bullet>
-                  </DividerDot>
-                  <Text
-                    data-color="secondary"
-                    tagName="small"
-                    type="body-secondary"
-                  >
-                    <Text
-                      className="md-text-wrapper"
-                      data-color="secondary"
-                      tagname="small"
-                      type="body-midsize-regular"
-                    >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        data-color="secondary"
-                        suppressHydrationWarning={true}
-                      >
-                        Mon, Jan 1, 2023
-                      </mdc-text>
-                    </Text>
-                  </Text>
-                </div>
-              </div>
-              <div
-                className="md-meeting-container-actions"
-              >
-                <ButtonGroup
-                  spaced={true}
-                >
-                  <div
-                    className="md-button-group-wrapper"
-                    data-compressed={false}
-                    data-orientation="horizontal"
-                    data-round={false}
-                    data-separator={false}
-                    data-spaced={true}
-                  />
-                </ButtonGroup>
-              </div>
-            </div>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-  </Card>
-</MeetingContainer>
-`;
-
 exports[`<MeetingContainer /> snapshot should match snapshot with style 1`] = `
 <MeetingContainer
   style={
@@ -2603,163 +2511,6 @@ exports[`<MeetingContainer /> snapshot should match snapshot with tags supplied 
               <div
                 className="md-meeting-container-actions"
                 data-anchor="top"
-              >
-                <ButtonGroup
-                  spaced={true}
-                >
-                  <div
-                    className="md-button-group-wrapper"
-                    data-compressed={false}
-                    data-orientation="horizontal"
-                    data-round={false}
-                    data-separator={false}
-                    data-spaced={true}
-                  />
-                </ButtonGroup>
-              </div>
-            </div>
-          </button>
-        </FocusRing>
-      </FocusRing>
-    </ButtonSimple>
-  </Card>
-</MeetingContainer>
-`;
-
-exports[`<MeetingContainer /> snapshot should match snapshot with classification supplied 1`] = `
-<MeetingContainer
-  classification={
-    <Chip
-      color="mint"
-      iconName="people-bold"
-      label="Publish"
-    />
-  }
->
-  <Card
-    className="md-meeting-container-wrapper"
-    height="auto"
-  >
-    <ButtonSimple
-      className="md-meeting-container-wrapper md-card-wrapper"
-      data-color="inactive"
-      data-height="auto"
-      data-rounding={2}
-    >
-      <FocusRing>
-        <FocusRing
-          focusClass="md-focus-ring-wrapper children"
-          focusRingClass="md-focus-ring-wrapper children"
-        >
-          <button
-            className="md-meeting-container-wrapper md-card-wrapper md-button-simple-wrapper"
-            data-color="inactive"
-            data-height="auto"
-            data-rounding={2}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragStart={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            type="button"
-          >
-            <div
-              className="md-meeting-container-container"
-            >
-              <div
-                className="md-meeting-container-details"
-              >
-                <div>
-                  <Text
-                    tagName="h3"
-                    type="header-primary"
-                  >
-                    <Text
-                      className="md-text-wrapper"
-                      tagname="h3"
-                      type="body-large-bold"
-                    >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        suppressHydrationWarning={true}
-                      />
-                    </Text>
-                  </Text>
-                  <div
-                    className="md-meeting-container-classification"
-                  >
-                    <Chip
-                      color="mint"
-                      iconName="people-bold"
-                      label="Publish"
-                    >
-                      <Chip
-                        color="mint"
-                        iconName="people-bold"
-                        label="Publish"
-                        onClick={[Function]}
-                        onPointerDown={[Function]}
-                        onPointerUp={[Function]}
-                      >
-                        <mdc-chip
-                          onPointerDown={[Function]}
-                          onPointerUp={[Function]}
-                          suppressHydrationWarning={true}
-                        />
-                      </Chip>
-                    </Chip>
-                  </div>
-                </div>
-                <div>
-                  <Text
-                    data-color="secondary"
-                    tagName="small"
-                    type="body-secondary"
-                  >
-                    <Text
-                      className="md-text-wrapper"
-                      data-color="secondary"
-                      tagname="small"
-                      type="body-midsize-regular"
-                    >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        data-color="secondary"
-                        suppressHydrationWarning={true}
-                      />
-                    </Text>
-                  </Text>
-                  <Text
-                    data-color="secondary"
-                    tagName="small"
-                    type="body-secondary"
-                  >
-                    <Text
-                      className="md-text-wrapper"
-                      data-color="secondary"
-                      tagname="small"
-                      type="body-midsize-regular"
-                    >
-                      <mdc-text
-                        class="md-text-wrapper"
-                        data-color="secondary"
-                        suppressHydrationWarning={true}
-                      />
-                    </Text>
-                  </Text>
-                </div>
-              </div>
-              <div
-                className="md-meeting-container-actions"
               >
                 <ButtonGroup
                   spaced={true}

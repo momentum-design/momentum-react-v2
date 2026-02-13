@@ -11,7 +11,6 @@ import Icon from '../Icon';
 import Avatar from '../Avatar';
 import Chip from '../Chip';
 import Text from '../Text';
-import ButtonHyperlink from '../ButtonHyperlink';
 import { CARD_CONSTANTS } from '../Card';
 
 export default {
@@ -46,8 +45,6 @@ const pillButtons = [
   </ButtonPill>,
 ];
 
-const spaceLink = <ButtonHyperlink>Example Link</ButtonHyperlink>;
-
 const avatar = <Avatar>BR</Avatar>;
 
 const continueConversation = <ButtonPill size={20}>Continue the conversation</ButtonPill>;
@@ -56,7 +53,6 @@ Example.argTypes = { ...argTypes };
 
 Example.args = {
   meetingTitle: 'Test Meeting',
-  spaceLink: spaceLink,
   actionButtons: pillButtons,
   tags: tags,
   classification: classification,
@@ -82,7 +78,6 @@ Common.parameters = {
   variants: [
     {
       meetingTitle: 'Test Meeting 1',
-      spaceLink: spaceLink,
       actionButtons: pillButtons,
       avatar: avatar,
       scheduleInfoFirst: 'In progress',
@@ -92,7 +87,6 @@ Common.parameters = {
     },
     {
       meetingTitle: 'Test Meeting 2',
-      spaceLink: spaceLink,
       classification: classification,
       actionButtons: pillButtons,
       avatar: avatar,

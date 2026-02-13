@@ -5,7 +5,6 @@ import ButtonPill from '../ButtonPill';
 import Text, { TEXT_CONSTANTS } from '../Text';
 import Avatar from '../Avatar';
 import ButtonCircle from '../ButtonCircle';
-import ButtonHyperlink from '../ButtonHyperlink';
 import { BUTTON_SIMPLE_CONSTANTS } from '../ButtonSimple';
 import { CARD_CONSTANTS } from '../Card';
 
@@ -30,8 +29,6 @@ const pillButtons = [
     <Text tagName="p">Join</Text>
   </ButtonPill>,
 ];
-
-const spaceLink = <ButtonHyperlink>Example Link</ButtonHyperlink>;
 
 const avatar = <Avatar>BR</Avatar>;
 
@@ -178,17 +175,8 @@ describe('<MeetingContainer />', () => {
           meetingTitle={meetingTitle}
           tags={tags}
           actionButtons={pillButtons}
-          spaceLink={spaceLink}
         />
       );
-
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should match snapshot with spacelink supplied', () => {
-      expect.assertions(1);
-
-      container = mount(<MeetingContainer spaceLink={spaceLink} {...testProps} />);
 
       expect(container).toMatchSnapshot();
     });
@@ -453,24 +441,6 @@ describe('attributes', () => {
       .getDOMNode();
 
     expect(element.innerHTML).toBe(meetingTitle);
-  });
-
-  it('should have spaceLink when provided', () => {
-    const element = mount(<MeetingContainer spaceLink={spaceLink} meetingTitle={meetingTitle} />)
-      .find(ButtonHyperlink)
-      .exists();
-
-    expect(element).toBe(true);
-  });
-
-  it('should have spaceLink when provided', () => {
-    const element = mount(
-      <MeetingContainer isDisabled={true} spaceLink={spaceLink} meetingTitle={meetingTitle} />
-    )
-      .find(ButtonHyperlink)
-      .props().disabled;
-
-    expect(element).toBe(true);
   });
 
   it('should use titleType when provided', () => {
