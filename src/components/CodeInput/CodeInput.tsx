@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { ReactElement, useState, useEffect, useRef } from 'react';
 import VerificationInput from 'react-verification-input';
 
@@ -45,11 +46,11 @@ const CodeInput: React.FC<Props> = (props: Props): ReactElement => {
       onComplete(value);
       setComplete(true);
     }
-  }, [numDigits, onChange, onComplete, value]);
+  }, [value]);
 
   useEffect(() => {
     setInternalMessageArray(messageArr);
-  }, [messageArr]);
+  }, [JSON.stringify(messageArr)]);
 
   return (
     <div className={classnames(STYLE.wrapper, className)} data-level={messageType}>
