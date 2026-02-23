@@ -10,7 +10,6 @@ export {
   ButtonPill,
   ButtonPillToggle,
   ButtonSimple,
-  CodeInput,
   DividerDot,
   NavigationTab,
   InputMessage as InputMessageNew,
@@ -65,42 +64,9 @@ export {
 export type {
   ListRefObject,
   PopoverInstance,
-  OnVideoReactionName,
-  OriginalReactionName,
   ReactionName,
-  ReactionProps,
   ReactionWithSkinTone,
   ReactionWithoutSkinTone,
   SkinTone,
   ButtonRefType,
 } from './components';
-
-/** Momentum Design Components */
-export {
-  Animation,
-  AvatarButton,
-  Brandvisual,
-  Bullet,
-  Divider,
-  Listheader as ListHeader,
-  MenuItem,
-  MenuItemCheckbox,
-  MenuItemRadio,
-  MenuPopover,
-  MenuSection,
-  Skeleton,
-  Textarea as TextArea,
-  Tooltip,
-  ToggleTip,
-} from '@momentum-design/components/dist/react';
-
-/** Momentum Design types */
-export type {
-  MenuPopoverActionEvent,
-  MenuPopoverChangeEvent,
-  MenuSectionChangeEvent,
-} from '@momentum-design/components';
-
-/** Other */
-export { PRESERVE_TABINDEX_CLASSNAME } from './utils/navigation';
-export type { AriaLabelRequired } from './utils/a11y';
