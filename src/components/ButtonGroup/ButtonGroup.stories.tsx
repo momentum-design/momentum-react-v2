@@ -17,7 +17,6 @@ import {
   MenuItem as MdcMenuItem,
   MenuPopover as MdcMenuPopover,
 } from '@momentum-design/components/dist/react';
-import { PRESERVE_TABINDEX_CLASSNAME } from '@momentum-ui/react-collaboration';
 
 export default {
   title: 'Momentum UI/ButtonGroup',
@@ -87,12 +86,7 @@ const callControlsCommonChildren = [
   <ButtonCircleToggle key="0" size={40} prefixIcon="raise-hand-regular" />,
   <>
     <ButtonCircle size={40} variant="tertiary" prefixIcon="reactions-regular" id="menu-trigger" />
-    <MdcMenuPopover
-      className={PRESERVE_TABINDEX_CLASSNAME}
-      showArrow
-      triggerID="menu-trigger"
-      placement="top-end"
-    >
+    <MdcMenuPopover showArrow triggerID="menu-trigger" placement="top-end">
       <MdcMenuItem name="Item 1" label="Item 1" />
       <MdcMenuItem name="Item 2" label="Item 2" />
     </MdcMenuPopover>
