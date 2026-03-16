@@ -5,11 +5,11 @@ exports[`<ThemeProvider /> snapshot should match snapshot 1`] = `
   theme="darkBronzeWebex"
 >
   <ThemeProvider
-    className="mds-typography mds-elevation"
+    className="mds-typography mds-elevation mds-effect"
     themeclass="mds-theme-stable-darkBronzeWebex"
   >
     <mdc-themeprovider
-      class="mds-typography mds-elevation"
+      class="mds-typography mds-elevation mds-effect"
       suppressHydrationWarning={true}
     >
       <IllustrationProvider>
@@ -41,11 +41,11 @@ exports[`<ThemeProvider /> snapshot should match snapshot with style 1`] = `
   }
 >
   <ThemeProvider
-    className="mds-typography mds-elevation"
+    className="mds-typography mds-elevation mds-effect"
     themeclass="mds-theme-stable-darkWebex"
   >
     <mdc-themeprovider
-      class="mds-typography mds-elevation"
+      class="mds-typography mds-elevation mds-effect"
       suppressHydrationWarning={true}
     >
       <IllustrationProvider>

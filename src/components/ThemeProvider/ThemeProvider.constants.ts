@@ -9,6 +9,7 @@ const STYLE = {
   // momentum-design typography class to be set
   typography: 'mds-typography',
   elevation: 'mds-elevation',
+  effect: 'mds-effect',
 };
 
 // Some themes are disabled until tokens are properly imported.
