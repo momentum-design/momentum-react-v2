@@ -1,9 +1,8 @@
 # Momentum UI - React Collaboration
 
-> ⚠️ **Deprecation Notice:**  
-> This library is scheduled for deprecation and will no longer receive new features or updates.  
-> Please migrate to [Momentum Design Components](https://www.npmjs.com/package/@momentum-design/components) for ongoing support and future development.  
-> Existing consumers should plan their migration as soon as possible to avoid disruption.
+⚠️ **Deprecation Notice:**  
+This library is deprecated and will no longer receive new features or updates.  
+Please migrate to [Momentum Design Components](https://www.npmjs.com/package/@momentum-design/components) for ongoing support and future development.
 
 ---
 
