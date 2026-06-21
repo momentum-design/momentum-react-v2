@@ -43,7 +43,6 @@ exports[`<ToastDetails /> snapshot should match snapshot 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       />
     </div>
   </div>
@@ -100,7 +99,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with badges 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={false}
       />
       <div
         className="md-toast-details-badges"
@@ -172,7 +170,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with children 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       >
         Children
       </div>
@@ -225,7 +222,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with className 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       />
     </div>
   </div>
@@ -292,7 +288,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props 1`]
     >
       <div
         className="md-toast-details-title"
-        data-centered={false}
       >
         Title
       </div>
@@ -574,7 +569,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with complete props and
     >
       <div
         className="md-toast-details-title"
-        data-centered={false}
       >
         Title
       </div>
@@ -856,7 +850,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with controls 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       />
     </div>
     <div
@@ -1104,7 +1097,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with id 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       />
     </div>
   </div>
@@ -1155,7 +1147,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with info 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={false}
       />
       <div
         className="md-toast-details-info"
@@ -1212,7 +1203,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with infoColor 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={false}
       />
       <div
         className="md-toast-details-info"
@@ -1278,7 +1268,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with style 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       />
     </div>
   </div>
@@ -1329,7 +1318,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with subject 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={false}
       />
       <div
         className="md-toast-details-subject"
@@ -1385,7 +1373,6 @@ exports[`<ToastDetails /> snapshot should match snapshot with title 1`] = `
     >
       <div
         className="md-toast-details-title"
-        data-centered={true}
       >
         Title
       </div>
